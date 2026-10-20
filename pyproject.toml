@@ -1,0 +1,10 @@
+[tool.pytest.ini_options]
+minversion = "8.4"
+testpaths = ["tests", "dsa", "machine-learning", "artificial-intelligence"]
+python_files = ["test_*.py"]
+addopts = "--import-mode=importlib --strict-config --strict-markers -ra"
+pythonpath = ["."]
+norecursedirs = [".git", ".venv", "venv", "build", "dist", "__pycache__"]
+markers = [
+    "cpp: compiles and executes C++ with the configured toolchain",
+]

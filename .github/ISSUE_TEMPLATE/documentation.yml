@@ -1,0 +1,20 @@
+name: Documentation improvement
+description: Correct explanations, links, complexity claims, or learning guidance.
+title: "[Docs]: "
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Affected document or section
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Problem and suggested correction
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting example or reference

@@ -1,0 +1,505 @@
+{
+  "categories": [
+    {
+      "id": "A1",
+      "name": "Sorting",
+      "items": [
+        "Bubble Sort",
+        "Selection Sort",
+        "Insertion Sort",
+        "Merge Sort",
+        "Quick Sort",
+        "Heap Sort",
+        "Counting Sort",
+        "Radix Sort",
+        "Bucket Sort",
+        "Shell Sort",
+        "Tim Sort"
+      ],
+      "path": "dsa/sorting"
+    },
+    {
+      "id": "A2",
+      "name": "Searching",
+      "items": [
+        "Linear Search",
+        "Binary Search",
+        "Ternary Search",
+        "Jump Search",
+        "Interpolation Search",
+        "Exponential Search"
+      ],
+      "path": "dsa/searching"
+    },
+    {
+      "id": "A3",
+      "name": "Recursion and Backtracking",
+      "items": [
+        "N-Queens",
+        "Sudoku Solver",
+        "Subset Sum using Backtracking",
+        "Power Set Generation",
+        "Permutations",
+        "Combinations",
+        "Rat in a Maze",
+        "Graph Coloring",
+        "Hamiltonian Path"
+      ],
+      "path": "dsa/recursion-and-backtracking"
+    },
+    {
+      "id": "A4",
+      "name": "Divide and Conquer",
+      "items": [
+        "Merge Sort",
+        "Quick Sort",
+        "Binary Search",
+        "Strassen's Matrix Multiplication",
+        "Karatsuba Multiplication",
+        "Closest Pair of Points",
+        "Maximum Subarray using Divide and Conquer"
+      ],
+      "path": "dsa/divide-and-conquer"
+    },
+    {
+      "id": "A5",
+      "name": "Graph Algorithms",
+      "items": [
+        "Breadth-First Search",
+        "Depth-First Search",
+        "Dijkstra's Algorithm",
+        "Bellman-Ford",
+        "Floyd-Warshall",
+        "Kruskal's Minimum Spanning Tree",
+        "Prim's Minimum Spanning Tree",
+        "Topological Sorting",
+        "Tarjan's Strongly Connected Components",
+        "Kosaraju's Strongly Connected Components",
+        "Union-Find / Disjoint Set Union",
+        "A* Search",
+        "Bridges Detection",
+        "Articulation Points",
+        "Johnson's Algorithm"
+      ],
+      "path": "dsa/graph-algorithms"
+    },
+    {
+      "id": "A6",
+      "name": "Tree Algorithms",
+      "items": [
+        "Inorder Traversal",
+        "Preorder Traversal",
+        "Postorder Traversal",
+        "Level Order Traversal",
+        "Lowest Common Ancestor",
+        "Binary Lifting",
+        "Euler Tour",
+        "Fenwick Tree / Binary Indexed Tree",
+        "Segment Tree",
+        "Trie / Prefix Tree",
+        "AVL Tree Rotations",
+        "Red-Black Tree Operations",
+        "B-Tree Operations",
+        "B+ Tree Operations"
+      ],
+      "path": "dsa/tree-algorithms"
+    },
+    {
+      "id": "A7",
+      "name": "String Algorithms",
+      "items": [
+        "Naive Pattern Matching",
+        "KMP (Knuth-Morris-Pratt)",
+        "Rabin-Karp",
+        "Z-Algorithm",
+        "Boyer-Moore",
+        "Manacher's Algorithm",
+        "Suffix Array",
+        "Suffix Tree",
+        "Aho-Corasick"
+      ],
+      "path": "dsa/string-algorithms"
+    },
+    {
+      "id": "A8",
+      "name": "Bit Manipulation",
+      "items": [
+        "XOR Tricks for Unique Elements",
+        "Finding Two Non-Repeating Elements",
+        "Brian Kernighan's Set Bit Counting",
+        "Subset Generation using Bitmasking"
+      ],
+      "path": "dsa/bit-manipulation"
+    },
+    {
+      "id": "A9",
+      "name": "Mathematical and Number Theory",
+      "items": [
+        "Sieve of Eratosthenes",
+        "GCD using Euclidean Algorithm",
+        "LCM",
+        "Modular Exponentiation",
+        "Fast Exponentiation",
+        "Extended Euclidean Algorithm",
+        "Prime Factorization"
+      ],
+      "path": "dsa/number-theory"
+    },
+    {
+      "id": "A10",
+      "name": "Two Pointers and Sliding Window",
+      "items": [
+        "Two Sum in Sorted Array",
+        "Sliding Window Maximum",
+        "Longest Substring Without Repeating Characters"
+      ],
+      "path": "dsa/two-pointers-and-sliding-window"
+    },
+    {
+      "id": "A11",
+      "name": "Greedy Algorithms",
+      "items": [
+        "Activity Selection",
+        "Huffman Coding",
+        "Fractional Knapsack",
+        "Job Sequencing with Deadlines",
+        "Kruskal's Algorithm",
+        "Prim's Algorithm",
+        "Dijkstra's Algorithm"
+      ],
+      "path": "dsa/greedy"
+    },
+    {
+      "id": "A12",
+      "name": "Dynamic Programming",
+      "items": [
+        "Fibonacci",
+        "0/1 Knapsack",
+        "Longest Common Subsequence (LCS)",
+        "Longest Increasing Subsequence (LIS)",
+        "Edit Distance",
+        "Matrix Chain Multiplication",
+        "Coin Change",
+        "Subset Sum",
+        "Kadane's Algorithm",
+        "Rod Cutting",
+        "Palindrome Partitioning",
+        "Bellman-Ford",
+        "Floyd-Warshall"
+      ],
+      "path": "dsa/dynamic-programming"
+    },
+    {
+      "id": "B1",
+      "name": "Supervised Learning — Regression",
+      "items": [
+        "Linear Regression",
+        "Ridge Regression",
+        "Lasso Regression",
+        "Elastic Net",
+        "Polynomial Regression",
+        "Support Vector Regression (SVR)",
+        "Decision Tree Regression"
+      ],
+      "path": "machine-learning/supervised-learning/regression"
+    },
+    {
+      "id": "B2",
+      "name": "Supervised Learning — Classification",
+      "items": [
+        "Logistic Regression",
+        "K-Nearest Neighbors (KNN)",
+        "Gaussian Naive Bayes",
+        "Multinomial Naive Bayes",
+        "Bernoulli Naive Bayes",
+        "Support Vector Machines (SVM)",
+        "CART Decision Trees",
+        "ID3 Decision Trees",
+        "C4.5 Decision Trees",
+        "Linear Discriminant Analysis (LDA)",
+        "Quadratic Discriminant Analysis (QDA)"
+      ],
+      "path": "machine-learning/supervised-learning/classification"
+    },
+    {
+      "id": "B3",
+      "name": "Ensemble Methods",
+      "items": [
+        "Random Forest",
+        "Gradient Boosting Machine (GBM)",
+        "XGBoost",
+        "CatBoost",
+        "AdaBoost",
+        "Bagging",
+        "Stacking",
+        "Voting Classifiers"
+      ],
+      "path": "machine-learning/ensemble-methods"
+    },
+    {
+      "id": "B4",
+      "name": "Unsupervised Learning — Clustering",
+      "items": [
+        "K-Means",
+        "Agglomerative Hierarchical Clustering",
+        "Divisive Hierarchical Clustering",
+        "DBSCAN",
+        "HDBSCAN",
+        "Mean Shift",
+        "Gaussian Mixture Models (GMM)",
+        "Spectral Clustering"
+      ],
+      "path": "machine-learning/unsupervised-learning/clustering"
+    },
+    {
+      "id": "B5",
+      "name": "Dimensionality Reduction",
+      "items": [
+        "Principal Component Analysis (PCA)",
+        "t-SNE",
+        "UMAP",
+        "Linear Discriminant Analysis (Supervised Variant)",
+        "Autoencoders for Dimensionality Reduction",
+        "Independent Component Analysis (ICA)",
+        "Singular Value Decomposition (SVD)"
+      ],
+      "path": "machine-learning/unsupervised-learning/dimensionality-reduction"
+    },
+    {
+      "id": "B6",
+      "name": "Association Rule Learning",
+      "items": [
+        "Apriori",
+        "FP-Growth",
+        "Eclat"
+      ],
+      "path": "machine-learning/unsupervised-learning/association-rule-learning"
+    },
+    {
+      "id": "B7",
+      "name": "Neural Networks and Deep Learning",
+      "items": [
+        "Multilayer Perceptron (MLP)",
+        "Convolutional Neural Networks (CNN)",
+        "Recurrent Neural Networks (RNN)",
+        "Long Short-Term Memory (LSTM)",
+        "Gated Recurrent Units (GRU)",
+        "Transformers",
+        "Generative Adversarial Networks (GAN)",
+        "Variational Autoencoders (VAE)",
+        "Diffusion Models",
+        "Graph Neural Networks (GNN)",
+        "Residual Networks (ResNet)",
+        "Vanilla Autoencoders",
+        "Denoising Autoencoders",
+        "Sparse Autoencoders"
+      ],
+      "path": "machine-learning/deep-learning"
+    },
+    {
+      "id": "B8",
+      "name": "Reinforcement Learning",
+      "items": [
+        "Q-Learning",
+        "Deep Q-Networks (DQN)",
+        "SARSA",
+        "REINFORCE Policy Gradient",
+        "Advantage Actor-Critic (A2C)",
+        "Asynchronous Advantage Actor-Critic (A3C)",
+        "Proximal Policy Optimization (PPO)",
+        "Deep Deterministic Policy Gradient (DDPG)",
+        "Monte Carlo Tree Search (MCTS)",
+        "Dynamic Policy Optimization (DPO, terminology as written in original notes)"
+      ],
+      "path": "machine-learning/reinforcement-learning"
+    },
+    {
+      "id": "B9",
+      "name": "Graph-Based Learning",
+      "items": [
+        "PageRank",
+        "Node2Vec",
+        "Graph Convolutional Networks (GCN)"
+      ],
+      "path": "machine-learning/graph-learning"
+    },
+    {
+      "id": "B10",
+      "name": "Optimization",
+      "items": [
+        "Batch Gradient Descent",
+        "Stochastic Gradient Descent",
+        "Mini-Batch Gradient Descent",
+        "Momentum",
+        "RMSProp",
+        "Adam",
+        "AdamW",
+        "L-BFGS",
+        "Genetic Algorithms",
+        "Simulated Annealing"
+      ],
+      "path": "machine-learning/optimization"
+    },
+    {
+      "id": "B11",
+      "name": "Time Series",
+      "items": [
+        "ARIMA",
+        "SARIMA",
+        "Exponential Smoothing",
+        "Holt-Winters",
+        "Prophet",
+        "Hidden Markov Models (HMM)"
+      ],
+      "path": "machine-learning/time-series"
+    },
+    {
+      "id": "B12",
+      "name": "Anomaly Detection",
+      "items": [
+        "Isolation Forest",
+        "One-Class SVM",
+        "Local Outlier Factor (LOF)"
+      ],
+      "path": "machine-learning/anomaly-detection"
+    },
+    {
+      "id": "B13",
+      "name": "Natural Language Processing",
+      "items": [
+        "Bag of Words",
+        "TF-IDF",
+        "Word2Vec",
+        "GloVe",
+        "BERT Architecture / Usage",
+        "GPT Architecture / Usage",
+        "Hidden Markov Models for POS Tagging",
+        "Named Entity Recognition",
+        "Conditional Random Fields (CRF)",
+        "N-Gram Language Models",
+        "CYK Parsing Algorithm"
+      ],
+      "path": "machine-learning/natural-language-processing"
+    },
+    {
+      "id": "C1",
+      "name": "Uninformed Search",
+      "items": [
+        "Breadth-First Search (BFS)",
+        "Depth-First Search (DFS)",
+        "Depth-Limited Search",
+        "Iterative Deepening DFS (IDDFS)",
+        "Uniform Cost Search (UCS)",
+        "Bidirectional Search"
+      ],
+      "path": "artificial-intelligence/uninformed-search"
+    },
+    {
+      "id": "C2",
+      "name": "Informed Search",
+      "items": [
+        "Greedy Best-First Search",
+        "A* Search",
+        "Iterative Deepening A* (IDA*)",
+        "Recursive Best-First Search (RBFS)",
+        "Simplified Memory-Bounded A* (SMA*)",
+        "Beam Search"
+      ],
+      "path": "artificial-intelligence/informed-search"
+    },
+    {
+      "id": "C3",
+      "name": "Local Search",
+      "items": [
+        "Simple Hill Climbing",
+        "Steepest-Ascent Hill Climbing",
+        "Stochastic Hill Climbing",
+        "Simulated Annealing",
+        "Local Beam Search",
+        "Genetic Algorithms",
+        "Tabu Search",
+        "Random Restart Hill Climbing"
+      ],
+      "path": "artificial-intelligence/local-search"
+    },
+    {
+      "id": "C4",
+      "name": "Global Search and Optimization",
+      "items": [
+        "Genetic Algorithms",
+        "Particle Swarm Optimization (PSO)",
+        "Ant Colony Optimization (ACO)",
+        "Branch and Bound",
+        "Simulated Annealing",
+        "Exhaustive Search",
+        "Brute Force Search"
+      ],
+      "path": "artificial-intelligence/global-optimization"
+    },
+    {
+      "id": "C5",
+      "name": "Adversarial Search",
+      "items": [
+        "Minimax",
+        "Alpha-Beta Pruning",
+        "Expectimax"
+      ],
+      "path": "artificial-intelligence/adversarial-search"
+    },
+    {
+      "id": "C6",
+      "name": "Constraint Satisfaction Problems",
+      "items": [
+        "Backtracking Search",
+        "Arc Consistency (AC-3)",
+        "Forward Checking",
+        "Constraint Propagation",
+        "Min-Conflicts"
+      ],
+      "path": "artificial-intelligence/constraint-satisfaction"
+    },
+    {
+      "id": "C7",
+      "name": "Multi-Agent Systems and Game Theory",
+      "items": [
+        "Minimax",
+        "Nash Equilibrium Computation",
+        "Auction Algorithms"
+      ],
+      "path": "artificial-intelligence/multi-agent-systems"
+    },
+    {
+      "id": "C8",
+      "name": "Fuzzy Logic",
+      "items": [
+        "Mamdani Fuzzy Inference System",
+        "Sugeno Fuzzy Inference System"
+      ],
+      "path": "artificial-intelligence/fuzzy-logic"
+    },
+    {
+      "id": "C9",
+      "name": "Swarm Intelligence",
+      "items": [
+        "Particle Swarm Optimization (PSO)",
+        "Ant Colony Optimization (ACO)"
+      ],
+      "path": "artificial-intelligence/swarm-intelligence"
+    },
+    {
+      "id": "C10",
+      "name": "Computer Vision",
+      "items": [
+        "Convolutional Neural Networks (CNN)",
+        "Canny Edge Detection",
+        "Sobel Edge Detection",
+        "SIFT",
+        "SURF",
+        "Viola-Jones Face Detection",
+        "YOLO Object Detection",
+        "R-CNN Object Detection"
+      ],
+      "path": "artificial-intelligence/computer-vision"
+    }
+  ]
+}

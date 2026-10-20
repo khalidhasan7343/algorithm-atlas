@@ -1,0 +1,25 @@
+name: Algorithm or scope proposal
+description: Propose a catalog change, clarify terminology, or discuss an implementation scope.
+title: "[Proposal]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Check catalog.yaml first. Proposals do not authorize phase transitions or implementation during Phase 0."
+  - type: input
+    id: topic
+    attributes:
+      label: Algorithm and category
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Proposed scope and educational value
+      description: Explain how this relates to an existing canonical algorithm or meaningful variant.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: References and dependencies
+      description: Provide verifiable primary sources and any expected Python/C++ dependencies or compute needs.
