@@ -4,7 +4,7 @@ title: "[Proposal]: "
 body:
   - type: markdown
     attributes:
-      value: "Check catalog.yaml first. Proposals do not authorize phase transitions or implementation during Phase 0."
+      value: "Check catalog.yaml first. The current implementation authorization covers Sorting only; proposals do not authorize another category or a phase transition."
   - type: input
     id: topic
     attributes:

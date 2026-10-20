@@ -4,7 +4,7 @@
 
 Clustering, association patterns, and representations. This required directory also includes explicitly supervised LDA projection; its label and supervision requirement are retained.
 
-The links below preserve the complete syllabus and lead to canonical topic planning pages. Phase 0 contains no algorithm implementations; full articles and tests remain pending.
+The links below preserve the complete syllabus and lead to canonical topics. Consult their statuses for full lessons and tested implementations; planned topics remain scope records only.
 
 - [B4. Unsupervised Learning — Clustering](clustering/README.md)
 - [B5. Dimensionality Reduction](dimensionality-reduction/README.md)

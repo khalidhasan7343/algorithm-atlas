@@ -6,7 +6,7 @@ Describe the concrete problem, the change, and its effect for learners.
 
 Current approved development phase:
 
-For a phase transition, identify the maintainer's explicit approval. Phase 1 requires **"Phase 0 Approved. Start Phase 1."** Algorithm implementations are outside Phase 0.
+Identify the maintainer's approval for this scope. Phase 0 is approved; the current Phase 1 authorization covers Sorting only. All other categories require separate explicit approval.
 
 ## Validation
 

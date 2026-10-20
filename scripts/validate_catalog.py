@@ -43,6 +43,11 @@ IGNORED_DIRS = {
     ".mypy_cache", ".ruff_cache", "build", "dist",
 }
 KEBAB = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
+SORTING_BATCHES = (
+    ("bubble-sort", "selection-sort", "insertion-sort", "merge-sort"),
+    ("quick-sort", "heap-sort", "counting-sort", "radix-sort"),
+    ("bucket-sort", "shell-sort", "tim-sort"),
+)
 
 
 class UniqueKeyLoader(yaml.SafeLoader):
@@ -96,6 +101,105 @@ def _relative_path(root: Path, value: Any) -> Path | None:
         return None
     resolved = (root / value).resolve()
     return resolved if resolved.is_relative_to(root) else None
+
+
+def _development_document(root: Path, value: Any) -> bool:
+    """Accept a nonempty Markdown file through a safe repository-relative path."""
+    if not _nonempty(value) or "\\" in value or re.match(r"^[A-Za-z]:", value):
+        return False
+    path = PurePosixPath(value)
+    if (
+        path.is_absolute() or str(path) != value or ".." in path.parts
+        or path.suffix != ".md"
+    ):
+        return False
+    try:
+        resolved = (root / value).resolve()
+        return (
+            resolved.is_relative_to(root) and resolved.suffix == ".md"
+            and resolved.is_file()
+            and bool(resolved.read_text(encoding="utf-8").strip())
+        )
+    except (OSError, ValueError, RuntimeError, UnicodeError):
+        return False
+
+
+def _validate_development(
+    root: Path, state: Any, algorithms: dict[str, dict], report: ValidationReport
+) -> None:
+    """Validate checkpoint claims statically, without claiming tests were run.
+
+    Future scopes share the state/path contract but do not inherit Sorting's
+    three-batch limit or its algorithm membership requirements.
+    """
+    if not isinstance(state, dict):
+        report.errors.append("development must be a mapping")
+        return
+    required = {
+        "phase", "scope", "approval", "status", "active_batch",
+        "completed_batches", "checkpoint",
+    }
+    if missing := sorted(required - state.keys()):
+        report.errors.append(f"development is missing required fields: {', '.join(missing)}")
+    for field_name in ("phase", "scope", "approval"):
+        if not _nonempty(state.get(field_name)):
+            report.errors.append(f"development.{field_name} must be a nonempty string")
+    status = state.get("status")
+    if not isinstance(status, str) or status not in ("in-progress", "awaiting-review"):
+        report.errors.append("development.status must be in-progress or awaiting-review")
+    for field_name in ("checkpoint", "completion_report"):
+        if (field_name == "checkpoint" or field_name in state) and not _development_document(
+            root, state.get(field_name)
+        ):
+            report.errors.append(
+                f"development.{field_name} must name a safe relative existing nonempty .md file"
+            )
+
+    completed = state.get("completed_batches")
+    valid_completed = (
+        isinstance(completed, list)
+        and all(type(batch) is int and batch > 0 for batch in completed)
+    )
+    if not valid_completed or completed != list(range(1, len(completed) + 1)):
+        report.errors.append("development.completed_batches must be a contiguous prefix [1, 2, ...]")
+        valid_completed = False
+    active = state.get("active_batch")
+    if active is not None and (type(active) is not int or active < 1):
+        report.errors.append("development.active_batch must be a positive integer or null")
+    if valid_completed and status == "in-progress" and (
+        type(active) is not int or active != len(completed) + 1
+    ):
+        report.errors.append("development.active_batch must be the next uncompleted batch")
+    if status == "awaiting-review" and active is not None:
+        report.errors.append("development.awaiting-review requires active_batch=null")
+
+    if state.get("scope") != "Sorting category only" or not valid_completed:
+        return
+    if len(completed) > len(SORTING_BATCHES):
+        report.errors.append("development Sorting scope has only three batches")
+    if status == "in-progress" and (
+        type(active) is not int or active not in (1, 2, 3)
+    ):
+        report.errors.append("development Sorting active_batch must be 1, 2, or 3")
+    if status == "awaiting-review" and completed != [1, 2, 3]:
+        report.errors.append("development Sorting awaiting-review requires all three completed batches")
+    for batch in completed[:len(SORTING_BATCHES)]:
+        for algorithm_id in SORTING_BATCHES[batch - 1]:
+            record = algorithms.get(algorithm_id, {})
+            artifacts_ready = all(
+                isinstance(record.get(field_name), str)
+                and record[field_name] in ARTIFACT_STATUSES
+                for field_name in ("documentation_status", "python_status", "cpp_status")
+            )
+            tests_ready = (
+                isinstance(record.get("test_status"), str)
+                and record["test_status"] in ("tested", "reviewed")
+            )
+            if not artifacts_ready or not tests_ready:
+                report.errors.append(
+                    f"development: completed sorting batch {batch} requires {algorithm_id} "
+                    "with completed documentation, both implementations, and tested/reviewed tests"
+                )
 
 
 def _strip_code(text: str) -> str:
@@ -419,6 +523,8 @@ def validate_repository(root: Path) -> ValidationReport:
             for ref in related:
                 if ref not in algorithm_map or ref == aid:
                     report.errors.append(f"{aid}: invalid related algorithm reference: {ref}")
+    if "development" in catalog:
+        _validate_development(root, catalog["development"], algorithm_map, report)
     validate_markdown(root, report)
     return report
 

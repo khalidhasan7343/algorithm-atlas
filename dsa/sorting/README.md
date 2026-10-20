@@ -4,26 +4,26 @@
 
 Ordering data with comparison, counting, digit-based, and adaptive methods.
 
-This category preserves **11 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope and remain incomplete educational documentation.
+This category preserves **11 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Bubble Sort | [bubble-sort](bubble-sort/README.md) | planned |
-| Selection Sort | [selection-sort](selection-sort/README.md) | planned |
-| Insertion Sort | [insertion-sort](insertion-sort/README.md) | planned |
-| Merge Sort | [merge-sort](merge-sort/README.md) | planned |
-| Quick Sort | [quick-sort](quick-sort/README.md) | planned |
-| Heap Sort | [heap-sort](heap-sort/README.md) | planned |
-| Counting Sort | [counting-sort](counting-sort/README.md) | planned |
-| Radix Sort | [radix-sort](radix-sort/README.md) | planned |
-| Bucket Sort | [bucket-sort](bucket-sort/README.md) | planned |
-| Shell Sort | [shell-sort](shell-sort/README.md) | planned |
-| Tim Sort | [tim-sort](tim-sort/README.md) | planned |
+| Bubble Sort | [bubble-sort](bubble-sort/README.md) | complete |
+| Selection Sort | [selection-sort](selection-sort/README.md) | complete |
+| Insertion Sort | [insertion-sort](insertion-sort/README.md) | complete |
+| Merge Sort | [merge-sort](merge-sort/README.md) | complete |
+| Quick Sort | [quick-sort](quick-sort/README.md) | complete |
+| Heap Sort | [heap-sort](heap-sort/README.md) | complete |
+| Counting Sort | [counting-sort](counting-sort/README.md) | complete |
+| Radix Sort | [radix-sort](radix-sort/README.md) | complete |
+| Bucket Sort | [bucket-sort](bucket-sort/README.md) | complete |
+| Shell Sort | [shell-sort](shell-sort/README.md) | complete |
+| Tim Sort | [tim-sort](tim-sort/README.md) | complete |
 
 ## Learning and contribution scope
 
 Choose prerequisites through the [learning roadmap](../../docs/learning-roadmap.md). Each future completed topic must include the full 25-part educational article, working Python and C++ programs, executable examples, accurate complexity analysis, and relevant tests described in [the contribution standards](../../CONTRIBUTING.md).
 
-Phase 0 creates the foundation only. Implementation is subject to the user’s explicit phase approval; no algorithm in this category is implemented by its planning page.
+Completion is shown by the catalog status and topic artifacts. The current implementation authorization covers Sorting only; other categories require explicit user approval.
 
 [Project home](../../README.md) · [Complete index](../../docs/algorithm-index.md) · [Progress](../../docs/progress.md)

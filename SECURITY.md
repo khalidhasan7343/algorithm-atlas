@@ -1,6 +1,6 @@
 # Security policy
 
-Algorithm Atlas is an educational project. Phase 0 provides repository tools and documentation; it does not contain algorithm implementations or production services.
+Algorithm Atlas is an educational project. It includes repository tools, documentation, and educational sorting implementations. It does not provide production services.
 
 ## Report a vulnerability
 

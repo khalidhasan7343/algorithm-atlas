@@ -135,3 +135,32 @@ def test_generation_is_idempotent_and_check_passes(planning_repo, monkeypatch) -
     monkeypatch.setattr('sys.argv', ['generate_catalog_docs.py', '--check'])
     assert generator.main() == 0
     assert snapshot(root) == before
+
+
+def test_progress_tracks_authorized_scope_and_batch_checkpoint(planning_repo) -> None:
+    _, catalog, _ = planning_repo
+    catalog['development'] = {
+        'phase': 'Phase 1 — DSA', 'scope': 'Sorting category only',
+        'status': 'in-progress', 'active_batch': 2, 'completed_batches': [1],
+        'checkpoint': 'docs/sorting-checkpoints.md',
+    }
+    algorithms = {record['id']: record for record in catalog['algorithms']}
+    text = generator.progress_page(catalog, algorithms)
+    assert 'Phase 1 — DSA' in text
+    assert 'Sorting category only' in text
+    assert 'Validated sorting batches: 1.' in text
+    assert 'Active batch: 2.' in text
+    assert 'sorting-checkpoints.md' in text
+    assert 'Searching and every other category require explicit approval' in text
+
+
+def test_completed_topic_retains_lesson_and_appears_in_progress(planning_repo) -> None:
+    _, catalog, readme = planning_repo
+    record = catalog['algorithms'][0]
+    record.update({field: 'tested' for field in generator.STATUS_FIELDS})
+    readme.parent.mkdir(parents=True)
+    readme.write_text('# Full authored lesson\n', encoding='utf-8')
+    pages = generator.expected_pages(catalog)
+    assert readme not in pages
+    assert '| Completed algorithms | 1 |' in pages[generator.ROOT / 'docs/progress.md']
+    assert 'Sample Topic' in pages[generator.ROOT / 'docs/progress.md']

@@ -4,7 +4,7 @@
 
 Models that learn from labeled observations for regression and classification.
 
-The links below preserve the complete syllabus and lead to canonical topic planning pages. Phase 0 contains no algorithm implementations; full articles and tests remain pending.
+The links below preserve the complete syllabus and lead to canonical topics. Consult their statuses for full lessons and tested implementations; planned topics remain scope records only.
 
 - [B1. Supervised Learning — Regression](regression/README.md)
 - [B2. Supervised Learning — Classification](classification/README.md)

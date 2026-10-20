@@ -14,17 +14,17 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Bubble Sort | [bubble-sort](../dsa/sorting/bubble-sort/README.md) | planned |
-| Selection Sort | [selection-sort](../dsa/sorting/selection-sort/README.md) | planned |
-| Insertion Sort | [insertion-sort](../dsa/sorting/insertion-sort/README.md) | planned |
-| Merge Sort | [merge-sort](../dsa/sorting/merge-sort/README.md) | planned |
-| Quick Sort | [quick-sort](../dsa/sorting/quick-sort/README.md) | planned |
-| Heap Sort | [heap-sort](../dsa/sorting/heap-sort/README.md) | planned |
-| Counting Sort | [counting-sort](../dsa/sorting/counting-sort/README.md) | planned |
-| Radix Sort | [radix-sort](../dsa/sorting/radix-sort/README.md) | planned |
-| Bucket Sort | [bucket-sort](../dsa/sorting/bucket-sort/README.md) | planned |
-| Shell Sort | [shell-sort](../dsa/sorting/shell-sort/README.md) | planned |
-| Tim Sort | [tim-sort](../dsa/sorting/tim-sort/README.md) | planned |
+| Bubble Sort | [bubble-sort](../dsa/sorting/bubble-sort/README.md) | complete |
+| Selection Sort | [selection-sort](../dsa/sorting/selection-sort/README.md) | complete |
+| Insertion Sort | [insertion-sort](../dsa/sorting/insertion-sort/README.md) | complete |
+| Merge Sort | [merge-sort](../dsa/sorting/merge-sort/README.md) | complete |
+| Quick Sort | [quick-sort](../dsa/sorting/quick-sort/README.md) | complete |
+| Heap Sort | [heap-sort](../dsa/sorting/heap-sort/README.md) | complete |
+| Counting Sort | [counting-sort](../dsa/sorting/counting-sort/README.md) | complete |
+| Radix Sort | [radix-sort](../dsa/sorting/radix-sort/README.md) | complete |
+| Bucket Sort | [bucket-sort](../dsa/sorting/bucket-sort/README.md) | complete |
+| Shell Sort | [shell-sort](../dsa/sorting/shell-sort/README.md) | complete |
+| Tim Sort | [tim-sort](../dsa/sorting/tim-sort/README.md) | complete |
 
 ## A2. [Searching](../dsa/searching/README.md)
 
@@ -55,8 +55,8 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Merge Sort | [merge-sort](../dsa/sorting/merge-sort/README.md) | planned |
-| Quick Sort | [quick-sort](../dsa/sorting/quick-sort/README.md) | planned |
+| Merge Sort | [merge-sort](../dsa/sorting/merge-sort/README.md) | complete |
+| Quick Sort | [quick-sort](../dsa/sorting/quick-sort/README.md) | complete |
 | Binary Search | [binary-search](../dsa/searching/binary-search/README.md) | planned |
 | Strassen's Matrix Multiplication | [strassen-matrix-multiplication](../dsa/divide-and-conquer/strassen-matrix-multiplication/README.md) | planned |
 | Karatsuba Multiplication | [karatsuba-multiplication](../dsa/divide-and-conquer/karatsuba-multiplication/README.md) | planned |

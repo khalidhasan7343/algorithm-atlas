@@ -6,7 +6,7 @@ From Fundamental Algorithms to Advanced Artificial Intelligence — Learn, Imple
 
 Algorithm Atlas is an educational, open-source project maintained by **MD.Khalid Hasan**. Its goal is to explain algorithms from first principles through clear documentation, Python and modern C++ implementations, meaningful tests, complexity analysis, and practical applications.
 
-**Current state: Phase 0 — Foundation, awaiting maintainer review.** The full study syllabus is cataloged; algorithm implementations begin only after explicit phase approval. No algorithm is currently implemented or claimed complete.
+**Current state: Phase 1 — Sorting category authorized.** Phase 0 is approved. Sorting is being completed in three validated batches; see [progress](docs/progress.md) and [batch checkpoints](docs/sorting-checkpoints.md) for actual results. Searching and every other category require separate approval.
 
 ## Project Overview
 
@@ -25,7 +25,7 @@ The foundation provides:
 - Documentation standards, pytest infrastructure, C++ compiler checks, and GitHub Actions configuration.
 - Automated catalog, documentation-link, and implementation-status validation.
 
-Future approved phases will add detailed explanations, dry runs, Python/C++ implementations, examples, and relevant edge-case tests. ML examples will distinguish educational implementations from library-based usage and document compute and dependency limits.
+The current Sorting work adds detailed explanations, dry runs, Python/C++ implementations, examples, and relevant edge-case tests. Other topics follow in separately approved phases. ML examples will distinguish educational implementations from library-based usage and document compute and dependency limits.
 
 ## Technologies Used
 
@@ -55,7 +55,7 @@ algorithm-atlas/
 └── artificial-intelligence/ # 10 syllabus categories
 ```
 
-Each unique topic has one canonical folder with an honest planning README. Its `python/`, `cpp/`, and `tests/` content will be added in the approved implementation phase. See the [development guide](docs/development.md) for the final per-algorithm structure and documentation standard.
+Each unique topic has one canonical folder. Completed sorting topics have a full lesson and `python/`, `cpp/`, and `tests/` content; planned topics retain honest scope READMEs. See the [development guide](docs/development.md) for the final per-algorithm structure and documentation standard.
 
 ## Data Structures and Algorithms
 
@@ -100,7 +100,15 @@ Install a compiler supporting C++17 and C++20, such as GCC or Clang. Confirm the
 
 ## How to Run Examples
 
-Phase 0 includes no algorithm examples. Once an algorithm is implemented and approved, its README will contain exact Python execution and C++ build/run commands, inputs, outputs, and dependency instructions. Use its status in the [index](docs/algorithm-index.md) before attempting to run it.
+Use a completed topic in [Sorting](dsa/sorting/README.md); its README contains exact Python/C++ commands, inputs, outputs, and dependency instructions. For example, from the repository root after Bubble Sort is available:
+
+```sh
+printf '5 1 4 2 8\n' | python dsa/sorting/bubble-sort/python/solution.py
+g++ -std=c++17 -Wall -Wextra -pedantic dsa/sorting/bubble-sort/cpp/solution.cpp -o /tmp/atlas-bubble
+printf '5 1 4 2 8\n' | /tmp/atlas-bubble
+```
+
+Both commands print `1 2 4 5 8`. Inputs contain values only, without a length prefix. Check each algorithm's input contract before using it.
 
 The currently runnable entry points are the validator, documentation generator check, and test suite:
 
@@ -112,7 +120,7 @@ python -m pytest
 
 ## Testing Instructions
 
-Install [requirements-dev.txt](requirements-dev.txt), make a C++ compiler available, and run `python -m pytest` from the root. Infrastructure tests exercise catalog failures and compile/run small C++ toolchain checks. They do not demonstrate any implemented syllabus algorithms.
+Install [requirements-dev.txt](requirements-dev.txt), make a C++ compiler available, and run `python -m pytest` from the root. Infrastructure tests exercise catalog failures and compile/run small C++ toolchain checks. Per-algorithm tests exercise completed sorting implementations against independent expected values and reference oracles.
 
 The [CI workflow](.github/workflows/ci.yml) checks documentation/catalog consistency and runs lightweight tests. Local test results and hosted CI results are separate: a workflow file does not imply a successful GitHub run. See [testing and contribution guidance](CONTRIBUTING.md) for future algorithm tests.
 
@@ -124,7 +132,7 @@ Use the [complexity cheat sheet](docs/complexity-cheatsheet.md) for asymptotic n
 
 [Progress tracking](docs/progress.md) records catalog totals, completed and remaining algorithms, blockers, and the next proposed batch. The [Phase 0 review report](docs/phase-0-review.md) and [complete file inventory](docs/phase-0-files.md) document the foundation handoff. Phase 0 supplies the foundation only. The term **Dynamic Policy Optimization (DPO)** is retained from the syllabus and blocked pending clarification; it has not been replaced by Direct Preference Optimization.
 
-Development stops for review after each phase. Phase 1 starts only when the user explicitly says: **"Phase 0 Approved. Start Phase 1."**
+Phase 0 has been approved. Sorting continues automatically between its three validated internal batches, then stops for user review. Searching or another category requires explicit approval.
 
 ## Contribution Guidelines
 

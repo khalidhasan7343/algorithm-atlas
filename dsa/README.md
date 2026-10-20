@@ -4,7 +4,7 @@
 
 Foundational, core, and advanced techniques for discrete computational problems.
 
-The links below preserve the complete syllabus and lead to canonical topic planning pages. Phase 0 contains no algorithm implementations; full articles and tests remain pending.
+The links below preserve the complete syllabus and lead to canonical topics. Consult their statuses for full lessons and tested implementations; planned topics remain scope records only.
 
 - [A1. Sorting](sorting/README.md)
 - [A2. Searching](searching/README.md)

@@ -4,7 +4,7 @@ Algorithm Atlas is maintained by [MD.Khalid Hasan](https://github.com/khalidhasa
 
 ## Current phase and approval
 
-The project is at **Phase 0: foundation review**. Do not add algorithm implementations during this phase, including Bubble Sort. Stop after each development phase for maintainer review. The user must explicitly say **"Phase 0 Approved. Start Phase 1."** before Phase 1 development begins. Successful tests do not grant approval.
+**Phase 0 is approved. Phase 1 currently authorizes only Sorting**, in the three batches recorded in [sorting checkpoints](docs/sorting-checkpoints.md). Finish and validate each batch before automatically continuing to the next; no approval is required between these internal batches. After all 11 sorting algorithms are complete, stop for maintainer review. Searching and all other categories require explicit approval. Successful tests do not expand the authorized scope.
 
 GitHub publishing, pushing, and changes to Git identity require separate authorization. Do not treat the public contact email as an authorized commit identity. No automation in this project commits or pushes changes.
 

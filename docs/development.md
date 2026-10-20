@@ -4,9 +4,7 @@ This guide defines how to turn a planned Algorithm Atlas topic into an explained
 
 ## Phase boundaries
 
-The repository is currently in Phase 0. Catalog records, meaningful planning READMEs, repository documentation, testing infrastructure, and CI belong to this phase. Algorithm source files, algorithm test suites, worked algorithm examples, and algorithm pseudocode are deferred until their implementation phase is approved.
-
-The maintainer must review Phase 0 before development continues. **Only the exact explicit approval `Phase 0 Approved. Start Phase 1.` authorizes the start of Phase 1.** A successful validation run, an open task list, or the original master prompt's suggested first sorting batch does not replace that approval. Stop for maintainer review between every later phase, and obtain explicit permission before publishing or pushing.
+**Phase 0 has been approved. Phase 1 currently authorizes the complete Sorting category only.** Implement the three internal batches recorded in [sorting checkpoints](sorting-checkpoints.md), validating and recording each batch before automatically continuing. No approval is needed between these internal batches. After Sorting, stop for maintainer review; Searching and every other category require explicit approval. Passing checks do not expand this scope. Publishing and pushing require separate permission.
 
 ## Canonical layout and catalog ownership
 

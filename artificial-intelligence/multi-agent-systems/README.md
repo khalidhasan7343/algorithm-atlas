@@ -4,7 +4,7 @@
 
 Studying strategic interaction, equilibria, and explicitly scoped allocation methods.
 
-This category preserves **3 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope and remain incomplete educational documentation.
+This category preserves **3 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
@@ -16,6 +16,6 @@ This category preserves **3 original syllabus entries**. Each link points to the
 
 Choose prerequisites through the [learning roadmap](../../docs/learning-roadmap.md). Each future completed topic must include the full 25-part educational article, working Python and C++ programs, executable examples, accurate complexity analysis, and relevant tests described in [the contribution standards](../../CONTRIBUTING.md).
 
-Phase 0 creates the foundation only. Implementation is subject to the user’s explicit phase approval; no algorithm in this category is implemented by its planning page.
+Completion is shown by the catalog status and topic artifacts. The current implementation authorization covers Sorting only; other categories require explicit user approval.
 
 [Project home](../../README.md) · [Complete index](../../docs/algorithm-index.md) · [Progress](../../docs/progress.md)

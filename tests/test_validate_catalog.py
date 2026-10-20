@@ -11,7 +11,10 @@ import sys
 import pytest
 import yaml
 
-from scripts.validate_catalog import SECTIONS, validate_repository
+from scripts.validate_catalog import (
+    SECTIONS, SORTING_BATCHES, ValidationReport, _validate_development,
+    validate_repository,
+)
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -274,3 +277,208 @@ def test_malformed_catalog_is_rejected(sample_repo, document) -> None:
     root, _ = sample_repo
     (root / "catalog.yaml").write_text(document)
     assert not validate_repository(root).ok
+
+
+def add_development(root: Path, data: dict, *, scope="Future authorized scope") -> dict:
+    """Add checkpoint metadata to the existing fake topic fixture."""
+    document = root / "docs/checkpoint.md"
+    document.parent.mkdir(exist_ok=True)
+    document.write_text("# Fixture checkpoint\n\nValidation evidence belongs here.\n")
+    state = {
+        "phase": "Phase 1", "scope": scope, "approval": "Explicit user approval",
+        "status": "in-progress", "active_batch": 1, "completed_batches": [],
+        "checkpoint": "docs/checkpoint.md",
+    }
+    data["development"] = state
+    return state
+
+
+def test_optional_development_preserves_catalogs_without_metadata(sample_repo) -> None:
+    root, data = sample_repo
+    assert "development" not in data
+    assert validate_repository(root).ok
+
+
+def test_sorting_first_batch_metadata_is_valid_without_claiming_completion(sample_repo) -> None:
+    root, data = sample_repo
+    add_development(root, data, scope="Sorting category only")
+    save(root, data)
+    assert validate_repository(root).ok
+
+
+@pytest.mark.parametrize("state", [None, [], "approved", 1, True])
+def test_development_must_be_mapping(sample_repo, state) -> None:
+    root, data = sample_repo
+    data["development"] = state
+    save(root, data)
+    assert "development must be a mapping" in errors(root)
+
+
+@pytest.mark.parametrize("field", ["phase", "scope", "approval"])
+@pytest.mark.parametrize("value", [None, "", " \n", [], {}, True])
+def test_development_requires_nonempty_strings(sample_repo, field, value) -> None:
+    root, data = sample_repo
+    add_development(root, data)[field] = value
+    save(root, data)
+    assert f"development.{field} must be a nonempty string" in errors(root)
+
+
+@pytest.mark.parametrize("field", [
+    "phase", "scope", "approval", "status", "active_batch", "completed_batches", "checkpoint"
+])
+def test_development_required_fields_cannot_be_omitted(sample_repo, field) -> None:
+    root, data = sample_repo
+    del add_development(root, data)[field]
+    save(root, data)
+    assert "development is missing required fields" in errors(root)
+
+
+@pytest.mark.parametrize("status", ["tested", None, [], {}, True])
+def test_development_status_is_restricted(sample_repo, status) -> None:
+    root, data = sample_repo
+    add_development(root, data)["status"] = status
+    save(root, data)
+    assert "development.status must be in-progress or awaiting-review" in errors(root)
+
+
+@pytest.mark.parametrize("completed", [
+    None, {}, [1, 3], [2], [1, 1], [True], [1, "2"], [0], [-1]
+])
+def test_development_completed_batches_require_contiguous_integer_prefix(sample_repo, completed) -> None:
+    root, data = sample_repo
+    add_development(root, data)["completed_batches"] = completed
+    save(root, data)
+    assert "development.completed_batches must be a contiguous prefix" in errors(root)
+
+
+@pytest.mark.parametrize("active", [None, 0, -1, True, "1", [], {}])
+def test_development_in_progress_requires_next_integer_batch(sample_repo, active) -> None:
+    root, data = sample_repo
+    add_development(root, data)["active_batch"] = active
+    save(root, data)
+    assert "development.active_batch must" in errors(root)
+
+
+def test_development_cannot_jump_over_uncompleted_batch(sample_repo) -> None:
+    root, data = sample_repo
+    add_development(root, data).update(completed_batches=[1], active_batch=3)
+    save(root, data)
+    assert "active_batch must be the next uncompleted batch" in errors(root)
+
+
+@pytest.mark.parametrize("field", ["checkpoint", "completion_report"])
+@pytest.mark.parametrize("path", [
+    "/tmp/outside.md", "../outside.md", "docs/../README.md", "docs//checkpoint.md",
+    "docs\\checkpoint.md", "C:/outside.md", "docs/missing.md", "docs/checkpoint.txt",
+    "docs/empty.md", None, [], True, "docs/null\x00.md",
+])
+def test_development_document_requires_safe_existing_nonempty_markdown(sample_repo, field, path) -> None:
+    root, data = sample_repo
+    state = add_development(root, data)
+    (root / "docs/empty.md").write_text("  \n")
+    (root / "docs/checkpoint.txt").write_text("Not a Markdown filename.\n")
+    state[field] = path
+    save(root, data)
+    assert f"development.{field} must name a safe relative existing nonempty .md file" in errors(root)
+
+
+@pytest.mark.parametrize("field", ["checkpoint", "completion_report"])
+def test_development_documents_reject_symlink_escape(sample_repo, field) -> None:
+    root, data = sample_repo
+    state = add_development(root, data)
+    outside = root.with_name(root.name + "-outside.md")
+    outside.write_text("# External fixture\n")
+    (root / "docs/external.md").symlink_to(outside)
+    state[field] = "docs/external.md"
+    save(root, data)
+    assert f"development.{field} must name a safe relative" in errors(root)
+
+
+def test_development_allows_safe_internal_symlink_and_completion_report(sample_repo) -> None:
+    root, data = sample_repo
+    state = add_development(root, data)
+    (root / "docs/internal.md").symlink_to(root / "docs/checkpoint.md")
+    state["checkpoint"] = "docs/internal.md"
+    state["completion_report"] = "docs/checkpoint.md"
+    save(root, data)
+    assert validate_repository(root).ok
+
+
+def test_development_future_scope_has_no_sorting_membership_or_three_batch_limit(sample_repo) -> None:
+    root, data = sample_repo
+    state = add_development(root, data)
+    state.update(completed_batches=[1, 2, 3, 4], active_batch=5)
+    save(root, data)
+    assert validate_repository(root).ok
+    state.update(status="awaiting-review", active_batch=None)
+    save(root, data)
+    assert validate_repository(root).ok
+
+
+def test_development_awaiting_review_requires_no_active_batch(sample_repo) -> None:
+    root, data = sample_repo
+    add_development(root, data).update(status="awaiting-review")
+    save(root, data)
+    assert "awaiting-review requires active_batch=null" in errors(root)
+
+
+def test_sorting_checkpoint_cannot_overstate_completed_batch(sample_repo) -> None:
+    root, data = sample_repo
+    state = add_development(root, data, scope="Sorting category only")
+    state.update(completed_batches=[1], active_batch=2)
+    save(root, data)
+    assert "completed sorting batch 1 requires bubble-sort" in errors(root)
+
+
+def test_sorting_checkpoint_rejects_fourth_batch(sample_repo) -> None:
+    root, data = sample_repo
+    state = add_development(root, data, scope="Sorting category only")
+    state.update(completed_batches=[1, 2, 3], active_batch=4)
+    save(root, data)
+    assert "Sorting active_batch must be 1, 2, or 3" in errors(root)
+    state.update(completed_batches=[1, 2, 3, 4], active_batch=5)
+    save(root, data)
+    assert "Sorting scope has only three batches" in errors(root)
+
+
+def test_sorting_awaiting_review_requires_all_three_batches(sample_repo) -> None:
+    root, data = sample_repo
+    state = add_development(root, data, scope="Sorting category only")
+    state.update(status="awaiting-review", active_batch=None, completed_batches=[1, 2])
+    save(root, data)
+    assert "Sorting awaiting-review requires all three completed batches" in errors(root)
+
+
+def completed_sorting_statuses() -> dict:
+    """Only fake status dictionaries; historical test execution is not simulated."""
+    return {
+        algorithm: {
+            "documentation_status": "implemented", "python_status": "implemented",
+            "cpp_status": "implemented", "test_status": "tested",
+        }
+        for batch in SORTING_BATCHES for algorithm in batch
+    }
+
+
+def test_sorting_completed_metadata_accepts_all_ready_status_records(sample_repo) -> None:
+    root, data = sample_repo
+    state = add_development(root, data, scope="Sorting category only")
+    state.update(status="awaiting-review", active_batch=None, completed_batches=[1, 2, 3])
+    report = ValidationReport()
+    _validate_development(root, state, completed_sorting_statuses(), report)
+    assert report.ok, report.errors
+
+
+@pytest.mark.parametrize("field,value", [
+    ("documentation_status", "planned"), ("python_status", "in-progress"),
+    ("cpp_status", None), ("test_status", "implemented"), ("test_status", {}),
+])
+def test_sorting_completed_metadata_requires_ready_artifacts_and_test_evidence_status(sample_repo, field, value) -> None:
+    root, data = sample_repo
+    state = add_development(root, data, scope="Sorting category only")
+    state.update(status="awaiting-review", active_batch=None, completed_batches=[1, 2, 3])
+    algorithms = completed_sorting_statuses()
+    algorithms["tim-sort"][field] = value
+    report = ValidationReport()
+    _validate_development(root, state, algorithms, report)
+    assert any("completed sorting batch 3 requires tim-sort" in error for error in report.errors)

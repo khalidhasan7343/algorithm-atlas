@@ -6,13 +6,17 @@ Read `README.md`, `CONTRIBUTING.md`, `docs/progress.md`, and the relevant record
 
 ## Mandatory phase checkpoint
 
-The current checkpoint is **Phase 0 foundation, awaiting user review**. No algorithm implementations, including Bubble Sort, are authorized during Phase 0. Do not infer permission from a passing test suite or from the next planned batch.
+**Phase 0 is approved. The current authorization is Phase 1 — Sorting category only.** The user approved all 11 sorting algorithms in three sequential internal batches:
 
-Begin Phase 1 only after the user explicitly says:
+1. Bubble Sort, Selection Sort, Insertion Sort, Merge Sort.
+2. Quick Sort, Heap Sort, Counting Sort, Radix Sort.
+3. Bucket Sort, Shell Sort, Tim Sort.
 
-> Phase 0 Approved. Start Phase 1.
+Finish and test each batch before starting the next. Fix failures, update `catalog.yaml`, regenerate `docs/progress.md`, and record actual results in `docs/sorting-checkpoints.md` after each batch. Continue automatically between these internal batches; no further approval is needed for them. Read the checkpoint and catalog development state before resuming interrupted work.
 
-At the end of every subsequent phase, stop for explicit user review and approval before developing the next phase. The user's latest explicit authorization controls these checkpoints. When authorized to transition, update the progress tracking, the generator's Phase 0 prose, and this checkpoint so future work resumes accurately.
+After all 11 sorting algorithms pass the full applicable suite and catalog/link checks, prepare a detailed completion report and **stop for user review**. Searching and every other category remain unauthorized. Do not infer approval for another category from passing tests or a next planned batch.
+
+At the end of every subsequent authorized phase or category scope, stop for explicit user review before developing beyond that scope. The user's latest explicit authorization controls these checkpoints.
 
 Do not push, publish, or create commits on the maintainer's behalf without explicit authorization. Do not set Git identity from the public contact email.
 

@@ -4,7 +4,7 @@
 
 Search, constrained reasoning, strategic interaction, fuzzy inference, swarm methods, and vision.
 
-The links below preserve the complete syllabus and lead to canonical topic planning pages. Phase 0 contains no algorithm implementations; full articles and tests remain pending.
+The links below preserve the complete syllabus and lead to canonical topics. Consult their statuses for full lessons and tested implementations; planned topics remain scope records only.
 
 - [C1. Uninformed Search](uninformed-search/README.md)
 - [C2. Informed Search](informed-search/README.md)

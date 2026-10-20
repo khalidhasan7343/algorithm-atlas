@@ -2,7 +2,7 @@
 
 Progress from foundational problem solving to specialized AI topics. These levels describe a study order, not repository development phases: learning a later level does not authorize implementation outside the approved development phase.
 
-**Phase 0 status:** algorithm links below lead to canonical planning folders. Implementations, worked examples, and algorithm tests will be added only after the relevant phase is approved. Use the [complete index](algorithm-index.md) for every syllabus item and the [progress tracker](progress.md) for actual completion status. Repeated topics share their canonical location.
+**Current scope:** Phase 0 is approved and Sorting is authorized. Links lead to completed lessons or canonical planning folders according to catalog status; other categories require separate approval. Use the [complete index](algorithm-index.md) for every syllabus item and the [progress tracker](progress.md) for actual completion status. Repeated topics share their canonical location.
 
 ## Level 1 — DSA Foundations
 
@@ -108,6 +108,6 @@ Choose branches according to the structure of the problem:
 
 ## How to use the roadmap
 
-Follow the prerequisites rather than treating levels as a fixed schedule. For each available completed topic, read its intuition and contract, predict a small example's output, inspect the implementation, run its documented tests, and explain its complexity in your own words. During Phase 0, use the linked planning notes to understand scope and prerequisites; runnable algorithm material is intentionally deferred.
+Follow the prerequisites rather than treating levels as a fixed schedule. For each available completed topic, read its intuition and contract, predict a small example's output, inspect the implementation, run its documented tests, and explain its complexity in your own words. For unimplemented topics, use the linked planning notes to understand scope and prerequisites; runnable material follows only within an approved category.
 
-Contributors should consult the [development guide](development.md) and the current [progress tracker](progress.md). Implementation begins only after the maintainer's explicit phase approval, starting with `Phase 0 Approved. Start Phase 1.`
+Contributors should consult the [development guide](development.md) and the current [progress tracker](progress.md). The current approval covers Sorting only. After Sorting is complete, stop for review before implementing Searching or any other category.
