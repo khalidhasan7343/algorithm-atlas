@@ -101,7 +101,7 @@ The CLI validates every token against ASCII signed-decimal syntax before sorting
 
 ## 14. C++ Implementation
 
-[cpp/solution.cpp](cpp/solution.cpp) exposes `algorithm_atlas::bubble_sort<T>(const std::vector<T>&)` using standard headers and C++17 facilities. Types must be copyable, swappable, and less-than comparable. Define `ALGORITHM_ATLAS_NO_MAIN` before including this educational source in a custom driver. Ordinary builds provide the integer CLI. `std::from_chars` plus explicit token checks rejects overflow, trailing characters, and lone signs. A leading `+` is supported explicitly.
+[cpp/solution.cpp](cpp/solution.cpp) exposes `algorithm_atlas::bubble_sort<T>(const std::vector<T>&)` using standard headers and C++17 facilities. Types must be copyable, swappable, and less-than comparable. Define `ALGORITHM_ATLAS_NO_MAIN` before including this educational source in a custom driver. Ordinary builds provide the integer CLI. Explicit signed-decimal token checks and range-checked `std::stoll`, including a full-consumption check, reject overflow, trailing characters, and lone signs. Conversion exceptions produce a parse failure. A leading `+` is accepted.
 
 ## 15. Input and Output Examples
 

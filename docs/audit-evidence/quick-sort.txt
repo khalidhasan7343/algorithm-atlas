@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/sorting/quick-sort/tests
+Result: {"label": "quick-sort", "command": "python -m pytest -q --require-cpp dsa/sorting/quick-sort/tests", "returncode": 0, "timeout_seconds": 120, "timed_out": false, "elapsed_seconds": 3.196, "summary": "34 passed in 3.09s"}
+
+..................................                                       [100%]
+34 passed in 3.09s

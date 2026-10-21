@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/sorting -m cpp --cpp-standard=c++17
+Result: {"label": "sorting-cpp17", "command": "python -m pytest -q --require-cpp dsa/sorting -m cpp --cpp-standard=c++17", "returncode": 0, "timeout_seconds": 120, "timed_out": false, "elapsed_seconds": 18.442, "summary": "34 passed, 488 deselected in 18.33s", "CXX": "(automatic g++/clang++ discovery)"}
+
+..................................                                       [100%]
+34 passed, 488 deselected in 18.33s

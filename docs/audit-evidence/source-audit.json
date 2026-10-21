@@ -1,0 +1,105 @@
+{
+  "scope": "Sorting only",
+  "implementation_files": 22,
+  "algorithms": [
+    {
+      "algorithm": "bubble-sort",
+      "numbered_documentation_sections": 25,
+      "implementation_unchanged_from_HEAD": true,
+      "source_sha256": {
+        "dsa/sorting/bubble-sort/python/solution.py": "35a5c8e79ee3f4714dba510171a177895a4ef8093a3bdca8ddd15a4782bc24ea",
+        "dsa/sorting/bubble-sort/cpp/solution.cpp": "14e6a842e0b915b676a4732bc3b80120580c9398ecdf327026317da5b0db801e"
+      }
+    },
+    {
+      "algorithm": "selection-sort",
+      "numbered_documentation_sections": 25,
+      "implementation_unchanged_from_HEAD": true,
+      "source_sha256": {
+        "dsa/sorting/selection-sort/python/solution.py": "e9cfd826d17311df2e3f915a97c488b5af095cf440e73aca44927b770ac445ef",
+        "dsa/sorting/selection-sort/cpp/solution.cpp": "bd094f28dc86afd5848c6f3eb6e9844899df2846e43acc6a01b1c24039df15f1"
+      }
+    },
+    {
+      "algorithm": "insertion-sort",
+      "numbered_documentation_sections": 25,
+      "implementation_unchanged_from_HEAD": true,
+      "source_sha256": {
+        "dsa/sorting/insertion-sort/python/solution.py": "c42939b7c771ca4cebdc65d7f5efc2698b6a50c0dbb00a3a40ed6b28fce68442",
+        "dsa/sorting/insertion-sort/cpp/solution.cpp": "7230155ca8e36a24f55b6076b64c1b73a2cc7c77ac54ad7ce27ecd4b067fcf9f"
+      }
+    },
+    {
+      "algorithm": "merge-sort",
+      "numbered_documentation_sections": 25,
+      "implementation_unchanged_from_HEAD": true,
+      "source_sha256": {
+        "dsa/sorting/merge-sort/python/solution.py": "5250d0d19c692efbbbd1030159bc035fd2b249b0aaf00498e8b7cf91527606ed",
+        "dsa/sorting/merge-sort/cpp/solution.cpp": "26b7b464aad240f31991f1a387c8ebbe8da86459b78f3a9d50202c10fc67c004"
+      }
+    },
+    {
+      "algorithm": "quick-sort",
+      "numbered_documentation_sections": 25,
+      "implementation_unchanged_from_HEAD": true,
+      "source_sha256": {
+        "dsa/sorting/quick-sort/python/solution.py": "acb05f50cfeb450a8bf155865c2eb55d13dc1e2024e829f4a94cc7681f6e7210",
+        "dsa/sorting/quick-sort/cpp/solution.cpp": "068a31f15328a6631136709b0d0a9bf1afce5c7797f641945034dd8a9761793c"
+      }
+    },
+    {
+      "algorithm": "heap-sort",
+      "numbered_documentation_sections": 25,
+      "implementation_unchanged_from_HEAD": true,
+      "source_sha256": {
+        "dsa/sorting/heap-sort/python/solution.py": "5df0fa74befdbf6b91e8ce2511029b77afd6d069bfa9fea69566ca574964f2ba",
+        "dsa/sorting/heap-sort/cpp/solution.cpp": "b4015b3618d9884a558b8e68957b280f66cb70b88a09e98cab870c2697b424c3"
+      }
+    },
+    {
+      "algorithm": "counting-sort",
+      "numbered_documentation_sections": 25,
+      "implementation_unchanged_from_HEAD": true,
+      "source_sha256": {
+        "dsa/sorting/counting-sort/python/solution.py": "ba71cecb3ce2e2af5ce3a994555633808fb9d7eb938a3fcb487774089a449296",
+        "dsa/sorting/counting-sort/cpp/solution.cpp": "4f42fffd02f6b8cb80bf04225ef242c8420ea49748f164217befeda4b8c1576d"
+      }
+    },
+    {
+      "algorithm": "radix-sort",
+      "numbered_documentation_sections": 25,
+      "implementation_unchanged_from_HEAD": true,
+      "source_sha256": {
+        "dsa/sorting/radix-sort/python/solution.py": "a334a4aa7a63c641ee9b8566ae816b9b1d4a2a3863c8031bb740e9d156268546",
+        "dsa/sorting/radix-sort/cpp/solution.cpp": "a540cd751ee49825912f4e68aad860a27e3f04ea84852deeccd9d88a722f6aee"
+      }
+    },
+    {
+      "algorithm": "bucket-sort",
+      "numbered_documentation_sections": 25,
+      "implementation_unchanged_from_HEAD": true,
+      "source_sha256": {
+        "dsa/sorting/bucket-sort/python/solution.py": "c7d5c40e4bbec5205d318aa47040accdd1c5853322ba7fa35695def4938c70bd",
+        "dsa/sorting/bucket-sort/cpp/solution.cpp": "887ed2005eff34b3c29ea578c5932f562c7f3749d5b87fca729e10e017c03d7c"
+      }
+    },
+    {
+      "algorithm": "shell-sort",
+      "numbered_documentation_sections": 25,
+      "implementation_unchanged_from_HEAD": true,
+      "source_sha256": {
+        "dsa/sorting/shell-sort/python/solution.py": "6843e29ad1269283b038e958ef6a33072b63e344301b16d923fc0e801e0b83c9",
+        "dsa/sorting/shell-sort/cpp/solution.cpp": "6920c2e15d413f85ab90eeb9c9ecc2125aabe909c5e07ac8bda9668710180829"
+      }
+    },
+    {
+      "algorithm": "tim-sort",
+      "numbered_documentation_sections": 25,
+      "implementation_unchanged_from_HEAD": true,
+      "source_sha256": {
+        "dsa/sorting/tim-sort/python/solution.py": "0e34cf8b453d88fa8675f531c4a165fcd03807c199981698ca28500aa0c36361",
+        "dsa/sorting/tim-sort/cpp/solution.cpp": "33e9cc7ca92407e48dfc4b3798646b5475128b2d95f95315b8a8b64a239ec97a"
+      }
+    }
+  ]
+}

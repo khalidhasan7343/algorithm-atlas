@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/sorting/insertion-sort/tests
+Result: {"label": "insertion-sort", "command": "python -m pytest -q --require-cpp dsa/sorting/insertion-sort/tests", "returncode": 0, "timeout_seconds": 120, "timed_out": false, "elapsed_seconds": 3.564, "summary": "34 passed in 3.46s"}
+
+..................................                                       [100%]
+34 passed in 3.46s

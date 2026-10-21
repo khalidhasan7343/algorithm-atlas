@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/sorting/bubble-sort/tests
+Result: {"label": "bubble-sort", "command": "python -m pytest -q --require-cpp dsa/sorting/bubble-sort/tests", "returncode": 0, "timeout_seconds": 120, "timed_out": false, "elapsed_seconds": 3.579, "summary": "36 passed in 3.42s"}
+
+....................................                                     [100%]
+36 passed in 3.42s

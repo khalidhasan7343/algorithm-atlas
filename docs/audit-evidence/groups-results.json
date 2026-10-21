@@ -1,0 +1,72 @@
+[
+  {
+    "label": "sorting-python",
+    "command": "python -m pytest -q --require-cpp dsa/sorting -m 'not cpp'",
+    "returncode": 0,
+    "timeout_seconds": 120,
+    "timed_out": false,
+    "elapsed_seconds": 5.862,
+    "summary": "488 passed, 68 deselected in 5.75s",
+    "CXX": "(automatic g++/clang++ discovery)"
+  },
+  {
+    "label": "sorting-cpp17",
+    "command": "python -m pytest -q --require-cpp dsa/sorting -m cpp --cpp-standard=c++17",
+    "returncode": 0,
+    "timeout_seconds": 120,
+    "timed_out": false,
+    "elapsed_seconds": 18.442,
+    "summary": "34 passed, 488 deselected in 18.33s",
+    "CXX": "(automatic g++/clang++ discovery)"
+  },
+  {
+    "label": "sorting-cpp20",
+    "command": "python -m pytest -q --require-cpp dsa/sorting -m cpp --cpp-standard=c++20",
+    "returncode": 0,
+    "timeout_seconds": 120,
+    "timed_out": false,
+    "elapsed_seconds": 21.328,
+    "summary": "34 passed, 488 deselected in 21.21s",
+    "CXX": "(automatic g++/clang++ discovery)"
+  },
+  {
+    "label": "infrastructure",
+    "command": "python -m pytest -q --require-cpp tests",
+    "returncode": 0,
+    "timeout_seconds": 120,
+    "timed_out": false,
+    "elapsed_seconds": 2.178,
+    "summary": "175 passed in 2.03s",
+    "CXX": "(automatic g++/clang++ discovery)"
+  },
+  {
+    "label": "full-suite",
+    "command": "python -m pytest -q --require-cpp",
+    "returncode": 0,
+    "timeout_seconds": 120,
+    "timed_out": false,
+    "elapsed_seconds": 41.314,
+    "summary": "731 passed in 41.19s",
+    "CXX": "(automatic g++/clang++ discovery)"
+  },
+  {
+    "label": "catalog",
+    "command": "python scripts/validate_catalog.py",
+    "returncode": 0,
+    "timeout_seconds": 120,
+    "timed_out": false,
+    "elapsed_seconds": 0.427,
+    "summary": "",
+    "CXX": "(automatic g++/clang++ discovery)"
+  },
+  {
+    "label": "generated-docs",
+    "command": "python scripts/generate_catalog_docs.py --check",
+    "returncode": 0,
+    "timeout_seconds": 120,
+    "timed_out": false,
+    "elapsed_seconds": 0.182,
+    "summary": "",
+    "CXX": "(automatic g++/clang++ discovery)"
+  }
+]

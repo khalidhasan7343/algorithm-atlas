@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/sorting/selection-sort/tests
+Result: {"label": "selection-sort", "command": "python -m pytest -q --require-cpp dsa/sorting/selection-sort/tests", "returncode": 0, "timeout_seconds": 120, "timed_out": false, "elapsed_seconds": 3.536, "summary": "36 passed in 3.43s"}
+
+....................................                                     [100%]
+36 passed in 3.43s

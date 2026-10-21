@@ -1,0 +1,12 @@
+[
+  {
+    "label": "sanitizer",
+    "command": "python -m pytest -q --require-cpp dsa/sorting/tests dsa/sorting/tim-sort/tests -m cpp --cpp-standard=c++20",
+    "returncode": 0,
+    "timeout_seconds": 120,
+    "timed_out": false,
+    "elapsed_seconds": 13.64,
+    "summary": "14 passed, 117 deselected in 13.48s",
+    "CXX": "clang++ -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all"
+  }
+]

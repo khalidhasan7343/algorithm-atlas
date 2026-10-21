@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/sorting/tim-sort/tests
+Result: {"label": "tim-sort", "command": "python -m pytest -q --require-cpp dsa/sorting/tim-sort/tests", "returncode": 0, "timeout_seconds": 120, "timed_out": false, "elapsed_seconds": 3.66, "summary": "69 passed in 3.55s"}
+
+.....................................................................    [100%]
+69 passed in 3.55s

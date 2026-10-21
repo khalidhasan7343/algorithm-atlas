@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/sorting/counting-sort/tests
+Result: {"label": "counting-sort", "command": "python -m pytest -q --require-cpp dsa/sorting/counting-sort/tests", "returncode": 0, "timeout_seconds": 120, "timed_out": false, "elapsed_seconds": 3.982, "summary": "52 passed in 3.87s"}
+
+....................................................                     [100%]
+52 passed in 3.87s

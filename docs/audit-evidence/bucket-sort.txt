@@ -1,0 +1,6 @@
+Command: python -m pytest -q --require-cpp dsa/sorting/bucket-sort/tests
+Result: {"label": "bucket-sort", "command": "python -m pytest -q --require-cpp dsa/sorting/bucket-sort/tests", "returncode": 0, "timeout_seconds": 120, "timed_out": false, "elapsed_seconds": 3.224, "summary": "110 passed in 3.11s"}
+
+........................................................................ [ 65%]
+......................................                                   [100%]
+110 passed in 3.11s

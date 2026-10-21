@@ -6,7 +6,7 @@ From Fundamental Algorithms to Advanced Artificial Intelligence — Learn, Imple
 
 Algorithm Atlas is an educational, open-source project maintained by **MD.Khalid Hasan**. Its goal is to explain algorithms from first principles through clear documentation, Python and modern C++ implementations, meaningful tests, complexity analysis, and practical applications.
 
-**Current state: Phase 1 — Sorting category authorized.** Phase 0 is approved. Sorting is being completed in three validated batches; see [progress](docs/progress.md) and [batch checkpoints](docs/sorting-checkpoints.md) for actual results. Searching and every other category require separate approval.
+**Current state: Sorting complete — 11 of 11 algorithms implemented and tested; awaiting user review.** See the [final Sorting audit](SORTING-FINAL-AUDIT-REPORT.md), [original review report](SORTING-REVIEW-REPORT.md), [progress](docs/progress.md), and [batch checkpoints](docs/sorting-checkpoints.md) for actual results. Searching and every other category require separate approval.
 
 ## Project Overview
 
@@ -31,8 +31,8 @@ The current Sorting work adds detailed explanations, dry runs, Python/C++ implem
 
 | Technology | Purpose |
 | --- | --- |
-| Python 3.11+ | Development tools, pytest, and future Python implementations |
-| C++17 / C++20 | Future C++ implementations and compiler smoke checks |
+| Python 3.11+ | Development tools, pytest, and Sorting implementations |
+| C++17 / C++20 | Sorting implementations and compiler checks |
 | pytest | Infrastructure tests and future per-algorithm test discovery |
 | PyYAML | Catalog parsing and validation |
 | Markdown / YAML | Learning materials, catalog, and CI configuration |

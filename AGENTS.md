@@ -8,6 +8,8 @@ Read `README.md`, `CONTRIBUTING.md`, `docs/progress.md`, and the relevant record
 
 **Phase 0 is approved. The current authorization is Phase 1 — Sorting category only.** The user approved all 11 sorting algorithms in three sequential internal batches:
 
+**Current checkpoint: all 11 Sorting algorithms are implemented and tested; human review remains pending.** The latest authorized work is independent Sorting verification and confirmed corrections only, recorded in `SORTING-FINAL-AUDIT-REPORT.md`; `SORTING-REVIEW-REPORT.md` preserves the original handoff. After verification and packaging, stop for review. Do not start Searching without explicit user approval. Packaging this snapshot does not authorize another category.
+
 1. Bubble Sort, Selection Sort, Insertion Sort, Merge Sort.
 2. Quick Sort, Heap Sort, Counting Sort, Radix Sort.
 3. Bucket Sort, Shell Sort, Tim Sort.

@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/sorting/shell-sort/tests
+Result: {"label": "shell-sort", "command": "python -m pytest -q --require-cpp dsa/sorting/shell-sort/tests", "returncode": 0, "timeout_seconds": 120, "timed_out": false, "elapsed_seconds": 3.007, "summary": "23 passed in 2.90s"}
+
+.......................                                                  [100%]
+23 passed in 2.90s

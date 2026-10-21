@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/sorting/merge-sort/tests
+Result: {"label": "merge-sort", "command": "python -m pytest -q --require-cpp dsa/sorting/merge-sort/tests", "returncode": 0, "timeout_seconds": 120, "timed_out": false, "elapsed_seconds": 3.176, "summary": "20 passed in 3.07s"}
+
+....................                                                     [100%]
+20 passed in 3.07s

@@ -1,0 +1,11 @@
+Command: python scripts/validate_catalog.py
+Exit: 0; timeout: 120s; timed out: false
+Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 296 Markdown files, and 3719 local links.
+Validation passed. Test execution and external URLs are checked separately.
+
+Command: python scripts/generate_catalog_docs.py --check
+Exit: 0; timeout: 120s; timed out: false
+Checked 266 catalog documentation pages; 0 changes.
+
+Command: git diff --check
+Exit: 0; timeout: 120s; timed out: false

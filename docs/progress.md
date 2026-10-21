@@ -4,7 +4,7 @@
 
 **Current development phase: Phase 1 — DSA.**
 
-**Authorized scope:** Sorting category only. **Checkpoint status:** in-progress.
+**Authorized scope:** Sorting category only. **Checkpoint status:** awaiting-review.
 
 | Measure | Count |
 | --- | ---: |
@@ -36,11 +36,13 @@ Completion requires full educational documentation, both language implementation
 
 ## Current authorized work and resume checkpoint
 
-Validated sorting batches: 1, 2.
+Validated sorting batches: 1, 2, 3.
 
-Active batch: 3.
+Active batch: none; awaiting user review.
 
 Actual commands, results, and resume instructions are saved in [sorting checkpoints](sorting-checkpoints.md).
+
+See the [sorting completion report](../SORTING-FINAL-AUDIT-REPORT.md).
 
 The approved order is Batch 1: Bubble, Selection, Insertion, Merge; Batch 2: Quick, Heap, Counting, Radix; Batch 3: Bucket, Shell, Tim. Finish and validate each batch before automatically continuing. No approval is required between these internal batches.
 

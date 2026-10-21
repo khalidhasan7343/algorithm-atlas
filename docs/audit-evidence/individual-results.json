@@ -1,0 +1,101 @@
+[
+  {
+    "label": "bubble-sort",
+    "command": "python -m pytest -q --require-cpp dsa/sorting/bubble-sort/tests",
+    "returncode": 0,
+    "timeout_seconds": 120,
+    "timed_out": false,
+    "elapsed_seconds": 3.579,
+    "summary": "36 passed in 3.42s"
+  },
+  {
+    "label": "selection-sort",
+    "command": "python -m pytest -q --require-cpp dsa/sorting/selection-sort/tests",
+    "returncode": 0,
+    "timeout_seconds": 120,
+    "timed_out": false,
+    "elapsed_seconds": 3.536,
+    "summary": "36 passed in 3.43s"
+  },
+  {
+    "label": "insertion-sort",
+    "command": "python -m pytest -q --require-cpp dsa/sorting/insertion-sort/tests",
+    "returncode": 0,
+    "timeout_seconds": 120,
+    "timed_out": false,
+    "elapsed_seconds": 3.564,
+    "summary": "34 passed in 3.46s"
+  },
+  {
+    "label": "merge-sort",
+    "command": "python -m pytest -q --require-cpp dsa/sorting/merge-sort/tests",
+    "returncode": 0,
+    "timeout_seconds": 120,
+    "timed_out": false,
+    "elapsed_seconds": 3.176,
+    "summary": "20 passed in 3.07s"
+  },
+  {
+    "label": "quick-sort",
+    "command": "python -m pytest -q --require-cpp dsa/sorting/quick-sort/tests",
+    "returncode": 0,
+    "timeout_seconds": 120,
+    "timed_out": false,
+    "elapsed_seconds": 3.196,
+    "summary": "34 passed in 3.09s"
+  },
+  {
+    "label": "heap-sort",
+    "command": "python -m pytest -q --require-cpp dsa/sorting/heap-sort/tests",
+    "returncode": 0,
+    "timeout_seconds": 120,
+    "timed_out": false,
+    "elapsed_seconds": 3.035,
+    "summary": "22 passed in 2.93s"
+  },
+  {
+    "label": "counting-sort",
+    "command": "python -m pytest -q --require-cpp dsa/sorting/counting-sort/tests",
+    "returncode": 0,
+    "timeout_seconds": 120,
+    "timed_out": false,
+    "elapsed_seconds": 3.982,
+    "summary": "52 passed in 3.87s"
+  },
+  {
+    "label": "radix-sort",
+    "command": "python -m pytest -q --require-cpp dsa/sorting/radix-sort/tests",
+    "returncode": 0,
+    "timeout_seconds": 120,
+    "timed_out": false,
+    "elapsed_seconds": 3.053,
+    "summary": "44 passed in 2.95s"
+  },
+  {
+    "label": "bucket-sort",
+    "command": "python -m pytest -q --require-cpp dsa/sorting/bucket-sort/tests",
+    "returncode": 0,
+    "timeout_seconds": 120,
+    "timed_out": false,
+    "elapsed_seconds": 3.224,
+    "summary": "110 passed in 3.11s"
+  },
+  {
+    "label": "shell-sort",
+    "command": "python -m pytest -q --require-cpp dsa/sorting/shell-sort/tests",
+    "returncode": 0,
+    "timeout_seconds": 120,
+    "timed_out": false,
+    "elapsed_seconds": 3.007,
+    "summary": "23 passed in 2.90s"
+  },
+  {
+    "label": "tim-sort",
+    "command": "python -m pytest -q --require-cpp dsa/sorting/tim-sort/tests",
+    "returncode": 0,
+    "timeout_seconds": 120,
+    "timed_out": false,
+    "elapsed_seconds": 3.66,
+    "summary": "69 passed in 3.55s"
+  }
+]
