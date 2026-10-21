@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/searching/linear-search/tests
+Result: {"label": "linear-search", "command": "python -m pytest -q --require-cpp dsa/searching/linear-search/tests", "returncode": 0, "timeout_seconds": 180, "timed_out": false, "elapsed_seconds": 3.755, "summary": "43 passed in 3.65s", "CXX": "automatic discovery"}
+
+...........................................                              [100%]
+43 passed in 3.65s

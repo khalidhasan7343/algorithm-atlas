@@ -164,3 +164,18 @@ def test_completed_topic_retains_lesson_and_appears_in_progress(planning_repo) -
     assert readme not in pages
     assert '| Completed algorithms | 1 |' in pages[generator.ROOT / 'docs/progress.md']
     assert 'Sample Topic' in pages[generator.ROOT / 'docs/progress.md']
+
+
+def test_searching_progress_uses_its_approved_order_and_review_boundary(planning_repo):
+    _, catalog, _ = planning_repo
+    catalog['development'] = {
+        'phase': 'Phase 2 — Searching', 'scope': 'Searching category only',
+        'status': 'in-progress', 'active_batch': 2, 'completed_batches': [1],
+        'checkpoint': 'docs/searching-checkpoints.md',
+    }
+    text = generator.progress_page(catalog, {'sample-topic': catalog['algorithms'][0]})
+    assert 'Validated searching batches: 1.' in text
+    assert 'Batch 1: Linear, Binary, Jump; Batch 2: Interpolation, Exponential, Ternary' in text
+    assert 'Every other category requires explicit approval' in text
+    assert 'outside Sorting' not in text and 'Validated sorting batches' not in text
+    assert 'searching-checkpoints.md' in text

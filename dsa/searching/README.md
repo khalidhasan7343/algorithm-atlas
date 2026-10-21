@@ -8,17 +8,17 @@ This category preserves **6 original syllabus entries**. Each link points to the
 
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Linear Search | [linear-search](linear-search/README.md) | planned |
-| Binary Search | [binary-search](binary-search/README.md) | planned |
-| Ternary Search | [ternary-search](ternary-search/README.md) | planned |
-| Jump Search | [jump-search](jump-search/README.md) | planned |
-| Interpolation Search | [interpolation-search](interpolation-search/README.md) | planned |
-| Exponential Search | [exponential-search](exponential-search/README.md) | planned |
+| Linear Search | [linear-search](linear-search/README.md) | complete |
+| Binary Search | [binary-search](binary-search/README.md) | complete |
+| Ternary Search | [ternary-search](ternary-search/README.md) | complete |
+| Jump Search | [jump-search](jump-search/README.md) | complete |
+| Interpolation Search | [interpolation-search](interpolation-search/README.md) | complete |
+| Exponential Search | [exponential-search](exponential-search/README.md) | complete |
 
 ## Learning and contribution scope
 
 Choose prerequisites through the [learning roadmap](../../docs/learning-roadmap.md). Each future completed topic must include the full 25-part educational article, working Python and C++ programs, executable examples, accurate complexity analysis, and relevant tests described in [the contribution standards](../../CONTRIBUTING.md).
 
-Completion is shown by the catalog status and topic artifacts. The current implementation authorization covers Sorting only; other categories require explicit user approval.
+Completion is shown by the catalog status and topic artifacts. The current implementation authorization is recorded in the progress tracker; other categories require explicit user approval.
 
 [Project home](../../README.md) · [Complete index](../../docs/algorithm-index.md) · [Progress](../../docs/progress.md)

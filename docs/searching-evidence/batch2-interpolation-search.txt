@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/searching/interpolation-search/tests
+Result: {"label": "interpolation-search", "command": "python -m pytest -q --require-cpp dsa/searching/interpolation-search/tests", "returncode": 0, "timeout_seconds": 180, "timed_out": false, "elapsed_seconds": 3.753, "summary": "62 passed in 3.59s", "CXX": "automatic discovery"}
+
+..............................................................           [100%]
+62 passed in 3.59s

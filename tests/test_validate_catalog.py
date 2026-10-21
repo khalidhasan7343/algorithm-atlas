@@ -469,6 +469,61 @@ def test_sorting_completed_metadata_accepts_all_ready_status_records(sample_repo
     assert report.ok, report.errors
 
 
+def searching_statuses():
+    """Fixture status records, not assertions of historical execution."""
+    return {
+        algorithm: {
+            "documentation_status": "implemented", "python_status": "implemented",
+            "cpp_status": "implemented", "test_status": "tested",
+        }
+        for algorithm in ("linear-search", "binary-search", "jump-search",
+                          "interpolation-search", "exponential-search", "ternary-search")
+    }
+
+
+@pytest.mark.parametrize("completed,active,status", [
+    ([], 1, "in-progress"), ([1], 2, "in-progress"),
+    ([1, 2], None, "awaiting-review"),
+])
+def test_searching_checkpoint_accepts_its_two_batch_order(sample_repo, completed, active, status):
+    root, data = sample_repo
+    state = add_development(root, data, scope="Searching category only")
+    state.update(completed_batches=completed, active_batch=active, status=status)
+    report = ValidationReport()
+    _validate_development(root, state, searching_statuses(), report)
+    assert report.ok, report.errors
+
+
+@pytest.mark.parametrize("completed,active,status,expected", [
+    ([1, 2], 3, "in-progress", "Searching active_batch"),
+    ([1, 2, 3], 4, "in-progress", "Searching scope has only two batches"),
+    ([1], None, "awaiting-review", "Searching awaiting-review"),
+])
+def test_searching_checkpoint_rejects_invalid_phase_claims(sample_repo, completed, active, status, expected):
+    root, data = sample_repo
+    state = add_development(root, data, scope="Searching category only")
+    state.update(completed_batches=completed, active_batch=active, status=status)
+    report = ValidationReport()
+    _validate_development(root, state, searching_statuses(), report)
+    assert any(expected in error for error in report.errors)
+
+
+@pytest.mark.parametrize("field,value", [
+    ("documentation_status", "planned"), ("python_status", "in-progress"),
+    ("cpp_status", None), ("test_status", "implemented"), ("test_status", {}),
+])
+def test_searching_completed_checkpoint_requires_both_languages_and_tests(sample_repo, field, value):
+    root, data = sample_repo
+    state = add_development(root, data, scope="Searching category only")
+    state.update(completed_batches=[1, 2], active_batch=None, status="awaiting-review")
+    algorithms = searching_statuses()
+    algorithms["ternary-search"][field] = value
+    report = ValidationReport()
+    _validate_development(root, state, algorithms, report)
+    assert any("completed searching batch 2 requires ternary-search" in error
+               for error in report.errors)
+
+
 @pytest.mark.parametrize("field,value", [
     ("documentation_status", "planned"), ("python_status", "in-progress"),
     ("cpp_status", None), ("test_status", "implemented"), ("test_status", {}),

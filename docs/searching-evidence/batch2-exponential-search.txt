@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/searching/exponential-search/tests
+Result: {"label": "exponential-search", "command": "python -m pytest -q --require-cpp dsa/searching/exponential-search/tests", "returncode": 0, "timeout_seconds": 180, "timed_out": false, "elapsed_seconds": 3.562, "summary": "53 passed in 3.45s", "CXX": "automatic discovery"}
+
+.....................................................                    [100%]
+53 passed in 3.45s

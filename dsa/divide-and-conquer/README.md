@@ -10,7 +10,7 @@ This category preserves **7 original syllabus entries**. Each link points to the
 | --- | --- | --- |
 | Merge Sort | [merge-sort](../sorting/merge-sort/README.md) | complete |
 | Quick Sort | [quick-sort](../sorting/quick-sort/README.md) | complete |
-| Binary Search | [binary-search](../searching/binary-search/README.md) | planned |
+| Binary Search | [binary-search](../searching/binary-search/README.md) | complete |
 | Strassen's Matrix Multiplication | [strassen-matrix-multiplication](strassen-matrix-multiplication/README.md) | planned |
 | Karatsuba Multiplication | [karatsuba-multiplication](karatsuba-multiplication/README.md) | planned |
 | Closest Pair of Points | [closest-pair-of-points](closest-pair-of-points/README.md) | planned |
@@ -20,6 +20,6 @@ This category preserves **7 original syllabus entries**. Each link points to the
 
 Choose prerequisites through the [learning roadmap](../../docs/learning-roadmap.md). Each future completed topic must include the full 25-part educational article, working Python and C++ programs, executable examples, accurate complexity analysis, and relevant tests described in [the contribution standards](../../CONTRIBUTING.md).
 
-Completion is shown by the catalog status and topic artifacts. The current implementation authorization covers Sorting only; other categories require explicit user approval.
+Completion is shown by the catalog status and topic artifacts. The current implementation authorization is recorded in the progress tracker; other categories require explicit user approval.
 
 [Project home](../../README.md) · [Complete index](../../docs/algorithm-index.md) · [Progress](../../docs/progress.md)

@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/searching -m cpp --cpp-standard=c++20
+Result: {"label": "searching-sanitizer", "command": "python -m pytest -q --require-cpp dsa/searching -m cpp --cpp-standard=c++20", "returncode": 0, "timeout_seconds": 180, "timed_out": false, "elapsed_seconds": 12.194, "summary": "13 passed, 290 deselected in 12.04s", "CXX": "clang++ -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all"}
+
+.............                                                            [100%]
+13 passed, 290 deselected in 12.04s

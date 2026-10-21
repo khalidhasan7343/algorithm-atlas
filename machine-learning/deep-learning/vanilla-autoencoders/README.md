@@ -41,7 +41,7 @@ In an approved implementation phase, define the input/output contract and prereq
 
 ## Review gate and attribution
 
-The current authorization covers Sorting only. Do not begin this planned topic until it is included in the user’s approved scope.
+Check the progress tracker for the current authorization. Do not begin this planned topic until it is included in the user’s approved scope.
 
 Algorithm Atlas is maintained by [MD.Khalid Hasan](https://github.com/khalidhasan7343). Contribution and review rules are in [CONTRIBUTING.md](../../../CONTRIBUTING.md).
 

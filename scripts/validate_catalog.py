@@ -48,6 +48,10 @@ SORTING_BATCHES = (
     ("quick-sort", "heap-sort", "counting-sort", "radix-sort"),
     ("bucket-sort", "shell-sort", "tim-sort"),
 )
+SEARCHING_BATCHES = (
+    ("linear-search", "binary-search", "jump-search"),
+    ("interpolation-search", "exponential-search", "ternary-search"),
+)
 
 
 class UniqueKeyLoader(yaml.SafeLoader):
@@ -129,8 +133,8 @@ def _validate_development(
 ) -> None:
     """Validate checkpoint claims statically, without claiming tests were run.
 
-    Future scopes share the state/path contract but do not inherit Sorting's
-    three-batch limit or its algorithm membership requirements.
+    Sorting and Searching enforce their approved batch memberships. Other
+    future scopes share the state/path contract without inheriting those limits.
     """
     if not isinstance(state, dict):
         report.errors.append("development must be a mapping")
@@ -173,6 +177,28 @@ def _validate_development(
     if status == "awaiting-review" and active is not None:
         report.errors.append("development.awaiting-review requires active_batch=null")
 
+    if state.get("scope") == "Searching category only" and valid_completed:
+        if len(completed) > 2:
+            report.errors.append("development Searching scope has only two batches")
+        if status == "in-progress" and (
+            type(active) is not int or active not in (1, 2)
+        ):
+            report.errors.append("development Searching active_batch must be 1 or 2")
+        if status == "awaiting-review" and completed != [1, 2]:
+            report.errors.append("development Searching awaiting-review requires both completed batches")
+        for batch in completed[:2]:
+            for algorithm_id in SEARCHING_BATCHES[batch - 1]:
+                record = algorithms.get(algorithm_id, {})
+                if not all(
+                    isinstance(record.get(field), str)
+                    and record[field] in ARTIFACT_STATUSES
+                    for field in STATUS_FIELDS[:3]
+                ) or record.get("test_status") not in ("tested", "reviewed"):
+                    report.errors.append(
+                        f"development: completed searching batch {batch} requires {algorithm_id} "
+                        "with completed documentation, both implementations, and tested/reviewed tests"
+                    )
+        return
     if state.get("scope") != "Sorting category only" or not valid_completed:
         return
     if len(completed) > len(SORTING_BATCHES):

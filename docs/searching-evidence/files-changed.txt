@@ -1,0 +1,338 @@
+Phase 2 working-tree changes relative to starting HEAD. No commits were created.
+
+M=modified; D=deleted; A (untracked)=new local deliverable.
+The older Sorting ZIP deletion was left untouched. Broad managed README changes update authorization wording only.
+
+A (untracked)	SEARCHING-REVIEW-REPORT.md
+A (untracked)	docs/searching-checkpoints.md
+A (untracked)	docs/searching-evidence/README.md
+A (untracked)	docs/searching-evidence/batch1-binary-search.txt
+A (untracked)	docs/searching-evidence/batch1-catalog.txt
+A (untracked)	docs/searching-evidence/batch1-full-suite.txt
+A (untracked)	docs/searching-evidence/batch1-generated-docs.txt
+A (untracked)	docs/searching-evidence/batch1-jump-search.txt
+A (untracked)	docs/searching-evidence/batch1-linear-search.txt
+A (untracked)	docs/searching-evidence/batch1-results.json
+A (untracked)	docs/searching-evidence/batch2-catalog.txt
+A (untracked)	docs/searching-evidence/batch2-exponential-search.txt
+A (untracked)	docs/searching-evidence/batch2-generated-docs.txt
+A (untracked)	docs/searching-evidence/batch2-interpolation-search.txt
+A (untracked)	docs/searching-evidence/batch2-results.json
+A (untracked)	docs/searching-evidence/batch2-ternary-search.txt
+A (untracked)	docs/searching-evidence/configuration-catalog.txt
+A (untracked)	docs/searching-evidence/configuration-generated-docs.txt
+A (untracked)	docs/searching-evidence/configuration-infrastructure.txt
+A (untracked)	docs/searching-evidence/configuration-results.json
+A (untracked)	docs/searching-evidence/environment.json
+A (untracked)	docs/searching-evidence/files-changed.txt
+A (untracked)	docs/searching-evidence/final-catalog.txt
+A (untracked)	docs/searching-evidence/final-full-suite.txt
+A (untracked)	docs/searching-evidence/final-generated-docs.txt
+A (untracked)	docs/searching-evidence/final-infrastructure.txt
+A (untracked)	docs/searching-evidence/final-results.json
+A (untracked)	docs/searching-evidence/final-searching-cpp17.txt
+A (untracked)	docs/searching-evidence/final-searching-cpp20.txt
+A (untracked)	docs/searching-evidence/final-searching-python.txt
+A (untracked)	docs/searching-evidence/inventory.json
+A (untracked)	docs/searching-evidence/readme-examples.json
+A (untracked)	docs/searching-evidence/sanitizer-results.json
+A (untracked)	docs/searching-evidence/sanitizer-searching-sanitizer.txt
+A (untracked)	dsa/searching/binary-search/cpp/solution.cpp
+A (untracked)	dsa/searching/binary-search/python/solution.py
+A (untracked)	dsa/searching/binary-search/tests/test_cpp.py
+A (untracked)	dsa/searching/binary-search/tests/test_python.py
+A (untracked)	dsa/searching/exponential-search/cpp/solution.cpp
+A (untracked)	dsa/searching/exponential-search/python/solution.py
+A (untracked)	dsa/searching/exponential-search/tests/test_cpp.py
+A (untracked)	dsa/searching/exponential-search/tests/test_python.py
+A (untracked)	dsa/searching/interpolation-search/cpp/solution.cpp
+A (untracked)	dsa/searching/interpolation-search/python/solution.py
+A (untracked)	dsa/searching/interpolation-search/tests/test_cpp.py
+A (untracked)	dsa/searching/interpolation-search/tests/test_python.py
+A (untracked)	dsa/searching/jump-search/cpp/solution.cpp
+A (untracked)	dsa/searching/jump-search/python/solution.py
+A (untracked)	dsa/searching/jump-search/tests/test_cpp.py
+A (untracked)	dsa/searching/jump-search/tests/test_python.py
+A (untracked)	dsa/searching/linear-search/cpp/solution.cpp
+A (untracked)	dsa/searching/linear-search/python/solution.py
+A (untracked)	dsa/searching/linear-search/tests/test_cpp.py
+A (untracked)	dsa/searching/linear-search/tests/test_python.py
+A (untracked)	dsa/searching/ternary-search/cpp/solution.cpp
+A (untracked)	dsa/searching/ternary-search/python/solution.py
+A (untracked)	dsa/searching/ternary-search/tests/test_cpp.py
+A (untracked)	dsa/searching/ternary-search/tests/test_python.py
+A (untracked)	scripts/run_searching_validation.py
+D	algorithm-atlas-sorting-final-review.zip
+M	AGENTS.md
+M	CONTRIBUTING.md
+M	README.md
+M	artificial-intelligence/adversarial-search/README.md
+M	artificial-intelligence/adversarial-search/alpha-beta-pruning/README.md
+M	artificial-intelligence/adversarial-search/expectimax/README.md
+M	artificial-intelligence/adversarial-search/minimax/README.md
+M	artificial-intelligence/computer-vision/README.md
+M	artificial-intelligence/computer-vision/canny-edge-detection/README.md
+M	artificial-intelligence/computer-vision/r-cnn-object-detection/README.md
+M	artificial-intelligence/computer-vision/sift/README.md
+M	artificial-intelligence/computer-vision/sobel-edge-detection/README.md
+M	artificial-intelligence/computer-vision/surf/README.md
+M	artificial-intelligence/computer-vision/viola-jones-face-detection/README.md
+M	artificial-intelligence/computer-vision/yolo-object-detection/README.md
+M	artificial-intelligence/constraint-satisfaction/README.md
+M	artificial-intelligence/constraint-satisfaction/arc-consistency-ac-3/README.md
+M	artificial-intelligence/constraint-satisfaction/backtracking-search/README.md
+M	artificial-intelligence/constraint-satisfaction/constraint-propagation/README.md
+M	artificial-intelligence/constraint-satisfaction/forward-checking/README.md
+M	artificial-intelligence/constraint-satisfaction/min-conflicts/README.md
+M	artificial-intelligence/fuzzy-logic/README.md
+M	artificial-intelligence/fuzzy-logic/mamdani-fuzzy-inference/README.md
+M	artificial-intelligence/fuzzy-logic/sugeno-fuzzy-inference/README.md
+M	artificial-intelligence/global-optimization/README.md
+M	artificial-intelligence/global-optimization/ant-colony-optimization/README.md
+M	artificial-intelligence/global-optimization/branch-and-bound/README.md
+M	artificial-intelligence/global-optimization/exhaustive-search/README.md
+M	artificial-intelligence/global-optimization/particle-swarm-optimization/README.md
+M	artificial-intelligence/informed-search/README.md
+M	artificial-intelligence/informed-search/beam-search/README.md
+M	artificial-intelligence/informed-search/greedy-best-first-search/README.md
+M	artificial-intelligence/informed-search/iterative-deepening-a-star/README.md
+M	artificial-intelligence/informed-search/recursive-best-first-search/README.md
+M	artificial-intelligence/informed-search/simplified-memory-bounded-a-star/README.md
+M	artificial-intelligence/local-search/README.md
+M	artificial-intelligence/local-search/local-beam-search/README.md
+M	artificial-intelligence/local-search/random-restart-hill-climbing/README.md
+M	artificial-intelligence/local-search/simple-hill-climbing/README.md
+M	artificial-intelligence/local-search/steepest-ascent-hill-climbing/README.md
+M	artificial-intelligence/local-search/stochastic-hill-climbing/README.md
+M	artificial-intelligence/local-search/tabu-search/README.md
+M	artificial-intelligence/multi-agent-systems/README.md
+M	artificial-intelligence/multi-agent-systems/auction-algorithms/README.md
+M	artificial-intelligence/multi-agent-systems/nash-equilibrium-computation/README.md
+M	artificial-intelligence/swarm-intelligence/README.md
+M	artificial-intelligence/uninformed-search/README.md
+M	artificial-intelligence/uninformed-search/bidirectional-search/README.md
+M	artificial-intelligence/uninformed-search/depth-limited-search/README.md
+M	artificial-intelligence/uninformed-search/iterative-deepening-dfs/README.md
+M	artificial-intelligence/uninformed-search/uniform-cost-search/README.md
+M	catalog.yaml
+M	docs/algorithm-index.md
+M	docs/development.md
+M	docs/getting-started.md
+M	docs/progress.md
+M	dsa/bit-manipulation/README.md
+M	dsa/bit-manipulation/brian-kernighan-set-bit-counting/README.md
+M	dsa/bit-manipulation/subset-generation-bitmasking/README.md
+M	dsa/bit-manipulation/two-non-repeating-elements/README.md
+M	dsa/bit-manipulation/xor-unique-elements/README.md
+M	dsa/divide-and-conquer/README.md
+M	dsa/divide-and-conquer/closest-pair-of-points/README.md
+M	dsa/divide-and-conquer/karatsuba-multiplication/README.md
+M	dsa/divide-and-conquer/maximum-subarray-divide-and-conquer/README.md
+M	dsa/divide-and-conquer/strassen-matrix-multiplication/README.md
+M	dsa/dynamic-programming/README.md
+M	dsa/dynamic-programming/coin-change/README.md
+M	dsa/dynamic-programming/edit-distance/README.md
+M	dsa/dynamic-programming/fibonacci/README.md
+M	dsa/dynamic-programming/kadane/README.md
+M	dsa/dynamic-programming/longest-common-subsequence/README.md
+M	dsa/dynamic-programming/longest-increasing-subsequence/README.md
+M	dsa/dynamic-programming/matrix-chain-multiplication/README.md
+M	dsa/dynamic-programming/palindrome-partitioning/README.md
+M	dsa/dynamic-programming/rod-cutting/README.md
+M	dsa/dynamic-programming/subset-sum/README.md
+M	dsa/dynamic-programming/zero-one-knapsack/README.md
+M	dsa/graph-algorithms/README.md
+M	dsa/graph-algorithms/a-star-search/README.md
+M	dsa/graph-algorithms/articulation-points/README.md
+M	dsa/graph-algorithms/bellman-ford/README.md
+M	dsa/graph-algorithms/breadth-first-search/README.md
+M	dsa/graph-algorithms/bridges-detection/README.md
+M	dsa/graph-algorithms/depth-first-search/README.md
+M	dsa/graph-algorithms/dijkstra/README.md
+M	dsa/graph-algorithms/floyd-warshall/README.md
+M	dsa/graph-algorithms/johnson/README.md
+M	dsa/graph-algorithms/kosaraju-strongly-connected-components/README.md
+M	dsa/graph-algorithms/kruskal/README.md
+M	dsa/graph-algorithms/prim/README.md
+M	dsa/graph-algorithms/tarjan-strongly-connected-components/README.md
+M	dsa/graph-algorithms/topological-sorting/README.md
+M	dsa/graph-algorithms/union-find/README.md
+M	dsa/greedy/README.md
+M	dsa/greedy/activity-selection/README.md
+M	dsa/greedy/fractional-knapsack/README.md
+M	dsa/greedy/huffman-coding/README.md
+M	dsa/greedy/job-sequencing-with-deadlines/README.md
+M	dsa/number-theory/README.md
+M	dsa/number-theory/euclidean-algorithm/README.md
+M	dsa/number-theory/extended-euclidean-algorithm/README.md
+M	dsa/number-theory/fast-exponentiation/README.md
+M	dsa/number-theory/least-common-multiple/README.md
+M	dsa/number-theory/modular-exponentiation/README.md
+M	dsa/number-theory/prime-factorization/README.md
+M	dsa/number-theory/sieve-of-eratosthenes/README.md
+M	dsa/recursion-and-backtracking/README.md
+M	dsa/recursion-and-backtracking/combinations/README.md
+M	dsa/recursion-and-backtracking/graph-coloring/README.md
+M	dsa/recursion-and-backtracking/hamiltonian-path/README.md
+M	dsa/recursion-and-backtracking/n-queens/README.md
+M	dsa/recursion-and-backtracking/permutations/README.md
+M	dsa/recursion-and-backtracking/power-set-generation/README.md
+M	dsa/recursion-and-backtracking/rat-in-a-maze/README.md
+M	dsa/recursion-and-backtracking/subset-sum-backtracking/README.md
+M	dsa/recursion-and-backtracking/sudoku-solver/README.md
+M	dsa/searching/README.md
+M	dsa/searching/binary-search/README.md
+M	dsa/searching/exponential-search/README.md
+M	dsa/searching/interpolation-search/README.md
+M	dsa/searching/jump-search/README.md
+M	dsa/searching/linear-search/README.md
+M	dsa/searching/ternary-search/README.md
+M	dsa/sorting/README.md
+M	dsa/string-algorithms/README.md
+M	dsa/string-algorithms/aho-corasick/README.md
+M	dsa/string-algorithms/boyer-moore/README.md
+M	dsa/string-algorithms/knuth-morris-pratt/README.md
+M	dsa/string-algorithms/manacher/README.md
+M	dsa/string-algorithms/naive-pattern-matching/README.md
+M	dsa/string-algorithms/rabin-karp/README.md
+M	dsa/string-algorithms/suffix-array/README.md
+M	dsa/string-algorithms/suffix-tree/README.md
+M	dsa/string-algorithms/z-algorithm/README.md
+M	dsa/tree-algorithms/README.md
+M	dsa/tree-algorithms/avl-tree-rotations/README.md
+M	dsa/tree-algorithms/b-plus-tree-operations/README.md
+M	dsa/tree-algorithms/b-tree-operations/README.md
+M	dsa/tree-algorithms/binary-lifting/README.md
+M	dsa/tree-algorithms/euler-tour/README.md
+M	dsa/tree-algorithms/fenwick-tree/README.md
+M	dsa/tree-algorithms/inorder-traversal/README.md
+M	dsa/tree-algorithms/level-order-traversal/README.md
+M	dsa/tree-algorithms/lowest-common-ancestor/README.md
+M	dsa/tree-algorithms/postorder-traversal/README.md
+M	dsa/tree-algorithms/preorder-traversal/README.md
+M	dsa/tree-algorithms/red-black-tree-operations/README.md
+M	dsa/tree-algorithms/segment-tree/README.md
+M	dsa/tree-algorithms/trie/README.md
+M	dsa/two-pointers-and-sliding-window/README.md
+M	dsa/two-pointers-and-sliding-window/longest-substring-without-repeating-characters/README.md
+M	dsa/two-pointers-and-sliding-window/sliding-window-maximum/README.md
+M	dsa/two-pointers-and-sliding-window/two-sum-sorted-array/README.md
+M	machine-learning/anomaly-detection/README.md
+M	machine-learning/anomaly-detection/isolation-forest/README.md
+M	machine-learning/anomaly-detection/local-outlier-factor/README.md
+M	machine-learning/anomaly-detection/one-class-svm/README.md
+M	machine-learning/deep-learning/README.md
+M	machine-learning/deep-learning/convolutional-neural-networks/README.md
+M	machine-learning/deep-learning/denoising-autoencoders/README.md
+M	machine-learning/deep-learning/diffusion-models/README.md
+M	machine-learning/deep-learning/gated-recurrent-units/README.md
+M	machine-learning/deep-learning/generative-adversarial-networks/README.md
+M	machine-learning/deep-learning/graph-neural-networks/README.md
+M	machine-learning/deep-learning/long-short-term-memory/README.md
+M	machine-learning/deep-learning/multilayer-perceptron/README.md
+M	machine-learning/deep-learning/recurrent-neural-networks/README.md
+M	machine-learning/deep-learning/residual-networks/README.md
+M	machine-learning/deep-learning/sparse-autoencoders/README.md
+M	machine-learning/deep-learning/transformers/README.md
+M	machine-learning/deep-learning/vanilla-autoencoders/README.md
+M	machine-learning/deep-learning/variational-autoencoders/README.md
+M	machine-learning/ensemble-methods/README.md
+M	machine-learning/ensemble-methods/adaboost/README.md
+M	machine-learning/ensemble-methods/bagging/README.md
+M	machine-learning/ensemble-methods/catboost/README.md
+M	machine-learning/ensemble-methods/gradient-boosting-machine/README.md
+M	machine-learning/ensemble-methods/random-forest/README.md
+M	machine-learning/ensemble-methods/stacking/README.md
+M	machine-learning/ensemble-methods/voting-classifiers/README.md
+M	machine-learning/ensemble-methods/xgboost/README.md
+M	machine-learning/graph-learning/README.md
+M	machine-learning/graph-learning/graph-convolutional-networks/README.md
+M	machine-learning/graph-learning/node2vec/README.md
+M	machine-learning/graph-learning/pagerank/README.md
+M	machine-learning/natural-language-processing/README.md
+M	machine-learning/natural-language-processing/bag-of-words/README.md
+M	machine-learning/natural-language-processing/bert/README.md
+M	machine-learning/natural-language-processing/conditional-random-fields/README.md
+M	machine-learning/natural-language-processing/cyk-parsing/README.md
+M	machine-learning/natural-language-processing/glove/README.md
+M	machine-learning/natural-language-processing/gpt/README.md
+M	machine-learning/natural-language-processing/hidden-markov-models-pos-tagging/README.md
+M	machine-learning/natural-language-processing/n-gram-language-models/README.md
+M	machine-learning/natural-language-processing/named-entity-recognition/README.md
+M	machine-learning/natural-language-processing/tf-idf/README.md
+M	machine-learning/natural-language-processing/word2vec/README.md
+M	machine-learning/optimization/README.md
+M	machine-learning/optimization/adam/README.md
+M	machine-learning/optimization/adamw/README.md
+M	machine-learning/optimization/batch-gradient-descent/README.md
+M	machine-learning/optimization/genetic-algorithms/README.md
+M	machine-learning/optimization/l-bfgs/README.md
+M	machine-learning/optimization/mini-batch-gradient-descent/README.md
+M	machine-learning/optimization/momentum/README.md
+M	machine-learning/optimization/rmsprop/README.md
+M	machine-learning/optimization/simulated-annealing/README.md
+M	machine-learning/optimization/stochastic-gradient-descent/README.md
+M	machine-learning/reinforcement-learning/README.md
+M	machine-learning/reinforcement-learning/advantage-actor-critic/README.md
+M	machine-learning/reinforcement-learning/asynchronous-advantage-actor-critic/README.md
+M	machine-learning/reinforcement-learning/deep-deterministic-policy-gradient/README.md
+M	machine-learning/reinforcement-learning/deep-q-networks/README.md
+M	machine-learning/reinforcement-learning/dynamic-policy-optimization/README.md
+M	machine-learning/reinforcement-learning/monte-carlo-tree-search/README.md
+M	machine-learning/reinforcement-learning/proximal-policy-optimization/README.md
+M	machine-learning/reinforcement-learning/q-learning/README.md
+M	machine-learning/reinforcement-learning/reinforce-policy-gradient/README.md
+M	machine-learning/reinforcement-learning/sarsa/README.md
+M	machine-learning/supervised-learning/classification/README.md
+M	machine-learning/supervised-learning/classification/bernoulli-naive-bayes/README.md
+M	machine-learning/supervised-learning/classification/c4-5-decision-trees/README.md
+M	machine-learning/supervised-learning/classification/cart-decision-trees/README.md
+M	machine-learning/supervised-learning/classification/gaussian-naive-bayes/README.md
+M	machine-learning/supervised-learning/classification/id3-decision-trees/README.md
+M	machine-learning/supervised-learning/classification/k-nearest-neighbors/README.md
+M	machine-learning/supervised-learning/classification/linear-discriminant-analysis/README.md
+M	machine-learning/supervised-learning/classification/logistic-regression/README.md
+M	machine-learning/supervised-learning/classification/multinomial-naive-bayes/README.md
+M	machine-learning/supervised-learning/classification/quadratic-discriminant-analysis/README.md
+M	machine-learning/supervised-learning/classification/support-vector-machines/README.md
+M	machine-learning/supervised-learning/regression/README.md
+M	machine-learning/supervised-learning/regression/decision-tree-regression/README.md
+M	machine-learning/supervised-learning/regression/elastic-net/README.md
+M	machine-learning/supervised-learning/regression/lasso-regression/README.md
+M	machine-learning/supervised-learning/regression/linear-regression/README.md
+M	machine-learning/supervised-learning/regression/polynomial-regression/README.md
+M	machine-learning/supervised-learning/regression/ridge-regression/README.md
+M	machine-learning/supervised-learning/regression/support-vector-regression/README.md
+M	machine-learning/time-series/README.md
+M	machine-learning/time-series/arima/README.md
+M	machine-learning/time-series/exponential-smoothing/README.md
+M	machine-learning/time-series/hidden-markov-models/README.md
+M	machine-learning/time-series/holt-winters/README.md
+M	machine-learning/time-series/prophet/README.md
+M	machine-learning/time-series/sarima/README.md
+M	machine-learning/unsupervised-learning/association-rule-learning/README.md
+M	machine-learning/unsupervised-learning/association-rule-learning/apriori/README.md
+M	machine-learning/unsupervised-learning/association-rule-learning/eclat/README.md
+M	machine-learning/unsupervised-learning/association-rule-learning/fp-growth/README.md
+M	machine-learning/unsupervised-learning/clustering/README.md
+M	machine-learning/unsupervised-learning/clustering/agglomerative-hierarchical-clustering/README.md
+M	machine-learning/unsupervised-learning/clustering/dbscan/README.md
+M	machine-learning/unsupervised-learning/clustering/divisive-hierarchical-clustering/README.md
+M	machine-learning/unsupervised-learning/clustering/gaussian-mixture-models/README.md
+M	machine-learning/unsupervised-learning/clustering/hdbscan/README.md
+M	machine-learning/unsupervised-learning/clustering/k-means/README.md
+M	machine-learning/unsupervised-learning/clustering/mean-shift/README.md
+M	machine-learning/unsupervised-learning/clustering/spectral-clustering/README.md
+M	machine-learning/unsupervised-learning/dimensionality-reduction/README.md
+M	machine-learning/unsupervised-learning/dimensionality-reduction/independent-component-analysis/README.md
+M	machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/README.md
+M	machine-learning/unsupervised-learning/dimensionality-reduction/principal-component-analysis/README.md
+M	machine-learning/unsupervised-learning/dimensionality-reduction/singular-value-decomposition/README.md
+M	machine-learning/unsupervised-learning/dimensionality-reduction/t-sne/README.md
+M	machine-learning/unsupervised-learning/dimensionality-reduction/umap/README.md
+M	scripts/generate_catalog_docs.py
+M	scripts/validate_catalog.py
+M	tests/test_generate_catalog_docs.py
+M	tests/test_validate_catalog.py
+
+Review artifacts: algorithm-atlas-searching-review.zip, .zip.sha256, .zip.verification.json (excluded from archive recursion).

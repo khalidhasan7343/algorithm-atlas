@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/searching/ternary-search/tests
+Result: {"label": "ternary-search", "command": "python -m pytest -q --require-cpp dsa/searching/ternary-search/tests", "returncode": 0, "timeout_seconds": 180, "timed_out": false, "elapsed_seconds": 3.44, "summary": "53 passed in 3.33s", "CXX": "automatic discovery"}
+
+.....................................................                    [100%]
+53 passed in 3.33s

@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/searching/binary-search/tests
+Result: {"label": "binary-search", "command": "python -m pytest -q --require-cpp dsa/searching/binary-search/tests", "returncode": 0, "timeout_seconds": 180, "timed_out": false, "elapsed_seconds": 3.523, "summary": "52 passed in 3.42s", "CXX": "automatic discovery"}
+
+....................................................                     [100%]
+52 passed in 3.42s

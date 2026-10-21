@@ -1,0 +1,9 @@
+Command: python -m pytest -q --require-cpp dsa/searching -m 'not cpp'
+Result: {"label": "searching-python", "command": "python -m pytest -q --require-cpp dsa/searching -m 'not cpp'", "returncode": 0, "timeout_seconds": 180, "timed_out": false, "elapsed_seconds": 3.14, "summary": "290 passed, 26 deselected in 3.03s", "CXX": "automatic discovery"}
+
+........................................................................ [ 24%]
+........................................................................ [ 49%]
+........................................................................ [ 74%]
+........................................................................ [ 99%]
+..                                                                       [100%]
+290 passed, 26 deselected in 3.03s

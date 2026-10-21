@@ -193,18 +193,29 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
     ] or ['None recorded yet.']
     lines += ['', '## Current authorized work and resume checkpoint', '']
     if state:
+        searching = state.get('scope') == 'Searching category only'
+        label = 'searching' if searching else 'sorting'
         batches = state.get('completed_batches', [])
-        lines.append('Validated sorting batches: ' +
+        lines.append(f'Validated {label} batches: ' +
                      (', '.join(str(batch) for batch in batches) if batches else 'none yet') + '.')
         active = state.get('active_batch')
         lines += ['', f'Active batch: {active if active is not None else "none; awaiting user review"}.']
         if state.get('checkpoint'):
             lines += ['', 'Actual commands, results, and resume instructions are saved in '
-                      + link(path, ROOT / state['checkpoint'], 'sorting checkpoints') + '.']
+                      + link(path, ROOT / state['checkpoint'], f'{label} checkpoints') + '.']
         if state.get('completion_report'):
             lines += ['', 'See the '
-                      + link(path, ROOT / state['completion_report'], 'sorting completion report') + '.']
-        lines += ['', 'The approved order is Batch 1: Bubble, Selection, Insertion, '
+                      + link(path, ROOT / state['completion_report'], f'{label} completion report') + '.']
+        if searching:
+            lines += ['', 'The owner approved Phase 1 (Sorting). Phase 2 authorizes '
+                      'Searching only: Batch 1: Linear, Binary, Jump; Batch 2: '
+                      'Interpolation, Exponential, Ternary. Finish and validate each '
+                      'batch before automatically continuing. No approval is needed '
+                      'between these internal batches.', '',
+                      'After all six searches are complete, stop for the user’s '
+                      'review. Every other category requires explicit approval.']
+        else:
+            lines += ['', 'The approved order is Batch 1: Bubble, Selection, Insertion, '
                   'Merge; Batch 2: Quick, Heap, Counting, Radix; Batch 3: Bucket, '
                   'Shell, Tim. Finish and validate each batch before automatically '
                   'continuing. No approval is required between these internal batches.', '',
@@ -228,9 +239,9 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
               'Advanced models require explicit educational scope, dependencies, '
               'datasets, and compute limits in their approved phases.', '',
               '## Approval boundary', '',
-              'The current authorization does not permit work outside Sorting. '
-              'Do not begin Searching or another category without explicit user '
-              'approval. Do not commit, push, or publish without permission.', '',
+              f'The current authorization is {scope}. '
+              'Do not begin another category without explicit user approval. '
+              'Do not commit, push, or publish without permission.', '',
               navigation(path), '']
     return '\n'.join(lines)
 
@@ -261,8 +272,8 @@ def category_page(category: dict, algorithms: dict) -> str:
         'examples, accurate complexity analysis, and relevant tests described '
         'in ' + link(path, ROOT / 'CONTRIBUTING.md', 'the contribution standards') + '.', '',
         'Completion is shown by the catalog status and topic artifacts. The '
-        'current implementation authorization covers Sorting only; other '
-        'categories require explicit user approval.', '', navigation(path), '',
+        'current implementation authorization is recorded in the progress tracker; '
+        'other categories require explicit user approval.', '', navigation(path), '',
     ]
     return '\n'.join(lines)
 
@@ -314,7 +325,7 @@ def algorithm_page(algorithm: dict, memberships: list[tuple[dict, dict]], algori
                   + link(path, ROOT / 'docs/terminology-decisions.md', 'verified terminology and candidate references') + '.']
     lines += [
         '', '## Review gate and attribution', '',
-        'The current authorization covers Sorting only. Do not begin this '
+        'Check the progress tracker for the current authorization. Do not begin this '
         'planned topic until it is included in the user’s approved scope.', '',
         'Algorithm Atlas is maintained by '
         '[MD.Khalid Hasan](https://github.com/khalidhasan7343). Contribution and '

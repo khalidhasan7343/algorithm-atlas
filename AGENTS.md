@@ -6,17 +6,23 @@ Read `README.md`, `CONTRIBUTING.md`, `docs/progress.md`, and the relevant record
 
 ## Mandatory phase checkpoint
 
-**Phase 0 is approved. The current authorization is Phase 1 — Sorting category only.** The user approved all 11 sorting algorithms in three sequential internal batches:
+**Phase 1 (Sorting) has been reviewed and approved by the repository owner. Current authorization: Phase 2 — Searching category only.** Preserve all Sorting implementations and tests.
 
-**Current checkpoint: all 11 Sorting algorithms are implemented and tested; human review remains pending.** The latest authorized work is independent Sorting verification and confirmed corrections only, recorded in `SORTING-FINAL-AUDIT-REPORT.md`; `SORTING-REVIEW-REPORT.md` preserves the original handoff. After verification and packaging, stop for review. Do not start Searching without explicit user approval. Packaging this snapshot does not authorize another category.
+**Current checkpoint: all six Searching algorithms are implemented and tested;
+Phase 2 is awaiting owner review.** The full suite passed 1,059 tests. See
+`SEARCHING-REVIEW-REPORT.md` and `docs/searching-checkpoints.md`. Finish the review
+package checks, then STOP. Do not begin another category without explicit approval.
 
-1. Bubble Sort, Selection Sort, Insertion Sort, Merge Sort.
-2. Quick Sort, Heap Sort, Counting Sort, Radix Sort.
-3. Bucket Sort, Shell Sort, Tim Sort.
+The approved internal batches are:
 
-Finish and test each batch before starting the next. Fix failures, update `catalog.yaml`, regenerate `docs/progress.md`, and record actual results in `docs/sorting-checkpoints.md` after each batch. Continue automatically between these internal batches; no further approval is needed for them. Read the checkpoint and catalog development state before resuming interrupted work.
+1. Linear Search, Binary Search, Jump Search.
+2. Interpolation Search, Exponential Search, Ternary Search.
 
-After all 11 sorting algorithms pass the full applicable suite and catalog/link checks, prepare a detailed completion report and **stop for user review**. Searching and every other category remain unauthorized. Do not infer approval for another category from passing tests or a next planned batch.
+Finish and test Batch 1 before implementing Batch 2; continue automatically after validation passes. Save actual results in `docs/searching-checkpoints.md`, update `catalog.yaml`, and regenerate documentation after each batch. Read that checkpoint before resuming interrupted work.
+
+All searches must define first/any-match semantics, test duplicates and missing targets, and document ordering requirements. Sorted APIs must distinguish validation cost from search cost. Check C++ index/overflow boundaries, interpolation equal endpoints and division, exponential expansion, and the intended Ternary Search setting.
+
+After all six searches pass the applicable suite and catalog/link checks, prepare `SEARCHING-REVIEW-REPORT.md` and `algorithm-atlas-searching-review.zip`, then **stop for explicit human review and approval**. No other category is authorized. Sorting approval is recorded in the Searching checkpoint; historical Sorting reports remain historical evidence.
 
 At the end of every subsequent authorized phase or category scope, stop for explicit user review before developing beyond that scope. The user's latest explicit authorization controls these checkpoints.
 

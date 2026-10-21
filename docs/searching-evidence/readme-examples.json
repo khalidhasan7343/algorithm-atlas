@@ -1,0 +1,56 @@
+[
+  {
+    "algorithm": "linear-search",
+    "command_block": "printf '%s\\n' '-4 -9 -4 -4 0 2 2 8' | .venv/bin/python dsa/searching/linear-search/python/solution.py\nc++ -std=c++17 -Wall -Wextra -pedantic dsa/searching/linear-search/cpp/solution.cpp -o /tmp/atlas-linear-search\nprintf '%s\\n' '-4 -9 -4 -4 0 2 2 8' | /tmp/atlas-linear-search",
+    "returncode": 0,
+    "stdout": "1\n1\n",
+    "stderr": "",
+    "timeout_seconds": 60,
+    "timed_out": false
+  },
+  {
+    "algorithm": "binary-search",
+    "command_block": "printf '%s\\n' '-4 -9 -4 -4 0 2 2 8' | .venv/bin/python dsa/searching/binary-search/python/solution.py\nc++ -std=c++17 -Wall -Wextra -pedantic dsa/searching/binary-search/cpp/solution.cpp -o /tmp/atlas-binary-search\nprintf '%s\\n' '-4 -9 -4 -4 0 2 2 8' | /tmp/atlas-binary-search",
+    "returncode": 0,
+    "stdout": "1\n1\n",
+    "stderr": "",
+    "timeout_seconds": 60,
+    "timed_out": false
+  },
+  {
+    "algorithm": "jump-search",
+    "command_block": "printf '%s\\n' '-4 -9 -4 -4 0 2 2 8' | .venv/bin/python dsa/searching/jump-search/python/solution.py\nc++ -std=c++17 -Wall -Wextra -pedantic dsa/searching/jump-search/cpp/solution.cpp -o /tmp/atlas-jump-search\nprintf '%s\\n' '-4 -9 -4 -4 0 2 2 8' | /tmp/atlas-jump-search",
+    "returncode": 0,
+    "stdout": "1\n1\n",
+    "stderr": "",
+    "timeout_seconds": 60,
+    "timed_out": false
+  },
+  {
+    "algorithm": "interpolation-search",
+    "command_block": "printf '%s\\n' '-4 -9 -4 -4 0 2 2 8' | .venv/bin/python dsa/searching/interpolation-search/python/solution.py\nc++ -std=c++17 -Wall -Wextra -pedantic dsa/searching/interpolation-search/cpp/solution.cpp -o /tmp/atlas-interpolation-search\nprintf '%s\\n' '-4 -9 -4 -4 0 2 2 8' | /tmp/atlas-interpolation-search",
+    "returncode": 0,
+    "stdout": "1\n1\n",
+    "stderr": "",
+    "timeout_seconds": 60,
+    "timed_out": false
+  },
+  {
+    "algorithm": "exponential-search",
+    "command_block": "printf '%s\\n' '-4 -9 -4 -4 0 2 2 8' | .venv/bin/python dsa/searching/exponential-search/python/solution.py\nc++ -std=c++17 -Wall -Wextra -pedantic dsa/searching/exponential-search/cpp/solution.cpp -o /tmp/atlas-exponential-search\nprintf '%s\\n' '-4 -9 -4 -4 0 2 2 8' | /tmp/atlas-exponential-search",
+    "returncode": 0,
+    "stdout": "1\n1\n",
+    "stderr": "",
+    "timeout_seconds": 60,
+    "timed_out": false
+  },
+  {
+    "algorithm": "ternary-search",
+    "command_block": "printf '%s\\n' '-4 -9 -4 -4 0 2 2 8' | .venv/bin/python dsa/searching/ternary-search/python/solution.py\nc++ -std=c++17 -Wall -Wextra -pedantic dsa/searching/ternary-search/cpp/solution.cpp -o /tmp/atlas-ternary-search\nprintf '%s\\n' '-4 -9 -4 -4 0 2 2 8' | /tmp/atlas-ternary-search",
+    "returncode": 0,
+    "stdout": "1\n1\n",
+    "stderr": "",
+    "timeout_seconds": 60,
+    "timed_out": false
+  }
+]

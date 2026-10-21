@@ -1,0 +1,52 @@
+[
+  {
+    "label": "interpolation-search",
+    "command": "python -m pytest -q --require-cpp dsa/searching/interpolation-search/tests",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 3.753,
+    "summary": "62 passed in 3.59s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "exponential-search",
+    "command": "python -m pytest -q --require-cpp dsa/searching/exponential-search/tests",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 3.562,
+    "summary": "53 passed in 3.45s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "ternary-search",
+    "command": "python -m pytest -q --require-cpp dsa/searching/ternary-search/tests",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 3.44,
+    "summary": "53 passed in 3.33s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "catalog",
+    "command": "python scripts/validate_catalog.py",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 0.415,
+    "summary": "",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "generated-docs",
+    "command": "python scripts/generate_catalog_docs.py --check",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 0.171,
+    "summary": "",
+    "CXX": "automatic discovery"
+  }
+]

@@ -30,12 +30,12 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Linear Search | [linear-search](../dsa/searching/linear-search/README.md) | planned |
-| Binary Search | [binary-search](../dsa/searching/binary-search/README.md) | planned |
-| Ternary Search | [ternary-search](../dsa/searching/ternary-search/README.md) | planned |
-| Jump Search | [jump-search](../dsa/searching/jump-search/README.md) | planned |
-| Interpolation Search | [interpolation-search](../dsa/searching/interpolation-search/README.md) | planned |
-| Exponential Search | [exponential-search](../dsa/searching/exponential-search/README.md) | planned |
+| Linear Search | [linear-search](../dsa/searching/linear-search/README.md) | complete |
+| Binary Search | [binary-search](../dsa/searching/binary-search/README.md) | complete |
+| Ternary Search | [ternary-search](../dsa/searching/ternary-search/README.md) | complete |
+| Jump Search | [jump-search](../dsa/searching/jump-search/README.md) | complete |
+| Interpolation Search | [interpolation-search](../dsa/searching/interpolation-search/README.md) | complete |
+| Exponential Search | [exponential-search](../dsa/searching/exponential-search/README.md) | complete |
 
 ## A3. [Recursion and Backtracking](../dsa/recursion-and-backtracking/README.md)
 
@@ -57,7 +57,7 @@ Foundation checks validate repository structure; they are separate from tests of
 | --- | --- | --- |
 | Merge Sort | [merge-sort](../dsa/sorting/merge-sort/README.md) | complete |
 | Quick Sort | [quick-sort](../dsa/sorting/quick-sort/README.md) | complete |
-| Binary Search | [binary-search](../dsa/searching/binary-search/README.md) | planned |
+| Binary Search | [binary-search](../dsa/searching/binary-search/README.md) | complete |
 | Strassen's Matrix Multiplication | [strassen-matrix-multiplication](../dsa/divide-and-conquer/strassen-matrix-multiplication/README.md) | planned |
 | Karatsuba Multiplication | [karatsuba-multiplication](../dsa/divide-and-conquer/karatsuba-multiplication/README.md) | planned |
 | Closest Pair of Points | [closest-pair-of-points](../dsa/divide-and-conquer/closest-pair-of-points/README.md) | planned |

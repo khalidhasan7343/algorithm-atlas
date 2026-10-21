@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/searching/jump-search/tests
+Result: {"label": "jump-search", "command": "python -m pytest -q --require-cpp dsa/searching/jump-search/tests", "returncode": 0, "timeout_seconds": 180, "timed_out": false, "elapsed_seconds": 3.637, "summary": "53 passed in 3.53s", "CXX": "automatic discovery"}
+
+.....................................................                    [100%]
+53 passed in 3.53s

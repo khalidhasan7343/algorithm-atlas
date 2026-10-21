@@ -4,7 +4,7 @@ This guide defines how to turn a planned Algorithm Atlas topic into an explained
 
 ## Phase boundaries
 
-**Phase 0 has been approved. Phase 1 currently authorizes the complete Sorting category only.** Implement the three internal batches recorded in [sorting checkpoints](sorting-checkpoints.md), validating and recording each batch before automatically continuing. No approval is needed between these internal batches. After Sorting, stop for maintainer review; Searching and every other category require explicit approval. Passing checks do not expand this scope. Publishing and pushing require separate permission.
+**Phase 1 (Sorting) is reviewed and owner-approved. Phase 2 authorizes Searching only**: Batch 1 — Linear, Binary, Jump; Batch 2 — Interpolation, Exponential, Ternary. Finish and validate each batch before automatically continuing. Preserve all Sorting implementations and tests. Save actual results in the [Searching checkpoint](searching-checkpoints.md). After Searching, stop for explicit human review; every other category requires separate approval. Passing tests does not expand scope.
 
 ## Canonical layout and catalog ownership
 

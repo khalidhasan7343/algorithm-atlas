@@ -1,0 +1,72 @@
+[
+  {
+    "label": "searching-python",
+    "command": "python -m pytest -q --require-cpp dsa/searching -m 'not cpp'",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 3.14,
+    "summary": "290 passed, 26 deselected in 3.03s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "searching-cpp17",
+    "command": "python -m pytest -q --require-cpp dsa/searching -m cpp --cpp-standard=c++17",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 7.146,
+    "summary": "13 passed, 290 deselected in 7.04s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "searching-cpp20",
+    "command": "python -m pytest -q --require-cpp dsa/searching -m cpp --cpp-standard=c++20",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 8.14,
+    "summary": "13 passed, 290 deselected in 8.03s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "infrastructure",
+    "command": "python -m pytest -q --require-cpp tests",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 2.153,
+    "summary": "187 passed in 2.04s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "full-suite",
+    "command": "python -m pytest -q --require-cpp",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 72.762,
+    "summary": "1059 passed in 72.63s (0:01:12)",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "catalog",
+    "command": "python scripts/validate_catalog.py",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 0.425,
+    "summary": "",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "generated-docs",
+    "command": "python scripts/generate_catalog_docs.py --check",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 0.173,
+    "summary": "",
+    "CXX": "automatic discovery"
+  }
+]

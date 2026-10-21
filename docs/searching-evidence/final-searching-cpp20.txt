@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/searching -m cpp --cpp-standard=c++20
+Result: {"label": "searching-cpp20", "command": "python -m pytest -q --require-cpp dsa/searching -m cpp --cpp-standard=c++20", "returncode": 0, "timeout_seconds": 180, "timed_out": false, "elapsed_seconds": 8.14, "summary": "13 passed, 290 deselected in 8.03s", "CXX": "automatic discovery"}
+
+.............                                                            [100%]
+13 passed, 290 deselected in 8.03s
