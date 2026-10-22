@@ -6,7 +6,7 @@ From Fundamental Algorithms to Advanced Artificial Intelligence — Learn, Imple
 
 Algorithm Atlas is an educational, open-source project maintained by **MD.Khalid Hasan**. Its goal is to explain algorithms from first principles through clear documentation, Python and modern C++ implementations, meaningful tests, complexity analysis, and practical applications.
 
-**Current state: Phase 4 — Divide & Conquer implemented and tested, awaiting owner review.** Previous phases are complete per the owner. See the [Phase 4 report](DIVIDE-CONQUER-REVIEW-REPORT.md), [checkpoint](docs/divide-conquer-checkpoints.md), and [progress](docs/progress.md). A4 retains seven catalog memberships: four new topics plus canonical Merge Sort, Quick Sort, and Binary Search. No duplicate implementations or other-category development is authorized.
+**Current state: Phase 5 explicitly approved by the owner; Phase 6 — four Greedy algorithms implemented and tested; awaiting owner review.** See the [Greedy review report](GREEDY-REVIEW-REPORT.md), [checkpoint](docs/greedy-checkpoints.md) and [progress](docs/progress.md). A11 keeps seven memberships: four implementations in this phase and three shared Graph topics (Dijkstra, Prim, Kruskal), whose paths and planned statuses are preserved. No Graph implementation is authorized.
 
 ## Project Overview
 
@@ -25,7 +25,7 @@ The foundation provides:
 - Documentation standards, pytest infrastructure, C++ compiler checks, and GitHub Actions configuration.
 - Automated catalog, documentation-link, and implementation-status validation.
 
-Sorting, Searching, Recursion & Backtracking, and completed Divide & Conquer topics provide detailed explanations, dry runs, Python/C++ implementations, examples, and relevant edge-case tests. Other topics follow in separately approved phases. ML examples will distinguish educational implementations from library-based usage and document compute and dependency limits.
+Sorting, Searching, Recursion & Backtracking, Divide & Conquer, the eleven Phase 5 Dynamic Programming topics, and the four Phase 6 Greedy topics provide detailed explanations, dry runs, Python/C++ implementations, examples, and relevant edge-case tests. Other topics follow in separately approved phases. ML examples will distinguish educational implementations from library-based usage and document compute and dependency limits.
 
 ## Technologies Used
 
@@ -55,7 +55,7 @@ algorithm-atlas/
 └── artificial-intelligence/ # 10 syllabus categories
 ```
 
-Each unique topic has one canonical folder. Completed Sorting, Searching, Recursion & Backtracking, and Divide & Conquer topics have a full lesson and `python/`, `cpp/`, and `tests/` content; planned topics retain honest scope READMEs. See the [development guide](docs/development.md) for the final per-algorithm structure and documentation standard.
+Each unique topic has one canonical folder. Completed Sorting, Searching, Recursion & Backtracking, Divide & Conquer, authorized Dynamic Programming, and Greedy topics have a full lesson and `python/`, `cpp/`, and `tests/` content; planned topics retain honest scope READMEs. See the [development guide](docs/development.md) for the final per-algorithm structure and documentation standard.
 
 ## Data Structures and Algorithms
 
@@ -162,7 +162,7 @@ Use the [complexity cheat sheet](docs/complexity-cheatsheet.md) for asymptotic n
 
 [Progress tracking](docs/progress.md) records catalog totals, completed and remaining algorithms, blockers, and the next proposed batch. The [Phase 0 review report](docs/phase-0-review.md) and [complete file inventory](docs/phase-0-files.md) document the foundation handoff. Phase 0 supplies the foundation only. The term **Dynamic Policy Optimization (DPO)** is retained from the syllabus and blocked pending clarification; it has not been replaced by Direct Preference Optimization.
 
-Phase 4 covers Divide & Conquer only, in two validated internal batches followed by mandatory owner review. No other category, commit, or push is authorized.
+Phase 6 covers Activity Selection, Fractional Knapsack, Huffman Coding and Job Sequencing with Deadlines in two validated batches. Dijkstra, Prim and Kruskal are conceptual Graph cross-references only. Stop after the review report/archive/checksum for owner review. No other category, commit, push or publication is authorized.
 
 ## Contribution Guidelines
 

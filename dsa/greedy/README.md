@@ -6,15 +6,24 @@ Making local choices under problem-specific correctness arguments.
 
 This category preserves **7 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
+## Greedy algorithms implemented in Phase 6
+
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Activity Selection | [activity-selection](activity-selection/README.md) | planned |
-| Huffman Coding | [huffman-coding](huffman-coding/README.md) | planned |
-| Fractional Knapsack | [fractional-knapsack](fractional-knapsack/README.md) | planned |
-| Job Sequencing with Deadlines | [job-sequencing-with-deadlines](job-sequencing-with-deadlines/README.md) | planned |
+| Activity Selection | [activity-selection](activity-selection/README.md) | complete |
+| Huffman Coding | [huffman-coding](huffman-coding/README.md) | complete |
+| Fractional Knapsack | [fractional-knapsack](fractional-knapsack/README.md) | complete |
+| Job Sequencing with Deadlines | [job-sequencing-with-deadlines](job-sequencing-with-deadlines/README.md) | complete |
+
+## Graph algorithms that also use the Greedy paradigm
+
+| Original syllabus entry | Canonical folder | Status |
+| --- | --- | --- |
 | Kruskal's Algorithm | [kruskal](../graph-algorithms/kruskal/README.md) | planned |
 | Prim's Algorithm | [prim](../graph-algorithms/prim/README.md) | planned |
 | Dijkstra's Algorithm | [dijkstra](../graph-algorithms/dijkstra/README.md) | planned |
+
+Dijkstra chooses the unsettled vertex with smallest tentative distance (requiring nonnegative edge weights); Prim chooses a cheapest edge across the growing-tree cut; Kruskal accepts a cheapest edge that does not create a cycle. These are conceptual Greedy connections, not Phase 6 implementations. Their canonical Graph paths and existing statuses are preserved. Complete them only during an explicitly authorized Graph Algorithms phase. The four Phase 6 implementations do not complete all seven A11 memberships.
 
 ## Learning and contribution scope
 

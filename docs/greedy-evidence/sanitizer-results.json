@@ -1,0 +1,21 @@
+{
+  "sanitizer": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/greedy",
+      "-m",
+      "cpp",
+      "--cpp-standard=c++20",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "clang++ -fsanitize=address,undefined -fno-sanitize-recover=all",
+    "timed_out": false,
+    "timeout_seconds": 300,
+    "elapsed_seconds": 9.521,
+    "output": "..........                                                               [100%]\n10 passed, 13 deselected in 9.38s\n"
+  }
+}

@@ -1,6 +1,6 @@
 # Getting Started
 
-Algorithm Atlas is an educational repository for Python and C++ implementations of DSA, machine learning, and artificial intelligence topics. **Phase 4 — Divide & Conquer only is authorized.** Prior phases are complete per the owner. Completed topics contain runnable lessons and tests; catalog statuses remain authoritative. Four new A4 topics are developed in two batches while Merge Sort, Quick Sort, and Binary Search are reused at their existing canonical paths.
+Algorithm Atlas is an educational repository for Python and C++ implementations of DSA, machine learning, and artificial intelligence topics. **Phase 5 is owner-approved; Phase 6 authorizes four Greedy-owned topics only.** Follow the [two-batch checkpoint](greedy-checkpoints.md), then stop for owner review. Dijkstra, Prim and Kruskal are Greedy-paradigm cross-references with unchanged Graph paths/statuses. Completed topics have runnable lessons and tests; catalog statuses remain authoritative.
 
 Start with the [learning roadmap](learning-roadmap.md), browse the [complete algorithm index](algorithm-index.md), and consult the [progress tracker](progress.md) before choosing a topic. The [glossary](glossary.md) and [complexity cheat sheet](complexity-cheatsheet.md) explain terminology used throughout the project.
 

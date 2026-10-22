@@ -1,0 +1,40 @@
+{
+  "baseline_revision": "20fd27321d46098358f862c81dec1b9ecf1ee40c",
+  "prior_files_byte_identical": 263,
+  "syllabus_memberships": 256,
+  "canonical_topics": 235,
+  "greedy_memberships": 7,
+  "all_memberships_identities_and_out_of_scope_records_preserved": true,
+  "implemented_scope": [
+    "activity-selection",
+    "fractional-knapsack",
+    "huffman-coding",
+    "job-sequencing-with-deadlines"
+  ],
+  "graph_conceptual_references_only": [
+    "dijkstra",
+    "kruskal",
+    "prim"
+  ],
+  "graph_paths_statuses_unchanged": true,
+  "duplicate_graph_folders": 0,
+  "schema_supported_conceptual_metadata": "activity-selection.related_algorithms",
+  "lesson_audit": {
+    "activity-selection": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "huffman-coding": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "fractional-knapsack": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "job-sequencing-with-deadlines": {
+      "sections": 25,
+      "required_artifacts": 6
+    }
+  }
+}

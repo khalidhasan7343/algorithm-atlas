@@ -6,31 +6,11 @@ Read `README.md`, `CONTRIBUTING.md`, `docs/progress.md`, and the relevant record
 
 ## Mandatory phase checkpoint
 
-**The owner confirms previous phases complete and explicitly authorizes
-Phase 4 — Divide & Conquer only.** Preserve previously completed Sorting,
-Searching, and Recursion & Backtracking work.
+The owner explicitly approved Phase 5 on 2026-10-22 (Asia/Dhaka) and authorized **Phase 6 — Greedy: four canonical topics only**. Batch 1: Activity Selection, Fractional Knapsack. Batch 2: Huffman Coding, Job Sequencing with Deadlines. Finish and test each [batch](docs/greedy-checkpoints.md) before continuing automatically. Preserve all earlier categories and review evidence.
 
-The authoritative A4 catalog has seven memberships: Merge Sort, Quick Sort,
-Binary Search (three reused canonical topics), plus four new canonical topics.
-The user's list counted six; preserve all seven and document the discrepancy.
-Never duplicate the three existing implementations.
+A11 retains seven memberships. Dijkstra, Prim and Kruskal are graph algorithms that also use the Greedy paradigm; preserve their existing Graph canonical paths and statuses, add only conceptual references, and do not implement or duplicate them in Phase 6. Keep all 256 syllabus entries and 235 canonical topics. Use only schema-supported references.
 
-Batch 1: Maximum Subarray using Divide and Conquer; Karatsuba Multiplication.
-Batch 2: Closest Pair of Points; Strassen's Matrix Multiplication.
-Finish/test each batch before continuing automatically. Record actual results
-in docs/divide-conquer-checkpoints.md; update catalog/progress/generated docs.
-All new lessons need 25 sections, recurrence, correctness, numeric contracts,
-Python/C++17/C++20 tests and independent expected values. Preserve prior code
-unless a confirmed defect requires correction.
-
-After completion create DIVIDE-CONQUER-REVIEW-REPORT.md, the requested review
-ZIP and SHA-256; verify integrity/completeness, then STOP for explicit owner
-review. Do not mark Phase 4 human-approved, start another category, commit,
-push, or publish. User authorization supersedes previous phase wording.
-
-At the end of every subsequent authorized phase or category scope, stop for explicit user review before developing beyond that scope. The user's latest explicit authorization controls these checkpoints.
-
-Do not push, publish, or create commits on the maintainer's behalf without explicit authorization. Do not set Git identity from the public contact email.
+Each new lesson needs the exact 25 sections, greedy-choice/exchange correctness, numeric/resource contracts, Python/C++17/C++20 tests and independent oracles. Record actual results, regenerate documentation, prepare GREEDY-REVIEW-REPORT.md and the full review ZIP/SHA-256, then STOP for explicit owner review. Do not mark Phase 6 human-approved, begin another category, commit, push or publish. Every later scope also requires owner approval at its completion checkpoint. Never set Git identity from the public email.
 
 ## Work and validation
 

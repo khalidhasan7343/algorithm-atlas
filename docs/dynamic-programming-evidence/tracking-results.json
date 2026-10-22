@@ -1,0 +1,42 @@
+{
+  "reports_nonempty_and_tracked": [
+    "DIVIDE-CONQUER-REVIEW-REPORT.md",
+    "DYNAMIC-PROGRAMMING-REVIEW-REPORT.md",
+    "PHASE-0-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SORTING-REVIEW-REPORT.md"
+  ],
+  "required_reports_ignored": false,
+  "completion_report": "DYNAMIC-PROGRAMMING-REVIEW-REPORT.md",
+  "snapshot": "clean export of the actual staged Git index; no commit created",
+  "clean_tracked_checkout_validations": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/validate_catalog.py"
+      ],
+      "returncode": 0,
+      "output": "Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 311 Markdown files, and 3827 local links.\nValidation passed. Test execution and external URLs are checked separately.\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/generate_catalog_docs.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "output": "Checked 236 catalog documentation pages; 0 changes.\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/verify_dynamic_programming_scope.py"
+      ],
+      "returncode": 0,
+      "output": "{\n  \"baseline_revision\": \"20fd27321d46098358f862c81dec1b9ecf1ee40c\",\n  \"prior_files_byte_identical\": 174,\n  \"all_syllabus_memberships_and_identities_preserved\": true,\n  \"out_of_scope_catalog_records_unchanged\": true,\n  \"dp_memberships\": 13,\n  \"implemented_scope\": [\n    \"coin-change\",\n    \"edit-distance\",\n    \"fibonacci\",\n    \"kadane\",\n    \"longest-common-subsequence\",\n    \"longest-increasing-subsequence\",\n    \"matrix-chain-multiplication\",\n    \"palindrome-partitioning\",\n    \"rod-cutting\",\n    \"subset-sum\",\n    \"zero-one-knapsack\"\n  ],\n  \"shared_graph_memberships_still_planned\": [\n    \"bellman-ford\",\n    \"floyd-warshall\"\n  ],\n  \"lesson_audit\": {\n    \"fibonacci\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"zero-one-knapsack\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"longest-common-subsequence\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"longest-increasing-subsequence\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"edit-distance\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"matrix-chain-multiplication\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"coin-change\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"subset-sum\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"kadane\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"rod-cutting\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"palindrome-partitioning\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    }\n  }\n}\n"
+    }
+  ],
+  "hosted_github_actions": "not triggered or verified"
+}

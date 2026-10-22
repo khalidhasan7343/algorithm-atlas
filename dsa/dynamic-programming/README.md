@@ -8,19 +8,21 @@ This category preserves **13 original syllabus entries**. Each link points to th
 
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Fibonacci | [fibonacci](fibonacci/README.md) | planned |
-| 0/1 Knapsack | [zero-one-knapsack](zero-one-knapsack/README.md) | planned |
-| Longest Common Subsequence (LCS) | [longest-common-subsequence](longest-common-subsequence/README.md) | planned |
-| Longest Increasing Subsequence (LIS) | [longest-increasing-subsequence](longest-increasing-subsequence/README.md) | planned |
-| Edit Distance | [edit-distance](edit-distance/README.md) | planned |
-| Matrix Chain Multiplication | [matrix-chain-multiplication](matrix-chain-multiplication/README.md) | planned |
-| Coin Change | [coin-change](coin-change/README.md) | planned |
-| Subset Sum | [subset-sum](subset-sum/README.md) | planned |
-| Kadane's Algorithm | [kadane](kadane/README.md) | planned |
-| Rod Cutting | [rod-cutting](rod-cutting/README.md) | planned |
-| Palindrome Partitioning | [palindrome-partitioning](palindrome-partitioning/README.md) | planned |
+| Fibonacci | [fibonacci](fibonacci/README.md) | complete |
+| 0/1 Knapsack | [zero-one-knapsack](zero-one-knapsack/README.md) | complete |
+| Longest Common Subsequence (LCS) | [longest-common-subsequence](longest-common-subsequence/README.md) | complete |
+| Longest Increasing Subsequence (LIS) | [longest-increasing-subsequence](longest-increasing-subsequence/README.md) | complete |
+| Edit Distance | [edit-distance](edit-distance/README.md) | complete |
+| Matrix Chain Multiplication | [matrix-chain-multiplication](matrix-chain-multiplication/README.md) | complete |
+| Coin Change | [coin-change](coin-change/README.md) | complete |
+| Subset Sum | [subset-sum](subset-sum/README.md) | complete |
+| Kadane's Algorithm | [kadane](kadane/README.md) | complete |
+| Rod Cutting | [rod-cutting](rod-cutting/README.md) | complete |
+| Palindrome Partitioning | [palindrome-partitioning](palindrome-partitioning/README.md) | complete |
 | Bellman-Ford | [bellman-ford](../graph-algorithms/bellman-ford/README.md) | planned |
 | Floyd-Warshall | [floyd-warshall](../graph-algorithms/floyd-warshall/README.md) | planned |
+
+Phase 5 authorizes the eleven DP-owned canonical topics only. Bellman-Ford and Floyd-Warshall retain their shared graph canonical locations and remain planned outside this scope. Completion of the eleven requested topics does not complete all 13 memberships.
 
 ## Learning and contribution scope
 

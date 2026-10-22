@@ -57,6 +57,18 @@ RECURSION_BACKTRACKING_BATCHES = (
     ("n-queens", "sudoku-solver", "rat-in-a-maze"),
     ("graph-coloring", "hamiltonian-path", "subset-sum-backtracking"),
 )
+DYNAMIC_PROGRAMMING_SCOPE = "Dynamic Programming: eleven listed canonical topics only"
+GREEDY_SCOPE = "Greedy: four canonical topics only"
+GREEDY_BATCHES = (
+    ("activity-selection", "fractional-knapsack"),
+    ("huffman-coding", "job-sequencing-with-deadlines"),
+)
+DYNAMIC_PROGRAMMING_BATCHES = (
+    ("fibonacci", "zero-one-knapsack", "coin-change", "rod-cutting"),
+    ("longest-common-subsequence", "longest-increasing-subsequence", "edit-distance"),
+    ("matrix-chain-multiplication", "subset-sum", "palindrome-partitioning"),
+    ("kadane",),
+)
 
 
 class UniqueKeyLoader(yaml.SafeLoader):
@@ -182,6 +194,32 @@ def _validate_development(
     if status == "awaiting-review" and active is not None:
         report.errors.append("development.awaiting-review requires active_batch=null")
 
+    if state.get("scope") == GREEDY_SCOPE and valid_completed:
+        if len(completed) > 2:
+            report.errors.append("development Greedy has only two batches")
+        if status == "in-progress" and (type(active) is not int or active not in (1, 2)):
+            report.errors.append("development Greedy active_batch must be 1 or 2")
+        if status == "awaiting-review" and completed != [1, 2]:
+            report.errors.append("development Greedy awaiting-review requires both batches")
+        for batch in completed[:2]:
+            for algorithm_id in GREEDY_BATCHES[batch-1]:
+                record = algorithms.get(algorithm_id, {})
+                if not all(isinstance(record.get(field), str) and record[field] in ARTIFACT_STATUSES for field in STATUS_FIELDS[:3]) or record.get("test_status") not in ("tested", "reviewed"):
+                    report.errors.append(f"development Greedy requires completed/tested {algorithm_id}")
+        return
+    if state.get("scope") == DYNAMIC_PROGRAMMING_SCOPE and valid_completed:
+        if len(completed) > 4:
+            report.errors.append("development Dynamic Programming has only four batches")
+        if status == "in-progress" and (type(active) is not int or active not in (1, 2, 3, 4)):
+            report.errors.append("development Dynamic Programming active_batch must be 1..4")
+        if status == "awaiting-review" and completed != [1, 2, 3, 4]:
+            report.errors.append("development Dynamic Programming awaiting-review requires all four batches")
+        for batch in completed[:4]:
+            for algorithm_id in DYNAMIC_PROGRAMMING_BATCHES[batch - 1]:
+                record = algorithms.get(algorithm_id, {})
+                if not all(record.get(field) in ARTIFACT_STATUSES for field in STATUS_FIELDS[:3]) or record.get("test_status") not in ("tested", "reviewed"):
+                    report.errors.append(f"development Dynamic Programming requires completed/tested {algorithm_id}")
+        return
     if state.get("scope") == "Divide & Conquer category only" and valid_completed:
         batches = (("maximum-subarray-divide-and-conquer", "karatsuba-multiplication"),
                    ("closest-pair-of-points", "strassen-matrix-multiplication"))

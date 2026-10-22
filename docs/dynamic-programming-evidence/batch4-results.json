@@ -1,0 +1,17 @@
+{
+  "kadane": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/dynamic-programming/kadane",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 300,
+    "elapsed_seconds": 3.307,
+    "output": "........                                                                 [100%]\n8 passed in 3.20s\n"
+  }
+}

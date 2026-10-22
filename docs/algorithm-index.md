@@ -149,10 +149,10 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Activity Selection | [activity-selection](../dsa/greedy/activity-selection/README.md) | planned |
-| Huffman Coding | [huffman-coding](../dsa/greedy/huffman-coding/README.md) | planned |
-| Fractional Knapsack | [fractional-knapsack](../dsa/greedy/fractional-knapsack/README.md) | planned |
-| Job Sequencing with Deadlines | [job-sequencing-with-deadlines](../dsa/greedy/job-sequencing-with-deadlines/README.md) | planned |
+| Activity Selection | [activity-selection](../dsa/greedy/activity-selection/README.md) | complete |
+| Huffman Coding | [huffman-coding](../dsa/greedy/huffman-coding/README.md) | complete |
+| Fractional Knapsack | [fractional-knapsack](../dsa/greedy/fractional-knapsack/README.md) | complete |
+| Job Sequencing with Deadlines | [job-sequencing-with-deadlines](../dsa/greedy/job-sequencing-with-deadlines/README.md) | complete |
 | Kruskal's Algorithm | [kruskal](../dsa/graph-algorithms/kruskal/README.md) | planned |
 | Prim's Algorithm | [prim](../dsa/graph-algorithms/prim/README.md) | planned |
 | Dijkstra's Algorithm | [dijkstra](../dsa/graph-algorithms/dijkstra/README.md) | planned |
@@ -161,17 +161,17 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Fibonacci | [fibonacci](../dsa/dynamic-programming/fibonacci/README.md) | planned |
-| 0/1 Knapsack | [zero-one-knapsack](../dsa/dynamic-programming/zero-one-knapsack/README.md) | planned |
-| Longest Common Subsequence (LCS) | [longest-common-subsequence](../dsa/dynamic-programming/longest-common-subsequence/README.md) | planned |
-| Longest Increasing Subsequence (LIS) | [longest-increasing-subsequence](../dsa/dynamic-programming/longest-increasing-subsequence/README.md) | planned |
-| Edit Distance | [edit-distance](../dsa/dynamic-programming/edit-distance/README.md) | planned |
-| Matrix Chain Multiplication | [matrix-chain-multiplication](../dsa/dynamic-programming/matrix-chain-multiplication/README.md) | planned |
-| Coin Change | [coin-change](../dsa/dynamic-programming/coin-change/README.md) | planned |
-| Subset Sum | [subset-sum](../dsa/dynamic-programming/subset-sum/README.md) | planned |
-| Kadane's Algorithm | [kadane](../dsa/dynamic-programming/kadane/README.md) | planned |
-| Rod Cutting | [rod-cutting](../dsa/dynamic-programming/rod-cutting/README.md) | planned |
-| Palindrome Partitioning | [palindrome-partitioning](../dsa/dynamic-programming/palindrome-partitioning/README.md) | planned |
+| Fibonacci | [fibonacci](../dsa/dynamic-programming/fibonacci/README.md) | complete |
+| 0/1 Knapsack | [zero-one-knapsack](../dsa/dynamic-programming/zero-one-knapsack/README.md) | complete |
+| Longest Common Subsequence (LCS) | [longest-common-subsequence](../dsa/dynamic-programming/longest-common-subsequence/README.md) | complete |
+| Longest Increasing Subsequence (LIS) | [longest-increasing-subsequence](../dsa/dynamic-programming/longest-increasing-subsequence/README.md) | complete |
+| Edit Distance | [edit-distance](../dsa/dynamic-programming/edit-distance/README.md) | complete |
+| Matrix Chain Multiplication | [matrix-chain-multiplication](../dsa/dynamic-programming/matrix-chain-multiplication/README.md) | complete |
+| Coin Change | [coin-change](../dsa/dynamic-programming/coin-change/README.md) | complete |
+| Subset Sum | [subset-sum](../dsa/dynamic-programming/subset-sum/README.md) | complete |
+| Kadane's Algorithm | [kadane](../dsa/dynamic-programming/kadane/README.md) | complete |
+| Rod Cutting | [rod-cutting](../dsa/dynamic-programming/rod-cutting/README.md) | complete |
+| Palindrome Partitioning | [palindrome-partitioning](../dsa/dynamic-programming/palindrome-partitioning/README.md) | complete |
 | Bellman-Ford | [bellman-ford](../dsa/graph-algorithms/bellman-ford/README.md) | planned |
 | Floyd-Warshall | [floyd-warshall](../dsa/graph-algorithms/floyd-warshall/README.md) | planned |
 

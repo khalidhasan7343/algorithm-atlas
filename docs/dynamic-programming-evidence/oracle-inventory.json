@@ -1,0 +1,35 @@
+{
+  "coin-change": {
+    "independently_expected_vectors": 156
+  },
+  "edit-distance": {
+    "independently_expected_vectors": 354
+  },
+  "fibonacci": {
+    "independently_expected_vectors": 123
+  },
+  "kadane": {
+    "independently_expected_vectors": 3407
+  },
+  "longest-common-subsequence": {
+    "independently_expected_vectors": 354
+  },
+  "longest-increasing-subsequence": {
+    "independently_expected_vectors": 489
+  },
+  "matrix-chain-multiplication": {
+    "independently_expected_vectors": 156
+  },
+  "palindrome-partitioning": {
+    "independently_expected_vectors": 365
+  },
+  "rod-cutting": {
+    "independently_expected_vectors": 158
+  },
+  "subset-sum": {
+    "independently_expected_vectors": 855
+  },
+  "zero-one-knapsack": {
+    "independently_expected_vectors": 187
+  }
+}

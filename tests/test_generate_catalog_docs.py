@@ -208,3 +208,47 @@ def test_divide_progress_retains_seven_memberships_and_three_reuses(planning_rep
     assert 'seven memberships' in text and 'Binary Search' in text
     assert 'Reuse is not new implementation' in text
     assert 'Stop after the report' in text
+
+
+
+def test_dp_progress_preserves_shared_graph_memberships(planning_repo):
+    _,catalog,_=planning_repo
+    catalog['development']={'phase':'Phase 5 — Dynamic Programming','scope':'Dynamic Programming: eleven listed canonical topics only','status':'in-progress','completed_batches':[1],'active_batch':2,'checkpoint':'docs/dynamic-programming-checkpoints.md'}
+    text=generator.progress_page(catalog,{'sample-topic':catalog['algorithms'][0]})
+    assert 'Validated dynamic programming batches: 1.' in text
+    assert '13 memberships' in text and 'Bellman-Ford and Floyd-Warshall remain' in text
+    assert 'Phase 5 is not human-approved' in text
+    assert 'Validated sorting batches' not in text
+
+
+
+def test_greedy_progress_separates_graph_scope(planning_repo):
+    _,catalog,_=planning_repo
+    catalog['development']={'phase':'Phase 6 — Greedy Algorithms','scope':'Greedy: four canonical topics only','status':'in-progress','completed_batches':[1],'active_batch':2,'checkpoint':'docs/greedy-checkpoints.md'}
+    text=generator.progress_page(catalog,{'sample-topic':catalog['algorithms'][0]})
+    assert 'Validated greedy batches: 1.' in text
+    assert 'Dijkstra, Prim and Kruskal' in text
+    assert 'Phase 6 is not human-approved' in text
+    assert 'Validated sorting batches' not in text
+
+
+def test_greedy_category_separates_implementations_from_graph_links(planning_repo):
+    import copy
+    _,catalog,_=planning_repo
+    owned=('activity-selection','fractional-knapsack','huffman-coding','job-sequencing-with-deadlines')
+    graph=('dijkstra','prim','kruskal')
+    records={}
+    for name in owned+graph:
+        record=copy.deepcopy(catalog['algorithms'][0]);record.update(id=name,name=name,canonical_location=('dsa/greedy/' if name in owned else 'dsa/graph-algorithms/')+name)
+        if name in owned:record.update(documentation_status='implemented',python_status='tested',cpp_status='tested',test_status='tested')
+        records[name]=record
+    category={'id':'A11','name':'Greedy Algorithms','path':'dsa/greedy','items':[{'name':name,'algorithm':name} for name in owned+graph]}
+    before=copy.deepcopy((category,records))
+    text=generator.category_page(category,records)
+    left,right=text.split('## Graph algorithms that also use the Greedy paradigm')
+    assert '## Greedy algorithms implemented in Phase 6' in left
+    assert all(']('+name+'/README.md)' in left for name in owned)
+    assert all('](../graph-algorithms/'+name+'/README.md)' in right for name in graph)
+    assert right.count('| planned |')==3
+    assert 'seven A11 memberships' in right
+    assert (category,records)==before

@@ -1,0 +1,70 @@
+{
+  "baseline_revision": "20fd27321d46098358f862c81dec1b9ecf1ee40c",
+  "prior_files_byte_identical": 174,
+  "all_syllabus_memberships_and_identities_preserved": true,
+  "out_of_scope_catalog_records_unchanged": true,
+  "dp_memberships": 13,
+  "implemented_scope": [
+    "coin-change",
+    "edit-distance",
+    "fibonacci",
+    "kadane",
+    "longest-common-subsequence",
+    "longest-increasing-subsequence",
+    "matrix-chain-multiplication",
+    "palindrome-partitioning",
+    "rod-cutting",
+    "subset-sum",
+    "zero-one-knapsack"
+  ],
+  "shared_graph_memberships_still_planned": [
+    "bellman-ford",
+    "floyd-warshall"
+  ],
+  "lesson_audit": {
+    "fibonacci": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "zero-one-knapsack": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "longest-common-subsequence": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "longest-increasing-subsequence": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "edit-distance": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "matrix-chain-multiplication": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "coin-change": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "subset-sum": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "kadane": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "rod-cutting": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "palindrome-partitioning": {
+      "sections": 25,
+      "required_artifacts": 6
+    }
+  }
+}

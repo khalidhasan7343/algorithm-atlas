@@ -2,7 +2,7 @@
 
 Progress from foundational problem solving to specialized AI topics. These levels describe a study order, not repository development phases: learning a later level does not authorize implementation outside the approved development phase.
 
-**Current scope:** Phase 4 authorizes Divide & Conquer only; prior phases are complete per the owner. Follow [progress](progress.md) and the [two-batch checkpoint](divide-conquer-checkpoints.md). Catalog identities and memberships are preserved, including the shared Binary Search topic.
+**Current scope:** the owner approved Phase 5 and authorized Phase 6 — four Greedy-owned canonical topics only. Follow [progress](progress.md) and the [two-batch checkpoint](greedy-checkpoints.md). Keep seven A11 memberships: the three shared graph topics retain their canonical paths and statuses, with implementations deferred to an authorized Graph phase.
 
 ## Level 1 — DSA Foundations
 
@@ -27,6 +27,10 @@ Explore decomposition, search, and reusable state:
 - [N-Queens](../dsa/recursion-and-backtracking/n-queens/): study partial solutions, constraints, and undoing choices.
 - [Inorder Traversal](../dsa/tree-algorithms/inorder-traversal/) and [Breadth-First Search](../dsa/graph-algorithms/breadth-first-search/): compare traversal order and visited-state tracking.
 - [Activity Selection](../dsa/greedy/activity-selection/), [0/1 Knapsack](../dsa/dynamic-programming/zero-one-knapsack/), and [Longest Common Subsequence](../dsa/dynamic-programming/longest-common-subsequence/): distinguish a provable greedy choice from a dynamic-programming state and recurrence.
+
+**Greedy algorithms implemented in Phase 6:** [Activity Selection](../dsa/greedy/activity-selection/), [Fractional Knapsack](../dsa/greedy/fractional-knapsack/), [Huffman Coding](../dsa/greedy/huffman-coding/) and [Job Sequencing with Deadlines](../dsa/greedy/job-sequencing-with-deadlines/). These are the four completed implementation topics in the authorized scope; Phase 6 owner review remains pending.
+
+**Graph algorithms that also use the Greedy paradigm:** [Dijkstra](../dsa/graph-algorithms/dijkstra/) fixes a smallest tentative-distance vertex under nonnegative weights; [Prim](../dsa/graph-algorithms/prim/) grows an MST through a cheapest cut edge; [Kruskal](../dsa/graph-algorithms/kruskal/) adds a cheapest cycle-free edge. These conceptual links preserve Graph canonical ownership and planned statuses; Phase 6 does not implement them. An explicit Graph Algorithms authorization is required. No membership or canonical-topic count changes.
 
 **Before moving on:** justify a base case, detect repeated subproblems, explain why a greedy decision is safe when applicable, and choose relevant boundary tests instead of reusing one test list for every problem.
 
@@ -111,4 +115,4 @@ Choose branches according to the structure of the problem:
 
 Follow the prerequisites rather than treating levels as a fixed schedule. For each available completed topic, read its intuition and contract, predict a small example's output, inspect the implementation, run its documented tests, and explain its complexity in your own words. For unimplemented topics, use the linked planning notes to understand scope and prerequisites; runnable material follows only within an approved category.
 
-Contributors should consult the [development guide](development.md) and the current [progress tracker](progress.md). The current authorization covers Divide & Conquer only. After its completion, stop for owner review before any other category.
+Contributors should consult the [development guide](development.md) and the current [progress tracker](progress.md). The current authorization covers the four Greedy implementations only. After both internal batches and the review package, stop for explicit owner review before any further development scope.

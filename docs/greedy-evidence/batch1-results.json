@@ -1,0 +1,34 @@
+{
+  "activity-selection": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/greedy/activity-selection",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 300,
+    "elapsed_seconds": 4.089,
+    "output": ".......                                                                  [100%]\n7 passed in 3.90s\n"
+  },
+  "fractional-knapsack": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/greedy/fractional-knapsack",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 300,
+    "elapsed_seconds": 3.037,
+    "output": ".......                                                                  [100%]\n7 passed in 2.93s\n"
+  }
+}

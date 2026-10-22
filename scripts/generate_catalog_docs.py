@@ -196,7 +196,9 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
         searching = state.get('scope') == 'Searching category only'
         backtracking = state.get('scope') == 'Recursion & Backtracking category only'
         divide = state.get('scope') == 'Divide & Conquer category only'
-        label = 'divide/conquer' if divide else 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
+        dynamic = state.get('scope') == 'Dynamic Programming: eleven listed canonical topics only'
+        greedy = state.get('scope') == 'Greedy: four canonical topics only'
+        label = 'greedy' if greedy else 'dynamic programming' if dynamic else 'divide/conquer' if divide else 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
         batches = state.get('completed_batches', [])
         lines.append(f'Validated {label} batches: ' +
                      (', '.join(str(batch) for batch in batches) if batches else 'none yet') + '.')
@@ -208,7 +210,32 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
         if state.get('completion_report'):
             lines += ['', 'See the '
                       + link(path, ROOT / state['completion_report'], f'{label} completion report') + '.']
-        if divide:
+        if greedy:
+            lines += ['', 'The owner explicitly approved Phase 5 and authorized Phase 6: '
+                      'four Greedy-owned canonical topics only. Batch 1: Activity Selection '
+                      'and Fractional Knapsack; Batch 2: Huffman Coding and Job Sequencing '
+                      'with Deadlines. Finish and test each batch before continuing automatically.', '',
+                      'A11 preserves seven memberships. Dijkstra, Prim and Kruskal also '
+                      'use the Greedy paradigm but retain their canonical Graph locations '
+                      'and planned statuses. Their implementations require an authorized '
+                      'Graph Algorithms phase. No duplicate folders or new memberships are added.', '',
+                      'Stop after the report, review ZIP and checksum for explicit owner '
+                      'review. Phase 6 is not human-approved. No other category, commit, '
+                      'push or publication is authorized.']
+        elif dynamic:
+            lines += ['', 'The owner explicitly approved Phase 4 and authorized Phase 5: '
+                      'the eleven listed canonical Dynamic Programming topics only. '
+                      'Batch 1: Fibonacci, 0/1 Knapsack, Coin Change, Rod Cutting; '
+                      'Batch 2: LCS, LIS, Edit Distance; Batch 3: Matrix Chain Multiplication, '
+                      'Subset Sum, Palindrome Partitioning; Batch 4: Kadane and integration. '
+                      'Finish and test each batch before continuing automatically.', '',
+                      'A12 retains 13 memberships. Bellman-Ford and Floyd-Warshall remain '
+                      'planned shared graph topics outside this authorization. Completing '
+                      'the eleven requested topics does not complete all 13 memberships.', '',
+                      'Stop after the report, review ZIP, and checksum for explicit owner '
+                      'review. Phase 5 is not human-approved. No other category, commit, '
+                      'push, or publication is authorized.']
+        elif divide:
             lines += ['', 'The owner confirms previous phases complete and authorizes '
                       'Phase 4 — Divide & Conquer only. Batch 1: Maximum Subarray using '
                       'Divide and Conquer, Karatsuba Multiplication; Batch 2: Closest Pair '
@@ -277,14 +304,40 @@ def category_page(category: dict, algorithms: dict) -> str:
         'entries**. Each link points to the canonical topic; repeated '
         'memberships do not create copied implementations. Topic planning pages '
         'record future scope; completed topics have their full lessons and tests.', '',
-        '| Original syllabus entry | Canonical folder | Status |',
-        '| --- | --- | --- |',
     ]
-    for item in category['items']:
-        algorithm = algorithms[item['algorithm']]
-        target = ROOT / algorithm['canonical_location'] / 'README.md'
-        lines.append(f'| {item["name"]} | {link(path, target, algorithm["id"])} '
-                     f'| {overall_status(algorithm)} |')
+    groups = [(None, category['items'])]
+    if category['id'] == 'A11':
+        graph_ids = {'dijkstra', 'prim', 'kruskal'}
+        owned = [item for item in category['items'] if item['algorithm'] not in graph_ids]
+        shared = [item for item in category['items'] if item['algorithm'] in graph_ids]
+        heading = ('Greedy algorithms implemented in Phase 6' if all(
+            is_complete(algorithms[item['algorithm']]) for item in owned
+        ) else 'Greedy algorithms authorized for Phase 6')
+        groups = [(heading, owned), ('Graph algorithms that also use the Greedy paradigm', shared)]
+    for number, (heading, items) in enumerate(groups):
+        if number:
+            lines.append('')
+        if heading:
+            lines += ['## ' + heading, '']
+        lines += ['| Original syllabus entry | Canonical folder | Status |', '| --- | --- | --- |']
+        for item in items:
+            algorithm = algorithms[item['algorithm']]
+            target = ROOT / algorithm['canonical_location'] / 'README.md'
+            lines.append(f'| {item["name"]} | {link(path, target, algorithm["id"])} '
+                         f'| {overall_status(algorithm)} |')
+    if category['id'] == 'A11':
+        lines += ['', 'Dijkstra chooses the unsettled vertex with smallest tentative distance '
+                  '(requiring nonnegative edge weights); Prim chooses a cheapest edge across '
+                  'the growing-tree cut; Kruskal accepts a cheapest edge that does not create '
+                  'a cycle. These are conceptual Greedy connections, not Phase 6 implementations. '
+                  'Their canonical Graph paths and existing statuses are preserved. Complete '
+                  'them only during an explicitly authorized Graph Algorithms phase. The four '
+                  'Phase 6 implementations do not complete all seven A11 memberships.']
+    if category['id'] == 'A12':
+        lines += ['', 'Phase 5 authorizes the eleven DP-owned canonical topics only. '
+                  'Bellman-Ford and Floyd-Warshall retain their shared graph canonical '
+                  'locations and remain planned outside this scope. Completion of '
+                  'the eleven requested topics does not complete all 13 memberships.']
     lines += [
         '', '## Learning and contribution scope', '',
         'Choose prerequisites through the '

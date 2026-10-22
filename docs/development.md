@@ -4,7 +4,11 @@ This guide defines how to turn a planned Algorithm Atlas topic into an explained
 
 ## Phase boundaries
 
-**Phase 4 authorizes Divide & Conquer only.** The owner confirms previous phases complete. Follow the two validated [batches](divide-conquer-checkpoints.md), preserve earlier work, reuse canonical Sorting/Searching topics, then prepare the review report/ZIP/checksum and STOP for explicit owner review. No other category, commit, or push is authorized.
+The owner explicitly approved Phase 5 on 2026-10-22 (Asia/Dhaka) and authorized **Phase 6 — Greedy: four canonical topics only**. Batch 1: Activity Selection, Fractional Knapsack. Batch 2: Huffman Coding, Job Sequencing with Deadlines. Finish and test each [batch](greedy-checkpoints.md) before continuing automatically. Preserve all earlier categories and review evidence.
+
+A11 retains seven memberships. Dijkstra, Prim and Kruskal are graph algorithms that also use the Greedy paradigm; preserve their existing Graph canonical paths and statuses, add only conceptual references, and do not implement or duplicate them in Phase 6. Keep all 256 syllabus entries and 235 canonical topics. Use only schema-supported references.
+
+Each new lesson needs the exact 25 sections, greedy-choice/exchange correctness, numeric/resource contracts, Python/C++17/C++20 tests and independent oracles. Record actual results, regenerate documentation, prepare GREEDY-REVIEW-REPORT.md and the full review ZIP/SHA-256, then STOP for explicit owner review. Do not mark Phase 6 human-approved, begin another category, commit, push or publish. Every later scope also requires owner approval at its completion checkpoint. Never set Git identity from the public email.
 
 ## Canonical layout and catalog ownership
 

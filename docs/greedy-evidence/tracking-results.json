@@ -1,0 +1,43 @@
+{
+  "reports_nonempty_and_tracked": [
+    "DIVIDE-CONQUER-REVIEW-REPORT.md",
+    "DYNAMIC-PROGRAMMING-REVIEW-REPORT.md",
+    "GREEDY-REVIEW-REPORT.md",
+    "PHASE-0-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SORTING-REVIEW-REPORT.md"
+  ],
+  "required_reports_ignored": false,
+  "completion_report": "GREEDY-REVIEW-REPORT.md",
+  "snapshot": "clean export of the actual staged Git index; no commit created",
+  "clean_tracked_checkout_validations": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/validate_catalog.py"
+      ],
+      "returncode": 0,
+      "output": "Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 314 Markdown files, and 3856 local links.\nValidation passed. Test execution and external URLs are checked separately.\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/generate_catalog_docs.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "output": "Checked 232 catalog documentation pages; 0 changes.\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/verify_greedy_scope.py"
+      ],
+      "returncode": 0,
+      "output": "{\n  \"baseline_revision\": \"20fd27321d46098358f862c81dec1b9ecf1ee40c\",\n  \"prior_files_byte_identical\": 263,\n  \"syllabus_memberships\": 256,\n  \"canonical_topics\": 235,\n  \"greedy_memberships\": 7,\n  \"all_memberships_identities_and_out_of_scope_records_preserved\": true,\n  \"implemented_scope\": [\n    \"activity-selection\",\n    \"fractional-knapsack\",\n    \"huffman-coding\",\n    \"job-sequencing-with-deadlines\"\n  ],\n  \"graph_conceptual_references_only\": [\n    \"dijkstra\",\n    \"kruskal\",\n    \"prim\"\n  ],\n  \"graph_paths_statuses_unchanged\": true,\n  \"duplicate_graph_folders\": 0,\n  \"schema_supported_conceptual_metadata\": \"activity-selection.related_algorithms\",\n  \"lesson_audit\": {\n    \"activity-selection\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"huffman-coding\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"fractional-knapsack\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"job-sequencing-with-deadlines\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    }\n  }\n}\n"
+    }
+  ],
+  "hosted_github_actions": "not triggered or verified"
+}

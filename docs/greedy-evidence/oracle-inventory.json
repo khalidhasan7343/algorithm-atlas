@@ -1,0 +1,14 @@
+{
+  "activity-selection": {
+    "independently_expected_vectors": 273
+  },
+  "huffman-coding": {
+    "independently_expected_vectors": 147
+  },
+  "fractional-knapsack": {
+    "independently_expected_vectors": 148
+  },
+  "job-sequencing-with-deadlines": {
+    "independently_expected_vectors": 273
+  }
+}

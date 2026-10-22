@@ -634,3 +634,69 @@ def test_divide_invalid_checkpoint(sample_repo,completed,active,status):
     state.update(completed_batches=completed,active_batch=active,status=status)
     report=ValidationReport();_validate_development(root,state,divide_statuses(),report)
     assert not report.ok
+
+
+@pytest.mark.parametrize("completed,active,status", [([],1,"in-progress"),([1],2,"in-progress"),([1,2],3,"in-progress"),([1,2,3],4,"in-progress"),([1,2,3,4],None,"awaiting-review")])
+def test_dp_valid_checkpoints(sample_repo,completed,active,status):
+    from scripts.validate_catalog import DYNAMIC_PROGRAMMING_SCOPE,DYNAMIC_PROGRAMMING_BATCHES
+    root,data=sample_repo
+    state=add_development(root,data,scope=DYNAMIC_PROGRAMMING_SCOPE)
+    state.update(completed_batches=completed,active_batch=active,status=status)
+    records={name:{"documentation_status":"implemented","python_status":"tested","cpp_status":"tested","test_status":"tested"} for batch in DYNAMIC_PROGRAMMING_BATCHES for name in batch}
+    report=ValidationReport();_validate_development(root,state,records,report)
+    assert report.ok,report.errors
+
+
+@pytest.mark.parametrize("completed,active,status", [([1],None,"awaiting-review"),([1,2,3,4],5,"in-progress"),([1,2,3,4,5],6,"in-progress")])
+def test_dp_rejects_premature_review_and_extra_batches(sample_repo,completed,active,status):
+    from scripts.validate_catalog import DYNAMIC_PROGRAMMING_SCOPE
+    root,data=sample_repo
+    state=add_development(root,data,scope=DYNAMIC_PROGRAMMING_SCOPE)
+    state.update(completed_batches=completed,active_batch=active,status=status)
+    report=ValidationReport();_validate_development(root,state,{},report)
+    assert not report.ok
+
+
+def test_dp_completed_claim_requires_every_requested_topic(sample_repo):
+    from scripts.validate_catalog import DYNAMIC_PROGRAMMING_SCOPE,DYNAMIC_PROGRAMMING_BATCHES
+    root,data=sample_repo
+    state=add_development(root,data,scope=DYNAMIC_PROGRAMMING_SCOPE)
+    state.update(completed_batches=[1,2,3,4],active_batch=None,status="awaiting-review")
+    names=[name for batch in DYNAMIC_PROGRAMMING_BATCHES for name in batch]
+    for missing in names:
+        records={name:{"documentation_status":"implemented","python_status":"tested","cpp_status":"tested","test_status":"tested"} for name in names if name!=missing}
+        report=ValidationReport();_validate_development(root,state,records,report)
+        assert any(missing in error for error in report.errors)
+
+
+@pytest.mark.parametrize("completed,active,status", [([],1,"in-progress"),([1],2,"in-progress"),([1,2],None,"awaiting-review")])
+def test_greedy_valid_checkpoint_leaves_graph_planned(sample_repo,completed,active,status):
+    from scripts.validate_catalog import GREEDY_SCOPE,GREEDY_BATCHES
+    root,data=sample_repo
+    state=add_development(root,data,scope=GREEDY_SCOPE)
+    state.update(completed_batches=completed,active_batch=active,status=status)
+    records={name:{"documentation_status":"implemented","python_status":"tested","cpp_status":"tested","test_status":"tested"} for batch in GREEDY_BATCHES for name in batch}
+    records.update({name:{"documentation_status":"planned","python_status":"planned","cpp_status":"planned","test_status":"planned"} for name in ("dijkstra","prim","kruskal")})
+    report=ValidationReport();_validate_development(root,state,records,report)
+    assert report.ok,report.errors
+
+
+@pytest.mark.parametrize("completed,active,status", [([1],None,"awaiting-review"),([1,2],3,"in-progress"),([1,2,3],4,"in-progress")])
+def test_greedy_rejects_premature_review_or_third_batch(sample_repo,completed,active,status):
+    from scripts.validate_catalog import GREEDY_SCOPE
+    root,data=sample_repo
+    state=add_development(root,data,scope=GREEDY_SCOPE)
+    state.update(completed_batches=completed,active_batch=active,status=status)
+    report=ValidationReport();_validate_development(root,state,{},report)
+    assert not report.ok
+
+
+@pytest.mark.parametrize("missing",("activity-selection","fractional-knapsack","huffman-coding","job-sequencing-with-deadlines"))
+def test_greedy_completed_claim_requires_each_owned_topic(sample_repo,missing):
+    from scripts.validate_catalog import GREEDY_SCOPE,GREEDY_BATCHES
+    root,data=sample_repo
+    state=add_development(root,data,scope=GREEDY_SCOPE)
+    state.update(completed_batches=[1,2],active_batch=None,status="awaiting-review")
+    records={name:{"documentation_status":"implemented","python_status":"tested","cpp_status":"tested","test_status":"tested"} for batch in GREEDY_BATCHES for name in batch if name!=missing}
+    report=ValidationReport();_validate_development(root,state,records,report)
+    assert any(missing in error for error in report.errors)
