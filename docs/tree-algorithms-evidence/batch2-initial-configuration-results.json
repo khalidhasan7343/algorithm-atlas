@@ -1,0 +1,14 @@
+{
+  "catalog": {
+    "command": [
+      ".venv/bin/python",
+      "scripts/validate_catalog.py"
+    ],
+    "returncode": 1,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 0.524,
+    "output": "Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 332 Markdown files, and 4029 local links.\nERROR: dsa/tree-algorithms/binary-lifting/README.md: undefined reference link [v]\nValidation failed with 1 error(s).\n"
+  }
+}

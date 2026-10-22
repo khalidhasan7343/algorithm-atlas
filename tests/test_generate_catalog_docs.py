@@ -261,3 +261,13 @@ def test_graph_progress_records_authorization_and_review_boundary(planning_repo)
     assert 'Validated graph algorithms batches: 1.' in text
     assert 'owner explicitly approved Phase 6' in text
     assert 'Phase 7 is not human-approved' in text
+
+
+def test_tree_progress_preserves_review_boundary_and_new_layout(planning_repo):
+    _,catalog,_=planning_repo
+    catalog['development']={'phase':'Phase 8 — Tree Algorithms','scope':'Tree Algorithms category only','status':'in-progress','completed_batches':[1],'active_batch':2,'checkpoint':'docs/tree-algorithms-checkpoints.md'}
+    text=generator.progress_page(catalog,{a['id']:a for a in catalog['algorithms']})
+    assert 'Validated tree algorithms batches: 1.' in text
+    assert 'owner explicitly approved Phase 7' in text
+    assert 'Phase 8 is not human-approved' in text
+    assert 'artifacts/review-packages/tree-algorithms/' in text

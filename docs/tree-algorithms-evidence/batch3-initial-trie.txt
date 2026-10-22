@@ -1,0 +1,21 @@
+.........F                                                               [100%]
+=================================== FAILURES ===================================
+_______________________________ test_executable ________________________________
+
+python_algorithm = <module 'tree_trie' from '/Users/khalidhasan/Desktop/algorithm-atlas/dsa/tree-algorithms/trie/python/solution.py'>
+cases = <module 'tree_cases_trie' from '/Users/khalidhasan/Desktop/algorithm-atlas/dsa/tree-algorithms/trie/tests/cases.py'>
+
+    def test_executable(python_algorithm,cases):
+        case,expected=cases.vectors()[-1]
+        result=subprocess.run([sys.executable,python_algorithm.__file__],input=json.dumps(case),text=True,capture_output=True,timeout=10)
+        assert result.returncode==0 and not result.stderr
+        cases.check(json.loads(result.stdout),expected,case)
+        result=subprocess.run([sys.executable,python_algorithm.__file__],input='{}',text=True,capture_output=True,timeout=10)
+>       assert result.returncode==2 and result.stderr.startswith('error:')
+E       AssertionError: assert (0 == 2)
+E        +  where 0 = CompletedProcess(args=['/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python', '/Users/khalidhasan/Desktop/algorithm-atlas/dsa/tree-algorithms/trie/python/solution.py'], returncode=0, stdout='[]\n', stderr='').returncode
+
+dsa/tree-algorithms/trie/tests/test_python.py:31: AssertionError
+=========================== short test summary info ============================
+FAILED dsa/tree-algorithms/trie/tests/test_python.py::test_executable - Asser...
+1 failed, 9 passed in 4.97s

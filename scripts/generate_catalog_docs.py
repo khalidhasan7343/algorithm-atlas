@@ -197,9 +197,10 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
         backtracking = state.get('scope') == 'Recursion & Backtracking category only'
         divide = state.get('scope') == 'Divide & Conquer category only'
         dynamic = state.get('scope') == 'Dynamic Programming: eleven listed canonical topics only'
+        tree = state.get('scope') == 'Tree Algorithms category only'
         graph = state.get('scope') == 'Graph Algorithms category only'
         greedy = state.get('scope') == 'Greedy: four canonical topics only'
-        label = 'graph algorithms' if graph else 'greedy' if greedy else 'dynamic programming' if dynamic else 'divide/conquer' if divide else 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
+        label = 'tree algorithms' if tree else 'graph algorithms' if graph else 'greedy' if greedy else 'dynamic programming' if dynamic else 'divide/conquer' if divide else 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
         batches = state.get('completed_batches', [])
         lines.append(f'Validated {label} batches: ' +
                      (', '.join(str(batch) for batch in batches) if batches else 'none yet') + '.')
@@ -211,7 +212,19 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
         if state.get('completion_report'):
             lines += ['', 'See the '
                       + link(path, ROOT / state['completion_report'], f'{label} completion report') + '.']
-        if graph:
+        if tree:
+            lines += ['', 'The owner explicitly approved Phase 7 and confirmed directory cleanup '
+                      'complete on 2026-10-23. Phase 8 authorizes all fourteen Tree canonical '
+                      'topics in five validated batches: traversals; ancestor queries/Euler tour; '
+                      'Fenwick/Segment/Trie; AVL/Red-Black; B-Tree/B+ Tree. Deletion and external '
+                      'mutation invariants are required for balanced search trees.', '',
+                      'Preserve all prior approved categories and 35/256/235 inventory. '
+                      'Review report and package paths follow docs/reviews/tree-algorithms/ '
+                      'and artifacts/review-packages/tree-algorithms/.', '',
+                      'Stop after report, ZIP, checksum and metadata for explicit owner review. '
+                      'Phase 8 is not human-approved. No Phase 9, commit, push or publication '
+                      'is authorized.']
+        elif graph:
             lines += ['', 'The owner explicitly approved Phase 6 on 2026-10-23 and authorized '
                       'all fifteen canonical Graph Algorithms in five sequential validated batches: '
                       'foundations; shortest paths; minimum spanning forests; connectivity; '
@@ -337,6 +350,18 @@ def category_page(category: dict, algorithms: dict) -> str:
             target = ROOT / algorithm['canonical_location'] / 'README.md'
             lines.append(f'| {item["name"]} | {link(path, target, algorithm["id"])} '
                          f'| {overall_status(algorithm)} |')
+    if category['id'] == 'A6':
+        lines += ['', 'The fourteen Phase 8 lessons cover iterative traversals; static ancestor '
+                  'queries and a single-entry Euler Tour; mutable range sums and a lowercase '
+                  'Trie; full AVL/left-leaning Red-Black insertion and deletion; and distinct '
+                  'B-Tree/B+ Tree implementations with deletion. B+ records live only in '
+                  'linked leaves, while B-Tree records also occupy internal nodes.', '',
+                  'Read ' + link(path, ROOT / 'docs/tree-conventions.md', 'Tree contracts')
+                  + ' for identities, ownership, half-open ranges, numeric/resource bounds '
+                  'and degree conventions. Actual sequential tests are in '
+                  + link(path, ROOT / 'docs/tree-algorithms-checkpoints.md', 'Tree checkpoints')
+                  + '. Completion statuses describe local implementation evidence; Phase 8 '
+                  'owner review remains pending. No further category is authorized.']
     if category['id'] == 'A11':
         lines += ['', 'Dijkstra chooses the unsettled vertex with smallest tentative distance '
                   '(requiring nonnegative edge weights); Prim chooses a cheapest edge across '

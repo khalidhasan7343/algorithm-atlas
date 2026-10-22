@@ -1,0 +1,2 @@
+Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 332 Markdown files, and 4021 local links.
+Validation passed. Test execution and external URLs are checked separately.

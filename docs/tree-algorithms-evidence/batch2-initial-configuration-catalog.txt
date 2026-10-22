@@ -1,0 +1,3 @@
+Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 332 Markdown files, and 4029 local links.
+ERROR: dsa/tree-algorithms/binary-lifting/README.md: undefined reference link [v]
+Validation failed with 1 error(s).

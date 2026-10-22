@@ -1,0 +1,29 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "--collect-only",
+    "--require-cpp",
+    "-q"
+  ],
+  "returncode": 0,
+  "category_test_counts": {
+    "infrastructure": 262,
+    "divide-and-conquer": 36,
+    "dynamic-programming": 87,
+    "graph-algorithms": 151,
+    "greedy": 33,
+    "recursion-and-backtracking": 125,
+    "searching": 316,
+    "sorting": 556,
+    "tree-algorithms": 153
+  },
+  "tree_language_counts": {
+    "C++17": 46,
+    "C++20": 46,
+    "Python": 61
+  },
+  "total": 1719,
+  "collection_summary": "1719 tests collected in 0.29s"
+}

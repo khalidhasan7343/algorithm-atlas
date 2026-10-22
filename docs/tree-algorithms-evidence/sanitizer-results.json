@@ -1,0 +1,21 @@
+{
+  "sanitizer": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/tree-algorithms",
+      "-m",
+      "cpp",
+      "--cpp-standard=c++20",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "g++ -fsanitize=address,undefined -fno-sanitize-recover=all",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 47.569,
+    "output": "..............................................                           [100%]\n46 passed, 61 deselected in 47.44s\n"
+  }
+}

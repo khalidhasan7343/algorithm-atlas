@@ -1,0 +1,50 @@
+{
+  "fenwick-tree": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/tree-algorithms/fenwick-tree",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 5.119,
+    "output": "..........                                                               [100%]\n10 passed in 4.97s\n"
+  },
+  "segment-tree": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/tree-algorithms/segment-tree",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.375,
+    "output": "..........                                                               [100%]\n10 passed in 4.27s\n"
+  },
+  "trie": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/tree-algorithms/trie",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 1,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 5.077,
+    "output": ".........F                                                               [100%]\n=================================== FAILURES ===================================\n_______________________________ test_executable ________________________________\n\npython_algorithm = <module 'tree_trie' from '/Users/khalidhasan/Desktop/algorithm-atlas/dsa/tree-algorithms/trie/python/solution.py'>\ncases = <module 'tree_cases_trie' from '/Users/khalidhasan/Desktop/algorithm-atlas/dsa/tree-algorithms/trie/tests/cases.py'>\n\n    def test_executable(python_algorithm,cases):\n        case,expected=cases.vectors()[-1]\n        result=subprocess.run([sys.executable,python_algorithm.__file__],input=json.dumps(case),text=True,capture_output=True,timeout=10)\n        assert result.returncode==0 and not result.stderr\n        cases.check(json.loads(result.stdout),expected,case)\n        result=subprocess.run([sys.executable,python_algorithm.__file__],input='{}',text=True,capture_output=True,timeout=10)\n>       assert result.returncode==2 and result.stderr.startswith('error:')\nE       AssertionError: assert (0 == 2)\nE        +  where 0 = CompletedProcess(args=['/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python', '/Users/khalidhasan/Desktop/algorithm-atlas/dsa/tree-algorithms/trie/python/solution.py'], returncode=0, stdout='[]\\n', stderr='').returncode\n\ndsa/tree-algorithms/trie/tests/test_python.py:31: AssertionError\n=========================== short test summary info ============================\nFAILED dsa/tree-algorithms/trie/tests/test_python.py::test_executable - Asser...\n1 failed, 9 passed in 4.97s\n"
+  }
+}

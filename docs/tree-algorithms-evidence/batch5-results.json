@@ -1,0 +1,34 @@
+{
+  "b-tree-operations": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/tree-algorithms/b-tree-operations",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 11.852,
+    "output": ".............                                                            [100%]\n13 passed in 11.69s\n"
+  },
+  "b-plus-tree-operations": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/tree-algorithms/b-plus-tree-operations",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 12.169,
+    "output": ".............                                                            [100%]\n13 passed in 12.05s\n"
+  }
+}

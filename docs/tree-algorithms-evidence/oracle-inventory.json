@@ -1,0 +1,58 @@
+{
+  "inorder-traversal": {
+    "independently_expected_vectors": 225,
+    "seed": 8101
+  },
+  "preorder-traversal": {
+    "independently_expected_vectors": 225,
+    "seed": 8101
+  },
+  "postorder-traversal": {
+    "independently_expected_vectors": 225,
+    "seed": 8101
+  },
+  "level-order-traversal": {
+    "independently_expected_vectors": 225,
+    "seed": 8101
+  },
+  "lowest-common-ancestor": {
+    "independently_expected_vectors": 175,
+    "seed": 8202
+  },
+  "binary-lifting": {
+    "independently_expected_vectors": 175,
+    "seed": 8202
+  },
+  "euler-tour": {
+    "independently_expected_vectors": 175,
+    "seed": 8202
+  },
+  "fenwick-tree": {
+    "independently_expected_vectors": 84,
+    "seed": 8303
+  },
+  "segment-tree": {
+    "independently_expected_vectors": 84,
+    "seed": 8303
+  },
+  "trie": {
+    "independently_expected_vectors": 101,
+    "seed": 8303
+  },
+  "avl-tree-rotations": {
+    "independently_expected_vectors": 219,
+    "seed": 8404
+  },
+  "red-black-tree-operations": {
+    "independently_expected_vectors": 219,
+    "seed": 8404
+  },
+  "b-tree-operations": {
+    "independently_expected_vectors": 876,
+    "seed": 8505
+  },
+  "b-plus-tree-operations": {
+    "independently_expected_vectors": 876,
+    "seed": 8505
+  }
+}

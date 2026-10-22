@@ -1,0 +1,43 @@
+{
+  "catalog": {
+    "command": [
+      ".venv/bin/python",
+      "scripts/validate_catalog.py"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 0.452,
+    "output": "Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 332 Markdown files, and 4029 local links.\nValidation passed. Test execution and external URLs are checked separately.\n"
+  },
+  "generated-docs": {
+    "command": [
+      ".venv/bin/python",
+      "scripts/generate_catalog_docs.py",
+      "--check"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 0.16,
+    "output": "Checked 210 catalog documentation pages; 0 changes.\n"
+  },
+  "infrastructure": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "tests",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 2.241,
+    "output": "........................................................................ [ 27%]\n........................................................................ [ 54%]\n........................................................................ [ 82%]\n..............................................                           [100%]\n262 passed in 2.13s\n"
+  }
+}

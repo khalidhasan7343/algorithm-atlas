@@ -15,3 +15,5 @@ Six existing ZIPs and twelve checksum/verification sidecars were relocated witho
 Checksums contain archive basenames, so run shasum from the corresponding phase folder. The verifier also resolves them correctly from the repository root. ZIP metadata describes the unchanged original archived snapshot; historical internal paths should not be rewritten. See [review reports](../../docs/reviews/README.md) and the [maintenance report](../../docs/maintenance/root-cleanup/REPORT.md).
 
 Future ZIPs, SHA-256 sidecars and package JSON belong in artifacts/review-packages/<phase-name>/. Package scripts create their output directory, retain no-overwrite protection, and exclude nested ZIPs and sidecars from source payloads. Markdown reports must remain tracked and unignored. Existing owner-review gates remain mandatory.
+
+The later [Tree Algorithms package](tree-algorithms/README.md) follows Phase 8 conventions and records its pending owner approval separately from the maintenance-time inventory above.

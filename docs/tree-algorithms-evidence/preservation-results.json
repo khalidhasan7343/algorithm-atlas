@@ -1,0 +1,85 @@
+{
+  "baseline_revision": "ac2bbb4a7e685603571b784dc0578ed6ed3a67bd",
+  "prior_files_baseline_bytes_verified": 917,
+  "excluded_old_package_files": [],
+  "syllabus_memberships": 256,
+  "canonical_topics": 235,
+  "categories": 35,
+  "tree_memberships": 14,
+  "all_memberships_identities_and_out_of_scope_records_preserved": true,
+  "implemented_scope": [
+    "avl-tree-rotations",
+    "b-plus-tree-operations",
+    "b-tree-operations",
+    "binary-lifting",
+    "euler-tour",
+    "fenwick-tree",
+    "inorder-traversal",
+    "level-order-traversal",
+    "lowest-common-ancestor",
+    "postorder-traversal",
+    "preorder-traversal",
+    "red-black-tree-operations",
+    "segment-tree",
+    "trie"
+  ],
+  "duplicate_cross_category_folders": 0,
+  "lesson_audit": {
+    "inorder-traversal": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "preorder-traversal": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "postorder-traversal": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "level-order-traversal": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "lowest-common-ancestor": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "binary-lifting": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "euler-tour": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "fenwick-tree": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "segment-tree": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "trie": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "avl-tree-rotations": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "red-black-tree-operations": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "b-tree-operations": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "b-plus-tree-operations": {
+      "sections": 25,
+      "required_artifacts": 6
+    }
+  }
+}

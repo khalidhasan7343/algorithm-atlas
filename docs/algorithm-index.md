@@ -87,20 +87,20 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Inorder Traversal | [inorder-traversal](../dsa/tree-algorithms/inorder-traversal/README.md) | planned |
-| Preorder Traversal | [preorder-traversal](../dsa/tree-algorithms/preorder-traversal/README.md) | planned |
-| Postorder Traversal | [postorder-traversal](../dsa/tree-algorithms/postorder-traversal/README.md) | planned |
-| Level Order Traversal | [level-order-traversal](../dsa/tree-algorithms/level-order-traversal/README.md) | planned |
-| Lowest Common Ancestor | [lowest-common-ancestor](../dsa/tree-algorithms/lowest-common-ancestor/README.md) | planned |
-| Binary Lifting | [binary-lifting](../dsa/tree-algorithms/binary-lifting/README.md) | planned |
-| Euler Tour | [euler-tour](../dsa/tree-algorithms/euler-tour/README.md) | planned |
-| Fenwick Tree / Binary Indexed Tree | [fenwick-tree](../dsa/tree-algorithms/fenwick-tree/README.md) | planned |
-| Segment Tree | [segment-tree](../dsa/tree-algorithms/segment-tree/README.md) | planned |
-| Trie / Prefix Tree | [trie](../dsa/tree-algorithms/trie/README.md) | planned |
-| AVL Tree Rotations | [avl-tree-rotations](../dsa/tree-algorithms/avl-tree-rotations/README.md) | planned |
-| Red-Black Tree Operations | [red-black-tree-operations](../dsa/tree-algorithms/red-black-tree-operations/README.md) | planned |
-| B-Tree Operations | [b-tree-operations](../dsa/tree-algorithms/b-tree-operations/README.md) | planned |
-| B+ Tree Operations | [b-plus-tree-operations](../dsa/tree-algorithms/b-plus-tree-operations/README.md) | planned |
+| Inorder Traversal | [inorder-traversal](../dsa/tree-algorithms/inorder-traversal/README.md) | complete |
+| Preorder Traversal | [preorder-traversal](../dsa/tree-algorithms/preorder-traversal/README.md) | complete |
+| Postorder Traversal | [postorder-traversal](../dsa/tree-algorithms/postorder-traversal/README.md) | complete |
+| Level Order Traversal | [level-order-traversal](../dsa/tree-algorithms/level-order-traversal/README.md) | complete |
+| Lowest Common Ancestor | [lowest-common-ancestor](../dsa/tree-algorithms/lowest-common-ancestor/README.md) | complete |
+| Binary Lifting | [binary-lifting](../dsa/tree-algorithms/binary-lifting/README.md) | complete |
+| Euler Tour | [euler-tour](../dsa/tree-algorithms/euler-tour/README.md) | complete |
+| Fenwick Tree / Binary Indexed Tree | [fenwick-tree](../dsa/tree-algorithms/fenwick-tree/README.md) | complete |
+| Segment Tree | [segment-tree](../dsa/tree-algorithms/segment-tree/README.md) | complete |
+| Trie / Prefix Tree | [trie](../dsa/tree-algorithms/trie/README.md) | complete |
+| AVL Tree Rotations | [avl-tree-rotations](../dsa/tree-algorithms/avl-tree-rotations/README.md) | complete |
+| Red-Black Tree Operations | [red-black-tree-operations](../dsa/tree-algorithms/red-black-tree-operations/README.md) | complete |
+| B-Tree Operations | [b-tree-operations](../dsa/tree-algorithms/b-tree-operations/README.md) | complete |
+| B+ Tree Operations | [b-plus-tree-operations](../dsa/tree-algorithms/b-plus-tree-operations/README.md) | complete |
 
 ## A7. [String Algorithms](../dsa/string-algorithms/README.md)
 

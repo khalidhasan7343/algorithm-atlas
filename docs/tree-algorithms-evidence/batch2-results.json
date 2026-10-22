@@ -1,0 +1,50 @@
+{
+  "lowest-common-ancestor": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/tree-algorithms/lowest-common-ancestor",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.813,
+    "output": "..........                                                               [100%]\n10 passed in 4.67s\n"
+  },
+  "binary-lifting": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/tree-algorithms/binary-lifting",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.709,
+    "output": "..........                                                               [100%]\n10 passed in 4.58s\n"
+  },
+  "euler-tour": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/tree-algorithms/euler-tour",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.773,
+    "output": "..........                                                               [100%]\n10 passed in 4.66s\n"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "inorder-traversal": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/tree-algorithms/inorder-traversal",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.627,
+    "output": "..........                                                               [100%]\n10 passed in 4.48s\n"
+  },
+  "preorder-traversal": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/tree-algorithms/preorder-traversal",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.545,
+    "output": "..........                                                               [100%]\n10 passed in 4.44s\n"
+  },
+  "postorder-traversal": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/tree-algorithms/postorder-traversal",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.613,
+    "output": "..........                                                               [100%]\n10 passed in 4.50s\n"
+  },
+  "level-order-traversal": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/tree-algorithms/level-order-traversal",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.477,
+    "output": "..........                                                               [100%]\n10 passed in 4.37s\n"
+  }
+}

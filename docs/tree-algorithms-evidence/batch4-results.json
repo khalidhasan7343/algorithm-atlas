@@ -1,0 +1,34 @@
+{
+  "avl-tree-rotations": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/tree-algorithms/avl-tree-rotations",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 7.39,
+    "output": ".............                                                            [100%]\n13 passed in 7.24s\n"
+  },
+  "red-black-tree-operations": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/tree-algorithms/red-black-tree-operations",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 6.911,
+    "output": ".............                                                            [100%]\n13 passed in 6.80s\n"
+  }
+}

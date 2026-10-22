@@ -1,6 +1,6 @@
 # Getting Started
 
-Algorithm Atlas is an educational repository for Python and C++ implementations of DSA, machine learning, and artificial intelligence topics. **Phase 6 is owner-approved; Phase 7 authorizes all fifteen canonical Graph Algorithms.** Follow the [five-batch checkpoint](graph-algorithms-checkpoints.md), then stop for owner review. Graph implementations also serve the existing DP/Greedy conceptual references. Completed topics have runnable lessons and tests; catalog statuses remain authoritative.
+Algorithm Atlas is an educational repository for Python and C++ implementations of DSA, machine learning, and artificial intelligence topics. **Phase 7 is owner-approved; Phase 8 authorizes fourteen Tree Algorithms.** Follow the [Tree checkpoint](tree-algorithms-checkpoints.md) and [representation contracts](tree-conventions.md), then stop for owner review. Completed topics have runnable lessons and tests; catalog statuses remain authoritative.
 
 Start with the [learning roadmap](learning-roadmap.md), browse the [complete algorithm index](algorithm-index.md), and consult the [progress tracker](progress.md) before choosing a topic. The [glossary](glossary.md) and [complexity cheat sheet](complexity-cheatsheet.md) explain terminology used throughout the project.
 

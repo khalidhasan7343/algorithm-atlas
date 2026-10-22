@@ -1,0 +1,58 @@
+{
+  "reports_nonempty_and_tracked": [
+    "docs/reviews/divide-conquer/DIVIDE-CONQUER-REVIEW-REPORT.md",
+    "docs/reviews/dynamic-programming/DYNAMIC-PROGRAMMING-REVIEW-REPORT.md",
+    "docs/reviews/graph-algorithms/GRAPH-ALGORITHMS-REVIEW-REPORT.md",
+    "docs/reviews/greedy/GREEDY-REVIEW-REPORT.md",
+    "docs/reviews/phase-0/PHASE-0-REPORT.md",
+    "docs/reviews/recursion-backtracking/RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "docs/reviews/searching/SEARCHING-REVIEW-REPORT.md",
+    "docs/reviews/sorting/SORTING-FINAL-AUDIT-REPORT.md",
+    "docs/reviews/sorting/SORTING-REVIEW-REPORT.md",
+    "docs/reviews/tree-algorithms/TREE-ALGORITHMS-REVIEW-REPORT.md"
+  ],
+  "required_reports_ignored": false,
+  "completion_report": "docs/reviews/tree-algorithms/TREE-ALGORITHMS-REVIEW-REPORT.md",
+  "snapshot": "clean export of the actual staged Git index; no commit created",
+  "clean_tracked_checkout_validations": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/validate_catalog.py"
+      ],
+      "returncode": 0,
+      "output": "Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 334 Markdown files, and 4097 local links.\nValidation passed. Test execution and external URLs are checked separately.\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/generate_catalog_docs.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "output": "Checked 203 catalog documentation pages; 0 changes.\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/verify_tree_algorithms_scope.py",
+        "--check-only"
+      ],
+      "returncode": 0,
+      "output": "{\n  \"baseline_revision\": \"ac2bbb4a7e685603571b784dc0578ed6ed3a67bd\",\n  \"prior_files_baseline_bytes_verified\": 917,\n  \"excluded_old_package_files\": [],\n  \"syllabus_memberships\": 256,\n  \"canonical_topics\": 235,\n  \"categories\": 35,\n  \"tree_memberships\": 14,\n  \"all_memberships_identities_and_out_of_scope_records_preserved\": true,\n  \"implemented_scope\": [\n    \"avl-tree-rotations\",\n    \"b-plus-tree-operations\",\n    \"b-tree-operations\",\n    \"binary-lifting\",\n    \"euler-tour\",\n    \"fenwick-tree\",\n    \"inorder-traversal\",\n    \"level-order-traversal\",\n    \"lowest-common-ancestor\",\n    \"postorder-traversal\",\n    \"preorder-traversal\",\n    \"red-black-tree-operations\",\n    \"segment-tree\",\n    \"trie\"\n  ],\n  \"duplicate_cross_category_folders\": 0,\n  \"lesson_audit\": {\n    \"inorder-traversal\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"preorder-traversal\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"postorder-traversal\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"level-order-traversal\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"lowest-common-ancestor\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"binary-lifting\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"euler-tour\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"fenwick-tree\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"segment-tree\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"trie\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"avl-tree-rotations\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"red-black-tree-operations\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"b-tree-operations\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"b-plus-tree-operations\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    }\n  }\n}\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "tests",
+        "--require-cpp",
+        "-q"
+      ],
+      "returncode": 0,
+      "output": "........................................................................ [ 27%]\n........................................................................ [ 54%]\n........................................................................ [ 82%]\n..............................................                           [100%]\n262 passed in 2.40s\n"
+    }
+  ],
+  "hosted_github_actions": "not triggered or verified"
+}

@@ -6,7 +6,7 @@ From Fundamental Algorithms to Advanced Artificial Intelligence — Learn, Imple
 
 Algorithm Atlas is an educational, open-source project maintained by **MD.Khalid Hasan**. Its goal is to explain algorithms from first principles through clear documentation, Python and modern C++ implementations, meaningful tests, complexity analysis, and practical applications.
 
-**Current state: Phase 6 explicitly approved by the owner; Phase 7 — all fifteen Graph Algorithms implemented and tested; awaiting owner review.** See the [Graph review report](docs/reviews/graph-algorithms/GRAPH-ALGORITHMS-REVIEW-REPORT.md), [Graph checkpoints](docs/graph-algorithms-checkpoints.md) and [progress](docs/progress.md). Shared DP and Greedy topics retain their canonical Graph paths; current implementation status and historical category approval are recorded separately. Phase 7 owner review remains pending.
+**Current state: Phase 7 explicitly owner-approved; Phase 8 — all fourteen Tree Algorithms implemented; owner review pending.** Follow [Tree checkpoints](docs/tree-algorithms-checkpoints.md), [Tree conventions](docs/tree-conventions.md) and [progress](docs/progress.md). The Graph report remains a historical handoff; the latest owner approval is recorded in the Tree checkpoint. No other category is authorized.
 
 ## Project Overview
 
@@ -165,7 +165,7 @@ Use the [complexity cheat sheet](docs/complexity-cheatsheet.md) for asymptotic n
 
 [Progress tracking](docs/progress.md) records catalog totals, completed and remaining algorithms, blockers, and the next proposed batch. The [Phase 0 review report](docs/phase-0-review.md) and [complete file inventory](docs/phase-0-files.md) document the foundation handoff. Phase 0 supplies the foundation only. The term **Dynamic Policy Optimization (DPO)** is retained from the syllabus and blocked pending clarification; it has not been replaced by Direct Preference Optimization.
 
-Phase 7 covers all fifteen Graph Algorithms in five validated batches. Dijkstra, Prim and Kruskal serve existing Greedy cross-references; Bellman-Ford and Floyd-Warshall serve DP cross-references. Stop after the Graph review report/archive/checksum for explicit owner review. No subsequent category, commit, push or publication is authorized.
+Phase 8 covers all fourteen Tree Algorithms in five validated batches, including full balanced search-tree deletion and invariant verification. Reports/packages follow the organized review folders. Stop after the Tree review handoff for explicit owner review; no next category, commit, push or publication is authorized.
 
 ## Contribution Guidelines
 

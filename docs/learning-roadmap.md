@@ -2,7 +2,7 @@
 
 Progress from foundational problem solving to specialized AI topics. These levels describe a study order, not repository development phases: learning a later level does not authorize implementation outside the approved development phase.
 
-**Current scope:** the owner approved Phase 6 and authorized all fifteen Phase 7 Graph Algorithms. Follow [progress](progress.md), [graph conventions](graph-conventions.md) and the [five-batch checkpoint](graph-algorithms-checkpoints.md). Preserve 35 categories, 256 original memberships and 235 canonical topics. Stop for Phase 7 owner review before any next category.
+**Current scope:** the owner approved Phase 7 and authorized all fourteen Phase 8 Tree Algorithms. Follow [progress](progress.md), [Tree conventions](tree-conventions.md) and the [five-batch checkpoint](tree-algorithms-checkpoints.md). Preserve 35 categories, 256 memberships and 235 canonicals; stop for explicit Phase 8 owner review.
 
 ## Level 1 — DSA Foundations
 
@@ -30,7 +30,7 @@ Explore decomposition, search, and reusable state:
 
 **Greedy algorithms implemented in Phase 6:** [Activity Selection](../dsa/greedy/activity-selection/), [Fractional Knapsack](../dsa/greedy/fractional-knapsack/), [Huffman Coding](../dsa/greedy/huffman-coding/) and [Job Sequencing with Deadlines](../dsa/greedy/job-sequencing-with-deadlines/). These four Greedy-owned topics received explicit owner approval before Phase 7.
 
-**Graph algorithms that also use the Greedy paradigm:** [Dijkstra](../dsa/graph-algorithms/dijkstra/) fixes a smallest tentative-distance vertex under nonnegative weights; [Prim](../dsa/graph-algorithms/prim/) grows an MST through a cheapest cut edge; [Kruskal](../dsa/graph-algorithms/kruskal/) adds a cheapest cycle-free edge. These conceptual links preserve Graph canonical ownership. Their implementations are now completed under the explicit Phase 7 authorization, with Phase 7 owner review pending. Phase 6 approval covers its four Greedy-owned implementations. No membership or canonical-topic count changes.
+**Graph algorithms that also use the Greedy paradigm:** [Dijkstra](../dsa/graph-algorithms/dijkstra/) fixes a smallest tentative-distance vertex under nonnegative weights; [Prim](../dsa/graph-algorithms/prim/) grows an MST through a cheapest cut edge; [Kruskal](../dsa/graph-algorithms/kruskal/) adds a cheapest cycle-free edge. These conceptual links preserve Graph canonical ownership. Their implementations are now completed under the explicit Phase 7 authorization, with Phase 7 explicitly owner-approved. Phase 6 approval covers its four Greedy-owned implementations. No membership or canonical-topic count changes.
 
 **Before moving on:** justify a base case, detect repeated subproblems, explain why a greedy decision is safe when applicable, and choose relevant boundary tests instead of reusing one test list for every problem.
 
@@ -115,7 +115,7 @@ Choose branches according to the structure of the problem:
 
 Follow the prerequisites rather than treating levels as a fixed schedule. For each available completed topic, read its intuition and contract, predict a small example's output, inspect the implementation, run its documented tests, and explain its complexity in your own words. For unimplemented topics, use the linked planning notes to understand scope and prerequisites; runnable material follows only within an approved category.
 
-Contributors should consult the [development guide](development.md) and the current [progress tracker](progress.md). The current authorization covers all fifteen Graph Algorithms only. After five internal batches and the review package, stop for explicit owner review before any further development scope.
+Contributors should consult the [development guide](development.md) and the current [progress tracker](progress.md). The current authorization covers all fourteen Tree Algorithms only. After five internal batches and the review package, stop for explicit owner review before any further development scope.
 
 
 ## Graph Algorithms learning sequence
@@ -126,4 +126,16 @@ Contributors should consult the [development guide](development.md) and the curr
 4. Structure: [Tarjan SCC](../dsa/graph-algorithms/tarjan-strongly-connected-components/), [Kosaraju SCC](../dsa/graph-algorithms/kosaraju-strongly-connected-components/), [Bridges](../dsa/graph-algorithms/bridges-detection/) and [Articulation Points](../dsa/graph-algorithms/articulation-points/). Compare mutual reachability and deletion effects; retain edge IDs for multigraphs.
 5. Advanced routes: [A*](../dsa/graph-algorithms/a-star-search/) and [Johnson](../dsa/graph-algorithms/johnson/). Establish admissibility/reopening and potential reweighting before trusting their results.
 
-All fifteen have Python/C++ implementations and executable independent tests. Current catalog status is implementation evidence, not Phase 7 human approval. The historical Phase 5 and Phase 6 reports remain unchanged; latest approvals and actual Phase 7 commands are in the Graph checkpoint. No next category is authorized.
+All fifteen have Python/C++ implementations and executable independent tests. The owner explicitly approved Phase 7 after its review. The historical Phase 5 and Phase 6 reports remain unchanged; latest approvals and actual Phase 7 commands are in the Graph checkpoint. Phase 8 Tree Algorithms is now explicitly authorized; further categories require separate owner approval.
+
+## Tree learning sequence — Phase 8
+
+Phase 7 is owner-approved. Study these fourteen canonical lessons in the same five validated batches recorded in [Tree checkpoints](tree-algorithms-checkpoints.md); Phase 8 owner review remains pending.
+
+1. Traverse a copied binary arena: [inorder](../dsa/tree-algorithms/inorder-traversal/README.md), [preorder](../dsa/tree-algorithms/preorder-traversal/README.md), [postorder](../dsa/tree-algorithms/postorder-traversal/README.md), then FIFO [level order](../dsa/tree-algorithms/level-order-traversal/README.md). Compare explicit stacks with recursive definitions and retain node identity when values repeat.
+2. Query one static rooted tree: [parent-walking LCA](../dsa/tree-algorithms/lowest-common-ancestor/README.md), [Binary Lifting](../dsa/tree-algorithms/binary-lifting/README.md), then the single-entry [Euler Tour](../dsa/tree-algorithms/euler-tour/README.md). Verify ancestor answers and subtree intervals independently.
+3. Maintain aggregates with [Fenwick Tree](../dsa/tree-algorithms/fenwick-tree/README.md) and [Segment Tree](../dsa/tree-algorithms/segment-tree/README.md); compare identical assignments against naive sums. Study character-prefix indexing and shared-prefix deletion in [Trie](../dsa/tree-algorithms/trie/README.md).
+4. Maintain a balanced binary set with [AVL](../dsa/tree-algorithms/avl-tree-rotations/README.md) and [Red-Black](../dsa/tree-algorithms/red-black-tree-operations/README.md). Inspect heights, colors, ordering and deletion repairs after every mutation.
+5. Increase fanout with [B-Tree](../dsa/tree-algorithms/b-tree-operations/README.md) and [B+ Tree](../dsa/tree-algorithms/b-plus-tree-operations/README.md). Distinguish internal records from routing separators; verify occupancy, equal leaf depth and linked-leaf range scans through splitting, borrowing, merging and root contraction.
+
+[Tree conventions](tree-conventions.md) state each API's ownership, numeric bounds and mutation contract. These topics reuse their catalog paths. Do not start another category before explicit owner approval.

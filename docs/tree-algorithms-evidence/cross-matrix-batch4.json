@@ -1,0 +1,36 @@
+{
+  "through_batch": 4,
+  "comparisons": {
+    "iterative traversals vs independent recursive references": {
+      "seed": 80909,
+      "cases": 60,
+      "failures": 0,
+      "independent_oracle": true
+    },
+    "LCA vs Binary Lifting and parent-walking oracle": {
+      "seed": 80909,
+      "cases": 60,
+      "failures": 0,
+      "independent_oracle": true
+    },
+    "Euler intervals vs explicit subtree enumeration": {
+      "seed": 80909,
+      "cases": 60,
+      "failures": 0,
+      "independent_oracle": true
+    },
+    "Fenwick vs Segment Tree and naive array sums": {
+      "seed": 80909,
+      "cases": 60,
+      "failures": 0,
+      "independent_oracle": true
+    },
+    "AVL/Red-Black vs independent ordered reference": {
+      "seed": 80909,
+      "cases": 60,
+      "failures": 0,
+      "independent_oracle": true
+    }
+  },
+  "failures": 0
+}
