@@ -1,0 +1,12 @@
+[
+  {
+    "label": "divide-conquer-sanitizer",
+    "command": "python -m pytest -q --require-cpp dsa/divide-and-conquer -m cpp --cpp-standard=c++20",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 10.908,
+    "summary": "8 passed, 20 deselected in 10.80s",
+    "CXX": "clang++ -fsanitize=address,undefined -fno-sanitize-recover=all"
+  }
+]

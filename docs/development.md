@@ -4,7 +4,7 @@ This guide defines how to turn a planned Algorithm Atlas topic into an explained
 
 ## Phase boundaries
 
-**Phase 2 (Searching) is explicitly owner-approved. Phase 3 authorizes Recursion & Backtracking only**, in three validated batches recorded in the [checkpoint](recursion-backtracking-checkpoints.md). Finish and test each batch before continuing. Preserve all Sorting and Searching implementations and tests. After all nine topics, prepare the review report and ZIP/checksum, then stop for explicit human approval. No other category, commit, or push is authorized.
+**Phase 4 authorizes Divide & Conquer only.** The owner confirms previous phases complete. Follow the two validated [batches](divide-conquer-checkpoints.md), preserve earlier work, reuse canonical Sorting/Searching topics, then prepare the review report/ZIP/checksum and STOP for explicit owner review. No other category, commit, or push is authorized.
 
 ## Canonical layout and catalog ownership
 

@@ -2,7 +2,7 @@
 
 Progress from foundational problem solving to specialized AI topics. These levels describe a study order, not repository development phases: learning a later level does not authorize implementation outside the approved development phase.
 
-**Current scope:** Phase 0 is approved and Sorting is authorized. Links lead to completed lessons or canonical planning folders according to catalog status; other categories require separate approval. Use the [complete index](algorithm-index.md) for every syllabus item and the [progress tracker](progress.md) for actual completion status. Repeated topics share their canonical location.
+**Current scope:** Phase 4 authorizes Divide & Conquer only; prior phases are complete per the owner. Follow [progress](progress.md) and the [two-batch checkpoint](divide-conquer-checkpoints.md). Catalog identities and memberships are preserved, including the shared Binary Search topic.
 
 ## Level 1 — DSA Foundations
 
@@ -23,6 +23,7 @@ Study basic ordering, lookup, and arithmetic:
 Explore decomposition, search, and reusable state:
 
 - [Merge Sort](../dsa/sorting/merge-sort/) and [Quick Sort](../dsa/sorting/quick-sort/): connect recursion to partitioning, combining, and resource costs.
+- [Maximum Subarray using Divide and Conquer](../dsa/divide-and-conquer/maximum-subarray-divide-and-conquer/), [Karatsuba Multiplication](../dsa/divide-and-conquer/karatsuba-multiplication/), [Closest Pair of Points](../dsa/divide-and-conquer/closest-pair-of-points/), and [Strassen's Matrix Multiplication](../dsa/divide-and-conquer/strassen-matrix-multiplication/): derive divide/conquer/combine recurrences and distinguish arithmetic from bit complexity.
 - [N-Queens](../dsa/recursion-and-backtracking/n-queens/): study partial solutions, constraints, and undoing choices.
 - [Inorder Traversal](../dsa/tree-algorithms/inorder-traversal/) and [Breadth-First Search](../dsa/graph-algorithms/breadth-first-search/): compare traversal order and visited-state tracking.
 - [Activity Selection](../dsa/greedy/activity-selection/), [0/1 Knapsack](../dsa/dynamic-programming/zero-one-knapsack/), and [Longest Common Subsequence](../dsa/dynamic-programming/longest-common-subsequence/): distinguish a provable greedy choice from a dynamic-programming state and recurrence.
@@ -110,4 +111,4 @@ Choose branches according to the structure of the problem:
 
 Follow the prerequisites rather than treating levels as a fixed schedule. For each available completed topic, read its intuition and contract, predict a small example's output, inspect the implementation, run its documented tests, and explain its complexity in your own words. For unimplemented topics, use the linked planning notes to understand scope and prerequisites; runnable material follows only within an approved category.
 
-Contributors should consult the [development guide](development.md) and the current [progress tracker](progress.md). The current approval covers Sorting only. After Sorting is complete, stop for review before implementing Searching or any other category.
+Contributors should consult the [development guide](development.md) and the current [progress tracker](progress.md). The current authorization covers Divide & Conquer only. After its completion, stop for owner review before any other category.

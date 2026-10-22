@@ -1,0 +1,66 @@
+[
+  {
+    "algorithm": "strassen-matrix-multiplication",
+    "language": "python",
+    "input": "2 1 2 3 4 5 6 7 8",
+    "expected_stdout": "[[19,22],[43,50]]\n",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "algorithm": "strassen-matrix-multiplication",
+    "language": "cpp20",
+    "input": "2 1 2 3 4 5 6 7 8",
+    "expected_stdout": "[[19,22],[43,50]]\n",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "algorithm": "karatsuba-multiplication",
+    "language": "python",
+    "input": "1234 -5678",
+    "expected_stdout": "\"-7006652\"\n",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "algorithm": "karatsuba-multiplication",
+    "language": "cpp20",
+    "input": "1234 -5678",
+    "expected_stdout": "\"-7006652\"\n",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "algorithm": "closest-pair-of-points",
+    "language": "python",
+    "input": "4 0 0 3 4 0 1 3 5",
+    "expected_stdout": "[1,0,2]\n",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "algorithm": "closest-pair-of-points",
+    "language": "cpp20",
+    "input": "4 0 0 3 4 0 1 3 5",
+    "expected_stdout": "[1,0,2]\n",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "algorithm": "maximum-subarray-divide-and-conquer",
+    "language": "python",
+    "input": "-2 1 -3 4 -1 2 1 -5 4",
+    "expected_stdout": "[\"6\",3,7]\n",
+    "returncode": 0,
+    "passed": true
+  },
+  {
+    "algorithm": "maximum-subarray-divide-and-conquer",
+    "language": "cpp20",
+    "input": "-2 1 -3 4 -1 2 1 -5 4",
+    "expected_stdout": "[\"6\",3,7]\n",
+    "returncode": 0,
+    "passed": true
+  }
+]

@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/divide-and-conquer -m cpp --cpp-standard=c++17
+Result: {"label": "divide-conquer-cpp17", "command": "python -m pytest -q --require-cpp dsa/divide-and-conquer -m cpp --cpp-standard=c++17", "returncode": 0, "timeout_seconds": 240, "timed_out": false, "elapsed_seconds": 5.484, "summary": "8 passed, 20 deselected in 5.37s", "CXX": "automatic discovery"}
+
+........                                                                 [100%]
+8 passed, 20 deselected in 5.37s

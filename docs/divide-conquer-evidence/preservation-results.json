@@ -1,0 +1,19 @@
+{
+  "baseline_HEAD": "5934255315ecc0e44f054678fcb0f71fc70efd18",
+  "prior_files_unchanged": 142,
+  "syllabus_and_all_canonical_identities_unchanged": true,
+  "out_of_scope_catalog_records_unchanged": true,
+  "category_memberships": 7,
+  "new_topics": [
+    "closest-pair-of-points",
+    "karatsuba-multiplication",
+    "maximum-subarray-divide-and-conquer",
+    "strassen-matrix-multiplication"
+  ],
+  "reused_topics": [
+    "binary-search",
+    "merge-sort",
+    "quick-sort"
+  ],
+  "duplicate_reused_folders": 0
+}

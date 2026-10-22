@@ -182,6 +182,23 @@ def _validate_development(
     if status == "awaiting-review" and active is not None:
         report.errors.append("development.awaiting-review requires active_batch=null")
 
+    if state.get("scope") == "Divide & Conquer category only" and valid_completed:
+        batches = (("maximum-subarray-divide-and-conquer", "karatsuba-multiplication"),
+                   ("closest-pair-of-points", "strassen-matrix-multiplication"))
+        if len(completed) > 2:
+            report.errors.append("development Divide & Conquer has only two batches")
+        if status == "in-progress" and (type(active) is not int or active not in (1, 2)):
+            report.errors.append("development Divide & Conquer active_batch must be 1 or 2")
+        if status == "awaiting-review" and completed != [1, 2]:
+            report.errors.append("development Divide & Conquer awaiting-review requires both batches")
+        ready_ids = [name for batch in completed[:2] for name in batches[batch-1]]
+        ready_ids += ["merge-sort", "quick-sort", "binary-search"]
+        for algorithm_id in ready_ids:
+            record = algorithms.get(algorithm_id, {})
+            if not all(isinstance(record.get(field), str) and record[field] in ARTIFACT_STATUSES
+                       for field in STATUS_FIELDS[:3]) or record.get("test_status") not in ("tested", "reviewed"):
+                report.errors.append(f"development Divide & Conquer requires completed/tested {algorithm_id}")
+        return
     if state.get("scope") == "Recursion & Backtracking category only" and valid_completed:
         if len(completed) > 3:
             report.errors.append("development Recursion & Backtracking has only three batches")

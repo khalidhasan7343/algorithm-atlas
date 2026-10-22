@@ -6,27 +6,27 @@ Read `README.md`, `CONTRIBUTING.md`, `docs/progress.md`, and the relevant record
 
 ## Mandatory phase checkpoint
 
-**Phase 2 (Searching) is explicitly approved by the owner. Current authorization:
-Phase 3 — Recursion & Backtracking category only.** Preserve approved Sorting
-and Searching implementations, tests, and individual lessons.
+**The owner confirms previous phases complete and explicitly authorizes
+Phase 4 — Divide & Conquer only.** Preserve previously completed Sorting,
+Searching, and Recursion & Backtracking work.
 
-Use catalog.yaml as authoritative for names, IDs, paths, and topic membership.
-The internal batches are:
+The authoritative A4 catalog has seven memberships: Merge Sort, Quick Sort,
+Binary Search (three reused canonical topics), plus four new canonical topics.
+The user's list counted six; preserve all seven and document the discrepancy.
+Never duplicate the three existing implementations.
 
-1. Permutations, Combinations, Power Set Generation.
-2. N-Queens, Sudoku Solver, Rat in a Maze.
-3. Graph Coloring, Hamiltonian Path, Subset Sum using Backtracking.
+Batch 1: Maximum Subarray using Divide and Conquer; Karatsuba Multiplication.
+Batch 2: Closest Pair of Points; Strassen's Matrix Multiplication.
+Finish/test each batch before continuing automatically. Record actual results
+in docs/divide-conquer-checkpoints.md; update catalog/progress/generated docs.
+All new lessons need 25 sections, recurrence, correctness, numeric contracts,
+Python/C++17/C++20 tests and independent expected values. Preserve prior code
+unless a confirmed defect requires correction.
 
-Complete and test each batch before starting the next. Record actual gates in
-`docs/recursion-backtracking-checkpoints.md`, update catalog statuses honestly,
-and regenerate docs. Define deterministic ordering, duplicates, mutation, invalid
-inputs, and state restoration. Distinguish impossible problems from invalid data.
-
-After all nine topics pass applicable checks, create
-`RECURSION-BACKTRACKING-REVIEW-REPORT.md`, the requested review ZIP and SHA-256,
-verify the package, then **STOP for explicit human review and approval**. Do not
-mark Phase 3 human-approved. Graph Coloring/Hamiltonian Path are A3 topics;
-no A5 Graph Algorithms or other category implementation is authorized.
+After completion create DIVIDE-CONQUER-REVIEW-REPORT.md, the requested review
+ZIP and SHA-256; verify integrity/completeness, then STOP for explicit owner
+review. Do not mark Phase 4 human-approved, start another category, commit,
+push, or publish. User authorization supersedes previous phase wording.
 
 At the end of every subsequent authorized phase or category scope, stop for explicit user review before developing beyond that scope. The user's latest explicit authorization controls these checkpoints.
 

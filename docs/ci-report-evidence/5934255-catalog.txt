@@ -1,0 +1,6 @@
+Revision: 5934255315ecc0e44f054678fcb0f71fc70efd18
+Command: python scripts/validate_catalog.py
+Exit: 0
+
+Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 303 Markdown files, and 3776 local links.
+Validation passed. Test execution and external URLs are checked separately.

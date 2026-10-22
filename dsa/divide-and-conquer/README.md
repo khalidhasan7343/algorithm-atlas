@@ -11,10 +11,10 @@ This category preserves **7 original syllabus entries**. Each link points to the
 | Merge Sort | [merge-sort](../sorting/merge-sort/README.md) | complete |
 | Quick Sort | [quick-sort](../sorting/quick-sort/README.md) | complete |
 | Binary Search | [binary-search](../searching/binary-search/README.md) | complete |
-| Strassen's Matrix Multiplication | [strassen-matrix-multiplication](strassen-matrix-multiplication/README.md) | planned |
-| Karatsuba Multiplication | [karatsuba-multiplication](karatsuba-multiplication/README.md) | planned |
-| Closest Pair of Points | [closest-pair-of-points](closest-pair-of-points/README.md) | planned |
-| Maximum Subarray using Divide and Conquer | [maximum-subarray-divide-and-conquer](maximum-subarray-divide-and-conquer/README.md) | planned |
+| Strassen's Matrix Multiplication | [strassen-matrix-multiplication](strassen-matrix-multiplication/README.md) | complete |
+| Karatsuba Multiplication | [karatsuba-multiplication](karatsuba-multiplication/README.md) | complete |
+| Closest Pair of Points | [closest-pair-of-points](closest-pair-of-points/README.md) | complete |
+| Maximum Subarray using Divide and Conquer | [maximum-subarray-divide-and-conquer](maximum-subarray-divide-and-conquer/README.md) | complete |
 
 ## Learning and contribution scope
 

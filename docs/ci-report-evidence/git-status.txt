@@ -1,0 +1,43 @@
+ M AGENTS.md
+ M CONTRIBUTING.md
+ M README.md
+ M catalog.yaml
+ M docs/algorithm-index.md
+ M docs/development.md
+ M docs/getting-started.md
+ M docs/learning-roadmap.md
+ M docs/progress.md
+ M dsa/divide-and-conquer/README.md
+ M dsa/divide-and-conquer/closest-pair-of-points/README.md
+ M dsa/divide-and-conquer/karatsuba-multiplication/README.md
+ M dsa/divide-and-conquer/maximum-subarray-divide-and-conquer/README.md
+ M dsa/divide-and-conquer/strassen-matrix-multiplication/README.md
+ M scripts/generate_catalog_docs.py
+ M scripts/validate_catalog.py
+ M tests/test_generate_catalog_docs.py
+ M tests/test_validate_catalog.py
+?? DIVIDE-CONQUER-REVIEW-REPORT.md
+?? algorithm-atlas-divide-conquer-review.zip
+?? algorithm-atlas-divide-conquer-review.zip.sha256
+?? algorithm-atlas-divide-conquer-review.zip.verification.json
+?? docs/ci-report-evidence/
+?? docs/ci-report-fix.md
+?? docs/divide-conquer-checkpoints.md
+?? docs/divide-conquer-evidence/
+?? dsa/divide-and-conquer/closest-pair-of-points/cpp/
+?? dsa/divide-and-conquer/closest-pair-of-points/python/
+?? dsa/divide-and-conquer/closest-pair-of-points/tests/
+?? dsa/divide-and-conquer/conftest.py
+?? dsa/divide-and-conquer/karatsuba-multiplication/cpp/
+?? dsa/divide-and-conquer/karatsuba-multiplication/python/
+?? dsa/divide-and-conquer/karatsuba-multiplication/tests/
+?? dsa/divide-and-conquer/maximum-subarray-divide-and-conquer/cpp/
+?? dsa/divide-and-conquer/maximum-subarray-divide-and-conquer/python/
+?? dsa/divide-and-conquer/maximum-subarray-divide-and-conquer/tests/
+?? dsa/divide-and-conquer/strassen-matrix-multiplication/cpp/
+?? dsa/divide-and-conquer/strassen-matrix-multiplication/python/
+?? dsa/divide-and-conquer/strassen-matrix-multiplication/tests/
+?? scripts/package_divide_conquer_review.py
+?? scripts/run_divide_conquer_validation.py
+?? scripts/verify_divide_conquer_examples.py
+?? scripts/verify_divide_conquer_scope.py

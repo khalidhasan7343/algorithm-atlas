@@ -1,0 +1,37 @@
+{
+  "reports": [
+    {
+      "path": "SEARCHING-REVIEW-REPORT.md",
+      "tracked": true,
+      "present_in_HEAD": true,
+      "working_tree_matches_HEAD": true,
+      "bytes": 19670,
+      "sha256": "1ed712e302a7ebaee41c3be2d228a6fb693f156520e4e29a016db5c6ba4717bc",
+      "ignore_rule": null
+    },
+    {
+      "path": "SORTING-REVIEW-REPORT.md",
+      "tracked": true,
+      "present_in_HEAD": true,
+      "working_tree_matches_HEAD": true,
+      "bytes": 59962,
+      "sha256": "b7106294810cb24324369c0c8485385e20ae86b71066221db25f96d5ca4bbbb5",
+      "ignore_rule": null
+    },
+    {
+      "path": "SORTING-FINAL-AUDIT-REPORT.md",
+      "tracked": true,
+      "present_in_HEAD": true,
+      "working_tree_matches_HEAD": true,
+      "bytes": 22538,
+      "sha256": "31cfc211eed3aa9f0a3074819c4cd4cd823f8fc271e6328a0291f579cbe4c23e",
+      "ignore_rule": null
+    }
+  ],
+  "current_working_tree_completion_report": "DIVIDE-CONQUER-REVIEW-REPORT.md",
+  "working_tree_completion_report_safe_existing_nonempty": true,
+  "working_tree_completion_report_tracked": false,
+  "HEAD_completion_report": "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+  "HEAD_completion_report_present_in_Git": true,
+  "report_contents_restored_or_modified_this_task": false
+}

@@ -196,3 +196,15 @@ def test_backtracking_progress_preserves_catalog_names_and_approval_boundary(pla
     assert 'Graph Algorithms and every other category require explicit approval' in text
     assert 'stop for human review' in text
     assert 'Validated sorting batches' not in text
+
+
+def test_divide_progress_retains_seven_memberships_and_three_reuses(planning_repo):
+    _,catalog,_=planning_repo
+    catalog['development']={'phase':'Phase 4 — Divide & Conquer','scope':'Divide & Conquer category only',
+                            'status':'in-progress','completed_batches':[1],'active_batch':2,
+                            'checkpoint':'docs/divide-conquer-checkpoints.md'}
+    text=generator.progress_page(catalog,{'sample-topic':catalog['algorithms'][0]})
+    assert 'Validated divide/conquer batches: 1.' in text
+    assert 'seven memberships' in text and 'Binary Search' in text
+    assert 'Reuse is not new implementation' in text
+    assert 'Stop after the report' in text

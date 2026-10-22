@@ -4,7 +4,7 @@ Algorithm Atlas is maintained by [MD.Khalid Hasan](https://github.com/khalidhasa
 
 ## Current phase and approval
 
-**Phase 2 (Searching) is explicitly owner-approved. Phase 3 authorizes Recursion & Backtracking only**, in three validated batches recorded in the [checkpoint](docs/recursion-backtracking-checkpoints.md). Finish and test each batch before continuing. Preserve all Sorting and Searching implementations and tests. After all nine topics, prepare the review report and ZIP/checksum, then stop for explicit human approval. No other category, commit, or push is authorized.
+**Phase 4 authorizes Divide & Conquer only.** The owner confirms previous phases complete. Follow the two validated [batches](docs/divide-conquer-checkpoints.md), preserve earlier work, reuse canonical Sorting/Searching topics, then prepare the review report/ZIP/checksum and STOP for explicit owner review. No other category, commit, or push is authorized.
 
 GitHub publishing, pushing, and changes to Git identity require separate authorization. Do not treat the public contact email as an authorized commit identity. No automation in this project commits or pushes changes.
 

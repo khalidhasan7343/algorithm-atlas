@@ -1,0 +1,42 @@
+[
+  {
+    "label": "closest-pair-of-points",
+    "command": "python -m pytest -q --require-cpp dsa/divide-and-conquer/closest-pair-of-points/tests",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 2.926,
+    "summary": "7 passed in 2.78s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "strassen-matrix-multiplication",
+    "command": "python -m pytest -q --require-cpp dsa/divide-and-conquer/strassen-matrix-multiplication/tests",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 5.719,
+    "summary": "7 passed in 5.61s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "catalog",
+    "command": "python scripts/validate_catalog.py",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 0.452,
+    "summary": "",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "generated-docs",
+    "command": "python scripts/generate_catalog_docs.py --check",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 0.168,
+    "summary": "",
+    "CXX": "automatic discovery"
+  }
+]

@@ -1,0 +1,15 @@
+Revision: 8446eab749c22e9c1390331e02206ea862795820
+Command: python scripts/validate_catalog.py
+Exit: 1
+
+Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 296 Markdown files, and 3333 local links.
+ERROR: development.completion_report must name a safe relative existing nonempty .md file
+ERROR: README.md: broken relative link: SEARCHING-REVIEW-REPORT.md
+ERROR: README.md: broken relative link: SORTING-FINAL-AUDIT-REPORT.md
+ERROR: docs/audit-evidence/README.md: broken relative link: ../../SORTING-FINAL-AUDIT-REPORT.md
+ERROR: docs/progress.md: broken relative link: ../SEARCHING-REVIEW-REPORT.md
+ERROR: docs/searching-checkpoints.md: broken relative link: ../SEARCHING-REVIEW-REPORT.md
+ERROR: docs/searching-evidence/README.md: broken relative link: ../../SEARCHING-REVIEW-REPORT.md
+ERROR: docs/sorting-checkpoints.md: broken relative link: ../SORTING-REVIEW-REPORT.md
+ERROR: docs/sorting-checkpoints.md: broken relative link: ../SORTING-FINAL-AUDIT-REPORT.md
+Validation failed with 9 error(s).

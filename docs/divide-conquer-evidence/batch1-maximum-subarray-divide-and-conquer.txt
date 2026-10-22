@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/divide-and-conquer/maximum-subarray-divide-and-conquer/tests
+Result: {"label": "maximum-subarray-divide-and-conquer", "command": "python -m pytest -q --require-cpp dsa/divide-and-conquer/maximum-subarray-divide-and-conquer/tests", "returncode": 0, "timeout_seconds": 240, "timed_out": false, "elapsed_seconds": 3.673, "summary": "11 passed in 3.52s", "CXX": "automatic discovery"}
+
+...........                                                              [100%]
+11 passed in 3.52s

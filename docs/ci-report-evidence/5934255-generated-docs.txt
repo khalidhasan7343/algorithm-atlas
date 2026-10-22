@@ -1,0 +1,5 @@
+Revision: 5934255315ecc0e44f054678fcb0f71fc70efd18
+Command: python scripts/generate_catalog_docs.py --check
+Exit: 0
+
+Checked 251 catalog documentation pages; 0 changes.

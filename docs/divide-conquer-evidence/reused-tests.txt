@@ -1,0 +1,6 @@
+Command: python -m pytest -q --require-cpp dsa/sorting/merge-sort/tests dsa/sorting/quick-sort/tests dsa/searching/binary-search/tests
+Exit: 0
+
+........................................................................ [ 67%]
+..................................                                       [100%]
+106 passed in 9.67s

@@ -1,0 +1,72 @@
+[
+  {
+    "label": "divide-conquer-python",
+    "command": "python -m pytest -q --require-cpp dsa/divide-and-conquer -m 'not cpp'",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 2.925,
+    "summary": "20 passed, 16 deselected in 2.78s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "divide-conquer-cpp17",
+    "command": "python -m pytest -q --require-cpp dsa/divide-and-conquer -m cpp --cpp-standard=c++17",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 5.484,
+    "summary": "8 passed, 20 deselected in 5.37s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "divide-conquer-cpp20",
+    "command": "python -m pytest -q --require-cpp dsa/divide-and-conquer -m cpp --cpp-standard=c++20",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 6.475,
+    "summary": "8 passed, 20 deselected in 6.35s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "infrastructure",
+    "command": "python -m pytest -q --require-cpp tests",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 2.278,
+    "summary": "214 passed in 2.16s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "full-suite",
+    "command": "python -m pytest -q --require-cpp",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 124.76,
+    "summary": "1247 passed in 124.63s (0:02:04)",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "catalog",
+    "command": "python scripts/validate_catalog.py",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 0.495,
+    "summary": "",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "generated-docs",
+    "command": "python scripts/generate_catalog_docs.py --check",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 0.174,
+    "summary": "",
+    "CXX": "automatic discovery"
+  }
+]

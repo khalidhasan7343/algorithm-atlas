@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/divide-and-conquer/closest-pair-of-points/tests
+Result: {"label": "closest-pair-of-points", "command": "python -m pytest -q --require-cpp dsa/divide-and-conquer/closest-pair-of-points/tests", "returncode": 0, "timeout_seconds": 240, "timed_out": false, "elapsed_seconds": 2.926, "summary": "7 passed in 2.78s", "CXX": "automatic discovery"}
+
+.......                                                                  [100%]
+7 passed in 2.78s

@@ -1,0 +1,17 @@
+[
+  {
+    "executable": "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+    "version": "Python 3.14.2",
+    "returncode": 0
+  },
+  {
+    "executable": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "version": "Python 3.14.2",
+    "returncode": 0
+  },
+  {
+    "executable": "/usr/local/bin/python3.14",
+    "version": "Python 3.14.2",
+    "returncode": 0
+  }
+]

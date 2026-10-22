@@ -6,7 +6,7 @@ From Fundamental Algorithms to Advanced Artificial Intelligence — Learn, Imple
 
 Algorithm Atlas is an educational, open-source project maintained by **MD.Khalid Hasan**. Its goal is to explain algorithms from first principles through clear documentation, Python and modern C++ implementations, meaningful tests, complexity analysis, and practical applications.
 
-**Current state: Phase 2 (Searching) approved; Phase 3 — Recursion & Backtracking implemented and tested, awaiting owner review.** Follow the [checkpoint](docs/recursion-backtracking-checkpoints.md) and [progress](docs/progress.md). See the [Phase 3 report](RECURSION-BACKTRACKING-REVIEW-REPORT.md); the review ZIP and checksum accompany it. All previously approved Sorting and Searching implementations and tests are preserved. Stop for owner review after the nine catalog topics; no other category is authorized.
+**Current state: Phase 4 — Divide & Conquer implemented and tested, awaiting owner review.** Previous phases are complete per the owner. See the [Phase 4 report](DIVIDE-CONQUER-REVIEW-REPORT.md), [checkpoint](docs/divide-conquer-checkpoints.md), and [progress](docs/progress.md). A4 retains seven catalog memberships: four new topics plus canonical Merge Sort, Quick Sort, and Binary Search. No duplicate implementations or other-category development is authorized.
 
 ## Project Overview
 
@@ -25,7 +25,7 @@ The foundation provides:
 - Documentation standards, pytest infrastructure, C++ compiler checks, and GitHub Actions configuration.
 - Automated catalog, documentation-link, and implementation-status validation.
 
-Sorting, Searching, and Recursion & Backtracking provide detailed explanations, dry runs, Python/C++ implementations, examples, and relevant edge-case tests. Other topics follow in separately approved phases. ML examples will distinguish educational implementations from library-based usage and document compute and dependency limits.
+Sorting, Searching, Recursion & Backtracking, and completed Divide & Conquer topics provide detailed explanations, dry runs, Python/C++ implementations, examples, and relevant edge-case tests. Other topics follow in separately approved phases. ML examples will distinguish educational implementations from library-based usage and document compute and dependency limits.
 
 ## Technologies Used
 
@@ -55,7 +55,7 @@ algorithm-atlas/
 └── artificial-intelligence/ # 10 syllabus categories
 ```
 
-Each unique topic has one canonical folder. Completed Sorting, Searching, and Recursion & Backtracking topics have a full lesson and `python/`, `cpp/`, and `tests/` content; planned topics retain honest scope READMEs. See the [development guide](docs/development.md) for the final per-algorithm structure and documentation standard.
+Each unique topic has one canonical folder. Completed Sorting, Searching, Recursion & Backtracking, and Divide & Conquer topics have a full lesson and `python/`, `cpp/`, and `tests/` content; planned topics retain honest scope READMEs. See the [development guide](docs/development.md) for the final per-algorithm structure and documentation standard.
 
 ## Data Structures and Algorithms
 
@@ -131,6 +131,15 @@ This prints `[[1,3,0,2],[2,0,3,1]]`. Each lesson defines its own CLI grammar,
 empty/impossible results, and duplicate/ordering semantics. Results can grow
 exponentially; these eager recursive examples are intended for small inputs.
 
+For the Divide & Conquer maximum-subarray example:
+
+```sh
+printf '%s\n' '-2 1 -3 4 -1 2 1 -5 4' | .venv/bin/python dsa/divide-and-conquer/maximum-subarray-divide-and-conquer/python/solution.py
+```
+
+This prints `["6",3,7]`: exact sum as a decimal string and the zero-based
+half-open interval [3,7). Read each lesson's numeric, shape, tie, and CLI contract.
+
 Repository checks can be run with:
 
 ```sh
@@ -141,7 +150,7 @@ python -m pytest
 
 ## Testing Instructions
 
-Install [requirements-dev.txt](requirements-dev.txt), make a C++ compiler available, and run `python -m pytest` from the root. Infrastructure tests exercise catalog failures and compile/run small C++ toolchain checks. Per-algorithm tests exercise completed completed DSA implementations against independent expected values and reference oracles.
+Install [requirements-dev.txt](requirements-dev.txt), make a C++ compiler available, and run `python -m pytest` from the root. Infrastructure tests exercise catalog failures and compile/run small C++ toolchain checks. Per-algorithm tests exercise completed DSA implementations against independent expected values and reference oracles.
 
 The [CI workflow](.github/workflows/ci.yml) checks documentation/catalog consistency and runs lightweight tests. Local test results and hosted CI results are separate: a workflow file does not imply a successful GitHub run. See [testing and contribution guidance](CONTRIBUTING.md) for future algorithm tests.
 
@@ -153,7 +162,7 @@ Use the [complexity cheat sheet](docs/complexity-cheatsheet.md) for asymptotic n
 
 [Progress tracking](docs/progress.md) records catalog totals, completed and remaining algorithms, blockers, and the next proposed batch. The [Phase 0 review report](docs/phase-0-review.md) and [complete file inventory](docs/phase-0-files.md) document the foundation handoff. Phase 0 supplies the foundation only. The term **Dynamic Policy Optimization (DPO)** is retained from the syllabus and blocked pending clarification; it has not been replaced by Direct Preference Optimization.
 
-Phase 2 (Searching) is owner-approved. Phase 3 covers only Recursion & Backtracking, in three internal batches followed by mandatory human review. No other category, commit, or push is authorized.
+Phase 4 covers Divide & Conquer only, in two validated internal batches followed by mandatory owner review. No other category, commit, or push is authorized.
 
 ## Contribution Guidelines
 

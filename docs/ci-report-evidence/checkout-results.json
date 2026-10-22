@@ -1,0 +1,95 @@
+[
+  {
+    "revision": "8446eab749c22e9c1390331e02206ea862795820",
+    "directory": "/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/atlas-ci-checkout-8446eab-wf3jblhu",
+    "source": "git archive of committed tree; no working-tree overlay",
+    "reports": {
+      "SEARCHING-REVIEW-REPORT.md": false,
+      "SORTING-REVIEW-REPORT.md": false,
+      "SORTING-FINAL-AUDIT-REPORT.md": false
+    },
+    "checks": [
+      {
+        "command": [
+          "python",
+          "scripts/validate_catalog.py"
+        ],
+        "returncode": 1,
+        "elapsed_seconds": 0.413,
+        "output": "Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 296 Markdown files, and 3333 local links.\nERROR: development.completion_report must name a safe relative existing nonempty .md file\nERROR: README.md: broken relative link: SEARCHING-REVIEW-REPORT.md\nERROR: README.md: broken relative link: SORTING-FINAL-AUDIT-REPORT.md\nERROR: docs/audit-evidence/README.md: broken relative link: ../../SORTING-FINAL-AUDIT-REPORT.md\nERROR: docs/progress.md: broken relative link: ../SEARCHING-REVIEW-REPORT.md\nERROR: docs/searching-checkpoints.md: broken relative link: ../SEARCHING-REVIEW-REPORT.md\nERROR: docs/searching-evidence/README.md: broken relative link: ../../SEARCHING-REVIEW-REPORT.md\nERROR: docs/sorting-checkpoints.md: broken relative link: ../SORTING-REVIEW-REPORT.md\nERROR: docs/sorting-checkpoints.md: broken relative link: ../SORTING-FINAL-AUDIT-REPORT.md\nValidation failed with 9 error(s).\n"
+      },
+      {
+        "command": [
+          "python",
+          "scripts/generate_catalog_docs.py",
+          "--check"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 0.168,
+        "output": "Checked 260 catalog documentation pages; 0 changes.\n"
+      }
+    ]
+  },
+  {
+    "revision": "5934255315ecc0e44f054678fcb0f71fc70efd18",
+    "directory": "/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/atlas-ci-checkout-5934255-lser5rv0",
+    "source": "git archive of committed tree; no working-tree overlay",
+    "reports": {
+      "SEARCHING-REVIEW-REPORT.md": true,
+      "SORTING-REVIEW-REPORT.md": true,
+      "SORTING-FINAL-AUDIT-REPORT.md": true
+    },
+    "checks": [
+      {
+        "command": [
+          "python",
+          "scripts/validate_catalog.py"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 0.423,
+        "output": "Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 303 Markdown files, and 3776 local links.\nValidation passed. Test execution and external URLs are checked separately.\n"
+      },
+      {
+        "command": [
+          "python",
+          "scripts/generate_catalog_docs.py",
+          "--check"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 0.178,
+        "output": "Checked 251 catalog documentation pages; 0 changes.\n"
+      }
+    ]
+  },
+  {
+    "revision": "c9a8ed51a74080dd38c457aef704ee87775d4f8b",
+    "directory": "/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/atlas-ci-checkout-c9a8ed5-rwdjjgcr",
+    "source": "git archive of committed tree; no working-tree overlay",
+    "reports": {
+      "SEARCHING-REVIEW-REPORT.md": true,
+      "SORTING-REVIEW-REPORT.md": true,
+      "SORTING-FINAL-AUDIT-REPORT.md": true
+    },
+    "checks": [
+      {
+        "command": [
+          "python",
+          "scripts/validate_catalog.py"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 0.414,
+        "output": "Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 303 Markdown files, and 3776 local links.\nValidation passed. Test execution and external URLs are checked separately.\n"
+      },
+      {
+        "command": [
+          "python",
+          "scripts/generate_catalog_docs.py",
+          "--check"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 0.175,
+        "output": "Checked 251 catalog documentation pages; 0 changes.\n"
+      }
+    ]
+  }
+]

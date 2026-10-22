@@ -1,0 +1,22 @@
+[
+  {
+    "id": "strassen-matrix-multiplication",
+    "sections": 25,
+    "required_sources_tests_present": true
+  },
+  {
+    "id": "karatsuba-multiplication",
+    "sections": 25,
+    "required_sources_tests_present": true
+  },
+  {
+    "id": "closest-pair-of-points",
+    "sections": 25,
+    "required_sources_tests_present": true
+  },
+  {
+    "id": "maximum-subarray-divide-and-conquer",
+    "sections": 25,
+    "required_sources_tests_present": true
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "label": "maximum-subarray-divide-and-conquer",
+    "command": "python -m pytest -q --require-cpp dsa/divide-and-conquer/maximum-subarray-divide-and-conquer/tests",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 3.673,
+    "summary": "11 passed in 3.52s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "karatsuba-multiplication",
+    "command": "python -m pytest -q --require-cpp dsa/divide-and-conquer/karatsuba-multiplication/tests",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 3.196,
+    "summary": "11 passed in 3.09s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "catalog",
+    "command": "python scripts/validate_catalog.py",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 0.478,
+    "summary": "",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "generated-docs",
+    "command": "python scripts/generate_catalog_docs.py --check",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 0.173,
+    "summary": "",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "full-suite",
+    "command": "python -m pytest -q --require-cpp",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 111.89,
+    "summary": "1233 passed in 111.75s (0:01:51)",
+    "CXX": "automatic discovery"
+  }
+]

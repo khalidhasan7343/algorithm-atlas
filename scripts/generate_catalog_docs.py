@@ -195,7 +195,8 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
     if state:
         searching = state.get('scope') == 'Searching category only'
         backtracking = state.get('scope') == 'Recursion & Backtracking category only'
-        label = 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
+        divide = state.get('scope') == 'Divide & Conquer category only'
+        label = 'divide/conquer' if divide else 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
         batches = state.get('completed_batches', [])
         lines.append(f'Validated {label} batches: ' +
                      (', '.join(str(batch) for batch in batches) if batches else 'none yet') + '.')
@@ -207,7 +208,19 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
         if state.get('completion_report'):
             lines += ['', 'See the '
                       + link(path, ROOT / state['completion_report'], f'{label} completion report') + '.']
-        if backtracking:
+        if divide:
+            lines += ['', 'The owner confirms previous phases complete and authorizes '
+                      'Phase 4 — Divide & Conquer only. Batch 1: Maximum Subarray using '
+                      'Divide and Conquer, Karatsuba Multiplication; Batch 2: Closest Pair '
+                      "of Points, Strassen's Matrix Multiplication. Validate each batch "
+                      'before continuing automatically.', '',
+                      'The authoritative A4 catalog retains seven memberships: four new '
+                      'topics and three reused canonical topics (Merge Sort, Quick Sort, '
+                      'Binary Search). Reuse is not new implementation. The request counted '
+                      'six memberships; no syllabus entry is removed.', '',
+                      'Stop after the report, review ZIP, and checksum for explicit owner '
+                      'review. No other category, commit, push, or publication is authorized.']
+        elif backtracking:
             lines += ['', 'The owner approved Phase 2 (Searching). Phase 3 authorizes '
                       'Recursion & Backtracking only. Batch 1: Permutations, Combinations, '
                       'Power Set Generation; Batch 2: N-Queens, Sudoku Solver, Rat in a Maze; '

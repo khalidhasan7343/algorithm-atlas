@@ -58,10 +58,10 @@ Foundation checks validate repository structure; they are separate from tests of
 | Merge Sort | [merge-sort](../dsa/sorting/merge-sort/README.md) | complete |
 | Quick Sort | [quick-sort](../dsa/sorting/quick-sort/README.md) | complete |
 | Binary Search | [binary-search](../dsa/searching/binary-search/README.md) | complete |
-| Strassen's Matrix Multiplication | [strassen-matrix-multiplication](../dsa/divide-and-conquer/strassen-matrix-multiplication/README.md) | planned |
-| Karatsuba Multiplication | [karatsuba-multiplication](../dsa/divide-and-conquer/karatsuba-multiplication/README.md) | planned |
-| Closest Pair of Points | [closest-pair-of-points](../dsa/divide-and-conquer/closest-pair-of-points/README.md) | planned |
-| Maximum Subarray using Divide and Conquer | [maximum-subarray-divide-and-conquer](../dsa/divide-and-conquer/maximum-subarray-divide-and-conquer/README.md) | planned |
+| Strassen's Matrix Multiplication | [strassen-matrix-multiplication](../dsa/divide-and-conquer/strassen-matrix-multiplication/README.md) | complete |
+| Karatsuba Multiplication | [karatsuba-multiplication](../dsa/divide-and-conquer/karatsuba-multiplication/README.md) | complete |
+| Closest Pair of Points | [closest-pair-of-points](../dsa/divide-and-conquer/closest-pair-of-points/README.md) | complete |
+| Maximum Subarray using Divide and Conquer | [maximum-subarray-divide-and-conquer](../dsa/divide-and-conquer/maximum-subarray-divide-and-conquer/README.md) | complete |
 
 ## A5. [Graph Algorithms](../dsa/graph-algorithms/README.md)
 

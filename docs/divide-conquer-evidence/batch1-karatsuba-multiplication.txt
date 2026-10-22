@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/divide-and-conquer/karatsuba-multiplication/tests
+Result: {"label": "karatsuba-multiplication", "command": "python -m pytest -q --require-cpp dsa/divide-and-conquer/karatsuba-multiplication/tests", "returncode": 0, "timeout_seconds": 240, "timed_out": false, "elapsed_seconds": 3.196, "summary": "11 passed in 3.09s", "CXX": "automatic discovery"}
+
+...........                                                              [100%]
+11 passed in 3.09s

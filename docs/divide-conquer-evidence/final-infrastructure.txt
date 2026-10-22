@@ -1,0 +1,7 @@
+Command: python -m pytest -q --require-cpp tests
+Result: {"label": "infrastructure", "command": "python -m pytest -q --require-cpp tests", "returncode": 0, "timeout_seconds": 240, "timed_out": false, "elapsed_seconds": 2.278, "summary": "214 passed in 2.16s", "CXX": "automatic discovery"}
+
+........................................................................ [ 33%]
+........................................................................ [ 67%]
+......................................................................   [100%]
+214 passed in 2.16s

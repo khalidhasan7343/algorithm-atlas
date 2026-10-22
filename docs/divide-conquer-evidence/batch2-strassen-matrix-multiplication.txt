@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/divide-and-conquer/strassen-matrix-multiplication/tests
+Result: {"label": "strassen-matrix-multiplication", "command": "python -m pytest -q --require-cpp dsa/divide-and-conquer/strassen-matrix-multiplication/tests", "returncode": 0, "timeout_seconds": 240, "timed_out": false, "elapsed_seconds": 5.719, "summary": "7 passed in 5.61s", "CXX": "automatic discovery"}
+
+.......                                                                  [100%]
+7 passed in 5.61s

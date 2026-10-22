@@ -593,3 +593,44 @@ def test_backtracking_completed_batch_requires_real_deliverable_statuses(sample_
     report = ValidationReport()
     _validate_development(root, state, algorithms, report)
     assert any("batch 3 requires subset-sum-backtracking" in error for error in report.errors)
+
+
+DIVIDE_IDS = ("maximum-subarray-divide-and-conquer", "karatsuba-multiplication",
+              "closest-pair-of-points", "strassen-matrix-multiplication",
+              "merge-sort", "quick-sort", "binary-search")
+
+
+def divide_statuses():
+    return {name: {"documentation_status": "implemented", "python_status": "tested",
+                   "cpp_status": "tested", "test_status": "tested"} for name in DIVIDE_IDS}
+
+
+@pytest.mark.parametrize("completed,active,status", [
+    ([],1,"in-progress"), ([1],2,"in-progress"), ([1,2],None,"awaiting-review")])
+def test_divide_valid_checkpoint(sample_repo,completed,active,status):
+    root,data=sample_repo
+    state=add_development(root,data,scope="Divide & Conquer category only")
+    state.update(completed_batches=completed,active_batch=active,status=status)
+    report=ValidationReport()
+    _validate_development(root,state,divide_statuses(),report)
+    assert report.ok,report.errors
+
+
+@pytest.mark.parametrize("name",DIVIDE_IDS)
+def test_divide_completed_requires_new_and_reused_topics(sample_repo,name):
+    root,data=sample_repo
+    state=add_development(root,data,scope="Divide & Conquer category only")
+    state.update(completed_batches=[1,2],active_batch=None,status="awaiting-review")
+    records=divide_statuses();records[name]["test_status"]="planned"
+    report=ValidationReport();_validate_development(root,state,records,report)
+    assert any(name in e for e in report.errors)
+
+
+@pytest.mark.parametrize("completed,active,status", [
+    ([1],None,"awaiting-review"),([1,2],3,"in-progress"),([1,2,3],4,"in-progress")])
+def test_divide_invalid_checkpoint(sample_repo,completed,active,status):
+    root,data=sample_repo
+    state=add_development(root,data,scope="Divide & Conquer category only")
+    state.update(completed_batches=completed,active_batch=active,status=status)
+    report=ValidationReport();_validate_development(root,state,divide_statuses(),report)
+    assert not report.ok

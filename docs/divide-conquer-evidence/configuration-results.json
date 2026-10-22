@@ -1,0 +1,32 @@
+[
+  {
+    "label": "catalog",
+    "command": "python scripts/validate_catalog.py",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 0.464,
+    "summary": "",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "generated-docs",
+    "command": "python scripts/generate_catalog_docs.py --check",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 0.181,
+    "summary": "",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "infrastructure",
+    "command": "python -m pytest -q --require-cpp tests",
+    "returncode": 0,
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "elapsed_seconds": 2.341,
+    "summary": "214 passed in 2.17s",
+    "CXX": "automatic discovery"
+  }
+]
