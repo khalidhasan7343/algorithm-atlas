@@ -1,0 +1,10 @@
+Command: python scripts/validate_catalog.py
+Result: {"label": "catalog", "command": "python scripts/validate_catalog.py", "returncode": 1, "timeout_seconds": 180, "timed_out": false, "elapsed_seconds": 0.39, "summary": "Validation failed with 5 error(s).", "CXX": "automatic discovery"}
+
+Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 297 Markdown files, and 3330 local links.
+ERROR: docs/audit-evidence/README.md: broken relative link: ../../SORTING-FINAL-AUDIT-REPORT.md
+ERROR: docs/searching-checkpoints.md: broken relative link: ../SEARCHING-REVIEW-REPORT.md
+ERROR: docs/searching-evidence/README.md: broken relative link: ../../SEARCHING-REVIEW-REPORT.md
+ERROR: docs/sorting-checkpoints.md: broken relative link: ../SORTING-REVIEW-REPORT.md
+ERROR: docs/sorting-checkpoints.md: broken relative link: ../SORTING-FINAL-AUDIT-REPORT.md
+Validation failed with 5 error(s).

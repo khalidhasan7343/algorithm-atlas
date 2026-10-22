@@ -8,15 +8,15 @@ This category preserves **9 original syllabus entries**. Each link points to the
 
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| N-Queens | [n-queens](n-queens/README.md) | planned |
-| Sudoku Solver | [sudoku-solver](sudoku-solver/README.md) | planned |
-| Subset Sum using Backtracking | [subset-sum-backtracking](subset-sum-backtracking/README.md) | planned |
-| Power Set Generation | [power-set-generation](power-set-generation/README.md) | planned |
-| Permutations | [permutations](permutations/README.md) | planned |
-| Combinations | [combinations](combinations/README.md) | planned |
-| Rat in a Maze | [rat-in-a-maze](rat-in-a-maze/README.md) | planned |
-| Graph Coloring | [graph-coloring](graph-coloring/README.md) | planned |
-| Hamiltonian Path | [hamiltonian-path](hamiltonian-path/README.md) | planned |
+| N-Queens | [n-queens](n-queens/README.md) | complete |
+| Sudoku Solver | [sudoku-solver](sudoku-solver/README.md) | complete |
+| Subset Sum using Backtracking | [subset-sum-backtracking](subset-sum-backtracking/README.md) | complete |
+| Power Set Generation | [power-set-generation](power-set-generation/README.md) | complete |
+| Permutations | [permutations](permutations/README.md) | complete |
+| Combinations | [combinations](combinations/README.md) | complete |
+| Rat in a Maze | [rat-in-a-maze](rat-in-a-maze/README.md) | complete |
+| Graph Coloring | [graph-coloring](graph-coloring/README.md) | complete |
+| Hamiltonian Path | [hamiltonian-path](hamiltonian-path/README.md) | complete |
 
 ## Learning and contribution scope
 

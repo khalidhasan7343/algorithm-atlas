@@ -1,0 +1,6 @@
+Command: python -m pytest -q --require-cpp dsa/recursion-and-backtracking -m 'not cpp'
+Result: {"label": "backtracking-python", "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking -m 'not cpp'", "returncode": 0, "timeout_seconds": 180, "timed_out": false, "elapsed_seconds": 2.432, "summary": "87 passed, 38 deselected in 2.25s", "CXX": "automatic discovery"}
+
+........................................................................ [ 82%]
+...............                                                          [100%]
+87 passed, 38 deselected in 2.25s

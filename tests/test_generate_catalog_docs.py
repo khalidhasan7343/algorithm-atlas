@@ -179,3 +179,20 @@ def test_searching_progress_uses_its_approved_order_and_review_boundary(planning
     assert 'Every other category requires explicit approval' in text
     assert 'outside Sorting' not in text and 'Validated sorting batches' not in text
     assert 'searching-checkpoints.md' in text
+
+
+def test_backtracking_progress_preserves_catalog_names_and_approval_boundary(planning_repo):
+    _, catalog, _ = planning_repo
+    catalog['development'] = {
+        'phase': 'Phase 3 — Recursion & Backtracking',
+        'scope': 'Recursion & Backtracking category only',
+        'status': 'in-progress', 'active_batch': 3, 'completed_batches': [1, 2],
+        'checkpoint': 'docs/recursion-backtracking-checkpoints.md',
+    }
+    text = generator.progress_page(catalog, {'sample-topic': catalog['algorithms'][0]})
+    assert 'Validated recursion/backtracking batches: 1, 2.' in text
+    assert 'Batch 2: N-Queens, Sudoku Solver, Rat in a Maze' in text
+    assert 'Subset Sum using Backtracking' in text
+    assert 'Graph Algorithms and every other category require explicit approval' in text
+    assert 'stop for human review' in text
+    assert 'Validated sorting batches' not in text

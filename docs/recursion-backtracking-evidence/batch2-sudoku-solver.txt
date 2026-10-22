@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/recursion-and-backtracking/sudoku-solver/tests
+Result: {"label": "sudoku-solver", "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking/sudoku-solver/tests", "returncode": 0, "timeout_seconds": 180, "timed_out": false, "elapsed_seconds": 4.09, "summary": "11 passed in 3.98s", "CXX": "automatic discovery"}
+
+...........                                                              [100%]
+11 passed in 3.98s

@@ -1,0 +1,12 @@
+[
+  {
+    "label": "backtracking-sanitizer",
+    "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking -m cpp --cpp-standard=c++20",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 16.955,
+    "summary": "19 passed, 87 deselected in 16.78s",
+    "CXX": "clang++ -fsanitize=address,undefined -fno-sanitize-recover=all"
+  }
+]

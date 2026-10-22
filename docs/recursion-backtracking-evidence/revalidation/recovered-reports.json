@@ -1,0 +1,20 @@
+[
+  {
+    "file": "SORTING-REVIEW-REPORT.md",
+    "bytes": 59962,
+    "sha256": "b7106294810cb24324369c0c8485385e20ae86b71066221db25f96d5ca4bbbb5",
+    "recovery_source": "Git 902167999dd002558e33f2fb7009e2fb8e15b87c"
+  },
+  {
+    "file": "SORTING-FINAL-AUDIT-REPORT.md",
+    "bytes": 22538,
+    "sha256": "31cfc211eed3aa9f0a3074819c4cd4cd823f8fc271e6328a0291f579cbe4c23e",
+    "recovery_source": "Git 902167999dd002558e33f2fb7009e2fb8e15b87c"
+  },
+  {
+    "file": "SEARCHING-REVIEW-REPORT.md",
+    "bytes": 19670,
+    "sha256": "1ed712e302a7ebaee41c3be2d228a6fb693f156520e4e29a016db5c6ba4717bc",
+    "recovery_source": "Recovered original file creation and both recorded updates from the project session history"
+  }
+]

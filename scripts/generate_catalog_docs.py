@@ -194,7 +194,8 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
     lines += ['', '## Current authorized work and resume checkpoint', '']
     if state:
         searching = state.get('scope') == 'Searching category only'
-        label = 'searching' if searching else 'sorting'
+        backtracking = state.get('scope') == 'Recursion & Backtracking category only'
+        label = 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
         batches = state.get('completed_batches', [])
         lines.append(f'Validated {label} batches: ' +
                      (', '.join(str(batch) for batch in batches) if batches else 'none yet') + '.')
@@ -206,7 +207,15 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
         if state.get('completion_report'):
             lines += ['', 'See the '
                       + link(path, ROOT / state['completion_report'], f'{label} completion report') + '.']
-        if searching:
+        if backtracking:
+            lines += ['', 'The owner approved Phase 2 (Searching). Phase 3 authorizes '
+                      'Recursion & Backtracking only. Batch 1: Permutations, Combinations, '
+                      'Power Set Generation; Batch 2: N-Queens, Sudoku Solver, Rat in a Maze; '
+                      'Batch 3: Graph Coloring, Hamiltonian Path, Subset Sum using Backtracking. '
+                      'Finish and test each batch before continuing automatically.', '',
+                      'After all nine algorithms are complete, stop for human review. '
+                      'Graph Algorithms and every other category require explicit approval.']
+        elif searching:
             lines += ['', 'The owner approved Phase 1 (Sorting). Phase 2 authorizes '
                       'Searching only: Batch 1: Linear, Binary, Jump; Batch 2: '
                       'Interpolation, Exponential, Ternary. Finish and validate each '

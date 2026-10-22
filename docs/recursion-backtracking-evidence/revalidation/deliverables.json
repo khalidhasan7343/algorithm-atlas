@@ -1,0 +1,47 @@
+[
+  {
+    "id": "n-queens",
+    "readme_sections": 25,
+    "required_sources_tests_present": true
+  },
+  {
+    "id": "sudoku-solver",
+    "readme_sections": 25,
+    "required_sources_tests_present": true
+  },
+  {
+    "id": "subset-sum-backtracking",
+    "readme_sections": 25,
+    "required_sources_tests_present": true
+  },
+  {
+    "id": "power-set-generation",
+    "readme_sections": 25,
+    "required_sources_tests_present": true
+  },
+  {
+    "id": "permutations",
+    "readme_sections": 25,
+    "required_sources_tests_present": true
+  },
+  {
+    "id": "combinations",
+    "readme_sections": 25,
+    "required_sources_tests_present": true
+  },
+  {
+    "id": "rat-in-a-maze",
+    "readme_sections": 25,
+    "required_sources_tests_present": true
+  },
+  {
+    "id": "graph-coloring",
+    "readme_sections": 25,
+    "required_sources_tests_present": true
+  },
+  {
+    "id": "hamiltonian-path",
+    "readme_sections": 25,
+    "required_sources_tests_present": true
+  }
+]

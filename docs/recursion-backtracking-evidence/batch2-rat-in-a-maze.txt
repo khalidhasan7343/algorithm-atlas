@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/recursion-and-backtracking/rat-in-a-maze/tests
+Result: {"label": "rat-in-a-maze", "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking/rat-in-a-maze/tests", "returncode": 0, "timeout_seconds": 180, "timed_out": false, "elapsed_seconds": 3.169, "summary": "7 passed in 3.06s", "CXX": "automatic discovery"}
+
+.......                                                                  [100%]
+7 passed in 3.06s

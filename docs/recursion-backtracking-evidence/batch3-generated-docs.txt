@@ -1,0 +1,4 @@
+Command: python scripts/generate_catalog_docs.py --check
+Result: {"label": "generated-docs", "command": "python scripts/generate_catalog_docs.py --check", "returncode": 0, "timeout_seconds": 180, "timed_out": false, "elapsed_seconds": 0.169, "summary": "", "CXX": "automatic discovery"}
+
+Checked 251 catalog documentation pages; 0 changes.

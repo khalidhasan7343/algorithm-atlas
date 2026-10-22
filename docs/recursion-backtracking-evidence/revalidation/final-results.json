@@ -1,0 +1,72 @@
+[
+  {
+    "label": "backtracking-python",
+    "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking -m 'not cpp'",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 2.432,
+    "summary": "87 passed, 38 deselected in 2.25s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "backtracking-cpp17",
+    "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking -m cpp --cpp-standard=c++17",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 12.453,
+    "summary": "19 passed, 87 deselected in 12.34s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "backtracking-cpp20",
+    "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking -m cpp --cpp-standard=c++20",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 13.725,
+    "summary": "19 passed, 87 deselected in 13.61s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "infrastructure",
+    "command": "python -m pytest -q --require-cpp tests",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 2.208,
+    "summary": "200 passed in 2.07s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "full-suite",
+    "command": "python -m pytest -q --require-cpp",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 100.244,
+    "summary": "1197 passed in 100.12s (0:01:40)",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "catalog",
+    "command": "python scripts/validate_catalog.py",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 0.414,
+    "summary": "",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "generated-docs",
+    "command": "python scripts/generate_catalog_docs.py --check",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 0.194,
+    "summary": "",
+    "CXX": "automatic discovery"
+  }
+]

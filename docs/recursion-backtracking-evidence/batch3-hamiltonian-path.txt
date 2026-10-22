@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/recursion-and-backtracking/hamiltonian-path/tests
+Result: {"label": "hamiltonian-path", "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking/hamiltonian-path/tests", "returncode": 0, "timeout_seconds": 180, "timed_out": false, "elapsed_seconds": 2.441, "summary": "7 passed in 2.33s", "CXX": "automatic discovery"}
+
+.......                                                                  [100%]
+7 passed in 2.33s

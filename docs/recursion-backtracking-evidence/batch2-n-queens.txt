@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/recursion-and-backtracking/n-queens/tests
+Result: {"label": "n-queens", "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking/n-queens/tests", "returncode": 0, "timeout_seconds": 180, "timed_out": false, "elapsed_seconds": 3.274, "summary": "8 passed in 3.14s", "CXX": "automatic discovery"}
+
+........                                                                 [100%]
+8 passed in 3.14s

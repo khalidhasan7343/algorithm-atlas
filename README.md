@@ -6,7 +6,7 @@ From Fundamental Algorithms to Advanced Artificial Intelligence — Learn, Imple
 
 Algorithm Atlas is an educational, open-source project maintained by **MD.Khalid Hasan**. Its goal is to explain algorithms from first principles through clear documentation, Python and modern C++ implementations, meaningful tests, complexity analysis, and practical applications.
 
-**Current state: Phase 1 (Sorting) approved; Phase 2 (Searching) complete and awaiting owner review.** All six Searching algorithms have full lessons, Python/C++ implementations, and tests. See the [Searching review report](SEARCHING-REVIEW-REPORT.md), [checkpoint](docs/searching-checkpoints.md), and [progress](docs/progress.md). All 11 Sorting implementations, lessons, and tests are preserved; the [final Sorting audit](SORTING-FINAL-AUDIT-REPORT.md) records their prior evidence. Every category after Searching requires separate approval.
+**Current state: Phase 2 (Searching) approved; Phase 3 — Recursion & Backtracking implemented and tested, awaiting owner review.** Follow the [checkpoint](docs/recursion-backtracking-checkpoints.md) and [progress](docs/progress.md). See the [Phase 3 report](RECURSION-BACKTRACKING-REVIEW-REPORT.md); the review ZIP and checksum accompany it. All previously approved Sorting and Searching implementations and tests are preserved. Stop for owner review after the nine catalog topics; no other category is authorized.
 
 ## Project Overview
 
@@ -25,15 +25,15 @@ The foundation provides:
 - Documentation standards, pytest infrastructure, C++ compiler checks, and GitHub Actions configuration.
 - Automated catalog, documentation-link, and implementation-status validation.
 
-Sorting and the current Searching work provide detailed explanations, dry runs, Python/C++ implementations, examples, and relevant edge-case tests. Other topics follow in separately approved phases. ML examples will distinguish educational implementations from library-based usage and document compute and dependency limits.
+Sorting, Searching, and Recursion & Backtracking provide detailed explanations, dry runs, Python/C++ implementations, examples, and relevant edge-case tests. Other topics follow in separately approved phases. ML examples will distinguish educational implementations from library-based usage and document compute and dependency limits.
 
 ## Technologies Used
 
 | Technology | Purpose |
 | --- | --- |
-| Python 3.11+ | Development tools, pytest, and Sorting and Searching implementations |
-| C++17 / C++20 | Sorting and Searching implementations and compiler checks |
-| pytest | Infrastructure tests and future per-algorithm test discovery |
+| Python 3.11+ | Development tools, pytest, and completed DSA implementations |
+| C++17 / C++20 | completed DSA implementations and compiler checks |
+| pytest | Infrastructure tests and per-algorithm test discovery |
 | PyYAML | Catalog parsing and validation |
 | Markdown / YAML | Learning materials, catalog, and CI configuration |
 | GitHub Actions | Lightweight validation and tests when run on GitHub |
@@ -55,7 +55,7 @@ algorithm-atlas/
 └── artificial-intelligence/ # 10 syllabus categories
 ```
 
-Each unique topic has one canonical folder. Completed Sorting and Searching topics have a full lesson and `python/`, `cpp/`, and `tests/` content; planned topics retain honest scope READMEs. See the [development guide](docs/development.md) for the final per-algorithm structure and documentation standard.
+Each unique topic has one canonical folder. Completed Sorting, Searching, and Recursion & Backtracking topics have a full lesson and `python/`, `cpp/`, and `tests/` content; planned topics retain honest scope READMEs. See the [development guide](docs/development.md) for the final per-algorithm structure and documentation standard.
 
 ## Data Structures and Algorithms
 
@@ -100,7 +100,7 @@ Install a compiler supporting C++17 and C++20, such as GCC or Clang. Confirm the
 
 ## How to Run Examples
 
-Use a completed topic in [Sorting](dsa/sorting/README.md); its README contains exact Python/C++ commands, inputs, outputs, and dependency instructions. For example, from the repository root after Bubble Sort is available:
+Use a completed topic in [Sorting](dsa/sorting/README.md); its README contains exact Python/C++ commands, inputs, outputs, and dependency instructions. For example, from the repository root:
 
 ```sh
 printf '5 1 4 2 8\n' | python dsa/sorting/bubble-sort/python/solution.py
@@ -120,6 +120,17 @@ This prints `2`, the first matching zero-based index. Sorted searches validate
 order by default; see each [Searching lesson](dsa/searching/README.md) for its
 contract and the extra validation cost.
 
+For a Recursion & Backtracking example, print all row-to-column N-Queens
+placements in deterministic order:
+
+```sh
+printf '4\n' | .venv/bin/python dsa/recursion-and-backtracking/n-queens/python/solution.py
+```
+
+This prints `[[1,3,0,2],[2,0,3,1]]`. Each lesson defines its own CLI grammar,
+empty/impossible results, and duplicate/ordering semantics. Results can grow
+exponentially; these eager recursive examples are intended for small inputs.
+
 Repository checks can be run with:
 
 ```sh
@@ -130,7 +141,7 @@ python -m pytest
 
 ## Testing Instructions
 
-Install [requirements-dev.txt](requirements-dev.txt), make a C++ compiler available, and run `python -m pytest` from the root. Infrastructure tests exercise catalog failures and compile/run small C++ toolchain checks. Per-algorithm tests exercise completed Sorting and Searching implementations against independent expected values and reference oracles.
+Install [requirements-dev.txt](requirements-dev.txt), make a C++ compiler available, and run `python -m pytest` from the root. Infrastructure tests exercise catalog failures and compile/run small C++ toolchain checks. Per-algorithm tests exercise completed completed DSA implementations against independent expected values and reference oracles.
 
 The [CI workflow](.github/workflows/ci.yml) checks documentation/catalog consistency and runs lightweight tests. Local test results and hosted CI results are separate: a workflow file does not imply a successful GitHub run. See [testing and contribution guidance](CONTRIBUTING.md) for future algorithm tests.
 
@@ -142,7 +153,7 @@ Use the [complexity cheat sheet](docs/complexity-cheatsheet.md) for asymptotic n
 
 [Progress tracking](docs/progress.md) records catalog totals, completed and remaining algorithms, blockers, and the next proposed batch. The [Phase 0 review report](docs/phase-0-review.md) and [complete file inventory](docs/phase-0-files.md) document the foundation handoff. Phase 0 supplies the foundation only. The term **Dynamic Policy Optimization (DPO)** is retained from the syllabus and blocked pending clarification; it has not been replaced by Direct Preference Optimization.
 
-Phase 1 (Sorting) is owner-approved. Phase 2 authorizes the six Searching algorithms in two validated internal batches, followed by mandatory human review. No other category, commit, or push is authorized.
+Phase 2 (Searching) is owner-approved. Phase 3 covers only Recursion & Backtracking, in three internal batches followed by mandatory human review. No other category, commit, or push is authorized.
 
 ## Contribution Guidelines
 

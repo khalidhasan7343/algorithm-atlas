@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/recursion-and-backtracking/graph-coloring/tests
+Result: {"label": "graph-coloring", "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking/graph-coloring/tests", "returncode": 0, "timeout_seconds": 180, "timed_out": false, "elapsed_seconds": 2.626, "summary": "8 passed in 2.48s", "CXX": "automatic discovery"}
+
+........                                                                 [100%]
+8 passed in 2.48s

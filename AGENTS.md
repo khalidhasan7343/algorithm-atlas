@@ -6,23 +6,27 @@ Read `README.md`, `CONTRIBUTING.md`, `docs/progress.md`, and the relevant record
 
 ## Mandatory phase checkpoint
 
-**Phase 1 (Sorting) has been reviewed and approved by the repository owner. Current authorization: Phase 2 — Searching category only.** Preserve all Sorting implementations and tests.
+**Phase 2 (Searching) is explicitly approved by the owner. Current authorization:
+Phase 3 — Recursion & Backtracking category only.** Preserve approved Sorting
+and Searching implementations, tests, and individual lessons.
 
-**Current checkpoint: all six Searching algorithms are implemented and tested;
-Phase 2 is awaiting owner review.** The full suite passed 1,059 tests. See
-`SEARCHING-REVIEW-REPORT.md` and `docs/searching-checkpoints.md`. Finish the review
-package checks, then STOP. Do not begin another category without explicit approval.
+Use catalog.yaml as authoritative for names, IDs, paths, and topic membership.
+The internal batches are:
 
-The approved internal batches are:
+1. Permutations, Combinations, Power Set Generation.
+2. N-Queens, Sudoku Solver, Rat in a Maze.
+3. Graph Coloring, Hamiltonian Path, Subset Sum using Backtracking.
 
-1. Linear Search, Binary Search, Jump Search.
-2. Interpolation Search, Exponential Search, Ternary Search.
+Complete and test each batch before starting the next. Record actual gates in
+`docs/recursion-backtracking-checkpoints.md`, update catalog statuses honestly,
+and regenerate docs. Define deterministic ordering, duplicates, mutation, invalid
+inputs, and state restoration. Distinguish impossible problems from invalid data.
 
-Finish and test Batch 1 before implementing Batch 2; continue automatically after validation passes. Save actual results in `docs/searching-checkpoints.md`, update `catalog.yaml`, and regenerate documentation after each batch. Read that checkpoint before resuming interrupted work.
-
-All searches must define first/any-match semantics, test duplicates and missing targets, and document ordering requirements. Sorted APIs must distinguish validation cost from search cost. Check C++ index/overflow boundaries, interpolation equal endpoints and division, exponential expansion, and the intended Ternary Search setting.
-
-After all six searches pass the applicable suite and catalog/link checks, prepare `SEARCHING-REVIEW-REPORT.md` and `algorithm-atlas-searching-review.zip`, then **stop for explicit human review and approval**. No other category is authorized. Sorting approval is recorded in the Searching checkpoint; historical Sorting reports remain historical evidence.
+After all nine topics pass applicable checks, create
+`RECURSION-BACKTRACKING-REVIEW-REPORT.md`, the requested review ZIP and SHA-256,
+verify the package, then **STOP for explicit human review and approval**. Do not
+mark Phase 3 human-approved. Graph Coloring/Hamiltonian Path are A3 topics;
+no A5 Graph Algorithms or other category implementation is authorized.
 
 At the end of every subsequent authorized phase or category scope, stop for explicit user review before developing beyond that scope. The user's latest explicit authorization controls these checkpoints.
 

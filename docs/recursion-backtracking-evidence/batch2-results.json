@@ -1,0 +1,62 @@
+[
+  {
+    "label": "n-queens",
+    "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking/n-queens/tests",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 3.274,
+    "summary": "8 passed in 3.14s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "sudoku-solver",
+    "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking/sudoku-solver/tests",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 4.09,
+    "summary": "11 passed in 3.98s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "rat-in-a-maze",
+    "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking/rat-in-a-maze/tests",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 3.169,
+    "summary": "7 passed in 3.06s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "catalog",
+    "command": "python scripts/validate_catalog.py",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 0.401,
+    "summary": "",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "generated-docs",
+    "command": "python scripts/generate_catalog_docs.py --check",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 0.167,
+    "summary": "",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "full-suite",
+    "command": "python -m pytest -q --require-cpp",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 94.402,
+    "summary": "1174 passed in 94.27s (0:01:34)",
+    "CXX": "automatic discovery"
+  }
+]

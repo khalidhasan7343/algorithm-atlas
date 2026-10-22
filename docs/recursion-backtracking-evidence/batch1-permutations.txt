@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/recursion-and-backtracking/permutations/tests
+Result: {"label": "permutations", "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking/permutations/tests", "returncode": 0, "timeout_seconds": 180, "timed_out": false, "elapsed_seconds": 2.368, "summary": "24 passed in 2.22s", "CXX": "automatic discovery"}
+
+........................                                                 [100%]
+24 passed in 2.22s

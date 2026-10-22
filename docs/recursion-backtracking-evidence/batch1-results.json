@@ -1,0 +1,62 @@
+[
+  {
+    "label": "permutations",
+    "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking/permutations/tests",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 2.368,
+    "summary": "24 passed in 2.22s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "combinations",
+    "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking/combinations/tests",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 2.13,
+    "summary": "28 passed in 2.02s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "power-set-generation",
+    "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking/power-set-generation/tests",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 1.896,
+    "summary": "24 passed in 1.78s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "catalog",
+    "command": "python scripts/validate_catalog.py",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 0.42,
+    "summary": "",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "generated-docs",
+    "command": "python scripts/generate_catalog_docs.py --check",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 0.171,
+    "summary": "",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "full-suite",
+    "command": "python -m pytest -q --require-cpp",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 86.492,
+    "summary": "1148 passed in 86.37s (0:01:26)",
+    "CXX": "automatic discovery"
+  }
+]

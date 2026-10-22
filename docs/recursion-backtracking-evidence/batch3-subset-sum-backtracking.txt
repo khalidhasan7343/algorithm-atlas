@@ -1,0 +1,5 @@
+Command: python -m pytest -q --require-cpp dsa/recursion-and-backtracking/subset-sum-backtracking/tests
+Result: {"label": "subset-sum-backtracking", "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking/subset-sum-backtracking/tests", "returncode": 0, "timeout_seconds": 180, "timed_out": false, "elapsed_seconds": 2.293, "summary": "8 passed in 2.18s", "CXX": "automatic discovery"}
+
+........                                                                 [100%]
+8 passed in 2.18s

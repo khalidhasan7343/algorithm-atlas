@@ -1,6 +1,6 @@
 # Getting Started
 
-Algorithm Atlas is an educational repository for Python and C++ implementations of DSA, machine learning, and artificial intelligence topics. **Phase 1 (Sorting) is owner-approved; Phase 2 currently covers Searching only.** Completed Sorting and Searching folders contain runnable implementations and tests. Other topics remain planned or explicitly blocked; check their actual catalog statuses.
+Algorithm Atlas is an educational repository for Python and C++ implementations of DSA, machine learning, and artificial intelligence topics. **Phase 2 (Searching) is owner-approved; Phase 3 covers Recursion & Backtracking only.** Completed Sorting, Searching, and Recursion & Backtracking folders contain runnable implementations and tests. Other topics remain planned or explicitly blocked; check their actual catalog statuses.
 
 Start with the [learning roadmap](learning-roadmap.md), browse the [complete algorithm index](algorithm-index.md), and consult the [progress tracker](progress.md) before choosing a topic. The [glossary](glossary.md) and [complexity cheat sheet](complexity-cheatsheet.md) explain terminology used throughout the project.
 
@@ -71,6 +71,6 @@ Replace the angle-bracket path only when an implementation exists. Some topics w
 
 ## Approval checkpoint
 
-Phase 1 (Sorting) is approved. Searching is authorized in two internal batches, with checks and saved checkpoints between batches. After Searching, stop for human review. Every other category requires explicit approval. See [Searching checkpoints](searching-checkpoints.md).
+Phase 2 (Searching) is approved. Follow the three [Recursion & Backtracking batches](recursion-backtracking-checkpoints.md), validate each before continuing, then stop for owner review. No other category is authorized.
 
 No push or publication is authorized by local setup or a passing test run. Review checkpoints apply between every later development phase as well.

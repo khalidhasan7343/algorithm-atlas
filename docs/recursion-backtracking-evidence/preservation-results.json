@@ -1,0 +1,19 @@
+{
+  "baseline_HEAD": "8446eab749c22e9c1390331e02206ea862795820",
+  "approved_files_checked": 87,
+  "approved_files_unchanged": true,
+  "syllabus_categories_unchanged": true,
+  "canonical_ids_names_paths_metadata_preserved": true,
+  "out_of_scope_catalog_records_unchanged": true,
+  "phase3_catalog_ids": [
+    "combinations",
+    "graph-coloring",
+    "hamiltonian-path",
+    "n-queens",
+    "permutations",
+    "power-set-generation",
+    "rat-in-a-maze",
+    "subset-sum-backtracking",
+    "sudoku-solver"
+  ]
+}

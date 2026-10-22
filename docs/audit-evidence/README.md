@@ -32,5 +32,5 @@ Source review additionally checked that the actual lesson code performs each
 algorithm directly. Tim Sort calls its own `_TimSorter.sort()` method; this is
 not delegation to Python's built-in list sorting.
 
-See the [final audit report](../../SORTING-FINAL-AUDIT-REPORT.md) for findings,
+See [the final audit report](../../SORTING-FINAL-AUDIT-REPORT.md) for findings,
 limitations, full commands, and the mandatory human-review checkpoint.

@@ -41,15 +41,15 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| N-Queens | [n-queens](../dsa/recursion-and-backtracking/n-queens/README.md) | planned |
-| Sudoku Solver | [sudoku-solver](../dsa/recursion-and-backtracking/sudoku-solver/README.md) | planned |
-| Subset Sum using Backtracking | [subset-sum-backtracking](../dsa/recursion-and-backtracking/subset-sum-backtracking/README.md) | planned |
-| Power Set Generation | [power-set-generation](../dsa/recursion-and-backtracking/power-set-generation/README.md) | planned |
-| Permutations | [permutations](../dsa/recursion-and-backtracking/permutations/README.md) | planned |
-| Combinations | [combinations](../dsa/recursion-and-backtracking/combinations/README.md) | planned |
-| Rat in a Maze | [rat-in-a-maze](../dsa/recursion-and-backtracking/rat-in-a-maze/README.md) | planned |
-| Graph Coloring | [graph-coloring](../dsa/recursion-and-backtracking/graph-coloring/README.md) | planned |
-| Hamiltonian Path | [hamiltonian-path](../dsa/recursion-and-backtracking/hamiltonian-path/README.md) | planned |
+| N-Queens | [n-queens](../dsa/recursion-and-backtracking/n-queens/README.md) | complete |
+| Sudoku Solver | [sudoku-solver](../dsa/recursion-and-backtracking/sudoku-solver/README.md) | complete |
+| Subset Sum using Backtracking | [subset-sum-backtracking](../dsa/recursion-and-backtracking/subset-sum-backtracking/README.md) | complete |
+| Power Set Generation | [power-set-generation](../dsa/recursion-and-backtracking/power-set-generation/README.md) | complete |
+| Permutations | [permutations](../dsa/recursion-and-backtracking/permutations/README.md) | complete |
+| Combinations | [combinations](../dsa/recursion-and-backtracking/combinations/README.md) | complete |
+| Rat in a Maze | [rat-in-a-maze](../dsa/recursion-and-backtracking/rat-in-a-maze/README.md) | complete |
+| Graph Coloring | [graph-coloring](../dsa/recursion-and-backtracking/graph-coloring/README.md) | complete |
+| Hamiltonian Path | [hamiltonian-path](../dsa/recursion-and-backtracking/hamiltonian-path/README.md) | complete |
 
 ## A4. [Divide and Conquer](../dsa/divide-and-conquer/README.md)
 

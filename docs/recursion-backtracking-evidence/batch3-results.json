@@ -1,0 +1,52 @@
+[
+  {
+    "label": "graph-coloring",
+    "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking/graph-coloring/tests",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 2.626,
+    "summary": "8 passed in 2.48s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "hamiltonian-path",
+    "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking/hamiltonian-path/tests",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 2.441,
+    "summary": "7 passed in 2.33s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "subset-sum-backtracking",
+    "command": "python -m pytest -q --require-cpp dsa/recursion-and-backtracking/subset-sum-backtracking/tests",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 2.293,
+    "summary": "8 passed in 2.18s",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "catalog",
+    "command": "python scripts/validate_catalog.py",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 0.398,
+    "summary": "",
+    "CXX": "automatic discovery"
+  },
+  {
+    "label": "generated-docs",
+    "command": "python scripts/generate_catalog_docs.py --check",
+    "returncode": 0,
+    "timeout_seconds": 180,
+    "timed_out": false,
+    "elapsed_seconds": 0.169,
+    "summary": "",
+    "CXX": "automatic discovery"
+  }
+]

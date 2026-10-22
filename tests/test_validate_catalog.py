@@ -537,3 +537,59 @@ def test_sorting_completed_metadata_requires_ready_artifacts_and_test_evidence_s
     report = ValidationReport()
     _validate_development(root, state, algorithms, report)
     assert any("completed sorting batch 3 requires tim-sort" in error for error in report.errors)
+
+
+BACKTRACKING_BATCHES = (
+    ("permutations", "combinations", "power-set-generation"),
+    ("n-queens", "sudoku-solver", "rat-in-a-maze"),
+    ("graph-coloring", "hamiltonian-path", "subset-sum-backtracking"),
+)
+
+
+def backtracking_statuses():
+    """Synthetic records test metadata rules, not historical execution."""
+    return {name: {"documentation_status": "implemented", "python_status": "implemented",
+                   "cpp_status": "implemented", "test_status": "tested"}
+            for batch in BACKTRACKING_BATCHES for name in batch}
+
+
+@pytest.mark.parametrize("completed,active,status", [
+    ([], 1, "in-progress"), ([1], 2, "in-progress"),
+    ([1, 2], 3, "in-progress"), ([1, 2, 3], None, "awaiting-review"),
+])
+def test_backtracking_valid_batch_checkpoints(sample_repo, completed, active, status):
+    root, data = sample_repo
+    state = add_development(root, data, scope="Recursion & Backtracking category only")
+    state.update(completed_batches=completed, active_batch=active, status=status)
+    report = ValidationReport()
+    _validate_development(root, state, backtracking_statuses(), report)
+    assert report.ok, report.errors
+
+
+@pytest.mark.parametrize("completed,active,status,expected", [
+    ([1, 2, 3], 4, "in-progress", "active_batch must be 1, 2, or 3"),
+    ([1, 2, 3, 4], 5, "in-progress", "has only three batches"),
+    ([1, 2], None, "awaiting-review", "awaiting-review requires all three batches"),
+])
+def test_backtracking_rejects_premature_completion(sample_repo, completed, active, status, expected):
+    root, data = sample_repo
+    state = add_development(root, data, scope="Recursion & Backtracking category only")
+    state.update(completed_batches=completed, active_batch=active, status=status)
+    report = ValidationReport()
+    _validate_development(root, state, backtracking_statuses(), report)
+    assert any(expected in error for error in report.errors)
+
+
+@pytest.mark.parametrize("field,value", [
+    ("documentation_status", "planned"), ("python_status", "in-progress"),
+    ("cpp_status", None), ("test_status", "implemented"), ("test_status", {}),
+])
+def test_backtracking_completed_batch_requires_real_deliverable_statuses(sample_repo, field, value):
+    root, data = sample_repo
+    state = add_development(root, data, scope="Recursion & Backtracking category only")
+    state.update(completed_batches=[1, 2, 3], active_batch=None, status="awaiting-review")
+    algorithms = backtracking_statuses()
+    algorithms["subset-sum-backtracking"][field] = value
+    report = ValidationReport()
+    _validate_development(root, state, algorithms, report)
+    assert any("batch 3 requires subset-sum-backtracking" in error for error in report.errors)

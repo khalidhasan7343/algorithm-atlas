@@ -52,6 +52,11 @@ SEARCHING_BATCHES = (
     ("linear-search", "binary-search", "jump-search"),
     ("interpolation-search", "exponential-search", "ternary-search"),
 )
+RECURSION_BACKTRACKING_BATCHES = (
+    ("permutations", "combinations", "power-set-generation"),
+    ("n-queens", "sudoku-solver", "rat-in-a-maze"),
+    ("graph-coloring", "hamiltonian-path", "subset-sum-backtracking"),
+)
 
 
 class UniqueKeyLoader(yaml.SafeLoader):
@@ -177,6 +182,27 @@ def _validate_development(
     if status == "awaiting-review" and active is not None:
         report.errors.append("development.awaiting-review requires active_batch=null")
 
+    if state.get("scope") == "Recursion & Backtracking category only" and valid_completed:
+        if len(completed) > 3:
+            report.errors.append("development Recursion & Backtracking has only three batches")
+        if status == "in-progress" and (
+            type(active) is not int or active not in (1, 2, 3)
+        ):
+            report.errors.append("development Recursion & Backtracking active_batch must be 1, 2, or 3")
+        if status == "awaiting-review" and completed != [1, 2, 3]:
+            report.errors.append("development Recursion & Backtracking awaiting-review requires all three batches")
+        for batch in completed[:3]:
+            for algorithm_id in RECURSION_BACKTRACKING_BATCHES[batch - 1]:
+                record = algorithms.get(algorithm_id, {})
+                if not all(
+                    isinstance(record.get(field), str)
+                    and record[field] in ARTIFACT_STATUSES for field in STATUS_FIELDS[:3]
+                ) or record.get("test_status") not in ("tested", "reviewed"):
+                    report.errors.append(
+                        f"development: completed recursion/backtracking batch {batch} requires {algorithm_id} "
+                        "with completed documentation, both implementations, and tested/reviewed tests"
+                    )
+        return
     if state.get("scope") == "Searching category only" and valid_completed:
         if len(completed) > 2:
             report.errors.append("development Searching scope has only two batches")
