@@ -1,0 +1,34 @@
+{
+  "a-star-search": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/graph-algorithms/a-star-search",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.802,
+    "output": "..........                                                               [100%]\n10 passed in 4.64s\n"
+  },
+  "johnson": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/graph-algorithms/johnson",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.952,
+    "output": "..........                                                               [100%]\n10 passed in 4.85s\n"
+  }
+}

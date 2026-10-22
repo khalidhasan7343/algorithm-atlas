@@ -1,11 +1,14 @@
 """Verify Phase 3 catalog identity and byte preservation against its checkpoint."""
 
+import argparse
 import hashlib
 import json
 from pathlib import Path
 import subprocess
 
 import yaml
+
+from review_paths import assert_preserved
 
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / "docs/recursion-backtracking-evidence"
@@ -19,14 +22,10 @@ MUTABLE_FIELDS = {
 }
 
 
-def main() -> None:
+def main(write_evidence=True) -> None:
     baseline = json.loads((EVIDENCE / "approved-baseline.json").read_text())
-    changed = [
-        name for name, digest in baseline["files_sha256"].items()
-        if not (ROOT / name).is_file()
-        or hashlib.sha256((ROOT / name).read_bytes()).hexdigest() != digest
-    ]
-    assert not changed, f"Approved files changed: {changed}"
+    for name, digest in baseline["files_sha256"].items():
+        assert_preserved(ROOT, name, digest)
     original = subprocess.run(
         ["git", "show", baseline["baseline_HEAD"] + ":catalog.yaml"],
         cwd=ROOT, check=True, capture_output=True, text=True, timeout=30,
@@ -48,15 +47,18 @@ def main() -> None:
     result = {
         "baseline_HEAD": baseline["baseline_HEAD"],
         "approved_files_checked": len(baseline["files_sha256"]),
-        "approved_files_unchanged": True,
+        "approved_files_baseline_bytes_verified": True,
         "syllabus_categories_unchanged": True,
         "canonical_ids_names_paths_metadata_preserved": True,
         "out_of_scope_catalog_records_unchanged": True,
         "phase3_catalog_ids": sorted(EXPECTED),
     }
-    (EVIDENCE / "preservation-results.json").write_text(json.dumps(result, indent=2) + "\n")
+    if write_evidence:
+        (EVIDENCE / "preservation-results.json").write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps(result, indent=2))
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check-only", action="store_true", help="Verify without replacing historical execution evidence.")
+    main(write_evidence=not parser.parse_args().check_only)

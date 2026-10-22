@@ -1,0 +1,43 @@
+{
+  "catalog": {
+    "command": [
+      ".venv/bin/python",
+      "scripts/validate_catalog.py"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 0.476,
+    "output": "Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 317 Markdown files, and 3867 local links.\nValidation passed. Test execution and external URLs are checked separately.\n"
+  },
+  "generated-docs": {
+    "command": [
+      ".venv/bin/python",
+      "scripts/generate_catalog_docs.py",
+      "--check"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 0.163,
+    "output": "Checked 228 catalog documentation pages; 0 changes.\n"
+  },
+  "infrastructure": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "tests",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 1,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 2.485,
+    "output": "........................F............................................... [ 30%]\n........................................................................ [ 61%]\n........................................................................ [ 91%]\n....................                                                     [100%]\n=================================== FAILURES ===================================\n_______ test_greedy_category_separates_implementations_from_graph_links ________\n\nplanning_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-143/test_greedy_cate...n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-143/test_greedy_category_separates0/dsa/sorting/sample-topic/README.md'))\n\n    def test_greedy_category_separates_implementations_from_graph_links(planning_repo):\n        import copy\n        _,catalog,_=planning_repo\n        owned=('activity-selection','fractional-knapsack','huffman-coding','job-sequencing-with-deadlines')\n        graph=('dijkstra','prim','kruskal')\n        records={}\n        for name in owned+graph:\n            record=copy.deepcopy(catalog['algorithms'][0]);record.update(id=name,name=name,canonical_location=('dsa/greedy/' if name in owned else 'dsa/graph-algorithms/')+name)\n            if name in owned:record.update(documentation_status='implemented',python_status='tested',cpp_status='tested',test_status='tested')\n            records[name]=record\n        category={'id':'A11','name':'Greedy Algorithms','path':'dsa/greedy','items':[{'name':name,'algorithm':name} for name in owned+graph]}\n        before=copy.deepcopy((category,records))\n        text=generator.category_page(category,records)\n        left,right=text.split('## Graph algorithms that also use the Greedy paradigm')\n        assert '## Greedy algorithms implemented in Phase 6' in left\n        assert all(']('+name+'/README.md)' in left for name in owned)\n        assert all('](../graph-algorithms/'+name+'/README.md)' in right for name in graph)\n        assert right.count('| planned |')==3\n>       assert 'seven A11 memberships' in right\nE       AssertionError: assert 'seven A11 memberships' in '\\n\\n| Original syllabus entry | Canonical folder | Status |\\n| --- | --- | --- |\\n| dijkstra | [dijkstra](../graph-al...roject home](../../README.md) \u00b7 [Complete index](../../docs/algorithm-index.md) \u00b7 [Progress](../../docs/progress.md)\\n'\n\ntests/test_generate_catalog_docs.py:253: AssertionError\n=========================== short test summary info ============================\nFAILED tests/test_generate_catalog_docs.py::test_greedy_category_separates_implementations_from_graph_links\n1 failed, 235 passed in 2.34s\n"
+  }
+}

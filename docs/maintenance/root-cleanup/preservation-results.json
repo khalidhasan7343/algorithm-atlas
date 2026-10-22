@@ -1,0 +1,49 @@
+{
+  "reports_moved": 9,
+  "packages_verified": [
+    {
+      "path": "artifacts/review-packages/divide-conquer/algorithm-atlas-divide-conquer-review.zip",
+      "sha256": "ef14c74fc2c2b9ff667e908ada4af8df6e9f3da166fb89ec3d2517056c7e8156",
+      "crc": "passed"
+    },
+    {
+      "path": "artifacts/review-packages/dynamic-programming/algorithm-atlas-dynamic-programming-review.zip",
+      "sha256": "423d64d9f504779be6c4be9e32fc1bf5e64457d126f3b9c6b839d953e773a667",
+      "crc": "passed"
+    },
+    {
+      "path": "artifacts/review-packages/graph-algorithms/algorithm-atlas-graph-algorithms-review.zip",
+      "sha256": "6da6d746fa7f73012f7d68c5883ac26a6c2a9e685aaba48309cf1f66fd517e0e",
+      "crc": "passed"
+    },
+    {
+      "path": "artifacts/review-packages/greedy/algorithm-atlas-greedy-review.zip",
+      "sha256": "32ef9b748ebe2ba0be7a664af75d21f4f5d81d6af5396f92517b2bd32b625f7c",
+      "crc": "passed"
+    },
+    {
+      "path": "artifacts/review-packages/recursion-backtracking/algorithm-atlas-recursion-backtracking-review.zip",
+      "sha256": "f172a4ffaa10b4a5bbe07977c8234f9d59cbc91be427037c6b9b2fd646df8d51",
+      "crc": "passed"
+    },
+    {
+      "path": "artifacts/review-packages/searching/algorithm-atlas-searching-review.zip",
+      "sha256": "0f6e70a8b915c6cc0550f465b525b12a56a53aa5094a89401de0c614d288dbe3",
+      "crc": "passed"
+    }
+  ],
+  "package_files_moved": 18,
+  "algorithm_files_byte_identical": 568,
+  "historical_evidence_files_byte_identical": 306,
+  "inventory": {
+    "categories": 35,
+    "memberships": 256,
+    "canonical_topics": 235
+  },
+  "development_status": "awaiting-review",
+  "completion_report": "docs/reviews/graph-algorithms/GRAPH-ALGORITHMS-REVIEW-REPORT.md",
+  "tracked_only": false,
+  "local_untracked_files_absent": [],
+  "git_tracking_checked": false,
+  "hosted_github_actions": "not triggered or verified"
+}

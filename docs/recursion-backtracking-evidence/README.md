@@ -28,7 +28,7 @@ Local passes are not hosted GitHub Actions results. Only the locally executed
 interpreter, compiler, platform, and language standards are covered. No remote
 workflow, commit, push, publication, or Phase 3 human approval is claimed.
 
-The final [review report](../../RECURSION-BACKTRACKING-REVIEW-REPORT.md) summarizes actual results and limitations. `changed-files.txt` lists the source/evidence delta. ZIP file hashes, counts, CRC and extracted validation results are in the external `.zip.verification.json` sidecar; checksum verification uses the `.zip.sha256` sidecar.
+The final [review report](../reviews/recursion-backtracking/RECURSION-BACKTRACKING-REVIEW-REPORT.md) summarizes actual results and limitations. `changed-files.txt` lists the source/evidence delta. ZIP file hashes, counts, CRC and extracted validation results are in the external `.zip.verification.json` sidecar; checksum verification uses the `.zip.sha256` sidecar.
 
 ## Renewed verification after historical-report recovery
 

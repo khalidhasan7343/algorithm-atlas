@@ -1,0 +1,44 @@
+{
+  "reports_nonempty_and_tracked": [
+    "DIVIDE-CONQUER-REVIEW-REPORT.md",
+    "DYNAMIC-PROGRAMMING-REVIEW-REPORT.md",
+    "GRAPH-ALGORITHMS-REVIEW-REPORT.md",
+    "GREEDY-REVIEW-REPORT.md",
+    "PHASE-0-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SORTING-REVIEW-REPORT.md"
+  ],
+  "required_reports_ignored": false,
+  "completion_report": "GRAPH-ALGORITHMS-REVIEW-REPORT.md",
+  "snapshot": "clean export of the actual staged Git index; no commit created",
+  "clean_tracked_checkout_validations": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/validate_catalog.py"
+      ],
+      "returncode": 0,
+      "output": "Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 318 Markdown files, and 3957 local links.\nValidation passed. Test execution and external URLs are checked separately.\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/generate_catalog_docs.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "output": "Checked 217 catalog documentation pages; 0 changes.\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/verify_graph_algorithms_scope.py"
+      ],
+      "returncode": 0,
+      "output": "{\n  \"baseline_revision\": \"a495d22f3ee16c3790c60b432566a42572e94844\",\n  \"prior_files_byte_identical\": 273,\n  \"syllabus_memberships\": 256,\n  \"canonical_topics\": 235,\n  \"categories\": 35,\n  \"graph_memberships\": 15,\n  \"all_memberships_identities_and_out_of_scope_records_preserved\": true,\n  \"implemented_scope\": [\n    \"a-star-search\",\n    \"articulation-points\",\n    \"bellman-ford\",\n    \"breadth-first-search\",\n    \"bridges-detection\",\n    \"depth-first-search\",\n    \"dijkstra\",\n    \"floyd-warshall\",\n    \"johnson\",\n    \"kosaraju-strongly-connected-components\",\n    \"kruskal\",\n    \"prim\",\n    \"tarjan-strongly-connected-components\",\n    \"topological-sorting\",\n    \"union-find\"\n  ],\n  \"duplicate_cross_category_folders\": 0,\n  \"lesson_audit\": {\n    \"breadth-first-search\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"depth-first-search\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"dijkstra\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"bellman-ford\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"floyd-warshall\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"kruskal\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"prim\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"topological-sorting\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"tarjan-strongly-connected-components\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"kosaraju-strongly-connected-components\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"union-find\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"a-star-search\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"bridges-detection\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"articulation-points\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"johnson\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    }\n  }\n}\n"
+    }
+  ],
+  "hosted_github_actions": "not triggered or verified"
+}

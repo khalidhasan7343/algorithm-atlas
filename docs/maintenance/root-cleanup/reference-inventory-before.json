@@ -1,0 +1,331 @@
+{
+  "RECURSION-BACKTRACKING-REVIEW-REPORT.md": [
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "algorithm-atlas-recursion-backtracking-review.zip",
+    "algorithm-atlas-recursion-backtracking-review.zip.sha256"
+  ],
+  "algorithm-atlas-greedy-review.zip.sha256": [
+    "algorithm-atlas-greedy-review.zip"
+  ],
+  "GREEDY-REVIEW-REPORT.md": [
+    "algorithm-atlas-greedy-review.zip.sha256",
+    "algorithm-atlas-greedy-review.zip"
+  ],
+  "SORTING-REVIEW-REPORT.md": [
+    "SORTING-REVIEW-REPORT.md"
+  ],
+  "algorithm-atlas-searching-review.zip.sha256": [
+    "algorithm-atlas-searching-review.zip"
+  ],
+  "algorithm-atlas-recursion-backtracking-review.zip.verification.json": [
+    "PHASE-0-REPORT.md",
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "algorithm-atlas-recursion-backtracking-review.zip"
+  ],
+  "algorithm-atlas-dynamic-programming-review.zip.verification.json": [
+    "PHASE-0-REPORT.md",
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "DIVIDE-CONQUER-REVIEW-REPORT.md",
+    "DYNAMIC-PROGRAMMING-REVIEW-REPORT.md",
+    "algorithm-atlas-dynamic-programming-review.zip"
+  ],
+  "algorithm-atlas-graph-algorithms-review.zip.sha256": [
+    "algorithm-atlas-graph-algorithms-review.zip"
+  ],
+  "PHASE-0-REPORT.md": [
+    "PHASE-0-REPORT.md"
+  ],
+  "GRAPH-ALGORITHMS-REVIEW-REPORT.md": [
+    "algorithm-atlas-graph-algorithms-review.zip.sha256",
+    "algorithm-atlas-graph-algorithms-review.zip"
+  ],
+  "algorithm-atlas-recursion-backtracking-review.zip.sha256": [
+    "algorithm-atlas-recursion-backtracking-review.zip"
+  ],
+  "README.md": [
+    "GRAPH-ALGORITHMS-REVIEW-REPORT.md"
+  ],
+  "SORTING-FINAL-AUDIT-REPORT.md": [
+    "SORTING-FINAL-AUDIT-REPORT.md"
+  ],
+  "algorithm-atlas-graph-algorithms-review.zip.verification.json": [
+    "PHASE-0-REPORT.md",
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "DIVIDE-CONQUER-REVIEW-REPORT.md",
+    "DYNAMIC-PROGRAMMING-REVIEW-REPORT.md",
+    "GREEDY-REVIEW-REPORT.md",
+    "GRAPH-ALGORITHMS-REVIEW-REPORT.md",
+    "algorithm-atlas-graph-algorithms-review.zip"
+  ],
+  "DIVIDE-CONQUER-REVIEW-REPORT.md": [
+    "algorithm-atlas-divide-conquer-review.zip",
+    "algorithm-atlas-divide-conquer-review.zip.sha256"
+  ],
+  "CONTRIBUTING.md": [
+    "GRAPH-ALGORITHMS-REVIEW-REPORT.md"
+  ],
+  "DYNAMIC-PROGRAMMING-REVIEW-REPORT.md": [
+    "algorithm-atlas-dynamic-programming-review.zip",
+    "algorithm-atlas-dynamic-programming-review.zip.sha256"
+  ],
+  "AGENTS.md": [
+    "GRAPH-ALGORITHMS-REVIEW-REPORT.md"
+  ],
+  "algorithm-atlas-dynamic-programming-review.zip.sha256": [
+    "algorithm-atlas-dynamic-programming-review.zip"
+  ],
+  "algorithm-atlas-searching-review.zip.verification.json": [
+    "PHASE-0-REPORT.md",
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "algorithm-atlas-searching-review.zip"
+  ],
+  "catalog.yaml": [
+    "GRAPH-ALGORITHMS-REVIEW-REPORT.md"
+  ],
+  "algorithm-atlas-divide-conquer-review.zip.verification.json": [
+    "PHASE-0-REPORT.md",
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "DIVIDE-CONQUER-REVIEW-REPORT.md",
+    "algorithm-atlas-divide-conquer-review.zip"
+  ],
+  "algorithm-atlas-greedy-review.zip.verification.json": [
+    "PHASE-0-REPORT.md",
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "DIVIDE-CONQUER-REVIEW-REPORT.md",
+    "DYNAMIC-PROGRAMMING-REVIEW-REPORT.md",
+    "GREEDY-REVIEW-REPORT.md",
+    "algorithm-atlas-greedy-review.zip"
+  ],
+  "SEARCHING-REVIEW-REPORT.md": [
+    "algorithm-atlas-searching-review.zip.sha256",
+    "algorithm-atlas-searching-review.zip"
+  ],
+  "algorithm-atlas-divide-conquer-review.zip.sha256": [
+    "algorithm-atlas-divide-conquer-review.zip"
+  ],
+  "docs/divide-conquer-checkpoints.md": [
+    "DIVIDE-CONQUER-REVIEW-REPORT.md"
+  ],
+  "docs/graph-algorithms-checkpoints.md": [
+    "GRAPH-ALGORITHMS-REVIEW-REPORT.md"
+  ],
+  "docs/progress.md": [
+    "GRAPH-ALGORITHMS-REVIEW-REPORT.md"
+  ],
+  "docs/ci-report-fix.md": [
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "DIVIDE-CONQUER-REVIEW-REPORT.md"
+  ],
+  "docs/sorting-checkpoints.md": [
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md"
+  ],
+  "docs/searching-checkpoints.md": [
+    "SEARCHING-REVIEW-REPORT.md",
+    "algorithm-atlas-searching-review.zip"
+  ],
+  "docs/development.md": [
+    "GRAPH-ALGORITHMS-REVIEW-REPORT.md"
+  ],
+  "docs/recursion-backtracking-checkpoints.md": [
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "algorithm-atlas-recursion-backtracking-review.zip"
+  ],
+  "scripts/package_dynamic_programming_review.py": [
+    "DYNAMIC-PROGRAMMING-REVIEW-REPORT.md",
+    "algorithm-atlas-dynamic-programming-review.zip"
+  ],
+  "scripts/package_greedy_review.py": [
+    "GREEDY-REVIEW-REPORT.md",
+    "algorithm-atlas-greedy-review.zip"
+  ],
+  "scripts/package_graph_algorithms_review.py": [
+    "GRAPH-ALGORITHMS-REVIEW-REPORT.md",
+    "algorithm-atlas-graph-algorithms-review.zip"
+  ],
+  "scripts/package_backtracking_review.py": [
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "algorithm-atlas-recursion-backtracking-review.zip"
+  ],
+  "scripts/package_divide_conquer_review.py": [
+    "DIVIDE-CONQUER-REVIEW-REPORT.md",
+    "algorithm-atlas-divide-conquer-review.zip"
+  ],
+  "docs/searching-evidence/README.md": [
+    "SEARCHING-REVIEW-REPORT.md"
+  ],
+  "docs/searching-evidence/files-changed.txt": [
+    "SEARCHING-REVIEW-REPORT.md",
+    "algorithm-atlas-searching-review.zip"
+  ],
+  "docs/greedy-evidence/approved-baseline.json": [
+    "PHASE-0-REPORT.md",
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "DIVIDE-CONQUER-REVIEW-REPORT.md",
+    "DYNAMIC-PROGRAMMING-REVIEW-REPORT.md"
+  ],
+  "docs/greedy-evidence/changed-files.txt": [
+    "GREEDY-REVIEW-REPORT.md"
+  ],
+  "docs/greedy-evidence/tracking-results.json": [
+    "PHASE-0-REPORT.md",
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "DIVIDE-CONQUER-REVIEW-REPORT.md",
+    "DYNAMIC-PROGRAMMING-REVIEW-REPORT.md",
+    "GREEDY-REVIEW-REPORT.md"
+  ],
+  "docs/greedy-evidence/catalog-baseline.yaml": [
+    "DYNAMIC-PROGRAMMING-REVIEW-REPORT.md"
+  ],
+  "docs/ci-report-evidence/git-status.txt": [
+    "DIVIDE-CONQUER-REVIEW-REPORT.md",
+    "algorithm-atlas-divide-conquer-review.zip.verification.json",
+    "algorithm-atlas-divide-conquer-review.zip",
+    "algorithm-atlas-divide-conquer-review.zip.sha256"
+  ],
+  "docs/ci-report-evidence/8446eab-catalog.txt": [
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md"
+  ],
+  "docs/ci-report-evidence/checkout-results.json": [
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md"
+  ],
+  "docs/ci-report-evidence/git-ls-files.txt": [
+    "PHASE-0-REPORT.md",
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "algorithm-atlas-searching-review.zip.sha256",
+    "algorithm-atlas-recursion-backtracking-review.zip.verification.json",
+    "algorithm-atlas-recursion-backtracking-review.zip",
+    "algorithm-atlas-recursion-backtracking-review.zip.sha256",
+    "algorithm-atlas-searching-review.zip",
+    "algorithm-atlas-searching-review.zip.verification.json"
+  ],
+  "docs/ci-report-evidence/report-tracking.json": [
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "DIVIDE-CONQUER-REVIEW-REPORT.md"
+  ],
+  "docs/audit-evidence/README.md": [
+    "SORTING-FINAL-AUDIT-REPORT.md"
+  ],
+  "docs/graph-algorithms-evidence/approved-baseline.json": [
+    "PHASE-0-REPORT.md",
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "DIVIDE-CONQUER-REVIEW-REPORT.md",
+    "DYNAMIC-PROGRAMMING-REVIEW-REPORT.md",
+    "GREEDY-REVIEW-REPORT.md"
+  ],
+  "docs/graph-algorithms-evidence/changed-files.txt": [
+    "GRAPH-ALGORITHMS-REVIEW-REPORT.md"
+  ],
+  "docs/graph-algorithms-evidence/tracking-results.json": [
+    "PHASE-0-REPORT.md",
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "DIVIDE-CONQUER-REVIEW-REPORT.md",
+    "DYNAMIC-PROGRAMMING-REVIEW-REPORT.md",
+    "GREEDY-REVIEW-REPORT.md",
+    "GRAPH-ALGORITHMS-REVIEW-REPORT.md"
+  ],
+  "docs/graph-algorithms-evidence/catalog-baseline.yaml": [
+    "GREEDY-REVIEW-REPORT.md"
+  ],
+  "docs/dynamic-programming-evidence/approved-baseline.json": [
+    "PHASE-0-REPORT.md",
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "DIVIDE-CONQUER-REVIEW-REPORT.md"
+  ],
+  "docs/dynamic-programming-evidence/changed-files.txt": [
+    "DYNAMIC-PROGRAMMING-REVIEW-REPORT.md"
+  ],
+  "docs/dynamic-programming-evidence/tracking-results.json": [
+    "PHASE-0-REPORT.md",
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "DIVIDE-CONQUER-REVIEW-REPORT.md",
+    "DYNAMIC-PROGRAMMING-REVIEW-REPORT.md"
+  ],
+  "docs/dynamic-programming-evidence/catalog-baseline.yaml": [
+    "DIVIDE-CONQUER-REVIEW-REPORT.md"
+  ],
+  "docs/divide-conquer-evidence/README.md": [
+    "DIVIDE-CONQUER-REVIEW-REPORT.md"
+  ],
+  "docs/divide-conquer-evidence/changed-files.txt": [
+    "DIVIDE-CONQUER-REVIEW-REPORT.md"
+  ],
+  "docs/divide-conquer-evidence/catalog-baseline.yaml": [
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md"
+  ],
+  "docs/recursion-backtracking-evidence/initial-missing-historical-reports.txt": [
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md"
+  ],
+  "docs/recursion-backtracking-evidence/README.md": [
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md"
+  ],
+  "docs/recursion-backtracking-evidence/changed-files.txt": [
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md",
+    "RECURSION-BACKTRACKING-REVIEW-REPORT.md"
+  ],
+  "docs/recursion-backtracking-evidence/revalidation/recovered-reports.json": [
+    "SORTING-REVIEW-REPORT.md",
+    "SORTING-FINAL-AUDIT-REPORT.md",
+    "SEARCHING-REVIEW-REPORT.md"
+  ]
+}

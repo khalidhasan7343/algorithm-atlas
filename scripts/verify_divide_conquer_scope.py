@@ -1,8 +1,11 @@
 """Verify Phase 4 preserves canonical scope and all prior algorithm files."""
+import argparse
 import hashlib
 import json
 from pathlib import Path
 import yaml
+
+from review_paths import assert_preserved
 
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / "docs/divide-conquer-evidence"
@@ -12,11 +15,10 @@ REUSED = {"merge-sort", "quick-sort", "binary-search"}
 MUTABLE = {"documentation_status", "python_status", "cpp_status", "test_status", "notes"}
 
 
-def main():
+def main(write_evidence=True):
     baseline = json.loads((EVIDENCE / "approved-baseline.json").read_text())
     for name, digest in baseline["files_sha256"].items():
-        assert (ROOT / name).is_file(), name
-        assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == digest, name
+        assert_preserved(ROOT, name, digest)
     original = (EVIDENCE / baseline['catalog_baseline_file']).read_bytes()
     assert hashlib.sha256(original).hexdigest() == baseline['catalog_sha256']
     before = yaml.safe_load(original)
@@ -36,15 +38,18 @@ def main():
     for name in REUSED:
         assert not (ROOT / "dsa/divide-and-conquer" / name).exists(), name
     report = {"baseline_HEAD":baseline["baseline_HEAD"],
-              "prior_files_unchanged":len(baseline["files_sha256"]),
+              "prior_files_baseline_bytes_verified":len(baseline["files_sha256"]),
               "syllabus_and_all_canonical_identities_unchanged":True,
               "out_of_scope_catalog_records_unchanged":True,
               "category_memberships":len(category["items"]),
               "new_topics":sorted(NEW), "reused_topics":sorted(REUSED),
               "duplicate_reused_folders":0}
-    (EVIDENCE / "preservation-results.json").write_text(json.dumps(report,indent=2)+"\n")
+    if write_evidence:
+        (EVIDENCE / "preservation-results.json").write_text(json.dumps(report,indent=2)+"\n")
     print(json.dumps(report,indent=2))
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check-only", action="store_true", help="Verify without replacing historical execution evidence.")
+    main(write_evidence=not parser.parse_args().check_only)

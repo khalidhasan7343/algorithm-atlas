@@ -11,7 +11,7 @@ import tempfile
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / 'algorithm-atlas-recursion-backtracking-review.zip'
+OUTPUT = ROOT / 'artifacts/review-packages/recursion-backtracking/algorithm-atlas-recursion-backtracking-review.zip'
 PREFIX = 'algorithm-atlas/'
 EXCLUDED_DIRS = {
     '.git', '.venv', 'venv', 'env', '__pycache__', '.pytest_cache', '.mypy_cache',
@@ -106,9 +106,9 @@ def main():
             'tests/test_python.py', 'tests/test_cpp.py',
         ))
     required.update({
-        'RECURSION-BACKTRACKING-REVIEW-REPORT.md',
-        'SORTING-REVIEW-REPORT.md', 'SORTING-FINAL-AUDIT-REPORT.md',
-        'SEARCHING-REVIEW-REPORT.md',
+        'docs/reviews/recursion-backtracking/RECURSION-BACKTRACKING-REVIEW-REPORT.md',
+        'docs/reviews/sorting/SORTING-REVIEW-REPORT.md', 'docs/reviews/sorting/SORTING-FINAL-AUDIT-REPORT.md',
+        'docs/reviews/searching/SEARCHING-REVIEW-REPORT.md',
         'docs/recursion-backtracking-checkpoints.md',
         'docs/recursion-backtracking-evidence/approved-baseline.json',
         'docs/recursion-backtracking-evidence/preservation-results.json',
@@ -143,6 +143,7 @@ def main():
     for name in ('n-queens', 'sudoku-solver', 'rat-in-a-maze', 'graph-coloring',
                  'hamiltonian-path', 'subset-sum-backtracking'):
         required.add(f'dsa/recursion-and-backtracking/{name}/tests/cases.py')
+    required.update({'scripts/review_paths.py', 'docs/maintenance/root-cleanup/manifest.json'})
     assert required <= payload.keys(), sorted(required - payload.keys())
 
     directories = {PREFIX}
@@ -151,6 +152,7 @@ def main():
             if parent.as_posix() != '.':
                 directories.add(PREFIX + parent.as_posix() + '/')
 
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     assert not OUTPUT.exists(), 'Refusing to overwrite an existing review artifact'
     with zipfile.ZipFile(OUTPUT, 'x', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for name in sorted(directories):

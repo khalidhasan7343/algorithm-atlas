@@ -7,6 +7,8 @@ import tempfile
 
 import yaml
 
+from review_paths import report_paths
+
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / "docs/greedy-evidence"
 
@@ -20,7 +22,7 @@ def checked(command, cwd=ROOT):
 
 def main():
     catalog = yaml.safe_load((ROOT / "catalog.yaml").read_text())
-    reports = sorted({p.name for p in ROOT.glob("*REPORT*.md")} | {catalog["development"]["completion_report"]})
+    reports = sorted(set(report_paths(ROOT)) | {catalog["development"]["completion_report"]})
     for name in reports:
         assert (ROOT / name).is_file() and (ROOT / name).read_text().strip(), name
         checked(["git", "ls-files", "--error-unmatch", "--", name])

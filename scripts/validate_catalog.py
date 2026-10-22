@@ -58,6 +58,14 @@ RECURSION_BACKTRACKING_BATCHES = (
     ("graph-coloring", "hamiltonian-path", "subset-sum-backtracking"),
 )
 DYNAMIC_PROGRAMMING_SCOPE = "Dynamic Programming: eleven listed canonical topics only"
+GRAPH_SCOPE = "Graph Algorithms category only"
+GRAPH_BATCHES = (
+    ("breadth-first-search", "depth-first-search", "union-find", "topological-sorting"),
+    ("dijkstra", "bellman-ford", "floyd-warshall"),
+    ("kruskal", "prim"),
+    ("tarjan-strongly-connected-components", "kosaraju-strongly-connected-components", "bridges-detection", "articulation-points"),
+    ("a-star-search", "johnson"),
+)
 GREEDY_SCOPE = "Greedy: four canonical topics only"
 GREEDY_BATCHES = (
     ("activity-selection", "fractional-knapsack"),
@@ -194,6 +202,19 @@ def _validate_development(
     if status == "awaiting-review" and active is not None:
         report.errors.append("development.awaiting-review requires active_batch=null")
 
+    if state.get("scope") == GRAPH_SCOPE and valid_completed:
+        if len(completed) > len(GRAPH_BATCHES):
+            report.errors.append("development Graph Algorithms has only five batches")
+        if status == "in-progress" and (type(active) is not int or active not in range(1, 6)):
+            report.errors.append("development Graph Algorithms active_batch must be 1..5")
+        if status == "awaiting-review" and completed != [1, 2, 3, 4, 5]:
+            report.errors.append("development Graph Algorithms awaiting-review requires all five batches")
+        for batch in completed[:5]:
+            for algorithm_id in GRAPH_BATCHES[batch-1]:
+                record = algorithms.get(algorithm_id, {})
+                if not all(isinstance(record.get(field), str) and record[field] in ARTIFACT_STATUSES for field in STATUS_FIELDS[:3]) or record.get("test_status") not in ("tested", "reviewed"):
+                    report.errors.append(f"development Graph Algorithms requires completed/tested {algorithm_id}")
+        return
     if state.get("scope") == GREEDY_SCOPE and valid_completed:
         if len(completed) > 2:
             report.errors.append("development Greedy has only two batches")

@@ -1,0 +1,50 @@
+{
+  "dijkstra": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/graph-algorithms/dijkstra",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.466,
+    "output": "..........                                                               [100%]\n10 passed in 4.31s\n"
+  },
+  "bellman-ford": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/graph-algorithms/bellman-ford",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.519,
+    "output": "..........                                                               [100%]\n10 passed in 4.41s\n"
+  },
+  "floyd-warshall": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/graph-algorithms/floyd-warshall",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.77,
+    "output": "..........                                                               [100%]\n10 passed in 4.65s\n"
+  }
+}

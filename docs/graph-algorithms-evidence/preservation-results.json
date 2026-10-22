@@ -1,0 +1,89 @@
+{
+  "baseline_revision": "a495d22f3ee16c3790c60b432566a42572e94844",
+  "prior_files_byte_identical": 273,
+  "syllabus_memberships": 256,
+  "canonical_topics": 235,
+  "categories": 35,
+  "graph_memberships": 15,
+  "all_memberships_identities_and_out_of_scope_records_preserved": true,
+  "implemented_scope": [
+    "a-star-search",
+    "articulation-points",
+    "bellman-ford",
+    "breadth-first-search",
+    "bridges-detection",
+    "depth-first-search",
+    "dijkstra",
+    "floyd-warshall",
+    "johnson",
+    "kosaraju-strongly-connected-components",
+    "kruskal",
+    "prim",
+    "tarjan-strongly-connected-components",
+    "topological-sorting",
+    "union-find"
+  ],
+  "duplicate_cross_category_folders": 0,
+  "lesson_audit": {
+    "breadth-first-search": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "depth-first-search": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "dijkstra": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "bellman-ford": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "floyd-warshall": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "kruskal": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "prim": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "topological-sorting": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "tarjan-strongly-connected-components": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "kosaraju-strongly-connected-components": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "union-find": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "a-star-search": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "bridges-detection": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "articulation-points": {
+      "sections": 25,
+      "required_artifacts": 6
+    },
+    "johnson": {
+      "sections": 25,
+      "required_artifacts": 6
+    }
+  }
+}

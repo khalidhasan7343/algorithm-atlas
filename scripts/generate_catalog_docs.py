@@ -197,8 +197,9 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
         backtracking = state.get('scope') == 'Recursion & Backtracking category only'
         divide = state.get('scope') == 'Divide & Conquer category only'
         dynamic = state.get('scope') == 'Dynamic Programming: eleven listed canonical topics only'
+        graph = state.get('scope') == 'Graph Algorithms category only'
         greedy = state.get('scope') == 'Greedy: four canonical topics only'
-        label = 'greedy' if greedy else 'dynamic programming' if dynamic else 'divide/conquer' if divide else 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
+        label = 'graph algorithms' if graph else 'greedy' if greedy else 'dynamic programming' if dynamic else 'divide/conquer' if divide else 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
         batches = state.get('completed_batches', [])
         lines.append(f'Validated {label} batches: ' +
                      (', '.join(str(batch) for batch in batches) if batches else 'none yet') + '.')
@@ -210,7 +211,18 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
         if state.get('completion_report'):
             lines += ['', 'See the '
                       + link(path, ROOT / state['completion_report'], f'{label} completion report') + '.']
-        if greedy:
+        if graph:
+            lines += ['', 'The owner explicitly approved Phase 6 on 2026-10-23 and authorized '
+                      'all fifteen canonical Graph Algorithms in five sequential validated batches: '
+                      'foundations; shortest paths; minimum spanning forests; connectivity; '
+                      'A* and Johnson. Shared DP and Greedy memberships reuse these Graph paths.', '',
+                      'Preserve 35 categories, 256 original memberships and 235 canonical topics. '
+                      'Prior approval records remain historical; current implementation status '
+                      'comes from the canonical catalog records.', '',
+                      'Stop after the Phase 7 report, complete review ZIP and checksum for '
+                      'explicit owner review. Phase 7 is not human-approved. No subsequent '
+                      'category, commit, push or publication is authorized.']
+        elif greedy:
             lines += ['', 'The owner explicitly approved Phase 5 and authorized Phase 6: '
                       'four Greedy-owned canonical topics only. Batch 1: Activity Selection '
                       'and Fractional Knapsack; Batch 2: Huffman Coding and Job Sequencing '
@@ -330,14 +342,17 @@ def category_page(category: dict, algorithms: dict) -> str:
                   '(requiring nonnegative edge weights); Prim chooses a cheapest edge across '
                   'the growing-tree cut; Kruskal accepts a cheapest edge that does not create '
                   'a cycle. These are conceptual Greedy connections, not Phase 6 implementations. '
-                  'Their canonical Graph paths and existing statuses are preserved. Complete '
-                  'them only during an explicitly authorized Graph Algorithms phase. The four '
-                  'Phase 6 implementations do not complete all seven A11 memberships.']
+                  'Their canonical Graph paths are preserved; the table shows current Graph '
+                  'implementation status. Phase 7 is explicitly authorized to implement them. '
+                  'Phase 6 approval covers its four Greedy-owned topics; Graph completion '
+                  'and owner review are recorded separately across all seven A11 memberships.']
     if category['id'] == 'A12':
-        lines += ['', 'Phase 5 authorizes the eleven DP-owned canonical topics only. '
-                  'Bellman-Ford and Floyd-Warshall retain their shared graph canonical '
-                  'locations and remain planned outside this scope. Completion of '
-                  'the eleven requested topics does not complete all 13 memberships.']
+        lines += ['', 'Phase 5 approval covers the eleven DP-owned canonical topics. '
+                  'Bellman-Ford and Floyd-Warshall retain their shared Graph canonical '
+                  'locations, with current implementation status shown above. Their '
+                  'edge-relaxation and intermediate-vertex recurrences also illustrate '
+                  'dynamic programming. Phase 7 authorizes their Graph implementations; '
+                  'historical Phase 5 approval and current Graph review stay separate.']
     lines += [
         '', '## Learning and contribution scope', '',
         'Choose prerequisites through the '

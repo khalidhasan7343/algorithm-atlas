@@ -67,21 +67,21 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Breadth-First Search | [breadth-first-search](../dsa/graph-algorithms/breadth-first-search/README.md) | planned |
-| Depth-First Search | [depth-first-search](../dsa/graph-algorithms/depth-first-search/README.md) | planned |
-| Dijkstra's Algorithm | [dijkstra](../dsa/graph-algorithms/dijkstra/README.md) | planned |
-| Bellman-Ford | [bellman-ford](../dsa/graph-algorithms/bellman-ford/README.md) | planned |
-| Floyd-Warshall | [floyd-warshall](../dsa/graph-algorithms/floyd-warshall/README.md) | planned |
-| Kruskal's Minimum Spanning Tree | [kruskal](../dsa/graph-algorithms/kruskal/README.md) | planned |
-| Prim's Minimum Spanning Tree | [prim](../dsa/graph-algorithms/prim/README.md) | planned |
-| Topological Sorting | [topological-sorting](../dsa/graph-algorithms/topological-sorting/README.md) | planned |
-| Tarjan's Strongly Connected Components | [tarjan-strongly-connected-components](../dsa/graph-algorithms/tarjan-strongly-connected-components/README.md) | planned |
-| Kosaraju's Strongly Connected Components | [kosaraju-strongly-connected-components](../dsa/graph-algorithms/kosaraju-strongly-connected-components/README.md) | planned |
-| Union-Find / Disjoint Set Union | [union-find](../dsa/graph-algorithms/union-find/README.md) | planned |
-| A* Search | [a-star-search](../dsa/graph-algorithms/a-star-search/README.md) | planned |
-| Bridges Detection | [bridges-detection](../dsa/graph-algorithms/bridges-detection/README.md) | planned |
-| Articulation Points | [articulation-points](../dsa/graph-algorithms/articulation-points/README.md) | planned |
-| Johnson's Algorithm | [johnson](../dsa/graph-algorithms/johnson/README.md) | planned |
+| Breadth-First Search | [breadth-first-search](../dsa/graph-algorithms/breadth-first-search/README.md) | complete |
+| Depth-First Search | [depth-first-search](../dsa/graph-algorithms/depth-first-search/README.md) | complete |
+| Dijkstra's Algorithm | [dijkstra](../dsa/graph-algorithms/dijkstra/README.md) | complete |
+| Bellman-Ford | [bellman-ford](../dsa/graph-algorithms/bellman-ford/README.md) | complete |
+| Floyd-Warshall | [floyd-warshall](../dsa/graph-algorithms/floyd-warshall/README.md) | complete |
+| Kruskal's Minimum Spanning Tree | [kruskal](../dsa/graph-algorithms/kruskal/README.md) | complete |
+| Prim's Minimum Spanning Tree | [prim](../dsa/graph-algorithms/prim/README.md) | complete |
+| Topological Sorting | [topological-sorting](../dsa/graph-algorithms/topological-sorting/README.md) | complete |
+| Tarjan's Strongly Connected Components | [tarjan-strongly-connected-components](../dsa/graph-algorithms/tarjan-strongly-connected-components/README.md) | complete |
+| Kosaraju's Strongly Connected Components | [kosaraju-strongly-connected-components](../dsa/graph-algorithms/kosaraju-strongly-connected-components/README.md) | complete |
+| Union-Find / Disjoint Set Union | [union-find](../dsa/graph-algorithms/union-find/README.md) | complete |
+| A* Search | [a-star-search](../dsa/graph-algorithms/a-star-search/README.md) | complete |
+| Bridges Detection | [bridges-detection](../dsa/graph-algorithms/bridges-detection/README.md) | complete |
+| Articulation Points | [articulation-points](../dsa/graph-algorithms/articulation-points/README.md) | complete |
+| Johnson's Algorithm | [johnson](../dsa/graph-algorithms/johnson/README.md) | complete |
 
 ## A6. [Tree Algorithms](../dsa/tree-algorithms/README.md)
 
@@ -153,9 +153,9 @@ Foundation checks validate repository structure; they are separate from tests of
 | Huffman Coding | [huffman-coding](../dsa/greedy/huffman-coding/README.md) | complete |
 | Fractional Knapsack | [fractional-knapsack](../dsa/greedy/fractional-knapsack/README.md) | complete |
 | Job Sequencing with Deadlines | [job-sequencing-with-deadlines](../dsa/greedy/job-sequencing-with-deadlines/README.md) | complete |
-| Kruskal's Algorithm | [kruskal](../dsa/graph-algorithms/kruskal/README.md) | planned |
-| Prim's Algorithm | [prim](../dsa/graph-algorithms/prim/README.md) | planned |
-| Dijkstra's Algorithm | [dijkstra](../dsa/graph-algorithms/dijkstra/README.md) | planned |
+| Kruskal's Algorithm | [kruskal](../dsa/graph-algorithms/kruskal/README.md) | complete |
+| Prim's Algorithm | [prim](../dsa/graph-algorithms/prim/README.md) | complete |
+| Dijkstra's Algorithm | [dijkstra](../dsa/graph-algorithms/dijkstra/README.md) | complete |
 
 ## A12. [Dynamic Programming](../dsa/dynamic-programming/README.md)
 
@@ -172,8 +172,8 @@ Foundation checks validate repository structure; they are separate from tests of
 | Kadane's Algorithm | [kadane](../dsa/dynamic-programming/kadane/README.md) | complete |
 | Rod Cutting | [rod-cutting](../dsa/dynamic-programming/rod-cutting/README.md) | complete |
 | Palindrome Partitioning | [palindrome-partitioning](../dsa/dynamic-programming/palindrome-partitioning/README.md) | complete |
-| Bellman-Ford | [bellman-ford](../dsa/graph-algorithms/bellman-ford/README.md) | planned |
-| Floyd-Warshall | [floyd-warshall](../dsa/graph-algorithms/floyd-warshall/README.md) | planned |
+| Bellman-Ford | [bellman-ford](../dsa/graph-algorithms/bellman-ford/README.md) | complete |
+| Floyd-Warshall | [floyd-warshall](../dsa/graph-algorithms/floyd-warshall/README.md) | complete |
 
 ## B1. [Supervised Learning — Regression](../machine-learning/supervised-learning/regression/README.md)
 
@@ -345,8 +345,8 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Breadth-First Search (BFS) | [breadth-first-search](../dsa/graph-algorithms/breadth-first-search/README.md) | planned |
-| Depth-First Search (DFS) | [depth-first-search](../dsa/graph-algorithms/depth-first-search/README.md) | planned |
+| Breadth-First Search (BFS) | [breadth-first-search](../dsa/graph-algorithms/breadth-first-search/README.md) | complete |
+| Depth-First Search (DFS) | [depth-first-search](../dsa/graph-algorithms/depth-first-search/README.md) | complete |
 | Depth-Limited Search | [depth-limited-search](../artificial-intelligence/uninformed-search/depth-limited-search/README.md) | planned |
 | Iterative Deepening DFS (IDDFS) | [iterative-deepening-dfs](../artificial-intelligence/uninformed-search/iterative-deepening-dfs/README.md) | planned |
 | Uniform Cost Search (UCS) | [uniform-cost-search](../artificial-intelligence/uninformed-search/uniform-cost-search/README.md) | planned |
@@ -357,7 +357,7 @@ Foundation checks validate repository structure; they are separate from tests of
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
 | Greedy Best-First Search | [greedy-best-first-search](../artificial-intelligence/informed-search/greedy-best-first-search/README.md) | planned |
-| A* Search | [a-star-search](../dsa/graph-algorithms/a-star-search/README.md) | planned |
+| A* Search | [a-star-search](../dsa/graph-algorithms/a-star-search/README.md) | complete |
 | Iterative Deepening A* (IDA*) | [iterative-deepening-a-star](../artificial-intelligence/informed-search/iterative-deepening-a-star/README.md) | planned |
 | Recursive Best-First Search (RBFS) | [recursive-best-first-search](../artificial-intelligence/informed-search/recursive-best-first-search/README.md) | planned |
 | Simplified Memory-Bounded A* (SMA*) | [simplified-memory-bounded-a-star](../artificial-intelligence/informed-search/simplified-memory-bounded-a-star/README.md) | planned |

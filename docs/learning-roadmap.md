@@ -2,7 +2,7 @@
 
 Progress from foundational problem solving to specialized AI topics. These levels describe a study order, not repository development phases: learning a later level does not authorize implementation outside the approved development phase.
 
-**Current scope:** the owner approved Phase 5 and authorized Phase 6 — four Greedy-owned canonical topics only. Follow [progress](progress.md) and the [two-batch checkpoint](greedy-checkpoints.md). Keep seven A11 memberships: the three shared graph topics retain their canonical paths and statuses, with implementations deferred to an authorized Graph phase.
+**Current scope:** the owner approved Phase 6 and authorized all fifteen Phase 7 Graph Algorithms. Follow [progress](progress.md), [graph conventions](graph-conventions.md) and the [five-batch checkpoint](graph-algorithms-checkpoints.md). Preserve 35 categories, 256 original memberships and 235 canonical topics. Stop for Phase 7 owner review before any next category.
 
 ## Level 1 — DSA Foundations
 
@@ -28,9 +28,9 @@ Explore decomposition, search, and reusable state:
 - [Inorder Traversal](../dsa/tree-algorithms/inorder-traversal/) and [Breadth-First Search](../dsa/graph-algorithms/breadth-first-search/): compare traversal order and visited-state tracking.
 - [Activity Selection](../dsa/greedy/activity-selection/), [0/1 Knapsack](../dsa/dynamic-programming/zero-one-knapsack/), and [Longest Common Subsequence](../dsa/dynamic-programming/longest-common-subsequence/): distinguish a provable greedy choice from a dynamic-programming state and recurrence.
 
-**Greedy algorithms implemented in Phase 6:** [Activity Selection](../dsa/greedy/activity-selection/), [Fractional Knapsack](../dsa/greedy/fractional-knapsack/), [Huffman Coding](../dsa/greedy/huffman-coding/) and [Job Sequencing with Deadlines](../dsa/greedy/job-sequencing-with-deadlines/). These are the four completed implementation topics in the authorized scope; Phase 6 owner review remains pending.
+**Greedy algorithms implemented in Phase 6:** [Activity Selection](../dsa/greedy/activity-selection/), [Fractional Knapsack](../dsa/greedy/fractional-knapsack/), [Huffman Coding](../dsa/greedy/huffman-coding/) and [Job Sequencing with Deadlines](../dsa/greedy/job-sequencing-with-deadlines/). These four Greedy-owned topics received explicit owner approval before Phase 7.
 
-**Graph algorithms that also use the Greedy paradigm:** [Dijkstra](../dsa/graph-algorithms/dijkstra/) fixes a smallest tentative-distance vertex under nonnegative weights; [Prim](../dsa/graph-algorithms/prim/) grows an MST through a cheapest cut edge; [Kruskal](../dsa/graph-algorithms/kruskal/) adds a cheapest cycle-free edge. These conceptual links preserve Graph canonical ownership and planned statuses; Phase 6 does not implement them. An explicit Graph Algorithms authorization is required. No membership or canonical-topic count changes.
+**Graph algorithms that also use the Greedy paradigm:** [Dijkstra](../dsa/graph-algorithms/dijkstra/) fixes a smallest tentative-distance vertex under nonnegative weights; [Prim](../dsa/graph-algorithms/prim/) grows an MST through a cheapest cut edge; [Kruskal](../dsa/graph-algorithms/kruskal/) adds a cheapest cycle-free edge. These conceptual links preserve Graph canonical ownership. Their implementations are now completed under the explicit Phase 7 authorization, with Phase 7 owner review pending. Phase 6 approval covers its four Greedy-owned implementations. No membership or canonical-topic count changes.
 
 **Before moving on:** justify a base case, detect repeated subproblems, explain why a greedy decision is safe when applicable, and choose relevant boundary tests instead of reusing one test list for every problem.
 
@@ -115,4 +115,15 @@ Choose branches according to the structure of the problem:
 
 Follow the prerequisites rather than treating levels as a fixed schedule. For each available completed topic, read its intuition and contract, predict a small example's output, inspect the implementation, run its documented tests, and explain its complexity in your own words. For unimplemented topics, use the linked planning notes to understand scope and prerequisites; runnable material follows only within an approved category.
 
-Contributors should consult the [development guide](development.md) and the current [progress tracker](progress.md). The current authorization covers the four Greedy implementations only. After both internal batches and the review package, stop for explicit owner review before any further development scope.
+Contributors should consult the [development guide](development.md) and the current [progress tracker](progress.md). The current authorization covers all fifteen Graph Algorithms only. After five internal batches and the review package, stop for explicit owner review before any further development scope.
+
+
+## Graph Algorithms learning sequence
+
+1. Foundations: [BFS](../dsa/graph-algorithms/breadth-first-search/), [DFS](../dsa/graph-algorithms/depth-first-search/), [Union-Find](../dsa/graph-algorithms/union-find/) and [Topological Sorting](../dsa/graph-algorithms/topological-sorting/). Trace queue layers, iterative return frames, partitions and dependency order.
+2. Weighted paths: [Dijkstra](../dsa/graph-algorithms/dijkstra/), [Bellman-Ford](../dsa/graph-algorithms/bellman-ford/) and [Floyd-Warshall](../dsa/graph-algorithms/floyd-warshall/). Distinguish nonnegative greedy selection from edge-count and intermediate-vertex DP recurrences. Bellman-Ford/Floyd remain canonical Graph implementations discoverable through Dynamic Programming.
+3. Minimum spanning forests: [Kruskal](../dsa/graph-algorithms/kruskal/) and [Prim](../dsa/graph-algorithms/prim/). Prove cut safety and verify connectivity, acyclicity and total cost independently of shortest paths.
+4. Structure: [Tarjan SCC](../dsa/graph-algorithms/tarjan-strongly-connected-components/), [Kosaraju SCC](../dsa/graph-algorithms/kosaraju-strongly-connected-components/), [Bridges](../dsa/graph-algorithms/bridges-detection/) and [Articulation Points](../dsa/graph-algorithms/articulation-points/). Compare mutual reachability and deletion effects; retain edge IDs for multigraphs.
+5. Advanced routes: [A*](../dsa/graph-algorithms/a-star-search/) and [Johnson](../dsa/graph-algorithms/johnson/). Establish admissibility/reopening and potential reweighting before trusting their results.
+
+All fifteen have Python/C++ implementations and executable independent tests. Current catalog status is implementation evidence, not Phase 7 human approval. The historical Phase 5 and Phase 6 reports remain unchanged; latest approvals and actual Phase 7 commands are in the Graph checkpoint. No next category is authorized.

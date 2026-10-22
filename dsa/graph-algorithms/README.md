@@ -8,21 +8,21 @@ This category preserves **15 original syllabus entries**. Each link points to th
 
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Breadth-First Search | [breadth-first-search](breadth-first-search/README.md) | planned |
-| Depth-First Search | [depth-first-search](depth-first-search/README.md) | planned |
-| Dijkstra's Algorithm | [dijkstra](dijkstra/README.md) | planned |
-| Bellman-Ford | [bellman-ford](bellman-ford/README.md) | planned |
-| Floyd-Warshall | [floyd-warshall](floyd-warshall/README.md) | planned |
-| Kruskal's Minimum Spanning Tree | [kruskal](kruskal/README.md) | planned |
-| Prim's Minimum Spanning Tree | [prim](prim/README.md) | planned |
-| Topological Sorting | [topological-sorting](topological-sorting/README.md) | planned |
-| Tarjan's Strongly Connected Components | [tarjan-strongly-connected-components](tarjan-strongly-connected-components/README.md) | planned |
-| Kosaraju's Strongly Connected Components | [kosaraju-strongly-connected-components](kosaraju-strongly-connected-components/README.md) | planned |
-| Union-Find / Disjoint Set Union | [union-find](union-find/README.md) | planned |
-| A* Search | [a-star-search](a-star-search/README.md) | planned |
-| Bridges Detection | [bridges-detection](bridges-detection/README.md) | planned |
-| Articulation Points | [articulation-points](articulation-points/README.md) | planned |
-| Johnson's Algorithm | [johnson](johnson/README.md) | planned |
+| Breadth-First Search | [breadth-first-search](breadth-first-search/README.md) | complete |
+| Depth-First Search | [depth-first-search](depth-first-search/README.md) | complete |
+| Dijkstra's Algorithm | [dijkstra](dijkstra/README.md) | complete |
+| Bellman-Ford | [bellman-ford](bellman-ford/README.md) | complete |
+| Floyd-Warshall | [floyd-warshall](floyd-warshall/README.md) | complete |
+| Kruskal's Minimum Spanning Tree | [kruskal](kruskal/README.md) | complete |
+| Prim's Minimum Spanning Tree | [prim](prim/README.md) | complete |
+| Topological Sorting | [topological-sorting](topological-sorting/README.md) | complete |
+| Tarjan's Strongly Connected Components | [tarjan-strongly-connected-components](tarjan-strongly-connected-components/README.md) | complete |
+| Kosaraju's Strongly Connected Components | [kosaraju-strongly-connected-components](kosaraju-strongly-connected-components/README.md) | complete |
+| Union-Find / Disjoint Set Union | [union-find](union-find/README.md) | complete |
+| A* Search | [a-star-search](a-star-search/README.md) | complete |
+| Bridges Detection | [bridges-detection](bridges-detection/README.md) | complete |
+| Articulation Points | [articulation-points](articulation-points/README.md) | complete |
+| Johnson's Algorithm | [johnson](johnson/README.md) | complete |
 
 ## Learning and contribution scope
 

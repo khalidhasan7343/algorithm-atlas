@@ -1,4 +1,5 @@
 """Verify scope, prior-file preservation, all lesson sections and test artifacts."""
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -8,14 +9,16 @@ import yaml
 
 from validate_catalog import DYNAMIC_PROGRAMMING_BATCHES, SECTIONS, STATUS_FIELDS
 
+from review_paths import assert_preserved
+
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / "docs/dynamic-programming-evidence"
 
 
-def main():
+def main(write_evidence=True):
     baseline = json.loads((EVIDENCE / "approved-baseline.json").read_text())
     for name, digest in baseline["sha256"].items():
-        assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == digest, name
+        assert_preserved(ROOT, name, digest)
     before = yaml.safe_load((EVIDENCE / "catalog-baseline.yaml").read_text())
     after = yaml.safe_load((ROOT / "catalog.yaml").read_text())
     assert before["categories"] == after["categories"]
@@ -42,14 +45,17 @@ def main():
     for name in ("bellman-ford", "floyd-warshall"):
         assert current[name] == original[name]
         assert not (ROOT / "dsa/dynamic-programming" / name).exists()
-    result = {"baseline_revision": baseline["revision"], "prior_files_byte_identical": len(baseline["sha256"]),
+    result = {"baseline_revision": baseline["revision"], "prior_files_baseline_bytes_verified": len(baseline["sha256"]),
               "all_syllabus_memberships_and_identities_preserved": True,
               "out_of_scope_catalog_records_unchanged": True, "dp_memberships": 13,
               "implemented_scope": sorted(allowed), "shared_graph_memberships_still_planned": ["bellman-ford", "floyd-warshall"],
               "lesson_audit": audited}
-    (EVIDENCE / "preservation-results.json").write_text(json.dumps(result, indent=2)+"\n")
+    if write_evidence:
+        (EVIDENCE / "preservation-results.json").write_text(json.dumps(result, indent=2)+"\n")
     print(json.dumps(result, indent=2))
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check-only", action="store_true", help="Verify without replacing historical execution evidence.")
+    main(write_evidence=not parser.parse_args().check_only)

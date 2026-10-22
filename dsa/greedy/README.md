@@ -19,11 +19,11 @@ This category preserves **7 original syllabus entries**. Each link points to the
 
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Kruskal's Algorithm | [kruskal](../graph-algorithms/kruskal/README.md) | planned |
-| Prim's Algorithm | [prim](../graph-algorithms/prim/README.md) | planned |
-| Dijkstra's Algorithm | [dijkstra](../graph-algorithms/dijkstra/README.md) | planned |
+| Kruskal's Algorithm | [kruskal](../graph-algorithms/kruskal/README.md) | complete |
+| Prim's Algorithm | [prim](../graph-algorithms/prim/README.md) | complete |
+| Dijkstra's Algorithm | [dijkstra](../graph-algorithms/dijkstra/README.md) | complete |
 
-Dijkstra chooses the unsettled vertex with smallest tentative distance (requiring nonnegative edge weights); Prim chooses a cheapest edge across the growing-tree cut; Kruskal accepts a cheapest edge that does not create a cycle. These are conceptual Greedy connections, not Phase 6 implementations. Their canonical Graph paths and existing statuses are preserved. Complete them only during an explicitly authorized Graph Algorithms phase. The four Phase 6 implementations do not complete all seven A11 memberships.
+Dijkstra chooses the unsettled vertex with smallest tentative distance (requiring nonnegative edge weights); Prim chooses a cheapest edge across the growing-tree cut; Kruskal accepts a cheapest edge that does not create a cycle. These are conceptual Greedy connections, not Phase 6 implementations. Their canonical Graph paths are preserved; the table shows current Graph implementation status. Phase 7 is explicitly authorized to implement them. Phase 6 approval covers its four Greedy-owned topics; Graph completion and owner review are recorded separately across all seven A11 memberships.
 
 ## Learning and contribution scope
 

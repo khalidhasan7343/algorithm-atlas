@@ -1,0 +1,18 @@
+Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 317 Markdown files, and 3862 local links.
+ERROR: breadth-first-search: artifact exists while python_status is planned
+ERROR: breadth-first-search: artifact exists while cpp_status is planned
+ERROR: breadth-first-search: artifact exists while test_status is planned
+ERROR: breadth-first-search: artifact exists while test_status is planned
+ERROR: depth-first-search: artifact exists while python_status is planned
+ERROR: depth-first-search: artifact exists while cpp_status is planned
+ERROR: depth-first-search: artifact exists while test_status is planned
+ERROR: depth-first-search: artifact exists while test_status is planned
+ERROR: topological-sorting: artifact exists while python_status is planned
+ERROR: topological-sorting: artifact exists while cpp_status is planned
+ERROR: topological-sorting: artifact exists while test_status is planned
+ERROR: topological-sorting: artifact exists while test_status is planned
+ERROR: union-find: artifact exists while python_status is planned
+ERROR: union-find: artifact exists while cpp_status is planned
+ERROR: union-find: artifact exists while test_status is planned
+ERROR: union-find: artifact exists while test_status is planned
+Validation failed with 16 error(s).

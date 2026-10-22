@@ -11,7 +11,7 @@ import tempfile
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / 'algorithm-atlas-divide-conquer-review.zip'
+OUTPUT = ROOT / 'artifacts/review-packages/divide-conquer/algorithm-atlas-divide-conquer-review.zip'
 PREFIX = 'algorithm-atlas/'
 EXCLUDED_DIRS = {
     '.git', '.venv', 'venv', 'env', '__pycache__', '.pytest_cache', '.mypy_cache',
@@ -81,7 +81,7 @@ def main():
     import yaml
     catalog = yaml.safe_load(payload['catalog.yaml'])
     required = {'README.md','LICENSE','AGENTS.md','CONTRIBUTING.md','catalog.yaml',
-                'DIVIDE-CONQUER-REVIEW-REPORT.md','docs/progress.md',
+                'docs/reviews/divide-conquer/DIVIDE-CONQUER-REVIEW-REPORT.md','docs/progress.md',
                 'docs/divide-conquer-checkpoints.md','scripts/run_divide_conquer_validation.py',
                 'scripts/verify_divide_conquer_scope.py','scripts/verify_divide_conquer_examples.py',
                 'scripts/package_divide_conquer_review.py',
@@ -104,6 +104,7 @@ def main():
     for name in ('maximum-subarray-divide-and-conquer','karatsuba-multiplication',
                  'closest-pair-of-points','strassen-matrix-multiplication'):
         required.add('dsa/divide-and-conquer/'+name+'/tests/cases.py')
+    required.update({'scripts/review_paths.py', 'docs/maintenance/root-cleanup/manifest.json'})
     assert required <= payload.keys(), sorted(required-payload.keys())
 
     directories = {PREFIX}
@@ -112,6 +113,7 @@ def main():
             if parent.as_posix() != '.':
                 directories.add(PREFIX + parent.as_posix() + '/')
 
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     assert not OUTPUT.exists(), 'Refusing to overwrite an existing review artifact'
     with zipfile.ZipFile(OUTPUT, 'x', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for name in sorted(directories):
@@ -146,7 +148,7 @@ def main():
             extracted = Path(temporary) / 'algorithm-atlas'
             checks = [run([sys.executable, 'scripts/validate_catalog.py'], extracted),
                       run([sys.executable, 'scripts/generate_catalog_docs.py', '--check'], extracted),
-                      run([sys.executable, 'scripts/verify_divide_conquer_scope.py'], extracted)]
+                      run([sys.executable, 'scripts/verify_divide_conquer_scope.py', '--check-only'], extracted)]
 
     digest = hashlib.sha256(OUTPUT.read_bytes()).hexdigest()
     OUTPUT.with_suffix('.zip.sha256').write_text(f'{digest}  {OUTPUT.name}\n')

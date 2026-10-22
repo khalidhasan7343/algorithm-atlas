@@ -1,0 +1,14 @@
+{
+  "catalog": {
+    "command": [
+      ".venv/bin/python",
+      "scripts/validate_catalog.py"
+    ],
+    "returncode": 1,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 0.485,
+    "output": "Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 317 Markdown files, and 3862 local links.\nERROR: breadth-first-search: artifact exists while python_status is planned\nERROR: breadth-first-search: artifact exists while cpp_status is planned\nERROR: breadth-first-search: artifact exists while test_status is planned\nERROR: breadth-first-search: artifact exists while test_status is planned\nERROR: depth-first-search: artifact exists while python_status is planned\nERROR: depth-first-search: artifact exists while cpp_status is planned\nERROR: depth-first-search: artifact exists while test_status is planned\nERROR: depth-first-search: artifact exists while test_status is planned\nERROR: topological-sorting: artifact exists while python_status is planned\nERROR: topological-sorting: artifact exists while cpp_status is planned\nERROR: topological-sorting: artifact exists while test_status is planned\nERROR: topological-sorting: artifact exists while test_status is planned\nERROR: union-find: artifact exists while python_status is planned\nERROR: union-find: artifact exists while cpp_status is planned\nERROR: union-find: artifact exists while test_status is planned\nERROR: union-find: artifact exists while test_status is planned\nValidation failed with 16 error(s).\n"
+  }
+}

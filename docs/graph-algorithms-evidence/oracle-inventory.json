@@ -1,0 +1,62 @@
+{
+  "breadth-first-search": {
+    "independently_expected_vectors": 184,
+    "seed": 7101
+  },
+  "depth-first-search": {
+    "independently_expected_vectors": 184,
+    "seed": 7101
+  },
+  "dijkstra": {
+    "independently_expected_vectors": 148,
+    "seed": 7202
+  },
+  "bellman-ford": {
+    "independently_expected_vectors": 148,
+    "seed": 7202
+  },
+  "floyd-warshall": {
+    "independently_expected_vectors": 148,
+    "seed": 7202
+  },
+  "kruskal": {
+    "independently_expected_vectors": 144,
+    "seed": 7303
+  },
+  "prim": {
+    "independently_expected_vectors": 144,
+    "seed": 7303
+  },
+  "topological-sorting": {
+    "independently_expected_vectors": 184,
+    "seed": 7101
+  },
+  "tarjan-strongly-connected-components": {
+    "independently_expected_vectors": 208,
+    "seed": 7404
+  },
+  "kosaraju-strongly-connected-components": {
+    "independently_expected_vectors": 208,
+    "seed": 7404
+  },
+  "union-find": {
+    "independently_expected_vectors": 184,
+    "seed": 7101
+  },
+  "a-star-search": {
+    "independently_expected_vectors": 145,
+    "seed": 7505
+  },
+  "bridges-detection": {
+    "independently_expected_vectors": 208,
+    "seed": 7404
+  },
+  "articulation-points": {
+    "independently_expected_vectors": 208,
+    "seed": 7404
+  },
+  "johnson": {
+    "independently_expected_vectors": 148,
+    "seed": 7202
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "snapshot": "clean export of the actual staged Git index; no commit created",
+  "results": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/validate_catalog.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.465,
+      "output": "Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 329 Markdown files, and 4005 local links.\nValidation passed. Test execution and external URLs are checked separately.\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/generate_catalog_docs.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.166,
+      "output": "Checked 217 catalog documentation pages; 0 changes.\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/verify_root_cleanup.py",
+        "--tracked-only"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.227,
+      "output": "{\n  \"reports_moved\": 9,\n  \"packages_verified\": [\n    {\n      \"path\": \"artifacts/review-packages/divide-conquer/algorithm-atlas-divide-conquer-review.zip\",\n      \"sha256\": \"ef14c74fc2c2b9ff667e908ada4af8df6e9f3da166fb89ec3d2517056c7e8156\",\n      \"crc\": \"passed\"\n    },\n    {\n      \"path\": \"artifacts/review-packages/dynamic-programming/algorithm-atlas-dynamic-programming-review.zip\",\n      \"sha256\": \"423d64d9f504779be6c4be9e32fc1bf5e64457d126f3b9c6b839d953e773a667\",\n      \"crc\": \"passed\"\n    },\n    {\n      \"path\": \"artifacts/review-packages/greedy/algorithm-atlas-greedy-review.zip\",\n      \"sha256\": \"32ef9b748ebe2ba0be7a664af75d21f4f5d81d6af5396f92517b2bd32b625f7c\",\n      \"crc\": \"passed\"\n    },\n    {\n      \"path\": \"artifacts/review-packages/recursion-backtracking/algorithm-atlas-recursion-backtracking-review.zip\",\n      \"sha256\": \"f172a4ffaa10b4a5bbe07977c8234f9d59cbc91be427037c6b9b2fd646df8d51\",\n      \"crc\": \"passed\"\n    },\n    {\n      \"path\": \"artifacts/review-packages/searching/algorithm-atlas-searching-review.zip\",\n      \"sha256\": \"0f6e70a8b915c6cc0550f465b525b12a56a53aa5094a89401de0c614d288dbe3\",\n      \"crc\": \"passed\"\n    }\n  ],\n  \"package_files_moved\": 18,\n  \"algorithm_files_byte_identical\": 568,\n  \"historical_evidence_files_byte_identical\": 306,\n  \"inventory\": {\n    \"categories\": 35,\n    \"memberships\": 256,\n    \"canonical_topics\": 235\n  },\n  \"development_status\": \"awaiting-review\",\n  \"completion_report\": \"docs/reviews/graph-algorithms/GRAPH-ALGORITHMS-REVIEW-REPORT.md\",\n  \"tracked_only\": true,\n  \"local_untracked_files_absent\": [\n    \"artifacts/review-packages/graph-algorithms/algorithm-atlas-graph-algorithms-review.zip\",\n    \"artifacts/review-packages/graph-algorithms/algorithm-atlas-graph-algorithms-review.zip.sha256\",\n    \"artifacts/review-packages/graph-algorithms/algorithm-atlas-graph-algorithms-review.zip.verification.json\"\n  ],\n  \"git_tracking_checked\": false,\n  \"hosted_github_actions\": \"not triggered or verified\"\n}\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/verify_graph_algorithms_scope.py",
+        "--check-only"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.343,
+      "output": "{\n  \"baseline_revision\": \"a495d22f3ee16c3790c60b432566a42572e94844\",\n  \"prior_files_baseline_bytes_verified\": 273,\n  \"syllabus_memberships\": 256,\n  \"canonical_topics\": 235,\n  \"categories\": 35,\n  \"graph_memberships\": 15,\n  \"all_memberships_identities_and_out_of_scope_records_preserved\": true,\n  \"implemented_scope\": [\n    \"a-star-search\",\n    \"articulation-points\",\n    \"bellman-ford\",\n    \"breadth-first-search\",\n    \"bridges-detection\",\n    \"depth-first-search\",\n    \"dijkstra\",\n    \"floyd-warshall\",\n    \"johnson\",\n    \"kosaraju-strongly-connected-components\",\n    \"kruskal\",\n    \"prim\",\n    \"tarjan-strongly-connected-components\",\n    \"topological-sorting\",\n    \"union-find\"\n  ],\n  \"duplicate_cross_category_folders\": 0,\n  \"lesson_audit\": {\n    \"breadth-first-search\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"depth-first-search\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"dijkstra\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"bellman-ford\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"floyd-warshall\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"kruskal\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"prim\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"topological-sorting\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"tarjan-strongly-connected-components\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"kosaraju-strongly-connected-components\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"union-find\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"a-star-search\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"bridges-detection\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"articulation-points\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"johnson\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    }\n  }\n}\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "tests",
+        "--require-cpp",
+        "-q"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 2.834,
+      "output": "........................................................................ [ 28%]\n........................................................................ [ 56%]\n........................................................................ [ 85%]\n......................................                                   [100%]\n254 passed in 2.69s\n"
+    }
+  ],
+  "all_passed": true,
+  "full_suite_location": "working checkout: 1558 passed; clean export: infrastructure suite only",
+  "untracked_graph_package_files": "explicitly absent, accounted for by --tracked-only",
+  "hosted_github_actions": "not triggered or verified",
+  "final_document_export": {
+    "all_passed": true,
+    "checks": [
+      {
+        "command": [
+          ".venv/bin/python",
+          "scripts/validate_catalog.py"
+        ],
+        "returncode": 0,
+        "output": "Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 329 Markdown files, and 4008 local links.\nValidation passed. Test execution and external URLs are checked separately.\n"
+      },
+      {
+        "command": [
+          ".venv/bin/python",
+          "scripts/generate_catalog_docs.py",
+          "--check"
+        ],
+        "returncode": 0,
+        "output": "Checked 217 catalog documentation pages; 0 changes.\n"
+      },
+      {
+        "command": [
+          ".venv/bin/python",
+          "scripts/verify_root_cleanup.py",
+          "--tracked-only"
+        ],
+        "returncode": 0,
+        "output": "{\n  \"reports_moved\": 9,\n  \"packages_verified\": [\n    {\n      \"path\": \"artifacts/review-packages/divide-conquer/algorithm-atlas-divide-conquer-review.zip\",\n      \"sha256\": \"ef14c74fc2c2b9ff667e908ada4af8df6e9f3da166fb89ec3d2517056c7e8156\",\n      \"crc\": \"passed\"\n    },\n    {\n      \"path\": \"artifacts/review-packages/dynamic-programming/algorithm-atlas-dynamic-programming-review.zip\",\n      \"sha256\": \"423d64d9f504779be6c4be9e32fc1bf5e64457d126f3b9c6b839d953e773a667\",\n      \"crc\": \"passed\"\n    },\n    {\n      \"path\": \"artifacts/review-packages/greedy/algorithm-atlas-greedy-review.zip\",\n      \"sha256\": \"32ef9b748ebe2ba0be7a664af75d21f4f5d81d6af5396f92517b2bd32b625f7c\",\n      \"crc\": \"passed\"\n    },\n    {\n      \"path\": \"artifacts/review-packages/recursion-backtracking/algorithm-atlas-recursion-backtracking-review.zip\",\n      \"sha256\": \"f172a4ffaa10b4a5bbe07977c8234f9d59cbc91be427037c6b9b2fd646df8d51\",\n      \"crc\": \"passed\"\n    },\n    {\n      \"path\": \"artifacts/review-packages/searching/algorithm-atlas-searching-review.zip\",\n      \"sha256\": \"0f6e70a8b915c6cc0550f465b525b12a56a53aa5094a89401de0c614d288dbe3\",\n      \"crc\": \"passed\"\n    }\n  ],\n  \"package_files_moved\": 18,\n  \"algorithm_files_byte_identical\": 568,\n  \"historical_evidence_files_byte_identical\": 306,\n  \"inventory\": {\n    \"categories\": 35,\n    \"memberships\": 256,\n    \"canonical_topics\": 235\n  },\n  \"development_status\": \"awaiting-review\",\n  \"completion_report\": \"docs/reviews/graph-algorithms/GRAPH-ALGORITHMS-REVIEW-REPORT.md\",\n  \"tracked_only\": true,\n  \"local_untracked_files_absent\": [\n    \"artifacts/review-packages/graph-algorithms/algorithm-atlas-graph-algorithms-review.zip\",\n    \"artifacts/review-packages/graph-algorithms/algorithm-atlas-graph-algorithms-review.zip.sha256\",\n    \"artifacts/review-packages/graph-algorithms/algorithm-atlas-graph-algorithms-review.zip.verification.json\"\n  ],\n  \"git_tracking_checked\": false,\n  \"hosted_github_actions\": \"not triggered or verified\"\n}\n"
+      },
+      {
+        "command": [
+          ".venv/bin/python",
+          "scripts/verify_graph_algorithms_scope.py",
+          "--check-only"
+        ],
+        "returncode": 0,
+        "output": "{\n  \"baseline_revision\": \"a495d22f3ee16c3790c60b432566a42572e94844\",\n  \"prior_files_baseline_bytes_verified\": 273,\n  \"syllabus_memberships\": 256,\n  \"canonical_topics\": 235,\n  \"categories\": 35,\n  \"graph_memberships\": 15,\n  \"all_memberships_identities_and_out_of_scope_records_preserved\": true,\n  \"implemented_scope\": [\n    \"a-star-search\",\n    \"articulation-points\",\n    \"bellman-ford\",\n    \"breadth-first-search\",\n    \"bridges-detection\",\n    \"depth-first-search\",\n    \"dijkstra\",\n    \"floyd-warshall\",\n    \"johnson\",\n    \"kosaraju-strongly-connected-components\",\n    \"kruskal\",\n    \"prim\",\n    \"tarjan-strongly-connected-components\",\n    \"topological-sorting\",\n    \"union-find\"\n  ],\n  \"duplicate_cross_category_folders\": 0,\n  \"lesson_audit\": {\n    \"breadth-first-search\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"depth-first-search\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"dijkstra\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"bellman-ford\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"floyd-warshall\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"kruskal\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"prim\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"topological-sorting\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"tarjan-strongly-connected-components\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"kosaraju-strongly-connected-components\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"union-find\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"a-star-search\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"bridges-detection\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"articulation-points\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"johnson\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    }\n  }\n}\n"
+      }
+    ],
+    "reason": "Revalidated final report links after recording full-suite and clean-export infrastructure results. Algorithm/test sources unchanged; no redundant full-suite rerun."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "through_batch": 2,
+  "comparisons": {
+    "BFS vs Dijkstra (unit weights)": {
+      "seed": 70909,
+      "cases": 60,
+      "failures": 0,
+      "independent_reference": true
+    },
+    "Dijkstra vs Bellman-Ford (nonnegative)": {
+      "seed": 70909,
+      "cases": 60,
+      "failures": 0,
+      "independent_reference": true
+    },
+    "Bellman-Ford vs Floyd-Warshall (no negative cycles)": {
+      "seed": 70909,
+      "cases": 60,
+      "failures": 0,
+      "independent_reference": true
+    }
+  },
+  "failures": 0
+}

@@ -1,0 +1,66 @@
+{
+  "breadth-first-search": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/graph-algorithms/breadth-first-search",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 5.724,
+    "output": "..........                                                               [100%]\n10 passed in 5.56s\n"
+  },
+  "depth-first-search": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/graph-algorithms/depth-first-search",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.27,
+    "output": "..........                                                               [100%]\n10 passed in 4.16s\n"
+  },
+  "union-find": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/graph-algorithms/union-find",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.572,
+    "output": "..........                                                               [100%]\n10 passed in 4.46s\n"
+  },
+  "topological-sorting": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/graph-algorithms/topological-sorting",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.266,
+    "output": "..........                                                               [100%]\n10 passed in 4.15s\n"
+  }
+}

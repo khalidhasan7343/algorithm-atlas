@@ -1,0 +1,37 @@
+{
+  "committed_files_recognized_as_renames": 23,
+  "renamed_paths": [
+    "docs/reviews/divide-conquer/DIVIDE-CONQUER-REVIEW-REPORT.md",
+    "docs/reviews/dynamic-programming/DYNAMIC-PROGRAMMING-REVIEW-REPORT.md",
+    "docs/reviews/greedy/GREEDY-REVIEW-REPORT.md",
+    "docs/reviews/phase-0/PHASE-0-REPORT.md",
+    "docs/reviews/recursion-backtracking/RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "docs/reviews/searching/SEARCHING-REVIEW-REPORT.md",
+    "docs/reviews/sorting/SORTING-FINAL-AUDIT-REPORT.md",
+    "docs/reviews/sorting/SORTING-REVIEW-REPORT.md",
+    "artifacts/review-packages/divide-conquer/algorithm-atlas-divide-conquer-review.zip",
+    "artifacts/review-packages/divide-conquer/algorithm-atlas-divide-conquer-review.zip.sha256",
+    "artifacts/review-packages/divide-conquer/algorithm-atlas-divide-conquer-review.zip.verification.json",
+    "artifacts/review-packages/dynamic-programming/algorithm-atlas-dynamic-programming-review.zip",
+    "artifacts/review-packages/dynamic-programming/algorithm-atlas-dynamic-programming-review.zip.sha256",
+    "artifacts/review-packages/dynamic-programming/algorithm-atlas-dynamic-programming-review.zip.verification.json",
+    "artifacts/review-packages/greedy/algorithm-atlas-greedy-review.zip",
+    "artifacts/review-packages/greedy/algorithm-atlas-greedy-review.zip.sha256",
+    "artifacts/review-packages/greedy/algorithm-atlas-greedy-review.zip.verification.json",
+    "artifacts/review-packages/recursion-backtracking/algorithm-atlas-recursion-backtracking-review.zip",
+    "artifacts/review-packages/recursion-backtracking/algorithm-atlas-recursion-backtracking-review.zip.sha256",
+    "artifacts/review-packages/recursion-backtracking/algorithm-atlas-recursion-backtracking-review.zip.verification.json",
+    "artifacts/review-packages/searching/algorithm-atlas-searching-review.zip",
+    "artifacts/review-packages/searching/algorithm-atlas-searching-review.zip.sha256",
+    "artifacts/review-packages/searching/algorithm-atlas-searching-review.zip.verification.json"
+  ],
+  "previously_staged_additions_relocated": [
+    "docs/reviews/graph-algorithms/GRAPH-ALGORITHMS-REVIEW-REPORT.md"
+  ],
+  "all_nine_reports_original_bytes_verified": true,
+  "three_local_graph_package_files_untracked": true,
+  "reports_ignored": false,
+  "head_unchanged": true,
+  "commits_created": 0,
+  "rename_threshold_percent": 20
+}

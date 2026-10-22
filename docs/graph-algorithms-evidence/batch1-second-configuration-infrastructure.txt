@@ -1,0 +1,34 @@
+........................F............................................... [ 30%]
+........................................................................ [ 61%]
+........................................................................ [ 91%]
+....................                                                     [100%]
+=================================== FAILURES ===================================
+_______ test_greedy_category_separates_implementations_from_graph_links ________
+
+planning_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-143/test_greedy_cate...n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-143/test_greedy_category_separates0/dsa/sorting/sample-topic/README.md'))
+
+    def test_greedy_category_separates_implementations_from_graph_links(planning_repo):
+        import copy
+        _,catalog,_=planning_repo
+        owned=('activity-selection','fractional-knapsack','huffman-coding','job-sequencing-with-deadlines')
+        graph=('dijkstra','prim','kruskal')
+        records={}
+        for name in owned+graph:
+            record=copy.deepcopy(catalog['algorithms'][0]);record.update(id=name,name=name,canonical_location=('dsa/greedy/' if name in owned else 'dsa/graph-algorithms/')+name)
+            if name in owned:record.update(documentation_status='implemented',python_status='tested',cpp_status='tested',test_status='tested')
+            records[name]=record
+        category={'id':'A11','name':'Greedy Algorithms','path':'dsa/greedy','items':[{'name':name,'algorithm':name} for name in owned+graph]}
+        before=copy.deepcopy((category,records))
+        text=generator.category_page(category,records)
+        left,right=text.split('## Graph algorithms that also use the Greedy paradigm')
+        assert '## Greedy algorithms implemented in Phase 6' in left
+        assert all(']('+name+'/README.md)' in left for name in owned)
+        assert all('](../graph-algorithms/'+name+'/README.md)' in right for name in graph)
+        assert right.count('| planned |')==3
+>       assert 'seven A11 memberships' in right
+E       AssertionError: assert 'seven A11 memberships' in '\n\n| Original syllabus entry | Canonical folder | Status |\n| --- | --- | --- |\n| dijkstra | [dijkstra](../graph-al...roject home](../../README.md) · [Complete index](../../docs/algorithm-index.md) · [Progress](../../docs/progress.md)\n'
+
+tests/test_generate_catalog_docs.py:253: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_generate_catalog_docs.py::test_greedy_category_separates_implementations_from_graph_links
+1 failed, 235 passed in 2.34s

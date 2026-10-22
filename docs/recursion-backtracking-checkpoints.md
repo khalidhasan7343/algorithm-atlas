@@ -23,15 +23,15 @@ modified. Errors and empty/impossible outputs must be distinguished.
 
 ## Final stop
 
-After all three gates, prepare RECURSION-BACKTRACKING-REVIEW-REPORT.md and
-algorithm-atlas-recursion-backtracking-review.zip with its SHA-256 checksum.
+After all three gates, prepare docs/reviews/recursion-backtracking/RECURSION-BACKTRACKING-REVIEW-REPORT.md and
+artifacts/review-packages/recursion-backtracking/algorithm-atlas-recursion-backtracking-review.zip with its SHA-256 checksum.
 Verify integrity and completeness, then STOP for explicit owner review.
 No Phase 3 human approval, other-category work, commit, push, or publication
 is authorized by passing tests.
 
 ## Initial repository defect
 
-The first catalog gate found five stale links to three absent historical reports: SORTING-REVIEW-REPORT.md, SORTING-FINAL-AUDIT-REPORT.md, SEARCHING-REVIEW-REPORT.md. Those files were absent from the clean starting checkout and were not recreated or represented as original reports. The initial handoff recorded that absence; the recovery checkpoint below supersedes it. Original failed transcript: `recursion-backtracking-evidence/initial-missing-historical-reports.txt`. Approved implementations, tests, and individual lessons remain unchanged.
+The first catalog gate found five stale links to three absent historical reports: docs/reviews/sorting/SORTING-REVIEW-REPORT.md, docs/reviews/sorting/SORTING-FINAL-AUDIT-REPORT.md, SEARCHING-REVIEW-REPORT.md. Those files were absent from the clean starting checkout and were not recreated or represented as original reports. The initial handoff recorded that absence; the recovery checkpoint below supersedes it. Original failed transcript: `recursion-backtracking-evidence/initial-missing-historical-reports.txt`. Approved implementations, tests, and individual lessons remain unchanged.
 
 ## Batch 1: validated
 
@@ -83,7 +83,7 @@ Resume: final comprehensive checks, report, package, then STOP for owner review.
 
 Sanitizers: 19 passed, 87 deselected in 16.29s. All 18 documented Python/C++20 examples matched exact output. Scope verification preserves 87 approved files and all catalog identities/out-of-scope records.
 
-All nine algorithms are implemented/tested; owner review is pending. See [review report](../RECURSION-BACKTRACKING-REVIEW-REPORT.md). Finish package integrity/checksum checks, then STOP; no next category, commit, push, or publication.
+All nine algorithms are implemented/tested; owner review is pending. See [review report](reviews/recursion-backtracking/RECURSION-BACKTRACKING-REVIEW-REPORT.md). Finish package integrity/checksum checks, then STOP; no next category, commit, push, or publication.
 
 ## Review handoff boundary
 

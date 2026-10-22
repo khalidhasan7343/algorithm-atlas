@@ -34,4 +34,4 @@ CXX='clang++ -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-
 Commands replace their corresponding logs when rerun. Compilation and execution
 must both succeed. The batch runner stops on failure or timeout and never advances
 a failed gate. The saved [checkpoint](../searching-checkpoints.md) and
-[review report](../../SEARCHING-REVIEW-REPORT.md) explain results and limitations.
+[review report](../reviews/searching/SEARCHING-REVIEW-REPORT.md) explain results and limitations.

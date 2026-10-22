@@ -1,0 +1,15 @@
+{
+  "measurements": [
+    {
+      "threshold_percent": 50,
+      "renames_detected": 8,
+      "output": "D\tbefore/SORTING-REVIEW-REPORT.md\nR088\tbefore/DIVIDE-CONQUER-REVIEW-REPORT.md\tafter/docs/reviews/divide-conquer/DIVIDE-CONQUER-REVIEW-REPORT.md\nR076\tbefore/DYNAMIC-PROGRAMMING-REVIEW-REPORT.md\tafter/docs/reviews/dynamic-programming/DYNAMIC-PROGRAMMING-REVIEW-REPORT.md\nR055\tbefore/GRAPH-ALGORITHMS-REVIEW-REPORT.md\tafter/docs/reviews/graph-algorithms/GRAPH-ALGORITHMS-REVIEW-REPORT.md\nR076\tbefore/GREEDY-REVIEW-REPORT.md\tafter/docs/reviews/greedy/GREEDY-REVIEW-REPORT.md\nR092\tbefore/PHASE-0-REPORT.md\tafter/docs/reviews/phase-0/PHASE-0-REPORT.md\nR086\tbefore/RECURSION-BACKTRACKING-REVIEW-REPORT.md\tafter/docs/reviews/recursion-backtracking/RECURSION-BACKTRACKING-REVIEW-REPORT.md\nR089\tbefore/SEARCHING-REVIEW-REPORT.md\tafter/docs/reviews/searching/SEARCHING-REVIEW-REPORT.md\nR093\tbefore/SORTING-FINAL-AUDIT-REPORT.md\tafter/docs/reviews/sorting/SORTING-FINAL-AUDIT-REPORT.md\nA\tafter/docs/reviews/sorting/SORTING-REVIEW-REPORT.md\n"
+    },
+    {
+      "threshold_percent": 20,
+      "renames_detected": 9,
+      "output": "R088\tbefore/DIVIDE-CONQUER-REVIEW-REPORT.md\tafter/docs/reviews/divide-conquer/DIVIDE-CONQUER-REVIEW-REPORT.md\nR076\tbefore/DYNAMIC-PROGRAMMING-REVIEW-REPORT.md\tafter/docs/reviews/dynamic-programming/DYNAMIC-PROGRAMMING-REVIEW-REPORT.md\nR055\tbefore/GRAPH-ALGORITHMS-REVIEW-REPORT.md\tafter/docs/reviews/graph-algorithms/GRAPH-ALGORITHMS-REVIEW-REPORT.md\nR076\tbefore/GREEDY-REVIEW-REPORT.md\tafter/docs/reviews/greedy/GREEDY-REVIEW-REPORT.md\nR092\tbefore/PHASE-0-REPORT.md\tafter/docs/reviews/phase-0/PHASE-0-REPORT.md\nR086\tbefore/RECURSION-BACKTRACKING-REVIEW-REPORT.md\tafter/docs/reviews/recursion-backtracking/RECURSION-BACKTRACKING-REVIEW-REPORT.md\nR089\tbefore/SEARCHING-REVIEW-REPORT.md\tafter/docs/reviews/searching/SEARCHING-REVIEW-REPORT.md\nR093\tbefore/SORTING-FINAL-AUDIT-REPORT.md\tafter/docs/reviews/sorting/SORTING-FINAL-AUDIT-REPORT.md\nR039\tbefore/SORTING-REVIEW-REPORT.md\tafter/docs/reviews/sorting/SORTING-REVIEW-REPORT.md\n"
+    }
+  ],
+  "explanation": "Changed relative links occupy entire long inventory-table lines in Sorting. Explicit similarity threshold is needed; strict reconstructed-original-byte checks independently preserve report content."
+}

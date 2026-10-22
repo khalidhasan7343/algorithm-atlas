@@ -1,0 +1,12 @@
+{
+  "catalog": "One moved Sorting report self-link was incorrectly made repository-relative; corrected to a local self-link.",
+  "preservation": "The broad link normalizer normalized self-links in six Searching lessons; all six lessons restored byte-for-byte from the pre-cleanup index. No algorithm source code changed.",
+  "restored_lessons": [
+    "dsa/searching/interpolation-search/README.md",
+    "dsa/searching/jump-search/README.md",
+    "dsa/searching/ternary-search/README.md",
+    "dsa/searching/linear-search/README.md",
+    "dsa/searching/exponential-search/README.md",
+    "dsa/searching/binary-search/README.md"
+  ]
+}

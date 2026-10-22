@@ -22,15 +22,15 @@ exclusion rule; the historical omission/deletion was not an ignore-rule problem.
 
 | # | Validator location | Missing artifact in 8446eab |
 | --- | --- | --- |
-| 1 | catalog.yaml: development.completion_report | SEARCHING-REVIEW-REPORT.md |
-| 2 | README.md | SEARCHING-REVIEW-REPORT.md |
-| 3 | README.md | SORTING-FINAL-AUDIT-REPORT.md |
-| 4 | docs/audit-evidence/README.md | ../../SORTING-FINAL-AUDIT-REPORT.md |
-| 5 | docs/progress.md | ../SEARCHING-REVIEW-REPORT.md |
-| 6 | docs/searching-checkpoints.md | ../SEARCHING-REVIEW-REPORT.md |
-| 7 | docs/searching-evidence/README.md | ../../SEARCHING-REVIEW-REPORT.md |
-| 8 | docs/sorting-checkpoints.md | ../SORTING-REVIEW-REPORT.md |
-| 9 | docs/sorting-checkpoints.md | ../SORTING-FINAL-AUDIT-REPORT.md |
+| 1 | catalog.yaml: development.completion_report | docs/reviews/searching/SEARCHING-REVIEW-REPORT.md |
+| 2 | README.md | docs/reviews/searching/SEARCHING-REVIEW-REPORT.md |
+| 3 | README.md | docs/reviews/sorting/SORTING-FINAL-AUDIT-REPORT.md |
+| 4 | docs/audit-evidence/README.md | docs/reviews/sorting/SORTING-FINAL-AUDIT-REPORT.md |
+| 5 | docs/progress.md | docs/reviews/searching/SEARCHING-REVIEW-REPORT.md |
+| 6 | docs/searching-checkpoints.md | docs/reviews/searching/SEARCHING-REVIEW-REPORT.md |
+| 7 | docs/searching-evidence/README.md | docs/reviews/searching/SEARCHING-REVIEW-REPORT.md |
+| 8 | docs/sorting-checkpoints.md | docs/reviews/sorting/SORTING-REVIEW-REPORT.md |
+| 9 | docs/sorting-checkpoints.md | docs/reviews/sorting/SORTING-FINAL-AUDIT-REPORT.md |
 
 The original report filenames/case and relative locations are correct. Reports
 were not relocated. No historical link was removed to hide an absent artifact.
@@ -44,9 +44,9 @@ Original failure transcript:
 
 | Report | Present locally | Tracked and present in HEAD | Matches committed bytes | Bytes |
 | --- | --- | --- | --- | ---: |
-| SEARCHING-REVIEW-REPORT.md | Yes | Yes | Yes | 19,670 |
-| SORTING-REVIEW-REPORT.md | Yes | Yes | Yes | 59,962 |
-| SORTING-FINAL-AUDIT-REPORT.md | Yes | Yes | Yes | 22,538 |
+| docs/reviews/searching/SEARCHING-REVIEW-REPORT.md | Yes | Yes | Yes | 19,670 |
+| docs/reviews/sorting/SORTING-REVIEW-REPORT.md | Yes | Yes | Yes | 59,962 |
+| docs/reviews/sorting/SORTING-FINAL-AUDIT-REPORT.md | Yes | Yes | Yes | 22,538 |
 
 The local branch and cached remote refs inspected were:
 
@@ -68,10 +68,10 @@ No hosted workflow was dispatched, rerun, or represented as passing.
 ## Completion-report safety and pending Phase 4 work
 
 The committed HEAD catalog points to
-`RECURSION-BACKTRACKING-REVIEW-REPORT.md`, a safe relative, existing, nonempty,
+`docs/reviews/recursion-backtracking/RECURSION-BACKTRACKING-REVIEW-REPORT.md`, a safe relative, existing, nonempty,
 tracked Markdown file. It passes validation in a clean committed checkout.
 
-The current working-tree catalog points to `DIVIDE-CONQUER-REVIEW-REPORT.md`,
+The current working-tree catalog points to `docs/reviews/divide-conquer/DIVIDE-CONQUER-REVIEW-REPORT.md`,
 also a safe relative, existing, nonempty Markdown file. It passes the unchanged
 validator locally. However, that Phase 4 report and the other Phase 4 additions
 are **untracked/uncommitted pending work**. Publishing the Phase 4 catalog/README
@@ -119,8 +119,8 @@ Run from this repository root with the existing `.venv` and C++ compiler:
 .venv/bin/python -m pytest --require-cpp
 git status --short
 git ls-files
-git ls-tree HEAD -- SEARCHING-REVIEW-REPORT.md SORTING-REVIEW-REPORT.md SORTING-FINAL-AUDIT-REPORT.md
-git check-ignore --no-index -v SEARCHING-REVIEW-REPORT.md SORTING-REVIEW-REPORT.md SORTING-FINAL-AUDIT-REPORT.md
+git ls-tree HEAD -- docs/reviews/searching/SEARCHING-REVIEW-REPORT.md docs/reviews/sorting/SORTING-REVIEW-REPORT.md docs/reviews/sorting/SORTING-FINAL-AUDIT-REPORT.md
+git check-ignore --no-index -v docs/reviews/searching/SEARCHING-REVIEW-REPORT.md docs/reviews/sorting/SORTING-REVIEW-REPORT.md docs/reviews/sorting/SORTING-FINAL-AUDIT-REPORT.md
 ```
 
 The final `check-ignore` exits 1 with no output when none of those paths is

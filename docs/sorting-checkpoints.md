@@ -88,7 +88,7 @@ The earlier implementation audit also passed all 24 selected C++20 cases with Ad
 
 Catalog completion: **11 of 11 Sorting algorithms**, **11 of 235 canonical topics**. **No Sorting implementation remains unfinished.** No automatic human `reviewed` status has been assigned. Searching and every other category remain outside the approved implementation scope.
 
-**Resume action: wait for the user's review and explicit approval.** The external review handoff is [SORTING-REVIEW-REPORT.md](../SORTING-REVIEW-REPORT.md). No further implementation, commit, or push is authorized by this checkpoint.
+**Resume action: wait for the user's review and explicit approval.** The external review handoff is [docs/reviews/sorting/SORTING-REVIEW-REPORT.md](reviews/sorting/SORTING-REVIEW-REPORT.md). No further implementation, commit, or push is authorized by this checkpoint.
 
 ## Final independent verification checkpoint — awaiting human review
 
@@ -115,9 +115,9 @@ Generated docs:       266 pages checked, zero drift
 
 Every bounded command completed within 120 seconds. No failures, skips, or
 sanitizer diagnostics occurred. Hosted CI was not run. `tested` is not human
-`reviewed` status. See the [final audit report](../SORTING-FINAL-AUDIT-REPORT.md)
+`reviewed` status. See the [final audit report](reviews/sorting/SORTING-FINAL-AUDIT-REPORT.md)
 and [execution evidence](audit-evidence/README.md). The final external package is
-`algorithm-atlas-sorting-final-review.zip`.
+`artifacts/review-packages/sorting/algorithm-atlas-sorting-final-review.zip`.
 
 **Resume action: STOP and wait for explicit human review and approval.** No
 Searching, other-category implementation, commit, push, or publication is authorized.

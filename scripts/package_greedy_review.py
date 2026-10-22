@@ -11,7 +11,7 @@ import tempfile
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / 'algorithm-atlas-greedy-review.zip'
+OUTPUT = ROOT / 'artifacts/review-packages/greedy/algorithm-atlas-greedy-review.zip'
 PREFIX = 'algorithm-atlas/'
 EXCLUDED_DIRS = {
     '.git', '.venv', 'venv', 'env', '__pycache__', '.pytest_cache', '.mypy_cache',
@@ -81,7 +81,7 @@ def main():
     import yaml
     catalog = yaml.safe_load(payload['catalog.yaml'])
     required = {'README.md','LICENSE','AGENTS.md','CONTRIBUTING.md','catalog.yaml',
-                'GREEDY-REVIEW-REPORT.md','docs/progress.md',
+                'docs/reviews/greedy/GREEDY-REVIEW-REPORT.md','docs/progress.md',
                 'docs/greedy-checkpoints.md','scripts/run_greedy_validation.py',
                 'scripts/verify_greedy_scope.py','scripts/verify_greedy_examples.py',
                 'scripts/verify_greedy_tracking.py',
@@ -109,6 +109,7 @@ def main():
     for batch in GREEDY_BATCHES:
         for name in batch:
             required.add('dsa/greedy/'+name+'/tests/cases.py')
+    required.update({'scripts/review_paths.py', 'docs/maintenance/root-cleanup/manifest.json'})
     assert required <= payload.keys(), sorted(required-payload.keys())
 
     directories = {PREFIX}
@@ -117,6 +118,7 @@ def main():
             if parent.as_posix() != '.':
                 directories.add(PREFIX + parent.as_posix() + '/')
 
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     assert not OUTPUT.exists(), 'Refusing to overwrite an existing review artifact'
     with zipfile.ZipFile(OUTPUT, 'x', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for name in sorted(directories):
@@ -151,7 +153,7 @@ def main():
             extracted = Path(temporary) / 'algorithm-atlas'
             checks = [run([sys.executable, 'scripts/validate_catalog.py'], extracted),
                       run([sys.executable, 'scripts/generate_catalog_docs.py', '--check'], extracted),
-                      run([sys.executable, 'scripts/verify_greedy_scope.py'], extracted)]
+                      run([sys.executable, 'scripts/verify_greedy_scope.py', '--check-only'], extracted)]
 
     digest = hashlib.sha256(OUTPUT.read_bytes()).hexdigest()
     OUTPUT.with_suffix('.zip.sha256').write_text(f'{digest}  {OUTPUT.name}\n')

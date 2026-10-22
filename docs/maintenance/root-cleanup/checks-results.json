@@ -1,0 +1,51 @@
+{
+  "catalog": {
+    "command": [
+      ".venv/bin/python",
+      "scripts/validate_catalog.py"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 0.435,
+    "output": "Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 329 Markdown files, and 4000 local links.\nValidation passed. Test execution and external URLs are checked separately.\n"
+  },
+  "generated-docs": {
+    "command": [
+      ".venv/bin/python",
+      "scripts/generate_catalog_docs.py",
+      "--check"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 0.161,
+    "output": "Checked 217 catalog documentation pages; 0 changes.\n"
+  },
+  "full-suite": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 246.059,
+    "output": "........................................................................ [  4%]\n........................................................................ [  9%]\n........................................................................ [ 13%]\n........................................................................ [ 18%]\n........................................................................ [ 23%]\n........................................................................ [ 27%]\n........................................................................ [ 32%]\n........................................................................ [ 36%]\n........................................................................ [ 41%]\n........................................................................ [ 46%]\n........................................................................ [ 50%]\n........................................................................ [ 55%]\n........................................................................ [ 60%]\n........................................................................ [ 64%]\n........................................................................ [ 69%]\n........................................................................ [ 73%]\n........................................................................ [ 78%]\n........................................................................ [ 83%]\n........................................................................ [ 87%]\n........................................................................ [ 92%]\n........................................................................ [ 97%]\n..............................................                           [100%]\n1558 passed in 245.87s (0:04:05)\n"
+  },
+  "graph-scope": {
+    "command": [
+      ".venv/bin/python",
+      "scripts/verify_graph_algorithms_scope.py",
+      "--check-only"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 0.404,
+    "output": "{\n  \"baseline_revision\": \"a495d22f3ee16c3790c60b432566a42572e94844\",\n  \"prior_files_baseline_bytes_verified\": 273,\n  \"syllabus_memberships\": 256,\n  \"canonical_topics\": 235,\n  \"categories\": 35,\n  \"graph_memberships\": 15,\n  \"all_memberships_identities_and_out_of_scope_records_preserved\": true,\n  \"implemented_scope\": [\n    \"a-star-search\",\n    \"articulation-points\",\n    \"bellman-ford\",\n    \"breadth-first-search\",\n    \"bridges-detection\",\n    \"depth-first-search\",\n    \"dijkstra\",\n    \"floyd-warshall\",\n    \"johnson\",\n    \"kosaraju-strongly-connected-components\",\n    \"kruskal\",\n    \"prim\",\n    \"tarjan-strongly-connected-components\",\n    \"topological-sorting\",\n    \"union-find\"\n  ],\n  \"duplicate_cross_category_folders\": 0,\n  \"lesson_audit\": {\n    \"breadth-first-search\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"depth-first-search\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"dijkstra\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"bellman-ford\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"floyd-warshall\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"kruskal\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"prim\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"topological-sorting\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"tarjan-strongly-connected-components\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"kosaraju-strongly-connected-components\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"union-find\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"a-star-search\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"bridges-detection\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"articulation-points\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    },\n    \"johnson\": {\n      \"sections\": 25,\n      \"required_artifacts\": 6\n    }\n  }\n}\n"
+  }
+}

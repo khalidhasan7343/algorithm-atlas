@@ -9,7 +9,7 @@ This category preserves **6 original syllabus entries**. Each link points to the
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
 | Greedy Best-First Search | [greedy-best-first-search](greedy-best-first-search/README.md) | planned |
-| A* Search | [a-star-search](../../dsa/graph-algorithms/a-star-search/README.md) | planned |
+| A* Search | [a-star-search](../../dsa/graph-algorithms/a-star-search/README.md) | complete |
 | Iterative Deepening A* (IDA*) | [iterative-deepening-a-star](iterative-deepening-a-star/README.md) | planned |
 | Recursive Best-First Search (RBFS) | [recursive-best-first-search](recursive-best-first-search/README.md) | planned |
 | Simplified Memory-Bounded A* (SMA*) | [simplified-memory-bounded-a-star](simplified-memory-bounded-a-star/README.md) | planned |

@@ -1,0 +1,66 @@
+{
+  "tarjan-strongly-connected-components": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/graph-algorithms/tarjan-strongly-connected-components",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.782,
+    "output": "..........                                                               [100%]\n10 passed in 4.63s\n"
+  },
+  "kosaraju-strongly-connected-components": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/graph-algorithms/kosaraju-strongly-connected-components",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.601,
+    "output": "..........                                                               [100%]\n10 passed in 4.49s\n"
+  },
+  "bridges-detection": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/graph-algorithms/bridges-detection",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.716,
+    "output": "..........                                                               [100%]\n10 passed in 4.60s\n"
+  },
+  "articulation-points": {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "dsa/graph-algorithms/articulation-points",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "CXX": "automatic discovery",
+    "timed_out": false,
+    "timeout_seconds": 600,
+    "elapsed_seconds": 4.416,
+    "output": "..........                                                               [100%]\n10 passed in 4.31s\n"
+  }
+}

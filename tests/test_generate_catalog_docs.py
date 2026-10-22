@@ -252,3 +252,12 @@ def test_greedy_category_separates_implementations_from_graph_links(planning_rep
     assert right.count('| planned |')==3
     assert 'seven A11 memberships' in right
     assert (category,records)==before
+
+
+def test_graph_progress_records_authorization_and_review_boundary(planning_repo):
+    _,catalog,_=planning_repo
+    catalog['development']={'phase':'Phase 7 — Graph Algorithms','scope':'Graph Algorithms category only','status':'in-progress','completed_batches':[1],'active_batch':2,'checkpoint':'docs/graph-algorithms-checkpoints.md'}
+    text=generator.progress_page(catalog,{a['id']:a for a in catalog['algorithms']})
+    assert 'Validated graph algorithms batches: 1.' in text
+    assert 'owner explicitly approved Phase 6' in text
+    assert 'Phase 7 is not human-approved' in text

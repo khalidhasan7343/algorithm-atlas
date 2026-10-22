@@ -1,0 +1,586 @@
+{
+  "breadth-first-search": {
+    "input": {
+      "n": 5,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "source": 0,
+      "directed": true
+    },
+    "output": {
+      "order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "distance": [
+        0,
+        1,
+        1,
+        2,
+        null
+      ],
+      "parent": [
+        null,
+        0,
+        0,
+        1,
+        null
+      ],
+      "parent_edge": [
+        null,
+        0,
+        1,
+        2,
+        null
+      ]
+    }
+  },
+  "depth-first-search": {
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "directed": true
+    },
+    "output": {
+      "order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "finish": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "parent": [
+        null,
+        0,
+        1,
+        null
+      ],
+      "parent_edge": [
+        null,
+        0,
+        2,
+        null
+      ],
+      "component": [
+        0,
+        0,
+        0,
+        3
+      ]
+    }
+  },
+  "union-find": {
+    "input": {
+      "n": 5,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "directed": false
+    },
+    "output": {
+      "groups": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "count": 3
+    }
+  },
+  "topological-sorting": {
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "directed": true
+    },
+    "output": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "dijkstra": {
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "source": 0,
+      "directed": true
+    },
+    "output": {
+      "distance": [
+        0,
+        2,
+        1,
+        null
+      ],
+      "parent": [
+        null,
+        2,
+        0,
+        null
+      ],
+      "parent_edge": [
+        null,
+        2,
+        1,
+        null
+      ]
+    }
+  },
+  "bellman-ford": {
+    "input": {
+      "n": 5,
+      "edges": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          -3
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          2
+        ]
+      ],
+      "source": 0,
+      "directed": true
+    },
+    "output": {
+      "distance": [
+        0,
+        "-inf",
+        "-inf",
+        "-inf",
+        null
+      ],
+      "parent": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parent_edge": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  "floyd-warshall": {
+    "input": {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          -1
+        ]
+      ],
+      "directed": true
+    },
+    "output": [
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        null,
+        0,
+        -1
+      ],
+      [
+        null,
+        null,
+        0
+      ]
+    ]
+  },
+  "kruskal": {
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          1,
+          2,
+          -1
+        ],
+        [
+          0,
+          2,
+          2
+        ]
+      ],
+      "directed": false
+    },
+    "output": {
+      "weight": 1,
+      "edges": [
+        1,
+        2
+      ]
+    }
+  },
+  "prim": {
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          1,
+          2,
+          -1
+        ],
+        [
+          0,
+          2,
+          2
+        ]
+      ],
+      "directed": false
+    },
+    "output": {
+      "weight": 1,
+      "edges": [
+        2,
+        1
+      ]
+    }
+  },
+  "tarjan-strongly-connected-components": {
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "directed": true
+    },
+    "output": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ]
+  },
+  "kosaraju-strongly-connected-components": {
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "directed": true
+    },
+    "output": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ]
+  },
+  "bridges-detection": {
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "directed": false
+    },
+    "output": [
+      2
+    ]
+  },
+  "articulation-points": {
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "directed": false
+    },
+    "output": [
+      1
+    ]
+  },
+  "a-star-search": {
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          2,
+          3,
+          100
+        ]
+      ],
+      "source": 0,
+      "goal": 3,
+      "heuristic": [
+        0,
+        0,
+        3,
+        0
+      ],
+      "directed": true
+    },
+    "output": {
+      "cost": 4,
+      "path": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "edges": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  "johnson": {
+    "input": {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          1,
+          -2
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          4
+        ]
+      ],
+      "directed": true
+    },
+    "output": [
+      [
+        0,
+        -2,
+        1
+      ],
+      [
+        null,
+        0,
+        3
+      ],
+      [
+        null,
+        null,
+        0
+      ]
+    ]
+  }
+}

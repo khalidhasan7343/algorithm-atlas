@@ -4,11 +4,11 @@ This guide defines how to turn a planned Algorithm Atlas topic into an explained
 
 ## Phase boundaries
 
-The owner explicitly approved Phase 5 on 2026-10-22 (Asia/Dhaka) and authorized **Phase 6 — Greedy: four canonical topics only**. Batch 1: Activity Selection, Fractional Knapsack. Batch 2: Huffman Coding, Job Sequencing with Deadlines. Finish and test each [batch](greedy-checkpoints.md) before continuing automatically. Preserve all earlier categories and review evidence.
+The owner explicitly approved Phase 6 on 2026-10-23 (Asia/Dhaka) and authorized **Phase 7 — Graph Algorithms only**, all fifteen A5 canonical topics. Follow the five sequential validated [batches](graph-algorithms-checkpoints.md); finish documentation, Python/C++17/C++20 and repository checks before continuing automatically. Preserve previously approved implementations and genuine reports/evidence.
 
-A11 retains seven memberships. Dijkstra, Prim and Kruskal are graph algorithms that also use the Greedy paradigm; preserve their existing Graph canonical paths and statuses, add only conceptual references, and do not implement or duplicate them in Phase 6. Keep all 256 syllabus entries and 235 canonical topics. Use only schema-supported references.
+Keep 35 categories, 256 original memberships and 235 canonical topics. Complete Dijkstra/Prim/Kruskal and Bellman-Ford/Floyd-Warshall at their Graph canonical paths and update existing Greedy/DP cross-references without duplicates. Shared utilities must leave each algorithm independently understandable. Lessons require the exact 25 sections, graph/numeric/path/cycle contracts, correctness and meaningful independent/cross-algorithm tests.
 
-Each new lesson needs the exact 25 sections, greedy-choice/exchange correctness, numeric/resource contracts, Python/C++17/C++20 tests and independent oracles. Record actual results, regenerate documentation, prepare GREEDY-REVIEW-REPORT.md and the full review ZIP/SHA-256, then STOP for explicit owner review. Do not mark Phase 6 human-approved, begin another category, commit, push or publish. Every later scope also requires owner approval at its completion checkpoint. Never set Git identity from the public email.
+After docs/reviews/graph-algorithms/GRAPH-ALGORITHMS-REVIEW-REPORT.md, the full review ZIP/SHA-256 and integrity checks, STOP for explicit owner review. Do not mark Phase 7 human-approved, begin another category, commit, push or publish. Every later scope also ends at an explicit owner review checkpoint. Never set Git identity from the public email.
 
 ## Canonical layout and catalog ownership
 
@@ -118,3 +118,10 @@ Do not mark an algorithm complete while either language, its tests, examples, do
 ## Batch handoff
 
 Before requesting the next phase's approval, report the files changed, algorithms completed, actual checks and results, unresolved issues, catalog/progress changes, and next proposed batch. Keep the checkpoint reviewable and stop development until the maintainer approves the next phase. Do not set a Git commit identity from the maintainer's public email without explicit authorization, and do not push without permission.
+
+
+## Review files and root organization
+
+Future phase reports belong in `docs/reviews/<phase-name>/`; ZIPs, checksums and package JSON belong in `artifacts/review-packages/<phase-name>/`. Keep only essential project documentation, configuration and established source/infrastructure directories at the root. Update `development.completion_report`, live Markdown links, tracking checks and packaging paths whenever a report moves. Every completion report must exist, be nonempty, tracked and unignored.
+
+The final review ZIP must contain the updated repository and required reports, excluding caches, virtual environments, secrets, binaries and unnecessary nested review archives/sidecars. Preserve genuine historical ZIPs and execution evidence; their internal snapshot paths/hashes remain historical. Do not force-add ignored artifacts. Existing phase-owner approval checkpoints remain mandatory; maintenance does not approve Phase 7 or authorize more algorithm work. Do not commit, push or publish without explicit owner authorization.

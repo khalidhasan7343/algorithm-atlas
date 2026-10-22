@@ -26,8 +26,8 @@ and the full applicable repository suite. Actual outcomes will be saved below.
 
 ## Mandatory final stop
 
-After both batches, prepare SEARCHING-REVIEW-REPORT.md and
-algorithm-atlas-searching-review.zip, then stop for owner review and explicit
+After both batches, prepare docs/reviews/searching/SEARCHING-REVIEW-REPORT.md and
+artifacts/review-packages/searching/algorithm-atlas-searching-review.zip, then stop for owner review and explicit
 approval. Passing tests does not authorize the next category.
 
 ## Batch 1 — passed, resume with Batch 2
@@ -113,10 +113,10 @@ No failure, skip, or timeout occurred. All child gate commands finished within
 infrastructure cases. The 57 existing Sorting per-algorithm lesson/source/test
 files match the baseline commit byte for byte. Hosted GitHub Actions was not run.
 
-The final [review report](../SEARCHING-REVIEW-REPORT.md) documents contracts,
+The final [review report](reviews/searching/SEARCHING-REVIEW-REPORT.md) documents contracts,
 complexities including validation overhead, actual test commands, files changed,
 and limitations. [Execution evidence](searching-evidence/README.md) retains logs
-and source hashes. The requested handoff is `algorithm-atlas-searching-review.zip`.
+and source hashes. The requested handoff is `artifacts/review-packages/searching/algorithm-atlas-searching-review.zip`.
 
 **Resume action: STOP and wait for the owner's explicit review and approval.**
 Phase 2 has not been marked human-reviewed or approved. No other-category work,

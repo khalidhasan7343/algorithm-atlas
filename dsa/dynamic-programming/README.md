@@ -19,10 +19,10 @@ This category preserves **13 original syllabus entries**. Each link points to th
 | Kadane's Algorithm | [kadane](kadane/README.md) | complete |
 | Rod Cutting | [rod-cutting](rod-cutting/README.md) | complete |
 | Palindrome Partitioning | [palindrome-partitioning](palindrome-partitioning/README.md) | complete |
-| Bellman-Ford | [bellman-ford](../graph-algorithms/bellman-ford/README.md) | planned |
-| Floyd-Warshall | [floyd-warshall](../graph-algorithms/floyd-warshall/README.md) | planned |
+| Bellman-Ford | [bellman-ford](../graph-algorithms/bellman-ford/README.md) | complete |
+| Floyd-Warshall | [floyd-warshall](../graph-algorithms/floyd-warshall/README.md) | complete |
 
-Phase 5 authorizes the eleven DP-owned canonical topics only. Bellman-Ford and Floyd-Warshall retain their shared graph canonical locations and remain planned outside this scope. Completion of the eleven requested topics does not complete all 13 memberships.
+Phase 5 approval covers the eleven DP-owned canonical topics. Bellman-Ford and Floyd-Warshall retain their shared Graph canonical locations, with current implementation status shown above. Their edge-relaxation and intermediate-vertex recurrences also illustrate dynamic programming. Phase 7 authorizes their Graph implementations; historical Phase 5 approval and current Graph review stay separate.
 
 ## Learning and contribution scope
 

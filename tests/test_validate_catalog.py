@@ -700,3 +700,36 @@ def test_greedy_completed_claim_requires_each_owned_topic(sample_repo,missing):
     records={name:{"documentation_status":"implemented","python_status":"tested","cpp_status":"tested","test_status":"tested"} for batch in GREEDY_BATCHES for name in batch if name!=missing}
     report=ValidationReport();_validate_development(root,state,records,report)
     assert any(missing in error for error in report.errors)
+
+
+@pytest.mark.parametrize("completed,active,status", [([],1,"in-progress"),([1,2,3,4],5,"in-progress"),([1,2,3,4,5],None,"awaiting-review")])
+def test_graph_phase_valid_batch_states(sample_repo,completed,active,status):
+    from scripts.validate_catalog import GRAPH_SCOPE,GRAPH_BATCHES
+    root,data=sample_repo
+    state=add_development(root,data,scope=GRAPH_SCOPE)
+    state.update(completed_batches=completed,active_batch=active,status=status)
+    records={name:{"documentation_status":"implemented","python_status":"tested","cpp_status":"tested","test_status":"tested"} for batch in GRAPH_BATCHES for name in batch}
+    report=ValidationReport();_validate_development(root,state,records,report)
+    assert not report.errors
+
+
+@pytest.mark.parametrize("completed,active,status", [([1,2,3,4],None,"awaiting-review"),([1,2,3,4,5],6,"in-progress"),([1,2,3,4,5,6],None,"awaiting-review")])
+def test_graph_phase_rejects_premature_or_excess_batches(sample_repo,completed,active,status):
+    from scripts.validate_catalog import GRAPH_SCOPE
+    root,data=sample_repo
+    state=add_development(root,data,scope=GRAPH_SCOPE)
+    state.update(completed_batches=completed,active_batch=active,status=status)
+    report=ValidationReport();_validate_development(root,state,{},report)
+    assert report.errors
+
+
+def test_graph_phase_requires_every_claimed_algorithm(sample_repo):
+    from scripts.validate_catalog import GRAPH_SCOPE,GRAPH_BATCHES
+    root,data=sample_repo
+    state=add_development(root,data,scope=GRAPH_SCOPE)
+    state.update(completed_batches=[1,2,3,4,5],active_batch=None,status="awaiting-review")
+    records={name:{"documentation_status":"implemented","python_status":"tested","cpp_status":"tested","test_status":"tested"} for batch in GRAPH_BATCHES for name in batch}
+    for name in list(records):
+        reduced=dict(records);del reduced[name]
+        report=ValidationReport();_validate_development(root,state,reduced,report)
+        assert any(name in error for error in report.errors)

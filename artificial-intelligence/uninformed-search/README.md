@@ -8,8 +8,8 @@ This category preserves **6 original syllabus entries**. Each link points to the
 
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Breadth-First Search (BFS) | [breadth-first-search](../../dsa/graph-algorithms/breadth-first-search/README.md) | planned |
-| Depth-First Search (DFS) | [depth-first-search](../../dsa/graph-algorithms/depth-first-search/README.md) | planned |
+| Breadth-First Search (BFS) | [breadth-first-search](../../dsa/graph-algorithms/breadth-first-search/README.md) | complete |
+| Depth-First Search (DFS) | [depth-first-search](../../dsa/graph-algorithms/depth-first-search/README.md) | complete |
 | Depth-Limited Search | [depth-limited-search](depth-limited-search/README.md) | planned |
 | Iterative Deepening DFS (IDDFS) | [iterative-deepening-dfs](iterative-deepening-dfs/README.md) | planned |
 | Uniform Cost Search (UCS) | [uniform-cost-search](uniform-cost-search/README.md) | planned |

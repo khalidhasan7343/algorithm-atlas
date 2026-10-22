@@ -36,4 +36,4 @@ private files and other archives are excluded. It refuses to overwrite artifacts
 All development stops for explicit owner review after packaging. No human approval,
 other-category implementation, commit, push, or publication is implied by tests.
 
-The [Phase 4 review report](../../DIVIDE-CONQUER-REVIEW-REPORT.md) summarizes contracts, actual results and limits. `changed-files.txt` lists the source/documentation/evidence delta; archive hashes and integrity checks are in the external ZIP verification sidecar.
+The [Phase 4 review report](../reviews/divide-conquer/DIVIDE-CONQUER-REVIEW-REPORT.md) summarizes contracts, actual results and limits. `changed-files.txt` lists the source/documentation/evidence delta; archive hashes and integrity checks are in the external ZIP verification sidecar.

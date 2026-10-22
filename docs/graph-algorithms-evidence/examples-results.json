@@ -1,0 +1,242 @@
+[
+  {
+    "topic": "breadth-first-search",
+    "language": "python",
+    "input": "5 4 1 0 0 1 0 2 1 3 2 3\n",
+    "expected": "{\"order\":[0,1,2,3],\"distance\":[0,1,1,2,null],\"parent\":[null,0,0,1,null],\"parent_edge\":[null,0,1,2,null]}",
+    "returncode": 0,
+    "stdout": "{\"order\":[0,1,2,3],\"distance\":[0,1,1,2,null],\"parent\":[null,0,0,1,null],\"parent_edge\":[null,0,1,2,null]}\n"
+  },
+  {
+    "topic": "breadth-first-search",
+    "language": "cpp20",
+    "input": "5 4 1 0 0 1 0 2 1 3 2 3\n",
+    "expected": "{\"order\":[0,1,2,3],\"distance\":[0,1,1,2,null],\"parent\":[null,0,0,1,null],\"parent_edge\":[null,0,1,2,null]}",
+    "returncode": 0,
+    "stdout": "{\"order\":[0,1,2,3],\"distance\":[0,1,1,2,null],\"parent\":[null,0,0,1,null],\"parent_edge\":[null,0,1,2,null]}\n"
+  },
+  {
+    "topic": "depth-first-search",
+    "language": "python",
+    "input": "4 3 1 0 1 0 2 1 2\n",
+    "expected": "{\"order\":[0,1,2,3],\"finish\":[2,1,0,3],\"parent\":[null,0,1,null],\"parent_edge\":[null,0,2,null],\"component\":[0,0,0,3]}",
+    "returncode": 0,
+    "stdout": "{\"order\":[0,1,2,3],\"finish\":[2,1,0,3],\"parent\":[null,0,1,null],\"parent_edge\":[null,0,2,null],\"component\":[0,0,0,3]}\n"
+  },
+  {
+    "topic": "depth-first-search",
+    "language": "cpp20",
+    "input": "4 3 1 0 1 0 2 1 2\n",
+    "expected": "{\"order\":[0,1,2,3],\"finish\":[2,1,0,3],\"parent\":[null,0,1,null],\"parent_edge\":[null,0,2,null],\"component\":[0,0,0,3]}",
+    "returncode": 0,
+    "stdout": "{\"order\":[0,1,2,3],\"finish\":[2,1,0,3],\"parent\":[null,0,1,null],\"parent_edge\":[null,0,2,null],\"component\":[0,0,0,3]}\n"
+  },
+  {
+    "topic": "union-find",
+    "language": "python",
+    "input": "5 4 0 0 1 1 2 0 2 3 3\n",
+    "expected": "{\"groups\":[[0,1,2],[3],[4]],\"count\":3}",
+    "returncode": 0,
+    "stdout": "{\"groups\":[[0,1,2],[3],[4]],\"count\":3}\n"
+  },
+  {
+    "topic": "union-find",
+    "language": "cpp20",
+    "input": "5 4 0 0 1 1 2 0 2 3 3\n",
+    "expected": "{\"groups\":[[0,1,2],[3],[4]],\"count\":3}",
+    "returncode": 0,
+    "stdout": "{\"groups\":[[0,1,2],[3],[4]],\"count\":3}\n"
+  },
+  {
+    "topic": "topological-sorting",
+    "language": "python",
+    "input": "4 2 1 0 2 1 2\n",
+    "expected": "[0,1,2,3]",
+    "returncode": 0,
+    "stdout": "[0,1,2,3]\n"
+  },
+  {
+    "topic": "topological-sorting",
+    "language": "cpp20",
+    "input": "4 2 1 0 2 1 2\n",
+    "expected": "[0,1,2,3]",
+    "returncode": 0,
+    "stdout": "[0,1,2,3]\n"
+  },
+  {
+    "topic": "dijkstra",
+    "language": "python",
+    "input": "4 3 1 0 0 1 5 0 2 1 2 1 1\n",
+    "expected": "{\"distance\":[0,2,1,null],\"parent\":[null,2,0,null],\"parent_edge\":[null,2,1,null]}",
+    "returncode": 0,
+    "stdout": "{\"distance\":[0,2,1,null],\"parent\":[null,2,0,null],\"parent_edge\":[null,2,1,null]}\n"
+  },
+  {
+    "topic": "dijkstra",
+    "language": "cpp20",
+    "input": "4 3 1 0 0 1 5 0 2 1 2 1 1\n",
+    "expected": "{\"distance\":[0,2,1,null],\"parent\":[null,2,0,null],\"parent_edge\":[null,2,1,null]}",
+    "returncode": 0,
+    "stdout": "{\"distance\":[0,2,1,null],\"parent\":[null,2,0,null],\"parent_edge\":[null,2,1,null]}\n"
+  },
+  {
+    "topic": "bellman-ford",
+    "language": "python",
+    "input": "5 4 1 0 0 1 2 1 2 -3 2 1 1 2 3 2\n",
+    "expected": "{\"distance\":[0,\"-inf\",\"-inf\",\"-inf\",null],\"parent\":[null,null,null,null,null],\"parent_edge\":[null,null,null,null,null]}",
+    "returncode": 0,
+    "stdout": "{\"distance\":[0,\"-inf\",\"-inf\",\"-inf\",null],\"parent\":[null,null,null,null,null],\"parent_edge\":[null,null,null,null,null]}\n"
+  },
+  {
+    "topic": "bellman-ford",
+    "language": "cpp20",
+    "input": "5 4 1 0 0 1 2 1 2 -3 2 1 1 2 3 2\n",
+    "expected": "{\"distance\":[0,\"-inf\",\"-inf\",\"-inf\",null],\"parent\":[null,null,null,null,null],\"parent_edge\":[null,null,null,null,null]}",
+    "returncode": 0,
+    "stdout": "{\"distance\":[0,\"-inf\",\"-inf\",\"-inf\",null],\"parent\":[null,null,null,null,null],\"parent_edge\":[null,null,null,null,null]}\n"
+  },
+  {
+    "topic": "floyd-warshall",
+    "language": "python",
+    "input": "3 2 1 0 1 2 1 2 -1\n",
+    "expected": "[[0,2,1],[null,0,-1],[null,null,0]]",
+    "returncode": 0,
+    "stdout": "[[0,2,1],[null,0,-1],[null,null,0]]\n"
+  },
+  {
+    "topic": "floyd-warshall",
+    "language": "cpp20",
+    "input": "3 2 1 0 1 2 1 2 -1\n",
+    "expected": "[[0,2,1],[null,0,-1],[null,null,0]]",
+    "returncode": 0,
+    "stdout": "[[0,2,1],[null,0,-1],[null,null,0]]\n"
+  },
+  {
+    "topic": "kruskal",
+    "language": "python",
+    "input": "4 3 0 0 1 3 1 2 -1 0 2 2\n",
+    "expected": "{\"weight\":1,\"edges\":[1,2]}",
+    "returncode": 0,
+    "stdout": "{\"weight\":1,\"edges\":[1,2]}\n"
+  },
+  {
+    "topic": "kruskal",
+    "language": "cpp20",
+    "input": "4 3 0 0 1 3 1 2 -1 0 2 2\n",
+    "expected": "{\"weight\":1,\"edges\":[1,2]}",
+    "returncode": 0,
+    "stdout": "{\"weight\":1,\"edges\":[1,2]}\n"
+  },
+  {
+    "topic": "prim",
+    "language": "python",
+    "input": "4 3 0 0 1 3 1 2 -1 0 2 2\n",
+    "expected": "{\"weight\":1,\"edges\":[2,1]}",
+    "returncode": 0,
+    "stdout": "{\"weight\":1,\"edges\":[2,1]}\n"
+  },
+  {
+    "topic": "prim",
+    "language": "cpp20",
+    "input": "4 3 0 0 1 3 1 2 -1 0 2 2\n",
+    "expected": "{\"weight\":1,\"edges\":[2,1]}",
+    "returncode": 0,
+    "stdout": "{\"weight\":1,\"edges\":[2,1]}\n"
+  },
+  {
+    "topic": "tarjan-strongly-connected-components",
+    "language": "python",
+    "input": "4 5 1 0 1 1 0 1 2 2 3 3 2\n",
+    "expected": "[[0,1],[2,3]]",
+    "returncode": 0,
+    "stdout": "[[0,1],[2,3]]\n"
+  },
+  {
+    "topic": "tarjan-strongly-connected-components",
+    "language": "cpp20",
+    "input": "4 5 1 0 1 1 0 1 2 2 3 3 2\n",
+    "expected": "[[0,1],[2,3]]",
+    "returncode": 0,
+    "stdout": "[[0,1],[2,3]]\n"
+  },
+  {
+    "topic": "kosaraju-strongly-connected-components",
+    "language": "python",
+    "input": "4 5 1 0 1 1 0 1 2 2 3 3 2\n",
+    "expected": "[[0,1],[2,3]]",
+    "returncode": 0,
+    "stdout": "[[0,1],[2,3]]\n"
+  },
+  {
+    "topic": "kosaraju-strongly-connected-components",
+    "language": "cpp20",
+    "input": "4 5 1 0 1 1 0 1 2 2 3 3 2\n",
+    "expected": "[[0,1],[2,3]]",
+    "returncode": 0,
+    "stdout": "[[0,1],[2,3]]\n"
+  },
+  {
+    "topic": "bridges-detection",
+    "language": "python",
+    "input": "4 4 0 0 1 0 1 1 2 2 2\n",
+    "expected": "[2]",
+    "returncode": 0,
+    "stdout": "[2]\n"
+  },
+  {
+    "topic": "bridges-detection",
+    "language": "cpp20",
+    "input": "4 4 0 0 1 0 1 1 2 2 2\n",
+    "expected": "[2]",
+    "returncode": 0,
+    "stdout": "[2]\n"
+  },
+  {
+    "topic": "articulation-points",
+    "language": "python",
+    "input": "4 4 0 0 1 0 1 1 2 2 2\n",
+    "expected": "[1]",
+    "returncode": 0,
+    "stdout": "[1]\n"
+  },
+  {
+    "topic": "articulation-points",
+    "language": "cpp20",
+    "input": "4 4 0 0 1 0 1 1 2 2 2\n",
+    "expected": "[1]",
+    "returncode": 0,
+    "stdout": "[1]\n"
+  },
+  {
+    "topic": "a-star-search",
+    "language": "python",
+    "input": "4 5 1 0 3 0 0 3 0 0 1 3 0 2 1 2 1 1 1 3 2 2 3 100\n",
+    "expected": "{\"cost\":4,\"path\":[0,2,1,3],\"edges\":[1,2,3]}",
+    "returncode": 0,
+    "stdout": "{\"cost\":4,\"path\":[0,2,1,3],\"edges\":[1,2,3]}\n"
+  },
+  {
+    "topic": "a-star-search",
+    "language": "cpp20",
+    "input": "4 5 1 0 3 0 0 3 0 0 1 3 0 2 1 2 1 1 1 3 2 2 3 100\n",
+    "expected": "{\"cost\":4,\"path\":[0,2,1,3],\"edges\":[1,2,3]}",
+    "returncode": 0,
+    "stdout": "{\"cost\":4,\"path\":[0,2,1,3],\"edges\":[1,2,3]}\n"
+  },
+  {
+    "topic": "johnson",
+    "language": "python",
+    "input": "3 3 1 0 1 -2 1 2 3 0 2 4\n",
+    "expected": "[[0,-2,1],[null,0,3],[null,null,0]]",
+    "returncode": 0,
+    "stdout": "[[0,-2,1],[null,0,3],[null,null,0]]\n"
+  },
+  {
+    "topic": "johnson",
+    "language": "cpp20",
+    "input": "3 3 1 0 1 -2 1 2 3 0 2 4\n",
+    "expected": "[[0,-2,1],[null,0,3],[null,null,0]]",
+    "returncode": 0,
+    "stdout": "[[0,-2,1],[null,0,3],[null,null,0]]\n"
+  }
+]

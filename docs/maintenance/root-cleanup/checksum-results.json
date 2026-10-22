@@ -1,0 +1,80 @@
+[
+  {
+    "directory": "artifacts/review-packages/divide-conquer",
+    "command": [
+      "shasum",
+      "-a",
+      "256",
+      "-c",
+      "algorithm-atlas-divide-conquer-review.zip.sha256"
+    ],
+    "returncode": 0,
+    "stdout": "algorithm-atlas-divide-conquer-review.zip: OK\n",
+    "stderr": ""
+  },
+  {
+    "directory": "artifacts/review-packages/dynamic-programming",
+    "command": [
+      "shasum",
+      "-a",
+      "256",
+      "-c",
+      "algorithm-atlas-dynamic-programming-review.zip.sha256"
+    ],
+    "returncode": 0,
+    "stdout": "algorithm-atlas-dynamic-programming-review.zip: OK\n",
+    "stderr": ""
+  },
+  {
+    "directory": "artifacts/review-packages/graph-algorithms",
+    "command": [
+      "shasum",
+      "-a",
+      "256",
+      "-c",
+      "algorithm-atlas-graph-algorithms-review.zip.sha256"
+    ],
+    "returncode": 0,
+    "stdout": "algorithm-atlas-graph-algorithms-review.zip: OK\n",
+    "stderr": ""
+  },
+  {
+    "directory": "artifacts/review-packages/greedy",
+    "command": [
+      "shasum",
+      "-a",
+      "256",
+      "-c",
+      "algorithm-atlas-greedy-review.zip.sha256"
+    ],
+    "returncode": 0,
+    "stdout": "algorithm-atlas-greedy-review.zip: OK\n",
+    "stderr": ""
+  },
+  {
+    "directory": "artifacts/review-packages/recursion-backtracking",
+    "command": [
+      "shasum",
+      "-a",
+      "256",
+      "-c",
+      "algorithm-atlas-recursion-backtracking-review.zip.sha256"
+    ],
+    "returncode": 0,
+    "stdout": "algorithm-atlas-recursion-backtracking-review.zip: OK\n",
+    "stderr": ""
+  },
+  {
+    "directory": "artifacts/review-packages/searching",
+    "command": [
+      "shasum",
+      "-a",
+      "256",
+      "-c",
+      "algorithm-atlas-searching-review.zip.sha256"
+    ],
+    "returncode": 0,
+    "stdout": "algorithm-atlas-searching-review.zip: OK\n",
+    "stderr": ""
+  }
+]

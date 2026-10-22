@@ -42,7 +42,7 @@ Resume: final regression/sanitizers/report/archive, then STOP for owner review.
 - `python scripts/validate_catalog.py`: exit 0; 0.495 seconds.
 - `python scripts/generate_catalog_docs.py --check`: exit 0; 0.174 seconds.
 
-Sanitizers: 8 passed, 20 deselected in 10.80s. All eight documented examples matched exact output. Prior 142 files remain unchanged; seven A4 memberships retained with four new and three reused topics. See [review report](../DIVIDE-CONQUER-REVIEW-REPORT.md). Final configuration/package integrity/checksum checks remain, then STOP for owner review.
+Sanitizers: 8 passed, 20 deselected in 10.80s. All eight documented examples matched exact output. Prior 142 files remain unchanged; seven A4 memberships retained with four new and three reused topics. See [review report](reviews/divide-conquer/DIVIDE-CONQUER-REVIEW-REPORT.md). Final configuration/package integrity/checksum checks remain, then STOP for owner review.
 
 ## Review handoff boundary
 
