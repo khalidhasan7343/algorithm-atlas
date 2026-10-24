@@ -1,0 +1,19 @@
+{
+  "matching_seed": 90901,
+  "matching_vectors_per_algorithm": 679,
+  "exhaustive_binary_pairs": 465,
+  "random_matching_pairs": 160,
+  "repetitive_pairs": 40,
+  "explicit_pairs": 14,
+  "manacher_vectors": 233,
+  "aho_seed": 90904,
+  "aho_vectors": 167,
+  "cross_seed": 90909,
+  "cross_cases_per_relationship": 120,
+  "language_configurations": [
+    "Python",
+    "C++17",
+    "C++20"
+  ],
+  "structural_checks": "Every distinct matching text for suffix tree; all Aho multi-pattern vectors; maximum tree construction size additionally checked."
+}

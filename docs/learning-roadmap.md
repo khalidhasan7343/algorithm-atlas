@@ -2,7 +2,7 @@
 
 Progress from foundational problem solving to specialized AI topics. These levels describe a study order, not repository development phases: learning a later level does not authorize implementation outside the approved development phase.
 
-**Current scope:** the owner approved Phase 7 and authorized all fourteen Phase 8 Tree Algorithms. Follow [progress](progress.md), [Tree conventions](tree-conventions.md) and the [five-batch checkpoint](tree-algorithms-checkpoints.md). Preserve 35 categories, 256 memberships and 235 canonicals; stop for explicit Phase 8 owner review.
+**Current scope:** Phase 8 is explicitly owner-approved; Phase 9 authorizes all nine String Algorithms. Follow [progress](progress.md), [String conventions](string-conventions.md) and [three-batch checkpoints](string-algorithms-checkpoints.md). Preserve 35/256/235 inventory and stop for explicit Phase 9 owner review.
 
 ## Level 1 — DSA Foundations
 

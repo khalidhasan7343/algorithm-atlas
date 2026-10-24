@@ -271,3 +271,17 @@ def test_tree_progress_preserves_review_boundary_and_new_layout(planning_repo):
     assert 'owner explicitly approved Phase 7' in text
     assert 'Phase 8 is not human-approved' in text
     assert 'artifacts/review-packages/tree-algorithms/' in text
+
+
+def test_string_progress_records_real_prior_approval_and_new_boundary():
+    from scripts.generate_catalog_docs import progress_page
+    import yaml
+    from pathlib import Path
+    catalog=yaml.safe_load((Path(__file__).resolve().parents[1]/"catalog.yaml").read_text())
+    catalog['development']={'phase':'Phase 9 — String Algorithms','scope':'String Algorithms category only','status':'in-progress','completed_batches':[1],'active_batch':2,'checkpoint':'docs/string-algorithms-checkpoints.md'}
+    algorithms={a['id']:a for a in catalog['algorithms']}
+    text=progress_page(catalog,algorithms)
+    assert 'Validated string algorithms batches: 1.' in text
+    assert 'owner explicitly approved Phase 8' in text
+    assert 'Phase 9 is not human-approved' in text
+    assert 'No Phase 10' in text

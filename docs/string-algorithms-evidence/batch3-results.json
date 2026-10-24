@@ -1,0 +1,20 @@
+{
+  "algorithms": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "dsa/string-algorithms/suffix-array",
+      "dsa/string-algorithms/suffix-tree",
+      "dsa/string-algorithms/aho-corasick",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 10.78,
+    "log": "docs/string-algorithms-evidence/batch3-algorithms.txt",
+    "timestamp": "2026-10-23T14:05:44.195796+00:00"
+  }
+}

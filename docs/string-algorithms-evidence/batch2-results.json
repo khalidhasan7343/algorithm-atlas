@@ -1,0 +1,20 @@
+{
+  "algorithms": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "dsa/string-algorithms/z-algorithm",
+      "dsa/string-algorithms/boyer-moore",
+      "dsa/string-algorithms/manacher",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 9.39,
+    "log": "docs/string-algorithms-evidence/batch2-algorithms.txt",
+    "timestamp": "2026-10-23T13:59:59.465974+00:00"
+  }
+}

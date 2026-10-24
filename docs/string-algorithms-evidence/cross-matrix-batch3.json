@@ -1,0 +1,17 @@
+{
+  "seed": 90909,
+  "cases_per_comparison": 120,
+  "through_batch": 3,
+  "comparisons": {
+    "naive vs knuth-morris-pratt": 120,
+    "naive vs rabin-karp": 120,
+    "naive vs z-algorithm": 120,
+    "naive vs boyer-moore": 120,
+    "Manacher vs expansion/exhaustive": 120,
+    "Suffix Array order/LCP vs direct suffixes": 120,
+    "Suffix Array search vs naive": 120,
+    "Suffix Tree search vs naive": 120,
+    "Aho-Corasick vs repeated naive": 120
+  },
+  "status": "passed"
+}

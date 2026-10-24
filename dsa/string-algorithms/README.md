@@ -8,15 +8,17 @@ This category preserves **9 original syllabus entries**. Each link points to the
 
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Naive Pattern Matching | [naive-pattern-matching](naive-pattern-matching/README.md) | planned |
-| KMP (Knuth-Morris-Pratt) | [knuth-morris-pratt](knuth-morris-pratt/README.md) | planned |
-| Rabin-Karp | [rabin-karp](rabin-karp/README.md) | planned |
-| Z-Algorithm | [z-algorithm](z-algorithm/README.md) | planned |
-| Boyer-Moore | [boyer-moore](boyer-moore/README.md) | planned |
-| Manacher's Algorithm | [manacher](manacher/README.md) | planned |
-| Suffix Array | [suffix-array](suffix-array/README.md) | planned |
-| Suffix Tree | [suffix-tree](suffix-tree/README.md) | planned |
-| Aho-Corasick | [aho-corasick](aho-corasick/README.md) | planned |
+| Naive Pattern Matching | [naive-pattern-matching](naive-pattern-matching/README.md) | complete |
+| KMP (Knuth-Morris-Pratt) | [knuth-morris-pratt](knuth-morris-pratt/README.md) | complete |
+| Rabin-Karp | [rabin-karp](rabin-karp/README.md) | complete |
+| Z-Algorithm | [z-algorithm](z-algorithm/README.md) | complete |
+| Boyer-Moore | [boyer-moore](boyer-moore/README.md) | complete |
+| Manacher's Algorithm | [manacher](manacher/README.md) | complete |
+| Suffix Array | [suffix-array](suffix-array/README.md) | complete |
+| Suffix Tree | [suffix-tree](suffix-tree/README.md) | complete |
+| Aho-Corasick | [aho-corasick](aho-corasick/README.md) | complete |
+
+Phase 9 covers these nine canonical topics in three sequential validated batches. Read [the byte-string contracts](../../docs/string-conventions.md) for empty patterns, overlaps, UTF-8 byte offsets, output ordering, bounds and reuse. Actual evidence and resume state are in [String checkpoints](../../docs/string-algorithms-checkpoints.md). Phase 9 owner review remains pending. No next category is authorized.
 
 ## Learning and contribution scope
 

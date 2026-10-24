@@ -17,3 +17,5 @@ Checksums contain archive basenames, so run shasum from the corresponding phase 
 Future ZIPs, SHA-256 sidecars and package JSON belong in artifacts/review-packages/<phase-name>/. Package scripts create their output directory, retain no-overwrite protection, and exclude nested ZIPs and sidecars from source payloads. Markdown reports must remain tracked and unignored. Existing owner-review gates remain mandatory.
 
 The later [Tree Algorithms package](tree-algorithms/README.md) follows Phase 8 conventions and records its pending owner approval separately from the maintenance-time inventory above.
+
+The [String Algorithms package](string-algorithms/README.md) records Phase 9 execution and pending owner approval. The later explicit approval of Phase 8 is recorded in [String checkpoints](../../docs/string-algorithms-checkpoints.md); historical Tree sidecars retain their handoff-time approval status.

@@ -106,15 +106,15 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Naive Pattern Matching | [naive-pattern-matching](../dsa/string-algorithms/naive-pattern-matching/README.md) | planned |
-| KMP (Knuth-Morris-Pratt) | [knuth-morris-pratt](../dsa/string-algorithms/knuth-morris-pratt/README.md) | planned |
-| Rabin-Karp | [rabin-karp](../dsa/string-algorithms/rabin-karp/README.md) | planned |
-| Z-Algorithm | [z-algorithm](../dsa/string-algorithms/z-algorithm/README.md) | planned |
-| Boyer-Moore | [boyer-moore](../dsa/string-algorithms/boyer-moore/README.md) | planned |
-| Manacher's Algorithm | [manacher](../dsa/string-algorithms/manacher/README.md) | planned |
-| Suffix Array | [suffix-array](../dsa/string-algorithms/suffix-array/README.md) | planned |
-| Suffix Tree | [suffix-tree](../dsa/string-algorithms/suffix-tree/README.md) | planned |
-| Aho-Corasick | [aho-corasick](../dsa/string-algorithms/aho-corasick/README.md) | planned |
+| Naive Pattern Matching | [naive-pattern-matching](../dsa/string-algorithms/naive-pattern-matching/README.md) | complete |
+| KMP (Knuth-Morris-Pratt) | [knuth-morris-pratt](../dsa/string-algorithms/knuth-morris-pratt/README.md) | complete |
+| Rabin-Karp | [rabin-karp](../dsa/string-algorithms/rabin-karp/README.md) | complete |
+| Z-Algorithm | [z-algorithm](../dsa/string-algorithms/z-algorithm/README.md) | complete |
+| Boyer-Moore | [boyer-moore](../dsa/string-algorithms/boyer-moore/README.md) | complete |
+| Manacher's Algorithm | [manacher](../dsa/string-algorithms/manacher/README.md) | complete |
+| Suffix Array | [suffix-array](../dsa/string-algorithms/suffix-array/README.md) | complete |
+| Suffix Tree | [suffix-tree](../dsa/string-algorithms/suffix-tree/README.md) | complete |
+| Aho-Corasick | [aho-corasick](../dsa/string-algorithms/aho-corasick/README.md) | complete |
 
 ## A8. [Bit Manipulation](../dsa/bit-manipulation/README.md)
 

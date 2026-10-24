@@ -59,6 +59,12 @@ RECURSION_BACKTRACKING_BATCHES = (
 )
 DYNAMIC_PROGRAMMING_SCOPE = "Dynamic Programming: eleven listed canonical topics only"
 TREE_SCOPE = "Tree Algorithms category only"
+STRING_SCOPE = "String Algorithms category only"
+STRING_BATCHES = (
+    ("naive-pattern-matching", "knuth-morris-pratt", "rabin-karp"),
+    ("z-algorithm", "boyer-moore", "manacher"),
+    ("suffix-array", "suffix-tree", "aho-corasick"),
+)
 TREE_BATCHES = (
     ("inorder-traversal", "preorder-traversal", "postorder-traversal", "level-order-traversal"),
     ("lowest-common-ancestor", "binary-lifting", "euler-tour"),
@@ -210,6 +216,19 @@ def _validate_development(
     if status == "awaiting-review" and active is not None:
         report.errors.append("development.awaiting-review requires active_batch=null")
 
+    if state.get("scope") == STRING_SCOPE and valid_completed:
+        if len(completed) > 3:
+            report.errors.append("development String Algorithms has only three batches")
+        if status == "in-progress" and (type(active) is not int or active not in (1, 2, 3)):
+            report.errors.append("development String Algorithms active_batch must be 1..3")
+        if status == "awaiting-review" and completed != [1, 2, 3]:
+            report.errors.append("development String Algorithms awaiting-review requires all three batches")
+        for batch in completed[:3]:
+            for algorithm_id in STRING_BATCHES[batch-1]:
+                record = algorithms.get(algorithm_id, {})
+                if not all(isinstance(record.get(field), str) and record[field] in ARTIFACT_STATUSES for field in STATUS_FIELDS[:3]) or record.get("test_status") not in ("tested", "reviewed"):
+                    report.errors.append(f"development String Algorithms requires completed/tested {algorithm_id}")
+        return
     if state.get("scope") == TREE_SCOPE and valid_completed:
         if len(completed) > len(TREE_BATCHES):
             report.errors.append("development Tree Algorithms has only five batches")

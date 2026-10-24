@@ -1,0 +1,72 @@
+{
+  "python": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "dsa/string-algorithms",
+      "-m",
+      "not cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 3.13,
+    "log": "docs/string-algorithms-evidence/final-python.txt",
+    "timestamp": "2026-10-23T14:06:28.204484+00:00"
+  },
+  "cpp17": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "dsa/string-algorithms",
+      "-m",
+      "cpp",
+      "--cpp-standard=c++17",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 17.73,
+    "log": "docs/string-algorithms-evidence/final-cpp17.txt",
+    "timestamp": "2026-10-23T14:06:45.933284+00:00"
+  },
+  "cpp20": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "dsa/string-algorithms",
+      "-m",
+      "cpp",
+      "--cpp-standard=c++20",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 20.38,
+    "log": "docs/string-algorithms-evidence/final-cpp20.txt",
+    "timestamp": "2026-10-23T14:07:06.309703+00:00"
+  },
+  "full-suite": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 367.39,
+    "log": "docs/string-algorithms-evidence/final-full-suite.txt",
+    "timestamp": "2026-10-23T14:13:13.698025+00:00"
+  }
+}

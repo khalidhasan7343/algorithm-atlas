@@ -1,6 +1,6 @@
 # Phase review reports
 
-Review and audit reports are organized by canonical phase name. Their filenames and historical findings are preserved; relative links and live artifact paths were adjusted during the [root cleanup](../maintenance/root-cleanup/REPORT.md). The owner explicitly approved Phase 7 on 2026-10-23 and authorized Phase 8 Tree Algorithms; the latest approval record is in [Tree checkpoints](../tree-algorithms-checkpoints.md). Historical reports preserve their handoff-time statements.
+Review and audit reports are organized by canonical phase name. Their filenames and historical findings are preserved; relative links and live artifact paths were adjusted during the [root cleanup](../maintenance/root-cleanup/REPORT.md). The owner explicitly approved Phase 8 on 2026-10-23 (Asia/Dhaka) and authorized Phase 9 String Algorithms; the latest approval record is in [String checkpoints](../string-algorithms-checkpoints.md). Historical reports preserve their handoff-time statements.
 
 | Phase | Report |
 | --- | --- |
@@ -13,6 +13,7 @@ Review and audit reports are organized by canonical phase name. Their filenames 
 | searching | [SEARCHING-REVIEW-REPORT.md](searching/SEARCHING-REVIEW-REPORT.md) |
 | sorting | [SORTING-FINAL-AUDIT-REPORT.md](sorting/SORTING-FINAL-AUDIT-REPORT.md) |
 | sorting | [SORTING-REVIEW-REPORT.md](sorting/SORTING-REVIEW-REPORT.md) |
+| string-algorithms | [STRING-ALGORITHMS-REVIEW-REPORT.md](string-algorithms/STRING-ALGORITHMS-REVIEW-REPORT.md) |
 | tree-algorithms | [TREE-ALGORITHMS-REVIEW-REPORT.md](tree-algorithms/TREE-ALGORITHMS-REVIEW-REPORT.md) |
 
 Earlier execution logs, frozen catalog/hash baselines and ZIP verification manifests retain paths from their original snapshots. The cleanup manifest records each move, original/current digest and reversible report edits; strict preservation checks verify the original bytes rather than discarding hash checks. Existing ZIPs remain unchanged snapshots of their phase handoffs and do not claim to contain the post-cleanup layout.

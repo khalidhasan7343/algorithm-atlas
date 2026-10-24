@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "dsa/string-algorithms",
+    "-m",
+    "cpp",
+    "--cpp-standard=c++20",
+    "--require-cpp",
+    "-q"
+  ],
+  "CXX": "g++ -fsanitize=address,undefined -fno-sanitize-recover=all",
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_seconds": 26.15,
+  "output": "...........................                                              [100%]\n27 passed, 36 deselected in 26.04s\n"
+}

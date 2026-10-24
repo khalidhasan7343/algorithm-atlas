@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Users/khalidhasan/Desktop/algorithm-atlas/scripts/generate_catalog_docs.py", line 550, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/khalidhasan/Desktop/algorithm-atlas/scripts/generate_catalog_docs.py", line 531, in main
+    pages = expected_pages(catalog)
+  File "/Users/khalidhasan/Desktop/algorithm-atlas/scripts/generate_catalog_docs.py", line 513, in expected_pages
+    pages[ROOT / category['path'] / 'README.md'] = category_page(category, algorithms)
+                                                   ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/khalidhasan/Desktop/algorithm-atlas/scripts/generate_catalog_docs.py", line 378, in category_page
+    + '.' if catalog.get('development', {}).get('scope') == 'String Algorithms category only'
+             ^^^^^^^
+NameError: name 'catalog' is not defined

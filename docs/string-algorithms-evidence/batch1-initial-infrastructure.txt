@@ -1,0 +1,15 @@
+...........................F............................................ [ 26%]
+........................................................................ [ 53%]
+........................................................................ [ 79%]
+.......................................................                  [100%]
+=================================== FAILURES ===================================
+______ test_string_progress_records_real_prior_approval_and_new_boundary _______
+
+    def test_string_progress_records_real_prior_approval_and_new_boundary():
+>       from scripts.generate_catalog_docs import render_progress
+E       ImportError: cannot import name 'render_progress' from 'scripts.generate_catalog_docs' (/Users/khalidhasan/Desktop/algorithm-atlas/scripts/generate_catalog_docs.py)
+
+tests/test_generate_catalog_docs.py:277: ImportError
+=========================== short test summary info ============================
+FAILED tests/test_generate_catalog_docs.py::test_string_progress_records_real_prior_approval_and_new_boundary
+1 failed, 270 passed in 2.64s

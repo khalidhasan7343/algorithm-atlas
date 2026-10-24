@@ -198,9 +198,10 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
         divide = state.get('scope') == 'Divide & Conquer category only'
         dynamic = state.get('scope') == 'Dynamic Programming: eleven listed canonical topics only'
         tree = state.get('scope') == 'Tree Algorithms category only'
+        strings = state.get('scope') == 'String Algorithms category only'
         graph = state.get('scope') == 'Graph Algorithms category only'
         greedy = state.get('scope') == 'Greedy: four canonical topics only'
-        label = 'tree algorithms' if tree else 'graph algorithms' if graph else 'greedy' if greedy else 'dynamic programming' if dynamic else 'divide/conquer' if divide else 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
+        label = 'string algorithms' if strings else 'tree algorithms' if tree else 'graph algorithms' if graph else 'greedy' if greedy else 'dynamic programming' if dynamic else 'divide/conquer' if divide else 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
         batches = state.get('completed_batches', [])
         lines.append(f'Validated {label} batches: ' +
                      (', '.join(str(batch) for batch in batches) if batches else 'none yet') + '.')
@@ -212,7 +213,18 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
         if state.get('completion_report'):
             lines += ['', 'See the '
                       + link(path, ROOT / state['completion_report'], f'{label} completion report') + '.']
-        if tree:
+        if strings:
+            lines += ['', 'The owner explicitly approved Phase 8 on 2026-10-23 (Asia/Dhaka) '
+                      'and authorized all nine A7 String Algorithms in three sequential validated '
+                      'batches: Naive/KMP/Rabin-Karp; Z/Boyer-Moore/Manacher; '
+                      'Suffix Array/Suffix Tree/Aho-Corasick. Byte-string contracts keep '
+                      'Python and C++ indexes consistent, including UTF-8 byte offsets.', '',
+                      'Preserve approved categories, historical evidence and 35/256/235 inventory. '
+                      'Stop after the report under docs/reviews/string-algorithms/ and verified '
+                      'ZIP/checksum/JSON under artifacts/review-packages/string-algorithms/. '
+                      'Phase 9 is not human-approved. No Phase 10, other category, commit, '
+                      'push or publication is authorized.']
+        elif tree:
             lines += ['', 'The owner explicitly approved Phase 7 and confirmed directory cleanup '
                       'complete on 2026-10-23. Phase 8 authorizes all fourteen Tree canonical '
                       'topics in five validated batches: traversals; ancestor queries/Euler tour; '
@@ -320,7 +332,7 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
     return '\n'.join(lines)
 
 
-def category_page(category: dict, algorithms: dict) -> str:
+def category_page(category: dict, algorithms: dict, development: dict | None = None) -> str:
     path = ROOT / category['path'] / 'README.md'
     lines = [
         f'# {category["name"]}', '', GENERATED_MARKER, '',
@@ -360,8 +372,18 @@ def category_page(category: dict, algorithms: dict) -> str:
                   + ' for identities, ownership, half-open ranges, numeric/resource bounds '
                   'and degree conventions. Actual sequential tests are in '
                   + link(path, ROOT / 'docs/tree-algorithms-checkpoints.md', 'Tree checkpoints')
-                  + '. Completion statuses describe local implementation evidence; Phase 8 '
-                  'owner review remains pending. No further category is authorized.']
+                  + '. Completion statuses describe local implementation evidence. '
+                  + ('The owner explicitly approved Phase 8 and authorized Phase 9 String Algorithms; '
+                     'see ' + link(path, ROOT / 'docs/string-algorithms-checkpoints.md', 'the new checkpoint')
+                     + '.' if (development or {}).get('scope') == 'String Algorithms category only'
+                     else 'Phase 8 owner review remains pending. No further category is authorized.')]
+    if category['id'] == 'A7':
+        lines += ['', 'Phase 9 covers these nine canonical topics in three sequential validated batches. '
+                  'Read ' + link(path, ROOT / 'docs/string-conventions.md', 'the byte-string contracts')
+                  + ' for empty patterns, overlaps, UTF-8 byte offsets, output ordering, bounds and reuse. '
+                  'Actual evidence and resume state are in '
+                  + link(path, ROOT / 'docs/string-algorithms-checkpoints.md', 'String checkpoints')
+                  + '. Phase 9 owner review remains pending. No next category is authorized.']
     if category['id'] == 'A11':
         lines += ['', 'Dijkstra chooses the unsettled vertex with smallest tentative distance '
                   '(requiring nonnegative edge weights); Prim chooses a cheapest edge across '
@@ -488,7 +510,7 @@ def expected_pages(catalog: dict) -> dict[Path, str]:
     pages[ROOT / 'docs/algorithm-index.md'] = index_page(catalog, algorithms)
     pages[ROOT / 'docs/progress.md'] = progress_page(catalog, algorithms)
     for category in catalog['categories']:
-        pages[ROOT / category['path'] / 'README.md'] = category_page(category, algorithms)
+        pages[ROOT / category['path'] / 'README.md'] = category_page(category, algorithms, catalog.get('development'))
     for algorithm in algorithms.values():
         path = ROOT / algorithm['canonical_location'] / 'README.md'
         planning = all(algorithm[field] in {'planned', 'blocked'} for field in STATUS_FIELDS)

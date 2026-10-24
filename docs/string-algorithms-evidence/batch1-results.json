@@ -1,0 +1,20 @@
+{
+  "algorithms": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "dsa/string-algorithms/naive-pattern-matching",
+      "dsa/string-algorithms/knuth-morris-pratt",
+      "dsa/string-algorithms/rabin-karp",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 13.62,
+    "log": "docs/string-algorithms-evidence/batch1-algorithms.txt",
+    "timestamp": "2026-10-23T13:56:09.255252+00:00"
+  }
+}

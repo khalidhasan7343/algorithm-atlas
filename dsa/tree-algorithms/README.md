@@ -25,7 +25,7 @@ This category preserves **14 original syllabus entries**. Each link points to th
 
 The fourteen Phase 8 lessons cover iterative traversals; static ancestor queries and a single-entry Euler Tour; mutable range sums and a lowercase Trie; full AVL/left-leaning Red-Black insertion and deletion; and distinct B-Tree/B+ Tree implementations with deletion. B+ records live only in linked leaves, while B-Tree records also occupy internal nodes.
 
-Read [Tree contracts](../../docs/tree-conventions.md) for identities, ownership, half-open ranges, numeric/resource bounds and degree conventions. Actual sequential tests are in [Tree checkpoints](../../docs/tree-algorithms-checkpoints.md). Completion statuses describe local implementation evidence; Phase 8 owner review remains pending. No further category is authorized.
+Read [Tree contracts](../../docs/tree-conventions.md) for identities, ownership, half-open ranges, numeric/resource bounds and degree conventions. Actual sequential tests are in [Tree checkpoints](../../docs/tree-algorithms-checkpoints.md). Completion statuses describe local implementation evidence. The owner explicitly approved Phase 8 and authorized Phase 9 String Algorithms; see [the new checkpoint](../../docs/string-algorithms-checkpoints.md).
 
 ## Learning and contribution scope
 

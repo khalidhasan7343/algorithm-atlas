@@ -1,0 +1,115 @@
+{
+  "symbols": "n text bytes, m pattern bytes, r positions, c hash candidates, P aggregate pattern bytes, k pattern count, V trie nodes, z triples",
+  "scope": "Code-path review plus one bounded repeated-byte Python observation per algorithm; C++ bounds use equivalent code paths and are tested separately.",
+  "alphabet": "All 256 bytes; terminal symbol 256 for suffix tree. C++ map lookup is O(log sigma), sigma<=257.",
+  "algorithms": {
+    "naive-pattern-matching": {
+      "mechanism": "alignment comparisons",
+      "preprocessing": "none",
+      "time_bound": "O(nm+r)",
+      "space_bound": "O(1)+O(r) result",
+      "text_bytes": 10000,
+      "pattern_bytes": 129,
+      "elapsed_seconds": 0.055475,
+      "construction_seconds": null,
+      "correctness": "passed",
+      "timing_assertion": "none; measured once, not an asymptotic proof"
+    },
+    "knuth-morris-pratt": {
+      "mechanism": "border-link amortization",
+      "preprocessing": "O(m)",
+      "time_bound": "O(n+m+r)",
+      "space_bound": "O(m+r)",
+      "text_bytes": 10000,
+      "pattern_bytes": 129,
+      "elapsed_seconds": 0.001065,
+      "construction_seconds": null,
+      "correctness": "passed",
+      "timing_assertion": "none; measured once, not an asymptotic proof"
+    },
+    "rabin-karp": {
+      "mechanism": "polynomial rolling update and exact candidate verification",
+      "preprocessing": "O(m)",
+      "time_bound": "O(n+m+c*m+r); O(nm) worst case",
+      "space_bound": "O(m) initial copy + O(r) result",
+      "text_bytes": 10000,
+      "pattern_bytes": 129,
+      "elapsed_seconds": 0.045466,
+      "construction_seconds": null,
+      "correctness": "passed",
+      "timing_assertion": "none; measured once, not an asymptotic proof"
+    },
+    "z-algorithm": {
+      "mechanism": "rightmost-box amortization",
+      "preprocessing": "combined array O(n+m)",
+      "time_bound": "O(n+m+r)",
+      "space_bound": "O(n+m+r)",
+      "text_bytes": 10000,
+      "pattern_bytes": 129,
+      "elapsed_seconds": 0.002205,
+      "construction_seconds": null,
+      "correctness": "passed",
+      "timing_assertion": "none; measured once, not an asymptotic proof"
+    },
+    "boyer-moore": {
+      "mechanism": "bad-character and strong good-suffix; no Galil rule",
+      "preprocessing": "O(m+256)",
+      "time_bound": "O(nm+r) worst case",
+      "space_bound": "O(m+256+r)",
+      "text_bytes": 10000,
+      "pattern_bytes": 129,
+      "elapsed_seconds": 0.045655,
+      "construction_seconds": null,
+      "correctness": "passed",
+      "timing_assertion": "none; measured once, not an asymptotic proof"
+    },
+    "manacher": {
+      "mechanism": "separate odd/even rightmost-palindrome passes",
+      "preprocessing": "none",
+      "time_bound": "O(n)",
+      "space_bound": "O(n) returned radii",
+      "text_bytes": 10000,
+      "pattern_bytes": 0,
+      "elapsed_seconds": 0.006169,
+      "construction_seconds": null,
+      "correctness": "passed",
+      "timing_assertion": "none; measured once, not an asymptotic proof"
+    },
+    "suffix-array": {
+      "mechanism": "rank-pair comparison sorting, doubling, Kasai LCP",
+      "preprocessing": "O(n log\u00b2 n)",
+      "time_bound": "query O(m log n+r log r)",
+      "space_bound": "O(n+r)",
+      "text_bytes": 10000,
+      "pattern_bytes": 129,
+      "elapsed_seconds": 0.038885,
+      "construction_seconds": 0.038427,
+      "correctness": "passed",
+      "timing_assertion": "none; measured once, not an asymptotic proof"
+    },
+    "suffix-tree": {
+      "mechanism": "direct insertion with range-labelled edge splitting",
+      "preprocessing": "O(n\u00b2) comparisons",
+      "time_bound": "contains O(m), find O(m+r log r) for fixed alphabet",
+      "space_bound": "O(n+r)",
+      "text_bytes": 2048,
+      "pattern_bytes": 129,
+      "elapsed_seconds": 0.146607,
+      "construction_seconds": 0.146186,
+      "correctness": "passed",
+      "timing_assertion": "none; measured once, not an asymptotic proof"
+    },
+    "aho-corasick": {
+      "mechanism": "dense transitions, BFS failure, uncopied output links",
+      "preprocessing": "O(P+k+256V)",
+      "time_bound": "scan O(n+z)",
+      "space_bound": "O(256V+P+k+z)",
+      "text_bytes": 10000,
+      "pattern_bytes": 4096,
+      "elapsed_seconds": 0.067274,
+      "construction_seconds": 0.063353,
+      "correctness": "passed",
+      "timing_assertion": "none; measured once, not an asymptotic proof"
+    }
+  }
+}
