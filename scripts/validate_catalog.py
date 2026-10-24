@@ -695,6 +695,13 @@ def validate_repository(root: Path) -> ValidationReport:
             and algorithm["documentation_status"] in ARTIFACT_STATUSES
         ):
             text = readme.read_text(encoding="utf-8")
+            headings = re.findall(r"^##[ \t]+(.+?)[ \t]*$", _strip_code(text), re.MULTILINE)
+            expected_headings = [f"{number}. {title}" for number, title in enumerate(SECTIONS, 1)]
+            if headings != expected_headings:
+                report.errors.append(
+                    f"{aid}: completed documentation must contain exactly the 25 required sections in order "
+                    "as Markdown headings outside code blocks"
+                )
             for number, title in enumerate(SECTIONS, 1):
                 pattern = rf"^##\s+{number}\.\s+{re.escape(title)}\s*$"
                 if not re.search(pattern, text, re.MULTILINE):

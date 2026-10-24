@@ -1,0 +1,61 @@
+{
+  "audit_id": "dsa-final-audit-2026-10-24",
+  "owner_approval": "pending",
+  "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 1
+  },
+  "findings": [
+    {
+      "audit_id": "DSA-001",
+      "severity": "medium",
+      "category": "repository infrastructure",
+      "algorithm_id": null,
+      "file_path": "scripts/validate_catalog.py",
+      "description": "Completed lessons were checked for heading presence only. Reordered, duplicate, extra and code-fenced headings incorrectly passed.",
+      "reproduction_command": "python -m pytest tests/test_validate_catalog.py -k exact_ordered_real_headings -q",
+      "expected_result": "Reject all four malformed completed lessons.",
+      "actual_result": "Before fix: four regression tests failed because malformed lessons were accepted. After fix: exact ordered real H2 headings required.",
+      "root_cause": "Independent presence regexes did not validate ordering, cardinality, or Markdown code fences.",
+      "proposed_fix": "Compare the ordered H2 headings outside code against the 25 required titles; retain missing-title diagnostics.",
+      "fix_status": "fixed",
+      "verification_status": "284 validator/generator tests passed; four negative regression cases retained; final full suite recorded separately",
+      "evidence": [
+        "evidence/validator-before.txt",
+        "evidence/validator-after.txt"
+      ]
+    },
+    {
+      "audit_id": "DSA-002",
+      "severity": "medium",
+      "category": "Recursion and Backtracking",
+      "algorithm_id": null,
+      "file_path": "docs/divide-conquer-checkpoints.md",
+      "description": "The surviving Phase 4 checkpoint confirms prior phases complete and authorizes Phase 4, but does not explicitly record Phase 3 owner review approval. Historical Phase 3 handoff and catalog snapshot still say pending.",
+      "reproduction_command": "rg -n 'previous phases complete|Phase 3|owner review pending' docs/divide-conquer-checkpoints.md docs/divide-conquer-evidence/catalog-baseline.yaml",
+      "expected_result": "An explicit historical Phase 3 owner-approval record, separate from implementation completion.",
+      "actual_result": "Completion and next-phase authorization are recorded; an explicit Phase 3 approval statement was not located.",
+      "root_cause": "Historical approval wording is less explicit than adjacent phase checkpoints.",
+      "proposed_fix": "Owner may supply the earlier approval record or clarify it at review. Preserve historical evidence; do not infer or backdate approval.",
+      "fix_status": "open-owner-record-clarification",
+      "verification_status": "confirmed documentary ambiguity; no algorithm or test failure"
+    },
+    {
+      "audit_id": "DSA-003",
+      "severity": "low",
+      "category": "external documentation links",
+      "algorithm_id": null,
+      "file_path": "docs/reviews/dsa-final-audit/evidence/external-links.json",
+      "description": "24 of 92 external URL retrievals could not be verified through the browsing service; 68 were retrieved. Failures include access restrictions, timeouts, cache misses and a large PDF.",
+      "reproduction_command": "Open the URLs marked unverified-access-error in evidence/external-links.json using an independent browser.",
+      "expected_result": "Observe external reference availability independently of local Markdown-link validation.",
+      "actual_result": "68 retrieved; 24 access errors; no confirmed HTTP 404 in this check. These errors do not establish that the links are broken.",
+      "root_cause": "External source and retrieval-service access limitations.",
+      "proposed_fix": "Review the listed URLs in an ordinary browser; replace a reference only if it is independently confirmed broken.",
+      "fix_status": "open-verification-limitation",
+      "verification_status": "all URLs attempted; restricted results explicitly unverified"
+    }
+  ]
+}

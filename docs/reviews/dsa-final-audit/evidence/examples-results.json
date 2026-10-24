@@ -1,0 +1,166 @@
+{
+  "backtracking": {
+    "command": [
+      "python",
+      "scripts/verify_backtracking_examples.py"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-24T18:30:22.167823+06:00",
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "execution_context": "isolated source copy",
+    "elapsed_seconds": 6.977,
+    "CXX": "automatic discovery",
+    "log": "docs/reviews/dsa-final-audit/evidence/examples-backtracking.txt",
+    "summary": "All 18 documented Python/C++20 example executions passed."
+  },
+  "divide_conquer": {
+    "command": [
+      "python",
+      "scripts/verify_divide_conquer_examples.py"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-24T18:30:25.103957+06:00",
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "execution_context": "isolated source copy",
+    "elapsed_seconds": 2.935,
+    "CXX": "automatic discovery",
+    "log": "docs/reviews/dsa-final-audit/evidence/examples-divide_conquer.txt",
+    "summary": "All 8 documented Python/C++20 example executions passed."
+  },
+  "dynamic_programming": {
+    "command": [
+      "python",
+      "scripts/verify_dynamic_programming_examples.py"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-24T18:30:33.175031+06:00",
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "execution_context": "isolated source copy",
+    "elapsed_seconds": 8.071,
+    "CXX": "automatic discovery",
+    "log": "docs/reviews/dsa-final-audit/evidence/examples-dynamic_programming.txt",
+    "summary": "22/22 documented examples matched exact output"
+  },
+  "greedy": {
+    "command": [
+      "python",
+      "scripts/verify_greedy_examples.py"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-24T18:30:36.183520+06:00",
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "execution_context": "isolated source copy",
+    "elapsed_seconds": 3.008,
+    "CXX": "automatic discovery",
+    "log": "docs/reviews/dsa-final-audit/evidence/examples-greedy.txt",
+    "summary": "8/8 documented examples matched exact output"
+  },
+  "graph_algorithms": {
+    "command": [
+      "python",
+      "scripts/verify_graph_algorithms_examples.py"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-24T18:30:47.737718+06:00",
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "execution_context": "isolated source copy",
+    "elapsed_seconds": 11.554,
+    "CXX": "automatic discovery",
+    "log": "docs/reviews/dsa-final-audit/evidence/examples-graph_algorithms.txt",
+    "summary": "30/30 documented examples matched exact output"
+  },
+  "tree_algorithms": {
+    "command": [
+      "python",
+      "scripts/verify_tree_algorithms_examples.py"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-24T18:30:58.554172+06:00",
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "execution_context": "isolated source copy",
+    "elapsed_seconds": 10.816,
+    "CXX": "automatic discovery",
+    "log": "docs/reviews/dsa-final-audit/evidence/examples-tree_algorithms.txt",
+    "summary": "28/28 documented examples matched exact output"
+  },
+  "string": {
+    "command": [
+      "python",
+      "scripts/verify_string_examples.py"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-24T18:31:10.531587+06:00",
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "execution_context": "isolated source copy",
+    "elapsed_seconds": 11.977,
+    "CXX": "automatic discovery",
+    "log": "docs/reviews/dsa-final-audit/evidence/examples-string.txt",
+    "summary": "9 lessons, 27 executable example configurations passed"
+  },
+  "bit": {
+    "command": [
+      "python",
+      "scripts/verify_bit_examples.py"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-24T18:31:15.929247+06:00",
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "execution_context": "isolated source copy",
+    "elapsed_seconds": 5.397,
+    "CXX": "automatic discovery",
+    "log": "docs/reviews/dsa-final-audit/evidence/examples-bit.txt",
+    "summary": "4 lessons, 12 executable example configurations passed"
+  },
+  "number-theory": {
+    "command": [
+      "python",
+      "scripts/verify_number_window_examples.py",
+      "--category",
+      "number-theory"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-24T18:31:25.244430+06:00",
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "execution_context": "isolated source copy",
+    "elapsed_seconds": 9.315,
+    "CXX": "automatic discovery",
+    "log": "docs/reviews/dsa-final-audit/evidence/examples-number-theory.txt",
+    "summary": "7 lessons, 21 executable example configurations passed"
+  },
+  "two-pointers-sliding-window": {
+    "command": [
+      "python",
+      "scripts/verify_number_window_examples.py",
+      "--category",
+      "two-pointers-sliding-window"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-24T18:31:29.458594+06:00",
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "execution_context": "isolated source copy",
+    "elapsed_seconds": 4.214,
+    "CXX": "automatic discovery",
+    "log": "docs/reviews/dsa-final-audit/evidence/examples-two-pointers-sliding-window.txt",
+    "summary": "3 lessons, 9 executable example configurations passed"
+  }
+}

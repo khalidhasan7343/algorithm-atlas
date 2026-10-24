@@ -1,0 +1,92 @@
+[
+  {
+    "path": "docs/reviews/recursion-backtracking/RECURSION-BACKTRACKING-REVIEW-REPORT.md",
+    "nonempty": true,
+    "tracked": true,
+    "ignored": false
+  },
+  {
+    "path": "docs/reviews/graph-algorithms/GRAPH-ALGORITHMS-REVIEW-REPORT.md",
+    "nonempty": true,
+    "tracked": true,
+    "ignored": false
+  },
+  {
+    "path": "docs/reviews/dsa-final-audit/DSA-FINAL-AUDIT-REPORT.md",
+    "nonempty": true,
+    "tracked": false,
+    "ignored": false
+  },
+  {
+    "path": "docs/reviews/two-pointers-sliding-window/TWO-POINTERS-SLIDING-WINDOW-REVIEW-REPORT.md",
+    "nonempty": true,
+    "tracked": true,
+    "ignored": false
+  },
+  {
+    "path": "docs/reviews/searching/SEARCHING-REVIEW-REPORT.md",
+    "nonempty": true,
+    "tracked": true,
+    "ignored": false
+  },
+  {
+    "path": "docs/reviews/dynamic-programming/DYNAMIC-PROGRAMMING-REVIEW-REPORT.md",
+    "nonempty": true,
+    "tracked": true,
+    "ignored": false
+  },
+  {
+    "path": "docs/reviews/number-theory/NUMBER-THEORY-REVIEW-REPORT.md",
+    "nonempty": true,
+    "tracked": true,
+    "ignored": false
+  },
+  {
+    "path": "docs/reviews/greedy/GREEDY-REVIEW-REPORT.md",
+    "nonempty": true,
+    "tracked": true,
+    "ignored": false
+  },
+  {
+    "path": "docs/reviews/tree-algorithms/TREE-ALGORITHMS-REVIEW-REPORT.md",
+    "nonempty": true,
+    "tracked": true,
+    "ignored": false
+  },
+  {
+    "path": "docs/reviews/sorting/SORTING-REVIEW-REPORT.md",
+    "nonempty": true,
+    "tracked": true,
+    "ignored": false
+  },
+  {
+    "path": "docs/reviews/sorting/SORTING-FINAL-AUDIT-REPORT.md",
+    "nonempty": true,
+    "tracked": true,
+    "ignored": false
+  },
+  {
+    "path": "docs/reviews/string-algorithms/STRING-ALGORITHMS-REVIEW-REPORT.md",
+    "nonempty": true,
+    "tracked": true,
+    "ignored": false
+  },
+  {
+    "path": "docs/reviews/phase-0/PHASE-0-REPORT.md",
+    "nonempty": true,
+    "tracked": true,
+    "ignored": false
+  },
+  {
+    "path": "docs/reviews/bit-manipulation/BIT-MANIPULATION-REVIEW-REPORT.md",
+    "nonempty": true,
+    "tracked": true,
+    "ignored": false
+  },
+  {
+    "path": "docs/reviews/divide-conquer/DIVIDE-CONQUER-REVIEW-REPORT.md",
+    "nonempty": true,
+    "tracked": true,
+    "ignored": false
+  }
+]

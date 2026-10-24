@@ -27,3 +27,7 @@ Bit package remains unchanged. The [Number Theory package](number-theory/README.
 and [Two Pointers & Sliding Window package](two-pointers-sliding-window/README.md)
 cover jointly authorized Phases 11/12 with independent pending owner checkpoints.
 There is no third combined ZIP.
+
+The later [DSA final audit package](dsa-final-audit/README.md) is a separately
+authorized verification snapshot covering all DSA canonicals. It preserves the
+independent Phase 11/12 approval checkpoints and excludes historical review ZIPs.

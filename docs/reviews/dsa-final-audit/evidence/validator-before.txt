@@ -1,0 +1,108 @@
+FFFF                                                                     [100%]
+=================================== FAILURES ===================================
+_ test_completed_documentation_requires_exact_ordered_real_headings[reordered] _
+
+sample_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-248/test_completed_d...d': 'sample-topic', 'name': 'Sample Topic', 'category': 'A1', 'canonical_location': 'dsa/sorting/sample-topic', ...}]})
+mutation = 'reordered'
+
+    @pytest.mark.parametrize("mutation", ["reordered", "duplicate", "extra", "fenced-only"])
+    def test_completed_documentation_requires_exact_ordered_real_headings(sample_repo, mutation) -> None:
+        root, data = sample_repo
+        data["algorithms"][0]["documentation_status"] = "implemented"
+        save(root, data)
+        sections = [f"## {i}. {title}\n\nFixture content." for i, title in enumerate(SECTIONS, 1)]
+        if mutation == "reordered":
+            sections[0], sections[1] = sections[1], sections[0]
+        elif mutation == "duplicate":
+            sections.append(sections[0])
+        elif mutation == "extra":
+            sections.append("## 26. Undeclared section\n\nFixture content.")
+        else:
+            sections = ["```markdown\n" + "\n\n".join(sections) + "\n```"]
+        (root / "dsa/sorting/sample-topic/README.md").write_text("\n\n".join(sections))
+>       assert "exactly the 25 required sections in order" in errors(root)
+E       AssertionError: assert 'exactly the 25 required sections in order' in ''
+E        +  where '' = errors(PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-248/test_completed_documentation_r0'))
+
+tests/test_validate_catalog.py:244: AssertionError
+_ test_completed_documentation_requires_exact_ordered_real_headings[duplicate] _
+
+sample_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-248/test_completed_d...d': 'sample-topic', 'name': 'Sample Topic', 'category': 'A1', 'canonical_location': 'dsa/sorting/sample-topic', ...}]})
+mutation = 'duplicate'
+
+    @pytest.mark.parametrize("mutation", ["reordered", "duplicate", "extra", "fenced-only"])
+    def test_completed_documentation_requires_exact_ordered_real_headings(sample_repo, mutation) -> None:
+        root, data = sample_repo
+        data["algorithms"][0]["documentation_status"] = "implemented"
+        save(root, data)
+        sections = [f"## {i}. {title}\n\nFixture content." for i, title in enumerate(SECTIONS, 1)]
+        if mutation == "reordered":
+            sections[0], sections[1] = sections[1], sections[0]
+        elif mutation == "duplicate":
+            sections.append(sections[0])
+        elif mutation == "extra":
+            sections.append("## 26. Undeclared section\n\nFixture content.")
+        else:
+            sections = ["```markdown\n" + "\n\n".join(sections) + "\n```"]
+        (root / "dsa/sorting/sample-topic/README.md").write_text("\n\n".join(sections))
+>       assert "exactly the 25 required sections in order" in errors(root)
+E       AssertionError: assert 'exactly the 25 required sections in order' in ''
+E        +  where '' = errors(PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-248/test_completed_documentation_r1'))
+
+tests/test_validate_catalog.py:244: AssertionError
+___ test_completed_documentation_requires_exact_ordered_real_headings[extra] ___
+
+sample_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-248/test_completed_d...d': 'sample-topic', 'name': 'Sample Topic', 'category': 'A1', 'canonical_location': 'dsa/sorting/sample-topic', ...}]})
+mutation = 'extra'
+
+    @pytest.mark.parametrize("mutation", ["reordered", "duplicate", "extra", "fenced-only"])
+    def test_completed_documentation_requires_exact_ordered_real_headings(sample_repo, mutation) -> None:
+        root, data = sample_repo
+        data["algorithms"][0]["documentation_status"] = "implemented"
+        save(root, data)
+        sections = [f"## {i}. {title}\n\nFixture content." for i, title in enumerate(SECTIONS, 1)]
+        if mutation == "reordered":
+            sections[0], sections[1] = sections[1], sections[0]
+        elif mutation == "duplicate":
+            sections.append(sections[0])
+        elif mutation == "extra":
+            sections.append("## 26. Undeclared section\n\nFixture content.")
+        else:
+            sections = ["```markdown\n" + "\n\n".join(sections) + "\n```"]
+        (root / "dsa/sorting/sample-topic/README.md").write_text("\n\n".join(sections))
+>       assert "exactly the 25 required sections in order" in errors(root)
+E       AssertionError: assert 'exactly the 25 required sections in order' in ''
+E        +  where '' = errors(PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-248/test_completed_documentation_r2'))
+
+tests/test_validate_catalog.py:244: AssertionError
+_ test_completed_documentation_requires_exact_ordered_real_headings[fenced-only] _
+
+sample_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-248/test_completed_d...d': 'sample-topic', 'name': 'Sample Topic', 'category': 'A1', 'canonical_location': 'dsa/sorting/sample-topic', ...}]})
+mutation = 'fenced-only'
+
+    @pytest.mark.parametrize("mutation", ["reordered", "duplicate", "extra", "fenced-only"])
+    def test_completed_documentation_requires_exact_ordered_real_headings(sample_repo, mutation) -> None:
+        root, data = sample_repo
+        data["algorithms"][0]["documentation_status"] = "implemented"
+        save(root, data)
+        sections = [f"## {i}. {title}\n\nFixture content." for i, title in enumerate(SECTIONS, 1)]
+        if mutation == "reordered":
+            sections[0], sections[1] = sections[1], sections[0]
+        elif mutation == "duplicate":
+            sections.append(sections[0])
+        elif mutation == "extra":
+            sections.append("## 26. Undeclared section\n\nFixture content.")
+        else:
+            sections = ["```markdown\n" + "\n\n".join(sections) + "\n```"]
+        (root / "dsa/sorting/sample-topic/README.md").write_text("\n\n".join(sections))
+>       assert "exactly the 25 required sections in order" in errors(root)
+E       AssertionError: assert 'exactly the 25 required sections in order' in ''
+E        +  where '' = errors(PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-248/test_completed_documentation_r3'))
+
+tests/test_validate_catalog.py:244: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_validate_catalog.py::test_completed_documentation_requires_exact_ordered_real_headings[reordered]
+FAILED tests/test_validate_catalog.py::test_completed_documentation_requires_exact_ordered_real_headings[duplicate]
+FAILED tests/test_validate_catalog.py::test_completed_documentation_requires_exact_ordered_real_headings[extra]
+FAILED tests/test_validate_catalog.py::test_completed_documentation_requires_exact_ordered_real_headings[fenced-only]
+4 failed, 254 deselected in 0.39s

@@ -1,0 +1,8 @@
+{
+  "seed": 20261024,
+  "status": "passed",
+  "algorithm_count": 97,
+  "checks": 24945,
+  "elapsed_seconds": 0.689,
+  "scope": "Python supplementary probes; C++ reference/parity suites recorded separately"
+}

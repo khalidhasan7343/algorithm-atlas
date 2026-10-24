@@ -1,0 +1,1748 @@
+{
+  "docs/greedy-evidence/examples-results.json": [
+    {
+      "topic": "activity-selection",
+      "language": "python",
+      "input": "5 1 3 2 5 3 4 4 7 5 6\n",
+      "expected": "[0,2,4]",
+      "returncode": 0,
+      "stdout": "[0,2,4]\n"
+    },
+    {
+      "topic": "activity-selection",
+      "language": "cpp20",
+      "input": "5 1 3 2 5 3 4 4 7 5 6\n",
+      "expected": "[0,2,4]",
+      "returncode": 0,
+      "stdout": "[0,2,4]\n"
+    },
+    {
+      "topic": "fractional-knapsack",
+      "language": "python",
+      "input": "50 3 10 60 20 100 30 120\n",
+      "expected": "{\"value\":[240,1],\"fractions\":[[1,1],[1,1],[2,3]]}",
+      "returncode": 0,
+      "stdout": "{\"value\":[240,1],\"fractions\":[[1,1],[1,1],[2,3]]}\n"
+    },
+    {
+      "topic": "fractional-knapsack",
+      "language": "cpp20",
+      "input": "50 3 10 60 20 100 30 120\n",
+      "expected": "{\"value\":[240,1],\"fractions\":[[1,1],[1,1],[2,3]]}",
+      "returncode": 0,
+      "stdout": "{\"value\":[240,1],\"fractions\":[[1,1],[1,1],[2,3]]}\n"
+    },
+    {
+      "topic": "huffman-coding",
+      "language": "python",
+      "input": "3 65 5 66 2 67 1 4 65 66 67 65\n",
+      "expected": "{\"codes\":[[65,\"1\"],[66,\"01\"],[67,\"00\"]],\"bits\":\"101001\",\"decoded\":[65,66,67,65],\"cost\":11}",
+      "returncode": 0,
+      "stdout": "{\"codes\":[[65,\"1\"],[66,\"01\"],[67,\"00\"]],\"bits\":\"101001\",\"decoded\":[65,66,67,65],\"cost\":11}\n"
+    },
+    {
+      "topic": "huffman-coding",
+      "language": "cpp20",
+      "input": "3 65 5 66 2 67 1 4 65 66 67 65\n",
+      "expected": "{\"codes\":[[65,\"1\"],[66,\"01\"],[67,\"00\"]],\"bits\":\"101001\",\"decoded\":[65,66,67,65],\"cost\":11}",
+      "returncode": 0,
+      "stdout": "{\"codes\":[[65,\"1\"],[66,\"01\"],[67,\"00\"]],\"bits\":\"101001\",\"decoded\":[65,66,67,65],\"cost\":11}\n"
+    },
+    {
+      "topic": "job-sequencing-with-deadlines",
+      "language": "python",
+      "input": "5 2 100 1 19 2 27 1 25 3 15\n",
+      "expected": "{\"profit\":142,\"slots\":[2,0,4]}",
+      "returncode": 0,
+      "stdout": "{\"profit\":142,\"slots\":[2,0,4]}\n"
+    },
+    {
+      "topic": "job-sequencing-with-deadlines",
+      "language": "cpp20",
+      "input": "5 2 100 1 19 2 27 1 25 3 15\n",
+      "expected": "{\"profit\":142,\"slots\":[2,0,4]}",
+      "returncode": 0,
+      "stdout": "{\"profit\":142,\"slots\":[2,0,4]}\n"
+    }
+  ],
+  "docs/graph-algorithms-evidence/examples-results.json": [
+    {
+      "topic": "breadth-first-search",
+      "language": "python",
+      "input": "5 4 1 0 0 1 0 2 1 3 2 3\n",
+      "expected": "{\"order\":[0,1,2,3],\"distance\":[0,1,1,2,null],\"parent\":[null,0,0,1,null],\"parent_edge\":[null,0,1,2,null]}",
+      "returncode": 0,
+      "stdout": "{\"order\":[0,1,2,3],\"distance\":[0,1,1,2,null],\"parent\":[null,0,0,1,null],\"parent_edge\":[null,0,1,2,null]}\n"
+    },
+    {
+      "topic": "breadth-first-search",
+      "language": "cpp20",
+      "input": "5 4 1 0 0 1 0 2 1 3 2 3\n",
+      "expected": "{\"order\":[0,1,2,3],\"distance\":[0,1,1,2,null],\"parent\":[null,0,0,1,null],\"parent_edge\":[null,0,1,2,null]}",
+      "returncode": 0,
+      "stdout": "{\"order\":[0,1,2,3],\"distance\":[0,1,1,2,null],\"parent\":[null,0,0,1,null],\"parent_edge\":[null,0,1,2,null]}\n"
+    },
+    {
+      "topic": "depth-first-search",
+      "language": "python",
+      "input": "4 3 1 0 1 0 2 1 2\n",
+      "expected": "{\"order\":[0,1,2,3],\"finish\":[2,1,0,3],\"parent\":[null,0,1,null],\"parent_edge\":[null,0,2,null],\"component\":[0,0,0,3]}",
+      "returncode": 0,
+      "stdout": "{\"order\":[0,1,2,3],\"finish\":[2,1,0,3],\"parent\":[null,0,1,null],\"parent_edge\":[null,0,2,null],\"component\":[0,0,0,3]}\n"
+    },
+    {
+      "topic": "depth-first-search",
+      "language": "cpp20",
+      "input": "4 3 1 0 1 0 2 1 2\n",
+      "expected": "{\"order\":[0,1,2,3],\"finish\":[2,1,0,3],\"parent\":[null,0,1,null],\"parent_edge\":[null,0,2,null],\"component\":[0,0,0,3]}",
+      "returncode": 0,
+      "stdout": "{\"order\":[0,1,2,3],\"finish\":[2,1,0,3],\"parent\":[null,0,1,null],\"parent_edge\":[null,0,2,null],\"component\":[0,0,0,3]}\n"
+    },
+    {
+      "topic": "union-find",
+      "language": "python",
+      "input": "5 4 0 0 1 1 2 0 2 3 3\n",
+      "expected": "{\"groups\":[[0,1,2],[3],[4]],\"count\":3}",
+      "returncode": 0,
+      "stdout": "{\"groups\":[[0,1,2],[3],[4]],\"count\":3}\n"
+    },
+    {
+      "topic": "union-find",
+      "language": "cpp20",
+      "input": "5 4 0 0 1 1 2 0 2 3 3\n",
+      "expected": "{\"groups\":[[0,1,2],[3],[4]],\"count\":3}",
+      "returncode": 0,
+      "stdout": "{\"groups\":[[0,1,2],[3],[4]],\"count\":3}\n"
+    },
+    {
+      "topic": "topological-sorting",
+      "language": "python",
+      "input": "4 2 1 0 2 1 2\n",
+      "expected": "[0,1,2,3]",
+      "returncode": 0,
+      "stdout": "[0,1,2,3]\n"
+    },
+    {
+      "topic": "topological-sorting",
+      "language": "cpp20",
+      "input": "4 2 1 0 2 1 2\n",
+      "expected": "[0,1,2,3]",
+      "returncode": 0,
+      "stdout": "[0,1,2,3]\n"
+    },
+    {
+      "topic": "dijkstra",
+      "language": "python",
+      "input": "4 3 1 0 0 1 5 0 2 1 2 1 1\n",
+      "expected": "{\"distance\":[0,2,1,null],\"parent\":[null,2,0,null],\"parent_edge\":[null,2,1,null]}",
+      "returncode": 0,
+      "stdout": "{\"distance\":[0,2,1,null],\"parent\":[null,2,0,null],\"parent_edge\":[null,2,1,null]}\n"
+    },
+    {
+      "topic": "dijkstra",
+      "language": "cpp20",
+      "input": "4 3 1 0 0 1 5 0 2 1 2 1 1\n",
+      "expected": "{\"distance\":[0,2,1,null],\"parent\":[null,2,0,null],\"parent_edge\":[null,2,1,null]}",
+      "returncode": 0,
+      "stdout": "{\"distance\":[0,2,1,null],\"parent\":[null,2,0,null],\"parent_edge\":[null,2,1,null]}\n"
+    },
+    {
+      "topic": "bellman-ford",
+      "language": "python",
+      "input": "5 4 1 0 0 1 2 1 2 -3 2 1 1 2 3 2\n",
+      "expected": "{\"distance\":[0,\"-inf\",\"-inf\",\"-inf\",null],\"parent\":[null,null,null,null,null],\"parent_edge\":[null,null,null,null,null]}",
+      "returncode": 0,
+      "stdout": "{\"distance\":[0,\"-inf\",\"-inf\",\"-inf\",null],\"parent\":[null,null,null,null,null],\"parent_edge\":[null,null,null,null,null]}\n"
+    },
+    {
+      "topic": "bellman-ford",
+      "language": "cpp20",
+      "input": "5 4 1 0 0 1 2 1 2 -3 2 1 1 2 3 2\n",
+      "expected": "{\"distance\":[0,\"-inf\",\"-inf\",\"-inf\",null],\"parent\":[null,null,null,null,null],\"parent_edge\":[null,null,null,null,null]}",
+      "returncode": 0,
+      "stdout": "{\"distance\":[0,\"-inf\",\"-inf\",\"-inf\",null],\"parent\":[null,null,null,null,null],\"parent_edge\":[null,null,null,null,null]}\n"
+    },
+    {
+      "topic": "floyd-warshall",
+      "language": "python",
+      "input": "3 2 1 0 1 2 1 2 -1\n",
+      "expected": "[[0,2,1],[null,0,-1],[null,null,0]]",
+      "returncode": 0,
+      "stdout": "[[0,2,1],[null,0,-1],[null,null,0]]\n"
+    },
+    {
+      "topic": "floyd-warshall",
+      "language": "cpp20",
+      "input": "3 2 1 0 1 2 1 2 -1\n",
+      "expected": "[[0,2,1],[null,0,-1],[null,null,0]]",
+      "returncode": 0,
+      "stdout": "[[0,2,1],[null,0,-1],[null,null,0]]\n"
+    },
+    {
+      "topic": "kruskal",
+      "language": "python",
+      "input": "4 3 0 0 1 3 1 2 -1 0 2 2\n",
+      "expected": "{\"weight\":1,\"edges\":[1,2]}",
+      "returncode": 0,
+      "stdout": "{\"weight\":1,\"edges\":[1,2]}\n"
+    },
+    {
+      "topic": "kruskal",
+      "language": "cpp20",
+      "input": "4 3 0 0 1 3 1 2 -1 0 2 2\n",
+      "expected": "{\"weight\":1,\"edges\":[1,2]}",
+      "returncode": 0,
+      "stdout": "{\"weight\":1,\"edges\":[1,2]}\n"
+    },
+    {
+      "topic": "prim",
+      "language": "python",
+      "input": "4 3 0 0 1 3 1 2 -1 0 2 2\n",
+      "expected": "{\"weight\":1,\"edges\":[2,1]}",
+      "returncode": 0,
+      "stdout": "{\"weight\":1,\"edges\":[2,1]}\n"
+    },
+    {
+      "topic": "prim",
+      "language": "cpp20",
+      "input": "4 3 0 0 1 3 1 2 -1 0 2 2\n",
+      "expected": "{\"weight\":1,\"edges\":[2,1]}",
+      "returncode": 0,
+      "stdout": "{\"weight\":1,\"edges\":[2,1]}\n"
+    },
+    {
+      "topic": "tarjan-strongly-connected-components",
+      "language": "python",
+      "input": "4 5 1 0 1 1 0 1 2 2 3 3 2\n",
+      "expected": "[[0,1],[2,3]]",
+      "returncode": 0,
+      "stdout": "[[0,1],[2,3]]\n"
+    },
+    {
+      "topic": "tarjan-strongly-connected-components",
+      "language": "cpp20",
+      "input": "4 5 1 0 1 1 0 1 2 2 3 3 2\n",
+      "expected": "[[0,1],[2,3]]",
+      "returncode": 0,
+      "stdout": "[[0,1],[2,3]]\n"
+    },
+    {
+      "topic": "kosaraju-strongly-connected-components",
+      "language": "python",
+      "input": "4 5 1 0 1 1 0 1 2 2 3 3 2\n",
+      "expected": "[[0,1],[2,3]]",
+      "returncode": 0,
+      "stdout": "[[0,1],[2,3]]\n"
+    },
+    {
+      "topic": "kosaraju-strongly-connected-components",
+      "language": "cpp20",
+      "input": "4 5 1 0 1 1 0 1 2 2 3 3 2\n",
+      "expected": "[[0,1],[2,3]]",
+      "returncode": 0,
+      "stdout": "[[0,1],[2,3]]\n"
+    },
+    {
+      "topic": "bridges-detection",
+      "language": "python",
+      "input": "4 4 0 0 1 0 1 1 2 2 2\n",
+      "expected": "[2]",
+      "returncode": 0,
+      "stdout": "[2]\n"
+    },
+    {
+      "topic": "bridges-detection",
+      "language": "cpp20",
+      "input": "4 4 0 0 1 0 1 1 2 2 2\n",
+      "expected": "[2]",
+      "returncode": 0,
+      "stdout": "[2]\n"
+    },
+    {
+      "topic": "articulation-points",
+      "language": "python",
+      "input": "4 4 0 0 1 0 1 1 2 2 2\n",
+      "expected": "[1]",
+      "returncode": 0,
+      "stdout": "[1]\n"
+    },
+    {
+      "topic": "articulation-points",
+      "language": "cpp20",
+      "input": "4 4 0 0 1 0 1 1 2 2 2\n",
+      "expected": "[1]",
+      "returncode": 0,
+      "stdout": "[1]\n"
+    },
+    {
+      "topic": "a-star-search",
+      "language": "python",
+      "input": "4 5 1 0 3 0 0 3 0 0 1 3 0 2 1 2 1 1 1 3 2 2 3 100\n",
+      "expected": "{\"cost\":4,\"path\":[0,2,1,3],\"edges\":[1,2,3]}",
+      "returncode": 0,
+      "stdout": "{\"cost\":4,\"path\":[0,2,1,3],\"edges\":[1,2,3]}\n"
+    },
+    {
+      "topic": "a-star-search",
+      "language": "cpp20",
+      "input": "4 5 1 0 3 0 0 3 0 0 1 3 0 2 1 2 1 1 1 3 2 2 3 100\n",
+      "expected": "{\"cost\":4,\"path\":[0,2,1,3],\"edges\":[1,2,3]}",
+      "returncode": 0,
+      "stdout": "{\"cost\":4,\"path\":[0,2,1,3],\"edges\":[1,2,3]}\n"
+    },
+    {
+      "topic": "johnson",
+      "language": "python",
+      "input": "3 3 1 0 1 -2 1 2 3 0 2 4\n",
+      "expected": "[[0,-2,1],[null,0,3],[null,null,0]]",
+      "returncode": 0,
+      "stdout": "[[0,-2,1],[null,0,3],[null,null,0]]\n"
+    },
+    {
+      "topic": "johnson",
+      "language": "cpp20",
+      "input": "3 3 1 0 1 -2 1 2 3 0 2 4\n",
+      "expected": "[[0,-2,1],[null,0,3],[null,null,0]]",
+      "returncode": 0,
+      "stdout": "[[0,-2,1],[null,0,3],[null,null,0]]\n"
+    }
+  ],
+  "docs/bit-manipulation-evidence/examples-results.json": {
+    "xor-unique-elements": {
+      "decimal_input": "5 2 5 -7 2",
+      "expected": -7,
+      "observed": {
+        "python": -7,
+        "c++17": -7,
+        "c++20": -7
+      },
+      "status": "passed"
+    },
+    "two-non-repeating-elements": {
+      "decimal_input": "4 1 2 1 2 -7",
+      "expected": [
+        -7,
+        4
+      ],
+      "observed": {
+        "python": [
+          -7,
+          4
+        ],
+        "c++17": [
+          -7,
+          4
+        ],
+        "c++20": [
+          -7,
+          4
+        ]
+      },
+      "status": "passed"
+    },
+    "brian-kernighan-set-bit-counting": {
+      "decimal_input": "-1",
+      "expected": 32,
+      "observed": {
+        "python": 32,
+        "c++17": 32,
+        "c++20": 32
+      },
+      "status": "passed"
+    },
+    "subset-generation-bitmasking": {
+      "decimal_input": "1 1",
+      "expected": [
+        [],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "observed": {
+        "python": [
+          [],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "c++17": [
+          [],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "c++20": [
+          [],
+          [
+            1
+          ],
+          [
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "status": "passed"
+    }
+  },
+  "docs/string-algorithms-evidence/examples-results.json": {
+    "naive-pattern-matching": {
+      "hex_input": "6161616161 616161",
+      "expected": [
+        0,
+        1,
+        2
+      ],
+      "observed": {
+        "python": [
+          0,
+          1,
+          2
+        ],
+        "c++17": [
+          0,
+          1,
+          2
+        ],
+        "c++20": [
+          0,
+          1,
+          2
+        ]
+      },
+      "status": "passed"
+    },
+    "knuth-morris-pratt": {
+      "hex_input": "6161616161 616161",
+      "expected": [
+        0,
+        1,
+        2
+      ],
+      "observed": {
+        "python": [
+          0,
+          1,
+          2
+        ],
+        "c++17": [
+          0,
+          1,
+          2
+        ],
+        "c++20": [
+          0,
+          1,
+          2
+        ]
+      },
+      "status": "passed"
+    },
+    "rabin-karp": {
+      "hex_input": "6161616161 616161",
+      "expected": [
+        0,
+        1,
+        2
+      ],
+      "observed": {
+        "python": [
+          0,
+          1,
+          2
+        ],
+        "c++17": [
+          0,
+          1,
+          2
+        ],
+        "c++20": [
+          0,
+          1,
+          2
+        ]
+      },
+      "status": "passed"
+    },
+    "z-algorithm": {
+      "hex_input": "6161616161 616161",
+      "expected": [
+        0,
+        1,
+        2
+      ],
+      "observed": {
+        "python": [
+          0,
+          1,
+          2
+        ],
+        "c++17": [
+          0,
+          1,
+          2
+        ],
+        "c++20": [
+          0,
+          1,
+          2
+        ]
+      },
+      "status": "passed"
+    },
+    "boyer-moore": {
+      "hex_input": "6161616161 616161",
+      "expected": [
+        0,
+        1,
+        2
+      ],
+      "observed": {
+        "python": [
+          0,
+          1,
+          2
+        ],
+        "c++17": [
+          0,
+          1,
+          2
+        ],
+        "c++20": [
+          0,
+          1,
+          2
+        ]
+      },
+      "status": "passed"
+    },
+    "manacher": {
+      "hex_input": "61626261",
+      "expected": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "observed": {
+        "python": [
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "c++17": [
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "c++20": [
+          [
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      "status": "passed"
+    },
+    "suffix-array": {
+      "hex_input": "62616e616e61 616e61",
+      "expected": [
+        [
+          5,
+          3,
+          1,
+          0,
+          4,
+          2
+        ],
+        [
+          0,
+          1,
+          3,
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "observed": {
+        "python": [
+          [
+            5,
+            3,
+            1,
+            0,
+            4,
+            2
+          ],
+          [
+            0,
+            1,
+            3,
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "c++17": [
+          [
+            5,
+            3,
+            1,
+            0,
+            4,
+            2
+          ],
+          [
+            0,
+            1,
+            3,
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "c++20": [
+          [
+            5,
+            3,
+            1,
+            0,
+            4,
+            2
+          ],
+          [
+            0,
+            1,
+            3,
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "status": "passed"
+    },
+    "suffix-tree": {
+      "hex_input": "62616e616e61 616e61",
+      "expected": [
+        1,
+        3
+      ],
+      "observed": {
+        "python": [
+          1,
+          3
+        ],
+        "c++17": [
+          1,
+          3
+        ],
+        "c++20": [
+          1,
+          3
+        ]
+      },
+      "status": "passed"
+    },
+    "aho-corasick": {
+      "hex_input": "6161 3 61 6161 -",
+      "expected": [
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "observed": {
+        "python": [
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "c++17": [
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ],
+        "c++20": [
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ]
+        ]
+      },
+      "status": "passed"
+    }
+  },
+  "docs/tree-algorithms-evidence/examples-results.json": [
+    {
+      "topic": "inorder-traversal",
+      "language": "python",
+      "input": "5 0 8 4 8 2 6 1 2 3 4 -1 -1 -1 -1 -1 -1\n",
+      "expected": "[3,1,4,0,2]",
+      "returncode": 0,
+      "stdout": "[3,1,4,0,2]\n"
+    },
+    {
+      "topic": "inorder-traversal",
+      "language": "cpp20",
+      "input": "5 0 8 4 8 2 6 1 2 3 4 -1 -1 -1 -1 -1 -1\n",
+      "expected": "[3,1,4,0,2]",
+      "returncode": 0,
+      "stdout": "[3,1,4,0,2]\n"
+    },
+    {
+      "topic": "preorder-traversal",
+      "language": "python",
+      "input": "5 0 8 4 8 2 6 1 2 3 4 -1 -1 -1 -1 -1 -1\n",
+      "expected": "[0,1,3,4,2]",
+      "returncode": 0,
+      "stdout": "[0,1,3,4,2]\n"
+    },
+    {
+      "topic": "preorder-traversal",
+      "language": "cpp20",
+      "input": "5 0 8 4 8 2 6 1 2 3 4 -1 -1 -1 -1 -1 -1\n",
+      "expected": "[0,1,3,4,2]",
+      "returncode": 0,
+      "stdout": "[0,1,3,4,2]\n"
+    },
+    {
+      "topic": "postorder-traversal",
+      "language": "python",
+      "input": "5 0 8 4 8 2 6 1 2 3 4 -1 -1 -1 -1 -1 -1\n",
+      "expected": "[3,4,1,2,0]",
+      "returncode": 0,
+      "stdout": "[3,4,1,2,0]\n"
+    },
+    {
+      "topic": "postorder-traversal",
+      "language": "cpp20",
+      "input": "5 0 8 4 8 2 6 1 2 3 4 -1 -1 -1 -1 -1 -1\n",
+      "expected": "[3,4,1,2,0]",
+      "returncode": 0,
+      "stdout": "[3,4,1,2,0]\n"
+    },
+    {
+      "topic": "level-order-traversal",
+      "language": "python",
+      "input": "5 0 8 4 8 2 6 1 2 3 4 -1 -1 -1 -1 -1 -1\n",
+      "expected": "[[0],[1,2],[3,4]]",
+      "returncode": 0,
+      "stdout": "[[0],[1,2],[3,4]]\n"
+    },
+    {
+      "topic": "level-order-traversal",
+      "language": "cpp20",
+      "input": "5 0 8 4 8 2 6 1 2 3 4 -1 -1 -1 -1 -1 -1\n",
+      "expected": "[[0],[1,2],[3,4]]",
+      "returncode": 0,
+      "stdout": "[[0],[1,2],[3,4]]\n"
+    },
+    {
+      "topic": "lowest-common-ancestor",
+      "language": "python",
+      "input": "5 0 -1 0 0 1 1 4 3 4 3 2 0 4 1 1\n",
+      "expected": "[1,0,0,1]",
+      "returncode": 0,
+      "stdout": "[1,0,0,1]\n"
+    },
+    {
+      "topic": "lowest-common-ancestor",
+      "language": "cpp20",
+      "input": "5 0 -1 0 0 1 1 4 3 4 3 2 0 4 1 1\n",
+      "expected": "[1,0,0,1]",
+      "returncode": 0,
+      "stdout": "[1,0,0,1]\n"
+    },
+    {
+      "topic": "binary-lifting",
+      "language": "python",
+      "input": "5 0 -1 0 0 1 1 4 0 4 0 0 4 2 0 4 3 1 3 4\n",
+      "expected": "[4,0,null,1]",
+      "returncode": 0,
+      "stdout": "[4,0,null,1]\n"
+    },
+    {
+      "topic": "binary-lifting",
+      "language": "cpp20",
+      "input": "5 0 -1 0 0 1 1 4 0 4 0 0 4 2 0 4 3 1 3 4\n",
+      "expected": "[4,0,null,1]",
+      "returncode": 0,
+      "stdout": "[4,0,null,1]\n"
+    },
+    {
+      "topic": "euler-tour",
+      "language": "python",
+      "input": "5 0 -1 0 0 1 1\n",
+      "expected": "{\"order\":[0,1,3,4,2],\"tin\":[0,1,4,2,3],\"tout\":[5,4,5,3,4]}",
+      "returncode": 0,
+      "stdout": "{\"order\":[0,1,3,4,2],\"tin\":[0,1,4,2,3],\"tout\":[5,4,5,3,4]}\n"
+    },
+    {
+      "topic": "euler-tour",
+      "language": "cpp20",
+      "input": "5 0 -1 0 0 1 1\n",
+      "expected": "{\"order\":[0,1,3,4,2],\"tin\":[0,1,4,2,3],\"tout\":[5,4,5,3,4]}",
+      "returncode": 0,
+      "stdout": "{\"order\":[0,1,3,4,2],\"tin\":[0,1,4,2,3],\"tout\":[5,4,5,3,4]}\n"
+    },
+    {
+      "topic": "fenwick-tree",
+      "language": "python",
+      "input": "4 2 -1 3 2 5 1 0 2 1 4 0 1 5 1 4 2 2 2\n",
+      "expected": "[0,4,null,11,0]",
+      "returncode": 0,
+      "stdout": "[0,4,null,11,0]\n"
+    },
+    {
+      "topic": "fenwick-tree",
+      "language": "cpp20",
+      "input": "4 2 -1 3 2 5 1 0 2 1 4 0 1 5 1 4 2 2 2\n",
+      "expected": "[0,4,null,11,0]",
+      "returncode": 0,
+      "stdout": "[0,4,null,11,0]\n"
+    },
+    {
+      "topic": "segment-tree",
+      "language": "python",
+      "input": "4 2 -1 3 2 4 1 1 4 0 1 4 1 0 4 1 2 2\n",
+      "expected": "[4,null,11,0]",
+      "returncode": 0,
+      "stdout": "[4,null,11,0]\n"
+    },
+    {
+      "topic": "segment-tree",
+      "language": "cpp20",
+      "input": "4 2 -1 3 2 4 1 1 4 0 1 4 1 0 4 1 2 2\n",
+      "expected": "[4,null,11,0]",
+      "returncode": 0,
+      "stdout": "[4,null,11,0]\n"
+    },
+    {
+      "topic": "trie",
+      "language": "python",
+      "input": "11 0 - 0 cat 0 car 1 ca 2 ca 0 cat 3 cat 1 car 1 cat 3 - 2 -\n",
+      "expected": "[true,true,true,false,true,false,true,true,false,true,true]",
+      "returncode": 0,
+      "stdout": "[true,true,true,false,true,false,true,true,false,true,true]\n"
+    },
+    {
+      "topic": "trie",
+      "language": "cpp20",
+      "input": "11 0 - 0 cat 0 car 1 ca 2 ca 0 cat 3 cat 1 car 1 cat 3 - 2 -\n",
+      "expected": "[true,true,true,false,true,false,true,true,false,true,true]",
+      "returncode": 0,
+      "stdout": "[true,true,true,false,true,false,true,true,false,true,true]\n"
+    },
+    {
+      "topic": "avl-tree-rotations",
+      "language": "python",
+      "input": "10 0 3 0 1 0 2 0 2 3 2 1 1 2 4 1 3 1 9 3\n",
+      "expected": "[true,true,true,false,[1,2,3],true,true,[1],false,[1,3]]",
+      "returncode": 0,
+      "stdout": "[true,true,true,false,[1,2,3],true,true,[1],false,[1,3]]\n"
+    },
+    {
+      "topic": "avl-tree-rotations",
+      "language": "cpp20",
+      "input": "10 0 3 0 1 0 2 0 2 3 2 1 1 2 4 1 3 1 9 3\n",
+      "expected": "[true,true,true,false,[1,2,3],true,true,[1],false,[1,3]]",
+      "returncode": 0,
+      "stdout": "[true,true,true,false,[1,2,3],true,true,[1],false,[1,3]]\n"
+    },
+    {
+      "topic": "red-black-tree-operations",
+      "language": "python",
+      "input": "10 0 3 0 1 0 2 0 2 3 2 1 1 2 4 1 3 1 9 3\n",
+      "expected": "[true,true,true,false,[1,2,3],true,true,[1],false,[1,3]]",
+      "returncode": 0,
+      "stdout": "[true,true,true,false,[1,2,3],true,true,[1],false,[1,3]]\n"
+    },
+    {
+      "topic": "red-black-tree-operations",
+      "language": "cpp20",
+      "input": "10 0 3 0 1 0 2 0 2 3 2 1 1 2 4 1 3 1 9 3\n",
+      "expected": "[true,true,true,false,[1,2,3],true,true,[1],false,[1,3]]",
+      "returncode": 0,
+      "stdout": "[true,true,true,false,[1,2,3],true,true,[1],false,[1,3]]\n"
+    },
+    {
+      "topic": "b-tree-operations",
+      "language": "python",
+      "input": "2 12 0 1 0 2 0 3 0 4 3 4 2 4 1 2 2 2 1 1 1 3 1 4 3\n",
+      "expected": "[true,true,true,true,[1,2,3,4],[2,3],true,false,true,true,true,[]]",
+      "returncode": 0,
+      "stdout": "[true,true,true,true,[1,2,3,4],[2,3],true,false,true,true,true,[]]\n"
+    },
+    {
+      "topic": "b-tree-operations",
+      "language": "cpp20",
+      "input": "2 12 0 1 0 2 0 3 0 4 3 4 2 4 1 2 2 2 1 1 1 3 1 4 3\n",
+      "expected": "[true,true,true,true,[1,2,3,4],[2,3],true,false,true,true,true,[]]",
+      "returncode": 0,
+      "stdout": "[true,true,true,true,[1,2,3,4],[2,3],true,false,true,true,true,[]]\n"
+    },
+    {
+      "topic": "b-plus-tree-operations",
+      "language": "python",
+      "input": "2 12 0 1 0 2 0 3 0 4 3 4 2 4 1 2 2 2 1 1 1 3 1 4 3\n",
+      "expected": "[true,true,true,true,[1,2,3,4],[2,3],true,false,true,true,true,[]]",
+      "returncode": 0,
+      "stdout": "[true,true,true,true,[1,2,3,4],[2,3],true,false,true,true,true,[]]\n"
+    },
+    {
+      "topic": "b-plus-tree-operations",
+      "language": "cpp20",
+      "input": "2 12 0 1 0 2 0 3 0 4 3 4 2 4 1 2 2 2 1 1 1 3 1 4 3\n",
+      "expected": "[true,true,true,true,[1,2,3,4],[2,3],true,false,true,true,true,[]]",
+      "returncode": 0,
+      "stdout": "[true,true,true,true,[1,2,3,4],[2,3],true,false,true,true,true,[]]\n"
+    }
+  ],
+  "docs/dynamic-programming-evidence/examples-results.json": [
+    {
+      "topic": "fibonacci",
+      "language": "python",
+      "input": "10\n",
+      "expected": "55",
+      "returncode": 0,
+      "stdout": "55\n"
+    },
+    {
+      "topic": "fibonacci",
+      "language": "cpp20",
+      "input": "10\n",
+      "expected": "55",
+      "returncode": 0,
+      "stdout": "55\n"
+    },
+    {
+      "topic": "zero-one-knapsack",
+      "language": "python",
+      "input": "5 3 2 3 3 4 4 5\n",
+      "expected": "7",
+      "returncode": 0,
+      "stdout": "7\n"
+    },
+    {
+      "topic": "zero-one-knapsack",
+      "language": "cpp20",
+      "input": "5 3 2 3 3 4 4 5\n",
+      "expected": "7",
+      "returncode": 0,
+      "stdout": "7\n"
+    },
+    {
+      "topic": "coin-change",
+      "language": "python",
+      "input": "6 3 1 3 4\n",
+      "expected": "[2,4]",
+      "returncode": 0,
+      "stdout": "[2,4]\n"
+    },
+    {
+      "topic": "coin-change",
+      "language": "cpp20",
+      "input": "6 3 1 3 4\n",
+      "expected": "[2,4]",
+      "returncode": 0,
+      "stdout": "[2,4]\n"
+    },
+    {
+      "topic": "rod-cutting",
+      "language": "python",
+      "input": "4 4 2 5 7 8\n",
+      "expected": "10",
+      "returncode": 0,
+      "stdout": "10\n"
+    },
+    {
+      "topic": "rod-cutting",
+      "language": "cpp20",
+      "input": "4 4 2 5 7 8\n",
+      "expected": "10",
+      "returncode": 0,
+      "stdout": "10\n"
+    },
+    {
+      "topic": "longest-common-subsequence",
+      "language": "python",
+      "input": "abc\nac\n",
+      "expected": "2",
+      "returncode": 0,
+      "stdout": "2\n"
+    },
+    {
+      "topic": "longest-common-subsequence",
+      "language": "cpp20",
+      "input": "abc\nac\n",
+      "expected": "2",
+      "returncode": 0,
+      "stdout": "2\n"
+    },
+    {
+      "topic": "longest-increasing-subsequence",
+      "language": "python",
+      "input": "8 10 9 2 5 3 7 101 18\n",
+      "expected": "4",
+      "returncode": 0,
+      "stdout": "4\n"
+    },
+    {
+      "topic": "longest-increasing-subsequence",
+      "language": "cpp20",
+      "input": "8 10 9 2 5 3 7 101 18\n",
+      "expected": "4",
+      "returncode": 0,
+      "stdout": "4\n"
+    },
+    {
+      "topic": "edit-distance",
+      "language": "python",
+      "input": "kitten\nsitting\n",
+      "expected": "3",
+      "returncode": 0,
+      "stdout": "3\n"
+    },
+    {
+      "topic": "edit-distance",
+      "language": "cpp20",
+      "input": "kitten\nsitting\n",
+      "expected": "3",
+      "returncode": 0,
+      "stdout": "3\n"
+    },
+    {
+      "topic": "matrix-chain-multiplication",
+      "language": "python",
+      "input": "4 10 30 5 60\n",
+      "expected": "4500",
+      "returncode": 0,
+      "stdout": "4500\n"
+    },
+    {
+      "topic": "matrix-chain-multiplication",
+      "language": "cpp20",
+      "input": "4 10 30 5 60\n",
+      "expected": "4500",
+      "returncode": 0,
+      "stdout": "4500\n"
+    },
+    {
+      "topic": "subset-sum",
+      "language": "python",
+      "input": "9 6 3 34 4 12 5 2\n",
+      "expected": "true",
+      "returncode": 0,
+      "stdout": "true\n"
+    },
+    {
+      "topic": "subset-sum",
+      "language": "cpp20",
+      "input": "9 6 3 34 4 12 5 2\n",
+      "expected": "true",
+      "returncode": 0,
+      "stdout": "true\n"
+    },
+    {
+      "topic": "palindrome-partitioning",
+      "language": "python",
+      "input": "aab\n",
+      "expected": "1",
+      "returncode": 0,
+      "stdout": "1\n"
+    },
+    {
+      "topic": "palindrome-partitioning",
+      "language": "cpp20",
+      "input": "aab\n",
+      "expected": "1",
+      "returncode": 0,
+      "stdout": "1\n"
+    },
+    {
+      "topic": "kadane",
+      "language": "python",
+      "input": "9 -2 1 -3 4 -1 2 1 -5 4\n",
+      "expected": "[\"6\",3,7]",
+      "returncode": 0,
+      "stdout": "[\"6\",3,7]\n"
+    },
+    {
+      "topic": "kadane",
+      "language": "cpp20",
+      "input": "9 -2 1 -3 4 -1 2 1 -5 4\n",
+      "expected": "[\"6\",3,7]",
+      "returncode": 0,
+      "stdout": "[\"6\",3,7]\n"
+    }
+  ],
+  "docs/divide-conquer-evidence/examples-results.json": [
+    {
+      "algorithm": "strassen-matrix-multiplication",
+      "language": "python",
+      "input": "2 1 2 3 4 5 6 7 8",
+      "expected_stdout": "[[19,22],[43,50]]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "strassen-matrix-multiplication",
+      "language": "cpp20",
+      "input": "2 1 2 3 4 5 6 7 8",
+      "expected_stdout": "[[19,22],[43,50]]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "karatsuba-multiplication",
+      "language": "python",
+      "input": "1234 -5678",
+      "expected_stdout": "\"-7006652\"\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "karatsuba-multiplication",
+      "language": "cpp20",
+      "input": "1234 -5678",
+      "expected_stdout": "\"-7006652\"\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "closest-pair-of-points",
+      "language": "python",
+      "input": "4 0 0 3 4 0 1 3 5",
+      "expected_stdout": "[1,0,2]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "closest-pair-of-points",
+      "language": "cpp20",
+      "input": "4 0 0 3 4 0 1 3 5",
+      "expected_stdout": "[1,0,2]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "maximum-subarray-divide-and-conquer",
+      "language": "python",
+      "input": "-2 1 -3 4 -1 2 1 -5 4",
+      "expected_stdout": "[\"6\",3,7]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "maximum-subarray-divide-and-conquer",
+      "language": "cpp20",
+      "input": "-2 1 -3 4 -1 2 1 -5 4",
+      "expected_stdout": "[\"6\",3,7]\n",
+      "returncode": 0,
+      "passed": true
+    }
+  ],
+  "docs/two-pointers-sliding-window-evidence/examples-results.json": {
+    "two-sum-sorted-array": {
+      "input": "3 1 1 2 2",
+      "expected": [
+        0,
+        2
+      ],
+      "observed": {
+        "python": [
+          0,
+          2
+        ],
+        "c++17": [
+          0,
+          2
+        ],
+        "c++20": [
+          0,
+          2
+        ]
+      },
+      "status": "passed"
+    },
+    "sliding-window-maximum": {
+      "input": "3 1 3 -1 -3 5 3 6 7",
+      "expected": [
+        3,
+        3,
+        5,
+        5,
+        6,
+        7
+      ],
+      "observed": {
+        "python": [
+          3,
+          3,
+          5,
+          5,
+          6,
+          7
+        ],
+        "c++17": [
+          3,
+          3,
+          5,
+          5,
+          6,
+          7
+        ],
+        "c++20": [
+          3,
+          3,
+          5,
+          5,
+          6,
+          7
+        ]
+      },
+      "status": "passed"
+    },
+    "longest-substring-without-repeating-characters": {
+      "input": "6162636162636262",
+      "expected": [
+        0,
+        3
+      ],
+      "observed": {
+        "python": [
+          0,
+          3
+        ],
+        "c++17": [
+          0,
+          3
+        ],
+        "c++20": [
+          0,
+          3
+        ]
+      },
+      "status": "passed"
+    }
+  },
+  "docs/number-theory-evidence/examples-results.json": {
+    "sieve-of-eratosthenes": {
+      "input": "20",
+      "expected": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13,
+        17,
+        19
+      ],
+      "observed": {
+        "python": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19
+        ],
+        "c++17": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19
+        ],
+        "c++20": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19
+        ]
+      },
+      "status": "passed"
+    },
+    "euclidean-algorithm": {
+      "input": "-48 18",
+      "expected": 6,
+      "observed": {
+        "python": 6,
+        "c++17": 6,
+        "c++20": 6
+      },
+      "status": "passed"
+    },
+    "least-common-multiple": {
+      "input": "-12 18",
+      "expected": 36,
+      "observed": {
+        "python": 36,
+        "c++17": 36,
+        "c++20": 36
+      },
+      "status": "passed"
+    },
+    "modular-exponentiation": {
+      "input": "-2 5 13",
+      "expected": 7,
+      "observed": {
+        "python": 7,
+        "c++17": 7,
+        "c++20": 7
+      },
+      "status": "passed"
+    },
+    "fast-exponentiation": {
+      "input": "-2 63",
+      "expected": -9223372036854775808,
+      "observed": {
+        "python": -9223372036854775808,
+        "c++17": -9223372036854775808,
+        "c++20": -9223372036854775808
+      },
+      "status": "passed"
+    },
+    "extended-euclidean-algorithm": {
+      "input": "-30 18",
+      "expected": [
+        6,
+        1,
+        2
+      ],
+      "observed": {
+        "python": [
+          6,
+          1,
+          2
+        ],
+        "c++17": [
+          6,
+          1,
+          2
+        ],
+        "c++20": [
+          6,
+          1,
+          2
+        ]
+      },
+      "status": "passed"
+    },
+    "prime-factorization": {
+      "input": "360",
+      "expected": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "observed": {
+        "python": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "c++17": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "c++20": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            5,
+            1
+          ]
+        ]
+      },
+      "status": "passed"
+    }
+  },
+  "docs/recursion-backtracking-evidence/examples-results.json": [
+    {
+      "algorithm": "n-queens",
+      "language": "python",
+      "input": "4",
+      "expected_stdout": "[[1,3,0,2],[2,0,3,1]]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "n-queens",
+      "language": "cpp20",
+      "input": "4",
+      "expected_stdout": "[[1,3,0,2],[2,0,3,1]]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "sudoku-solver",
+      "language": "python",
+      "input": "0 0 4 6 7 8 9 1 2 6 7 2 1 9 5 3 4 8 1 9 8 3 4 2 5 6 7 8 5 9 7 6 1 4 2 3 4 2 6 8 5 3 7 9 1 7 1 3 9 2 4 8 5 6 9 6 1 5 3 7 2 8 4 2 8 7 4 1 9 6 3 5 3 4 5 2 8 6 1 7 9",
+      "expected_stdout": "[[5,3,4,6,7,8,9,1,2],[6,7,2,1,9,5,3,4,8],[1,9,8,3,4,2,5,6,7],[8,5,9,7,6,1,4,2,3],[4,2,6,8,5,3,7,9,1],[7,1,3,9,2,4,8,5,6],[9,6,1,5,3,7,2,8,4],[2,8,7,4,1,9,6,3,5],[3,4,5,2,8,6,1,7,9]]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "sudoku-solver",
+      "language": "cpp20",
+      "input": "0 0 4 6 7 8 9 1 2 6 7 2 1 9 5 3 4 8 1 9 8 3 4 2 5 6 7 8 5 9 7 6 1 4 2 3 4 2 6 8 5 3 7 9 1 7 1 3 9 2 4 8 5 6 9 6 1 5 3 7 2 8 4 2 8 7 4 1 9 6 3 5 3 4 5 2 8 6 1 7 9",
+      "expected_stdout": "[[5,3,4,6,7,8,9,1,2],[6,7,2,1,9,5,3,4,8],[1,9,8,3,4,2,5,6,7],[8,5,9,7,6,1,4,2,3],[4,2,6,8,5,3,7,9,1],[7,1,3,9,2,4,8,5,6],[9,6,1,5,3,7,2,8,4],[2,8,7,4,1,9,6,3,5],[3,4,5,2,8,6,1,7,9]]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "subset-sum-backtracking",
+      "language": "python",
+      "input": "1 4 -2 3",
+      "expected_stdout": "[1,2]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "subset-sum-backtracking",
+      "language": "cpp20",
+      "input": "1 4 -2 3",
+      "expected_stdout": "[1,2]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "power-set-generation",
+      "language": "python",
+      "input": "1 2",
+      "expected_stdout": "[[],[2],[1],[1,2]]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "power-set-generation",
+      "language": "cpp20",
+      "input": "1 2",
+      "expected_stdout": "[[],[2],[1],[1,2]]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "permutations",
+      "language": "python",
+      "input": "1 2",
+      "expected_stdout": "[[1,2],[2,1]]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "permutations",
+      "language": "cpp20",
+      "input": "1 2",
+      "expected_stdout": "[[1,2],[2,1]]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "combinations",
+      "language": "python",
+      "input": "2 3 1 3",
+      "expected_stdout": "[[3,1],[3,3],[1,3]]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "combinations",
+      "language": "cpp20",
+      "input": "2 3 1 3",
+      "expected_stdout": "[[3,1],[3,3],[1,3]]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "rat-in-a-maze",
+      "language": "python",
+      "input": "2 2 1 1 1 1",
+      "expected_stdout": "[\"DR\",\"RD\"]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "rat-in-a-maze",
+      "language": "cpp20",
+      "input": "2 2 1 1 1 1",
+      "expected_stdout": "[\"DR\",\"RD\"]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "graph-coloring",
+      "language": "python",
+      "input": "3 3 0 1 1 1 0 1 1 1 0",
+      "expected_stdout": "[0,1,2]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "graph-coloring",
+      "language": "cpp20",
+      "input": "3 3 0 1 1 1 0 1 1 1 0",
+      "expected_stdout": "[0,1,2]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "hamiltonian-path",
+      "language": "python",
+      "input": "1 3 0 0 0 1 0 0 0 1 0",
+      "expected_stdout": "[2,1,0]\n",
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "algorithm": "hamiltonian-path",
+      "language": "cpp20",
+      "input": "1 3 0 0 0 1 0 0 0 1 0",
+      "expected_stdout": "[2,1,0]\n",
+      "returncode": 0,
+      "passed": true
+    }
+  ]
+}

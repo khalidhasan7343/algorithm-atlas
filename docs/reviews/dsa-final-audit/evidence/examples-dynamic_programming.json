@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "scripts/verify_dynamic_programming_examples.py"
+  ],
+  "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+  "timestamp": "2026-10-24T18:30:33.175031+06:00",
+  "returncode": 0,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "execution_context": "isolated source copy",
+  "elapsed_seconds": 8.071,
+  "CXX": "automatic discovery",
+  "log": "docs/reviews/dsa-final-audit/evidence/examples-dynamic_programming.txt",
+  "summary": "22/22 documented examples matched exact output"
+}

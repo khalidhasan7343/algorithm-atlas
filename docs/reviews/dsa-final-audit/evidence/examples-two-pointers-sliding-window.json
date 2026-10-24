@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python",
+    "scripts/verify_number_window_examples.py",
+    "--category",
+    "two-pointers-sliding-window"
+  ],
+  "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+  "timestamp": "2026-10-24T18:31:29.458594+06:00",
+  "returncode": 0,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "execution_context": "isolated source copy",
+  "elapsed_seconds": 4.214,
+  "CXX": "automatic discovery",
+  "log": "docs/reviews/dsa-final-audit/evidence/examples-two-pointers-sliding-window.txt",
+  "summary": "3 lessons, 9 executable example configurations passed"
+}

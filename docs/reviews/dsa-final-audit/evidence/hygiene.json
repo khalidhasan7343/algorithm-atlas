@@ -1,0 +1,112 @@
+{
+  "tracked_files": 1482,
+  "credential_pattern_findings": [],
+  "large_tracked_files": [
+    {
+      "path": "artifacts/review-packages/bit-manipulation/algorithm-atlas-bit-manipulation-review.zip",
+      "bytes": 2218641
+    },
+    {
+      "path": "artifacts/review-packages/divide-conquer/algorithm-atlas-divide-conquer-review.zip",
+      "bytes": 1053768
+    },
+    {
+      "path": "artifacts/review-packages/dynamic-programming/algorithm-atlas-dynamic-programming-review.zip",
+      "bytes": 1225605
+    },
+    {
+      "path": "artifacts/review-packages/graph-algorithms/algorithm-atlas-graph-algorithms-review.zip",
+      "bytes": 1542805
+    },
+    {
+      "path": "artifacts/review-packages/greedy/algorithm-atlas-greedy-review.zip",
+      "bytes": 1338178
+    },
+    {
+      "path": "artifacts/review-packages/number-theory/algorithm-atlas-number-theory-review.zip",
+      "bytes": 2511341
+    },
+    {
+      "path": "artifacts/review-packages/string-algorithms/algorithm-atlas-string-algorithms-review.zip",
+      "bytes": 2071009
+    },
+    {
+      "path": "artifacts/review-packages/tree-algorithms/algorithm-atlas-tree-algorithms-review.zip",
+      "bytes": 1878870
+    },
+    {
+      "path": "artifacts/review-packages/two-pointers-sliding-window/algorithm-atlas-two-pointers-sliding-window-review.zip",
+      "bytes": 2511342
+    }
+  ],
+  "tracked_executables": [],
+  "package_metadata": [
+    {
+      "path": "artifacts/review-packages/recursion-backtracking/algorithm-atlas-recursion-backtracking-review.zip.verification.json",
+      "archive_exists": true,
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "artifacts/review-packages/graph-algorithms/algorithm-atlas-graph-algorithms-review.zip.verification.json",
+      "archive_exists": true,
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "artifacts/review-packages/two-pointers-sliding-window/algorithm-atlas-two-pointers-sliding-window-review.json",
+      "archive_exists": true,
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "artifacts/review-packages/searching/algorithm-atlas-searching-review.zip.verification.json",
+      "archive_exists": true,
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "artifacts/review-packages/dynamic-programming/algorithm-atlas-dynamic-programming-review.zip.verification.json",
+      "archive_exists": true,
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "artifacts/review-packages/number-theory/algorithm-atlas-number-theory-review.json",
+      "archive_exists": true,
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "artifacts/review-packages/greedy/algorithm-atlas-greedy-review.zip.verification.json",
+      "archive_exists": true,
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "artifacts/review-packages/tree-algorithms/algorithm-atlas-tree-algorithms-review.json",
+      "archive_exists": true,
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "artifacts/review-packages/string-algorithms/algorithm-atlas-string-algorithms-review.json",
+      "archive_exists": true,
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "artifacts/review-packages/bit-manipulation/algorithm-atlas-bit-manipulation-review.json",
+      "archive_exists": true,
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "artifacts/review-packages/divide-conquer/algorithm-atlas-divide-conquer-review.zip.verification.json",
+      "archive_exists": true,
+      "sha256_matches": true,
+      "bytes_match": true
+    }
+  ],
+  "limitations": "Pattern scan of current tracked files, not Git-history forensic secret detection or dependency vulnerability certification."
+}

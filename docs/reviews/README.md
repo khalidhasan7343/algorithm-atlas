@@ -4,6 +4,7 @@ Review and audit reports are organized by canonical phase name. Their filenames 
 
 | Phase | Report |
 | --- | --- |
+| DSA final audit | [DSA-FINAL-AUDIT-REPORT.md](dsa-final-audit/DSA-FINAL-AUDIT-REPORT.md) |
 | number-theory | [NUMBER-THEORY-REVIEW-REPORT.md](number-theory/NUMBER-THEORY-REVIEW-REPORT.md) |
 | two-pointers-sliding-window | [TWO-POINTERS-SLIDING-WINDOW-REVIEW-REPORT.md](two-pointers-sliding-window/TWO-POINTERS-SLIDING-WINDOW-REVIEW-REPORT.md) |
 | bit-manipulation | [BIT-MANIPULATION-REVIEW-REPORT.md](bit-manipulation/BIT-MANIPULATION-REVIEW-REPORT.md) |

@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "scripts/verify_bit_examples.py"
+  ],
+  "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+  "timestamp": "2026-10-24T18:31:15.929247+06:00",
+  "returncode": 0,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "execution_context": "isolated source copy",
+  "elapsed_seconds": 5.397,
+  "CXX": "automatic discovery",
+  "log": "docs/reviews/dsa-final-audit/evidence/examples-bit.txt",
+  "summary": "4 lessons, 12 executable example configurations passed"
+}

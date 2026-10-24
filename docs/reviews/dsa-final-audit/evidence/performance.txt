@@ -1,0 +1,32 @@
+[
+  {
+    "check": "five sorting cores vs sorted, 20000 integers",
+    "status": "passed",
+    "elapsed_seconds": 0.139246
+  },
+  {
+    "check": "10000-node chain traversals and ancestor queries",
+    "status": "passed",
+    "elapsed_seconds": 0.056127
+  },
+  {
+    "check": "four balanced sets, 1000 ascending inserts then complete deletion",
+    "status": "passed",
+    "elapsed_seconds": 0.025656
+  },
+  {
+    "check": "1000-node graph chain and low-link boundaries",
+    "status": "passed",
+    "elapsed_seconds": 0.003112
+  },
+  {
+    "check": "repetitive 10000-byte matching/palindromes; 2048-byte suffix tree",
+    "status": "passed",
+    "elapsed_seconds": 0.154753
+  },
+  {
+    "check": "sieve inclusive 1000000, factorization 10^12, 10000-item window",
+    "status": "passed",
+    "elapsed_seconds": 0.044722
+  }
+]

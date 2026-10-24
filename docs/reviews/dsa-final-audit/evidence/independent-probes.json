@@ -1,0 +1,797 @@
+{
+  "seed": 20261024,
+  "status": "passed",
+  "algorithm_count": 97,
+  "checks": 24945,
+  "elapsed_seconds": 0.689,
+  "scope": "Python supplementary probes; C++ reference/parity suites recorded separately",
+  "algorithms": {
+    "bubble-sort": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "selection-sort": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "insertion-sort": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "merge-sort": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "quick-sort": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "heap-sort": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "counting-sort": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "radix-sort": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "bucket-sort": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "shell-sort": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "tim-sort": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "linear-search": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "binary-search": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "ternary-search": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "jump-search": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "interpolation-search": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "exponential-search": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "maximum-subarray-divide-and-conquer": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "kadane": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "karatsuba-multiplication": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "closest-pair-of-points": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "strassen-matrix-multiplication": {
+      "status": "passed",
+      "checks": 80,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "power-set-generation": {
+      "status": "passed",
+      "checks": 40,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "permutations": {
+      "status": "passed",
+      "checks": 40,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "combinations": {
+      "status": "passed",
+      "checks": 40,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "subset-sum-backtracking": {
+      "status": "passed",
+      "checks": 40,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "n-queens": {
+      "status": "passed",
+      "checks": 8,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "sudoku-solver": {
+      "status": "passed",
+      "checks": 30,
+      "oracles": [
+        "fresh removed-clue Sudoku: independent row/column/box invariants"
+      ],
+      "language": "Python API"
+    },
+    "rat-in-a-maze": {
+      "status": "passed",
+      "checks": 40,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "graph-coloring": {
+      "status": "passed",
+      "checks": 40,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "hamiltonian-path": {
+      "status": "passed",
+      "checks": 40,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "fibonacci": {
+      "status": "passed",
+      "checks": 93,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "zero-one-knapsack": {
+      "status": "passed",
+      "checks": 60,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "subset-sum": {
+      "status": "passed",
+      "checks": 60,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "longest-increasing-subsequence": {
+      "status": "passed",
+      "checks": 60,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "longest-common-subsequence": {
+      "status": "passed",
+      "checks": 60,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "edit-distance": {
+      "status": "passed",
+      "checks": 60,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "matrix-chain-multiplication": {
+      "status": "passed",
+      "checks": 60,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "coin-change": {
+      "status": "passed",
+      "checks": 120,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "rod-cutting": {
+      "status": "passed",
+      "checks": 60,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "palindrome-partitioning": {
+      "status": "passed",
+      "checks": 60,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "activity-selection": {
+      "status": "passed",
+      "checks": 60,
+      "oracles": [
+        "all feasible interval subsets"
+      ],
+      "language": "Python API"
+    },
+    "job-sequencing-with-deadlines": {
+      "status": "passed",
+      "checks": 60,
+      "oracles": [
+        "all feasible job subsets and slot constraints"
+      ],
+      "language": "Python API"
+    },
+    "fractional-knapsack": {
+      "status": "passed",
+      "checks": 60,
+      "oracles": [
+        "all LP vertices: full subset plus one fractional item"
+      ],
+      "language": "Python API"
+    },
+    "huffman-coding": {
+      "status": "passed",
+      "checks": 60,
+      "oracles": [
+        "all merge orders, prefix freedom, round trip"
+      ],
+      "language": "Python API"
+    },
+    "breadth-first-search": {
+      "status": "passed",
+      "checks": 184,
+      "oracles": [
+        "re-executed independent canonical graph reference vectors"
+      ],
+      "language": "Python API"
+    },
+    "depth-first-search": {
+      "status": "passed",
+      "checks": 184,
+      "oracles": [
+        "re-executed independent canonical graph reference vectors"
+      ],
+      "language": "Python API"
+    },
+    "dijkstra": {
+      "status": "passed",
+      "checks": 208,
+      "oracles": [
+        "re-executed independent canonical graph reference vectors",
+        "fresh nonnegative graphs vs independent simple-path enumeration"
+      ],
+      "language": "Python API"
+    },
+    "bellman-ford": {
+      "status": "passed",
+      "checks": 208,
+      "oracles": [
+        "re-executed independent canonical graph reference vectors",
+        "fresh nonnegative graphs vs independent simple-path enumeration"
+      ],
+      "language": "Python API"
+    },
+    "floyd-warshall": {
+      "status": "passed",
+      "checks": 208,
+      "oracles": [
+        "re-executed independent canonical graph reference vectors",
+        "fresh potential-transformed graphs vs all simple paths"
+      ],
+      "language": "Python API"
+    },
+    "kruskal": {
+      "status": "passed",
+      "checks": 204,
+      "oracles": [
+        "re-executed independent canonical graph reference vectors",
+        "fresh multigraph forests vs exhaustive edge subsets"
+      ],
+      "language": "Python API"
+    },
+    "prim": {
+      "status": "passed",
+      "checks": 204,
+      "oracles": [
+        "re-executed independent canonical graph reference vectors",
+        "fresh multigraph forests vs exhaustive edge subsets"
+      ],
+      "language": "Python API"
+    },
+    "topological-sorting": {
+      "status": "passed",
+      "checks": 184,
+      "oracles": [
+        "re-executed independent canonical graph reference vectors"
+      ],
+      "language": "Python API"
+    },
+    "tarjan-strongly-connected-components": {
+      "status": "passed",
+      "checks": 268,
+      "oracles": [
+        "re-executed independent canonical graph reference vectors",
+        "fresh multigraphs vs reachability/removal reference"
+      ],
+      "language": "Python API"
+    },
+    "kosaraju-strongly-connected-components": {
+      "status": "passed",
+      "checks": 268,
+      "oracles": [
+        "re-executed independent canonical graph reference vectors",
+        "fresh multigraphs vs reachability/removal reference"
+      ],
+      "language": "Python API"
+    },
+    "union-find": {
+      "status": "passed",
+      "checks": 184,
+      "oracles": [
+        "re-executed independent canonical graph reference vectors"
+      ],
+      "language": "Python API"
+    },
+    "a-star-search": {
+      "status": "passed",
+      "checks": 205,
+      "oracles": [
+        "re-executed independent canonical graph reference vectors",
+        "fresh zero-heuristic shortest paths vs all simple paths"
+      ],
+      "language": "Python API"
+    },
+    "bridges-detection": {
+      "status": "passed",
+      "checks": 268,
+      "oracles": [
+        "re-executed independent canonical graph reference vectors",
+        "fresh multigraphs vs reachability/removal reference"
+      ],
+      "language": "Python API"
+    },
+    "articulation-points": {
+      "status": "passed",
+      "checks": 268,
+      "oracles": [
+        "re-executed independent canonical graph reference vectors",
+        "fresh multigraphs vs reachability/removal reference"
+      ],
+      "language": "Python API"
+    },
+    "johnson": {
+      "status": "passed",
+      "checks": 208,
+      "oracles": [
+        "re-executed independent canonical graph reference vectors",
+        "fresh potential-transformed graphs vs all simple paths"
+      ],
+      "language": "Python API"
+    },
+    "inorder-traversal": {
+      "status": "passed",
+      "checks": 40,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "preorder-traversal": {
+      "status": "passed",
+      "checks": 40,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "postorder-traversal": {
+      "status": "passed",
+      "checks": 40,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "level-order-traversal": {
+      "status": "passed",
+      "checks": 40,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "lowest-common-ancestor": {
+      "status": "passed",
+      "checks": 40,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "binary-lifting": {
+      "status": "passed",
+      "checks": 40,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "euler-tour": {
+      "status": "passed",
+      "checks": 40,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "fenwick-tree": {
+      "status": "passed",
+      "checks": 2400,
+      "oracles": [
+        "fresh mutation streams vs naive range sums"
+      ],
+      "language": "Python API"
+    },
+    "segment-tree": {
+      "status": "passed",
+      "checks": 2400,
+      "oracles": [
+        "fresh mutation streams vs naive range sums"
+      ],
+      "language": "Python API"
+    },
+    "trie": {
+      "status": "passed",
+      "checks": 101,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "avl-tree-rotations": {
+      "status": "passed",
+      "checks": 2800,
+      "oracles": [
+        "fresh mutations; reference set plus independent structural invariant walker"
+      ],
+      "language": "Python API"
+    },
+    "red-black-tree-operations": {
+      "status": "passed",
+      "checks": 2800,
+      "oracles": [
+        "fresh mutations; reference set plus independent structural invariant walker"
+      ],
+      "language": "Python API"
+    },
+    "b-tree-operations": {
+      "status": "passed",
+      "checks": 2800,
+      "oracles": [
+        "fresh mutations; reference set plus independent structural invariant walker"
+      ],
+      "language": "Python API"
+    },
+    "b-plus-tree-operations": {
+      "status": "passed",
+      "checks": 2800,
+      "oracles": [
+        "fresh mutations; reference set plus independent structural invariant walker"
+      ],
+      "language": "Python API"
+    },
+    "naive-pattern-matching": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "knuth-morris-pratt": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "rabin-karp": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "z-algorithm": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "boyer-moore": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "suffix-array": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh binary text vs direct slicing and suffix sorting"
+      ],
+      "language": "Python API"
+    },
+    "suffix-tree": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh binary text vs direct slicing and suffix sorting"
+      ],
+      "language": "Python API"
+    },
+    "manacher": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "aho-corasick": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh binary multi-pattern data vs repeated naive slices"
+      ],
+      "language": "Python API"
+    },
+    "xor-unique-elements": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "two-non-repeating-elements": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "brian-kernighan-set-bit-counting": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "subset-generation-bitmasking": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "euclidean-algorithm": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "least-common-multiple": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "extended-euclidean-algorithm": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh full-domain integers: Bezout and math.gcd"
+      ],
+      "language": "Python API"
+    },
+    "fast-exponentiation": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "modular-exponentiation": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "prime-factorization": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh integers: reconstruction, ascending prime factors, exponents"
+      ],
+      "language": "Python API"
+    },
+    "sieve-of-eratosthenes": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "two-sum-sorted-array": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "sliding-window-maximum": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    },
+    "longest-substring-without-repeating-characters": {
+      "status": "passed",
+      "checks": 100,
+      "oracles": [
+        "fresh bounded reference and input preservation"
+      ],
+      "language": "Python API"
+    }
+  }
+}

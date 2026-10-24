@@ -226,6 +226,24 @@ def test_completed_documentation_requires_all_25_sections(sample_repo) -> None:
     assert validate_repository(root).ok
 
 
+@pytest.mark.parametrize("mutation", ["reordered", "duplicate", "extra", "fenced-only"])
+def test_completed_documentation_requires_exact_ordered_real_headings(sample_repo, mutation) -> None:
+    root, data = sample_repo
+    data["algorithms"][0]["documentation_status"] = "implemented"
+    save(root, data)
+    sections = [f"## {i}. {title}\n\nFixture content." for i, title in enumerate(SECTIONS, 1)]
+    if mutation == "reordered":
+        sections[0], sections[1] = sections[1], sections[0]
+    elif mutation == "duplicate":
+        sections.append(sections[0])
+    elif mutation == "extra":
+        sections.append("## 26. Undeclared section\n\nFixture content.")
+    else:
+        sections = ["```markdown\n" + "\n\n".join(sections) + "\n```"]
+    (root / "dsa/sorting/sample-topic/README.md").write_text("\n\n".join(sections))
+    assert "exactly the 25 required sections in order" in errors(root)
+
+
 @pytest.mark.parametrize("link,expected", [
     ("[missing](does-not-exist.md)", "broken relative link"),
     ("[heading](dsa/sorting/README.md#missing)", "broken heading anchor"),

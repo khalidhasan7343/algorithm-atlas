@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "scripts/verify_tree_algorithms_examples.py"
+  ],
+  "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+  "timestamp": "2026-10-24T18:30:58.554172+06:00",
+  "returncode": 0,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "execution_context": "isolated source copy",
+  "elapsed_seconds": 10.816,
+  "CXX": "automatic discovery",
+  "log": "docs/reviews/dsa-final-audit/evidence/examples-tree_algorithms.txt",
+  "summary": "28/28 documented examples matched exact output"
+}

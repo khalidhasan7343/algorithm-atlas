@@ -1,0 +1,22 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "--require-cpp",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reviews/dsa-final-audit/evidence/final-full-suite.xml"
+  ],
+  "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+  "timestamp": "2026-10-24T18:43:45.316374+06:00",
+  "returncode": 0,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "execution_context": "working repository",
+  "elapsed_seconds": 464.48,
+  "CXX": "automatic discovery",
+  "ASAN_OPTIONS": null,
+  "UBSAN_OPTIONS": null,
+  "log": "docs/reviews/dsa-final-audit/evidence/final-full-suite.txt",
+  "summary": "1989 passed in 464.28s (0:07:44)"
+}

@@ -8,6 +8,8 @@ Algorithm Atlas is an educational, open-source project maintained by **MD.Khalid
 
 **Current state: Phase 10 officially owner-approved; Phase 11 Number Theory and Phase 12 Two Pointers & Sliding Window implemented and awaiting independent owner review.** Follow the [locked scope](docs/number-theory-window-scope.md), [Number Theory checkpoint](docs/number-theory-checkpoints.md), [Window checkpoint](docs/two-pointers-sliding-window-checkpoints.md) and [progress](docs/progress.md). Both new owner approvals are independently pending.
 
+The owner authorized a [comprehensive DSA final audit](docs/reviews/dsa-final-audit/DSA-FINAL-AUDIT-REPORT.md) on 2026-10-24. Its report, findings, test matrix and local review package are separate from phase approvals. DSA final audit owner approval remains pending.
+
 ## Project Overview
 
 A comprehensive collection of Data Structures, Algorithms, Machine Learning, and Artificial Intelligence concepts, explained from scratch with Python and C++ implementations, complexity analysis, and real-world applications.

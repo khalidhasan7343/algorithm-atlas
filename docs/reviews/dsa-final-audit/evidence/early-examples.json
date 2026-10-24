@@ -1,0 +1,410 @@
+[
+  {
+    "algorithm": "bubble-sort",
+    "language": "python",
+    "input": "5 1 4 2\n",
+    "expected": "1 2 4 5\n",
+    "actual": "1 2 4 5\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "bubble-sort",
+    "language": "c++17",
+    "input": "5 1 4 2\n",
+    "expected": "1 2 4 5\n",
+    "actual": "1 2 4 5\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "bubble-sort",
+    "language": "c++20",
+    "input": "5 1 4 2\n",
+    "expected": "1 2 4 5\n",
+    "actual": "1 2 4 5\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "selection-sort",
+    "language": "python",
+    "input": "5 1 4 2\n",
+    "expected": "1 2 4 5\n",
+    "actual": "1 2 4 5\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "selection-sort",
+    "language": "c++17",
+    "input": "5 1 4 2\n",
+    "expected": "1 2 4 5\n",
+    "actual": "1 2 4 5\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "selection-sort",
+    "language": "c++20",
+    "input": "5 1 4 2\n",
+    "expected": "1 2 4 5\n",
+    "actual": "1 2 4 5\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "insertion-sort",
+    "language": "python",
+    "input": "5 2 4 2 1\n",
+    "expected": "1 2 2 4 5\n",
+    "actual": "1 2 2 4 5\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "insertion-sort",
+    "language": "c++17",
+    "input": "5 2 4 2 1\n",
+    "expected": "1 2 2 4 5\n",
+    "actual": "1 2 2 4 5\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "insertion-sort",
+    "language": "c++20",
+    "input": "5 2 4 2 1\n",
+    "expected": "1 2 2 4 5\n",
+    "actual": "1 2 2 4 5\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "merge-sort",
+    "language": "python",
+    "input": "5 1 4 2 8\n",
+    "expected": "1 2 4 5 8\n",
+    "actual": "1 2 4 5 8\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "merge-sort",
+    "language": "c++17",
+    "input": "5 1 4 2 8\n",
+    "expected": "1 2 4 5 8\n",
+    "actual": "1 2 4 5 8\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "merge-sort",
+    "language": "c++20",
+    "input": "5 1 4 2 8\n",
+    "expected": "1 2 4 5 8\n",
+    "actual": "1 2 4 5 8\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "quick-sort",
+    "language": "python",
+    "input": "4 2 4 1 3\n",
+    "expected": "1 2 3 4 4\n",
+    "actual": "1 2 3 4 4\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "quick-sort",
+    "language": "c++17",
+    "input": "4 2 4 1 3\n",
+    "expected": "1 2 3 4 4\n",
+    "actual": "1 2 3 4 4\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "quick-sort",
+    "language": "c++20",
+    "input": "4 2 4 1 3\n",
+    "expected": "1 2 3 4 4\n",
+    "actual": "1 2 3 4 4\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "heap-sort",
+    "language": "python",
+    "input": "4 10 3 5 1\n",
+    "expected": "1 3 4 5 10\n",
+    "actual": "1 3 4 5 10\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "heap-sort",
+    "language": "c++17",
+    "input": "4 10 3 5 1\n",
+    "expected": "1 3 4 5 10\n",
+    "actual": "1 3 4 5 10\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "heap-sort",
+    "language": "c++20",
+    "input": "4 10 3 5 1\n",
+    "expected": "1 3 4 5 10\n",
+    "actual": "1 3 4 5 10\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "counting-sort",
+    "language": "python",
+    "input": "2 -1 2 0 -1\n",
+    "expected": "-1 -1 0 2 2\n",
+    "actual": "-1 -1 0 2 2\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "counting-sort",
+    "language": "c++17",
+    "input": "2 -1 2 0 -1\n",
+    "expected": "-1 -1 0 2 2\n",
+    "actual": "-1 -1 0 2 2\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "counting-sort",
+    "language": "c++20",
+    "input": "2 -1 2 0 -1\n",
+    "expected": "-1 -1 0 2 2\n",
+    "actual": "-1 -1 0 2 2\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "radix-sort",
+    "language": "python",
+    "input": "256 -2 1 -1 0 255\n",
+    "expected": "-2 -1 0 1 255 256\n",
+    "actual": "-2 -1 0 1 255 256\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "radix-sort",
+    "language": "c++17",
+    "input": "256 -2 1 -1 0 255\n",
+    "expected": "-2 -1 0 1 255 256\n",
+    "actual": "-2 -1 0 1 255 256\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "radix-sort",
+    "language": "c++20",
+    "input": "256 -2 1 -1 0 255\n",
+    "expected": "-2 -1 0 1 255 256\n",
+    "actual": "-2 -1 0 1 255 256\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "bucket-sort",
+    "language": "python",
+    "input": "1 .5 0 2.5e-1 +7.5E-1\n",
+    "expected": "0 0.25 0.5 0.75 1\n",
+    "actual": "0 0.25 0.5 0.75 1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "bucket-sort",
+    "language": "c++17",
+    "input": "1 .5 0 2.5e-1 +7.5E-1\n",
+    "expected": "0 0.25 0.5 0.75 1\n",
+    "actual": "0 0.25 0.5 0.75 1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "bucket-sort",
+    "language": "c++20",
+    "input": "1 .5 0 2.5e-1 +7.5E-1\n",
+    "expected": "0 0.25 0.5 0.75 1\n",
+    "actual": "0 0.25 0.5 0.75 1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "shell-sort",
+    "language": "python",
+    "input": "23 12 1 8 34 54 2 3 7 4\n",
+    "expected": "1 2 3 4 7 8 12 23 34 54\n",
+    "actual": "1 2 3 4 7 8 12 23 34 54\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "shell-sort",
+    "language": "c++17",
+    "input": "23 12 1 8 34 54 2 3 7 4\n",
+    "expected": "1 2 3 4 7 8 12 23 34 54\n",
+    "actual": "1 2 3 4 7 8 12 23 34 54\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "shell-sort",
+    "language": "c++20",
+    "input": "23 12 1 8 34 54 2 3 7 4\n",
+    "expected": "1 2 3 4 7 8 12 23 34 54\n",
+    "actual": "1 2 3 4 7 8 12 23 34 54\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "tim-sort",
+    "language": "python",
+    "input": "5 2 4 2 1\n",
+    "expected": "1 2 2 4 5\n",
+    "actual": "1 2 2 4 5\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "tim-sort",
+    "language": "c++17",
+    "input": "5 2 4 2 1\n",
+    "expected": "1 2 2 4 5\n",
+    "actual": "1 2 2 4 5\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "tim-sort",
+    "language": "c++20",
+    "input": "5 2 4 2 1\n",
+    "expected": "1 2 2 4 5\n",
+    "actual": "1 2 2 4 5\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "linear-search",
+    "language": "python",
+    "input": "-4 -9 -4 -4 0 2 2 8\n",
+    "expected": "1\n",
+    "actual": "1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "linear-search",
+    "language": "c++17",
+    "input": "-4 -9 -4 -4 0 2 2 8\n",
+    "expected": "1\n",
+    "actual": "1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "linear-search",
+    "language": "c++20",
+    "input": "-4 -9 -4 -4 0 2 2 8\n",
+    "expected": "1\n",
+    "actual": "1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "binary-search",
+    "language": "python",
+    "input": "-4 -9 -4 -4 0 2 2 8\n",
+    "expected": "1\n",
+    "actual": "1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "binary-search",
+    "language": "c++17",
+    "input": "-4 -9 -4 -4 0 2 2 8\n",
+    "expected": "1\n",
+    "actual": "1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "binary-search",
+    "language": "c++20",
+    "input": "-4 -9 -4 -4 0 2 2 8\n",
+    "expected": "1\n",
+    "actual": "1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "ternary-search",
+    "language": "python",
+    "input": "-4 -9 -4 -4 0 2 2 8\n",
+    "expected": "1\n",
+    "actual": "1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "ternary-search",
+    "language": "c++17",
+    "input": "-4 -9 -4 -4 0 2 2 8\n",
+    "expected": "1\n",
+    "actual": "1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "ternary-search",
+    "language": "c++20",
+    "input": "-4 -9 -4 -4 0 2 2 8\n",
+    "expected": "1\n",
+    "actual": "1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "jump-search",
+    "language": "python",
+    "input": "-4 -9 -4 -4 0 2 2 8\n",
+    "expected": "1\n",
+    "actual": "1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "jump-search",
+    "language": "c++17",
+    "input": "-4 -9 -4 -4 0 2 2 8\n",
+    "expected": "1\n",
+    "actual": "1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "jump-search",
+    "language": "c++20",
+    "input": "-4 -9 -4 -4 0 2 2 8\n",
+    "expected": "1\n",
+    "actual": "1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "interpolation-search",
+    "language": "python",
+    "input": "-4 -9 -4 -4 0 2 2 8\n",
+    "expected": "1\n",
+    "actual": "1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "interpolation-search",
+    "language": "c++17",
+    "input": "-4 -9 -4 -4 0 2 2 8\n",
+    "expected": "1\n",
+    "actual": "1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "interpolation-search",
+    "language": "c++20",
+    "input": "-4 -9 -4 -4 0 2 2 8\n",
+    "expected": "1\n",
+    "actual": "1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "exponential-search",
+    "language": "python",
+    "input": "-4 -9 -4 -4 0 2 2 8\n",
+    "expected": "1\n",
+    "actual": "1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "exponential-search",
+    "language": "c++17",
+    "input": "-4 -9 -4 -4 0 2 2 8\n",
+    "expected": "1\n",
+    "actual": "1\n",
+    "status": "passed"
+  },
+  {
+    "algorithm": "exponential-search",
+    "language": "c++20",
+    "input": "-4 -9 -4 -4 0 2 2 8\n",
+    "expected": "1\n",
+    "actual": "1\n",
+    "status": "passed"
+  }
+]

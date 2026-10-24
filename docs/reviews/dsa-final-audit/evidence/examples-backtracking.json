@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "scripts/verify_backtracking_examples.py"
+  ],
+  "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+  "timestamp": "2026-10-24T18:30:22.167823+06:00",
+  "returncode": 0,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "execution_context": "isolated source copy",
+  "elapsed_seconds": 6.977,
+  "CXX": "automatic discovery",
+  "log": "docs/reviews/dsa-final-audit/evidence/examples-backtracking.txt",
+  "summary": "All 18 documented Python/C++20 example executions passed."
+}

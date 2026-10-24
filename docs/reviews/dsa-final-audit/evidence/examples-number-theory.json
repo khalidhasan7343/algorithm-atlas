@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python",
+    "scripts/verify_number_window_examples.py",
+    "--category",
+    "number-theory"
+  ],
+  "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+  "timestamp": "2026-10-24T18:31:25.244430+06:00",
+  "returncode": 0,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "execution_context": "isolated source copy",
+  "elapsed_seconds": 9.315,
+  "CXX": "automatic discovery",
+  "log": "docs/reviews/dsa-final-audit/evidence/examples-number-theory.txt",
+  "summary": "7 lessons, 21 executable example configurations passed"
+}

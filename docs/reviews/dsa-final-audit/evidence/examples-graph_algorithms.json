@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "scripts/verify_graph_algorithms_examples.py"
+  ],
+  "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+  "timestamp": "2026-10-24T18:30:47.737718+06:00",
+  "returncode": 0,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "execution_context": "isolated source copy",
+  "elapsed_seconds": 11.554,
+  "CXX": "automatic discovery",
+  "log": "docs/reviews/dsa-final-audit/evidence/examples-graph_algorithms.txt",
+  "summary": "30/30 documented examples matched exact output"
+}

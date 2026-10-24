@@ -1,0 +1,30 @@
+{
+  "sanitizers": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "dsa/tree-algorithms",
+      "dsa/string-algorithms",
+      "dsa/graph-algorithms",
+      "dsa/number-theory",
+      "dsa/two-pointers-and-sliding-window",
+      "-m",
+      "cpp",
+      "--cpp-standard=c++20",
+      "--require-cpp",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reviews/dsa-final-audit/evidence/sanitizers.xml"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-24T18:36:36.346685+06:00",
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "execution_context": "working repository",
+    "elapsed_seconds": 126.232,
+    "CXX": "clang++ -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=all",
+    "log": "docs/reviews/dsa-final-audit/evidence/sanitizers.txt",
+    "summary": "148 passed, 198 deselected in 126.05s (0:02:06)"
+  }
+}

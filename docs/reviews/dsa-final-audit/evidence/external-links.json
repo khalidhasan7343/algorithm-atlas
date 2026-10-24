@@ -1,0 +1,558 @@
+{
+  "date": "2026-10-24 Asia/Dhaka",
+  "method": "web.open; access errors are not proof of broken URLs",
+  "records": [
+    {
+      "url": "https://algs4.cs.princeton.edu/21elementary/",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://algs4.cs.princeton.edu/21elementary/: (403) Forbidden"
+    },
+    {
+      "url": "https://algs4.cs.princeton.edu/40graphs/",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://algs4.cs.princeton.edu/40graphs/: (403) Forbidden"
+    },
+    {
+      "url": "https://algs4.cs.princeton.edu/42digraph/",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://algs4.cs.princeton.edu/42digraph/: (403) Forbidden"
+    },
+    {
+      "url": "https://algs4.cs.princeton.edu/43mst/",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://algs4.cs.princeton.edu/43mst/: (403) Forbidden"
+    },
+    {
+      "url": "https://algs4.cs.princeton.edu/44sp/",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://algs4.cs.princeton.edu/44sp/: (403) Forbidden"
+    },
+    {
+      "url": "https://algs4.cs.princeton.edu/50strings/",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://algs4.cs.princeton.edu/50strings/: (403) Forbidden"
+    },
+    {
+      "url": "https://algs4.cs.princeton.edu/53substring/",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://algs4.cs.princeton.edu/53substring/: (403) Forbidden"
+    },
+    {
+      "url": "https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/LSD.java.html",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/LSD.java.html: (403) Forbidden"
+    },
+    {
+      "url": "https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/MergeX.java.html",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/MergeX.java.html: (403) Forbidden"
+    },
+    {
+      "url": "https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/BinarySearch.html",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/BinarySearch.html: (403) Forbidden"
+    },
+    {
+      "url": "https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/Insertion.html",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/Insertion.html: (403) Forbidden"
+    },
+    {
+      "url": "https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/LSD.html",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/LSD.html: (403) Forbidden"
+    },
+    {
+      "url": "https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/RedBlackBST.html",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/RedBlackBST.html: (400) Timeout fetching"
+    },
+    {
+      "url": "https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/Selection.html",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://algs4.cs.princeton.edu/code/javadoc/edu/princeton/cs/algs4/Selection.html: (403) Forbidden"
+    },
+    {
+      "url": "https://arxiv.org/abs/1805.08612",
+      "status": "retrieved",
+      "title": "[1805.08612] On the Worst-Case Complexity of TimSort (https://arxiv.org/abs/1805.08612)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://arxiv.org/abs/2002.10499",
+      "status": "retrieved",
+      "title": "[2002.10499] Upper Tail Analysis of Bucket Sort and Random Tries (https://arxiv.org/abs/2002.10499)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://courses.grainger.illinois.edu/CS374AL1/fa2026/lectures/backtracking.html",
+      "status": "retrieved",
+      "title": "CS/ECE 374 A | Lecture (https://courses.grainger.illinois.edu/CS374AL1/fa2026/lectures/backtracking.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://courses.ics.hawaii.edu/ics311_f26/Notes/Topic-07.html",
+      "status": "retrieved",
+      "title": "ICS 311 #7: Divide & Conquer and Analysis of Recurrences (https://courses.ics.hawaii.edu/ics311_f26/Notes/Topic-07.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://cp-algorithms.com/num_methods/ternary_search.html",
+      "status": "retrieved",
+      "title": "Ternary Search - Algorithms for Competitive Programming (https://cp-algorithms.com/num_methods/ternary_search.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://crypto.stanford.edu/pbc/notes/numbertheory/euclid.html",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://crypto.stanford.edu/pbc/notes/numbertheory/euclid.html: (400) Timeout fetching"
+    },
+    {
+      "url": "https://cses.fi/book/book.pdf",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://cses.fi/book/book.pdf: (400) Timeout fetching"
+    },
+    {
+      "url": "https://cseweb.ucsd.edu/classes/sp11/cse202-a/lecture16-final.pdf",
+      "status": "retrieved",
+      "title": " (https://cseweb.ucsd.edu/classes/sp11/cse202-a/lecture16-final.pdf)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://dlmf.nist.gov/27.19",
+      "status": "retrieved",
+      "title": "DLMF: §27.19 Methods of Computation: Factorization ‣ Computation ‣ Chapter 27 Functions of Number Theory (https://dlmf.nist.gov/27.19)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://docs.python.org/3/howto/sorting.html",
+      "status": "retrieved",
+      "title": "Sorting Techniques — Python 3.15.1 documentation (https://docs.python.org/3/howto/sorting.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://docs.python.org/3/library/collections.html#collections.deque",
+      "status": "retrieved",
+      "title": "collections — Container datatypes — Python 3.15.1 documentation (https://docs.python.org/3/library/collections.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://docs.python.org/3/library/itertools.html#itertools.combinations",
+      "status": "retrieved",
+      "title": "itertools — Functions creating iterators for efficient looping — Python 3.15.1 documentation (https://docs.python.org/3/library/itertools.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://docs.python.org/3/library/itertools.html#itertools.permutations",
+      "status": "retrieved",
+      "title": "itertools — Functions creating iterators for efficient looping — Python 3.15.1 documentation (https://docs.python.org/3/library/itertools.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://docs.python.org/3/library/itertools.html#itertools.product",
+      "status": "retrieved",
+      "title": "itertools — Functions creating iterators for efficient looping — Python 3.15.1 documentation (https://docs.python.org/3/library/itertools.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://docs.python.org/3/library/math.html#math.isqrt",
+      "status": "retrieved",
+      "title": "math — Mathematical functions — Python 3.15.1 documentation (https://docs.python.org/3/library/math.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://docs.python.org/3/library/stdtypes.html#bitwise-operations-on-integer-types",
+      "status": "retrieved",
+      "title": "Built-in Types — Python 3.15.1 documentation (https://docs.python.org/3/library/stdtypes.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range",
+      "status": "retrieved",
+      "title": "Built-in Types — Python 3.15.1 documentation (https://docs.python.org/3/library/stdtypes.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://doi.org/10.1016/0020-0190(76)90071-5",
+      "status": "retrieved",
+      "title": "Internal Error ()",
+      "diagnostic": null
+    },
+    {
+      "url": "https://doi.org/10.1109/TSSC.1968.300136",
+      "status": "retrieved",
+      "title": "ieeexplore.ieee.org (https://doi.org/10.1109/TSSC.1968.300136)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://doi.org/10.1145/321892.321896",
+      "status": "retrieved",
+      "title": "Internal Error ()",
+      "diagnostic": null
+    },
+    {
+      "url": "https://doi.org/10.1145/321992.321993",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://doi.org/10.1145/321992.321993: (403) Forbidden"
+    },
+    {
+      "url": "https://doi.org/10.1145/359545.359557",
+      "status": "retrieved",
+      "title": "Internal Error ()",
+      "diagnostic": null
+    },
+    {
+      "url": "https://github.com/actions/checkout/releases/tag/v7.0.0",
+      "status": "retrieved",
+      "title": "Release v7.0.0 · actions/checkout · GitHub (https://github.com/actions/checkout/releases/tag/v7.0.0)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://github.com/actions/setup-python/releases/tag/v7.0.0",
+      "status": "retrieved",
+      "title": "Release v7.0.0 · actions/setup-python · GitHub (https://github.com/actions/setup-python/releases/tag/v7.0.0)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://github.com/kevin-wayne/algs4/blob/master/src/main/java/edu/princeton/cs/algs4/Quick3way.java",
+      "status": "retrieved",
+      "title": "algs4/src/main/java/edu/princeton/cs/algs4/Quick3way.java at master · kevin-wayne/algs4 · GitHub (https://github.com/kevin-wayne/algs4/blob/master/src/main/java/edu/princeton/cs/algs4/Quick3way.java)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://github.com/kevin-wayne/algs4/blob/master/src/main/java/edu/princeton/cs/algs4/Shell.java",
+      "status": "retrieved",
+      "title": "algs4/src/main/java/edu/princeton/cs/algs4/Shell.java at master · kevin-wayne/algs4 · GitHub (https://github.com/kevin-wayne/algs4/blob/master/src/main/java/edu/princeton/cs/algs4/Shell.java)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://github.com/khalidhasan7343",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://github.com/khalidhasan7343: Cache miss"
+    },
+    {
+      "url": "https://github.com/khalidhasan7343/algorithm-atlas",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://github.com/khalidhasan7343/algorithm-atlas: Cache miss"
+    },
+    {
+      "url": "https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/util/TimSort.java",
+      "status": "retrieved",
+      "title": "jdk/src/java.base/share/classes/java/util/TimSort.java at master · openjdk/jdk · GitHub (https://github.com/openjdk/jdk/blob/master/src/java.base/share/classes/java/util/TimSort.java)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://github.com/python/cpython/blob/main/Objects/listsort.txt",
+      "status": "retrieved",
+      "title": "cpython/Objects/listsort.txt at main · python/cpython · GitHub (https://github.com/python/cpython/blob/main/Objects/listsort.txt)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://github.com/python/cpython/issues/67703",
+      "status": "retrieved",
+      "title": "Bad logic in timsort's merge_collapse · Issue #67703 · python/cpython · GitHub (https://github.com/python/cpython/issues/67703)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://graphics.stanford.edu/~seander/bithacks.html",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://graphics.stanford.edu/~seander/bithacks.html: (400) Timeout fetching"
+    },
+    {
+      "url": "https://lec.inf.ethz.ch/DA/2017/slides/daLecture15.en.handout.pdf",
+      "status": "retrieved",
+      "title": " (https://lec.inf.ethz.ch/DA/2017/slides/daLecture15.en.handout.pdf)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://nvlpubs.nist.gov/nistpubs/jres/84/jresv84n6p489_a1b.pdf",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://nvlpubs.nist.gov/nistpubs/jres/84/jresv84n6p489_a1b.pdf: (400) Content length is too large: 15662843"
+    },
+    {
+      "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/resources/lecture-notes/",
+      "status": "retrieved",
+      "title": "Introduction to Algorithms | Electrical Engineering and Computer Science | MIT OpenCourseWare (https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/resources/lecture-notes/)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/resources/lecture-1-course-overview-interval-scheduling/",
+      "status": "retrieved",
+      "title": "Lecture 1: Overview, Interval Scheduling | Design and Analysis of Algorithms | Electrical Engineering and Computer Science | MIT OpenCourseWare (https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/resources/lecture-1-course-overview-interval-scheduling/)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://opendatastructures.org/versions/edition-0.1/ods-java.pdf",
+      "status": "retrieved",
+      "title": " (https://opendatastructures.org/versions/edition-0.1/ods-java.pdf)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://opendsa-server.cs.vt.edu/ODSA/Books/CS3/html/BTree.html",
+      "status": "retrieved",
+      "title": "12.6. B-Trees — CS3 Data Structures & Algorithms (https://opendsa-server.cs.vt.edu/ODSA/Books/CS3/html/BTree.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://opendsa-server.cs.vt.edu/ODSA/Books/unp/inf1-62-4001/spring-2025/FTK102/html/BinSort.html",
+      "status": "retrieved",
+      "title": "9.13. Binsort — CSC215: Algorithm Design and Analysis (https://opendsa-server.cs.vt.edu/ODSA/Books/unp/inf1-62-4001/spring-2025/FTK102/html/BinSort.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/python/cpython/3.10/Objects/listsort.txt",
+      "status": "retrieved",
+      "title": " (https://raw.githubusercontent.com/python/cpython/3.10/Objects/listsort.txt)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://tanktechnology.github.io/CLRS-Lean/CLRSLean/Chapter_16/Section_16_5_Task_Scheduling/",
+      "status": "retrieved",
+      "title": "16.5. A Task-Scheduling Problem as a Matroid — CLRS-Lean (https://tanktechnology.github.io/CLRS-Lean/CLRSLean/Chapter_16/Section_16_5_Task_Scheduling/)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://ucsdicpc.github.io/slides/two_pointers_lesson.pdf",
+      "status": "retrieved",
+      "title": "Competitive Programming Club Week 5 - Two Pointers (https://ucsdicpc.github.io/slides/two_pointers_lesson.pdf)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1188/lectures/Lecture21/Lecture21.pdf",
+      "status": "retrieved",
+      "title": " (https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1188/lectures/Lecture21/Lecture21.pdf)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://web.stanford.edu/class/archive/cs/cs166/cs166.1186/lectures/02/Slides02.pdf",
+      "status": "retrieved",
+      "title": " (https://web.stanford.edu/class/archive/cs/cs166/cs166.1186/lectures/02/Slides02.pdf)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://web.stanford.edu/class/cs166/handouts/080%20Problem%20Set%203.pdf",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://web.stanford.edu/class/cs166/handouts/080%20Problem%20Set%203.pdf: Error fetching"
+    },
+    {
+      "url": "https://www.cs.cmu.edu/~15451-f18/lectures/lec23-closest-pair.pdf",
+      "status": "retrieved",
+      "title": " (https://www.cs.cmu.edu/~15451-f18/lectures/lec23-closest-pair.pdf)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://www.cs.cmu.edu/~avrim/451f11/lectures/lects1-10.pdf",
+      "status": "retrieved",
+      "title": " (https://www.cs.cmu.edu/~avrim/451f11/lectures/lects1-10.pdf)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://www.cs.cmu.edu/~ckingsf/class/02714-f13/Lec02-zalg.pdf",
+      "status": "retrieved",
+      "title": " (https://www.cs.cmu.edu/~ckingsf/class/02714-f13/Lec02-zalg.pdf)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://www.cs.cornell.edu/courses/cs2112/2021fa/lectures/avl/",
+      "status": "retrieved",
+      "title": "www.cs.cornell.edu (https://www.cs.cornell.edu/courses/cs2112/2021fa/lectures/avl/)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://www.cs.cornell.edu/courses/cs2800/2016sp/lectures/lec11-gcd.html",
+      "status": "retrieved",
+      "title": "Euclid's algorithm for computing GCD (CS 2800, Spring 2016) (https://www.cs.cornell.edu/courses/cs2800/2016sp/lectures/lec11-gcd.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://www.cs.cornell.edu/courses/cs4700/2020sp/Lectures/Lecture13.pdf",
+      "status": "retrieved",
+      "title": " Spring 2020 Prof. Haym Hirsh  Lecture 10 February 12, 2020 (https://www.cs.cornell.edu/courses/cs4700/2020sp/Lectures/Lecture13.pdf)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://www.cs.helsinki.fi/u/ukkonen/SuffixT1withFigs.pdf",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://www.cs.helsinki.fi/u/ukkonen/SuffixT1withFigs.pdf: (400) Timeout fetching"
+    },
+    {
+      "url": "https://www.cs.princeton.edu/courses/archive/spr03/cs226/demo/sort/",
+      "status": "unverified-access-error",
+      "title": "Internal Error ()",
+      "diagnostic": "L0: Failed to fetch https://www.cs.princeton.edu/courses/archive/spr03/cs226/demo/sort/: (403) Forbidden"
+    },
+    {
+      "url": "https://www.cs.utexas.edu/~moore/publications/fstrpos.pdf",
+      "status": "retrieved",
+      "title": " (https://www.cs.utexas.edu/~moore/publications/fstrpos.pdf)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://www.cse.iitd.ac.in/~pkalra/siv864/huffman_1952.pdf",
+      "status": "retrieved",
+      "title": "huffman.pdf (https://www.cse.iitd.ac.in/~pkalra/siv864/huffman_1952.pdf)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://www.norvig.com/sudoku.html",
+      "status": "retrieved",
+      "title": "Solving Every Sudoku Puzzle (https://www.norvig.com/sudoku.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://www.ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/e59f8a55929028498953691891229a17_MIT6_006F11_lec14.pdf",
+      "status": "retrieved",
+      "title": "6.006 Lecture 14: Depth-first search (DFS), topological sorting (https://www.ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/e59f8a55929028498953691891229a17_MIT6_006F11_lec14.pdf)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf",
+      "status": "retrieved",
+      "title": "C++ International Standard (https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/backtrack.html",
+      "status": "retrieved",
+      "title": "backtracking (https://xlinux.nist.gov/dads/HTML/backtrack.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/binarySearch.html",
+      "status": "retrieved",
+      "title": "binary search (https://xlinux.nist.gov/dads/HTML/binarySearch.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/bubblesort.html",
+      "status": "retrieved",
+      "title": "bubble sort (https://xlinux.nist.gov/dads/HTML/bubblesort.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/bucketsort.html",
+      "status": "retrieved",
+      "title": "bucket sort (https://xlinux.nist.gov/dads/HTML/bucketsort.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/buildHeap.html",
+      "status": "retrieved",
+      "title": "build-heap (https://xlinux.nist.gov/dads/HTML/buildHeap.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/countingsort.html",
+      "status": "retrieved",
+      "title": "counting sort (https://xlinux.nist.gov/dads/HTML/countingsort.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/distributionSort.html",
+      "status": "retrieved",
+      "title": "distribution sort (https://xlinux.nist.gov/dads/HTML/distributionSort.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/hamiltonianPath.html",
+      "status": "retrieved",
+      "title": "Hamiltonian path (https://xlinux.nist.gov/dads/HTML/hamiltonianPath.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/heap.html",
+      "status": "retrieved",
+      "title": "heap (https://xlinux.nist.gov/dads/HTML/heap.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/heapSort.html",
+      "status": "retrieved",
+      "title": "heapsort (https://xlinux.nist.gov/dads/HTML/heapSort.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/interpolationSearch.html",
+      "status": "retrieved",
+      "title": "interpolation search (https://xlinux.nist.gov/dads/HTML/interpolationSearch.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/jumpsearch.html",
+      "status": "retrieved",
+      "title": "jump search (https://xlinux.nist.gov/dads/HTML/jumpsearch.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/linearSearch.html",
+      "status": "retrieved",
+      "title": "linear search (https://xlinux.nist.gov/dads/HTML/linearSearch.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/merge.html",
+      "status": "retrieved",
+      "title": "merge (https://xlinux.nist.gov/dads/HTML/merge.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/mergesort.html",
+      "status": "retrieved",
+      "title": "merge sort (https://xlinux.nist.gov/dads/HTML/mergesort.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/quicksort.html",
+      "status": "retrieved",
+      "title": "quicksort (https://xlinux.nist.gov/dads/HTML/quicksort.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/radixsort.html",
+      "status": "retrieved",
+      "title": "radix sort (https://xlinux.nist.gov/dads/HTML/radixsort.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/selectionSort.html",
+      "status": "retrieved",
+      "title": "selection sort (https://xlinux.nist.gov/dads/HTML/selectionSort.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/shellsort.html",
+      "status": "retrieved",
+      "title": "Shell sort (https://xlinux.nist.gov/dads/HTML/shellsort.html)",
+      "diagnostic": null
+    },
+    {
+      "url": "https://xlinux.nist.gov/dads/HTML/simplepath.html",
+      "status": "retrieved",
+      "title": "simple path (https://xlinux.nist.gov/dads/HTML/simplepath.html)",
+      "diagnostic": null
+    }
+  ]
+}

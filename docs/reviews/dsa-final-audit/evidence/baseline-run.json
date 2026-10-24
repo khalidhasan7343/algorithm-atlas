@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "--require-cpp",
+    "--junitxml=/private/tmp/algorithm-atlas-dsa-audit/baseline-pytest.xml"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "summary": "1985 passed in 429.38s (0:07:09)",
+  "preexisting_dirty_files": [],
+  "source_revision": "10720be4fb3a0a3611c680a109ae96d610702626"
+}

@@ -1,0 +1,39 @@
+{
+  "triggers": [
+    "push",
+    "pull_request",
+    "workflow_dispatch"
+  ],
+  "python_matrix": [
+    "3.11",
+    "3.12",
+    "3.13",
+    "3.14"
+  ],
+  "permissions": {
+    "contents": "read"
+  },
+  "environment": {
+    "CXX": "g++",
+    "PYTHONHASHSEED": "0"
+  },
+  "commands": [
+    "python -m pip install -r requirements-dev.txt",
+    "python scripts/validate_catalog.py",
+    "python scripts/generate_catalog_docs.py --check",
+    "python -m pytest --require-cpp"
+  ],
+  "actions": [
+    "actions/checkout@v7",
+    "actions/setup-python@v7"
+  ],
+  "hosted_run": "not triggered or verified",
+  "executed_python_versions": [
+    "3.14.2"
+  ],
+  "compiler": "Apple Clang 21.0.0 via g++ / clang++",
+  "cxx_standards": [
+    "c++17",
+    "c++20"
+  ]
+}
