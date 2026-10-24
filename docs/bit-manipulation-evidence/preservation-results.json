@@ -1,0 +1,12 @@
+{
+  "categories": 35,
+  "memberships": 256,
+  "canonicals": 235,
+  "bit_canonicals": 4,
+  "protected_files_verified": 1167,
+  "source_only": false,
+  "intentionally_excluded_historical_package_files": [],
+  "out_of_scope_records": "unchanged",
+  "dpo": "blocked",
+  "status": "passed"
+}

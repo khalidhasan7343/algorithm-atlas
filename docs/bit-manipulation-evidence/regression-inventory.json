@@ -1,0 +1,24 @@
+{
+  "collection_command": "python -m pytest --collect-only -q",
+  "collected_by_category": {
+    "tests/test_bit_oracles.py": 1,
+    "tests/test_cpp_toolchain.py": 4,
+    "tests/test_generate_catalog_docs.py": 25,
+    "tests/test_review_paths.py": 10,
+    "tests/test_string_cross_algorithms.py": 1,
+    "tests/test_validate_catalog.py": 240,
+    "dsa/bit-manipulation": 40,
+    "dsa/divide-and-conquer": 36,
+    "dsa/dynamic-programming": 87,
+    "dsa/graph-algorithms": 151,
+    "dsa/greedy": 33,
+    "dsa/recursion-and-backtracking": 125,
+    "dsa/searching": 316,
+    "dsa/sorting": 556,
+    "dsa/string-algorithms": 90,
+    "dsa/tree-algorithms": 153
+  },
+  "collected_total": 1868,
+  "execution_evidence": "final-results.json / final-full-suite.txt; collection is not a test pass",
+  "cpp_standards": "default all: C++17 and C++20"
+}

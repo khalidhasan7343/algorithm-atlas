@@ -6,7 +6,7 @@ From Fundamental Algorithms to Advanced Artificial Intelligence — Learn, Imple
 
 Algorithm Atlas is an educational, open-source project maintained by **MD.Khalid Hasan**. Its goal is to explain algorithms from first principles through clear documentation, Python and modern C++ implementations, meaningful tests, complexity analysis, and practical applications.
 
-**Current state: Phase 8 explicitly owner-approved; all nine Phase 9 String Algorithms implemented and locally tested; owner review pending.** Follow [String checkpoints](docs/string-algorithms-checkpoints.md), [byte-string conventions](docs/string-conventions.md) and [progress](docs/progress.md). Phase 9 owner review remains pending.
+**Current state: Phase 9 fully completed and explicitly owner-approved; all four Phase 10 Bit Manipulation topics implemented and locally tested; owner review pending.** Follow [Bit checkpoints](docs/bit-manipulation-checkpoints.md), [fixed-width conventions](docs/bit-conventions.md) and [progress](docs/progress.md). Phase 8 remains completed and owner-approved; Phase 10 review is pending.
 
 ## Project Overview
 
@@ -25,7 +25,7 @@ The foundation provides:
 - Documentation standards, pytest infrastructure, C++ compiler checks, and GitHub Actions configuration.
 - Automated catalog, documentation-link, and implementation-status validation.
 
-Sorting, Searching, Recursion & Backtracking, Divide & Conquer, the eleven Phase 5 Dynamic Programming topics, the four Phase 6 Greedy topics, all fifteen Phase 7 Graph topics, all fourteen Phase 8 Tree topics, and all nine Phase 9 String topics provide detailed explanations, dry runs, Python/C++ implementations, examples, and relevant edge-case tests. Other topics follow in separately approved phases. ML examples will distinguish educational implementations from library-based usage and document compute and dependency limits.
+Sorting, Searching, Recursion & Backtracking, Divide & Conquer, the eleven Phase 5 Dynamic Programming topics, the four Phase 6 Greedy topics, all fifteen Phase 7 Graph topics, all fourteen Phase 8 Tree topics, all nine Phase 9 String topics, and four Phase 10 Bit Manipulation topics provide detailed explanations, dry runs, Python/C++ implementations, examples, and relevant edge-case tests. Other topics follow in separately approved phases. ML examples will distinguish educational implementations from library-based usage and document compute and dependency limits.
 
 ## Technologies Used
 
@@ -58,7 +58,7 @@ algorithm-atlas/
 
 Review reports are indexed in [docs/reviews](docs/reviews/README.md); historical ZIPs and checksums are organized under [artifacts/review-packages](artifacts/review-packages/README.md). The [maintenance report](docs/maintenance/root-cleanup/REPORT.md) records moves and verification.
 
-Each unique topic has one canonical folder. Completed Sorting, Searching, Recursion & Backtracking, Divide & Conquer, authorized Dynamic Programming, Greedy, Graph, Tree, and String topics have a full lesson and `python/`, `cpp/`, and `tests/` content; planned topics retain honest scope READMEs. See the [development guide](docs/development.md) for the final per-algorithm structure and documentation standard.
+Each unique topic has one canonical folder. Completed Sorting, Searching, Recursion & Backtracking, Divide & Conquer, authorized Dynamic Programming, Greedy, Graph, Tree, String, and Bit Manipulation topics have a full lesson and `python/`, `cpp/`, and `tests/` content; planned topics retain honest scope READMEs. See the [development guide](docs/development.md) for the final per-algorithm structure and documentation standard.
 
 ## Data Structures and Algorithms
 
@@ -165,7 +165,7 @@ Use the [complexity cheat sheet](docs/complexity-cheatsheet.md) for asymptotic n
 
 [Progress tracking](docs/progress.md) records catalog totals, completed and remaining algorithms, blockers, and the next proposed batch. The [Phase 0 review report](docs/phase-0-review.md) and [complete file inventory](docs/phase-0-files.md) document the foundation handoff. Phase 0 supplies the foundation only. The term **Dynamic Policy Optimization (DPO)** is retained from the syllabus and blocked pending clarification; it has not been replaced by Direct Preference Optimization.
 
-Phase 8 Tree Algorithms received explicit owner approval on 2026-10-23 (Asia/Dhaka). Phase 9 covers all nine String Algorithms, with a final report and verified review package followed by an explicit owner checkpoint. No later category, commit, push or publication is authorized.
+Phase 9 received explicit owner approval on 2026-10-24 (Asia/Dhaka). Phase 10 covers the four Bit Manipulation canonicals in two sequential batches and ends with a verified review package and explicit owner checkpoint. Phase 11, commits, pushes and publication are not authorized.
 
 ## Contribution Guidelines
 

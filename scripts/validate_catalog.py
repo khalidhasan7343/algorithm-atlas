@@ -60,6 +60,11 @@ RECURSION_BACKTRACKING_BATCHES = (
 DYNAMIC_PROGRAMMING_SCOPE = "Dynamic Programming: eleven listed canonical topics only"
 TREE_SCOPE = "Tree Algorithms category only"
 STRING_SCOPE = "String Algorithms category only"
+BIT_SCOPE = "Bit Manipulation category only"
+BIT_BATCHES = (
+    ("xor-unique-elements", "two-non-repeating-elements"),
+    ("brian-kernighan-set-bit-counting", "subset-generation-bitmasking"),
+)
 STRING_BATCHES = (
     ("naive-pattern-matching", "knuth-morris-pratt", "rabin-karp"),
     ("z-algorithm", "boyer-moore", "manacher"),
@@ -216,6 +221,19 @@ def _validate_development(
     if status == "awaiting-review" and active is not None:
         report.errors.append("development.awaiting-review requires active_batch=null")
 
+    if state.get("scope") == BIT_SCOPE and valid_completed:
+        if len(completed) > 2:
+            report.errors.append("development Bit Manipulation has only two batches")
+        if status == "in-progress" and (type(active) is not int or active not in (1, 2)):
+            report.errors.append("development Bit Manipulation active_batch must be 1..2")
+        if status == "awaiting-review" and completed != [1, 2]:
+            report.errors.append("development Bit Manipulation awaiting-review requires both batches")
+        for batch in completed[:2]:
+            for algorithm_id in BIT_BATCHES[batch-1]:
+                record = algorithms.get(algorithm_id, {})
+                if not all(isinstance(record.get(field), str) and record[field] in ARTIFACT_STATUSES for field in STATUS_FIELDS[:3]) or record.get("test_status") not in ("tested", "reviewed"):
+                    report.errors.append(f"development Bit Manipulation requires completed/tested {algorithm_id}")
+        return
     if state.get("scope") == STRING_SCOPE and valid_completed:
         if len(completed) > 3:
             report.errors.append("development String Algorithms has only three batches")

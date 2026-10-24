@@ -1,0 +1,72 @@
+{
+  "python": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "dsa/bit-manipulation",
+      "-m",
+      "not cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 1.83,
+    "log": "docs/bit-manipulation-evidence/final-python.txt",
+    "timestamp": "2026-10-24T00:24:32.003378+00:00"
+  },
+  "cpp17": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "dsa/bit-manipulation",
+      "-m",
+      "cpp",
+      "--cpp-standard=c++17",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 5.57,
+    "log": "docs/bit-manipulation-evidence/final-cpp17.txt",
+    "timestamp": "2026-10-24T00:24:37.569262+00:00"
+  },
+  "cpp20": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "dsa/bit-manipulation",
+      "-m",
+      "cpp",
+      "--cpp-standard=c++20",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 6.35,
+    "log": "docs/bit-manipulation-evidence/final-cpp20.txt",
+    "timestamp": "2026-10-24T00:24:43.917058+00:00"
+  },
+  "full-suite": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 373.42,
+    "log": "docs/bit-manipulation-evidence/final-full-suite.txt",
+    "timestamp": "2026-10-24T00:30:57.337349+00:00"
+  }
+}

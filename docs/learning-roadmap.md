@@ -2,7 +2,7 @@
 
 Progress from foundational problem solving to specialized AI topics. These levels describe a study order, not repository development phases: learning a later level does not authorize implementation outside the approved development phase.
 
-**Current scope:** Phase 8 is explicitly owner-approved; Phase 9 authorizes all nine String Algorithms. Follow [progress](progress.md), [String conventions](string-conventions.md) and [three-batch checkpoints](string-algorithms-checkpoints.md). Preserve 35/256/235 inventory and stop for explicit Phase 9 owner review.
+**Current scope:** Phase 9 is fully completed and explicitly owner-approved. Phase 10 authorizes the four Bit Manipulation canonicals in normal sequence. Follow [progress](progress.md), [Bit conventions](bit-conventions.md) and [two-batch checkpoints](bit-manipulation-checkpoints.md). Phase 8 remains approved; preserve 35/256/235 and stop for Phase 10 owner review.
 
 ## Level 1 — DSA Foundations
 

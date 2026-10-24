@@ -8,10 +8,12 @@ This category preserves **4 original syllabus entries**. Each link points to the
 
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| XOR Tricks for Unique Elements | [xor-unique-elements](xor-unique-elements/README.md) | planned |
-| Finding Two Non-Repeating Elements | [two-non-repeating-elements](two-non-repeating-elements/README.md) | planned |
-| Brian Kernighan's Set Bit Counting | [brian-kernighan-set-bit-counting](brian-kernighan-set-bit-counting/README.md) | planned |
-| Subset Generation using Bitmasking | [subset-generation-bitmasking](subset-generation-bitmasking/README.md) | planned |
+| XOR Tricks for Unique Elements | [xor-unique-elements](xor-unique-elements/README.md) | complete |
+| Finding Two Non-Repeating Elements | [two-non-repeating-elements](two-non-repeating-elements/README.md) | complete |
+| Brian Kernighan's Set Bit Counting | [brian-kernighan-set-bit-counting](brian-kernighan-set-bit-counting/README.md) | complete |
+| Subset Generation using Bitmasking | [subset-generation-bitmasking](subset-generation-bitmasking/README.md) | complete |
+
+Phase 10 covers these four topics in two sequential validated batches. Read [fixed-width contracts](../../docs/bit-conventions.md) for signed values, unsigned operations, multiplicity validation and positional subsets. Actual evidence and approval records are in [Bit checkpoints](../../docs/bit-manipulation-checkpoints.md). Phase 10 owner approval remains pending; no Phase 11 is authorized.
 
 ## Learning and contribution scope
 

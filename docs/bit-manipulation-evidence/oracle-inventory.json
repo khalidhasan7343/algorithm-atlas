@@ -1,0 +1,28 @@
+{
+  "xor_singleton_seed": 10102,
+  "xor_singleton_vectors": 387,
+  "xor_two_seed": 10103,
+  "xor_two_vectors": 387,
+  "xor_each_composition": {
+    "explicit": 6,
+    "exhaustive_small_domain": 80,
+    "randomized": 300,
+    "maximum_array": 1
+  },
+  "kernighan_seed": 10104,
+  "kernighan_vectors": 9268,
+  "subsets_seed": 10105,
+  "subset_vectors": 295,
+  "subset_composition": {
+    "explicit": 6,
+    "exhaustive_binary_arrays": 127,
+    "randomized": 160,
+    "maximum_distinct_and_equal": 2
+  },
+  "cross_seed": 10109,
+  "width": 32,
+  "signed_domain": [
+    -2147483648,
+    2147483647
+  ]
+}

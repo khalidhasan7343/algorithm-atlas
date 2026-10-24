@@ -799,3 +799,36 @@ def test_string_phase_requires_each_claimed_canonical(sample_repo):
         reduced=dict(records);del reduced[name]
         report=ValidationReport();_validate_development(root,state,reduced,report)
         assert any(name in error for error in report.errors)
+
+
+@pytest.mark.parametrize("completed,active,status", [([],1,"in-progress"),([1],2,"in-progress"),([1,2],None,"awaiting-review")])
+def test_bit_phase_valid_states(sample_repo,completed,active,status):
+    from scripts.validate_catalog import BIT_SCOPE,BIT_BATCHES
+    root,data=sample_repo
+    state=add_development(root,data,scope=BIT_SCOPE)
+    state.update(completed_batches=completed,active_batch=active,status=status)
+    records={name:{"documentation_status":"implemented","python_status":"tested","cpp_status":"tested","test_status":"tested"} for batch in BIT_BATCHES for name in batch}
+    report=ValidationReport();_validate_development(root,state,records,report)
+    assert not report.errors
+
+
+@pytest.mark.parametrize("completed,active,status", [([1],None,"awaiting-review"),([1,2],3,"in-progress"),([1,2,3],None,"awaiting-review")])
+def test_bit_phase_rejects_premature_or_extra_batch(sample_repo,completed,active,status):
+    from scripts.validate_catalog import BIT_SCOPE
+    root,data=sample_repo
+    state=add_development(root,data,scope=BIT_SCOPE)
+    state.update(completed_batches=completed,active_batch=active,status=status)
+    report=ValidationReport();_validate_development(root,state,{},report)
+    assert report.errors
+
+
+def test_bit_phase_requires_each_claimed_canonical(sample_repo):
+    from scripts.validate_catalog import BIT_SCOPE,BIT_BATCHES
+    root,data=sample_repo
+    state=add_development(root,data,scope=BIT_SCOPE)
+    state.update(completed_batches=[1,2],active_batch=None,status="awaiting-review")
+    records={name:{"documentation_status":"implemented","python_status":"tested","cpp_status":"tested","test_status":"tested"} for batch in BIT_BATCHES for name in batch}
+    for name in records:
+        reduced=dict(records);del reduced[name]
+        report=ValidationReport();_validate_development(root,state,reduced,report)
+        assert any(name in error for error in report.errors)

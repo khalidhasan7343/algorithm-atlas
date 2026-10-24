@@ -1,0 +1,81 @@
+{
+  "reports": {
+    "docs/reviews/bit-manipulation/BIT-MANIPULATION-REVIEW-REPORT.md": {
+      "nonempty": true,
+      "ignored": false,
+      "tracked": false,
+      "git_state": "unignored new file ready to track"
+    },
+    "docs/reviews/divide-conquer/DIVIDE-CONQUER-REVIEW-REPORT.md": {
+      "nonempty": true,
+      "ignored": false,
+      "tracked": true,
+      "git_state": "tracked"
+    },
+    "docs/reviews/dynamic-programming/DYNAMIC-PROGRAMMING-REVIEW-REPORT.md": {
+      "nonempty": true,
+      "ignored": false,
+      "tracked": true,
+      "git_state": "tracked"
+    },
+    "docs/reviews/graph-algorithms/GRAPH-ALGORITHMS-REVIEW-REPORT.md": {
+      "nonempty": true,
+      "ignored": false,
+      "tracked": true,
+      "git_state": "tracked"
+    },
+    "docs/reviews/greedy/GREEDY-REVIEW-REPORT.md": {
+      "nonempty": true,
+      "ignored": false,
+      "tracked": true,
+      "git_state": "tracked"
+    },
+    "docs/reviews/phase-0/PHASE-0-REPORT.md": {
+      "nonempty": true,
+      "ignored": false,
+      "tracked": true,
+      "git_state": "tracked"
+    },
+    "docs/reviews/recursion-backtracking/RECURSION-BACKTRACKING-REVIEW-REPORT.md": {
+      "nonempty": true,
+      "ignored": false,
+      "tracked": true,
+      "git_state": "tracked"
+    },
+    "docs/reviews/searching/SEARCHING-REVIEW-REPORT.md": {
+      "nonempty": true,
+      "ignored": false,
+      "tracked": true,
+      "git_state": "tracked"
+    },
+    "docs/reviews/sorting/SORTING-FINAL-AUDIT-REPORT.md": {
+      "nonempty": true,
+      "ignored": false,
+      "tracked": true,
+      "git_state": "tracked"
+    },
+    "docs/reviews/sorting/SORTING-REVIEW-REPORT.md": {
+      "nonempty": true,
+      "ignored": false,
+      "tracked": true,
+      "git_state": "tracked"
+    },
+    "docs/reviews/string-algorithms/STRING-ALGORITHMS-REVIEW-REPORT.md": {
+      "nonempty": true,
+      "ignored": false,
+      "tracked": true,
+      "git_state": "tracked"
+    },
+    "docs/reviews/tree-algorithms/TREE-ALGORITHMS-REVIEW-REPORT.md": {
+      "nonempty": true,
+      "ignored": false,
+      "tracked": true,
+      "git_state": "tracked"
+    }
+  },
+  "report_count": 12,
+  "completion_report": "docs/reviews/bit-manipulation/BIT-MANIPULATION-REVIEW-REPORT.md",
+  "git_snapshot": "working source, including unignored new files; index not changed",
+  "status": "passed",
+  "clean_tracked_checkout": "not run; current new files are uncommitted. Source-only package extraction is validated separately."
+}

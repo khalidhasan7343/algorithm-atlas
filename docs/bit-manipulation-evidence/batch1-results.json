@@ -1,0 +1,19 @@
+{
+  "algorithms": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "dsa/bit-manipulation/xor-unique-elements",
+      "dsa/bit-manipulation/two-non-repeating-elements",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 9.5,
+    "log": "docs/bit-manipulation-evidence/batch1-algorithms.txt",
+    "timestamp": "2026-10-24T00:21:48.751200+00:00"
+  }
+}

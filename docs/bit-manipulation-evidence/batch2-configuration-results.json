@@ -1,0 +1,43 @@
+{
+  "catalog": {
+    "command": [
+      "python",
+      "scripts/validate_catalog.py"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 0.52,
+    "log": "docs/bit-manipulation-evidence/configuration-catalog.txt",
+    "timestamp": "2026-10-24T00:24:15.344041+00:00"
+  },
+  "generated-docs": {
+    "command": [
+      "python",
+      "scripts/generate_catalog_docs.py",
+      "--check"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 0.16,
+    "log": "docs/bit-manipulation-evidence/configuration-generated-docs.txt",
+    "timestamp": "2026-10-24T00:24:15.501463+00:00"
+  },
+  "infrastructure": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "tests",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 2.46,
+    "log": "docs/bit-manipulation-evidence/configuration-infrastructure.txt",
+    "timestamp": "2026-10-24T00:24:17.962446+00:00"
+  }
+}

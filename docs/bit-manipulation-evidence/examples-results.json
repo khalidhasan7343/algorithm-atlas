@@ -1,0 +1,102 @@
+{
+  "xor-unique-elements": {
+    "decimal_input": "5 2 5 -7 2",
+    "expected": -7,
+    "observed": {
+      "python": -7,
+      "c++17": -7,
+      "c++20": -7
+    },
+    "status": "passed"
+  },
+  "two-non-repeating-elements": {
+    "decimal_input": "4 1 2 1 2 -7",
+    "expected": [
+      -7,
+      4
+    ],
+    "observed": {
+      "python": [
+        -7,
+        4
+      ],
+      "c++17": [
+        -7,
+        4
+      ],
+      "c++20": [
+        -7,
+        4
+      ]
+    },
+    "status": "passed"
+  },
+  "brian-kernighan-set-bit-counting": {
+    "decimal_input": "-1",
+    "expected": 32,
+    "observed": {
+      "python": 32,
+      "c++17": 32,
+      "c++20": 32
+    },
+    "status": "passed"
+  },
+  "subset-generation-bitmasking": {
+    "decimal_input": "1 1",
+    "expected": [
+      [],
+      [
+        1
+      ],
+      [
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "observed": {
+      "python": [
+        [],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "c++17": [
+        [],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "c++20": [
+        [],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "status": "passed"
+  }
+}

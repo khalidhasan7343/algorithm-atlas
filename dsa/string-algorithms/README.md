@@ -18,7 +18,7 @@ This category preserves **9 original syllabus entries**. Each link points to the
 | Suffix Tree | [suffix-tree](suffix-tree/README.md) | complete |
 | Aho-Corasick | [aho-corasick](aho-corasick/README.md) | complete |
 
-Phase 9 covers these nine canonical topics in three sequential validated batches. Read [the byte-string contracts](../../docs/string-conventions.md) for empty patterns, overlaps, UTF-8 byte offsets, output ordering, bounds and reuse. Actual evidence and resume state are in [String checkpoints](../../docs/string-algorithms-checkpoints.md). Phase 9 owner review remains pending. No next category is authorized.
+Phase 9 covers these nine canonical topics in three sequential validated batches. Read [the byte-string contracts](../../docs/string-conventions.md) for empty patterns, overlaps, UTF-8 byte offsets, output ordering, bounds and reuse. Actual evidence and resume state are in [String checkpoints](../../docs/string-algorithms-checkpoints.md). Phase 9 was explicitly owner-approved on 2026-10-24; normal Phase 10 Bit Manipulation is authorized. See [the approval checkpoint](../../docs/bit-manipulation-checkpoints.md).
 
 ## Learning and contribution scope
 

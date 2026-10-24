@@ -1,0 +1,14 @@
+{
+  "seed": 10109,
+  "comparisons": {
+    "xor-unique-elements vs frequency": 387,
+    "two-non-repeating-elements vs frequency": 387,
+    "Kernighan vs binary representation": 120,
+    "Bitmask vs independent positional recursion": 120,
+    "Bitmask vs existing Power Set multiset": 120
+  },
+  "all_32_differing_bits": "passed",
+  "phase9_approval": "explicit owner approval on 2026-10-24 Asia/Dhaka",
+  "sequence": "normal roadmap Phase 10",
+  "status": "passed"
+}

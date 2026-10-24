@@ -285,3 +285,19 @@ def test_string_progress_records_real_prior_approval_and_new_boundary():
     assert 'owner explicitly approved Phase 8' in text
     assert 'Phase 9 is not human-approved' in text
     assert 'No Phase 10' in text
+
+
+def test_bit_progress_keeps_normal_sequence_and_prior_approval():
+    catalog=yaml.safe_load((Path(__file__).resolve().parents[1]/"catalog.yaml").read_text())
+    catalog['development']={'phase':'Phase 10 — Bit Manipulation','scope':'Bit Manipulation category only','status':'in-progress','completed_batches':[1],'active_batch':2,'checkpoint':'docs/bit-manipulation-checkpoints.md'}
+    algorithms={a['id']:a for a in catalog['algorithms']}
+    text=generator.progress_page(catalog,algorithms)
+    assert 'Validated bit manipulation batches: 1.' in text
+    assert 'Phase 9 fully completed and owner-approved' in text
+    assert 'normal roadmap successor' in text
+    assert 'Phase 10 is not human-approved' in text
+    assert 'No Phase 11' in text
+    for category_id in ('A6','A7'):
+        category=next(c for c in catalog['categories'] if c['id']==category_id)
+        page=generator.category_page(category,algorithms,catalog['development'])
+        assert 'owner review remains pending' not in page

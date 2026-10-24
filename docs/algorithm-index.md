@@ -120,10 +120,10 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| XOR Tricks for Unique Elements | [xor-unique-elements](../dsa/bit-manipulation/xor-unique-elements/README.md) | planned |
-| Finding Two Non-Repeating Elements | [two-non-repeating-elements](../dsa/bit-manipulation/two-non-repeating-elements/README.md) | planned |
-| Brian Kernighan's Set Bit Counting | [brian-kernighan-set-bit-counting](../dsa/bit-manipulation/brian-kernighan-set-bit-counting/README.md) | planned |
-| Subset Generation using Bitmasking | [subset-generation-bitmasking](../dsa/bit-manipulation/subset-generation-bitmasking/README.md) | planned |
+| XOR Tricks for Unique Elements | [xor-unique-elements](../dsa/bit-manipulation/xor-unique-elements/README.md) | complete |
+| Finding Two Non-Repeating Elements | [two-non-repeating-elements](../dsa/bit-manipulation/two-non-repeating-elements/README.md) | complete |
+| Brian Kernighan's Set Bit Counting | [brian-kernighan-set-bit-counting](../dsa/bit-manipulation/brian-kernighan-set-bit-counting/README.md) | complete |
+| Subset Generation using Bitmasking | [subset-generation-bitmasking](../dsa/bit-manipulation/subset-generation-bitmasking/README.md) | complete |
 
 ## A9. [Mathematical and Number Theory](../dsa/number-theory/README.md)
 

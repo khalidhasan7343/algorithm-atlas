@@ -199,9 +199,10 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
         dynamic = state.get('scope') == 'Dynamic Programming: eleven listed canonical topics only'
         tree = state.get('scope') == 'Tree Algorithms category only'
         strings = state.get('scope') == 'String Algorithms category only'
+        bits = state.get('scope') == 'Bit Manipulation category only'
         graph = state.get('scope') == 'Graph Algorithms category only'
         greedy = state.get('scope') == 'Greedy: four canonical topics only'
-        label = 'string algorithms' if strings else 'tree algorithms' if tree else 'graph algorithms' if graph else 'greedy' if greedy else 'dynamic programming' if dynamic else 'divide/conquer' if divide else 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
+        label = 'bit manipulation' if bits else 'string algorithms' if strings else 'tree algorithms' if tree else 'graph algorithms' if graph else 'greedy' if greedy else 'dynamic programming' if dynamic else 'divide/conquer' if divide else 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
         batches = state.get('completed_batches', [])
         lines.append(f'Validated {label} batches: ' +
                      (', '.join(str(batch) for batch in batches) if batches else 'none yet') + '.')
@@ -213,7 +214,20 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
         if state.get('completion_report'):
             lines += ['', 'See the '
                       + link(path, ROOT / state['completion_report'], f'{label} completion report') + '.']
-        if strings:
+        if bits:
+            lines += ['', 'The owner explicitly confirmed Phase 9 fully completed and owner-approved '
+                      'on 2026-10-24 (Asia/Dhaka). Phase 10 is the normal roadmap successor, '
+                      'not out of order. Phase 8 remains completed and owner-approved.', '',
+                      'Only four A8 canonicals are authorized: Batch 1 XOR Unique and Two '
+                      'Non-Repeating; Batch 2 Kernighan Counting and Bitmask Subsets. '
+                      'Preserve prior implementation/evidence bytes and 35/256/235 inventory. '
+                      'Default XOR APIs validate multiplicity; candidate cores have explicit '
+                      'pair assumptions. All bit arithmetic follows the signed-input/unsigned-word contract.', '',
+                      'Stop after the report under docs/reviews/bit-manipulation/ and verified '
+                      'ZIP/checksum/JSON under artifacts/review-packages/bit-manipulation/. '
+                      'Phase 10 is not human-approved. No Phase 11, other category, commit, '
+                      'push or publication is authorized.']
+        elif strings:
             lines += ['', 'The owner explicitly approved Phase 8 on 2026-10-23 (Asia/Dhaka) '
                       'and authorized all nine A7 String Algorithms in three sequential validated '
                       'batches: Naive/KMP/Rabin-Karp; Z/Boyer-Moore/Manacher; '
@@ -375,7 +389,7 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
                   + '. Completion statuses describe local implementation evidence. '
                   + ('The owner explicitly approved Phase 8 and authorized Phase 9 String Algorithms; '
                      'see ' + link(path, ROOT / 'docs/string-algorithms-checkpoints.md', 'the new checkpoint')
-                     + '.' if (development or {}).get('scope') == 'String Algorithms category only'
+                     + '.' if (development or {}).get('scope') in ('String Algorithms category only', 'Bit Manipulation category only')
                      else 'Phase 8 owner review remains pending. No further category is authorized.')]
     if category['id'] == 'A7':
         lines += ['', 'Phase 9 covers these nine canonical topics in three sequential validated batches. '
@@ -383,7 +397,18 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
                   + ' for empty patterns, overlaps, UTF-8 byte offsets, output ordering, bounds and reuse. '
                   'Actual evidence and resume state are in '
                   + link(path, ROOT / 'docs/string-algorithms-checkpoints.md', 'String checkpoints')
-                  + '. Phase 9 owner review remains pending. No next category is authorized.']
+                  + ('. Phase 9 was explicitly owner-approved on 2026-10-24; normal Phase 10 '
+                     'Bit Manipulation is authorized. See '
+                     + link(path, ROOT / 'docs/bit-manipulation-checkpoints.md', 'the approval checkpoint')
+                     + '.' if (development or {}).get('scope') == 'Bit Manipulation category only'
+                     else '. Phase 9 owner review remains pending. No next category is authorized.')]
+    if category['id'] == 'A8':
+        lines += ['', 'Phase 10 covers these four topics in two sequential validated batches. '
+                  'Read ' + link(path, ROOT / 'docs/bit-conventions.md', 'fixed-width contracts')
+                  + ' for signed values, unsigned operations, multiplicity validation and positional subsets. '
+                  'Actual evidence and approval records are in '
+                  + link(path, ROOT / 'docs/bit-manipulation-checkpoints.md', 'Bit checkpoints')
+                  + '. Phase 10 owner approval remains pending; no Phase 11 is authorized.']
     if category['id'] == 'A11':
         lines += ['', 'Dijkstra chooses the unsettled vertex with smallest tentative distance '
                   '(requiring nonnegative edge weights); Prim chooses a cheapest edge across '

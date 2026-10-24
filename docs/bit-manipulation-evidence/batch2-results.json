@@ -1,0 +1,19 @@
+{
+  "algorithms": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "dsa/bit-manipulation/brian-kernighan-set-bit-counting",
+      "dsa/bit-manipulation/subset-generation-bitmasking",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 10.13,
+    "log": "docs/bit-manipulation-evidence/batch2-algorithms.txt",
+    "timestamp": "2026-10-24T00:23:54.910453+00:00"
+  }
+}
