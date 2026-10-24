@@ -1,9 +1,11 @@
 # Phase review reports
 
-Review and audit reports are organized by canonical phase name. Their filenames and historical findings are preserved; relative links and live artifact paths were adjusted during the [root cleanup](../maintenance/root-cleanup/REPORT.md). The owner explicitly confirmed completed Phase 9 owner-approved on 2026-10-24 (Asia/Dhaka), authorizing normal roadmap Phase 10 Bit Manipulation. Phase 8 remains approved. The latest record is in [Bit checkpoints](../bit-manipulation-checkpoints.md). Historical reports preserve their handoff-time statements.
+Review and audit reports are organized by canonical phase name. Their filenames and historical findings are preserved; relative links and live artifact paths were adjusted during the [root cleanup](../maintenance/root-cleanup/REPORT.md). The owner officially approved completed Phase 10 on 2026-10-24 (Asia/Dhaka), authorizing combined Phase 11 Number Theory and Phase 12 Two Pointers & Sliding Window in normal roadmap order. Phases 8 and 9 remain approved. The two new owner approvals remain independently pending; see [Number Theory checkpoints](../number-theory-checkpoints.md) and [window checkpoints](../two-pointers-sliding-window-checkpoints.md). Historical reports preserve their handoff-time statements.
 
 | Phase | Report |
 | --- | --- |
+| number-theory | [NUMBER-THEORY-REVIEW-REPORT.md](number-theory/NUMBER-THEORY-REVIEW-REPORT.md) |
+| two-pointers-sliding-window | [TWO-POINTERS-SLIDING-WINDOW-REVIEW-REPORT.md](two-pointers-sliding-window/TWO-POINTERS-SLIDING-WINDOW-REVIEW-REPORT.md) |
 | bit-manipulation | [BIT-MANIPULATION-REVIEW-REPORT.md](bit-manipulation/BIT-MANIPULATION-REVIEW-REPORT.md) |
 | divide-conquer | [DIVIDE-CONQUER-REVIEW-REPORT.md](divide-conquer/DIVIDE-CONQUER-REVIEW-REPORT.md) |
 | dynamic-programming | [DYNAMIC-PROGRAMMING-REVIEW-REPORT.md](dynamic-programming/DYNAMIC-PROGRAMMING-REVIEW-REPORT.md) |

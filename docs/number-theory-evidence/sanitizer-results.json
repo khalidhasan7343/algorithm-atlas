@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "dsa/number-theory",
+    "-m",
+    "cpp",
+    "--cpp-standard=c++20",
+    "--require-cpp",
+    "-q"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "timeout_seconds": 900,
+  "elapsed_seconds": 17.63,
+  "log": "docs/number-theory-evidence/sanitizer.txt",
+  "CXX": "g++ -fsanitize=address,undefined -fno-sanitize-recover=all"
+}

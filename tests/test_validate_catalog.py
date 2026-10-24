@@ -832,3 +832,56 @@ def test_bit_phase_requires_each_claimed_canonical(sample_repo):
         reduced=dict(records);del reduced[name]
         report=ValidationReport();_validate_development(root,state,reduced,report)
         assert any(name in error for error in report.errors)
+
+
+def combined_fixture(root, completed):
+    from scripts.validate_catalog import NUMBER_WINDOW_SCOPE,NUMBER_WINDOW_BATCHES
+    (root/'docs').mkdir(exist_ok=True)
+    for name in ('n11','w12'):
+        (root/'docs'/f'{name}.md').write_text('Independent phase record')
+    state={'phase':'Phases 11 + 12','scope':NUMBER_WINDOW_SCOPE,'approval':'Explicit owner authorization after Phase 10 approval',
+           'status':'awaiting-review' if len(completed)==4 else 'in-progress',
+           'active_batch':None if len(completed)==4 else len(completed)+1,'completed_batches':completed,
+           'checkpoint':'docs/n11.md','completion_report':'docs/n11.md',
+           'completion_reports':{'11':'docs/n11.md','12':'docs/w12.md'},'phase_records':{}}
+    for key,cat,offset,doc in [('11','A9',0,'n11'),('12','A10',2,'w12')]:
+        count=max(0,min(2,len(completed)-offset))
+        status='awaiting-review' if count==2 else 'planned' if key=='12' and len(completed)<2 else 'in-progress'
+        state['phase_records'][key]={'phase_number':int(key),'category':cat,'status':status,
+            'completed_batches':list(range(1,count+1)),'owner_approval':'pending',
+            'checkpoint':f'docs/{doc}.md','completion_report':f'docs/{doc}.md'}
+    records={name:{'documentation_status':'implemented','python_status':'tested','cpp_status':'tested','test_status':'tested'} for batch in NUMBER_WINDOW_BATCHES for name in batch}
+    return state,records
+
+
+@pytest.mark.parametrize('completed',[[],[1],[1,2],[1,2,3],[1,2,3,4]])
+def test_combined_independent_phase_states(sample_repo,completed):
+    root,_=sample_repo
+    state,records=combined_fixture(root,completed)
+    report=ValidationReport();_validate_development(root,state,records,report)
+    assert not report.errors
+
+
+@pytest.mark.parametrize('tamper',['premature_review','extra_batch','phase11_premature','phase12_premature','approved','same_report','missing_report','wrong_pointer'])
+def test_combined_rejects_invalid_progress_or_shared_approval(sample_repo,tamper):
+    root,_=sample_repo
+    state,records=combined_fixture(root,[1])
+    if tamper=='premature_review':state.update(status='awaiting-review',active_batch=None)
+    elif tamper=='extra_batch':state.update(completed_batches=[1,2,3,4,5],status='awaiting-review',active_batch=None)
+    elif tamper=='phase11_premature':state['phase_records']['11']['status']='awaiting-review'
+    elif tamper=='phase12_premature':state['phase_records']['12']['status']='in-progress'
+    elif tamper=='approved':state['phase_records']['11']['owner_approval']='approved'
+    elif tamper=='same_report':state['completion_reports']['12']='docs/n11.md'
+    elif tamper=='missing_report':state['phase_records']['12']['completion_report']='docs/missing.md'
+    elif tamper=='wrong_pointer':state['completion_report']='docs/w12.md'
+    report=ValidationReport();_validate_development(root,state,records,report)
+    assert report.errors
+
+
+def test_combined_requires_each_completed_algorithm(sample_repo):
+    root,_=sample_repo
+    state,records=combined_fixture(root,[1,2,3,4])
+    for name in records:
+        subset=dict(records);del subset[name]
+        report=ValidationReport();_validate_development(root,state,subset,report)
+        assert any(name in e for e in report.errors)

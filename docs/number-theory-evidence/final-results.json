@@ -1,0 +1,72 @@
+{
+  "python": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "dsa/number-theory",
+      "-m",
+      "not cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 2.39,
+    "log": "docs/number-theory-evidence/final-python.txt",
+    "timestamp": "2026-10-24T05:31:56.246371+00:00"
+  },
+  "cpp17": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "dsa/number-theory",
+      "-m",
+      "cpp",
+      "--cpp-standard=c++17",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 13.77,
+    "log": "docs/number-theory-evidence/final-cpp17.txt",
+    "timestamp": "2026-10-24T05:32:10.013775+00:00"
+  },
+  "cpp20": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "dsa/number-theory",
+      "-m",
+      "cpp",
+      "--cpp-standard=c++20",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 16.92,
+    "log": "docs/number-theory-evidence/final-cpp20.txt",
+    "timestamp": "2026-10-24T05:32:26.938805+00:00"
+  },
+  "full-suite": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 448.38,
+    "log": "docs/number-theory-evidence/final-full-suite.txt",
+    "shared_execution": "One full repository regression, referenced by both independent phase reviews."
+  }
+}

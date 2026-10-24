@@ -1,0 +1,176 @@
+{
+  "sieve-of-eratosthenes": {
+    "input": "20",
+    "expected": [
+      2,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19
+    ],
+    "observed": {
+      "python": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13,
+        17,
+        19
+      ],
+      "c++17": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13,
+        17,
+        19
+      ],
+      "c++20": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13,
+        17,
+        19
+      ]
+    },
+    "status": "passed"
+  },
+  "euclidean-algorithm": {
+    "input": "-48 18",
+    "expected": 6,
+    "observed": {
+      "python": 6,
+      "c++17": 6,
+      "c++20": 6
+    },
+    "status": "passed"
+  },
+  "least-common-multiple": {
+    "input": "-12 18",
+    "expected": 36,
+    "observed": {
+      "python": 36,
+      "c++17": 36,
+      "c++20": 36
+    },
+    "status": "passed"
+  },
+  "modular-exponentiation": {
+    "input": "-2 5 13",
+    "expected": 7,
+    "observed": {
+      "python": 7,
+      "c++17": 7,
+      "c++20": 7
+    },
+    "status": "passed"
+  },
+  "fast-exponentiation": {
+    "input": "-2 63",
+    "expected": -9223372036854775808,
+    "observed": {
+      "python": -9223372036854775808,
+      "c++17": -9223372036854775808,
+      "c++20": -9223372036854775808
+    },
+    "status": "passed"
+  },
+  "extended-euclidean-algorithm": {
+    "input": "-30 18",
+    "expected": [
+      6,
+      1,
+      2
+    ],
+    "observed": {
+      "python": [
+        6,
+        1,
+        2
+      ],
+      "c++17": [
+        6,
+        1,
+        2
+      ],
+      "c++20": [
+        6,
+        1,
+        2
+      ]
+    },
+    "status": "passed"
+  },
+  "prime-factorization": {
+    "input": "360",
+    "expected": [
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        5,
+        1
+      ]
+    ],
+    "observed": {
+      "python": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "c++17": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "c++20": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          1
+        ]
+      ]
+    },
+    "status": "passed"
+  }
+}

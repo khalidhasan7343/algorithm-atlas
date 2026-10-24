@@ -8,9 +8,13 @@ This category preserves **3 original syllabus entries**. Each link points to the
 
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Two Sum in Sorted Array | [two-sum-sorted-array](two-sum-sorted-array/README.md) | planned |
-| Sliding Window Maximum | [sliding-window-maximum](sliding-window-maximum/README.md) | planned |
-| Longest Substring Without Repeating Characters | [longest-substring-without-repeating-characters](longest-substring-without-repeating-characters/README.md) | planned |
+| Two Sum in Sorted Array | [two-sum-sorted-array](two-sum-sorted-array/README.md) | complete |
+| Sliding Window Maximum | [sliding-window-maximum](sliding-window-maximum/README.md) | complete |
+| Longest Substring Without Repeating Characters | [longest-substring-without-repeating-characters](longest-substring-without-repeating-characters/README.md) | complete |
+
+Phase 12 implements these three Two Pointers and Sliding Window canonicals.
+
+Read [the contracts](../../docs/two-pointers-sliding-window-conventions.md) and [the independent checkpoint](../../docs/two-pointers-sliding-window-checkpoints.md). Both categories are jointly authorized for implementation, with separate pending owner approvals, reports and review packages. No Phase 13 is authorized.
 
 ## Learning and contribution scope
 

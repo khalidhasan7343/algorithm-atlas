@@ -1,0 +1,20 @@
+{
+  "algorithms": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "dsa/number-theory/sieve-of-eratosthenes",
+      "dsa/number-theory/euclidean-algorithm",
+      "dsa/number-theory/least-common-multiple",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 13.91,
+    "log": "docs/number-theory-evidence/A-algorithms.txt",
+    "timestamp": "2026-10-24T05:22:26.613333+00:00"
+  }
+}

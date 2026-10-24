@@ -1,0 +1,524 @@
+........................................................................ [ 24%]
+........................................................................ [ 48%]
+........................................................................ [ 72%]
+..................................................................FFFFFF [ 97%]
+FFFFFFFF                                                                 [100%]
+=================================== FAILURES ===================================
+______________ test_combined_independent_phase_states[completed0] ______________
+
+sample_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_in...d': 'sample-topic', 'name': 'Sample Topic', 'category': 'A1', 'canonical_location': 'dsa/sorting/sample-topic', ...}]})
+completed = []
+
+    @pytest.mark.parametrize('completed',[[],[1],[1,2],[1,2,3],[1,2,3,4]])
+    def test_combined_independent_phase_states(sample_repo,completed):
+        root,_=sample_repo
+>       state,records=combined_fixture(root,completed)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_validate_catalog.py:859: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_validate_catalog.py:840: in combined_fixture
+    (root/'docs'/f'{name}.md').write_text('Independent phase record')
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:809: in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_independent_phas0/docs/n11.md')
+mode = 'w', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_independent_phas0/docs/n11.md'
+
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+______________ test_combined_independent_phase_states[completed1] ______________
+
+sample_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_in...d': 'sample-topic', 'name': 'Sample Topic', 'category': 'A1', 'canonical_location': 'dsa/sorting/sample-topic', ...}]})
+completed = [1]
+
+    @pytest.mark.parametrize('completed',[[],[1],[1,2],[1,2,3],[1,2,3,4]])
+    def test_combined_independent_phase_states(sample_repo,completed):
+        root,_=sample_repo
+>       state,records=combined_fixture(root,completed)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_validate_catalog.py:859: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_validate_catalog.py:840: in combined_fixture
+    (root/'docs'/f'{name}.md').write_text('Independent phase record')
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:809: in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_independent_phas1/docs/n11.md')
+mode = 'w', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_independent_phas1/docs/n11.md'
+
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+______________ test_combined_independent_phase_states[completed2] ______________
+
+sample_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_in...d': 'sample-topic', 'name': 'Sample Topic', 'category': 'A1', 'canonical_location': 'dsa/sorting/sample-topic', ...}]})
+completed = [1, 2]
+
+    @pytest.mark.parametrize('completed',[[],[1],[1,2],[1,2,3],[1,2,3,4]])
+    def test_combined_independent_phase_states(sample_repo,completed):
+        root,_=sample_repo
+>       state,records=combined_fixture(root,completed)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_validate_catalog.py:859: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_validate_catalog.py:840: in combined_fixture
+    (root/'docs'/f'{name}.md').write_text('Independent phase record')
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:809: in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_independent_phas2/docs/n11.md')
+mode = 'w', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_independent_phas2/docs/n11.md'
+
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+______________ test_combined_independent_phase_states[completed3] ______________
+
+sample_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_in...d': 'sample-topic', 'name': 'Sample Topic', 'category': 'A1', 'canonical_location': 'dsa/sorting/sample-topic', ...}]})
+completed = [1, 2, 3]
+
+    @pytest.mark.parametrize('completed',[[],[1],[1,2],[1,2,3],[1,2,3,4]])
+    def test_combined_independent_phase_states(sample_repo,completed):
+        root,_=sample_repo
+>       state,records=combined_fixture(root,completed)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_validate_catalog.py:859: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_validate_catalog.py:840: in combined_fixture
+    (root/'docs'/f'{name}.md').write_text('Independent phase record')
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:809: in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_independent_phas3/docs/n11.md')
+mode = 'w', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_independent_phas3/docs/n11.md'
+
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+______________ test_combined_independent_phase_states[completed4] ______________
+
+sample_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_in...d': 'sample-topic', 'name': 'Sample Topic', 'category': 'A1', 'canonical_location': 'dsa/sorting/sample-topic', ...}]})
+completed = [1, 2, 3, 4]
+
+    @pytest.mark.parametrize('completed',[[],[1],[1,2],[1,2,3],[1,2,3,4]])
+    def test_combined_independent_phase_states(sample_repo,completed):
+        root,_=sample_repo
+>       state,records=combined_fixture(root,completed)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_validate_catalog.py:859: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_validate_catalog.py:840: in combined_fixture
+    (root/'docs'/f'{name}.md').write_text('Independent phase record')
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:809: in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_independent_phas4/docs/n11.md')
+mode = 'w', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_independent_phas4/docs/n11.md'
+
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+_ test_combined_rejects_invalid_progress_or_shared_approval[premature_review] __
+
+sample_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_re...d': 'sample-topic', 'name': 'Sample Topic', 'category': 'A1', 'canonical_location': 'dsa/sorting/sample-topic', ...}]})
+tamper = 'premature_review'
+
+    @pytest.mark.parametrize('tamper',['premature_review','extra_batch','phase11_premature','phase12_premature','approved','same_report','missing_report','wrong_pointer'])
+    def test_combined_rejects_invalid_progress_or_shared_approval(sample_repo,tamper):
+        root,_=sample_repo
+>       state,records=combined_fixture(root,[1])
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_validate_catalog.py:867: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_validate_catalog.py:840: in combined_fixture
+    (root/'docs'/f'{name}.md').write_text('Independent phase record')
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:809: in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_rejects_invalid_0/docs/n11.md')
+mode = 'w', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_rejects_invalid_0/docs/n11.md'
+
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+____ test_combined_rejects_invalid_progress_or_shared_approval[extra_batch] ____
+
+sample_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_re...d': 'sample-topic', 'name': 'Sample Topic', 'category': 'A1', 'canonical_location': 'dsa/sorting/sample-topic', ...}]})
+tamper = 'extra_batch'
+
+    @pytest.mark.parametrize('tamper',['premature_review','extra_batch','phase11_premature','phase12_premature','approved','same_report','missing_report','wrong_pointer'])
+    def test_combined_rejects_invalid_progress_or_shared_approval(sample_repo,tamper):
+        root,_=sample_repo
+>       state,records=combined_fixture(root,[1])
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_validate_catalog.py:867: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_validate_catalog.py:840: in combined_fixture
+    (root/'docs'/f'{name}.md').write_text('Independent phase record')
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:809: in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_rejects_invalid_1/docs/n11.md')
+mode = 'w', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_rejects_invalid_1/docs/n11.md'
+
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+_ test_combined_rejects_invalid_progress_or_shared_approval[phase11_premature] _
+
+sample_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_re...d': 'sample-topic', 'name': 'Sample Topic', 'category': 'A1', 'canonical_location': 'dsa/sorting/sample-topic', ...}]})
+tamper = 'phase11_premature'
+
+    @pytest.mark.parametrize('tamper',['premature_review','extra_batch','phase11_premature','phase12_premature','approved','same_report','missing_report','wrong_pointer'])
+    def test_combined_rejects_invalid_progress_or_shared_approval(sample_repo,tamper):
+        root,_=sample_repo
+>       state,records=combined_fixture(root,[1])
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_validate_catalog.py:867: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_validate_catalog.py:840: in combined_fixture
+    (root/'docs'/f'{name}.md').write_text('Independent phase record')
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:809: in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_rejects_invalid_2/docs/n11.md')
+mode = 'w', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_rejects_invalid_2/docs/n11.md'
+
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+_ test_combined_rejects_invalid_progress_or_shared_approval[phase12_premature] _
+
+sample_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_re...d': 'sample-topic', 'name': 'Sample Topic', 'category': 'A1', 'canonical_location': 'dsa/sorting/sample-topic', ...}]})
+tamper = 'phase12_premature'
+
+    @pytest.mark.parametrize('tamper',['premature_review','extra_batch','phase11_premature','phase12_premature','approved','same_report','missing_report','wrong_pointer'])
+    def test_combined_rejects_invalid_progress_or_shared_approval(sample_repo,tamper):
+        root,_=sample_repo
+>       state,records=combined_fixture(root,[1])
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_validate_catalog.py:867: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_validate_catalog.py:840: in combined_fixture
+    (root/'docs'/f'{name}.md').write_text('Independent phase record')
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:809: in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_rejects_invalid_3/docs/n11.md')
+mode = 'w', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_rejects_invalid_3/docs/n11.md'
+
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+_____ test_combined_rejects_invalid_progress_or_shared_approval[approved] ______
+
+sample_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_re...d': 'sample-topic', 'name': 'Sample Topic', 'category': 'A1', 'canonical_location': 'dsa/sorting/sample-topic', ...}]})
+tamper = 'approved'
+
+    @pytest.mark.parametrize('tamper',['premature_review','extra_batch','phase11_premature','phase12_premature','approved','same_report','missing_report','wrong_pointer'])
+    def test_combined_rejects_invalid_progress_or_shared_approval(sample_repo,tamper):
+        root,_=sample_repo
+>       state,records=combined_fixture(root,[1])
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_validate_catalog.py:867: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_validate_catalog.py:840: in combined_fixture
+    (root/'docs'/f'{name}.md').write_text('Independent phase record')
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:809: in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_rejects_invalid_4/docs/n11.md')
+mode = 'w', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_rejects_invalid_4/docs/n11.md'
+
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+____ test_combined_rejects_invalid_progress_or_shared_approval[same_report] ____
+
+sample_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_re...d': 'sample-topic', 'name': 'Sample Topic', 'category': 'A1', 'canonical_location': 'dsa/sorting/sample-topic', ...}]})
+tamper = 'same_report'
+
+    @pytest.mark.parametrize('tamper',['premature_review','extra_batch','phase11_premature','phase12_premature','approved','same_report','missing_report','wrong_pointer'])
+    def test_combined_rejects_invalid_progress_or_shared_approval(sample_repo,tamper):
+        root,_=sample_repo
+>       state,records=combined_fixture(root,[1])
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_validate_catalog.py:867: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_validate_catalog.py:840: in combined_fixture
+    (root/'docs'/f'{name}.md').write_text('Independent phase record')
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:809: in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_rejects_invalid_5/docs/n11.md')
+mode = 'w', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_rejects_invalid_5/docs/n11.md'
+
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+__ test_combined_rejects_invalid_progress_or_shared_approval[missing_report] ___
+
+sample_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_re...d': 'sample-topic', 'name': 'Sample Topic', 'category': 'A1', 'canonical_location': 'dsa/sorting/sample-topic', ...}]})
+tamper = 'missing_report'
+
+    @pytest.mark.parametrize('tamper',['premature_review','extra_batch','phase11_premature','phase12_premature','approved','same_report','missing_report','wrong_pointer'])
+    def test_combined_rejects_invalid_progress_or_shared_approval(sample_repo,tamper):
+        root,_=sample_repo
+>       state,records=combined_fixture(root,[1])
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_validate_catalog.py:867: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_validate_catalog.py:840: in combined_fixture
+    (root/'docs'/f'{name}.md').write_text('Independent phase record')
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:809: in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_rejects_invalid_6/docs/n11.md')
+mode = 'w', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_rejects_invalid_6/docs/n11.md'
+
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+___ test_combined_rejects_invalid_progress_or_shared_approval[wrong_pointer] ___
+
+sample_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_re...d': 'sample-topic', 'name': 'Sample Topic', 'category': 'A1', 'canonical_location': 'dsa/sorting/sample-topic', ...}]})
+tamper = 'wrong_pointer'
+
+    @pytest.mark.parametrize('tamper',['premature_review','extra_batch','phase11_premature','phase12_premature','approved','same_report','missing_report','wrong_pointer'])
+    def test_combined_rejects_invalid_progress_or_shared_approval(sample_repo,tamper):
+        root,_=sample_repo
+>       state,records=combined_fixture(root,[1])
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_validate_catalog.py:867: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_validate_catalog.py:840: in combined_fixture
+    (root/'docs'/f'{name}.md').write_text('Independent phase record')
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:809: in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_rejects_invalid_7/docs/n11.md')
+mode = 'w', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_rejects_invalid_7/docs/n11.md'
+
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+_______________ test_combined_requires_each_completed_algorithm ________________
+
+sample_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_re...d': 'sample-topic', 'name': 'Sample Topic', 'category': 'A1', 'canonical_location': 'dsa/sorting/sample-topic', ...}]})
+
+    def test_combined_requires_each_completed_algorithm(sample_repo):
+        root,_=sample_repo
+>       state,records=combined_fixture(root,[1,2,3,4])
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_validate_catalog.py:882: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_validate_catalog.py:840: in combined_fixture
+    (root/'docs'/f'{name}.md').write_text('Independent phase record')
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:809: in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_requires_each_co0/docs/n11.md')
+mode = 'w', buffering = -1, encoding = 'locale', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-224/test_combined_requires_each_co0/docs/n11.md'
+
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py:771: FileNotFoundError
+=========================== short test summary info ============================
+FAILED tests/test_validate_catalog.py::test_combined_independent_phase_states[completed0]
+FAILED tests/test_validate_catalog.py::test_combined_independent_phase_states[completed1]
+FAILED tests/test_validate_catalog.py::test_combined_independent_phase_states[completed2]
+FAILED tests/test_validate_catalog.py::test_combined_independent_phase_states[completed3]
+FAILED tests/test_validate_catalog.py::test_combined_independent_phase_states[completed4]
+FAILED tests/test_validate_catalog.py::test_combined_rejects_invalid_progress_or_shared_approval[premature_review]
+FAILED tests/test_validate_catalog.py::test_combined_rejects_invalid_progress_or_shared_approval[extra_batch]
+FAILED tests/test_validate_catalog.py::test_combined_rejects_invalid_progress_or_shared_approval[phase11_premature]
+FAILED tests/test_validate_catalog.py::test_combined_rejects_invalid_progress_or_shared_approval[phase12_premature]
+FAILED tests/test_validate_catalog.py::test_combined_rejects_invalid_progress_or_shared_approval[approved]
+FAILED tests/test_validate_catalog.py::test_combined_rejects_invalid_progress_or_shared_approval[same_report]
+FAILED tests/test_validate_catalog.py::test_combined_rejects_invalid_progress_or_shared_approval[missing_report]
+FAILED tests/test_validate_catalog.py::test_combined_rejects_invalid_progress_or_shared_approval[wrong_pointer]
+FAILED tests/test_validate_catalog.py::test_combined_requires_each_completed_algorithm
+14 failed, 282 passed in 3.26s

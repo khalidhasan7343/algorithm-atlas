@@ -21,3 +21,9 @@ The later [Tree Algorithms package](tree-algorithms/README.md) follows Phase 8 c
 The [String Algorithms package](string-algorithms/README.md) records Phase 9 execution and pending owner approval. The later explicit approval of Phase 8 is recorded in [String checkpoints](../../docs/string-algorithms-checkpoints.md); historical Tree sidecars retain their handoff-time approval status.
 
 The [Bit Manipulation package](bit-manipulation/README.md) covers normal roadmap Phase 10 and records pending owner approval. The owner explicitly approved completed Phase 9 on 2026-10-24, as recorded in [Bit checkpoints](../../docs/bit-manipulation-checkpoints.md); historical String package metadata retains its original handoff-time pending status.
+
+The owner officially approved Phase 10 on 2026-10-24 (Asia/Dhaka); the original
+Bit package remains unchanged. The [Number Theory package](number-theory/README.md)
+and [Two Pointers & Sliding Window package](two-pointers-sliding-window/README.md)
+cover jointly authorized Phases 11/12 with independent pending owner checkpoints.
+There is no third combined ZIP.

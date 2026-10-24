@@ -1,0 +1,35 @@
+{
+  "sieve-of-eratosthenes": {
+    "valid_vectors": 201,
+    "reference": "Independent mathematical or brute-force oracle; no production solution imported"
+  },
+  "euclidean-algorithm": {
+    "valid_vectors": 798,
+    "reference": "Independent mathematical or brute-force oracle; no production solution imported"
+  },
+  "least-common-multiple": {
+    "valid_vectors": 798,
+    "reference": "Independent mathematical or brute-force oracle; no production solution imported"
+  },
+  "modular-exponentiation": {
+    "valid_vectors": 552,
+    "reference": "Independent mathematical or brute-force oracle; no production solution imported"
+  },
+  "fast-exponentiation": {
+    "valid_vectors": 443,
+    "reference": "Independent mathematical or brute-force oracle; no production solution imported"
+  },
+  "extended-euclidean-algorithm": {
+    "valid_vectors": 798,
+    "reference": "Independent mathematical or brute-force oracle; no production solution imported"
+  },
+  "prime-factorization": {
+    "valid_vectors": 431,
+    "reference": "Independent mathematical or brute-force oracle; no production solution imported"
+  },
+  "seeds": [
+    11101,
+    11102,
+    11109
+  ]
+}

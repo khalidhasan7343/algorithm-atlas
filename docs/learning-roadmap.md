@@ -2,7 +2,7 @@
 
 Progress from foundational problem solving to specialized AI topics. These levels describe a study order, not repository development phases: learning a later level does not authorize implementation outside the approved development phase.
 
-**Current scope:** Phase 9 is fully completed and explicitly owner-approved. Phase 10 authorizes the four Bit Manipulation canonicals in normal sequence. Follow [progress](progress.md), [Bit conventions](bit-conventions.md) and [two-batch checkpoints](bit-manipulation-checkpoints.md). Phase 8 remains approved; preserve 35/256/235 and stop for Phase 10 owner review.
+**Current scope:** Phase 10 is officially owner-approved. Combined Phases 11 and 12 authorize only [Number Theory](number-theory-checkpoints.md) and [Two Pointers & Sliding Window](two-pointers-sliding-window-checkpoints.md). Both categories must complete before handoff, with independent pending owner approvals. Preserve 35/256/235 and stop before Phase 13.
 
 ## Level 1 — DSA Foundations
 

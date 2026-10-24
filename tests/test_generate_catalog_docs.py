@@ -301,3 +301,22 @@ def test_bit_progress_keeps_normal_sequence_and_prior_approval():
         category=next(c for c in catalog['categories'] if c['id']==category_id)
         page=generator.category_page(category,algorithms,catalog['development'])
         assert 'owner review remains pending' not in page
+
+
+def test_combined_progress_displays_independent_reports_and_approvals():
+    catalog=yaml.safe_load((Path(__file__).resolve().parents[1]/'catalog.yaml').read_text())
+    records={a['id']:a for a in catalog['algorithms']}
+    state=dict(catalog['development'])
+    state.update(scope='Number Theory and Two Pointers & Sliding Window categories only')
+    state['phase_records']={str(n):{'status':status,'owner_approval':'pending','completion_report':f'docs/reviews/{slug}/{name}-REVIEW-REPORT.md'} for n,status,slug,name in [(11,'awaiting-review','number-theory','NUMBER-THEORY'),(12,'in-progress','two-pointers-sliding-window','TWO-POINTERS-SLIDING-WINDOW')]}
+    catalog['development']=state
+    text=generator.progress_page(catalog,records)
+    assert 'Phase 10 is officially owner-approved' in text
+    assert '| 11 | awaiting-review | pending |' in text
+    assert '| 12 | in-progress | pending |' in text
+    assert 'No Phase 13' in text
+    assert 'No third combined ZIP' in text
+    for id in ('A6','A7','A8'):
+        category=next(c for c in catalog['categories'] if c['id']==id)
+        page=generator.category_page(category,records,state)
+        assert 'owner review remains pending' not in page and 'owner approval remains pending' not in page

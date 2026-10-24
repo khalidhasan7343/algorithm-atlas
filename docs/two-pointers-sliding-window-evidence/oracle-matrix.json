@@ -1,0 +1,12 @@
+{
+  "phase_number": 12,
+  "category": "two-pointers-sliding-window",
+  "seed": 12109,
+  "relationships": {
+    "pair vs exhaustive index order": 120,
+    "maximum vs all complete windows": 120,
+    "distinct interval vs independent expansion": 120
+  },
+  "status": "passed",
+  "owner_approval": "pending"
+}

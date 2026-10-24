@@ -8,13 +8,17 @@ This category preserves **7 original syllabus entries**. Each link points to the
 
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Sieve of Eratosthenes | [sieve-of-eratosthenes](sieve-of-eratosthenes/README.md) | planned |
-| GCD using Euclidean Algorithm | [euclidean-algorithm](euclidean-algorithm/README.md) | planned |
-| LCM | [least-common-multiple](least-common-multiple/README.md) | planned |
-| Modular Exponentiation | [modular-exponentiation](modular-exponentiation/README.md) | planned |
-| Fast Exponentiation | [fast-exponentiation](fast-exponentiation/README.md) | planned |
-| Extended Euclidean Algorithm | [extended-euclidean-algorithm](extended-euclidean-algorithm/README.md) | planned |
-| Prime Factorization | [prime-factorization](prime-factorization/README.md) | planned |
+| Sieve of Eratosthenes | [sieve-of-eratosthenes](sieve-of-eratosthenes/README.md) | complete |
+| GCD using Euclidean Algorithm | [euclidean-algorithm](euclidean-algorithm/README.md) | complete |
+| LCM | [least-common-multiple](least-common-multiple/README.md) | complete |
+| Modular Exponentiation | [modular-exponentiation](modular-exponentiation/README.md) | complete |
+| Fast Exponentiation | [fast-exponentiation](fast-exponentiation/README.md) | complete |
+| Extended Euclidean Algorithm | [extended-euclidean-algorithm](extended-euclidean-algorithm/README.md) | complete |
+| Prime Factorization | [prime-factorization](prime-factorization/README.md) | complete |
+
+Phase 11 implements these seven Number Theory canonicals.
+
+Read [the contracts](../../docs/number-theory-conventions.md) and [the independent checkpoint](../../docs/number-theory-checkpoints.md). Both categories are jointly authorized for implementation, with separate pending owner approvals, reports and review packages. No Phase 13 is authorized.
 
 ## Learning and contribution scope
 

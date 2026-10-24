@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "dsa/two-pointers-and-sliding-window",
+    "-m",
+    "cpp",
+    "--cpp-standard=c++20",
+    "--require-cpp",
+    "-q"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "timeout_seconds": 900,
+  "elapsed_seconds": 7.72,
+  "log": "docs/two-pointers-sliding-window-evidence/sanitizer.txt",
+  "CXX": "g++ -fsanitize=address,undefined -fno-sanitize-recover=all"
+}

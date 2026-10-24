@@ -1,0 +1,43 @@
+{
+  "catalog": {
+    "command": [
+      "python",
+      "scripts/validate_catalog.py"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 0.57,
+    "log": "docs/two-pointers-sliding-window-evidence/configuration-catalog.txt",
+    "timestamp": "2026-10-24T05:28:09.267131+00:00"
+  },
+  "generated-docs": {
+    "command": [
+      "python",
+      "scripts/generate_catalog_docs.py",
+      "--check"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 0.16,
+    "log": "docs/two-pointers-sliding-window-evidence/configuration-generated-docs.txt",
+    "timestamp": "2026-10-24T05:28:09.426153+00:00"
+  },
+  "infrastructure": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "tests",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 2.84,
+    "log": "docs/two-pointers-sliding-window-evidence/configuration-infrastructure.txt",
+    "timestamp": "2026-10-24T05:28:12.264194+00:00"
+  }
+}

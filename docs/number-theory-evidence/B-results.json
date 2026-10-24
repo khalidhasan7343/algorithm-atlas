@@ -1,0 +1,18 @@
+{
+  "algorithms": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "dsa/number-theory",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 34.44,
+    "log": "docs/number-theory-evidence/B-algorithms.txt",
+    "timestamp": "2026-10-24T05:26:17.429803+00:00"
+  }
+}

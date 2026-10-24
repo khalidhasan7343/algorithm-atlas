@@ -1,14 +1,45 @@
 schema_version: 1
 project: "Algorithm Atlas"
 development:
-  phase: "Phase 10 — Bit Manipulation"
-  scope: "Bit Manipulation category only"
-  status: "awaiting-review"
+  phase: Phases 11 + 12 — Number Theory and Two Pointers & Sliding Window
+  scope: Number Theory and Two Pointers & Sliding Window categories only
+  status: awaiting-review
   active_batch: null
-  completed_batches: [1, 2]
-  checkpoint: "docs/bit-manipulation-checkpoints.md"
-  completion_report: "docs/reviews/bit-manipulation/BIT-MANIPULATION-REVIEW-REPORT.md"
-  approval: "Owner explicitly confirmed Phase 9 fully completed and owner-approved on 2026-10-24 (Asia/Dhaka); Phase 10 Bit Manipulation is authorized in normal roadmap sequence, not out of order. Phase 8 remains completed and owner-approved. Four A8 canonicals, two sequential validated batches. Phase 10 approval is pending. No Phase 11, other category, commit, push or publication. Preserve 35/256/235 inventory."
+  completed_batches:
+  - 1
+  - 2
+  - 3
+  - 4
+  checkpoint: docs/number-theory-checkpoints.md
+  completion_report: docs/reviews/number-theory/NUMBER-THEORY-REVIEW-REPORT.md
+  completion_reports:
+    '11': docs/reviews/number-theory/NUMBER-THEORY-REVIEW-REPORT.md
+    '12': docs/reviews/two-pointers-sliding-window/TWO-POINTERS-SLIDING-WINDOW-REVIEW-REPORT.md
+  approval: Owner officially confirmed Phase 10 completed and owner-approved on 2026-10-24
+    (Asia/Dhaka); Phase 9 is owner-approved. Combined Phase 11 and Phase 12 authorized,
+    seven A9 and three A10 canonicals only. Independent owner approvals for Phases
+    11 and 12 remain pending; no Phase 13, commit, push or publication.
+  phase_records:
+    '11':
+      phase_number: 11
+      category: A9
+      status: awaiting-review
+      completed_batches:
+      - 1
+      - 2
+      checkpoint: docs/number-theory-checkpoints.md
+      completion_report: docs/reviews/number-theory/NUMBER-THEORY-REVIEW-REPORT.md
+      owner_approval: pending
+    '12':
+      phase_number: 12
+      category: A10
+      status: awaiting-review
+      completed_batches:
+      - 1
+      - 2
+      checkpoint: docs/two-pointers-sliding-window-checkpoints.md
+      completion_report: docs/reviews/two-pointers-sliding-window/TWO-POINTERS-SLIDING-WINDOW-REVIEW-REPORT.md
+      owner_approval: pending
 categories:
   - id: "A1"
     name: "Sorting"
@@ -1605,131 +1636,131 @@ algorithms:
     category: "A9"
     canonical_location: "dsa/number-theory/sieve-of-eratosthenes"
     difficulty: "beginner"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
+    cpp_status: "tested"
+    test_status: "tested"
     related_algorithms:
       - "euclidean-algorithm"
       - "least-common-multiple"
-    notes: "Enumerate primes up to a finite bound by marking composites. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Inclusive bounded sieve, 0/1 excluded; trial-primality oracles. Stage A Python/C++17/C++20 tests passed; Phase 11 owner approval pending."
   - id: "euclidean-algorithm"
     name: "GCD using Euclidean Algorithm"
     category: "A9"
     canonical_location: "dsa/number-theory/euclidean-algorithm"
     difficulty: "beginner"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
+    cpp_status: "tested"
+    test_status: "tested"
     related_algorithms:
       - "sieve-of-eratosthenes"
       - "least-common-multiple"
-    notes: "Compute greatest common divisors using Euclidean remainders. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Iterative magnitude/remainder GCD, signs and gcd(0,0)=0 explicit. Stage A Python/C++17/C++20 tests passed; Phase 11 owner approval pending."
   - id: "least-common-multiple"
     name: "LCM"
     category: "A9"
     canonical_location: "dsa/number-theory/least-common-multiple"
     difficulty: "beginner"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
+    cpp_status: "tested"
+    test_status: "tested"
     related_algorithms:
       - "sieve-of-eratosthenes"
       - "euclidean-algorithm"
-    notes: "Compute least common multiples with explicit sign and zero conventions. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Canonical GCD reuse, divide-first exact nonnegative LCM, zero convention. Stage A Python/C++17/C++20 tests passed; Phase 11 owner approval pending."
   - id: "modular-exponentiation"
     name: "Modular Exponentiation"
     category: "A9"
     canonical_location: "dsa/number-theory/modular-exponentiation"
     difficulty: "beginner"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
+    cpp_status: "tested"
+    test_status: "tested"
     related_algorithms:
       - "sieve-of-eratosthenes"
       - "euclidean-algorithm"
-    notes: "Compute integer powers modulo a specified modulus. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Genuine binary modular exponentiation with normalized negative base and bounded overflow-safe products. Stage B Python/C++17/C++20 tests passed; Phase 11 owner approval pending."
   - id: "fast-exponentiation"
     name: "Fast Exponentiation"
     category: "A9"
     canonical_location: "dsa/number-theory/fast-exponentiation"
     difficulty: "beginner"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
+    cpp_status: "tested"
+    test_status: "tested"
     related_algorithms:
       - "sieve-of-eratosthenes"
       - "euclidean-algorithm"
-    notes: "Compute powers using repeated squaring without a modulus. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Genuine checked signed-64 binary power including INT64_MIN and avoiding an unnecessary final square. Stage B Python/C++17/C++20 tests passed; Phase 11 owner approval pending."
   - id: "extended-euclidean-algorithm"
     name: "Extended Euclidean Algorithm"
     category: "A9"
     canonical_location: "dsa/number-theory/extended-euclidean-algorithm"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
+    cpp_status: "tested"
+    test_status: "tested"
     related_algorithms:
       - "sieve-of-eratosthenes"
       - "euclidean-algorithm"
-    notes: "Compute a greatest common divisor together with Bezout coefficients. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Iterative coefficient-tracking Euclid on magnitudes, sign-adjusted Bezout identity, (0,0) explicit. Stage B Python/C++17/C++20 tests passed; Phase 11 owner approval pending."
   - id: "prime-factorization"
     name: "Prime Factorization"
     category: "A9"
     canonical_location: "dsa/number-theory/prime-factorization"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
+    cpp_status: "tested"
+    test_status: "tested"
     related_algorithms:
       - "sieve-of-eratosthenes"
       - "euclidean-algorithm"
-    notes: "Decompose positive integers into prime factors under a documented input range. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Deterministic bounded trial division with ascending prime/exponent rows and reconstruction checks. Stage B Python/C++17/C++20 tests passed; Phase 11 owner approval pending."
   - id: "two-sum-sorted-array"
     name: "Two Sum in Sorted Array"
     category: "A10"
     canonical_location: "dsa/two-pointers-and-sliding-window/two-sum-sorted-array"
     difficulty: "beginner"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
+    cpp_status: "tested"
+    test_status: "tested"
     related_algorithms:
       - "sliding-window-maximum"
       - "longest-substring-without-repeating-characters"
-    notes: "Find a pair with a specified sum in a sorted sequence. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Validated sorted two-pointer search, lexicographically smallest original index pair, no mutation. Stage C Python/C++17/C++20 tests passed; Phase 12 owner approval pending."
   - id: "sliding-window-maximum"
     name: "Sliding Window Maximum"
     category: "A10"
     canonical_location: "dsa/two-pointers-and-sliding-window/sliding-window-maximum"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
+    cpp_status: "tested"
+    test_status: "tested"
     related_algorithms:
       - "two-sum-sorted-array"
       - "longest-substring-without-repeating-characters"
-    notes: "Track the maximum value across fixed-width windows. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Monotonic index deque for signed arrays with explicit empty/k contract. Stage D Python/C++17/C++20 tests passed; Phase 12 owner approval pending."
   - id: "longest-substring-without-repeating-characters"
     name: "Longest Substring Without Repeating Characters"
     category: "A10"
     canonical_location: "dsa/two-pointers-and-sliding-window/longest-substring-without-repeating-characters"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
+    cpp_status: "tested"
+    test_status: "tested"
     related_algorithms:
       - "two-sum-sorted-array"
       - "sliding-window-maximum"
-    notes: "Find a longest contiguous substring with distinct characters. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Byte-based last-occurrence sliding interval, earliest longest half-open range and all 256 symbols. Stage D Python/C++17/C++20 tests passed; Phase 12 owner approval pending."
   - id: "activity-selection"
     name: "Activity Selection"
     category: "A11"

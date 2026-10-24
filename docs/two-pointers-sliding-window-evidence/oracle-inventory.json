@@ -1,0 +1,19 @@
+{
+  "two-sum-sorted-array": {
+    "valid_vectors": 2436,
+    "reference": "Independent mathematical or brute-force oracle; no production solution imported"
+  },
+  "sliding-window-maximum": {
+    "valid_vectors": 1809,
+    "reference": "Independent mathematical or brute-force oracle; no production solution imported"
+  },
+  "longest-substring-without-repeating-characters": {
+    "valid_vectors": 1263,
+    "reference": "Independent mathematical or brute-force oracle; no production solution imported"
+  },
+  "seeds": [
+    12101,
+    12102,
+    12109
+  ]
+}

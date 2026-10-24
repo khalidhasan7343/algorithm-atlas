@@ -129,21 +129,21 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Sieve of Eratosthenes | [sieve-of-eratosthenes](../dsa/number-theory/sieve-of-eratosthenes/README.md) | planned |
-| GCD using Euclidean Algorithm | [euclidean-algorithm](../dsa/number-theory/euclidean-algorithm/README.md) | planned |
-| LCM | [least-common-multiple](../dsa/number-theory/least-common-multiple/README.md) | planned |
-| Modular Exponentiation | [modular-exponentiation](../dsa/number-theory/modular-exponentiation/README.md) | planned |
-| Fast Exponentiation | [fast-exponentiation](../dsa/number-theory/fast-exponentiation/README.md) | planned |
-| Extended Euclidean Algorithm | [extended-euclidean-algorithm](../dsa/number-theory/extended-euclidean-algorithm/README.md) | planned |
-| Prime Factorization | [prime-factorization](../dsa/number-theory/prime-factorization/README.md) | planned |
+| Sieve of Eratosthenes | [sieve-of-eratosthenes](../dsa/number-theory/sieve-of-eratosthenes/README.md) | complete |
+| GCD using Euclidean Algorithm | [euclidean-algorithm](../dsa/number-theory/euclidean-algorithm/README.md) | complete |
+| LCM | [least-common-multiple](../dsa/number-theory/least-common-multiple/README.md) | complete |
+| Modular Exponentiation | [modular-exponentiation](../dsa/number-theory/modular-exponentiation/README.md) | complete |
+| Fast Exponentiation | [fast-exponentiation](../dsa/number-theory/fast-exponentiation/README.md) | complete |
+| Extended Euclidean Algorithm | [extended-euclidean-algorithm](../dsa/number-theory/extended-euclidean-algorithm/README.md) | complete |
+| Prime Factorization | [prime-factorization](../dsa/number-theory/prime-factorization/README.md) | complete |
 
 ## A10. [Two Pointers and Sliding Window](../dsa/two-pointers-and-sliding-window/README.md)
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Two Sum in Sorted Array | [two-sum-sorted-array](../dsa/two-pointers-and-sliding-window/two-sum-sorted-array/README.md) | planned |
-| Sliding Window Maximum | [sliding-window-maximum](../dsa/two-pointers-and-sliding-window/sliding-window-maximum/README.md) | planned |
-| Longest Substring Without Repeating Characters | [longest-substring-without-repeating-characters](../dsa/two-pointers-and-sliding-window/longest-substring-without-repeating-characters/README.md) | planned |
+| Two Sum in Sorted Array | [two-sum-sorted-array](../dsa/two-pointers-and-sliding-window/two-sum-sorted-array/README.md) | complete |
+| Sliding Window Maximum | [sliding-window-maximum](../dsa/two-pointers-and-sliding-window/sliding-window-maximum/README.md) | complete |
+| Longest Substring Without Repeating Characters | [longest-substring-without-repeating-characters](../dsa/two-pointers-and-sliding-window/longest-substring-without-repeating-characters/README.md) | complete |
 
 ## A11. [Greedy Algorithms](../dsa/greedy/README.md)
 

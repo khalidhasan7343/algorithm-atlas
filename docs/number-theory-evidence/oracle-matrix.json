@@ -1,0 +1,12 @@
+{
+  "phase_number": 11,
+  "category": "number-theory",
+  "seed": 11109,
+  "relationships": {
+    "sieve/factorization vs primality and reconstruction": 200,
+    "gcd/extended/LCM identities": 120,
+    "exact/modular powers vs builtin": 120
+  },
+  "status": "passed",
+  "owner_approval": "pending"
+}

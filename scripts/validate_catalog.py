@@ -61,6 +61,13 @@ DYNAMIC_PROGRAMMING_SCOPE = "Dynamic Programming: eleven listed canonical topics
 TREE_SCOPE = "Tree Algorithms category only"
 STRING_SCOPE = "String Algorithms category only"
 BIT_SCOPE = "Bit Manipulation category only"
+NUMBER_WINDOW_SCOPE = "Number Theory and Two Pointers & Sliding Window categories only"
+NUMBER_WINDOW_BATCHES = (
+    ("sieve-of-eratosthenes", "euclidean-algorithm", "least-common-multiple"),
+    ("modular-exponentiation", "fast-exponentiation", "extended-euclidean-algorithm", "prime-factorization"),
+    ("two-sum-sorted-array",),
+    ("sliding-window-maximum", "longest-substring-without-repeating-characters"),
+)
 BIT_BATCHES = (
     ("xor-unique-elements", "two-non-repeating-elements"),
     ("brian-kernighan-set-bit-counting", "subset-generation-bitmasking"),
@@ -221,6 +228,49 @@ def _validate_development(
     if status == "awaiting-review" and active is not None:
         report.errors.append("development.awaiting-review requires active_batch=null")
 
+    if state.get("scope") == NUMBER_WINDOW_SCOPE and valid_completed:
+        if len(completed) > 4:
+            report.errors.append("development combined phases have only four stages")
+        if status == "in-progress" and (type(active) is not int or active not in (1, 2, 3, 4)):
+            report.errors.append("development combined active_batch must be 1..4")
+        if status == "awaiting-review" and completed != [1, 2, 3, 4]:
+            report.errors.append("development combined awaiting-review requires all four stages")
+        for batch in completed[:4]:
+            for algorithm_id in NUMBER_WINDOW_BATCHES[batch-1]:
+                record = algorithms.get(algorithm_id, {})
+                if not all(isinstance(record.get(field), str) and record[field] in ARTIFACT_STATUSES for field in STATUS_FIELDS[:3]) or record.get("test_status") not in ("tested", "reviewed"):
+                    report.errors.append(f"development combined requires completed/tested {algorithm_id}")
+        reports = state.get("completion_reports")
+        phases = state.get("phase_records")
+        if not isinstance(reports, dict) or set(reports) != {"11", "12"}:
+            report.errors.append("development combined requires separate completion_reports for 11 and 12")
+            reports = {}
+        if reports.get("11") == reports.get("12"):
+            report.errors.append("development combined completion reports must be distinct")
+        if not isinstance(phases, dict) or set(phases) != {"11", "12"}:
+            report.errors.append("development combined requires independent phase_records for 11 and 12")
+            phases = {}
+        for key, category, offset in (("11", "A9", 0), ("12", "A10", 2)):
+            phase = phases.get(key, {})
+            if not isinstance(phase, dict):
+                report.errors.append(f"development phase {key} must be a mapping")
+                continue
+            count = max(0, min(2, len(completed)-offset))
+            expected_status = ("awaiting-review" if count == 2 else
+                               "planned" if key == "12" and len(completed) < 2 else "in-progress")
+            if (phase.get("phase_number") != int(key) or phase.get("category") != category
+                    or phase.get("status") != expected_status
+                    or phase.get("completed_batches") != list(range(1, count+1))
+                    or phase.get("owner_approval") != "pending"):
+                report.errors.append(f"development phase {key} has inconsistent independent status/approval")
+            for field in ("checkpoint", "completion_report"):
+                if not _development_document(root, phase.get(field)):
+                    report.errors.append(f"development phase {key} requires safe nonempty {field}")
+            if reports.get(key) != phase.get("completion_report"):
+                report.errors.append(f"development phase {key} completion_report mismatch")
+        if state.get("completion_report") != reports.get("11"):
+            report.errors.append("development primary completion_report must resolve to Phase 11")
+        return
     if state.get("scope") == BIT_SCOPE and valid_completed:
         if len(completed) > 2:
             report.errors.append("development Bit Manipulation has only two batches")

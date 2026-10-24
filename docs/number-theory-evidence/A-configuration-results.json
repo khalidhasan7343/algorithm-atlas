@@ -1,0 +1,43 @@
+{
+  "catalog": {
+    "command": [
+      "python",
+      "scripts/validate_catalog.py"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 0.5,
+    "log": "docs/number-theory-evidence/configuration-catalog.txt",
+    "timestamp": "2026-10-24T05:23:07.193637+00:00"
+  },
+  "generated-docs": {
+    "command": [
+      "python",
+      "scripts/generate_catalog_docs.py",
+      "--check"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 0.16,
+    "log": "docs/number-theory-evidence/configuration-generated-docs.txt",
+    "timestamp": "2026-10-24T05:23:07.353821+00:00"
+  },
+  "infrastructure": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "tests",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 2.84,
+    "log": "docs/number-theory-evidence/configuration-infrastructure.txt",
+    "timestamp": "2026-10-24T05:23:10.194843+00:00"
+  }
+}

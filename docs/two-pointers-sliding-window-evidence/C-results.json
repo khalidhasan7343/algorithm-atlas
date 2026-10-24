@@ -1,0 +1,18 @@
+{
+  "algorithms": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "dsa/two-pointers-and-sliding-window/two-sum-sorted-array",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "elapsed_seconds": 4.82,
+    "log": "docs/two-pointers-sliding-window-evidence/C-algorithms.txt",
+    "timestamp": "2026-10-24T05:27:55.175156+00:00"
+  }
+}

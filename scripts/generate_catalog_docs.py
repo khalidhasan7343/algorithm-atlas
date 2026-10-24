@@ -200,9 +200,10 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
         tree = state.get('scope') == 'Tree Algorithms category only'
         strings = state.get('scope') == 'String Algorithms category only'
         bits = state.get('scope') == 'Bit Manipulation category only'
+        number_window = state.get('scope') == 'Number Theory and Two Pointers & Sliding Window categories only'
         graph = state.get('scope') == 'Graph Algorithms category only'
         greedy = state.get('scope') == 'Greedy: four canonical topics only'
-        label = 'bit manipulation' if bits else 'string algorithms' if strings else 'tree algorithms' if tree else 'graph algorithms' if graph else 'greedy' if greedy else 'dynamic programming' if dynamic else 'divide/conquer' if divide else 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
+        label = 'number theory/window' if number_window else 'bit manipulation' if bits else 'string algorithms' if strings else 'tree algorithms' if tree else 'graph algorithms' if graph else 'greedy' if greedy else 'dynamic programming' if dynamic else 'divide/conquer' if divide else 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
         batches = state.get('completed_batches', [])
         lines.append(f'Validated {label} batches: ' +
                      (', '.join(str(batch) for batch in batches) if batches else 'none yet') + '.')
@@ -214,7 +215,26 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
         if state.get('completion_report'):
             lines += ['', 'See the '
                       + link(path, ROOT / state['completion_report'], f'{label} completion report') + '.']
-        if bits:
+        if number_window:
+            lines += ['', 'Phase 10 is officially owner-approved on 2026-10-24 (Asia/Dhaka). '
+                      'The owner jointly authorized Phase 11 Number Theory (seven A9 canonicals) '
+                      'and Phase 12 Two Pointers & Sliding Window (three A10 canonicals). '
+                      'Both must finish before the combined handoff. Stages A/B complete '
+                      'Number Theory before C/D implement pair search and windows.', '',
+                      '| Independent phase | Implementation status | Owner approval | Review report |',
+                      '| --- | --- | --- | --- |']
+            for key in ('11', '12'):
+                phase_record = state.get('phase_records', {}).get(key, {})
+                target = phase_record.get('completion_report')
+                lines.append(f'| {key} | {phase_record.get("status", "planned")} | '
+                             f'{phase_record.get("owner_approval", "pending")} | '
+                             + (link(path, ROOT / target, f'Phase {key} report') if target else 'pending') + ' |')
+            lines += ['', 'Separate phase records, checkpoints, evidence and ZIP/checksum/JSON '
+                      'packages preserve independent owner review. No third combined ZIP is requested. '
+                      'Preserve all prior approved source/history and 35/256/235 inventory. '
+                      'Phases 11 and 12 are not human-approved. No Phase 13, unrelated category, '
+                      'commit, push or publication is authorized.']
+        elif bits:
             lines += ['', 'The owner explicitly confirmed Phase 9 fully completed and owner-approved '
                       'on 2026-10-24 (Asia/Dhaka). Phase 10 is the normal roadmap successor, '
                       'not out of order. Phase 8 remains completed and owner-approved.', '',
@@ -389,7 +409,7 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
                   + '. Completion statuses describe local implementation evidence. '
                   + ('The owner explicitly approved Phase 8 and authorized Phase 9 String Algorithms; '
                      'see ' + link(path, ROOT / 'docs/string-algorithms-checkpoints.md', 'the new checkpoint')
-                     + '.' if (development or {}).get('scope') in ('String Algorithms category only', 'Bit Manipulation category only')
+                     + '.' if (development or {}).get('scope') in ('String Algorithms category only', 'Bit Manipulation category only', 'Number Theory and Two Pointers & Sliding Window categories only')
                      else 'Phase 8 owner review remains pending. No further category is authorized.')]
     if category['id'] == 'A7':
         lines += ['', 'Phase 9 covers these nine canonical topics in three sequential validated batches. '
@@ -400,7 +420,7 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
                   + ('. Phase 9 was explicitly owner-approved on 2026-10-24; normal Phase 10 '
                      'Bit Manipulation is authorized. See '
                      + link(path, ROOT / 'docs/bit-manipulation-checkpoints.md', 'the approval checkpoint')
-                     + '.' if (development or {}).get('scope') == 'Bit Manipulation category only'
+                     + '.' if (development or {}).get('scope') in ('Bit Manipulation category only', 'Number Theory and Two Pointers & Sliding Window categories only')
                      else '. Phase 9 owner review remains pending. No next category is authorized.')]
     if category['id'] == 'A8':
         lines += ['', 'Phase 10 covers these four topics in two sequential validated batches. '
@@ -408,7 +428,20 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
                   + ' for signed values, unsigned operations, multiplicity validation and positional subsets. '
                   'Actual evidence and approval records are in '
                   + link(path, ROOT / 'docs/bit-manipulation-checkpoints.md', 'Bit checkpoints')
-                  + '. Phase 10 owner approval remains pending; no Phase 11 is authorized.']
+                  + ('. Phase 10 was officially owner-approved on 2026-10-24; combined '
+                     'Phases 11 and 12 are authorized. See '
+                     + link(path, ROOT / 'docs/number-theory-checkpoints.md', 'the approval checkpoint')
+                     + '.' if (development or {}).get('scope') == 'Number Theory and Two Pointers & Sliding Window categories only'
+                     else '. Phase 10 owner approval remains pending; no Phase 11 is authorized.')]
+    if category['id'] in ('A9', 'A10'):
+        number = category['id'] == 'A9'
+        slug = 'number-theory' if number else 'two-pointers-sliding-window'
+        lines += ['', ('Phase 11 implements these seven Number Theory canonicals.' if number else
+                      'Phase 12 implements these three Two Pointers and Sliding Window canonicals.'), '',
+                  'Read ' + link(path, ROOT / f'docs/{slug}-conventions.md', 'the contracts')
+                  + ' and ' + link(path, ROOT / f'docs/{slug}-checkpoints.md', 'the independent checkpoint')
+                  + '. Both categories are jointly authorized for implementation, with separate '
+                  'pending owner approvals, reports and review packages. No Phase 13 is authorized.']
     if category['id'] == 'A11':
         lines += ['', 'Dijkstra chooses the unsettled vertex with smallest tentative distance '
                   '(requiring nonnegative edge weights); Prim chooses a cheapest edge across '
