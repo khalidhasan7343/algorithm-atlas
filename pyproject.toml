@@ -7,4 +7,7 @@ pythonpath = ["."]
 norecursedirs = [".git", ".venv", "venv", "build", "dist", "__pycache__"]
 markers = [
     "cpp: compiles and executes C++ with the configured toolchain",
+    "ml: classical machine-learning implementation tests",
+    "numerical: mathematical identities, gradients, optimization and stability",
+    "reference: independent scikit-learn estimator comparisons",
 ]

@@ -14,7 +14,7 @@ This category preserves **3 original syllabus entries**. Each link points to the
 
 Phase 12 implements these three Two Pointers and Sliding Window canonicals.
 
-Read [the contracts](../../docs/two-pointers-sliding-window-conventions.md) and [the independent checkpoint](../../docs/two-pointers-sliding-window-checkpoints.md). Both categories are jointly authorized for implementation, with separate pending owner approvals, reports and review packages. No Phase 13 is authorized.
+Read [the contracts](../../docs/two-pointers-sliding-window-conventions.md) and [the independent checkpoint](../../docs/two-pointers-sliding-window-checkpoints.md). Both categories are jointly authorized for implementation, with separate pending owner approvals, reports and review packages. The owner subsequently authorized Phase 13 Regression; earlier approvals remain independent.
 
 ## Learning and contribution scope
 

@@ -1,0 +1,3 @@
+Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 360 Markdown files, and 4491 local links.
+ERROR: docs/reviews/regression/REGRESSION-REVIEW-REPORT.md: broken relative link: ../../regression-evidence/changed-files.json
+Validation failed with 1 error(s).

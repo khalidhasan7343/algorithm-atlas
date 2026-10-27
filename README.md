@@ -6,9 +6,9 @@ From Fundamental Algorithms to Advanced Artificial Intelligence — Learn, Imple
 
 Algorithm Atlas is an educational, open-source project maintained by **MD.Khalid Hasan**. Its goal is to explain algorithms from first principles through clear documentation, Python and modern C++ implementations, meaningful tests, complexity analysis, and practical applications.
 
-**Current state: Phase 10 officially owner-approved; Phase 11 Number Theory and Phase 12 Two Pointers & Sliding Window implemented and awaiting independent owner review.** Follow the [locked scope](docs/number-theory-window-scope.md), [Number Theory checkpoint](docs/number-theory-checkpoints.md), [Window checkpoint](docs/two-pointers-sliding-window-checkpoints.md) and [progress](docs/progress.md). Both new owner approvals are independently pending.
+**Current state: DSA implementation complete; Phase 13 ML Foundation and B1 Supervised Learning — Regression authorized on 2026-10-27.** Implement only the seven canonicals in the [Regression scope](docs/regression-scope.md), following the [ML standard](docs/ml-development.md) and [checkpoint](docs/regression-checkpoints.md). Phase 13 owner approval is pending. Historical DSA final-audit and Phase 11/12 pending approvals remain recorded independently.
 
-The owner authorized a [comprehensive DSA final audit](docs/reviews/dsa-final-audit/DSA-FINAL-AUDIT-REPORT.md) on 2026-10-24. Its report, findings, test matrix and local review package are separate from phase approvals. DSA final audit owner approval remains pending.
+The [DSA final audit](docs/reviews/dsa-final-audit/DSA-FINAL-AUDIT-REPORT.md) retains its conditional recommendation and original evidence. ML authorization does not retroactively approve historical milestones.
 
 ## Project Overview
 
@@ -27,7 +27,7 @@ The foundation provides:
 - Documentation standards, pytest infrastructure, C++ compiler checks, and GitHub Actions configuration.
 - Automated catalog, documentation-link, and implementation-status validation.
 
-Sorting, Searching, Recursion & Backtracking, Divide & Conquer, the eleven Phase 5 Dynamic Programming topics, the four Phase 6 Greedy topics, all fifteen Phase 7 Graph topics, all fourteen Phase 8 Tree topics, all nine Phase 9 String topics, four Phase 10 Bit Manipulation topics, seven Phase 11 Number Theory topics, and three Phase 12 Two Pointers & Sliding Window topics provide detailed explanations, dry runs, Python/C++ implementations, examples, and relevant edge-case tests. Other topics follow in separately approved phases. ML examples will distinguish educational implementations from library-based usage and document compute and dependency limits.
+Sorting, Searching, Recursion & Backtracking, Divide & Conquer, the eleven Phase 5 Dynamic Programming topics, the four Phase 6 Greedy topics, all fifteen Phase 7 Graph topics, all fourteen Phase 8 Tree topics, all nine Phase 9 String topics, four Phase 10 Bit Manipulation topics, seven Phase 11 Number Theory topics, and three Phase 12 Two Pointers & Sliding Window topics provide detailed explanations, dry runs, Python/C++ implementations, examples, and relevant edge-case tests. Other topics follow in separately approved phases. Classical ML is Python-first with NumPy, mathematical/numerical tests and optional C++; [Regression](machine-learning/supervised-learning/regression/README.md) is the first authorized category.
 
 ## Technologies Used
 
@@ -155,7 +155,7 @@ python -m pytest
 
 ## Testing Instructions
 
-Install [requirements-dev.txt](requirements-dev.txt), make a C++ compiler available, and run `python -m pytest` from the root. Infrastructure tests exercise catalog failures and compile/run small C++ toolchain checks. Per-algorithm tests exercise completed DSA implementations against independent expected values and reference oracles.
+For DSA-only work install [requirements-dev.txt](requirements-dev.txt) and run `python -m pytest tests dsa --require-cpp`. For the full suite install [requirements-ml-test.txt](requirements-ml-test.txt), make a C++ compiler available, and run `python -m pytest --require-cpp`. Infrastructure tests exercise catalog failures and compile/run small C++ toolchain checks. Per-algorithm tests exercise completed DSA implementations against independent expected values and reference oracles.
 
 The [CI workflow](.github/workflows/ci.yml) checks documentation/catalog consistency and runs lightweight tests. Local test results and hosted CI results are separate: a workflow file does not imply a successful GitHub run. See [testing and contribution guidance](CONTRIBUTING.md) for future algorithm tests.
 
@@ -167,7 +167,7 @@ Use the [complexity cheat sheet](docs/complexity-cheatsheet.md) for asymptotic n
 
 [Progress tracking](docs/progress.md) records catalog totals, completed and remaining algorithms, blockers, and the next proposed batch. The [Phase 0 review report](docs/phase-0-review.md) and [complete file inventory](docs/phase-0-files.md) document the foundation handoff. Phase 0 supplies the foundation only. The term **Dynamic Policy Optimization (DPO)** is retained from the syllabus and blocked pending clarification; it has not been replaced by Direct Preference Optimization.
 
-Phase 10 received official owner approval on 2026-10-24 (Asia/Dhaka). Phases 11 and 12 are jointly authorized for implementation and must both finish before handoff, with separate reports, review ZIPs and owner approval checkpoints. No Phase 13, commit, push or publication is authorized.
+The owner authorized Phase 13 Regression on 2026-10-27 after confirming DSA implementation complete. All seven B1 canonicals are implemented and tested; owner review is pending. See the [Regression report](docs/reviews/regression/REGRESSION-REVIEW-REPORT.md) and [review package](artifacts/review-packages/regression/README.md). Stop at this checkpoint. No second ML category, Deep Learning, AI, commit, push or publication is authorized.
 
 ## Contribution Guidelines
 

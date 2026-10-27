@@ -1,24 +1,30 @@
 schema_version: 1
 project: "Algorithm Atlas"
 development:
-  phase: Phases 11 + 12 — Number Theory and Two Pointers & Sliding Window
-  scope: Number Theory and Two Pointers & Sliding Window categories only
+  phase: Phase 13 — ML Foundation and Supervised Learning — Regression
+  phase_number: 13
+  track: machine-learning
+  category: B1
+  scope: Supervised Learning — Regression category only
   status: awaiting-review
   active_batch: null
   completed_batches:
   - 1
   - 2
   - 3
-  - 4
-  checkpoint: docs/number-theory-checkpoints.md
-  completion_report: docs/reviews/number-theory/NUMBER-THEORY-REVIEW-REPORT.md
-  completion_reports:
-    '11': docs/reviews/number-theory/NUMBER-THEORY-REVIEW-REPORT.md
-    '12': docs/reviews/two-pointers-sliding-window/TWO-POINTERS-SLIDING-WINDOW-REVIEW-REPORT.md
-  approval: Owner officially confirmed Phase 10 completed and owner-approved on 2026-10-24
-    (Asia/Dhaka); Phase 9 is owner-approved. Combined Phase 11 and Phase 12 authorized,
-    seven A9 and three A10 canonicals only. Independent owner approvals for Phases
-    11 and 12 remain pending; no Phase 13, commit, push or publication.
+  batch_plan:
+  - - linear-regression
+    - ridge-regression
+    - polynomial-regression
+  - - lasso-regression
+    - elastic-net
+  - - support-vector-regression
+    - decision-tree-regression
+  checkpoint: docs/regression-checkpoints.md
+  approval: Owner confirmed DSA implementation complete and authorized the ML foundation
+    plus the first ML category on 2026-10-27 (Asia/Dhaka). B1 Regression only; no
+    second ML category, Deep Learning, AI, commit or push. Earlier DSA approval records
+    remain historical; Phase 13 owner approval is pending.
   phase_records:
     '11':
       phase_number: 11
@@ -40,6 +46,18 @@ development:
       checkpoint: docs/two-pointers-sliding-window-checkpoints.md
       completion_report: docs/reviews/two-pointers-sliding-window/TWO-POINTERS-SLIDING-WINDOW-REVIEW-REPORT.md
       owner_approval: pending
+    '13':
+      phase_number: 13
+      category: B1
+      status: awaiting-review
+      checkpoint: docs/regression-checkpoints.md
+      owner_approval: pending
+      completed_batches:
+      - 1
+      - 2
+      - 3
+      completion_report: docs/reviews/regression/REGRESSION-REVIEW-REPORT.md
+  completion_report: docs/reviews/regression/REGRESSION-REVIEW-REPORT.md
 categories:
   - id: "A1"
     name: "Sorting"
@@ -1964,92 +1982,92 @@ algorithms:
     category: "B1"
     canonical_location: "machine-learning/supervised-learning/regression/linear-regression"
     difficulty: "beginner"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "ridge-regression"
       - "lasso-regression"
-    notes: "Fit a linear relationship between numeric predictors and a continuous target. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase 13 Batch 1: centered dense single-target OLS with minimum-norm SVD least squares, residual/gradient/reference tests; Python tested. C++ optional and not implemented; owner review pending."
   - id: "ridge-regression"
     name: "Ridge Regression"
     category: "B1"
     canonical_location: "machine-learning/supervised-learning/regression/ridge-regression"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "linear-regression"
       - "lasso-regression"
-    notes: "Fit linear regression with an L2 coefficient penalty. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase 13 Batch 1: augmented least squares for half RSS plus alpha/2 L2 penalty, unpenalized intercept, minimum-norm alpha-zero convention; Python tested. C++ optional and not implemented; owner review pending."
   - id: "lasso-regression"
     name: "Lasso Regression"
     category: "B1"
     canonical_location: "machine-learning/supervised-learning/regression/lasso-regression"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "linear-regression"
       - "ridge-regression"
-    notes: "Fit linear regression with an L1 coefficient penalty. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase 13 Batch 2: genuine cyclic coordinate minimization with unpenalized intercept, mean-loss normalization, KKT stopping, objective history and explicit non-convergence; numerical/reference tests passed. C++ optional and not implemented; owner review pending."
   - id: "elastic-net"
     name: "Elastic Net"
     category: "B1"
     canonical_location: "machine-learning/supervised-learning/regression/elastic-net"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "linear-regression"
       - "ridge-regression"
-    notes: "Combine L1 and L2 regularization for linear regression. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase 13 Batch 2: genuine cyclic coordinate minimization with unpenalized intercept, mean-loss normalization, KKT stopping, objective history and explicit non-convergence; numerical/reference tests passed. C++ optional and not implemented; owner review pending."
   - id: "polynomial-regression"
     name: "Polynomial Regression"
     category: "B1"
     canonical_location: "machine-learning/supervised-learning/regression/polynomial-regression"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "linear-regression"
       - "ridge-regression"
-    notes: "Fit a regression model on polynomial feature expansions. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase 13 Batch 1: graded multivariate monomials with bounded expansion, explicitly reusing canonical Linear Regression; numerical/reference tests passed. C++ optional and not implemented; owner review pending."
   - id: "support-vector-regression"
     name: "Support Vector Regression (SVR)"
     category: "B1"
     canonical_location: "machine-learning/supervised-learning/regression/support-vector-regression"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "linear-regression"
       - "ridge-regression"
-    notes: "Study margin-based regression with a specified kernel and loss. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase 13 Batch 3: epsilon-SVR dual with genuine bounded ADMM, linear/RBF kernels, box/zero-sum projection, residual and primal-dual-gap stopping; analytical and independent prediction tests passed. C++ optional and not implemented; owner review pending."
   - id: "decision-tree-regression"
     name: "Decision Tree Regression"
     category: "B1"
     canonical_location: "machine-learning/supervised-learning/regression/decision-tree-regression"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "linear-regression"
       - "ridge-regression"
-    notes: "Predict continuous values through recursive feature-space partitions. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase 13 Batch 3: deterministic greedy squared-error CART with mean leaves, stable split enumeration, root-normalized gain, bounded depth and independent brute-force/reference tests. C++ optional and not implemented; owner review pending."
   - id: "logistic-regression"
     name: "Logistic Regression"
     category: "B2"

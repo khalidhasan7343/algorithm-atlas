@@ -31,3 +31,7 @@ There is no third combined ZIP.
 The later [DSA final audit package](dsa-final-audit/README.md) is a separately
 authorized verification snapshot covering all DSA canonicals. It preserves the
 independent Phase 11/12 approval checkpoints and excludes historical review ZIPs.
+
+The [Regression package](regression/README.md) covers authorized Phase 13 ML
+foundation and the seven B1 canonicals. It preserves DSA source/history, requires
+Python/numerical tests for ML with optional C++, and awaits explicit owner approval.

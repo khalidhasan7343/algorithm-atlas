@@ -18,6 +18,11 @@ from pathlib import Path
 
 import yaml
 
+try:
+    from .track_policy import is_complete, cpp_required, track
+except ImportError:  # Direct script execution.
+    from track_policy import is_complete, cpp_required, track
+
 
 ROOT = Path(__file__).resolve().parents[1]
 PLANNING_MARKER = '<!-- algorithm-atlas:planning-page -->'
@@ -69,14 +74,6 @@ def link(source: Path, destination: Path, label: str) -> str:
     """Return a portable Markdown link relative to the containing document."""
     relative = Path(os.path.relpath(destination, source.parent)).as_posix()
     return f'[{label}]({relative})'
-
-
-def is_complete(algorithm: dict) -> bool:
-    ready = {'implemented', 'tested', 'reviewed'}
-    return (
-        all(algorithm[field] in ready for field in STATUS_FIELDS[:3])
-        and algorithm['test_status'] in {'tested', 'reviewed'}
-    )
 
 
 def overall_status(algorithm: dict) -> str:
@@ -181,8 +178,8 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
         f'| Planned canonical topics | {statuses["planned"]} |',
         f'| In-progress canonical topics | {statuses["in-progress"]} |',
         f'| Blocked canonical topics | {statuses["blocked"]} |', '',
-        'Completion requires full educational documentation, both language '
-        'implementations, runnable examples, and genuinely passed algorithm '
+        'Completion requires full educational documentation, track-required '
+        'implementations (Python/C++ for DSA; Python for classical ML), runnable examples, and genuinely passed algorithm '
         'tests. A planning README alone does not satisfy those requirements. '
         'Completed does not imply human review or approval for another category.', '',
         '## Completed algorithms', '',
@@ -203,7 +200,11 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
         number_window = state.get('scope') == 'Number Theory and Two Pointers & Sliding Window categories only'
         graph = state.get('scope') == 'Graph Algorithms category only'
         greedy = state.get('scope') == 'Greedy: four canonical topics only'
-        label = 'number theory/window' if number_window else 'bit manipulation' if bits else 'string algorithms' if strings else 'tree algorithms' if tree else 'graph algorithms' if graph else 'greedy' if greedy else 'dynamic programming' if dynamic else 'divide/conquer' if divide else 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
+        ml = state.get('track') == 'machine-learning' and not any((
+            searching, backtracking, divide, dynamic, tree, strings, bits,
+            number_window, graph, greedy, state.get('scope') == 'Sorting category only',
+        ))
+        label = 'ML regression' if ml else 'number theory/window' if number_window else 'bit manipulation' if bits else 'string algorithms' if strings else 'tree algorithms' if tree else 'graph algorithms' if graph else 'greedy' if greedy else 'dynamic programming' if dynamic else 'divide/conquer' if divide else 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
         batches = state.get('completed_batches', [])
         lines.append(f'Validated {label} batches: ' +
                      (', '.join(str(batch) for batch in batches) if batches else 'none yet') + '.')
@@ -215,7 +216,17 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
         if state.get('completion_report'):
             lines += ['', 'See the '
                       + link(path, ROOT / state['completion_report'], f'{label} completion report') + '.']
-        if number_window:
+        if ml:
+            lines += ['', state['approval'], '',
+                      'Python and numerical tests are required for classical ML; optional C++ is '
+                      'recorded honestly. DSA retains both languages and C++17/C++20 tests. '
+                      'The seven Regression topics form the only authorized ML category. '
+                      'Each internal batch must pass before the next; final owner approval is pending.', '',
+                      'Historical Phase 11/12 and DSA final-audit approvals are not inferred from '
+                      'ML authorization. Preserve their reports, execution evidence and archives. '
+                      'Stop after the Regression review report and verified ZIP/checksum/JSON. '
+                      'No second ML category, Deep Learning, AI, commit or push is authorized.']
+        elif number_window:
             lines += ['', 'Phase 10 is officially owner-approved on 2026-10-24 (Asia/Dhaka). '
                       'The owner jointly authorized Phase 11 Number Theory (seven A9 canonicals) '
                       'and Phase 12 Two Pointers & Sliding Window (three A10 canonicals). '
@@ -368,6 +379,7 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
 
 def category_page(category: dict, algorithms: dict, development: dict | None = None) -> str:
     path = ROOT / category['path'] / 'README.md'
+    ml_active = (development or {}).get('track') == 'machine-learning'
     lines = [
         f'# {category["name"]}', '', GENERATED_MARKER, '',
         CATEGORY_PURPOSES[category['id']], '',
@@ -377,6 +389,19 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
         'record future scope; completed topics have their full lessons and tests.', '',
     ]
     groups = [(None, category['items'])]
+    if category['id'] == 'B1' and ml_active:
+        lines += ['', 'Phase 13 implements these seven canonicals in three sequential batches. '
+                  'Python/NumPy and mathematical/numerical tests are required; C++ is optional and absent. '
+                  'Owner approval remains pending. Read '
+                  + link(path, ROOT / 'docs/ml-development.md', 'the ML standard') + ', '
+                  + link(path, ROOT / 'docs/regression-scope.md', 'the scope') + ' and '
+                  + link(path, ROOT / 'docs/regression-checkpoints.md', 'the checkpoints') + '. '
+                  'The category experiment records training and held-out MSE/MAE/R² with training-only scaling: '
+                  + link(path, ROOT / 'machine-learning/supervised-learning/regression/experiments/benchmark.py', 'benchmark.py')
+                  + '. No second ML category is authorized.']
+        if (development or {}).get('completion_report'):
+            lines += ['', 'See '
+                      + link(path, ROOT / development['completion_report'], 'the review report') + '.']
     if category['id'] == 'A11':
         graph_ids = {'dijkstra', 'prim', 'kruskal'}
         owned = [item for item in category['items'] if item['algorithm'] not in graph_ids]
@@ -409,7 +434,7 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
                   + '. Completion statuses describe local implementation evidence. '
                   + ('The owner explicitly approved Phase 8 and authorized Phase 9 String Algorithms; '
                      'see ' + link(path, ROOT / 'docs/string-algorithms-checkpoints.md', 'the new checkpoint')
-                     + '.' if (development or {}).get('scope') in ('String Algorithms category only', 'Bit Manipulation category only', 'Number Theory and Two Pointers & Sliding Window categories only')
+                     + '.' if ml_active or (development or {}).get('scope') in ('String Algorithms category only', 'Bit Manipulation category only', 'Number Theory and Two Pointers & Sliding Window categories only')
                      else 'Phase 8 owner review remains pending. No further category is authorized.')]
     if category['id'] == 'A7':
         lines += ['', 'Phase 9 covers these nine canonical topics in three sequential validated batches. '
@@ -420,7 +445,7 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
                   + ('. Phase 9 was explicitly owner-approved on 2026-10-24; normal Phase 10 '
                      'Bit Manipulation is authorized. See '
                      + link(path, ROOT / 'docs/bit-manipulation-checkpoints.md', 'the approval checkpoint')
-                     + '.' if (development or {}).get('scope') in ('Bit Manipulation category only', 'Number Theory and Two Pointers & Sliding Window categories only')
+                     + '.' if ml_active or (development or {}).get('scope') in ('Bit Manipulation category only', 'Number Theory and Two Pointers & Sliding Window categories only')
                      else '. Phase 9 owner review remains pending. No next category is authorized.')]
     if category['id'] == 'A8':
         lines += ['', 'Phase 10 covers these four topics in two sequential validated batches. '
@@ -431,7 +456,7 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
                   + ('. Phase 10 was officially owner-approved on 2026-10-24; combined '
                      'Phases 11 and 12 are authorized. See '
                      + link(path, ROOT / 'docs/number-theory-checkpoints.md', 'the approval checkpoint')
-                     + '.' if (development or {}).get('scope') == 'Number Theory and Two Pointers & Sliding Window categories only'
+                     + '.' if ml_active or (development or {}).get('scope') == 'Number Theory and Two Pointers & Sliding Window categories only'
                      else '. Phase 10 owner approval remains pending; no Phase 11 is authorized.')]
     if category['id'] in ('A9', 'A10'):
         number = category['id'] == 'A9'
@@ -441,7 +466,9 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
                   'Read ' + link(path, ROOT / f'docs/{slug}-conventions.md', 'the contracts')
                   + ' and ' + link(path, ROOT / f'docs/{slug}-checkpoints.md', 'the independent checkpoint')
                   + '. Both categories are jointly authorized for implementation, with separate '
-                  'pending owner approvals, reports and review packages. No Phase 13 is authorized.']
+                  'pending owner approvals, reports and review packages. '
+                  + ('The owner subsequently authorized Phase 13 Regression; earlier approvals remain independent.'
+                     if ml_active else 'No Phase 13 is authorized.')]
     if category['id'] == 'A11':
         lines += ['', 'Dijkstra chooses the unsettled vertex with smallest tentative distance '
                   '(requiring nonnegative edge weights); Prim chooses a cheapest edge across '
@@ -463,7 +490,7 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
         'Choose prerequisites through the '
         + link(path, ROOT / 'docs/learning-roadmap.md', 'learning roadmap')
         + '. Each future completed topic must include the full 25-part '
-        'educational article, working Python and C++ programs, executable '
+        'educational article, ' + ('working Python with numerical tests and optional C++' if category['path'].startswith('machine-learning/') and not category['path'].startswith('machine-learning/deep-learning') else 'working Python and C++ programs') + ', executable '
         'examples, accurate complexity analysis, and relevant tests described '
         'in ' + link(path, ROOT / 'CONTRIBUTING.md', 'the contribution standards') + '.', '',
         'Completion is shown by the catalog status and topic artifacts. The '
@@ -494,7 +521,7 @@ def algorithm_page(algorithm: dict, memberships: list[tuple[dict, dict]], algori
         '| Deliverable | Status |', '| --- | --- |',
         f'| Full algorithm documentation | {algorithm["documentation_status"]} |',
         f'| Python implementation | {algorithm["python_status"]} |',
-        f'| C++ implementation | {algorithm["cpp_status"]} |',
+        f'| C++ implementation{" (optional)" if not cpp_required(algorithm) else ""} | {algorithm["cpp_status"]} |',
         f'| Algorithm tests | {algorithm["test_status"]} |', '',
         'A planning README does not satisfy the completed documentation '
         'requirement. No implementation files or algorithm tests are currently '
@@ -503,8 +530,9 @@ def algorithm_page(algorithm: dict, memberships: list[tuple[dict, dict]], algori
         'In an approved implementation phase, define the input/output contract '
         'and prerequisites; write the full 25-part article with intuition, '
         'working process, pseudocode, dry run, bounded complexity analysis, '
-        'applications, limitations, and verifiable references; add Python and '
-        'C++ implementations with reproducible usage; and execute meaningful '
+        'applications, limitations, and verifiable references; add ' + (
+            'Python and C++ implementations' if cpp_required(algorithm) else 'Python with numerical tests (C++ is optional)'
+        ) + ' with reproducible usage; and execute meaningful '
         'edge-case tests. Follow '
         + link(path, ROOT / 'CONTRIBUTING.md', 'the project contribution standards')
         + ' and update the catalog only when evidence supports each status.', '',

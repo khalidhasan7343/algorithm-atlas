@@ -22,14 +22,14 @@ Reserve the exact requested topic until its intended reference and meaning are c
 | --- | --- |
 | Full algorithm documentation | blocked |
 | Python implementation | blocked |
-| C++ implementation | blocked |
+| C++ implementation (optional) | blocked |
 | Algorithm tests | blocked |
 
 A planning README does not satisfy the completed documentation requirement. No implementation files or algorithm tests are currently available for this planned topic.
 
 ## Requirements before completion
 
-In an approved implementation phase, define the input/output contract and prerequisites; write the full 25-part article with intuition, working process, pseudocode, dry run, bounded complexity analysis, applications, limitations, and verifiable references; add Python and C++ implementations with reproducible usage; and execute meaningful edge-case tests. Follow [the project contribution standards](../../../CONTRIBUTING.md) and update the catalog only when evidence supports each status.
+In an approved implementation phase, define the input/output contract and prerequisites; write the full 25-part article with intuition, working process, pseudocode, dry run, bounded complexity analysis, applications, limitations, and verifiable references; add Python with numerical tests (C++ is optional) with reproducible usage; and execute meaningful edge-case tests. Follow [the project contribution standards](../../../CONTRIBUTING.md) and update the catalog only when evidence supports each status.
 
 ## Related planned topics
 

@@ -1,0 +1,202 @@
+[
+  {
+    "algorithm": "linear-regression",
+    "kind": "authored example",
+    "expected": [
+      7.0
+    ],
+    "observed": [
+      7.0
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "linear-regression",
+    "kind": "JSON CLI",
+    "expected": [
+      7.0
+    ],
+    "observed": [
+      6.999999999999999
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "linear-regression",
+    "kind": "invalid JSON CLI dimensions",
+    "returncode": 2,
+    "status": "passed"
+  },
+  {
+    "algorithm": "ridge-regression",
+    "kind": "authored example",
+    "expected": [
+      2.0
+    ],
+    "observed": [
+      2.0
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "ridge-regression",
+    "kind": "JSON CLI",
+    "expected": [
+      2.0
+    ],
+    "observed": [
+      1.9999999999999998
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "ridge-regression",
+    "kind": "invalid JSON CLI dimensions",
+    "returncode": 2,
+    "status": "passed"
+  },
+  {
+    "algorithm": "lasso-regression",
+    "kind": "authored example",
+    "expected": [
+      3.0
+    ],
+    "observed": [
+      3.0
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "lasso-regression",
+    "kind": "JSON CLI",
+    "expected": [
+      3.0
+    ],
+    "observed": [
+      3.0
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "lasso-regression",
+    "kind": "invalid JSON CLI dimensions",
+    "returncode": 2,
+    "status": "passed"
+  },
+  {
+    "algorithm": "elastic-net",
+    "kind": "authored example",
+    "expected": [
+      2.3636363636363638
+    ],
+    "observed": [
+      2.363636
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "elastic-net",
+    "kind": "JSON CLI",
+    "expected": [
+      2.3636363636363638
+    ],
+    "observed": [
+      2.3636363636363638
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "elastic-net",
+    "kind": "invalid JSON CLI dimensions",
+    "returncode": 2,
+    "status": "passed"
+  },
+  {
+    "algorithm": "polynomial-regression",
+    "kind": "authored example",
+    "expected": [
+      9.0
+    ],
+    "observed": [
+      9.0
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "polynomial-regression",
+    "kind": "JSON CLI",
+    "expected": [
+      9.0
+    ],
+    "observed": [
+      9.0
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "polynomial-regression",
+    "kind": "invalid JSON CLI dimensions",
+    "returncode": 2,
+    "status": "passed"
+  },
+  {
+    "algorithm": "support-vector-regression",
+    "kind": "authored example",
+    "expected": [
+      1.8
+    ],
+    "observed": [
+      1.8
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "support-vector-regression",
+    "kind": "JSON CLI",
+    "expected": [
+      1.8
+    ],
+    "observed": [
+      1.799999999917147
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "support-vector-regression",
+    "kind": "invalid JSON CLI dimensions",
+    "returncode": 2,
+    "status": "passed"
+  },
+  {
+    "algorithm": "decision-tree-regression",
+    "kind": "authored example",
+    "expected": [
+      1.0,
+      5.0
+    ],
+    "observed": [
+      1.0,
+      5.0
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "decision-tree-regression",
+    "kind": "JSON CLI",
+    "expected": [
+      1.0,
+      5.0
+    ],
+    "observed": [
+      1.0,
+      5.0
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "decision-tree-regression",
+    "kind": "invalid JSON CLI dimensions",
+    "returncode": 2,
+    "status": "passed"
+  }
+]

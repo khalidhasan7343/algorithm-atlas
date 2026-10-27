@@ -1,0 +1,41 @@
+{
+  "total": 2217,
+  "passed": 2217,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "dsa": {
+    "total": 1687,
+    "python": 1149,
+    "cpp17": 269,
+    "cpp20": 269,
+    "status": "passed",
+    "canonicals": 97
+  },
+  "ml": {
+    "total": 214,
+    "status": "passed",
+    "canonical_count": 7,
+    "per_topic": {
+      "decision-tree-regression": 17,
+      "elastic-net": 19,
+      "lasso-regression": 20,
+      "linear-regression": 15,
+      "polynomial-regression": 12,
+      "ridge-regression": 17,
+      "support-vector-regression": 18,
+      "shared-contracts": 96
+    },
+    "numerical": 29,
+    "reference": 40
+  },
+  "infrastructure": {
+    "total": 316,
+    "python": 312,
+    "cpp17": 2,
+    "cpp20": 2
+  },
+  "owner_approval": "pending",
+  "junit": "docs/regression-evidence/full-suite.xml",
+  "elapsed_seconds": 435.81
+}

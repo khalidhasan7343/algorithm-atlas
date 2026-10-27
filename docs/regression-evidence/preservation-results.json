@@ -1,0 +1,98 @@
+{
+  "status": "passed",
+  "inventory": {
+    "categories": 35,
+    "memberships": 256,
+    "canonicals": 235
+  },
+  "dsa_canonicals": 97,
+  "protected_files_verified": 1241,
+  "historical_artifacts_omitted_from_source_export": [],
+  "original_categories_and_order": "identical",
+  "out_of_scope_algorithm_records": "identical",
+  "phase11_phase12_records": "identical, pending",
+  "head": "unchanged",
+  "lessons": [
+    {
+      "id": "decision-tree-regression",
+      "exact_sections": 25,
+      "python": "tested",
+      "cpp": "optional, absent",
+      "imports": [
+        "dataclasses",
+        "importlib.util",
+        "pathlib",
+        "numpy"
+      ]
+    },
+    {
+      "id": "elastic-net",
+      "exact_sections": 25,
+      "python": "tested",
+      "cpp": "optional, absent",
+      "imports": [
+        "importlib.util",
+        "pathlib",
+        "numpy"
+      ]
+    },
+    {
+      "id": "lasso-regression",
+      "exact_sections": 25,
+      "python": "tested",
+      "cpp": "optional, absent",
+      "imports": [
+        "importlib.util",
+        "pathlib",
+        "numpy"
+      ]
+    },
+    {
+      "id": "linear-regression",
+      "exact_sections": 25,
+      "python": "tested",
+      "cpp": "optional, absent",
+      "imports": [
+        "importlib.util",
+        "pathlib",
+        "numpy"
+      ]
+    },
+    {
+      "id": "polynomial-regression",
+      "exact_sections": 25,
+      "python": "tested",
+      "cpp": "optional, absent",
+      "imports": [
+        "importlib.util",
+        "itertools",
+        "math",
+        "pathlib",
+        "numpy"
+      ]
+    },
+    {
+      "id": "ridge-regression",
+      "exact_sections": 25,
+      "python": "tested",
+      "cpp": "optional, absent",
+      "imports": [
+        "importlib.util",
+        "pathlib",
+        "numpy"
+      ]
+    },
+    {
+      "id": "support-vector-regression",
+      "exact_sections": 25,
+      "python": "tested",
+      "cpp": "optional, absent",
+      "imports": [
+        "importlib.util",
+        "pathlib",
+        "numpy"
+      ]
+    }
+  ],
+  "owner_approval": "pending"
+}

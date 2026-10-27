@@ -4,9 +4,9 @@ Algorithm Atlas is maintained by [MD.Khalid Hasan](https://github.com/khalidhasa
 
 ## Current phase and approval
 
-The owner officially approved completed Phase 10 on 2026-10-24 (Asia/Dhaka), satisfying the prerequisite for **combined Phase 11 — Number Theory and Phase 12 — Two Pointers & Sliding Window**. Phase 9 remains owner-approved. Implement only the seven A9 and three A10 canonicals in the four sequential stages in [locked scope](docs/number-theory-window-scope.md). Preserve prior implementations/history and 35 categories, 256 memberships and 235 canonicals.
+The owner confirmed DSA implementation complete and authorized **Phase 13 — ML Foundation + B1 Supervised Learning — Regression** on **2026-10-27 (Asia/Dhaka)**. This supersedes the earlier stop-before-Phase-13 boundary. Implement only the seven canonicals in the [Regression scope lock](docs/regression-scope.md), in its three sequential batches. Preserve 35 categories, 256 memberships, 235 canonicals and prior DSA source/history.
 
-Follow separate [Phase 11](docs/number-theory-checkpoints.md) and [Phase 12](docs/two-pointers-sliding-window-checkpoints.md) checkpoints, reports and ZIP/checksum/JSON packages in their established review folders. Finish both categories before presenting the combined review; their owner approvals remain independent and pending. Exact 25-section lessons and Python/C++17/C++20 tests/gates are required at each stage. No repeated Phase 10 approval request. After both packages pass integrity checks, STOP for explicit owner review. No Phase 13, commit, push or publication. Never set Git identity from public email.
+Classical ML requires Python, meaningful numerical tests and the exact 25-section lesson; C++ is optional. DSA still requires Python/C++, both test files, and C++17/C++20. Follow the [ML standard](docs/ml-development.md) and [Regression checkpoint](docs/regression-checkpoints.md). Final owner approval is pending; earlier DSA final-audit and Phase 11/12 approvals are not inferred. Stop after the Regression report and verified ZIP/checksum/JSON. No second ML category, Deep Learning, AI, commit, push or publication. Never set Git identity from public email.
 
 ## Prepare a development environment
 
@@ -37,7 +37,7 @@ Python code should use reusable functions/classes, descriptive names, PEP 8 form
 
 ## Tests and honest status reporting
 
-Add meaningful Python and C++ tests to each completed algorithm's `tests/` directory. Root pytest discovery includes these future tests. Use the shared C++ fixture described in [getting started](docs/getting-started.md). Choose edge cases that apply to the algorithm rather than copying irrelevant cases. Numerical and randomized methods need suitable tolerances and seeds; CI examples must stay small.
+Add meaningful Python/C++ tests for DSA. Classical ML requires Python and numerical tests, with C++ optional as a complete source/test pair; see [ML development](docs/ml-development.md). Root pytest discovery includes these future tests. Use the shared C++ fixture described in [getting started](docs/getting-started.md). Choose edge cases that apply to the algorithm rather than copying irrelevant cases. Numerical and randomized methods need suitable tolerances and seeds; CI examples must stay small.
 
 Update catalog statuses only when the corresponding work exists. Allowed statuses are `planned`, `in-progress`, `implemented`, `tested`, `reviewed`, and `blocked`. Keep documentation, Python, C++, and test status separate. Mark work `tested` only after actually running and passing the relevant tests. `reviewed` requires human review, and neither flag establishes phase approval.
 

@@ -4,6 +4,7 @@ Review and audit reports are organized by canonical phase name. Their filenames 
 
 | Phase | Report |
 | --- | --- |
+| regression (Phase 13 ML) | [REGRESSION-REVIEW-REPORT.md](regression/REGRESSION-REVIEW-REPORT.md) |
 | DSA final audit | [DSA-FINAL-AUDIT-REPORT.md](dsa-final-audit/DSA-FINAL-AUDIT-REPORT.md) |
 | number-theory | [NUMBER-THEORY-REVIEW-REPORT.md](number-theory/NUMBER-THEORY-REVIEW-REPORT.md) |
 | two-pointers-sliding-window | [TWO-POINTERS-SLIDING-WINDOW-REVIEW-REPORT.md](two-pointers-sliding-window/TWO-POINTERS-SLIDING-WINDOW-REVIEW-REPORT.md) |
@@ -23,5 +24,9 @@ Review and audit reports are organized by canonical phase name. Their filenames 
 Earlier execution logs, frozen catalog/hash baselines and ZIP verification manifests retain paths from their original snapshots. The cleanup manifest records each move, original/current digest and reversible report edits; strict preservation checks verify the original bytes rather than discarding hash checks. Existing ZIPs remain unchanged snapshots of their phase handoffs and do not claim to contain the post-cleanup layout.
 
 Future reports belong in docs/reviews/<phase-name>/; packages belong in [artifacts/review-packages](../../artifacts/review-packages/README.md). Update catalog completion-report metadata and all live links. Owner approval checkpoints remain mandatory. Maintenance does not approve a phase.
+
+On 2026-10-27 the owner confirmed DSA implementation complete and authorized ML
+foundation plus B1 Regression only. Its owner approval is pending; historical
+DSA final-audit and Phase 11/12 approval records remain independent.
 
 The [original foundation handoff](../phase-0-review.md), [foundation inventory](../phase-0-files.md), checkpoints and evidence remain in their existing docs locations.

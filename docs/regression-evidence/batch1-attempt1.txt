@@ -1,0 +1,39 @@
+....................F.......................                             [100%]
+=================================== FAILURES ===================================
+____________________ test_seeded_ridge_reference[True-0.0] _____________________
+
+algorithm = <module 'test_regression_ridge_regression' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/supervised-learning/regression/ridge-regression/python/solution.py'>
+alpha = 0.0, intercept = True
+
+    @pytest.mark.reference
+    @pytest.mark.parametrize("alpha", [0.0, 0.1, 1.0, 100.0])
+    @pytest.mark.parametrize("intercept", [False, True])
+    def test_seeded_ridge_reference(algorithm, alpha, intercept):
+        rng = np.random.default_rng(13021)
+        X = rng.normal(size=(32, 4)); X[:, 3] = X[:, 1]; y = rng.normal(size=32)
+        query = rng.normal(size=(12, 4))
+        model = algorithm.RidgeRegression(alpha, fit_intercept=intercept).fit(X, y)
+        reference = Ridge(alpha=alpha, fit_intercept=intercept, solver="svd").fit(X, y)
+>       assert_allclose(model.predict(query), reference.predict(query), atol=2e-10, rtol=2e-10)
+E       AssertionError: 
+E       Not equal to tolerance rtol=2e-10, atol=2e-10
+E       
+E       Mismatched elements: 12 / 12 (100%)
+E       First 5 mismatches are at indices:
+E        [0]: -0.1416295621607271 (ACTUAL), 67528957264163.96 (DESIRED)
+E        [1]: -0.13061895816959254 (ACTUAL), 16525539827916.805 (DESIRED)
+E        [2]: -0.4735150306095849 (ACTUAL), 7424338267569.937 (DESIRED)
+E        [3]: -0.11414243676616054 (ACTUAL), -19575960840085.29 (DESIRED)
+E        [4]: 0.14117160257421477 (ACTUAL), -15353607728008.543 (DESIRED)
+E       Max absolute difference among violations: 6.75289573e+13
+E       Max relative difference among violations: 1.
+E        ACTUAL: array([-0.14163 , -0.130619, -0.473515, -0.114142,  0.141172,  0.055106,
+E               0.009256, -0.142597, -0.151326, -0.052105, -0.074645,  0.186509])
+E        DESIRED: array([ 6.752896e+13,  1.652554e+13,  7.424338e+12, -1.957596e+13,
+E              -1.535361e+13,  3.904453e+13,  5.532719e+13,  3.416154e+13,
+E              -3.717529e+13,  1.431405e+13,  7.909693e+12, -9.363313e+12])
+
+machine-learning/supervised-learning/regression/ridge-regression/tests/test_python.py:28: AssertionError
+=========================== short test summary info ============================
+FAILED machine-learning/supervised-learning/regression/ridge-regression/tests/test_python.py::test_seeded_ridge_reference[True-0.0]
+1 failed, 43 passed in 20.77s

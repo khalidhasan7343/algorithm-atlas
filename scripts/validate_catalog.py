@@ -20,6 +20,11 @@ from urllib.parse import unquote, urlsplit
 
 import yaml
 
+try:
+    from .track_policy import cpp_required, implementation_fields, is_complete, track
+except ImportError:  # Direct script execution.
+    from track_policy import cpp_required, implementation_fields, is_complete, track
+
 
 STATUSES = {"planned", "in-progress", "implemented", "tested", "reviewed", "blocked"}
 ARTIFACT_STATUSES = {"implemented", "tested", "reviewed"}
@@ -227,6 +232,30 @@ def _validate_development(
         report.errors.append("development.active_batch must be the next uncompleted batch")
     if status == "awaiting-review" and active is not None:
         report.errors.append("development.awaiting-review requires active_batch=null")
+
+    if state.get("track") == "machine-learning":
+        category = state.get("category")
+        owned = {aid: a for aid, a in algorithms.items() if a.get("category") == category}
+        if not owned or any(track(a) != "machine-learning" for a in owned.values()):
+            report.errors.append("development ML category must own classical ML canonical topics")
+        plan = state.get("batch_plan")
+        if not isinstance(plan, list) or not plan or any(
+            not isinstance(batch, list) or not batch or any(not isinstance(aid, str) for aid in batch)
+            for batch in plan
+        ):
+            report.errors.append("development ML batch_plan must contain nonempty algorithm ID lists")
+            return
+        flattened = [aid for batch in plan for aid in batch]
+        if len(flattened) != len(set(flattened)) or set(flattened) != set(owned):
+            report.errors.append("development ML batch_plan must cover its canonical category exactly once")
+        if valid_completed:
+            if len(completed) > len(plan) or (status == "awaiting-review" and len(completed) != len(plan)):
+                report.errors.append("development ML completed batches must match its batch_plan")
+            for batch in plan[:len(completed)]:
+                for aid in batch:
+                    if not is_complete(algorithms.get(aid, {})):
+                        report.errors.append(f"development: completed ML batch requires {aid} with required tested deliverables")
+        return
 
     if state.get("scope") == NUMBER_WINDOW_SCOPE and valid_completed:
         if len(completed) > 4:
@@ -708,10 +737,21 @@ def validate_repository(root: Path) -> ValidationReport:
                     report.errors.append(
                         f"{aid}: completed documentation missing section {number}. {title}"
                     )
+        needs_cpp = cpp_required(algorithm)
+        optional_cpp = not needs_cpp and any(
+            (path / name).exists() for name in ("cpp/solution.cpp", "tests/test_cpp.py")
+        )
+        if optional_cpp:
+            for name in ("cpp/solution.cpp", "tests/test_cpp.py"):
+                candidate = path / name
+                if not candidate.is_file() or not candidate.read_text(encoding="utf-8").strip():
+                    report.errors.append(f"{aid}: optional C++ requires a nonempty {name} pair")
         artifacts = {
             "python_status": (path / "python/solution.py",),
             "cpp_status": (path / "cpp/solution.cpp",),
-            "test_status": (path / "tests/test_python.py", path / "tests/test_cpp.py"),
+            "test_status": (path / "tests/test_python.py",) + (
+                (path / "tests/test_cpp.py",) if needs_cpp or optional_cpp else ()
+            ),
         }
         for status_field, required in artifacts.items():
             status = algorithm[status_field]
@@ -731,11 +771,11 @@ def validate_repository(root: Path) -> ValidationReport:
             if any(
                 not isinstance(algorithm[key], str)
                 or algorithm[key] not in ARTIFACT_STATUSES
-                for key in ("documentation_status", "python_status", "cpp_status")
+                for key in implementation_fields(algorithm)
             ):
                 report.errors.append(
                     f"{aid}: tested/reviewed tests require completed documentation "
-                    "and both implementations"
+                    + ("and both implementations" if needs_cpp else "and the required Python implementation")
                 )
         if any(
             algorithm[key] in ("tested", "reviewed")

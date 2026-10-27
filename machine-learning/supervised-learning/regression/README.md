@@ -6,19 +6,23 @@ Predicting continuous targets with documented model and regularization assumptio
 
 This category preserves **7 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
+
+Phase 13 implements these seven canonicals in three sequential batches. Python/NumPy and mathematical/numerical tests are required; C++ is optional and absent. Owner approval remains pending. Read [the ML standard](../../../docs/ml-development.md), [the scope](../../../docs/regression-scope.md) and [the checkpoints](../../../docs/regression-checkpoints.md). The category experiment records training and held-out MSE/MAE/R² with training-only scaling: [benchmark.py](experiments/benchmark.py). No second ML category is authorized.
+
+See [the review report](../../../docs/reviews/regression/REGRESSION-REVIEW-REPORT.md).
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Linear Regression | [linear-regression](linear-regression/README.md) | planned |
-| Ridge Regression | [ridge-regression](ridge-regression/README.md) | planned |
-| Lasso Regression | [lasso-regression](lasso-regression/README.md) | planned |
-| Elastic Net | [elastic-net](elastic-net/README.md) | planned |
-| Polynomial Regression | [polynomial-regression](polynomial-regression/README.md) | planned |
-| Support Vector Regression (SVR) | [support-vector-regression](support-vector-regression/README.md) | planned |
-| Decision Tree Regression | [decision-tree-regression](decision-tree-regression/README.md) | planned |
+| Linear Regression | [linear-regression](linear-regression/README.md) | complete |
+| Ridge Regression | [ridge-regression](ridge-regression/README.md) | complete |
+| Lasso Regression | [lasso-regression](lasso-regression/README.md) | complete |
+| Elastic Net | [elastic-net](elastic-net/README.md) | complete |
+| Polynomial Regression | [polynomial-regression](polynomial-regression/README.md) | complete |
+| Support Vector Regression (SVR) | [support-vector-regression](support-vector-regression/README.md) | complete |
+| Decision Tree Regression | [decision-tree-regression](decision-tree-regression/README.md) | complete |
 
 ## Learning and contribution scope
 
-Choose prerequisites through the [learning roadmap](../../../docs/learning-roadmap.md). Each future completed topic must include the full 25-part educational article, working Python and C++ programs, executable examples, accurate complexity analysis, and relevant tests described in [the contribution standards](../../../CONTRIBUTING.md).
+Choose prerequisites through the [learning roadmap](../../../docs/learning-roadmap.md). Each future completed topic must include the full 25-part educational article, working Python with numerical tests and optional C++, executable examples, accurate complexity analysis, and relevant tests described in [the contribution standards](../../../CONTRIBUTING.md).
 
 Completion is shown by the catalog status and topic artifacts. The current implementation authorization is recorded in the progress tracker; other categories require explicit user approval.
 

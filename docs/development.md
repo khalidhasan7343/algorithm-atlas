@@ -4,15 +4,15 @@ This guide defines how to turn a planned Algorithm Atlas topic into an explained
 
 ## Phase boundaries
 
-The owner officially approved completed Phase 10 on 2026-10-24 (Asia/Dhaka), satisfying the prerequisite for **combined Phase 11 — Number Theory and Phase 12 — Two Pointers & Sliding Window**. Phase 9 remains owner-approved. Implement only the seven A9 and three A10 canonicals in the four sequential stages in [locked scope](number-theory-window-scope.md). Preserve prior implementations/history and 35 categories, 256 memberships and 235 canonicals.
+The owner confirmed DSA implementation complete and authorized **Phase 13 — ML Foundation + B1 Supervised Learning — Regression** on **2026-10-27 (Asia/Dhaka)**. This supersedes the earlier stop-before-Phase-13 boundary. Implement only the seven canonicals in the [Regression scope lock](regression-scope.md), in its three sequential batches. Preserve 35 categories, 256 memberships, 235 canonicals and prior DSA source/history.
 
-Follow separate [Phase 11](number-theory-checkpoints.md) and [Phase 12](two-pointers-sliding-window-checkpoints.md) checkpoints, reports and ZIP/checksum/JSON packages in their established review folders. Finish both categories before presenting the combined review; their owner approvals remain independent and pending. Exact 25-section lessons and Python/C++17/C++20 tests/gates are required at each stage. No repeated Phase 10 approval request. After both packages pass integrity checks, STOP for explicit owner review. No Phase 13, commit, push or publication. Never set Git identity from public email.
+Classical ML requires Python, meaningful numerical tests and the exact 25-section lesson; C++ is optional. DSA still requires Python/C++, both test files, and C++17/C++20. Follow the [ML standard](ml-development.md) and [Regression checkpoint](regression-checkpoints.md). Final owner approval is pending; earlier DSA final-audit and Phase 11/12 approvals are not inferred. Stop after the Regression report and verified ZIP/checksum/JSON. No second ML category, Deep Learning, AI, commit, push or publication. Never set Git identity from public email.
 
 ## Canonical layout and catalog ownership
 
 [catalog.yaml](../catalog.yaml) is the topic inventory. The [algorithm index](algorithm-index.md) retains the syllabus's category navigation while linking repeated subjects to one canonical folder. Before adding a folder, check related records and their notes: a repeated category label often describes an existing algorithm, while a meaningful variant may warrant a separate entry.
 
-Use lowercase kebab-case for folders. Once implementation is authorized, a normal algorithm folder contains:
+Use lowercase kebab-case for folders. DSA retains the following structure. Classical ML requires `README.md`, `python/solution.py` and `tests/test_python.py`; C++ is optional and section 14 records its actual status. See [ML development](ml-development.md). Once DSA implementation is authorized, a normal algorithm folder contains:
 
 ```text
 <canonical-folder>/
@@ -68,7 +68,7 @@ Python code should follow PEP 8, expose reusable functions or classes, use type 
 
 C++ code should use C++17 or a documented C++20 requirement, descriptive names, standard library facilities, clear ownership, and safe boundary handling. Avoid nonstandard headers and compiler-specific assumptions unless a topic explicitly requires them. Document the exact command that builds and runs its example.
 
-For ML topics, provide an educational from-scratch implementation and a practical library example when feasible. Label each honestly. Specify package versions or compatible ranges, installation commands, dataset shape, random seed, numeric precision, stopping conditions, and expected resource needs. C++ dependencies such as Eigen, LibTorch, or OpenCV need explicit build and link instructions. Add only dependencies actually required by that topic.
+For authorized classical ML topics, provide a Python/NumPy educational from-scratch implementation and a practical library comparison when useful. C++ is optional and no dummy files are allowed. Label each honestly. Specify package versions or compatible ranges, installation commands, dataset shape, random seed, numeric precision, stopping conditions, and expected resource needs. C++ dependencies such as Eigen, LibTorch, or OpenCV need explicit build and link instructions. Add only dependencies actually required by that topic.
 
 Keep advanced examples compact and reproducible. A miniature Transformer, diffusion example, or object detector must explain its scope and how it differs from a full production model. Do not automatically download large datasets or weights. If a requested implementation cannot be completed faithfully, record the blocked or in-progress status and exact limitation instead of presenting a fake working version.
 
@@ -111,7 +111,7 @@ Update documentation, Python, C++, and test statuses in the catalog after each b
 - Use `reviewed` only after actual review, with the same implementation and test evidence expected for completion.
 - Use `blocked` when a concrete dependency, terminology issue, or other obstacle prevents faithful work, and state the resolution needed.
 
-Do not mark an algorithm complete while either language, its tests, examples, documentation, or required dependencies remain unverified. `Dynamic Policy Optimization (DPO)` is a [terminology question](terminology-decisions.md) in the supplied syllabus; it must remain explicit until the maintainer clarifies the intended method. Do not silently replace it with Direct Preference Optimization.
+Do not mark an algorithm complete while a required language, its tests, examples, documentation, or required dependencies remain unverified. DSA requires both languages; classical ML requires Python and numerical tests. `Dynamic Policy Optimization (DPO)` is a [terminology question](terminology-decisions.md) in the supplied syllabus; it must remain explicit until the maintainer clarifies the intended method. Do not silently replace it with Direct Preference Optimization.
 
 ## Batch handoff
 

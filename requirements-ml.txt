@@ -1,0 +1,2 @@
+# ML runtime; keep the DSA-only requirements-dev.txt lightweight.
+numpy>=2.3.4,<3

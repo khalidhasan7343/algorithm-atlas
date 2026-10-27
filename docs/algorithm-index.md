@@ -179,13 +179,13 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Linear Regression | [linear-regression](../machine-learning/supervised-learning/regression/linear-regression/README.md) | planned |
-| Ridge Regression | [ridge-regression](../machine-learning/supervised-learning/regression/ridge-regression/README.md) | planned |
-| Lasso Regression | [lasso-regression](../machine-learning/supervised-learning/regression/lasso-regression/README.md) | planned |
-| Elastic Net | [elastic-net](../machine-learning/supervised-learning/regression/elastic-net/README.md) | planned |
-| Polynomial Regression | [polynomial-regression](../machine-learning/supervised-learning/regression/polynomial-regression/README.md) | planned |
-| Support Vector Regression (SVR) | [support-vector-regression](../machine-learning/supervised-learning/regression/support-vector-regression/README.md) | planned |
-| Decision Tree Regression | [decision-tree-regression](../machine-learning/supervised-learning/regression/decision-tree-regression/README.md) | planned |
+| Linear Regression | [linear-regression](../machine-learning/supervised-learning/regression/linear-regression/README.md) | complete |
+| Ridge Regression | [ridge-regression](../machine-learning/supervised-learning/regression/ridge-regression/README.md) | complete |
+| Lasso Regression | [lasso-regression](../machine-learning/supervised-learning/regression/lasso-regression/README.md) | complete |
+| Elastic Net | [elastic-net](../machine-learning/supervised-learning/regression/elastic-net/README.md) | complete |
+| Polynomial Regression | [polynomial-regression](../machine-learning/supervised-learning/regression/polynomial-regression/README.md) | complete |
+| Support Vector Regression (SVR) | [support-vector-regression](../machine-learning/supervised-learning/regression/support-vector-regression/README.md) | complete |
+| Decision Tree Regression | [decision-tree-regression](../machine-learning/supervised-learning/regression/decision-tree-regression/README.md) | complete |
 
 ## B2. [Supervised Learning — Classification](../machine-learning/supervised-learning/classification/README.md)
 

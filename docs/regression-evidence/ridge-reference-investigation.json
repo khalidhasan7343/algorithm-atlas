@@ -1,0 +1,15 @@
+{
+  "atlas": {
+    "coefficient_norm": 0.13517097324572677,
+    "training_sse": 12.300880015973933
+  },
+  "sklearn_ridge_alpha0": {
+    "coefficient_norm": 33905147272925.566,
+    "training_sse": 12.307038786681712
+  },
+  "sklearn_ols": {
+    "coefficient_norm": 0.13517097324572677,
+    "training_sse": 12.300880015973933
+  },
+  "interpretation": "Alpha=0 is rank-deficient OLS with nonunique coefficients. Atlas and sklearn OLS choose minimum norm; sklearn Ridge retains a tiny singular direction here. The reference test now aligns the documented minimum-norm convention at alpha=0 and retains Ridge reference comparisons for positive alpha."
+}

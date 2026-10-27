@@ -1,0 +1,180 @@
+{
+  "seed": 13027,
+  "train_samples": 48,
+  "held_out_samples": 24,
+  "features": 2,
+  "response": "1 + .8*x0 - .3*x1 + .25*x0**2 + Normal(0,.08)",
+  "preprocessing": {
+    "fitted_on": "training rows only",
+    "mean": [
+      0.09280028175598826,
+      0.17649409277630923
+    ],
+    "scale": [
+      1.1941013339815838,
+      1.074717788284794
+    ]
+  },
+  "hyperparameter_selection": "Fixed in source; no tuning on held-out targets",
+  "evaluation": "One synthetic split; timings observational, no superiority claim",
+  "results": [
+    {
+      "algorithm": "linear-regression",
+      "parameters": {},
+      "fit_seconds": 0.00034454200067557395,
+      "train": {
+        "mse": 0.09095072990753517,
+        "mae": 0.2525918181791148,
+        "r2": 0.916067298919265
+      },
+      "held_out": {
+        "mse": 0.08199303445806169,
+        "mae": 0.2523262183202049,
+        "r2": 0.9257166007734631
+      },
+      "n_iter": 1,
+      "duality_gap": null,
+      "kkt_violation": null,
+      "tree_depth": null,
+      "tree_leaves": null
+    },
+    {
+      "algorithm": "ridge-regression",
+      "parameters": {
+        "alpha": 1.0
+      },
+      "fit_seconds": 0.00024275000032503158,
+      "train": {
+        "mse": 0.09135962392593161,
+        "mae": 0.25133072694707553,
+        "r2": 0.9156899563794672
+      },
+      "held_out": {
+        "mse": 0.08585774247350068,
+        "mae": 0.2567543079555879,
+        "r2": 0.92221528324933
+      },
+      "n_iter": 1,
+      "duality_gap": null,
+      "kkt_violation": null,
+      "tree_depth": null,
+      "tree_leaves": null
+    },
+    {
+      "algorithm": "polynomial-regression",
+      "parameters": {
+        "degree": 2
+      },
+      "fit_seconds": 0.0003914580011041835,
+      "train": {
+        "mse": 0.0042150148439290885,
+        "mae": 0.04902140614904873,
+        "r2": 0.9961102282377939
+      },
+      "held_out": {
+        "mse": 0.006557190035272058,
+        "mae": 0.06451569367672817,
+        "r2": 0.9940593689645244
+      },
+      "n_iter": 1,
+      "duality_gap": null,
+      "kkt_violation": null,
+      "tree_depth": null,
+      "tree_leaves": null
+    },
+    {
+      "algorithm": "lasso-regression",
+      "parameters": {
+        "alpha": 0.02
+      },
+      "fit_seconds": 0.0002514999941922724,
+      "train": {
+        "mse": 0.09174386198009961,
+        "mae": 0.2523794751603439,
+        "r2": 0.9153353672763659
+      },
+      "held_out": {
+        "mse": 0.0860043699588869,
+        "mae": 0.25542456170163014,
+        "r2": 0.9220824428427453
+      },
+      "n_iter": 3,
+      "duality_gap": null,
+      "kkt_violation": 1.5957304921876414e-11,
+      "tree_depth": null,
+      "tree_leaves": null
+    },
+    {
+      "algorithm": "elastic-net",
+      "parameters": {
+        "alpha": 0.04,
+        "l1_ratio": 0.5
+      },
+      "fit_seconds": 0.00023941700055729598,
+      "train": {
+        "mse": 0.09306560970343496,
+        "mae": 0.25117196040179596,
+        "r2": 0.9141156095385266
+      },
+      "held_out": {
+        "mse": 0.09051417374765669,
+        "mae": 0.25961876316071225,
+        "r2": 0.9179966865649253
+      },
+      "n_iter": 3,
+      "duality_gap": null,
+      "kkt_violation": 1.4459981823033985e-11,
+      "tree_depth": null,
+      "tree_leaves": null
+    },
+    {
+      "algorithm": "support-vector-regression",
+      "parameters": {
+        "C": 5.0,
+        "epsilon": 0.05,
+        "kernel": "rbf",
+        "gamma": 0.5,
+        "max_iter": 30000
+      },
+      "fit_seconds": 0.03500379199977033,
+      "train": {
+        "mse": 0.003964284303243431,
+        "mae": 0.04734890420535203,
+        "r2": 0.9963416116642334
+      },
+      "held_out": {
+        "mse": 0.010998518058187837,
+        "mae": 0.08333283255809487,
+        "r2": 0.9900356498181009
+      },
+      "n_iter": 1440,
+      "duality_gap": 2.038233631651565e-06,
+      "kkt_violation": null,
+      "tree_depth": null,
+      "tree_leaves": null
+    },
+    {
+      "algorithm": "decision-tree-regression",
+      "parameters": {
+        "max_depth": 4,
+        "min_samples_leaf": 3
+      },
+      "fit_seconds": 0.001582124998094514,
+      "train": {
+        "mse": 0.028741351400065434,
+        "mae": 0.140704293518531,
+        "r2": 0.9734764167569567
+      },
+      "held_out": {
+        "mse": 0.1376719719809292,
+        "mae": 0.32927335210100755,
+        "r2": 0.8752730384409079
+      },
+      "n_iter": null,
+      "duality_gap": null,
+      "kkt_violation": null,
+      "tree_depth": 4,
+      "tree_leaves": 11
+    }
+  ]
+}

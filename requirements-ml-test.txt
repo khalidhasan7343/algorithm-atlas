@@ -1,0 +1,4 @@
+-r requirements-dev.txt
+-r requirements-ml.txt
+# Independent reference estimators only; never imported by implementation code.
+scikit-learn>=1.8,<1.9

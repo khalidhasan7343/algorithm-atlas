@@ -1,0 +1,25 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/supervised-learning/regression/linear-regression",
+    "machine-learning/supervised-learning/regression/ridge-regression",
+    "machine-learning/supervised-learning/regression/polynomial-regression",
+    "-q"
+  ],
+  "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+  "timestamp": "2026-10-27T11:14:29.025923+06:00",
+  "elapsed_seconds": 0.743,
+  "returncode": 0,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "environment": {
+    "CXX": null,
+    "PYTHONHASHSEED": "0",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "log": "docs/regression-evidence/batch1-attempt2.txt",
+  "summary": "44 passed in 0.53s"
+}

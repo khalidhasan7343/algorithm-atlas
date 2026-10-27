@@ -2,7 +2,7 @@
 
 Progress from foundational problem solving to specialized AI topics. These levels describe a study order, not repository development phases: learning a later level does not authorize implementation outside the approved development phase.
 
-**Current scope:** Phase 10 is officially owner-approved. Combined Phases 11 and 12 authorize only [Number Theory](number-theory-checkpoints.md) and [Two Pointers & Sliding Window](two-pointers-sliding-window-checkpoints.md). Both categories must complete before handoff, with independent pending owner approvals. Preserve 35/256/235 and stop before Phase 13.
+**Current scope:** the owner authorized Phase 13 ML Foundation and the first catalog ML category, B1 Supervised Learning — Regression, on 2026-10-27 after confirming DSA implementation complete. Follow the [scope lock](regression-scope.md), [ML standard](ml-development.md) and [Regression checkpoint](regression-checkpoints.md). Do not begin Classification, Deep Learning or AI. Earlier approval records remain historical and are not silently promoted.
 
 ## Level 1 — DSA Foundations
 
@@ -115,7 +115,7 @@ Choose branches according to the structure of the problem:
 
 Follow the prerequisites rather than treating levels as a fixed schedule. For each available completed topic, read its intuition and contract, predict a small example's output, inspect the implementation, run its documented tests, and explain its complexity in your own words. For unimplemented topics, use the linked planning notes to understand scope and prerequisites; runnable material follows only within an approved category.
 
-Contributors should consult the [development guide](development.md) and the current [progress tracker](progress.md). The current authorization covers all fourteen Tree Algorithms only. After five internal batches and the review package, stop for explicit owner review before any further development scope.
+Contributors should consult the [development guide](development.md) and the current [progress tracker](progress.md). The current implementation authorization covers the seven B1 Regression canonicals only. Its three internal batches proceed after validation; stop after its review package for explicit owner approval.
 
 
 ## Graph Algorithms learning sequence

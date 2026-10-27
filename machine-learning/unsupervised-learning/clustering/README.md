@@ -19,7 +19,7 @@ This category preserves **8 original syllabus entries**. Each link points to the
 
 ## Learning and contribution scope
 
-Choose prerequisites through the [learning roadmap](../../../docs/learning-roadmap.md). Each future completed topic must include the full 25-part educational article, working Python and C++ programs, executable examples, accurate complexity analysis, and relevant tests described in [the contribution standards](../../../CONTRIBUTING.md).
+Choose prerequisites through the [learning roadmap](../../../docs/learning-roadmap.md). Each future completed topic must include the full 25-part educational article, working Python with numerical tests and optional C++, executable examples, accurate complexity analysis, and relevant tests described in [the contribution standards](../../../CONTRIBUTING.md).
 
 Completion is shown by the catalog status and topic artifacts. The current implementation authorization is recorded in the progress tracker; other categories require explicit user approval.
 
