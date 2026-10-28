@@ -1,0 +1,259 @@
+{
+  "comparison": "Pre-existing nonclean working tree at audit start, not Git HEAD",
+  "baseline_files": 1802,
+  "modified": [
+    {
+      "path": "AGENTS.md",
+      "before_sha256": "ea29707924f35f1a3a716c022f8a60f3b1e2e1133d43d1070027223739b5c414",
+      "after_sha256": "188ca1a8a5f54cef288e4cc3ecd2193fe1a2a2e4a3d392e8eb18d0513ab5dffc"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "before_sha256": "b7b51284ea956ffce5b5e43e68ecba98fd00ca39f80811aabc601bc7927f09e6",
+      "after_sha256": "63b2566d3ac0196add8c3d8ce7a42d46b096c24b293d76ae53d19f4b04ff2cd5"
+    },
+    {
+      "path": "README.md",
+      "before_sha256": "1a05ccb843c4d72182879a4d16683c3e6195d38f55bef2673f47e3da06504b15",
+      "after_sha256": "78092048f3dceb3ab5abb52340a4303c4c2fca6d7775f2737d395dfa966ddb20"
+    },
+    {
+      "path": "artifacts/review-packages/README.md",
+      "before_sha256": "dbd3d4901c8ef5e7407513146111120c89c15245aa0c682894cf61050c9dde76",
+      "after_sha256": "10128861fc4652f453e92be9f437bf2154e82a839e5ad2ef23806488555993e3"
+    },
+    {
+      "path": "artifacts/review-packages/regression/README.md",
+      "before_sha256": "076e7042af52308456ba8aa34b648df224d1a7e809ddff4034e828fa77606349",
+      "after_sha256": "9bd7ab0845f0b47d27cbd942713ef9ab7cac36e14b00fe8892039ef4fc64bf68"
+    },
+    {
+      "path": "catalog.yaml",
+      "before_sha256": "4d737d684de9e56f605fdf25e4d0107d88d9579cbec8967e604d051a5ce04551",
+      "after_sha256": "a19eb6a4f74245f7f4f337233a4b64bd924d1b43a0ae678fd74ad4ce274537b4"
+    },
+    {
+      "path": "docs/development.md",
+      "before_sha256": "ff51373271934bfd9e9bf7205b2e6abd98885c236f5a093c8f80b5900be0dfc5",
+      "after_sha256": "5440eb0ad2686b20dd217d739ac6f2faf15c8e00c5aefed381406b997f43bdbf"
+    },
+    {
+      "path": "docs/getting-started.md",
+      "before_sha256": "f6a8652a24f108fabab14626e84935f58ef81286e628889127cdc08990f9b1bc",
+      "after_sha256": "f7b8af90e8049158ff345b5e4b1170d98835a4d455c8b99e9aaec97e76e84404"
+    },
+    {
+      "path": "docs/glossary.md",
+      "before_sha256": "249da3c56428693565844093b365428f92735973c0d2b8b1cc808e22cbe99915",
+      "after_sha256": "9ce0da14debd0bab9c5ffbd19f670cf4f0e3a9df4db7ad17b53f24f59624eb4e"
+    },
+    {
+      "path": "docs/learning-roadmap.md",
+      "before_sha256": "7f9a63036084615f4de3197c200cc3a3363e1b28b408483c6f1f6a005c3649fc",
+      "after_sha256": "823e23a379310640a85ec79e7755b21c84407fe64b5b87360e31a7fb2f62bd43"
+    },
+    {
+      "path": "docs/ml-development.md",
+      "before_sha256": "ac6fead987c5ee91f2a30548229cf2163252ec65773acaec1d36b53238793589",
+      "after_sha256": "a09e1e4fe800a183f4fdd272de00a5df1670102af77f177a4aaf49e426b90a6b"
+    },
+    {
+      "path": "docs/progress.md",
+      "before_sha256": "1796331bf3f2a218f8e5935b6e5ebfa43096cf0cb7f06242f33461b20c8214a1",
+      "after_sha256": "7b17601eb6ab43b4ea70c5dfc77692e6b24b049b1074234f35a69536b53be7e0"
+    },
+    {
+      "path": "docs/reviews/README.md",
+      "before_sha256": "400d742e8ef0a5cdbd3c66cee660ee8922de34bec8520891a498e908bc74768a",
+      "after_sha256": "d4d4727392c6bb4755d46cf1464c881fd0d1d6e7df01d90cbbd801d438542435"
+    },
+    {
+      "path": "docs/reviews/regression/REGRESSION-REVIEW-REPORT.md",
+      "before_sha256": "af39d5032a01b47dd3f08c9e525c761f3c49d34234404617c96c0fd1e6a87807",
+      "after_sha256": "e2f83b2f7307d9779204bad05e46397b15caf9383c2db9b5a6d4457a3b6ba079"
+    },
+    {
+      "path": "dsa/number-theory/README.md",
+      "before_sha256": "689898d2a637d8fdb7373f15eca02665544047228d7f4570b169522254bb197c",
+      "after_sha256": "8f313d927cae571b637a12c052ca715a17eb13d1b8e49663668f84216fa53278"
+    },
+    {
+      "path": "dsa/two-pointers-and-sliding-window/README.md",
+      "before_sha256": "d6545c101d75be0b24ce7a273f814255618a8566a8b66072fe2009b62026cdce",
+      "after_sha256": "86fe73faacbfc26708d580033996d4ad648b2da9c88462c3a585e1dd06f63453"
+    },
+    {
+      "path": "machine-learning/supervised-learning/classification/README.md",
+      "before_sha256": "65fb3f9fdb3ab245f045c9ffb2fce3ba1e9764b1a539e4fa82baed051b40701b",
+      "after_sha256": "9cf38f08c28ca34c9342af6c0a8fc7a25599978fd810bd13cff194b6103ec7a2"
+    },
+    {
+      "path": "machine-learning/supervised-learning/regression/README.md",
+      "before_sha256": "24d83fd15be44d3da427dda0f9e64ad9ebe91f1ec29d8588d802742eb96d2ec2",
+      "after_sha256": "5a38d5937d152e8e4ac86b637a0020f807a6cbf04ccd074853fdbc602fa88e38"
+    },
+    {
+      "path": "machine-learning/supervised-learning/regression/decision-tree-regression/README.md",
+      "before_sha256": "e44d2342b5710312f30eea6fa9a85a5be330792c23e53720182f7d86195f950e",
+      "after_sha256": "ea01ce47f86247e05b36f395c518993254223a29ed237a6148804923d7bb7ab2"
+    },
+    {
+      "path": "machine-learning/supervised-learning/regression/decision-tree-regression/python/solution.py",
+      "before_sha256": "ea93966a7051750b74198b747626d84b753564f84bc3294f3d3e572a34aaa8f5",
+      "after_sha256": "8c35c541dc55880d9d72e8404016dad5188f42454c8084654a49f664ee029f50"
+    },
+    {
+      "path": "machine-learning/supervised-learning/regression/experiments/benchmark.py",
+      "before_sha256": "ff81208c9baf5b5f1db39757d98e47dc1f89eeb39ee45f9208acc4d3b003719c",
+      "after_sha256": "66e3568559fff1f0b63d31df1e6ad601ee01d9d0e4194ba6038c58849d9fbfbc"
+    },
+    {
+      "path": "machine-learning/supervised-learning/regression/support.py",
+      "before_sha256": "31cdd7221f6cfda13b5945182562423155a0f6df3f3c67535dce744800c97e2f",
+      "after_sha256": "f39471dfb6044302fe8ef0a7f96d677d23e908fdf73a0adb0310dae32e5bdabb"
+    },
+    {
+      "path": "scripts/generate_catalog_docs.py",
+      "before_sha256": "125141700f40af6d6e8983a9f72e0aec48776a8c3d8f665ac0d2a9195f1dcfe0",
+      "after_sha256": "e33aab27916478e19aac3394ffb8950d7364796a6da2859b4083af8aa4a0363f"
+    }
+  ],
+  "created": [
+    "artifacts/review-packages/regression/history/approved-before-completion-audit-2026-10-28/README.md",
+    "artifacts/review-packages/regression/history/approved-before-completion-audit-2026-10-28/algorithm-atlas-regression-review.json",
+    "artifacts/review-packages/regression/history/approved-before-completion-audit-2026-10-28/algorithm-atlas-regression-review.zip",
+    "artifacts/review-packages/regression/history/approved-before-completion-audit-2026-10-28/algorithm-atlas-regression-review.zip.sha256",
+    "docs/regression-audit-checkpoints.md",
+    "docs/regression-audit-evidence/B1-attempt1.json",
+    "docs/regression-audit-evidence/B1-attempt1.txt",
+    "docs/regression-audit-evidence/B1-attempt2.json",
+    "docs/regression-audit-evidence/B1-attempt2.txt",
+    "docs/regression-audit-evidence/B1-attempt3.json",
+    "docs/regression-audit-evidence/B1-attempt3.txt",
+    "docs/regression-audit-evidence/B1-attempt4.json",
+    "docs/regression-audit-evidence/B1-attempt4.txt",
+    "docs/regression-audit-evidence/B1-attempt5.json",
+    "docs/regression-audit-evidence/B1-attempt5.txt",
+    "docs/regression-audit-evidence/B1-attempt6.json",
+    "docs/regression-audit-evidence/B1-attempt6.txt",
+    "docs/regression-audit-evidence/B1-attempt7.json",
+    "docs/regression-audit-evidence/B1-attempt7.txt",
+    "docs/regression-audit-evidence/B1.xml",
+    "docs/regression-audit-evidence/approved-regression-report.txt",
+    "docs/regression-audit-evidence/approved-regression-support.txt",
+    "docs/regression-audit-evidence/approved-regression-tree.txt",
+    "docs/regression-audit-evidence/baseline-B1-attempt1.json",
+    "docs/regression-audit-evidence/baseline-B1-attempt1.txt",
+    "docs/regression-audit-evidence/baseline-catalog-attempt1.json",
+    "docs/regression-audit-evidence/baseline-catalog-attempt1.txt",
+    "docs/regression-audit-evidence/baseline-generated-attempt1.json",
+    "docs/regression-audit-evidence/baseline-generated-attempt1.txt",
+    "docs/regression-audit-evidence/baseline-results.json",
+    "docs/regression-audit-evidence/baseline.json",
+    "docs/regression-audit-evidence/benchmark-after-tree.txt",
+    "docs/regression-audit-evidence/benchmark-audit.txt",
+    "docs/regression-audit-evidence/benchmark.json",
+    "docs/regression-audit-evidence/catalog-attempt1.json",
+    "docs/regression-audit-evidence/catalog-attempt1.txt",
+    "docs/regression-audit-evidence/catalog-attempt2.json",
+    "docs/regression-audit-evidence/catalog-attempt2.txt",
+    "docs/regression-audit-evidence/catalog-attempt3.json",
+    "docs/regression-audit-evidence/catalog-attempt3.txt",
+    "docs/regression-audit-evidence/catalog-attempt4.json",
+    "docs/regression-audit-evidence/catalog-attempt4.txt",
+    "docs/regression-audit-evidence/catalog-baseline.yaml",
+    "docs/regression-audit-evidence/changed-files.json",
+    "docs/regression-audit-evidence/classification-attempt1.json",
+    "docs/regression-audit-evidence/classification-attempt1.txt",
+    "docs/regression-audit-evidence/classification-attempt2.json",
+    "docs/regression-audit-evidence/classification-attempt2.txt",
+    "docs/regression-audit-evidence/configuration-results.json",
+    "docs/regression-audit-evidence/environment.json",
+    "docs/regression-audit-evidence/examples-after-tree.txt",
+    "docs/regression-audit-evidence/examples-audit.txt",
+    "docs/regression-audit-evidence/final-results-before-tree-audit.json",
+    "docs/regression-audit-evidence/final-results.json",
+    "docs/regression-audit-evidence/findings.json",
+    "docs/regression-audit-evidence/full-suite-attempt1.json",
+    "docs/regression-audit-evidence/full-suite-attempt1.txt",
+    "docs/regression-audit-evidence/full-suite-attempt2.json",
+    "docs/regression-audit-evidence/full-suite-attempt2.txt",
+    "docs/regression-audit-evidence/full-suite-before-tree-audit.xml",
+    "docs/regression-audit-evidence/full-suite.xml",
+    "docs/regression-audit-evidence/generated-attempt1.json",
+    "docs/regression-audit-evidence/generated-attempt1.txt",
+    "docs/regression-audit-evidence/generated-attempt2.json",
+    "docs/regression-audit-evidence/generated-attempt2.txt",
+    "docs/regression-audit-evidence/generated-attempt3.json",
+    "docs/regression-audit-evidence/generated-attempt3.txt",
+    "docs/regression-audit-evidence/generated-attempt4.json",
+    "docs/regression-audit-evidence/generated-attempt4.txt",
+    "docs/regression-audit-evidence/historical-package.json",
+    "docs/regression-audit-evidence/infrastructure-attempt1.json",
+    "docs/regression-audit-evidence/infrastructure-attempt1.txt",
+    "docs/regression-audit-evidence/infrastructure-attempt2.json",
+    "docs/regression-audit-evidence/infrastructure-attempt2.txt",
+    "docs/regression-audit-evidence/infrastructure-attempt3.json",
+    "docs/regression-audit-evidence/infrastructure-attempt3.txt",
+    "docs/regression-audit-evidence/infrastructure-attempt4.json",
+    "docs/regression-audit-evidence/infrastructure-attempt4.txt",
+    "docs/regression-audit-evidence/metric-investigation.json",
+    "docs/regression-audit-evidence/numerical-attempt1.json",
+    "docs/regression-audit-evidence/numerical-attempt1.txt",
+    "docs/regression-audit-evidence/numerical-attempt2.json",
+    "docs/regression-audit-evidence/numerical-attempt2.txt",
+    "docs/regression-audit-evidence/numerical-attempt3.json",
+    "docs/regression-audit-evidence/numerical-attempt3.txt",
+    "docs/regression-audit-evidence/numerical-attempt4.json",
+    "docs/regression-audit-evidence/numerical-attempt4.txt",
+    "docs/regression-audit-evidence/numerical-attempt5.json",
+    "docs/regression-audit-evidence/numerical-attempt5.txt",
+    "docs/regression-audit-evidence/preservation-results.json",
+    "docs/regression-audit-evidence/reference-attempt1.json",
+    "docs/regression-audit-evidence/reference-attempt1.txt",
+    "docs/regression-audit-evidence/reference-attempt2.json",
+    "docs/regression-audit-evidence/reference-attempt2.txt",
+    "docs/regression-audit-evidence/reference-attempt3.json",
+    "docs/regression-audit-evidence/reference-attempt3.txt",
+    "docs/regression-audit-evidence/reference-attempt4.json",
+    "docs/regression-audit-evidence/reference-attempt4.txt",
+    "docs/regression-audit-evidence/reference-attempt5.json",
+    "docs/regression-audit-evidence/reference-attempt5.txt",
+    "docs/regression-audit-evidence/reference-sources.json",
+    "docs/regression-audit-evidence/targeted-results.json",
+    "docs/regression-audit-evidence/test-matrix.json",
+    "docs/regression-audit-evidence/tree-underflow-investigation.json",
+    "docs/regression-audit-scope.md",
+    "docs/regression-evaluation.md",
+    "machine-learning/supervised-learning/regression/tests/test_completion_audit_oracles.py",
+    "machine-learning/supervised-learning/regression/tests/test_metrics_audit.py",
+    "scripts/package_regression_completion_audit.py",
+    "scripts/run_regression_audit_validation.py",
+    "scripts/verify_regression_completion_audit.py"
+  ],
+  "removed": [],
+  "relocated_approved_artifacts": [
+    {
+      "original": "artifacts/review-packages/regression/algorithm-atlas-regression-review.zip",
+      "preserved": "artifacts/review-packages/regression/history/approved-before-completion-audit-2026-10-28/algorithm-atlas-regression-review.zip",
+      "sha256": "8b435e18eea5e40c7f56875cc9ea9c8d1da995e2f181d97751d6d0136337e15b"
+    },
+    {
+      "original": "artifacts/review-packages/regression/algorithm-atlas-regression-review.zip.sha256",
+      "preserved": "artifacts/review-packages/regression/history/approved-before-completion-audit-2026-10-28/algorithm-atlas-regression-review.zip.sha256",
+      "sha256": "302ff3502244c357e23808e505dbfc71afd2eccbf31385c4fd8b39bb4112eb24"
+    },
+    {
+      "original": "artifacts/review-packages/regression/algorithm-atlas-regression-review.json",
+      "preserved": "artifacts/review-packages/regression/history/approved-before-completion-audit-2026-10-28/algorithm-atlas-regression-review.json",
+      "sha256": "47d6ef0f801aa09d88ff0519ddcf0c688b33b1173f40f8e039df5422d00b7c3d"
+    }
+  ],
+  "regenerated_active_artifacts": [
+    "artifacts/review-packages/regression/algorithm-atlas-regression-review.json",
+    "artifacts/review-packages/regression/algorithm-atlas-regression-review.zip",
+    "artifacts/review-packages/regression/algorithm-atlas-regression-review.zip.sha256"
+  ],
+  "self_hash": "Not embedded to avoid recursive self-hashing; final package manifest hashes this inventory.",
+  "preexisting_staged_diff": "unchanged"
+}

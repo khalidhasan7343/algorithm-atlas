@@ -1,0 +1,66 @@
+{
+  "baseline-B1": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/regression",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-28T22:29:15.114291+06:00",
+    "elapsed_seconds": 1.446,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/regression-audit-evidence/baseline-B1-attempt1.txt",
+    "summary": "214 passed in 1.21s"
+  },
+  "baseline-catalog": {
+    "command": [
+      "python",
+      "scripts/validate_catalog.py"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-28T22:29:15.803773+06:00",
+    "elapsed_seconds": 0.689,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/regression-audit-evidence/baseline-catalog-attempt1.txt",
+    "summary": "Validation passed. Test execution and external URLs are checked separately."
+  },
+  "baseline-generated": {
+    "command": [
+      "python",
+      "scripts/generate_catalog_docs.py",
+      "--check"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-28T22:29:15.966403+06:00",
+    "elapsed_seconds": 0.162,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/regression-audit-evidence/baseline-generated-attempt1.txt",
+    "summary": "Checked 162 catalog documentation pages; 0 changes."
+  }
+}

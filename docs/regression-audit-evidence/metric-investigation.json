@@ -1,0 +1,52 @@
+[
+  {
+    "name": "tiny nonconstant R2",
+    "y": [
+      2e-200,
+      4e-200,
+      6e-200
+    ],
+    "prediction": [
+      1e-200,
+      3e-200,
+      5e-200
+    ],
+    "expected": 0.625,
+    "observed": 1.0
+  },
+  {
+    "name": "tiny constant imperfect R2",
+    "y": [
+      1e-200,
+      1e-200,
+      1e-200
+    ],
+    "prediction": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "expected": 0.0,
+    "observed": 1.0
+  },
+  {
+    "name": "MSE intermediate overflow",
+    "expected": 4.8828124999999994e+306,
+    "observed": "inf"
+  },
+  {
+    "name": "constant-target mean rounding",
+    "y": [
+      0.1,
+      0.1,
+      0.1
+    ],
+    "prediction": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "expected": 0.0,
+    "observed": -5.192296858534829e+31
+  }
+]

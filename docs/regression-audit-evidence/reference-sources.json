@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-28 Asia/Dhaka",
+  "retrieved_primary_sources": [
+    "https://scikit-learn.org/1.8/modules/model_evaluation.html#regression-metrics",
+    "https://scikit-learn.org/1.8/modules/generated/sklearn.metrics.r2_score.html",
+    "https://numpy.org/doc/2.3/reference/generated/numpy.linalg.lstsq.html",
+    "https://scikit-learn.org/1.8/modules/linear_model.html",
+    "https://scikit-learn.org/1.8/modules/svm.html#regression",
+    "https://scikit-learn.org/1.8/modules/tree.html#regression"
+  ],
+  "method": "Official documentation retrieved; mathematical audit uses original derivations, closed forms and independent test libraries. No external source code/prose copied.",
+  "metric_reference_limits": "Reference comparisons use resolved scales; adversarial R2/overflow cases use closed-form values, not a second implementation with the same floating-point failure."
+}

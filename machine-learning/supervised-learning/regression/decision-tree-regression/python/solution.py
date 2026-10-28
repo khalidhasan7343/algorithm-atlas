@@ -37,14 +37,14 @@ class DecisionTreeRegression(_support.LinearPredictor):
         n_total = len(y)
         leaves, actual_depth = 0, 0
 
-        def best_split(indices, parent_error):
+        def best_split(indices, parent_error, normalized_targets):
             best = None
             tolerance = 32*np.finfo(float).eps*max(parent_error, np.finfo(float).tiny)
-            center = float(y[indices].mean())
             for feature in range(X.shape[1]):
-                order = indices[np.argsort(X[indices, feature], kind="mergesort")]
+                positions = np.argsort(X[indices, feature], kind="mergesort")
+                order = indices[positions]
                 values = X[order, feature]
-                centered_y = y[order] - center
+                centered_y = normalized_targets[positions]
                 sums = np.cumsum(centered_y)
                 squares = np.cumsum(centered_y*centered_y)
                 for left_count in range(leaf_size, len(order) - leaf_size + 1):
@@ -66,14 +66,30 @@ class DecisionTreeRegression(_support.LinearPredictor):
         def build(indices, depth):
             nonlocal leaves, actual_depth
             actual_depth = max(actual_depth, depth)
-            value = float(y[indices].mean())
-            centered = y[indices] - value
-            error = float(centered @ centered)
-            if depth >= depth_limit or len(indices) < 2*leaf_size or error == 0:
+            targets = y[indices]
+            pure = bool(np.all(targets == targets[0]))
+            value = float(targets[0]) if pure else float(targets.mean())
+            if pure:
+                leaves += 1
+                return Node(value, len(indices), 0.0)
+            centered = targets - value
+            scale = float(np.max(np.abs(centered)))
+            with np.errstate(under="ignore"):
+                normalized = centered / scale
+                normalized_error = float(normalized @ normalized)
+                # Diagnostic SSE can underflow in original squared units; it
+                # never determines purity or split selection.
+                error = float(np.square(scale * np.sqrt(normalized_error)))
+            if depth >= depth_limit or len(indices) < 2*leaf_size:
                 leaves += 1
                 return Node(value, len(indices), error)
-            split = best_split(indices, error)
-            if split is None or (error - split[0])/n_total < minimum_gain:
+            split = best_split(indices, normalized_error, normalized)
+            with np.errstate(under="ignore"):
+                root_gain = (scale * np.sqrt(max(0.0, normalized_error-split[0])/n_total)
+                             if split is not None else 0.0)
+            # Comparing square roots preserves the original target-squared
+            # minimum-gain units without forming scale**2 prematurely.
+            if split is None or root_gain < np.sqrt(minimum_gain):
                 leaves += 1
                 return Node(value, len(indices), error)
             _, feature, threshold = split

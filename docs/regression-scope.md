@@ -31,3 +31,9 @@ Finish and validate each internal batch before proceeding. The [ML standard](ml-
 retains all 25 lesson headings; section 14 explains optional C++ honestly. DSA
 still requires Python/C++17/C++20. See [the checkpoint](regression-checkpoints.md).
 Final owner approval is **pending**.
+
+## Subsequent owner approval — 2026-10-28
+
+The owner explicitly satisfied Phase 13's approval checkpoint and authorized only
+Phase 14 B2 Classification. The scope and historical evidence above remain the
+original handoff record; see [the live Classification checkpoint](classification-checkpoints.md).

@@ -31,10 +31,10 @@ Know binary trees, recursion, stable sorting and the mean's least-squares proper
 ## 8. Step-by-Step Working Process
 
 1. Validate and copy training arrays. Start at depth zero with all row indices.
-2. Compute the node target mean and squared error around that mean. Stop at max_depth, zero error or fewer than twice min_samples_leaf rows.
-3. Visit features in their original order. Stably sort node rows by the chosen feature, then compute prefix sums and squared sums of targets centered at the node mean. For k left rows, use Eleft=Σz²−(Σz)²/k and the corresponding suffix formula for the right child; clamp small negative variance expressions to zero.
+2. Detect a pure node using exact equality of its original targets, retaining their common value exactly. Otherwise compute the node mean, center targets and divide by their maximum absolute deviation. Stop at max_depth or fewer than twice min_samples_leaf rows; an underflowed squared-error diagnostic is never a purity test.
+3. Visit features in their original order. Stably sort node rows by the chosen feature, then compute prefix sums and squared sums of the normalized centered targets. This common positive scaling preserves candidate rankings while preventing tiny targets' squares from underflowing. For k left rows, use Eleft=Σz²−(Σz)²/k and the corresponding suffix formula for the right child; clamp small negative variance expressions to zero.
 4. Enumerate only distinct adjacent feature values and eligible child sizes. Prefer smaller total child error; differences within 32·machine_epsilon·parent_error are ties and retain the first feature/boundary encountered. Place t midway between adjacent values; if rounding reaches the upper endpoint use the lower endpoint so the split remains valid.
-5. Require gain=(Eparent−Eleft−Eright)/n_total ≥ min_impurity_decrease. This normalization uses the original training sample count at every depth. Zero-gain splits are permitted when the threshold is zero, allowing interactions such as XOR to become visible at a later level.
+5. Require original-unit gain=(Eparent−Eleft−Eright)/n_total ≥ min_impurity_decrease. With node target scale s and normalized errors, compare s·sqrt(max(0,Eparent_normalized−Echildren_normalized)/n_total) against sqrt(min_impurity_decrease). This preserves the threshold's original squared-target units without prematurely squaring s. The original training sample count is used at every depth. Zero-gain splits remain permitted when the threshold is zero, allowing interactions such as XOR to become visible at a later level.
 6. Recursively build children, retain frozen mean-leaf nodes and commit only after the entire fit succeeds. Prediction routes each row down the completed tree.
 
 There is no iterative loss convergence test. `converged_=True` records completed bounded construction and does not assert global tree optimality. Depth/leaf constraints guarantee termination; finite precision limits close split rankings.
@@ -43,15 +43,16 @@ There is no iterative loss convergence test. `converged_=True` records completed
 
 ```text
 BUILD(rows, depth):
-  value = mean(y[rows]); error = sum((y[rows]-value)**2)
+  if original targets are equal: return their exact common-value leaf
+  value = mean(y[rows]); scale targets by their maximum absolute deviation
   if depth limit, pure target or too few rows: return leaf(value)
   best = none
   for feature in original order:
-    stable-sort rows; make centered prefix sums
+    stable-sort rows; make normalized centered prefix sums
     for eligible boundary between distinct values:
       score = left_squared_error + right_squared_error
       retain first boundary with a materially better score
-  if no split or normalized gain too small: return leaf(value)
+  if no split or original-unit root-gain too small: return leaf(value)
   return node(feature, threshold, BUILD(left,depth+1), BUILD(right,depth+1))
 PREDICT(row): follow <= threshold left, otherwise right, until a leaf
 ```

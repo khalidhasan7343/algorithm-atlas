@@ -1,0 +1,70 @@
+{
+  "tests": 2682,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "dsa": {
+    "tests": 1687,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "python": 1149,
+    "cpp17": 269,
+    "cpp20": 269
+  },
+  "regression": {
+    "tests": 281,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "by_module": {
+      "machine-learning.supervised-learning.regression.decision-tree-regression.tests.test_python": 17,
+      "machine-learning.supervised-learning.regression.elastic-net.tests.test_python": 19,
+      "machine-learning.supervised-learning.regression.lasso-regression.tests.test_python": 20,
+      "machine-learning.supervised-learning.regression.linear-regression.tests.test_python": 15,
+      "machine-learning.supervised-learning.regression.polynomial-regression.tests.test_python": 12,
+      "machine-learning.supervised-learning.regression.ridge-regression.tests.test_python": 17,
+      "machine-learning.supervised-learning.regression.support-vector-regression.tests.test_python": 18,
+      "machine-learning.supervised-learning.regression.tests.test_completion_audit_oracles": 8,
+      "machine-learning.supervised-learning.regression.tests.test_contracts": 96,
+      "machine-learning.supervised-learning.regression.tests.test_metrics_audit": 59
+    }
+  },
+  "classification": {
+    "tests": 398,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "by_module": {
+      "machine-learning.supervised-learning.classification.bernoulli-naive-bayes.tests.test_python": 14,
+      "machine-learning.supervised-learning.classification.c4-5-decision-trees.tests.test_python": 10,
+      "machine-learning.supervised-learning.classification.cart-decision-trees.tests.test_python": 11,
+      "machine-learning.supervised-learning.classification.gaussian-naive-bayes.tests.test_python": 17,
+      "machine-learning.supervised-learning.classification.id3-decision-trees.tests.test_python": 11,
+      "machine-learning.supervised-learning.classification.k-nearest-neighbors.tests.test_python": 14,
+      "machine-learning.supervised-learning.classification.linear-discriminant-analysis.tests.test_python": 14,
+      "machine-learning.supervised-learning.classification.logistic-regression.tests.test_python": 22,
+      "machine-learning.supervised-learning.classification.multinomial-naive-bayes.tests.test_python": 17,
+      "machine-learning.supervised-learning.classification.quadratic-discriminant-analysis.tests.test_python": 16,
+      "machine-learning.supervised-learning.classification.support-vector-machines.tests.test_python": 20,
+      "machine-learning.supervised-learning.classification.tests.test_contracts": 220,
+      "machine-learning.supervised-learning.classification.tests.test_metrics_and_cross_models": 12
+    }
+  },
+  "infrastructure": {
+    "tests": 316,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "source": "docs/regression-audit-evidence/full-suite.xml",
+  "numerical_selection": {
+    "passed": 95,
+    "deselected": 186
+  },
+  "reference_selection": {
+    "passed": 42,
+    "deselected": 239
+  },
+  "selections_overlap": "Numerical and reference selections are subsets, not additive totals."
+}

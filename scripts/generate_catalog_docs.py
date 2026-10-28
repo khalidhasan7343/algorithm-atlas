@@ -204,7 +204,9 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
             searching, backtracking, divide, dynamic, tree, strings, bits,
             number_window, graph, greedy, state.get('scope') == 'Sorting category only',
         ))
-        label = 'ML regression' if ml else 'number theory/window' if number_window else 'bit manipulation' if bits else 'string algorithms' if strings else 'tree algorithms' if tree else 'graph algorithms' if graph else 'greedy' if greedy else 'dynamic programming' if dynamic else 'divide/conquer' if divide else 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
+        ml_category = next((c for c in catalog['categories'] if c['id'] == state.get('category')), None)
+        ml_slug = Path(ml_category['path']).name if ml_category else 'regression'
+        label = f'ML {ml_slug}' if ml else 'number theory/window' if number_window else 'bit manipulation' if bits else 'string algorithms' if strings else 'tree algorithms' if tree else 'graph algorithms' if graph else 'greedy' if greedy else 'dynamic programming' if dynamic else 'divide/conquer' if divide else 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
         batches = state.get('completed_batches', [])
         lines.append(f'Validated {label} batches: ' +
                      (', '.join(str(batch) for batch in batches) if batches else 'none yet') + '.')
@@ -220,12 +222,12 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
             lines += ['', state['approval'], '',
                       'Python and numerical tests are required for classical ML; optional C++ is '
                       'recorded honestly. DSA retains both languages and C++17/C++20 tests. '
-                      'The seven Regression topics form the only authorized ML category. '
+                      f'The active authorized ML category is {ml_category["name"] if ml_category else state["scope"]}. '
                       'Each internal batch must pass before the next; final owner approval is pending.', '',
                       'Historical Phase 11/12 and DSA final-audit approvals are not inferred from '
                       'ML authorization. Preserve their reports, execution evidence and archives. '
-                      'Stop after the Regression review report and verified ZIP/checksum/JSON. '
-                      'No second ML category, Deep Learning, AI, commit or push is authorized.']
+                      'Stop after the current category review report and verified ZIP/checksum/JSON. '
+                      'No next ML category, Deep Learning, AI, commit or push is authorized.']
         elif number_window:
             lines += ['', 'Phase 10 is officially owner-approved on 2026-10-24 (Asia/Dhaka). '
                       'The owner jointly authorized Phase 11 Number Theory (seven A9 canonicals) '
@@ -389,7 +391,19 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
         'record future scope; completed topics have their full lessons and tests.', '',
     ]
     groups = [(None, category['items'])]
-    if category['id'] == 'B1' and ml_active:
+    regression_audit = (development or {}).get('current_review', {}).get('id', '').startswith('regression-completion-audit')
+    if category['id'] == 'B1' and ml_active and regression_audit:
+        lines += ['', 'All seven existing Regression solvers are retained for the authorized Phase 13 completion audit. '
+                  'Previous work is owner-approved; this new review remains pending. Read '
+                  + link(path, ROOT / 'docs/regression-audit-scope.md', 'the audit scope') + ', '
+                  + link(path, ROOT / 'docs/regression-audit-checkpoints.md', 'the audit checkpoint') + ' and '
+                  + link(path, ROOT / 'docs/regression-evaluation.md', 'the MSE/RMSE/MAE/R² contracts') + '. '
+                  'Python/numerical tests are required and C++ remains optional. The fixed-split experiment is '
+                  + link(path, ROOT / 'machine-learning/supervised-learning/regression/experiments/benchmark.py', 'benchmark.py')
+                  + '. No other category is authorized.']
+        if (development or {}).get('completion_report'):
+            lines += ['', 'See ' + link(path, ROOT / development['completion_report'], 'the current audit report') + '.']
+    elif category['id'] == 'B1' and ml_active:
         lines += ['', 'Phase 13 implements these seven canonicals in three sequential batches. '
                   'Python/NumPy and mathematical/numerical tests are required; C++ is optional and absent. '
                   'Owner approval remains pending. Read '
@@ -402,6 +416,26 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
         if (development or {}).get('completion_report'):
             lines += ['', 'See '
                       + link(path, ROOT / development['completion_report'], 'the review report') + '.']
+    if category['id'] == 'B1' and ml_active and not regression_audit and (development or {}).get('phase_records', {}).get('13', {}).get('owner_approval') == 'approved':
+        lines += ['', 'Phase 13 Regression is explicitly owner-approved on 2026-10-28. '
+                  'Its seven canonical lessons/implementations remain preserved. Phase 14 '
+                  'Classification is the only newly authorized category; see '
+                  + link(path, ROOT / 'docs/classification-checkpoints.md', 'the current checkpoint') + '.']
+    if category['id'] == 'B2' and ml_active and (development or {}).get('category') == 'B2':
+        lines += ['', 'Phase 14 covers these eleven canonicals in four sequential batches. '
+                  'Python/NumPy, mathematical/numerical tests and exact 25-section lessons are required; '
+                  'C++ is optional and absent. Owner approval remains pending. Read '
+                  + link(path, ROOT / 'docs/classification-scope.md', 'the scope') + ', '
+                  + link(path, ROOT / 'docs/classification-conventions.md', 'the contracts') + ' and '
+                  + link(path, ROOT / 'docs/classification-checkpoints.md', 'the checkpoints') + '. '
+                  'The domain-appropriate held-out experiment is '
+                  + link(path, ROOT / 'machine-learning/supervised-learning/classification/experiments/benchmark.py', 'benchmark.py')
+                  + '. No B3 or other category is authorized.']
+        if (development or {}).get('completion_report'):
+            lines += ['', 'See ' + link(path, ROOT / development['completion_report'], 'the review report') + '.']
+    elif category['id'] == 'B2' and regression_audit:
+        lines += ['', 'Phase 14 Classification is owner-approved. Its eleven implementations, tests and lessons '
+                  'are preserved during the B1 Regression audit; no new Classification implementation is authorized.']
     if category['id'] == 'A11':
         graph_ids = {'dijkstra', 'prim', 'kruskal'}
         owned = [item for item in category['items'] if item['algorithm'] not in graph_ids]
@@ -465,8 +499,8 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
                       'Phase 12 implements these three Two Pointers and Sliding Window canonicals.'), '',
                   'Read ' + link(path, ROOT / f'docs/{slug}-conventions.md', 'the contracts')
                   + ' and ' + link(path, ROOT / f'docs/{slug}-checkpoints.md', 'the independent checkpoint')
-                  + '. Both categories are jointly authorized for implementation, with separate '
-                  'pending owner approvals, reports and review packages. '
+                  + ('. Both categories are owner-approved; their historical reports/packages retain their original handoff status. '
+                     if regression_audit else '. Both categories are jointly authorized for implementation, with separate pending owner approvals, reports and review packages. ')
                   + ('The owner subsequently authorized Phase 13 Regression; earlier approvals remain independent.'
                      if ml_active else 'No Phase 13 is authorized.')]
     if category['id'] == 'A11':

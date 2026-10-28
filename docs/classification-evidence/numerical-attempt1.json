@@ -1,0 +1,25 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/supervised-learning/classification",
+    "-m",
+    "numerical",
+    "-q"
+  ],
+  "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+  "timestamp": "2026-10-28T10:09:47.577104+06:00",
+  "elapsed_seconds": 0.774,
+  "returncode": 0,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "environment": {
+    "CXX": null,
+    "PYTHONHASHSEED": "0",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "log": "docs/classification-evidence/numerical-attempt1.txt",
+  "summary": "54 passed, 344 deselected in 0.61s"
+}

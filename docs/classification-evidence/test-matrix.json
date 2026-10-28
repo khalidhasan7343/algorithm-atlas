@@ -1,0 +1,51 @@
+{
+  "total": 2615,
+  "passed": 2615,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "dsa": {
+    "total": 1687,
+    "python": 1149,
+    "cpp17": 269,
+    "cpp20": 269,
+    "canonicals": 97,
+    "status": "passed"
+  },
+  "B1": {
+    "total": 214,
+    "canonicals": 7,
+    "status": "passed"
+  },
+  "B2": {
+    "total": 398,
+    "canonicals": 11,
+    "status": "passed",
+    "per_topic": {
+      "bernoulli-naive-bayes": 14,
+      "c4-5-decision-trees": 10,
+      "cart-decision-trees": 11,
+      "gaussian-naive-bayes": 17,
+      "id3-decision-trees": 11,
+      "k-nearest-neighbors": 14,
+      "linear-discriminant-analysis": 14,
+      "logistic-regression": 22,
+      "multinomial-naive-bayes": 17,
+      "quadratic-discriminant-analysis": 16,
+      "support-vector-machines": 20,
+      "shared-contracts/metrics/cross-models": 232
+    },
+    "numerical": 54,
+    "reference": 45
+  },
+  "infrastructure": {
+    "total": 316,
+    "python": 312,
+    "cpp17": 2,
+    "cpp20": 2
+  },
+  "elapsed_seconds": 438.84,
+  "junit": "docs/classification-evidence/full-suite.xml",
+  "phase13_owner_approval": "approved",
+  "phase14_owner_approval": "pending"
+}

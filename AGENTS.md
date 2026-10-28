@@ -6,9 +6,9 @@ Read `README.md`, `CONTRIBUTING.md`, `docs/progress.md`, and the relevant record
 
 ## Mandatory phase checkpoint
 
-The owner confirmed DSA implementation complete and authorized **Phase 13 — ML Foundation + B1 Supervised Learning — Regression** on **2026-10-27 (Asia/Dhaka)**. This supersedes the earlier stop-before-Phase-13 boundary. Implement only the seven canonicals in the [Regression scope lock](docs/regression-scope.md), in its three sequential batches. Preserve 35 categories, 256 memberships, 235 canonicals and prior DSA source/history.
+The owner explicitly approved all previously completed work and authorized a **Phase 13 — B1 Regression completion audit** on **2026-10-28 (Asia/Dhaka)**. Retain the seven existing implementations; audit and fix only confirmed Regression defects under [the audit scope](docs/regression-audit-scope.md). Preserve approved Classification/DSA implementations, all historical evidence/packages and the pre-existing working-tree/staged changes. Inventory stays 35/256/235.
 
-Classical ML requires Python, meaningful numerical tests and the exact 25-section lesson; C++ is optional. DSA still requires Python/C++, both test files, and C++17/C++20. Follow the [ML standard](docs/ml-development.md) and [Regression checkpoint](docs/regression-checkpoints.md). Final owner approval is pending; earlier DSA final-audit and Phase 11/12 approvals are not inferred. Stop after the Regression report and verified ZIP/checksum/JSON. No second ML category, Deep Learning, AI, commit, push or publication. Never set Git identity from public email.
+Python/numerical tests and exact 25-section lessons remain mandatory for ML, with C++ optional. DSA retains Python/C++ and both C++17/C++20. Follow [the audit checkpoint](docs/regression-audit-checkpoints.md). Prior owner approval is recorded separately from the **new Regression review, which remains pending**. Stop after the regenerated report and verified ZIP/checksum/JSON. No other category, commit, push or release. Never set Git identity from public email.
 
 ## Work and validation
 

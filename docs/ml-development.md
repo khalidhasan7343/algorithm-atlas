@@ -1,7 +1,9 @@
 # Machine Learning development standard
 
 Maintainer: **MD.Khalid Hasan**. [MIT License](../LICENSE).
-Phase 13 implements only [B1 Regression](regression-scope.md).
+All previously completed work is owner-approved. Current authorization is only
+the [B1 Regression completion audit](regression-audit-scope.md); the revised
+review/package remains pending. See [evaluation contracts](regression-evaluation.md).
 
 ## Track and language policy
 
@@ -91,4 +93,11 @@ Examples and modest benchmarks are local and reproducible. Report training and
 test metrics separately; no uncontrolled performance-superiority claims or CI
 wall-clock thresholds. Test results, audit results and owner approval are distinct.
 Final review uses the existing report/package folders and stops for explicit owner
-approval before any second ML category.
+approval before any next ML category.
+
+## Classification extension — Phase 14
+
+The [classification contracts](classification-conventions.md) define strict label
+families, binary versus multiclass APIs, class/probability ordering, numeric and
+categorical domains, convergence/errors, metrics and held-out evaluation. They
+extend this Python-first foundation without changing B1 or DSA implementations.

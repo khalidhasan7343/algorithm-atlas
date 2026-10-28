@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "inventory": {
+    "categories": 35,
+    "memberships": 256,
+    "canonicals": 235
+  },
+  "algorithms": 7,
+  "retained": 7,
+  "new_implementations": 0,
+  "protected_preexisting_files": 1747,
+  "historical_artifacts_omitted_from_export": [],
+  "classification_canonicals": "all eleven source/tests/lessons byte-identical",
+  "dsa_canonicals": "all 97 source/tests/lessons byte-identical",
+  "six_fitting_kernels": "byte-identical",
+  "CART": "confirmed underflow repair only",
+  "previous_work_owner_approval": "approved",
+  "current_review_owner_approval": "pending",
+  "report_tracking": "tracked/unignored; original staged diff preserved exactly",
+  "lessons": [
+    {
+      "id": "linear-regression",
+      "exact_sections": 25,
+      "existing_implementation": "retained",
+      "fitting_kernel": "byte-identical",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "ridge-regression",
+      "exact_sections": 25,
+      "existing_implementation": "retained",
+      "fitting_kernel": "byte-identical",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "lasso-regression",
+      "exact_sections": 25,
+      "existing_implementation": "retained",
+      "fitting_kernel": "byte-identical",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "elastic-net",
+      "exact_sections": 25,
+      "existing_implementation": "retained",
+      "fitting_kernel": "byte-identical",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "polynomial-regression",
+      "exact_sections": 25,
+      "existing_implementation": "retained",
+      "fitting_kernel": "byte-identical",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "support-vector-regression",
+      "exact_sections": 25,
+      "existing_implementation": "retained",
+      "fitting_kernel": "byte-identical",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "decision-tree-regression",
+      "exact_sections": 25,
+      "existing_implementation": "retained",
+      "fitting_kernel": "targeted CART underflow repair",
+      "cpp": "optional, absent"
+    }
+  ]
+}

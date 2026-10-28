@@ -6,19 +6,21 @@ Predicting discrete labels and probabilities with clearly specified feature assu
 
 This category preserves **11 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
+
+Phase 14 Classification is owner-approved. Its eleven implementations, tests and lessons are preserved during the B1 Regression audit; no new Classification implementation is authorized.
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Logistic Regression | [logistic-regression](logistic-regression/README.md) | planned |
-| K-Nearest Neighbors (KNN) | [k-nearest-neighbors](k-nearest-neighbors/README.md) | planned |
-| Gaussian Naive Bayes | [gaussian-naive-bayes](gaussian-naive-bayes/README.md) | planned |
-| Multinomial Naive Bayes | [multinomial-naive-bayes](multinomial-naive-bayes/README.md) | planned |
-| Bernoulli Naive Bayes | [bernoulli-naive-bayes](bernoulli-naive-bayes/README.md) | planned |
-| Support Vector Machines (SVM) | [support-vector-machines](support-vector-machines/README.md) | planned |
-| CART Decision Trees | [cart-decision-trees](cart-decision-trees/README.md) | planned |
-| ID3 Decision Trees | [id3-decision-trees](id3-decision-trees/README.md) | planned |
-| C4.5 Decision Trees | [c4-5-decision-trees](c4-5-decision-trees/README.md) | planned |
-| Linear Discriminant Analysis (LDA) | [linear-discriminant-analysis](linear-discriminant-analysis/README.md) | planned |
-| Quadratic Discriminant Analysis (QDA) | [quadratic-discriminant-analysis](quadratic-discriminant-analysis/README.md) | planned |
+| Logistic Regression | [logistic-regression](logistic-regression/README.md) | complete |
+| K-Nearest Neighbors (KNN) | [k-nearest-neighbors](k-nearest-neighbors/README.md) | complete |
+| Gaussian Naive Bayes | [gaussian-naive-bayes](gaussian-naive-bayes/README.md) | complete |
+| Multinomial Naive Bayes | [multinomial-naive-bayes](multinomial-naive-bayes/README.md) | complete |
+| Bernoulli Naive Bayes | [bernoulli-naive-bayes](bernoulli-naive-bayes/README.md) | complete |
+| Support Vector Machines (SVM) | [support-vector-machines](support-vector-machines/README.md) | complete |
+| CART Decision Trees | [cart-decision-trees](cart-decision-trees/README.md) | complete |
+| ID3 Decision Trees | [id3-decision-trees](id3-decision-trees/README.md) | complete |
+| C4.5 Decision Trees | [c4-5-decision-trees](c4-5-decision-trees/README.md) | complete |
+| Linear Discriminant Analysis (LDA) | [linear-discriminant-analysis](linear-discriminant-analysis/README.md) | complete |
+| Quadratic Discriminant Analysis (QDA) | [quadratic-discriminant-analysis](quadratic-discriminant-analysis/README.md) | complete |
 
 ## Learning and contribution scope
 

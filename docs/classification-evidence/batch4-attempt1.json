@@ -1,0 +1,24 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/supervised-learning/classification/linear-discriminant-analysis",
+    "machine-learning/supervised-learning/classification/quadratic-discriminant-analysis",
+    "-q"
+  ],
+  "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+  "timestamp": "2026-10-28T10:04:59.697103+06:00",
+  "elapsed_seconds": 1.028,
+  "returncode": 1,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "environment": {
+    "CXX": null,
+    "PYTHONHASHSEED": "0",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "log": "docs/classification-evidence/batch4-attempt1.txt",
+  "summary": "1 failed, 29 passed in 0.79s"
+}

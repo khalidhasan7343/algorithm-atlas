@@ -1,0 +1,155 @@
+{
+  "status": "passed",
+  "inventory": {
+    "categories": 35,
+    "memberships": 256,
+    "canonicals": 235
+  },
+  "dsa_canonicals": 97,
+  "B1_canonicals": 7,
+  "protected_files_verified": 1383,
+  "historical_artifacts_excluded_from_source_export": [],
+  "B1_DSA_source": "byte-identical",
+  "out_of_scope_algorithm_records": "identical",
+  "phase13_owner_approval": "approved",
+  "phase14_owner_approval": "pending",
+  "phase11_phase12_records": "unchanged",
+  "lessons": [
+    {
+      "id": "logistic-regression",
+      "sections": 25,
+      "python": "tested",
+      "cpp": "optional, absent",
+      "imports": [
+        "importlib.util",
+        "pathlib",
+        "sys",
+        "numpy"
+      ]
+    },
+    {
+      "id": "k-nearest-neighbors",
+      "sections": 25,
+      "python": "tested",
+      "cpp": "optional, absent",
+      "imports": [
+        "importlib.util",
+        "pathlib",
+        "sys",
+        "numpy"
+      ]
+    },
+    {
+      "id": "gaussian-naive-bayes",
+      "sections": 25,
+      "python": "tested",
+      "cpp": "optional, absent",
+      "imports": [
+        "importlib.util",
+        "pathlib",
+        "sys",
+        "numpy"
+      ]
+    },
+    {
+      "id": "multinomial-naive-bayes",
+      "sections": 25,
+      "python": "tested",
+      "cpp": "optional, absent",
+      "imports": [
+        "importlib.util",
+        "pathlib",
+        "sys",
+        "numpy"
+      ]
+    },
+    {
+      "id": "bernoulli-naive-bayes",
+      "sections": 25,
+      "python": "tested",
+      "cpp": "optional, absent",
+      "imports": [
+        "importlib.util",
+        "pathlib",
+        "sys",
+        "numpy"
+      ]
+    },
+    {
+      "id": "support-vector-machines",
+      "sections": 25,
+      "python": "tested",
+      "cpp": "optional, absent",
+      "imports": [
+        "importlib.util",
+        "pathlib",
+        "sys",
+        "numpy"
+      ]
+    },
+    {
+      "id": "cart-decision-trees",
+      "sections": 25,
+      "python": "tested",
+      "cpp": "optional, absent",
+      "imports": [
+        "dataclasses",
+        "importlib.util",
+        "pathlib",
+        "sys",
+        "numpy"
+      ]
+    },
+    {
+      "id": "id3-decision-trees",
+      "sections": 25,
+      "python": "tested",
+      "cpp": "optional, absent",
+      "imports": [
+        "dataclasses",
+        "importlib.util",
+        "pathlib",
+        "sys",
+        "numpy"
+      ]
+    },
+    {
+      "id": "c4-5-decision-trees",
+      "sections": 25,
+      "python": "tested",
+      "cpp": "optional, absent",
+      "imports": [
+        "dataclasses",
+        "importlib.util",
+        "pathlib",
+        "sys",
+        "numpy"
+      ]
+    },
+    {
+      "id": "linear-discriminant-analysis",
+      "sections": 25,
+      "python": "tested",
+      "cpp": "optional, absent",
+      "imports": [
+        "importlib.util",
+        "pathlib",
+        "sys",
+        "numpy"
+      ]
+    },
+    {
+      "id": "quadratic-discriminant-analysis",
+      "sections": 25,
+      "python": "tested",
+      "cpp": "optional, absent",
+      "imports": [
+        "importlib.util",
+        "pathlib",
+        "sys",
+        "numpy"
+      ]
+    }
+  ],
+  "report_tracking": "not requested"
+}

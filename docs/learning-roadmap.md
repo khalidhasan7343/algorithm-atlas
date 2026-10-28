@@ -2,7 +2,7 @@
 
 Progress from foundational problem solving to specialized AI topics. These levels describe a study order, not repository development phases: learning a later level does not authorize implementation outside the approved development phase.
 
-**Current scope:** the owner authorized Phase 13 ML Foundation and the first catalog ML category, B1 Supervised Learning — Regression, on 2026-10-27 after confirming DSA implementation complete. Follow the [scope lock](regression-scope.md), [ML standard](ml-development.md) and [Regression checkpoint](regression-checkpoints.md). Do not begin Classification, Deep Learning or AI. Earlier approval records remain historical and are not silently promoted.
+**Current scope:** all previous work is owner-approved. The owner authorized only a B1 Regression completion audit, retaining its seven implementations. Follow [the audit scope](regression-audit-scope.md), [checkpoint](regression-audit-checkpoints.md) and [evaluation contracts](regression-evaluation.md). New review approval is pending; no other ML, Deep Learning or AI category is authorized.
 
 ## Level 1 — DSA Foundations
 

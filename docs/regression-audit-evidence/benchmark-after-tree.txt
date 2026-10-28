@@ -1,0 +1,194 @@
+{
+  "seed": 13027,
+  "train_samples": 48,
+  "held_out_samples": 24,
+  "features": 2,
+  "response": "1 + .8*x0 - .3*x1 + .25*x0**2 + Normal(0,.08)",
+  "preprocessing": {
+    "fitted_on": "training rows only",
+    "mean": [
+      0.09280028175598826,
+      0.17649409277630923
+    ],
+    "scale": [
+      1.1941013339815838,
+      1.074717788284794
+    ]
+  },
+  "hyperparameter_selection": "Fixed in source; no tuning on held-out targets",
+  "evaluation": "One synthetic split; timings observational, no superiority claim",
+  "results": [
+    {
+      "algorithm": "linear-regression",
+      "parameters": {},
+      "fit_seconds": 0.000460749986814335,
+      "train": {
+        "mse": 0.09095072990753515,
+        "rmse": 0.30158038714003793,
+        "mae": 0.2525918181791148,
+        "r2": 0.916067298919265
+      },
+      "held_out": {
+        "mse": 0.0819930344580617,
+        "rmse": 0.28634425864344076,
+        "mae": 0.2523262183202049,
+        "r2": 0.9257166007734631
+      },
+      "n_iter": 1,
+      "duality_gap": null,
+      "kkt_violation": null,
+      "tree_depth": null,
+      "tree_leaves": null
+    },
+    {
+      "algorithm": "ridge-regression",
+      "parameters": {
+        "alpha": 1.0
+      },
+      "fit_seconds": 0.00031141602084971964,
+      "train": {
+        "mse": 0.09135962392593161,
+        "rmse": 0.30225754568898955,
+        "mae": 0.2513307269470756,
+        "r2": 0.9156899563794672
+      },
+      "held_out": {
+        "mse": 0.0858577424735007,
+        "rmse": 0.29301491851696,
+        "mae": 0.25675430795558796,
+        "r2": 0.92221528324933
+      },
+      "n_iter": 1,
+      "duality_gap": null,
+      "kkt_violation": null,
+      "tree_depth": null,
+      "tree_leaves": null
+    },
+    {
+      "algorithm": "polynomial-regression",
+      "parameters": {
+        "degree": 2
+      },
+      "fit_seconds": 0.00048170899390242994,
+      "train": {
+        "mse": 0.0042150148439290885,
+        "rmse": 0.06492314567185642,
+        "mae": 0.04902140614904872,
+        "r2": 0.9961102282377939
+      },
+      "held_out": {
+        "mse": 0.006557190035272059,
+        "rmse": 0.08097647828395638,
+        "mae": 0.06451569367672819,
+        "r2": 0.9940593689645244
+      },
+      "n_iter": 1,
+      "duality_gap": null,
+      "kkt_violation": null,
+      "tree_depth": null,
+      "tree_leaves": null
+    },
+    {
+      "algorithm": "lasso-regression",
+      "parameters": {
+        "alpha": 0.02
+      },
+      "fit_seconds": 0.00033837498631328344,
+      "train": {
+        "mse": 0.09174386198009961,
+        "rmse": 0.30289249244591654,
+        "mae": 0.252379475160344,
+        "r2": 0.9153353672763658
+      },
+      "held_out": {
+        "mse": 0.08600436995888693,
+        "rmse": 0.2932650165957183,
+        "mae": 0.25542456170163014,
+        "r2": 0.9220824428427453
+      },
+      "n_iter": 3,
+      "duality_gap": null,
+      "kkt_violation": 1.5957304921876414e-11,
+      "tree_depth": null,
+      "tree_leaves": null
+    },
+    {
+      "algorithm": "elastic-net",
+      "parameters": {
+        "alpha": 0.04,
+        "l1_ratio": 0.5
+      },
+      "fit_seconds": 0.00031412497628480196,
+      "train": {
+        "mse": 0.09306560970343497,
+        "rmse": 0.3050665660203277,
+        "mae": 0.25117196040179596,
+        "r2": 0.9141156095385266
+      },
+      "held_out": {
+        "mse": 0.09051417374765673,
+        "rmse": 0.30085573577323854,
+        "mae": 0.25961876316071225,
+        "r2": 0.9179966865649253
+      },
+      "n_iter": 3,
+      "duality_gap": null,
+      "kkt_violation": 1.4459981823033985e-11,
+      "tree_depth": null,
+      "tree_leaves": null
+    },
+    {
+      "algorithm": "support-vector-regression",
+      "parameters": {
+        "C": 5.0,
+        "epsilon": 0.05,
+        "kernel": "rbf",
+        "gamma": 0.5,
+        "max_iter": 30000
+      },
+      "fit_seconds": 0.03462337498785928,
+      "train": {
+        "mse": 0.003964284303243431,
+        "rmse": 0.0629625627118483,
+        "mae": 0.047348904205352024,
+        "r2": 0.9963416116642334
+      },
+      "held_out": {
+        "mse": 0.010998518058187837,
+        "rmse": 0.10487381969866377,
+        "mae": 0.08333283255809489,
+        "r2": 0.990035649818101
+      },
+      "n_iter": 1440,
+      "duality_gap": 2.038233631651565e-06,
+      "kkt_violation": null,
+      "tree_depth": null,
+      "tree_leaves": null
+    },
+    {
+      "algorithm": "decision-tree-regression",
+      "parameters": {
+        "max_depth": 4,
+        "min_samples_leaf": 3
+      },
+      "fit_seconds": 0.002353791001951322,
+      "train": {
+        "mse": 0.028741351400065434,
+        "rmse": 0.16953274433001264,
+        "mae": 0.140704293518531,
+        "r2": 0.9734764167569567
+      },
+      "held_out": {
+        "mse": 0.13767197198092923,
+        "rmse": 0.37104173886630226,
+        "mae": 0.3292733521010075,
+        "r2": 0.8752730384409079
+      },
+      "n_iter": null,
+      "duality_gap": null,
+      "kkt_violation": null,
+      "tree_depth": 4,
+      "tree_leaves": 11
+    }
+  ]
+}

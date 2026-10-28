@@ -1,322 +1,322 @@
-# Phase 13 — Regression review report
+# Phase 13 B1 Regression — completion audit review
 
-Owner and maintainer: **MD.Khalid Hasan** · Repository: [algorithm-atlas](https://github.com/khalidhasan7343/algorithm-atlas) · [MIT License](../../../LICENSE).
+Owner/maintainer: **MD.Khalid Hasan** · [Algorithm Atlas](https://github.com/khalidhasan7343/algorithm-atlas) · [MIT](../../../LICENSE).
+Prepared 2026-10-28 (Asia/Dhaka). **Current review approval: pending.**
 
-Started 2026-10-27; finalized 2026-10-28 (Asia/Dhaka). **Owner approval: pending.** This report covers
-ML foundation and the first ML category only. Its final execution totals and
-package verification are recorded below and in the linked evidence.
+## 1. Phase identity and authorization
 
-## 1. Phase and authorization
+This is a completion/verification audit of **Phase 13 — B1 Supervised Learning — Regression**.
+The owner explicitly approved all previously completed work and authorized this
+Regression audit. Earlier Phase 13, Phase 14 Classification and DSA work is
+owner-approved; approval of these newly changed Regression artifacts remains
+pending. This is not a new sequential phase or permission to start another category.
+No commit, push, release, other ML category, Deep Learning or AI work is authorized.
 
-**Phase 13 — ML Foundation and Supervised Learning — Regression** follows the
-existing Phases 11/12 sequence. The owner's new request confirms DSA implementation
-complete and authorizes ML foundation plus B1 only, superseding the former
-no-Phase-13 boundary. It does not retroactively change the conditional DSA audit
-recommendation or the independent pending approvals for Phases 11 and 12.
-No second ML category, Deep Learning, AI, commit, push or release is authorized.
+## 2. Exact catalog scope and inventory
 
-## 2. Category identity
+Current catalog B1 is named **Supervised Learning — Regression**, slug `regression`,
+under `machine-learning/supervised-learning/regression/`. Its seven distinct
+canonicals have no cross-category memberships. All seven already had solutions,
+examples, tests and exact 25-section lessons before this audit.
 
-Catalog category **B1**, **Supervised Learning — Regression**, slug `regression`,
-path `machine-learning/supervised-learning/regression`. It is the first ML category
-in catalog order. Baseline inspection found seven planned canonicals, no existing
-implementations and no cross-category memberships for these seven IDs. The
-[scope table](../../regression-scope.md) was established before implementation.
+| Canonical ID | Existing implementation retained | Mathematical method |
+| --- | --- | --- |
+| linear-regression | yes; fitting kernel unchanged | Centered minimum-norm least squares |
+| ridge-regression | yes; fitting kernel unchanged | Augmented least squares, summed L2 objective |
+| lasso-regression | yes; fitting kernel unchanged | Mean-loss L1 cyclic coordinate descent |
+| elastic-net | yes; fitting kernel unchanged | Explicit L1/L2 cyclic coordinate updates |
+| polynomial-regression | yes; fitting kernel unchanged | Graded monomials, canonical OLS reuse |
+| support-vector-regression | yes; fitting kernel unchanged | Epsilon-SVR dual, linear/RBF, bounded ADMM |
+| decision-tree-regression | yes; targeted numerical repair | Greedy squared-error CART, mean leaves |
 
-## 3. Baseline and inventory
+Inventory remains **35 categories, 256 memberships, 235 canonicals**; 115 are
+track-required complete, 120 remain including the unchanged blocked DPO topic.
+There are no new algorithm IDs, paths or duplicated canonical implementations.
 
-Started on clean branch `main`, HEAD `3bca5e03e254167d20f19af68797fca68ff27bbf`.
-The [baseline](../../regression-evidence/baseline.json) captures the original
-catalog/development state, versions, compilers and hashes of 1,551 tracked files.
-Between sessions HEAD advanced externally to
-`5a3799b2913213923e9acaab846d77587993ea25` (ML start). All 1,621 source files
-in that commit match the first tested ZIP candidate. The agent did not create
-that commit. [Continuation evidence](../../regression-evidence/continuation-baseline.json)
-records the verified revision; its original package is preserved verbatim under
-`artifacts/review-packages/regression/history/2026-10-27/`.
-Inventory remains **35 categories, 256 memberships, 235 canonicals**. There are
-97 DSA canonicals; all remain implemented with Python and C++. Seven ML
-canonicals bring track-required completed topics to 104; 131 remain, including
-the unchanged blocked Dynamic Policy Optimization topic.
+## 3. Baseline, owner changes and existing versus new files
 
-## 4. Complete canonical list
+Started on `main`, HEAD `f2cc7c295e0f3fcf83dcb67ab3e6cf8d9c2e1f7e`, with the
+previous Classification work present as modified/untracked files and its report
+already staged. [Baseline evidence](../../regression-audit-evidence/baseline.json)
+records all 1,802 pre-existing file hashes, status, staged-diff hash, environment
+and catalog. Those owner changes are retained; no reset, cleanup or new staging.
+The original seven implementations are retained; **zero new algorithms**.
+The original [approved report bytes](../../regression-audit-evidence/approved-regression-report.txt)
+and previous package bytes are preserved separately rather than overwritten as history.
 
-All paths below are relative to the category root. Every topic has its own
-solution, example, Python test file and authored 25-section lesson.
+## 4. Confirmed defects
 
-| Canonical ID | Essential algorithm | Python / tests | C++ |
-| --- | --- | --- | --- |
-| linear-regression | Centered, rank-revealing least squares | tested | optional, absent |
-| ridge-regression | Augmented least squares with unpenalized intercept | tested | optional, absent |
-| lasso-regression | Cyclic soft-threshold coordinate minimization | tested | optional, absent |
-| elastic-net | Explicit L1/L2 coordinate minimization | tested | optional, absent |
-| polynomial-regression | Graded multivariate monomials + canonical OLS | tested | optional, absent |
-| support-vector-regression | Epsilon-SVR dual, linear/RBF kernels, bounded ADMM | tested | optional, absent |
-| decision-tree-regression | Greedy squared-error CART with explicit nodes | tested | optional, absent |
+| ID | Confirmed defect | Independent reproduction |
+| --- | --- | --- |
+| R1 | Tiny nonconstant R² became perfect after squared errors/variance underflowed | [2,4,6] versus [1,3,5], scaled by 10⁻²⁰⁰: expected 0.625, observed 1 |
+| R2 | Constant-target detection depended on rounded mean/underflowed MSE | Constant 0.1 returned about −5.19×10³¹; tiny imperfect constants returned 1 instead of 0 |
+| R3 | Individual residual squares overflowed before a finite mean could be formed | One 10¹⁵⁵ residual among 2,048: expected ≈4.8828125×10³⁰⁶, observed infinity |
+| R4 | CART squared-error underflow falsely marked distinct targets pure | [0,0,10⁻²⁰⁰,10⁻²⁰⁰] incorrectly returned one leaf instead of threshold 1.5/two leaves |
 
-## 5. Python implementation and API
+[Findings](../../regression-audit-evidence/findings.json),
+[metric observations](../../regression-audit-evidence/metric-investigation.json)
+and [tree observations](../../regression-audit-evidence/tree-underflow-investigation.json)
+retain expected and pre-fix results. **Four confirmed defects fixed; none unresolved.**
 
-Dense single-output float64 estimators expose `fit(X,y)`, `predict(X)` and R²
-`score(X,y)`. Polynomial Regression also exposes fitted `transform(X)`. X must be
-two-dimensional and y one-dimensional; ambiguous reshaping is rejected. Fit
-returns self; predictions have shape `(m,)`. Shared support handles array and
-parameter contracts, finite arithmetic, metrics and JSON CLI dispatch, without
-implementing a solver. Successful state is owned by the model; failed refits
-preserve the last successful fit. Algorithms are deterministic and do not change
-global random state. NumPy supplies decomposition/array primitives; no core
-solution imports scikit-learn, SciPy, a deep-learning framework or a remote service.
+## 5. Targeted fixes
 
-## 6. Track-aware language policy
+Shared Regression metrics now scale residual norms before accumulation. MSE
+squares an averaged root error rather than overflowing individual squares; MAE
+avoids a raw overflowing sum. R² compares normalized target deviations and root
+errors, and detects constant targets/prediction equality directly. Added RMSE,
+MAE and a common four-metric result for the requested evaluation contract.
+Unrepresentable final results fail explicitly; tiny final MSE can round to zero
+while RMSE remains representable, without falsely implying R²=1.
 
-The [central policy](../../../scripts/track_policy.py) uses validated canonical
-track paths rather than hardcoded topic IDs. DSA still requires Python, C++, both
-test files and C++17/C++20 execution. Classical ML requires Python, meaningful
-numerical tests and mathematical lessons. C++ source/tests are optional but must
-form a nonempty pair with truthful statuses if supplied. All seven B1 records
-leave `cpp_status: planned`, honestly recording that optional deliverable as
-absent. No dummy C++ files or weakened DSA fixtures were introduced. Deferred
-Deep Learning/AI retains the previous structural policy until separately authorized.
+CART now detects actual target equality, scales targets locally for split scoring
+and compares square-root gains to preserve the existing min_impurity_decrease
+units. Original-unit SSE diagnostics may underflow but never control purity/split
+selection. Pure constant values are retained exactly. The other six fitting
+kernels remain byte-identical. No Classification/DSA implementation was changed.
 
-## 7. Mathematical correctness
+## 6. Mathematical audit of all seven algorithms
 
-OLS tests verify analytical coefficients, residual orthogonality and minimum-norm
-rank-deficient fits. Ridge tests verify its summed-loss objective and normal
-stationarity without implementing unstable normal-equation inversion. Polynomial
-tests verify interaction order, exact quadratic responses and reuse of canonical
-OLS. Lasso/Elastic Net test scalar soft-threshold solutions, objective descent,
-KKT residuals and penalty endpoints; pure-L2 Elastic Net maps to Ridge alpha=nα.
-SVR tests verify the known primal/dual value 0.405 for the worked linear example,
-zero-sum/box feasibility and numerical gap/residual checks. CART checks mean-leaf
-optimality, independently enumerated split scores, normalized gain and XOR
-interaction behavior. These are numerical checks, not formal proofs of arbitrary
-floating-point input accuracy or statistical generalization.
+OLS retains centered least squares, unpenalized intercept, numerical rank and
+minimum-norm convention without explicit normal-equation inversion. Ridge's
+objective is half summed RSS plus alpha/2 squared coefficients; its augmented
+solve and zero-penalty convention are consistent with the lesson. Lasso uses
+half mean RSS plus alpha L1, with exact coordinate soft threshold and scaled KKT
+stopping. Elastic Net's mixing ratio distinguishes L1 threshold from L2 curvature;
+its pure-L2 endpoint maps to Ridge alpha=n·alpha.
 
-## 8. Numerical validation
+Polynomial feature order, interaction terms, degree validation and train/query
+transformation agree with graded monomials and canonical OLS reuse. SVR's box/
+zero-sum dual, epsilon tube, kernel construction, residual stopping and approximate
+primal/dual certificate match the stated objective. CART selects squared-error
+partitions and mean leaves, not classification Gini, retaining deterministic ties,
+depth/leaf bounds and root-normalized gain. Correctness is numerical evidence,
+not a formal guarantee for every ill-conditioned float64 input.
 
-The final ML run passed **214 tests in 1.55s**. The explicitly marked numerical
-selection passed **29 tests, 185 deselected, in 0.53s**. Invalid input, ownership,
-parameter and shape cases are also part of the full ML suite. Coverage includes
-singular/near-singular and constant columns, repeated observations, large offsets,
-nonfinite data, resource limits, adjacent representable tree thresholds and
-RBF distance cancellation/legitimate underflow. Arithmetic overflow, invalid
-operations and division by zero fail explicitly. See
-[final results](../../regression-evidence/final-results.json) and
-[numerical transcript](../../regression-evidence/numerical-attempt1.txt).
+## 7. Numerical tests and failed-attempt evidence
 
-## 9. Independent references and gradients
+The original Regression suite ran before broader tests: **214 passed in 1.21s**.
+New metric tests first produced **4 failed / 214 passed**, including the expected
+pre-fix overflow warning. The expanded CART check then produced **1 failed /
+280 passed**. Both failed transcripts are preserved in numbered audit evidence.
+The latest targeted result is **281 passed**; numerical selection **95 passed /
+186 deselected**. Deselection is intentional marker filtering, not skipped tests.
+[Final stage results](../../regression-audit-evidence/final-results.json) identify
+actual commands/timestamps/results; no failed attempt was relabeled or discarded.
 
-**40 reference tests passed, 174 deselected, in 0.58s**, using scikit-learn 1.8.0.
-Comparisons align objective scaling, intercept handling, kernel parameters and
-rank conventions. Nonunique solutions are compared through predictions/objectives.
-Finite differences check OLS/Ridge smooth gradients and Lasso/Elastic Net away
-from L1 kinks. SVR differences check only the smooth dual quadratic; feasibility
-and primal/dual tests cover the nonsmooth constrained solution. Gradients are
-inapplicable to discrete CART split search. Tiny exact solutions and a separate
-brute-force CART split oracle supplement library comparisons. The
-[primary references](../../regression-evidence/reference-sources.json) were retrieved;
-lessons link versioned official documentation and original optimization papers.
+## 8. Seeded randomized coverage
 
-## 10. Seeded randomized checks
+Existing fixed-seed tests remain unchanged, including noisy/collinear OLS/Ridge,
+coordinate-descent reference data, multivariate polynomial expansion, both SVR
+kernels and CART split enumeration. Added seeds 13311/13321 cover metric references
+and independent polynomial powers through degree eight. All RNGs are local;
+shared contracts verify deterministic fits and unchanged caller/global RNG state.
+Sample sizes, feature budgets, tolerances and iteration counts are bounded.
+No dataset download or network dependency is used by tests.
 
-Tests use local NumPy generators and fixed seeds, including 13011/13012 for OLS,
-13061/13062 for SVR, and 13071/13072 for tree checks. Source tests record their
-own full seeds, dataset sizes and tolerances. CART enumerates 80 independent
-12×3 split datasets. SVR tests both kernels on 12/25-row datasets against LIBSVM
-predictions at matched C, epsilon and gamma, with 2e-4 absolute/relative tolerance.
-Shared contract tests repeat all seven fits and verify exact deterministic
-predictions, shapes, constant-target scoring and unchanged caller/global RNG state.
+## 9. Independent mathematical oracles
 
-## 11. Iteration and convergence
+Closed-form metric ratios and large/tiny error units reproduce the scoring defects
+without using another copy of the same failing formula. Finite differences verify
+smooth OLS/Ridge gradients and coordinate-model objectives away from L1 kinks;
+KKT checks cover nonsmooth zeros. Hadamard-column data give exact sparse Lasso/
+Elastic Net solutions and explicit scaling identities. Polynomial monomials are
+independently enumerated with Cartesian exponent tuples, checking linear/cubic/
+degree-eight basis consistency. SVR tests analytic primal/dual values, outlier
+responses, monotonic C trade-offs and a wide zero-loss epsilon tube. CART uses
+independent exhaustive split enumeration and an exact tiny piecewise target oracle.
 
-Lasso/Elastic Net stop at a scaled maximum KKT violation and record objective
-history, iterations and stopping threshold. Exhausted budgets raise ConvergenceError.
-SVR requires ADMM residual checks plus a projected feasible dual and a scaled
-primal/dual gap; its eigendecomposition is a numerical primitive, with explicit
-roundoff handling. Fixed rho and bounded iterations do not promise convergence
-on every allowed dataset. OLS/Ridge are direct solves; CART's `converged_` means
-bounded tree construction completed, not global tree optimality. Tests exercise
-successful stopping, iteration exhaustion and preservation of previous state.
+## 10. Independent reference comparisons
 
-## 12. Examples and held-out experiment
+The latest reference selection passed **42 tests / 239 deselected** with installed
+scikit-learn 1.8.0. Comparisons align objective normalization, intercepts, regularization
+and kernel parameters; nonunique cases compare meaningful predictions/objectives.
+Ridge alpha zero uses the documented OLS rank convention. Numerical edge cases
+use exact identities rather than assuming a library with similar floating-point
+formulas is an infallible oracle. [Primary-source checks](../../regression-audit-evidence/reference-sources.json)
+record official mathematical/API references; no external source code/prose copied.
 
-All **7 authored examples**, **7 JSON prediction CLI calls** and **7 invalid-shape
-CLI calls** passed. Outputs match independent analytical values: OLS 7, Ridge 2,
-Polynomial 9, Lasso 3, Elastic Net 26/11, SVR 1.8, and CART [1,5].
-The [benchmark evidence](../../regression-evidence/benchmark.json) records seed
-13027, 48 training / 24 held-out rows, two features, fixed hyperparameters, iteration
-diagnostics, fit timing and MSE/MAE/R² for all models. Scaling is fitted solely on
-training rows. Held-out MSE values are approximately 0.081993 (OLS), 0.085858
-(Ridge), 0.086004 (Lasso), 0.090514 (Elastic Net), 0.006557 (Polynomial), 0.010999
-(SVR) and 0.137672 (CART). This response contains a quadratic term; a single
-illustrative split establishes no general model superiority or timing guarantee.
+## 11. Convergence and computational complexity
 
-## 13. Documentation and links
+Lasso/Elastic Net expose objective history, KKT residuals, tolerance and bounded
+iterations. SVR exposes residuals, equality feasibility and a numerical primal/
+dual gap. Exhaustion raises explicit ConvergenceError and preserves prior state;
+no unconverged fit is returned as successful. Direct least squares has no iterative
+convergence claim. CART completion means bounded greedy construction, not global
+optimality. Existing time/space claims remain appropriate; metric and node target
+normalization add linear work/storage within existing asymptotic bounds.
 
-All seven lessons contain exactly the existing 25 headings in order, including
-an honest optional/absent C++ section. They explain objective, derivation,
-training/inference, shapes, state, bounded complexity, dry run, numerical failure,
-bias/variance, leakage and limits. Catalog validation checks local Markdown links
-repository-wide. Generated documentation covers 173 managed planning/category/index
-pages with zero drift; authored lessons are preserved. Planning pages in later ML
-categories only describe the new language policy; their algorithm statuses and
-implementation scope remain unchanged.
+## 12. Evaluation definitions and held-out experiment
 
-## 14. Catalog and policy validation
+[Evaluation contracts](../../regression-evaluation.md) define single-output MSE
+(squared target units), RMSE/MAE (target units) and dimensionless R². Constant
+observations, including one sample, return R²=1 only for exact predictions, else 0.
+Empty/multi-output/ambiguous/nonfinite input is rejected; no sample weighting.
 
-Catalog/link validation passed with inventory 35/256/235. Fourteen new policy
-tests verify valid Python-only ML, optional paired C++, missing DSA C++, missing
-Python/tests, partial optional C++, duplicate IDs and unsafe paths. The configuration
-gate passed **316 infrastructure tests in 3.71s**. Schema version, IDs, canonical
-paths, category order and every out-of-scope algorithm record remain identical.
-The [preservation verifier](../../../scripts/verify_regression_scope.py) matched
-**1,241 protected files**, including all 97 canonical DSA lessons/source/tests,
-historical evidence, reports and artifacts. Only the review index may be extended.
+The [experiment](../../regression-audit-evidence/benchmark.json) keeps seed 13027,
+48 training/24 held-out observations, the same two features/response, fixed
+hyperparameters and a scaler fitted solely on training rows for all seven models.
+Training/test metrics remain separate. It now reports MSE, RMSE, MAE and R²,
+plus timing and solver/tree diagnostics. One synthetic response contains a
+quadratic term; no universal model ranking or timing superiority is claimed.
 
-## 15. DSA regression execution
+| Model | Held-out MSE | RMSE | MAE | R² |
+| --- | ---: | ---: | ---: | ---: |
+| Linear | 0.081993 | 0.286344 | 0.252326 | 0.925717 |
+| Ridge | 0.085858 | 0.293015 | 0.256754 | 0.922215 |
+| Lasso | 0.086004 | 0.293265 | 0.255425 | 0.922082 |
+| Elastic Net | 0.090514 | 0.300856 | 0.259619 | 0.917997 |
+| Polynomial | 0.006557 | 0.080976 | 0.064516 | 0.994059 |
+| SVR | 0.010999 | 0.104874 | 0.083333 | 0.990036 |
+| CART | 0.137672 | 0.371042 | 0.329273 | 0.875273 |
 
-The full repository suite with `--require-cpp` passed **2,217 tests in 435.81s**:
-**1,687 DSA tests** (1,149 Python, 269 C++17, 269 C++20), 316 infrastructure
-checks (including two toolchain checks per C++ standard) and 214 ML tests.
-**Zero failures, errors or skips.** The unchanged root fixtures enforce compiler
-availability and both standards. [JUnit-derived counts](../../regression-evidence/test-matrix.json)
-and the [full transcript](../../regression-evidence/full-suite-attempt1.txt) record
-actual execution; no hosted result is inferred.
+## 13. Documentation audit
 
-## 16. CI-equivalent checks
+All seven lessons retain exactly the existing 25 headings in order, correct
+contracts/objectives/derivations, pseudocode, dry runs, complexity and limitations.
+Six lessons are byte-identical; CART's substantive numerical steps were corrected
+without stylistic rewriting. The category links the new metric/unit/edge-case
+contract. Relative Markdown links and generated navigation are validated. Original
+approved report/package snapshots retain their handoff-time statuses and hashes.
 
-Actual local environment: Python 3.14.2, macOS arm64, Apple Clang 21 selected via
-g++. Catalog, generated-doc and ML/reference checks passed. The full required suite passed 2,217 tests with zero failures/skips. Actual-ZIP
-extraction results are recorded in the external package metadata after freezing.
-CI retains its Python 3.11/3.12/3.13/3.14 matrix, CXX=g++ and `pytest --require-cpp`;
-it now installs ML test requirements and allows 20 minutes. **Hosted GitHub Actions
-was not triggered or verified.** Local validation does not establish that matrix.
+## 14. Executed examples
 
-## 17. Dependencies
+All seven original example scripts, seven equivalent JSON prediction calls and
+seven invalid-dimension CLI checks passed after the tree repair. Outputs retain
+known analytical values, and invalid CLI input exits 2 with stderr/no prediction
+JSON. See [example transcript](../../regression-audit-evidence/examples-after-tree.txt).
+Original examples and CLI implementation files were not rewritten or duplicated.
 
-Runtime: `requirements-ml.txt`, NumPy>=2.3.4,<3. Development references:
-`requirements-ml-test.txt` includes existing pytest/PyYAML dependencies and
-scikit-learn>=1.8,<1.9. Installed versions: NumPy 2.5.4, scikit-learn 1.8.0,
-SciPy 1.18.1, pytest 9.1.1 and PyYAML 6.0.3; transitive joblib/threadpoolctl/
-cloudpickle versions are captured in the local environment where available.
-The original pytest/PyYAML versions and `requirements-dev.txt` are unchanged.
-Initial sandbox package-index DNS failure was resolved by an approved installation
-retry. DSA-only setup still needs only `requirements-dev.txt`; no ML datasets or
-frameworks are downloaded during testing.
+## 15. Catalog and language policy
 
-## 18. Files created
+Catalog categories, memberships, canonical IDs/paths and out-of-scope records
+are preserved. Existing B1 implementation statuses remain tested, with C++ optional
+and absent; no placeholder C++ is created. DSA still requires Python/C++, both
+C++17 and C++20. Track policy, validator, root pytest fixtures, requirements and
+CI checks are unchanged. Current development metadata separates previous owner
+approval from the new pending audit review and records approval of prior work.
 
-Created seven sets of `python/solution.py`, `python/example.py` and
-`tests/test_python.py`; category support/conftest, shared contract tests and the
-held-out experiment; ML dependency files; track-policy and verification/packaging
-scripts; policy tests; ML development/scope/checkpoint documentation; this report
-and preserved evidence. Exact new paths are listed in
-[changed-files.json](../../regression-evidence/changed-files.json). Artifact names
-are listed in section 23 and externally record every packaged source hash.
+## 16. Classification regression
 
-## 19. Files modified
+All **398 Classification tests passed** in the current audit's explicit run.
+All eleven canonical sources/tests/lessons, support, metrics, benchmark and
+historical evidence/package bytes are unchanged. The pre-existing staged
+Classification report and its exact staged diff are preserved. Only current
+approval/navigation metadata acknowledges the owner's explicit approval.
 
-Catalog development metadata and only B1 algorithm statuses/notes; central validator
-and generator; pytest marker configuration; CI dependency/cache/timeout settings;
-AGENTS, README, CONTRIBUTING, getting-started/glossary/development/roadmap/progress/index documentation;
-the seven canonical planning READMEs replaced by genuine lessons; generated ML
-planning/category policy text; A9/A10 category authorization notes; review/package
-indexes. The exact list is in changed-files.json. No canonical DSA implementation,
-test, lesson, historical report/evidence/archive, root compiler fixture, license
-or original dependency file was changed.
+## 17. DSA regression and both C++ standards
 
-## 20. Known limitations and boundaries
+The final local full run passed **2,682 tests in 431.43s**, with **zero failures,
+errors or skips**. The [JUnit-derived matrix](../../regression-audit-evidence/test-matrix.json)
+contains 281 B1, 398 B2, 1,687 DSA and 316 infrastructure tests. DSA includes
+**1,149 Python, 269 C++17 and 269 C++20** tests. The final command used
+`--require-cpp`; both standards actually compiled and executed with Apple Clang.
+[Final transcript](../../regression-audit-evidence/full-suite-attempt2.txt) and
+[command records](../../regression-audit-evidence/final-results.json) retain timing,
+interpreter, environment and exit status. The earlier 2,680-test run predates the
+two CART audit tests and is preserved as superseded evidence.
 
-Dense single-output float64 only; no sparse inputs, sample weights, missing-data
-handling or statistical confidence intervals. Inputs/expansions have explicit
-sample/feature/cell/magnitude budgets. Ill conditioning and rank cutoffs limit
-coefficient accuracy. Iterative convergence can fail explicitly. SVR uses a dense
-kernel and at most 256 training observations; its feasibility/gap certificate is
-approximate floating point. CART is greedy, discontinuous and tie-sensitive, with
-bounded depth and no pruning. No algorithm promises causal identification,
-generalization or dominance. Optional ML C++ is absent. Hosted CI and other local
-Python/platform combinations are unexecuted. No unresolved scope blocker remains;
-the separate DPO terminology blocker remains outside this category.
+## 18. CI-equivalent checks
 
-## 21. Defects and failed attempts
+Catalog/link validation, generated documentation for 162 pages, 316 infrastructure
+checks, the full required-C++ suite and separate B1 numerical/reference/B2 gates
+passed locally. Numerical 95 and reference 42 are overlapping B1 subsets; do not
+add them to the 2,682 full-suite total. No final test was skipped. Initial four
+metric and one CART audit failures were repaired; their transcripts remain.
 
-The first Batch 1 run had **1 failed / 43 passed**: scikit-learn Ridge(alpha=0)
-retained a tiny singular direction, yielding coefficient norm ≈3.39×10¹³ rather
-than the documented minimum-norm solution. Independent scikit-learn OLS matched
-Atlas's norm ≈0.13517 and SSE ≈12.30088. The alpha-zero oracle was corrected to
-the matching OLS convention; positive-alpha tests still use Ridge. The original
-failure and [investigation](../../regression-evidence/ridge-reference-investigation.json)
-remain preserved. The initial infrastructure probe had **2 failed / 296 passed**
-while B1 status integration and a legacy generator-state fixture were incomplete;
-both were corrected and the 316-test gate passed. The historical generator fixture
-now honors its explicit legacy scope. Polynomial predict-before-fit was corrected
-to issue the documented ValueError; huge scalar conversion errors are normalized
-to ValueError. The first final-report link gate also caught a missing changed-files inventory;
-it was generated and catalog/link validation then passed. Its failed transcript
-is preserved. Final guide inspection also corrected stale phase checkpoints in
-Getting Started and the glossary, and changed full-suite setup from DSA-only
-requirements to ML test requirements. The first ZIP candidate had already passed
-all 2,217 extracted tests in 444.99s; that evidence is retained in
-[package-candidate1.json](../../regression-evidence/package-candidate1.json).
-The final rebuild changes guidance/report/packaging evidence, with algorithm
-source and tests unchanged. No failed attempt was silently relabeled as passing.
+The package verifier independently extracts the actual final ZIP and reruns
+catalog/generated/scope/example/full-suite checks with external installed
+dependencies. Its actual outcomes are recorded in the external package JSON.
+Hosted GitHub Actions, other operating systems and other compiler/Python matrices
+were **not run or verified**. Local execution does not establish hosted CI success.
 
-## 22. Reproduction commands
+## 19. Dependencies
 
-From the repository root, using the local virtual environment when available:
+No dependency installation or upgrade. Reused NumPy 2.5.4, pytest 9.1.1,
+scikit-learn 1.8.0, SciPy 1.18.1 and PyYAML 6.0.3; exact environment is captured.
+Core code uses NumPy and standard-library/local helpers only. scikit-learn is an
+independent test reference, never an implementation wrapper. DSA-only development
+remains possible with requirements-dev.txt; full ML testing uses requirements-ml-test.txt.
+
+## 20. Known numerical and model limitations
+
+Dense single-output float64, finite magnitude/sample/feature/cell limits; no
+multi-output, sample weights, sparse matrices or missing-value imputation.
+Final squared quantities below the representable range can round to zero; RMSE
+can retain tiny units and R² no longer treats such zero as exact fit. Unrepresentable
+final metrics raise ValueError. CART original-unit SSE diagnostics can underflow,
+but splitting/purity uses normalized data. Scale normalization cannot recover
+input differences already lost in float64. Ill conditioning and numerical rank
+cutoffs limit coefficient accuracy. Bounded coordinate/ADMM solvers may not
+converge on every scale. SVR is dense with n≤256; polynomial degree/features are
+bounded; trees are greedy. No universal calibration/generalization/performance
+claim. There is no unresolved B1 blocker; the existing DPO terminology blocker
+remains outside scope.
+
+## 21. Files created
+
+Two meaningful audit test modules; audit runner/preservation/package scripts;
+new scope/checkpoint/evaluation documentation; original-state/failure/reference/
+execution evidence, metric/tree investigation and historical text snapshots.
+The old approved ZIP/checksum/JSON are relocated byte-identically into a named
+history folder before regenerating the requested active filenames. Exact audit-only
+paths are listed in [changed files](../../regression-audit-evidence/changed-files.json),
+relative to the captured nonclean starting tree rather than the older Git HEAD.
+
+## 22. Files modified and reasons
+
+Regression support metrics, the existing benchmark's four-metric reporting, and
+CART source/lesson for confirmed numerical defects. Existing solver/example/test
+files otherwise remain unchanged. Current catalog/AGENTS/README/contribution/
+development/roadmap/getting-started/glossary/ML-standard/index/category navigation
+reflect the authorized audit and explicit prior approvals. The existing Regression
+report/package README and review/package indexes are refreshed. No approved
+Classification/DSA implementation is changed, no owner work discarded and no
+pre-existing staged content altered. Preservation checks identify every exception.
+
+## 23. Reproduction commands
+
+With the existing .venv activated, from the repository root:
 
 ```sh
-python -m pip install -r requirements-ml-test.txt
 python scripts/validate_catalog.py
 python scripts/generate_catalog_docs.py --check
-python -m pytest --require-cpp
 python -m pytest machine-learning/supervised-learning/regression -q
 python -m pytest machine-learning/supervised-learning/regression -m numerical -q
 python -m pytest machine-learning/supervised-learning/regression -m reference -q
-python scripts/verify_regression_scope.py --check-only
+python -m pytest machine-learning/supervised-learning/classification -q
+python -m pytest --require-cpp
+python scripts/verify_regression_completion_audit.py --check-only
 python scripts/verify_regression_examples.py --check-only
 python machine-learning/supervised-learning/regression/experiments/benchmark.py
 ```
 
-Source exports omit historical ZIPs: use `--source-only` with the scope verifier.
-DSA-only development: install `requirements-dev.txt`, run `pytest tests dsa --require-cpp`.
-The stage runner preserves numbered transcripts; it does not overwrite failures.
-The package script refuses to overwrite an existing final archive or sidecar.
+A fresh environment requires requirements-ml-test.txt and a C++17/C++20 compiler.
+Source exports omit historical archives: use --source-only with the audit verifier.
+The new stage runner preserves numbered attempts in regression-audit-evidence;
+old phase evidence is not overwritten. Packaging uses the new audit package script
+and refuses existing active outputs without their prior preservation step.
 
-## 23. Review package locations
+## 24. Package, history and integrity
 
-Files under `artifacts/review-packages/regression/`:
+Active deliverables are `artifacts/review-packages/regression/algorithm-atlas-regression-review.zip`,
+its `.zip.sha256`, and `algorithm-atlas-regression-review.json`.
+The original approved set is retained under
+`artifacts/review-packages/regression/history/approved-before-completion-audit-2026-10-28/`;
+[historical mapping](../../regression-audit-evidence/historical-package.json) records
+original/destination paths and exact digests. Older history and Classification
+packages/evidence remain untouched.
 
-- `algorithm-atlas-regression-review.zip`
-- `algorithm-atlas-regression-review.zip.sha256`
-- `algorithm-atlas-regression-review.json`
+The new ZIP includes current repository source/tests/lessons/infrastructure/report,
+excluding .git, environments, caches, compiled binaries, secrets, data/checkpoints
+and historical/nested ZIPs/sidecars. Its verifier checks CRC, unique safe regular
+paths, required contents, source hashes and SHA-256, extracts the actual archive
+without Git metadata, then runs catalog/generated/scope/example/full-suite checks
+using external installed dependencies. Actual post-creation outputs live in the
+external JSON, avoiding a self-referential archive hash. No hosted result is inferred.
 
-The [package directory](../../../artifacts/review-packages/regression/README.md)
-links these deliverables. ZIP includes current source, configuration, all lessons,
-tests, report, relevant infrastructure and historical text evidence. It excludes
-.git, environments, caches, secrets, compiled binaries, datasets/checkpoints and
-historical/nested ZIPs/sidecars. Historical originals remain unchanged locally.
+## 25. Current review owner checkpoint
 
-## 24. Integrity and extraction verification
-
-Before handoff, the package script checks unique safe regular-file paths, CRC,
-required contents, high-confidence credential patterns and exact source bytes;
-it extracts the actual archive into a fresh temporary folder without .git and
-reruns catalog, generated docs, scope, examples and all infrastructure/ML tests
-with `--require-cpp`. Both C++ toolchain standards remain active. The initial
-frozen export already passed the full 2,217-test suite; the final documentation
-rebuild preserves all DSA source/test bytes and avoids recompiling that unchanged
-suite a third time. The final targeted export run is 530 tests, and its actual
-result is recorded in the external sidecar.
-Dependencies come from the existing external development interpreter, not a bundled
-environment. The external JSON records actual extraction outputs after archive
-creation, avoiding a self-referential checksum. Final status is authoritative in
-that sidecar; the ZIP's report describes the verification protocol and local
-pre-package results. A separate SHA-256 command verifies the completed archive.
-
-## 25. Owner checkpoint
-
-**Owner approval: pending.** The category may be implemented/tested without being
-owner-reviewed or approved. Stop after verified package delivery. Do not begin
-Classification or any other ML/Deep Learning/AI category. This agent created no commit, push, release
-or publication; the externally advanced HEAD is recorded in section 3. Independent historical owner checkpoints remain
-unchanged.
+**Previous work owner approval: approved. Current revised Regression review:
+pending.** Stop after integrity-checked delivery for explicit owner acceptance.
+Do not start another category, commit, push, create a release or publish. No Git
+identity was changed. The pre-existing owner work and staged report remain intact.

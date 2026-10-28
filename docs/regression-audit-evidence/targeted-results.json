@@ -1,0 +1,76 @@
+{
+  "B1": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/regression",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/regression-audit-evidence/B1.xml"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-28T22:44:22.497742+06:00",
+    "elapsed_seconds": 1.124,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/regression-audit-evidence/B1-attempt6.txt",
+    "summary": "281 passed in 0.87s"
+  },
+  "numerical": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/regression",
+      "-m",
+      "numerical",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-28T22:44:23.317739+06:00",
+    "elapsed_seconds": 0.819,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/regression-audit-evidence/numerical-attempt4.txt",
+    "summary": "95 passed, 186 deselected in 0.61s"
+  },
+  "reference": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/regression",
+      "-m",
+      "reference",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-28T22:44:24.167508+06:00",
+    "elapsed_seconds": 0.849,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/regression-audit-evidence/reference-attempt4.txt",
+    "summary": "42 passed, 239 deselected in 0.65s"
+  }
+}

@@ -1,6 +1,6 @@
 # Getting Started
 
-Algorithm Atlas is an educational repository for DSA, machine learning and artificial intelligence topics. **Phase 13 ML foundation and B1 Regression are implemented and tested, awaiting owner review.** DSA requires Python/C++ and both C++17/C++20; classical ML requires Python/numerical tests with optional C++. Follow the [Regression checkpoint](regression-checkpoints.md) and [ML standard](ml-development.md). Catalog statuses remain authoritative; later categories require separate approval.
+Algorithm Atlas is an educational repository for DSA, machine learning and artificial intelligence topics. **All previous work is owner-approved; only the B1 Regression completion audit is currently authorized.** DSA requires Python/C++ and both C++17/C++20; classical ML requires Python/numerical tests with optional C++. Follow the [Regression audit checkpoint](regression-audit-checkpoints.md) and [ML standard](ml-development.md). Catalog statuses remain authoritative; later categories require separate approval.
 
 Start with the [learning roadmap](learning-roadmap.md), browse the [complete algorithm index](algorithm-index.md), and consult the [progress tracker](progress.md) before choosing a topic. The [glossary](glossary.md) and [complexity cheat sheet](complexity-cheatsheet.md) explain terminology used throughout the project.
 
@@ -78,8 +78,6 @@ Replace the angle-bracket path only when an implementation exists. Some topics w
 
 ## Approval checkpoint
 
-The three [Regression batches](regression-checkpoints.md) are complete. Stop for
-explicit owner review of the report and verified package before starting another
-ML category. Deep Learning, AI, commits, pushes and publication remain unauthorized.
+Follow the [Regression audit checkpoint](regression-audit-checkpoints.md), then stop for explicit owner review of the revised package. No other category, commit, push or publication is authorized.
 
 No push or publication is authorized by local setup or a passing test run. Review checkpoints apply between every later development phase as well.

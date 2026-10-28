@@ -1,0 +1,38 @@
+{
+  "confirmed_defects": 4,
+  "fixed": 4,
+  "unresolved": 0,
+  "findings": [
+    {
+      "id": "R1",
+      "topic": "shared R2",
+      "defect": "Tiny nonconstant targets squared to zero, falsely producing perfect R2.",
+      "expected": 0.625,
+      "observed_before": 1.0,
+      "fix": "Scale target deviations and root errors before forming the ratio."
+    },
+    {
+      "id": "R2",
+      "topic": "shared R2",
+      "defect": "Constant decimal/tiny targets misdetected using a rounded mean or underflowed MSE.",
+      "expected": "1 only for exact predictions, otherwise 0",
+      "fix": "Detect original target equality and exact prediction equality."
+    },
+    {
+      "id": "R3",
+      "topic": "shared MSE",
+      "defect": "Individual residual squares overflowed despite a finite mean.",
+      "expected": "1e310/2048 = 4.8828125e306",
+      "observed_before": "infinity",
+      "fix": "Scale RMS accumulation and square only after averaging."
+    },
+    {
+      "id": "R4",
+      "topic": "CART Regression",
+      "defect": "Squared-error underflow caused false purity and stopped a valid piecewise split.",
+      "expected": "2 leaves, threshold 1.5",
+      "observed_before": "1 leaf",
+      "fix": "Normalize node targets for split scoring, detect true purity and preserve gain units with square-root comparison."
+    }
+  ]
+}

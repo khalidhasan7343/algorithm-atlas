@@ -1,0 +1,67 @@
+{
+  "catalog": {
+    "command": [
+      "python",
+      "scripts/validate_catalog.py"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-28T23:00:01.076133+06:00",
+    "elapsed_seconds": 0.631,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/regression-audit-evidence/catalog-attempt4.txt",
+    "summary": "Validation passed. Test execution and external URLs are checked separately."
+  },
+  "generated": {
+    "command": [
+      "python",
+      "scripts/generate_catalog_docs.py",
+      "--check"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-28T23:00:01.246419+06:00",
+    "elapsed_seconds": 0.169,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/regression-audit-evidence/generated-attempt4.txt",
+    "summary": "Checked 162 catalog documentation pages; 0 changes."
+  },
+  "infrastructure": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "tests",
+      "--require-cpp",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-28T23:00:04.556777+06:00",
+    "elapsed_seconds": 3.309,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/regression-audit-evidence/infrastructure-attempt4.txt",
+    "summary": "316 passed in 3.14s"
+  }
+}

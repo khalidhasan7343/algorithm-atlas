@@ -1,0 +1,64 @@
+
+=================================== FAILURES ===================================
+___________ test_large_offsets_and_scaling_changes_neighbor_geometry ___________
+
+algorithm = <module 'classification_test_k_nearest_neighbors' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/supervised-learning/classification/k-nearest-neighbors/python/solution.py'>
+
+    @pytest.mark.numerical
+    def test_large_offsets_and_scaling_changes_neighbor_geometry(algorithm):
+        X=1e12+np.array([[-2.], [0], [2]])
+>       assert algorithm.KNearestNeighbors(1).fit(X,[0,1,2]).predict([[1e12+.25]])[0]==1
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+machine-learning/supervised-learning/classification/k-nearest-neighbors/tests/test_python.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+machine-learning/supervised-learning/classification/support.py:28: in guarded
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+machine-learning/supervised-learning/classification/k-nearest-neighbors/python/solution.py:23: in fit
+    X, _, classes, encoded = _support.training(X, y)
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+machine-learning/supervised-learning/classification/support.py:98: in training
+    X = features(X, fitting=True, **limits)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+X = array([[1.e+12],
+       [1.e+12],
+       [1.e+12]]), fitting = True
+expected = None, max_samples = None, max_features = 128
+
+    def features(X, *, fitting=False, expected=None, max_samples=None, max_features=128):
+        a = np.asarray(X)
+        limit = (2048 if fitting else 10000) if max_samples is None else max_samples
+        if a.ndim != 2 or not 1 <= a.shape[1] <= max_features:
+            raise ValueError(f"X must be 2D with 1..{max_features} features")
+        if a.size > MAX_CELLS or len(a) > limit or (fitting and len(a) == 0):
+            raise ValueError("X sample/cell limit exceeded or empty training matrix")
+        if a.dtype.kind not in "iuf":
+            raise ValueError("X must be real numeric, excluding bool/complex/string/object")
+        if expected is not None and a.shape[1] != expected:
+            raise ValueError("prediction feature count differs from fitted features")
+        a = np.array(a, dtype=np.float64, copy=True)
+        if not np.isfinite(a).all() or np.any(np.abs(a) > MAX_VALUE):
+>           raise ValueError("X must be finite with magnitude <= 10^12")
+E           ValueError: X must be finite with magnitude <= 10^12
+
+machine-learning/supervised-learning/classification/support.py:71: ValueError
+=============================== warnings summary ===============================
+machine-learning/supervised-learning/classification/logistic-regression/tests/test_python.py::test_seeded_independent_objective_matched_reference[False-0.0]
+machine-learning/supervised-learning/classification/logistic-regression/tests/test_python.py::test_seeded_independent_objective_matched_reference[True-0.0]
+  /Users/khalidhasan/Desktop/algorithm-atlas/.venv/lib/python3.14/site-packages/sklearn/linear_model/_logistic.py:1170: UserWarning: Setting penalty=None will ignore the C and l1_ratio parameters
+    warnings.warn(
+
+machine-learning/supervised-learning/classification/k-nearest-neighbors/tests/test_python.py::test_reference_without_boundary_distance_ties[1]
+  /Users/khalidhasan/Desktop/algorithm-atlas/.venv/lib/python3.14/site-packages/joblib/externals/loky/backend/context.py:134: UserWarning: Could not find the number of physical cores for the following reason:
+  invalid literal for int() with base 10: ''
+  Returning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED machine-learning/supervised-learning/classification/k-nearest-neighbors/tests/test_python.py::test_large_offsets_and_scaling_changes_neighbor_geometry
+1 failed, 35 passed, 3 warnings in 0.97s
+

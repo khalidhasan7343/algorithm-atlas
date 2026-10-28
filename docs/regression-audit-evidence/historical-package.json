@@ -1,0 +1,20 @@
+{
+  "status": "preserved byte-identically before regenerating active filenames",
+  "files": [
+    {
+      "original": "artifacts/review-packages/regression/algorithm-atlas-regression-review.zip",
+      "preserved": "artifacts/review-packages/regression/history/approved-before-completion-audit-2026-10-28/algorithm-atlas-regression-review.zip",
+      "sha256": "8b435e18eea5e40c7f56875cc9ea9c8d1da995e2f181d97751d6d0136337e15b"
+    },
+    {
+      "original": "artifacts/review-packages/regression/algorithm-atlas-regression-review.zip.sha256",
+      "preserved": "artifacts/review-packages/regression/history/approved-before-completion-audit-2026-10-28/algorithm-atlas-regression-review.zip.sha256",
+      "sha256": "302ff3502244c357e23808e505dbfc71afd2eccbf31385c4fd8b39bb4112eb24"
+    },
+    {
+      "original": "artifacts/review-packages/regression/algorithm-atlas-regression-review.json",
+      "preserved": "artifacts/review-packages/regression/history/approved-before-completion-audit-2026-10-28/algorithm-atlas-regression-review.json",
+      "sha256": "47d6ef0f801aa09d88ff0519ddcf0c688b33b1173f40f8e039df5422d00b7c3d"
+    }
+  ]
+}

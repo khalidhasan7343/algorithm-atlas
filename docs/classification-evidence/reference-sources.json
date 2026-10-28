@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-28 Asia/Dhaka",
+  "method": "Official documentation and original papers retrieved using web tool; installed 1.8 reference source/docstrings inspected for covariance conventions. No external prose/code copied.",
+  "retrieved": [
+    "https://scikit-learn.org/1.8/modules/linear_model.html#logistic-regression",
+    "https://scikit-learn.org/1.8/modules/neighbors.html",
+    "https://scikit-learn.org/1.8/modules/naive_bayes.html",
+    "https://scikit-learn.org/1.8/modules/svm.html",
+    "https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume4/quinlan96a.pdf",
+    "https://trhvidsten.com/docs/classics/Quinlan-1986.pdf",
+    "https://scikit-learn.org/1.8/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html",
+    "https://scikit-learn.org/1.8/modules/generated/sklearn.discriminant_analysis.QuadraticDiscriminantAnalysis.html",
+    "https://scikit-learn.org/stable/modules/lda_qda.html",
+    "https://numpy.org/doc/2.3/reference/generated/numpy.logaddexp.html",
+    "https://numpy.org/doc/2.3/reference/generated/numpy.log1p.html",
+    "https://numpy.org/doc/2.3/reference/generated/numpy.argsort.html"
+  ],
+  "retrieval_limits": [
+    {
+      "url": "https://doi.org/10.1007/BF00116251",
+      "status": "DOI indexed, direct full retrieval unavailable; original 1986 paper retrieved through its academic mirror"
+    },
+    {
+      "url": "https://scikit-learn.org/1.8/modules/lda_qda.html",
+      "status": "Versioned guide endpoint unavailable; versioned API pages, installed source and stable guide retrieved"
+    }
+  ]
+}

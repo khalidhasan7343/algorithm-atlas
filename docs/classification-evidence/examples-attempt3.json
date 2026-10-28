@@ -1,0 +1,290 @@
+[
+  {
+    "algorithm": "logistic-regression",
+    "kind": "example",
+    "expected": [
+      "cold",
+      "warm"
+    ],
+    "observed": [
+      "cold",
+      "warm"
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "logistic-regression",
+    "kind": "JSON CLI",
+    "expected": [
+      "cold",
+      "warm"
+    ],
+    "observed": [
+      "cold",
+      "warm"
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "logistic-regression",
+    "kind": "invalid-shape CLI",
+    "returncode": 2,
+    "status": "passed"
+  },
+  {
+    "algorithm": "k-nearest-neighbors",
+    "kind": "example",
+    "expected": [
+      "a"
+    ],
+    "observed": [
+      "a"
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "k-nearest-neighbors",
+    "kind": "JSON CLI",
+    "expected": [
+      "a"
+    ],
+    "observed": [
+      "a"
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "k-nearest-neighbors",
+    "kind": "invalid-shape CLI",
+    "returncode": 2,
+    "status": "passed"
+  },
+  {
+    "algorithm": "gaussian-naive-bayes",
+    "kind": "example",
+    "expected": [
+      "a",
+      "b"
+    ],
+    "observed": [
+      "a",
+      "b"
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "gaussian-naive-bayes",
+    "kind": "JSON CLI",
+    "expected": [
+      "a",
+      "b"
+    ],
+    "observed": [
+      "a",
+      "b"
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "gaussian-naive-bayes",
+    "kind": "invalid-shape CLI",
+    "returncode": 2,
+    "status": "passed"
+  },
+  {
+    "algorithm": "multinomial-naive-bayes",
+    "kind": "example",
+    "expected": [
+      "left",
+      "right"
+    ],
+    "observed": [
+      "left",
+      "right"
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "multinomial-naive-bayes",
+    "kind": "JSON CLI",
+    "expected": [
+      "left",
+      "right"
+    ],
+    "observed": [
+      "left",
+      "right"
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "multinomial-naive-bayes",
+    "kind": "invalid-shape CLI",
+    "returncode": 2,
+    "status": "passed"
+  },
+  {
+    "algorithm": "bernoulli-naive-bayes",
+    "kind": "example",
+    "expected": [
+      "a",
+      "b"
+    ],
+    "observed": [
+      "a",
+      "b"
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "bernoulli-naive-bayes",
+    "kind": "JSON CLI",
+    "expected": [
+      "a",
+      "b"
+    ],
+    "observed": [
+      "a",
+      "b"
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "bernoulli-naive-bayes",
+    "kind": "invalid-shape CLI",
+    "returncode": 2,
+    "status": "passed"
+  },
+  {
+    "algorithm": "support-vector-machines",
+    "kind": "example",
+    "expected": [
+      -1,
+      1
+    ],
+    "observed": [
+      -1,
+      1
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "support-vector-machines",
+    "kind": "JSON CLI",
+    "expected": [
+      -1,
+      1
+    ],
+    "observed": [
+      -1,
+      1
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "support-vector-machines",
+    "kind": "invalid-shape CLI",
+    "returncode": 2,
+    "status": "passed"
+  },
+  {
+    "algorithm": "cart-decision-trees",
+    "kind": "example",
+    "expected": [
+      "a",
+      "b"
+    ],
+    "observed": [
+      "a",
+      "b"
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "cart-decision-trees",
+    "kind": "JSON CLI",
+    "expected": [
+      "a",
+      "b"
+    ],
+    "observed": [
+      "a",
+      "b"
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "cart-decision-trees",
+    "kind": "invalid-shape CLI",
+    "returncode": 2,
+    "status": "passed"
+  },
+  {
+    "algorithm": "id3-decision-trees",
+    "kind": "example",
+    "expected": [
+      "no",
+      "yes"
+    ],
+    "observed": [
+      "no",
+      "yes"
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "id3-decision-trees",
+    "kind": "JSON CLI",
+    "expected": [
+      "no",
+      "yes"
+    ],
+    "observed": [
+      "no",
+      "yes"
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "id3-decision-trees",
+    "kind": "invalid-shape CLI",
+    "returncode": 2,
+    "status": "passed"
+  },
+  {
+    "algorithm": "c4-5-decision-trees",
+    "kind": "example",
+    "expected": [
+      "no",
+      "yes",
+      "no"
+    ],
+    "observed": [
+      "no",
+      "yes",
+      "no"
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "c4-5-decision-trees",
+    "kind": "JSON CLI",
+    "expected": [
+      "no",
+      "yes",
+      "no"
+    ],
+    "observed": [
+      "no",
+      "yes",
+      "no"
+    ],
+    "status": "passed"
+  },
+  {
+    "algorithm": "c4-5-decision-trees",
+    "kind": "invalid-shape CLI",
+    "returncode": 2,
+    "status": "passed"
+  }
+]

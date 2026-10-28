@@ -1,62 +1,95 @@
 schema_version: 1
-project: "Algorithm Atlas"
+project: Algorithm Atlas
 development:
-  phase: Phase 13 — ML Foundation and Supervised Learning — Regression
+  phase: Phase 13 — B1 Regression completion audit
   phase_number: 13
   track: machine-learning
   category: B1
-  scope: Supervised Learning — Regression category only
+  scope: Supervised Learning — Regression completion audit only
   status: awaiting-review
   active_batch: null
   completed_batches:
   - 1
-  - 2
-  - 3
   batch_plan:
   - - linear-regression
     - ridge-regression
-    - polynomial-regression
-  - - lasso-regression
+    - lasso-regression
     - elastic-net
-  - - support-vector-regression
+    - polynomial-regression
+    - support-vector-regression
     - decision-tree-regression
-  checkpoint: docs/regression-checkpoints.md
-  approval: Owner confirmed DSA implementation complete and authorized the ML foundation
-    plus the first ML category on 2026-10-27 (Asia/Dhaka). B1 Regression only; no
-    second ML category, Deep Learning, AI, commit or push. Earlier DSA approval records
-    remain historical; Phase 13 owner approval is pending.
+  checkpoint: docs/regression-audit-checkpoints.md
+  approval: Owner explicitly approved all previously completed work, including Phase 14 Classification
+    and DSA work, and authorized B1 Regression completion/audit only on 2026-10-28 (Asia/Dhaka).
+    Retain existing solvers; fix only confirmed defects. Approval of the new review/artifacts
+    is pending. No other category, commit, push or release.
   phase_records:
     '11':
       phase_number: 11
       category: A9
-      status: awaiting-review
+      status: owner-approved
       completed_batches:
       - 1
       - 2
       checkpoint: docs/number-theory-checkpoints.md
       completion_report: docs/reviews/number-theory/NUMBER-THEORY-REVIEW-REPORT.md
-      owner_approval: pending
+      owner_approval: approved
+      approved_on: 2026-10-28 Asia/Dhaka
+      approval_evidence: Owner explicitly confirmed all previously completed work owner-approved
+        in the B1 Regression completion-audit request.
     '12':
       phase_number: 12
       category: A10
-      status: awaiting-review
+      status: owner-approved
       completed_batches:
       - 1
       - 2
       checkpoint: docs/two-pointers-sliding-window-checkpoints.md
       completion_report: docs/reviews/two-pointers-sliding-window/TWO-POINTERS-SLIDING-WINDOW-REVIEW-REPORT.md
-      owner_approval: pending
+      owner_approval: approved
+      approved_on: 2026-10-28 Asia/Dhaka
+      approval_evidence: Owner explicitly confirmed all previously completed work owner-approved
+        in the B1 Regression completion-audit request.
     '13':
       phase_number: 13
       category: B1
-      status: awaiting-review
+      status: owner-approved
       checkpoint: docs/regression-checkpoints.md
-      owner_approval: pending
+      owner_approval: approved
       completed_batches:
       - 1
       - 2
       - 3
       completion_report: docs/reviews/regression/REGRESSION-REVIEW-REPORT.md
+      approved_on: 2026-10-28 Asia/Dhaka
+      approval_evidence: 'Explicit owner statement: OWNER-APPROVAL CHECKPOINT IS SATISFIED.'
+    '14':
+      phase_number: 14
+      category: B2
+      status: owner-approved
+      checkpoint: docs/classification-checkpoints.md
+      owner_approval: approved
+      completed_batches:
+      - 1
+      - 2
+      - 3
+      - 4
+      completion_report: docs/reviews/classification/CLASSIFICATION-REVIEW-REPORT.md
+      approved_on: 2026-10-28 Asia/Dhaka
+      approval_evidence: Owner explicitly confirmed all previously completed work owner-approved
+        in the B1 Regression completion-audit request.
+  current_review:
+    id: regression-completion-audit-2026-10-28
+    phase_number: 13
+    category: B1
+    status: awaiting-review
+    owner_approval: pending
+    previous_work_owner_approval: approved
+    completion_report: docs/reviews/regression/REGRESSION-REVIEW-REPORT.md
+  previous_work_approval:
+    status: owner-approved
+    evidence: Explicit owner confirmation that all previously completed work has been owner-approved.
+    DSA_final_audit: owner-approved; historical technical findings/recommendation retained
   completion_report: docs/reviews/regression/REGRESSION-REVIEW-REPORT.md
 categories:
   - id: "A1"
@@ -2073,144 +2106,144 @@ algorithms:
     category: "B2"
     canonical_location: "machine-learning/supervised-learning/classification/logistic-regression"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "k-nearest-neighbors"
       - "gaussian-naive-bayes"
-    notes: "Model class probabilities using a logistic decision function. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase 14 Batch 1: Binary mean cross-entropy with L2 coefficients and unpenalized optional intercept; stable signed log loss, centered Newton steps, bounded Armijo search and gradient stopping; numerical/reference tests passed. C++ optional and absent; owner review pending."
   - id: "k-nearest-neighbors"
     name: "K-Nearest Neighbors (KNN)"
     category: "B2"
     canonical_location: "machine-learning/supervised-learning/classification/k-nearest-neighbors"
     difficulty: "beginner"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "logistic-regression"
       - "gaussian-naive-bayes"
-    notes: "Classify samples through nearby labeled observations and a specified metric. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase 14 Batch 1: Dense Euclidean exhaustive KNN; stable original-row distance ties, sorted-class vote ties, uniform neighbor fractions and owned training state; scalar-distance/reference tests passed. C++ optional and absent; owner review pending."
   - id: "gaussian-naive-bayes"
     name: "Gaussian Naive Bayes"
     category: "B2"
     canonical_location: "machine-learning/supervised-learning/classification/gaussian-naive-bayes"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "logistic-regression"
       - "k-nearest-neighbors"
-    notes: "Classify continuous features using class-conditional Gaussian assumptions. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase 14 Batch 2: genuine class/event sufficient statistics, explicit smoothing/domain contracts, log likelihoods and stable posterior normalization; independent mathematical and scikit-learn tests passed. C++ optional and absent; owner review pending."
   - id: "multinomial-naive-bayes"
     name: "Multinomial Naive Bayes"
     category: "B2"
     canonical_location: "machine-learning/supervised-learning/classification/multinomial-naive-bayes"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "logistic-regression"
       - "k-nearest-neighbors"
-    notes: "Classify count features with a multinomial event model. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase 14 Batch 2: genuine class/event sufficient statistics, explicit smoothing/domain contracts, log likelihoods and stable posterior normalization; independent mathematical and scikit-learn tests passed. C++ optional and absent; owner review pending."
   - id: "bernoulli-naive-bayes"
     name: "Bernoulli Naive Bayes"
     category: "B2"
     canonical_location: "machine-learning/supervised-learning/classification/bernoulli-naive-bayes"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "logistic-regression"
       - "k-nearest-neighbors"
-    notes: "Classify binary feature vectors with a Bernoulli event model. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase 14 Batch 2: genuine class/event sufficient statistics, explicit smoothing/domain contracts, log likelihoods and stable posterior normalization; independent mathematical and scikit-learn tests passed. C++ optional and absent; owner review pending."
   - id: "support-vector-machines"
     name: "Support Vector Machines (SVM)"
     category: "B2"
     canonical_location: "machine-learning/supervised-learning/classification/support-vector-machines"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "logistic-regression"
       - "k-nearest-neighbors"
-    notes: "Study margin-based classification with explicit kernel and regularization choices. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase 14 Batch 3: Binary linear hinge-loss SVM dual with bounded ADMM, signed-equality/box projection and residual/primal-dual-gap checks; no probability calibration or kernel claim. Independent numerical/oracle tests passed. C++ optional and absent; owner review pending."
   - id: "cart-decision-trees"
     name: "CART Decision Trees"
     category: "B2"
     canonical_location: "machine-learning/supervised-learning/classification/cart-decision-trees"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "logistic-regression"
       - "k-nearest-neighbors"
-    notes: "Build classification trees with binary feature splits and impurity criteria. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase 14 Batch 3: Genuine multiclass Gini CART, stable binary thresholds, root-normalized impurity reduction and empirical class leaves. Independent numerical/oracle tests passed. C++ optional and absent; owner review pending."
   - id: "id3-decision-trees"
     name: "ID3 Decision Trees"
     category: "B2"
     canonical_location: "machine-learning/supervised-learning/classification/id3-decision-trees"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "logistic-regression"
       - "k-nearest-neighbors"
-    notes: "Build categorical classification trees using information gain. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase 14 Batch 3: Multiway integer-coded categorical ID3 with entropy/information gain, feature removal and unseen-category node-distribution fallback. Independent numerical/oracle tests passed. C++ optional and absent; owner review pending."
   - id: "c4-5-decision-trees"
     name: "C4.5 Decision Trees"
     category: "B2"
     canonical_location: "machine-learning/supervised-learning/classification/c4-5-decision-trees"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "logistic-regression"
       - "k-nearest-neighbors"
-    notes: "Study gain-ratio-based decision trees and their handling of feature types. Plan an explicitly scoped educational C4.5 treatment and document which original features are supported; do not claim a simplified decision tree fully implements the original system. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase 14 Batch 3: Explicit C4.5-style mixed gain-ratio tree, average-positive adjusted-gain filter and optional continuous MDL charge; no pruning or missing-value routing, unseen-category fallback specified. Independent numerical/oracle tests passed. C++ optional and absent; owner review pending."
   - id: "linear-discriminant-analysis"
     name: "Linear Discriminant Analysis (LDA)"
     category: "B2"
     canonical_location: "machine-learning/supervised-learning/classification/linear-discriminant-analysis"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "linear-discriminant-analysis-projection"
       - "quadratic-discriminant-analysis"
-    notes: "Study the shared-covariance discriminant model for classification and supervised projection. Classification variant of Linear Discriminant Analysis with class predictions under shared-covariance assumptions. The requested supervised projection variant has its own meaningful output contract and canonical folder; share mathematical background without conflating classifier and transform interfaces. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase 14 Batch 4: Prior-weighted shared population covariance, additive diagonal regularization and centered linear discriminants via eigenvalue resolution check and Cholesky solves. Independent Gaussian and scikit-learn reference tests passed. C++ optional and absent; owner review pending."
   - id: "quadratic-discriminant-analysis"
     name: "Quadratic Discriminant Analysis (QDA)"
     category: "B2"
     canonical_location: "machine-learning/supervised-learning/classification/quadratic-discriminant-analysis"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "logistic-regression"
       - "k-nearest-neighbors"
-    notes: "Classify observations with class-specific covariance estimates. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase 14 Batch 4: Per-class unbiased sample covariances with identity shrinkage, eigenvalue resolution checks, Cholesky log determinants and quadratic discriminants; requires two samples per class. Independent Gaussian and scikit-learn reference tests passed. C++ optional and absent; owner review pending."
   - id: "random-forest"
     name: "Random Forest"
     category: "B3"

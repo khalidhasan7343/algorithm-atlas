@@ -1,0 +1,20 @@
+........................................................................ [ 25%]
+...................................................F.................... [ 51%]
+........................................................................ [ 76%]
+.................................................................        [100%]
+=================================== FAILURES ===================================
+________ test_tree_resolves_tiny_piecewise_targets_without_false_purity ________
+
+    @pytest.mark.numerical
+    def test_tree_resolves_tiny_piecewise_targets_without_false_purity():
+        X = [[0.], [1.], [2.], [3.]]
+        y = [0., 0., 1e-200, 1e-200]
+        tree = support.load("decision-tree-regression").DecisionTreeRegression(max_depth=1).fit(X, y)
+>       assert tree.n_leaves_ == 2 and tree.tree_.threshold == 1.5
+E       assert (1 == 2)
+E        +  where 1 = <atlas_regression_decision_tree_regression.DecisionTreeRegression object at 0x10e2cae40>.n_leaves_
+
+machine-learning/supervised-learning/regression/tests/test_completion_audit_oracles.py:64: AssertionError
+=========================== short test summary info ============================
+FAILED machine-learning/supervised-learning/regression/tests/test_completion_audit_oracles.py::test_tree_resolves_tiny_piecewise_targets_without_false_purity
+1 failed, 280 passed in 0.91s

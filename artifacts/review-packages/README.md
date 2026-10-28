@@ -35,3 +35,15 @@ independent Phase 11/12 approval checkpoints and excludes historical review ZIPs
 The [Regression package](regression/README.md) covers authorized Phase 13 ML
 foundation and the seven B1 canonicals. It preserves DSA source/history, requires
 Python/numerical tests for ML with optional C++, and awaits explicit owner approval.
+
+The owner subsequently satisfied Phase 13's checkpoint on 2026-10-28, authorizing
+the [Classification package](classification/README.md) for Phase 14's eleven B2
+canonicals. Its owner review remains pending; original B1 package bytes/metadata
+remain unchanged historical records.
+
+The owner subsequently approved all previous work and authorized only the
+[Phase 13 B1 Regression completion audit](regression/README.md). Its current
+review approval remains pending. The approved prior Regression package set is
+preserved under the Regression history folder; Classification and all earlier
+package bytes remain unchanged. The active Regression ZIP/checksum/JSON contain
+the revised audit deliverables and actual extraction verification results.

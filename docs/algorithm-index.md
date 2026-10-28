@@ -191,17 +191,17 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Logistic Regression | [logistic-regression](../machine-learning/supervised-learning/classification/logistic-regression/README.md) | planned |
-| K-Nearest Neighbors (KNN) | [k-nearest-neighbors](../machine-learning/supervised-learning/classification/k-nearest-neighbors/README.md) | planned |
-| Gaussian Naive Bayes | [gaussian-naive-bayes](../machine-learning/supervised-learning/classification/gaussian-naive-bayes/README.md) | planned |
-| Multinomial Naive Bayes | [multinomial-naive-bayes](../machine-learning/supervised-learning/classification/multinomial-naive-bayes/README.md) | planned |
-| Bernoulli Naive Bayes | [bernoulli-naive-bayes](../machine-learning/supervised-learning/classification/bernoulli-naive-bayes/README.md) | planned |
-| Support Vector Machines (SVM) | [support-vector-machines](../machine-learning/supervised-learning/classification/support-vector-machines/README.md) | planned |
-| CART Decision Trees | [cart-decision-trees](../machine-learning/supervised-learning/classification/cart-decision-trees/README.md) | planned |
-| ID3 Decision Trees | [id3-decision-trees](../machine-learning/supervised-learning/classification/id3-decision-trees/README.md) | planned |
-| C4.5 Decision Trees | [c4-5-decision-trees](../machine-learning/supervised-learning/classification/c4-5-decision-trees/README.md) | planned |
-| Linear Discriminant Analysis (LDA) | [linear-discriminant-analysis](../machine-learning/supervised-learning/classification/linear-discriminant-analysis/README.md) | planned |
-| Quadratic Discriminant Analysis (QDA) | [quadratic-discriminant-analysis](../machine-learning/supervised-learning/classification/quadratic-discriminant-analysis/README.md) | planned |
+| Logistic Regression | [logistic-regression](../machine-learning/supervised-learning/classification/logistic-regression/README.md) | complete |
+| K-Nearest Neighbors (KNN) | [k-nearest-neighbors](../machine-learning/supervised-learning/classification/k-nearest-neighbors/README.md) | complete |
+| Gaussian Naive Bayes | [gaussian-naive-bayes](../machine-learning/supervised-learning/classification/gaussian-naive-bayes/README.md) | complete |
+| Multinomial Naive Bayes | [multinomial-naive-bayes](../machine-learning/supervised-learning/classification/multinomial-naive-bayes/README.md) | complete |
+| Bernoulli Naive Bayes | [bernoulli-naive-bayes](../machine-learning/supervised-learning/classification/bernoulli-naive-bayes/README.md) | complete |
+| Support Vector Machines (SVM) | [support-vector-machines](../machine-learning/supervised-learning/classification/support-vector-machines/README.md) | complete |
+| CART Decision Trees | [cart-decision-trees](../machine-learning/supervised-learning/classification/cart-decision-trees/README.md) | complete |
+| ID3 Decision Trees | [id3-decision-trees](../machine-learning/supervised-learning/classification/id3-decision-trees/README.md) | complete |
+| C4.5 Decision Trees | [c4-5-decision-trees](../machine-learning/supervised-learning/classification/c4-5-decision-trees/README.md) | complete |
+| Linear Discriminant Analysis (LDA) | [linear-discriminant-analysis](../machine-learning/supervised-learning/classification/linear-discriminant-analysis/README.md) | complete |
+| Quadratic Discriminant Analysis (QDA) | [quadratic-discriminant-analysis](../machine-learning/supervised-learning/classification/quadratic-discriminant-analysis/README.md) | complete |
 
 ## B3. [Ensemble Methods](../machine-learning/ensemble-methods/README.md)
 

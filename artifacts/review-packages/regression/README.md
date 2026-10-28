@@ -1,26 +1,30 @@
-# Phase 13 — Regression review package
+# Phase 13 — B1 Regression completion audit package
 
-Owner: **MD.Khalid Hasan** · [MIT](../../../LICENSE) · **Owner approval pending**.
+Owner: **MD.Khalid Hasan** · [MIT](../../../LICENSE).
+Previous work is owner-approved; **this revised review awaits owner approval**.
 
-Review [the report](../../../docs/reviews/regression/REGRESSION-REVIEW-REPORT.md)
-and [checkpoints](../../../docs/regression-checkpoints.md) for the seven B1
-canonicals and Python-first ML foundation. DSA retains both languages and C++17/20.
+Review [the report](../../../docs/reviews/regression/REGRESSION-REVIEW-REPORT.md),
+[audit scope](../../../docs/regression-audit-scope.md) and
+[checkpoints](../../../docs/regression-audit-checkpoints.md). Seven existing
+implementations are retained. Four confirmed numerical defects were repaired;
+RMSE/MAE complete the shared evaluation metrics. Classification and DSA source,
+original tests and historical artifacts are preserved.
 
-The package script creates `algorithm-atlas-regression-review.zip`, its
-`.zip.sha256` checksum and `algorithm-atlas-regression-review.json` metadata here.
-Run `shasum -a 256 -c algorithm-atlas-regression-review.zip.sha256` from this folder.
-Metadata records safe-entry/CRC/source-hash checks and actual extracted-source
-test outputs. Historical ZIPs/sidecars, environments, caches, binaries and secrets
-are excluded; original historical artifacts remain unchanged in the working tree.
+Run `python scripts/package_regression_completion_audit.py` from the repository
+root with the existing ML test environment. It refuses existing active outputs.
+The active files are `algorithm-atlas-regression-review.zip`, its `.zip.sha256`
+checksum and `algorithm-atlas-regression-review.json`. Run
+`shasum -a 256 -c algorithm-atlas-regression-review.zip.sha256` in this folder.
+The JSON records the source manifest, safe-path/CRC/checksum checks and actual
+extracted-source full-suite results. Archives exclude environments, caches,
+secrets, binaries, datasets/model weights and nested historical archives/sidecars.
 
-Extract the archive and install `requirements-ml-test.txt` in a separate virtual
-environment, with a C++ compiler available. Run the report's reproduction commands.
-The package verifier uses the existing external interpreter for extraction tests;
-the archive contains no environment or automatic dependency installer.
+The prior approved set is preserved byte-for-byte under
+[history/approved-before-completion-audit-2026-10-28](history/approved-before-completion-audit-2026-10-28/README.md).
+The earlier snapshot in `history/2026-10-27/` also remains unchanged. Historical
+metadata describes its original handoff, independently of later owner approval.
 
-Stop for owner approval before another ML category. No commit, push or publication.
-
-The package captured in externally advanced commit `5a3799b` is preserved verbatim
-in `history/2026-10-27/`, with its original basename, checksum and metadata. The
-current package corrects setup/glossary guidance and includes final continuation
-evidence. Historical archives/sidecars remain outside the final source ZIP.
+Extract the ZIP, install `requirements-ml-test.txt` in a separate environment and
+provide a C++17/C++20 compiler. Follow the report's reproduction commands. The
+verifier uses an external installed interpreter; no environment is bundled.
+Stop for owner review. No next category, commit, push, release or publication.

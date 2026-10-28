@@ -18,7 +18,7 @@ This category preserves **7 original syllabus entries**. Each link points to the
 
 Phase 11 implements these seven Number Theory canonicals.
 
-Read [the contracts](../../docs/number-theory-conventions.md) and [the independent checkpoint](../../docs/number-theory-checkpoints.md). Both categories are jointly authorized for implementation, with separate pending owner approvals, reports and review packages. The owner subsequently authorized Phase 13 Regression; earlier approvals remain independent.
+Read [the contracts](../../docs/number-theory-conventions.md) and [the independent checkpoint](../../docs/number-theory-checkpoints.md). Both categories are owner-approved; their historical reports/packages retain their original handoff status. The owner subsequently authorized Phase 13 Regression; earlier approvals remain independent.
 
 ## Learning and contribution scope
 

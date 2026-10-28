@@ -1,0 +1,37 @@
+{
+  "name": "CART squared-error underflow causes false purity",
+  "X": [
+    [
+      0
+    ],
+    [
+      1
+    ],
+    [
+      2
+    ],
+    [
+      3
+    ]
+  ],
+  "y": [
+    0.0,
+    0.0,
+    1e-200,
+    1e-200
+  ],
+  "observed_leaves": 1,
+  "expected_leaves": 2,
+  "observed": [
+    5e-201,
+    5e-201,
+    5e-201,
+    5e-201
+  ],
+  "expected": [
+    0.0,
+    0.0,
+    1e-200,
+    1e-200
+  ]
+}

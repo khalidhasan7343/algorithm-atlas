@@ -6,7 +6,7 @@ From Fundamental Algorithms to Advanced Artificial Intelligence — Learn, Imple
 
 Algorithm Atlas is an educational, open-source project maintained by **MD.Khalid Hasan**. Its goal is to explain algorithms from first principles through clear documentation, Python and modern C++ implementations, meaningful tests, complexity analysis, and practical applications.
 
-**Current state: DSA implementation complete; Phase 13 ML Foundation and B1 Supervised Learning — Regression authorized on 2026-10-27.** Implement only the seven canonicals in the [Regression scope](docs/regression-scope.md), following the [ML standard](docs/ml-development.md) and [checkpoint](docs/regression-checkpoints.md). Phase 13 owner approval is pending. Historical DSA final-audit and Phase 11/12 pending approvals remain recorded independently.
+**Current state: all previously completed work is owner-approved; the current authorization is the B1 Regression completion audit.** Retain the seven existing solvers, fix only confirmed Regression defects and follow [the audit scope](docs/regression-audit-scope.md), [checkpoint](docs/regression-audit-checkpoints.md) and [evaluation contracts](docs/regression-evaluation.md). Approval of the revised Regression package remains pending. No other category is authorized.
 
 The [DSA final audit](docs/reviews/dsa-final-audit/DSA-FINAL-AUDIT-REPORT.md) retains its conditional recommendation and original evidence. ML authorization does not retroactively approve historical milestones.
 
@@ -93,7 +93,7 @@ From the repository root:
 ```sh
 python3 -m venv .venv
 . .venv/bin/activate
-python -m pip install -r requirements-dev.txt
+python -m pip install -r requirements-ml-test.txt
 python scripts/validate_catalog.py
 ```
 
@@ -167,7 +167,7 @@ Use the [complexity cheat sheet](docs/complexity-cheatsheet.md) for asymptotic n
 
 [Progress tracking](docs/progress.md) records catalog totals, completed and remaining algorithms, blockers, and the next proposed batch. The [Phase 0 review report](docs/phase-0-review.md) and [complete file inventory](docs/phase-0-files.md) document the foundation handoff. Phase 0 supplies the foundation only. The term **Dynamic Policy Optimization (DPO)** is retained from the syllabus and blocked pending clarification; it has not been replaced by Direct Preference Optimization.
 
-The owner authorized Phase 13 Regression on 2026-10-27 after confirming DSA implementation complete. All seven B1 canonicals are implemented and tested; owner review is pending. See the [Regression report](docs/reviews/regression/REGRESSION-REVIEW-REPORT.md) and [review package](artifacts/review-packages/regression/README.md). Stop at this checkpoint. No second ML category, Deep Learning, AI, commit, push or publication is authorized.
+All prior work, including Classification, is owner-approved. The current [Regression completion audit](docs/regression-audit-checkpoints.md) fixes confirmed metric and CART defects and refreshes its review package; that new review is pending. No other category, commit, push or release is authorized.
 
 ## Contribution Guidelines
 

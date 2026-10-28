@@ -28,8 +28,7 @@ CASES = [
 
 
 def metrics(y, prediction):
-    return dict(mse=support.mse(y, prediction), mae=float(np.mean(np.abs(y-prediction))),
-                r2=support.r2(y, prediction))
+    return support.regression_metrics(y, prediction)
 
 
 def main():

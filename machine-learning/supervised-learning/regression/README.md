@@ -7,9 +7,9 @@ Predicting continuous targets with documented model and regularization assumptio
 This category preserves **7 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
 
-Phase 13 implements these seven canonicals in three sequential batches. Python/NumPy and mathematical/numerical tests are required; C++ is optional and absent. Owner approval remains pending. Read [the ML standard](../../../docs/ml-development.md), [the scope](../../../docs/regression-scope.md) and [the checkpoints](../../../docs/regression-checkpoints.md). The category experiment records training and held-out MSE/MAE/R² with training-only scaling: [benchmark.py](experiments/benchmark.py). No second ML category is authorized.
+All seven existing Regression solvers are retained for the authorized Phase 13 completion audit. Previous work is owner-approved; this new review remains pending. Read [the audit scope](../../../docs/regression-audit-scope.md), [the audit checkpoint](../../../docs/regression-audit-checkpoints.md) and [the MSE/RMSE/MAE/R² contracts](../../../docs/regression-evaluation.md). Python/numerical tests are required and C++ remains optional. The fixed-split experiment is [benchmark.py](experiments/benchmark.py). No other category is authorized.
 
-See [the review report](../../../docs/reviews/regression/REGRESSION-REVIEW-REPORT.md).
+See [the current audit report](../../../docs/reviews/regression/REGRESSION-REVIEW-REPORT.md).
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
 | Linear Regression | [linear-regression](linear-regression/README.md) | complete |

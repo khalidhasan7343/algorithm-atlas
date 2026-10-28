@@ -88,3 +88,10 @@ to the two successful full runs; owner approval remains pending.
 
 **Owner approval: pending.** Stop after category completion and integrity-checked
 review package. Do not start Classification, Deep Learning, AI, commit or push.
+
+## Subsequent owner approval — 2026-10-28
+
+The owner explicitly supplied **“OWNER-APPROVAL CHECKPOINT IS SATISFIED.”** with
+the Phase 14 Classification request. Phase 13 is now owner-approved. Historical
+reports, numerical evidence and archive bytes retain their handoff-time pending
+statements. Only B2 is newly authorized; see [Classification checkpoints](classification-checkpoints.md).

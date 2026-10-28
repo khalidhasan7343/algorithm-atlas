@@ -96,18 +96,84 @@ def training(X, y, fit_intercept, **limits):
     return X, y, X - x_offset, y - y_offset, x_offset, y_offset
 
 
-def mse(y, prediction):
+def _metric_data(y, prediction):
+    prediction = np.asarray(prediction)
+    if prediction.ndim != 1 or prediction.size > MAX_CELLS or prediction.dtype.kind not in "iuf":
+        raise ValueError("real numeric one-dimensional predictions within cell budget required")
+    prediction = np.array(prediction, dtype=np.float64, copy=True)
     y = targets(y, len(prediction))
-    prediction = np.asarray(prediction, dtype=np.float64)
-    if prediction.shape != y.shape or not np.isfinite(prediction).all():
-        raise ValueError("finite one-dimensional predictions matching y required")
-    return float(np.mean((y - prediction)**2))
+    finite(prediction, "prediction")
+    return y, prediction, finite(y - prediction, "residual")
 
 
+def _scaled_rmse(error):
+    scale = float(np.max(np.abs(error)))
+    if scale == 0:
+        return 0.0
+    # Tiny relative contributions can round to zero; the maximal term is one.
+    with np.errstate(under="ignore"):
+        return float(scale * np.sqrt(np.mean((error / scale)**2)))
+
+
+def _scaled_mae(error):
+    scale = float(np.max(np.abs(error)))
+    if scale == 0:
+        return 0.0
+    with np.errstate(under="ignore"):
+        return float(scale * np.mean(np.abs(error) / scale))
+
+
+def _r2_from(y, prediction, root_error):
+    # Checking raw equality avoids both squared-error underflow and roundoff in
+    # mean([0.1,0.1,0.1]) making a constant target appear to have variance.
+    if np.all(y == y[0]):
+        return 1.0 if np.array_equal(y, prediction) else 0.0
+    with np.errstate(under="ignore"):
+        deviation = y - y.mean()
+        scale = float(np.max(np.abs(deviation)))
+        variance = float(np.mean((deviation / scale)**2))
+        relative_mse = np.square(np.divide(root_error, scale))
+        return float(finite(1.0 - relative_mse / variance, "R2"))
+
+
+@numerical
+def rmse(y, prediction):
+    """Root mean squared error in target units, with scale-safe accumulation."""
+    _, _, error = _metric_data(y, prediction)
+    return _scaled_rmse(error)
+
+
+@numerical
+def mae(y, prediction):
+    """Mean absolute error in target units, without overflowing the raw sum."""
+    _, _, error = _metric_data(y, prediction)
+    return _scaled_mae(error)
+
+
+@numerical
+def mse(y, prediction):
+    """Mean squared error; unrepresentably tiny final float64 results round to zero."""
+    _, _, error = _metric_data(y, prediction)
+    with np.errstate(under="ignore"):
+        return float(np.square(_scaled_rmse(error)))
+
+
+@numerical
 def r2(y, prediction):
-    error = mse(y, prediction)
-    variance = float(np.mean((np.asarray(y) - np.mean(y))**2))
-    return 1.0 - error / variance if variance else (1.0 if error == 0 else 0.0)
+    """Single-output R2; constant target is 1 only for exact predictions, else 0."""
+    y, prediction, error = _metric_data(y, prediction)
+    return _r2_from(y, prediction, _scaled_rmse(error))
+
+
+@numerical
+def regression_metrics(y, prediction):
+    """MSE, RMSE, MAE and R2; no sample weights or multi-output aggregation."""
+    y, prediction, error = _metric_data(y, prediction)
+    root_error = _scaled_rmse(error)
+    with np.errstate(under="ignore"):
+        mean_square = float(np.square(root_error))
+    return dict(mse=mean_square, rmse=root_error, mae=_scaled_mae(error),
+                r2=_r2_from(y, prediction, root_error))
 
 
 def finite(value, name="result"):

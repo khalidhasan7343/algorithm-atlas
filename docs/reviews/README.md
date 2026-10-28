@@ -4,7 +4,8 @@ Review and audit reports are organized by canonical phase name. Their filenames 
 
 | Phase | Report |
 | --- | --- |
-| regression (Phase 13 ML) | [REGRESSION-REVIEW-REPORT.md](regression/REGRESSION-REVIEW-REPORT.md) |
+| classification (Phase 14 ML) | [CLASSIFICATION-REVIEW-REPORT.md](classification/CLASSIFICATION-REVIEW-REPORT.md) |
+| regression (Phase 13 B1 completion audit; current review pending) | [REGRESSION-REVIEW-REPORT.md](regression/REGRESSION-REVIEW-REPORT.md) |
 | DSA final audit | [DSA-FINAL-AUDIT-REPORT.md](dsa-final-audit/DSA-FINAL-AUDIT-REPORT.md) |
 | number-theory | [NUMBER-THEORY-REVIEW-REPORT.md](number-theory/NUMBER-THEORY-REVIEW-REPORT.md) |
 | two-pointers-sliding-window | [TWO-POINTERS-SLIDING-WINDOW-REVIEW-REPORT.md](two-pointers-sliding-window/TWO-POINTERS-SLIDING-WINDOW-REVIEW-REPORT.md) |
@@ -30,3 +31,13 @@ foundation plus B1 Regression only. Its owner approval is pending; historical
 DSA final-audit and Phase 11/12 approval records remain independent.
 
 The [original foundation handoff](../phase-0-review.md), [foundation inventory](../phase-0-files.md), checkpoints and evidence remain in their existing docs locations.
+
+On 2026-10-28 the owner explicitly satisfied Phase 13's approval checkpoint and
+authorized Phase 14 B2 Classification only. Phase 14 owner approval remains
+pending; historical reports retain their handoff-time statements and evidence.
+
+On 2026-10-28 the owner approved all prior work, including Classification and
+DSA, and authorized only the B1 Regression completion audit. The existing
+[Regression report](regression/REGRESSION-REVIEW-REPORT.md) now records that audit;
+its new review approval is pending. Historical handoff statements and evidence
+remain historical. See [current checkpoints](../regression-audit-checkpoints.md).
