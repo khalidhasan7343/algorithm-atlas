@@ -19,3 +19,8 @@ The package verifier uses the existing external interpreter for extraction tests
 the archive contains no environment or automatic dependency installer.
 
 Stop for owner approval before another ML category. No commit, push or publication.
+
+The package captured in externally advanced commit `5a3799b` is preserved verbatim
+in `history/2026-10-27/`, with its original basename, checksum and metadata. The
+current package corrects setup/glossary guidance and includes final continuation
+evidence. Historical archives/sidecars remain outside the final source ZIP.

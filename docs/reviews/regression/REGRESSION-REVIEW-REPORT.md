@@ -2,7 +2,7 @@
 
 Owner and maintainer: **MD.Khalid Hasan** · Repository: [algorithm-atlas](https://github.com/khalidhasan7343/algorithm-atlas) · [MIT License](../../../LICENSE).
 
-Prepared 2026-10-27 (Asia/Dhaka). **Owner approval: pending.** This report covers
+Started 2026-10-27; finalized 2026-10-28 (Asia/Dhaka). **Owner approval: pending.** This report covers
 ML foundation and the first ML category only. Its final execution totals and
 package verification are recorded below and in the linked evidence.
 
@@ -28,6 +28,12 @@ implementations and no cross-category memberships for these seven IDs. The
 Started on clean branch `main`, HEAD `3bca5e03e254167d20f19af68797fca68ff27bbf`.
 The [baseline](../../regression-evidence/baseline.json) captures the original
 catalog/development state, versions, compilers and hashes of 1,551 tracked files.
+Between sessions HEAD advanced externally to
+`5a3799b2913213923e9acaab846d77587993ea25` (ML start). All 1,621 source files
+in that commit match the first tested ZIP candidate. The agent did not create
+that commit. [Continuation evidence](../../regression-evidence/continuation-baseline.json)
+records the verified revision; its original package is preserved verbatim under
+`artifacts/review-packages/regression/history/2026-10-27/`.
 Inventory remains **35 categories, 256 memberships, 235 canonicals**. There are
 97 DSA canonicals; all remain implemented with Python and C++. Seven ML
 canonicals bring track-required completed topics to 104; 131 remain, including
@@ -211,7 +217,7 @@ are listed in section 23 and externally record every packaged source hash.
 
 Catalog development metadata and only B1 algorithm statuses/notes; central validator
 and generator; pytest marker configuration; CI dependency/cache/timeout settings;
-AGENTS, README, CONTRIBUTING, development/roadmap/progress/index documentation;
+AGENTS, README, CONTRIBUTING, getting-started/glossary/development/roadmap/progress/index documentation;
 the seven canonical planning READMEs replaced by genuine lessons; generated ML
 planning/category policy text; A9/A10 category authorization notes; review/package
 indexes. The exact list is in changed-files.json. No canonical DSA implementation,
@@ -246,7 +252,13 @@ now honors its explicit legacy scope. Polynomial predict-before-fit was correcte
 to issue the documented ValueError; huge scalar conversion errors are normalized
 to ValueError. The first final-report link gate also caught a missing changed-files inventory;
 it was generated and catalog/link validation then passed. Its failed transcript
-is preserved. No failed attempt was silently relabeled as passing.
+is preserved. Final guide inspection also corrected stale phase checkpoints in
+Getting Started and the glossary, and changed full-suite setup from DSA-only
+requirements to ML test requirements. The first ZIP candidate had already passed
+all 2,217 extracted tests in 444.99s; that evidence is retained in
+[package-candidate1.json](../../regression-evidence/package-candidate1.json).
+The final rebuild changes guidance/report/packaging evidence, with algorithm
+source and tests unchanged. No failed attempt was silently relabeled as passing.
 
 ## 22. Reproduction commands
 
@@ -289,7 +301,12 @@ historical/nested ZIPs/sidecars. Historical originals remain unchanged locally.
 Before handoff, the package script checks unique safe regular-file paths, CRC,
 required contents, high-confidence credential patterns and exact source bytes;
 it extracts the actual archive into a fresh temporary folder without .git and
-reruns catalog, generated docs, scope, examples and the full `--require-cpp` suite.
+reruns catalog, generated docs, scope, examples and all infrastructure/ML tests
+with `--require-cpp`. Both C++ toolchain standards remain active. The initial
+frozen export already passed the full 2,217-test suite; the final documentation
+rebuild preserves all DSA source/test bytes and avoids recompiling that unchanged
+suite a third time. The final targeted export run is 530 tests, and its actual
+result is recorded in the external sidecar.
 Dependencies come from the existing external development interpreter, not a bundled
 environment. The external JSON records actual extraction outputs after archive
 creation, avoiding a self-referential checksum. Final status is authoritative in
@@ -300,6 +317,6 @@ pre-package results. A separate SHA-256 command verifies the completed archive.
 
 **Owner approval: pending.** The category may be implemented/tested without being
 owner-reviewed or approved. Stop after verified package delivery. Do not begin
-Classification or any other ML/Deep Learning/AI category. No commit, push, release
-or publication has been performed. Independent historical owner checkpoints remain
+Classification or any other ML/Deep Learning/AI category. This agent created no commit, push, release
+or publication; the externally advanced HEAD is recorded in section 3. Independent historical owner checkpoints remain
 unchanged.

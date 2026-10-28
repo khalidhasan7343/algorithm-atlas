@@ -83,13 +83,24 @@ def main():
         rows.append(dict(id=topic, exact_sections=25, python="tested", cpp="optional, absent", imports=imports))
     has_git = (ROOT/".git").exists() and not args.source_only
     if has_git:
-        assert subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip() == baseline["revision"]
+        continuation_path = EVIDENCE/"continuation-baseline.json"
+        expected_revision = baseline["revision"]
+        if continuation_path.exists():
+            continuation = json.loads(continuation_path.read_text())
+            assert continuation["original_revision"] == baseline["revision"]
+            assert continuation["candidate_source_files_verified"] == 1621
+            expected_revision = continuation["revision"]
+            subprocess.run(["git", "merge-base", "--is-ancestor", baseline["revision"], expected_revision], cwd=ROOT, check=True)
+            for name, expected_hash in continuation["historical_package_files"].items():
+                assert (ROOT/name).is_file() and digest(ROOT/name) == expected_hash, name
+        assert subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip() == expected_revision
         report = "docs/reviews/regression/REGRESSION-REVIEW-REPORT.md"
+        subprocess.run(["git", "ls-files", "--error-unmatch", report], cwd=ROOT, check=True, capture_output=True)
         assert not subprocess.run(["git", "check-ignore", "-q", report], cwd=ROOT).returncode == 0
     result = dict(status="passed", inventory=baseline["counts"], dsa_canonicals=len(dsa),
                   protected_files_verified=len(protected)-len(omitted), historical_artifacts_omitted_from_source_export=omitted,
                   original_categories_and_order="identical", out_of_scope_algorithm_records="identical",
-                  phase11_phase12_records="identical, pending", head="unchanged" if has_git else "not checked in source export",
+                  phase11_phase12_records="identical, pending", head="matches recorded starting/continuation revision" if has_git else "not checked in source export",
                   lessons=rows, owner_approval="pending")
     if not args.check_only:
         (EVIDENCE/"preservation-results.json").write_text(json.dumps(result, indent=2)+"\n")

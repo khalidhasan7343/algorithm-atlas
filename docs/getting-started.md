@@ -1,6 +1,6 @@
 # Getting Started
 
-Algorithm Atlas is an educational repository for Python and C++ implementations of DSA, machine learning, and artificial intelligence topics. **Phase 7 is owner-approved; Phase 8 authorizes fourteen Tree Algorithms.** Follow the [Tree checkpoint](tree-algorithms-checkpoints.md) and [representation contracts](tree-conventions.md), then stop for owner review. Completed topics have runnable lessons and tests; catalog statuses remain authoritative.
+Algorithm Atlas is an educational repository for DSA, machine learning and artificial intelligence topics. **Phase 13 ML foundation and B1 Regression are implemented and tested, awaiting owner review.** DSA requires Python/C++ and both C++17/C++20; classical ML requires Python/numerical tests with optional C++. Follow the [Regression checkpoint](regression-checkpoints.md) and [ML standard](ml-development.md). Catalog statuses remain authoritative; later categories require separate approval.
 
 Start with the [learning roadmap](learning-roadmap.md), browse the [complete algorithm index](algorithm-index.md), and consult the [progress tracker](progress.md) before choosing a topic. The [glossary](glossary.md) and [complexity cheat sheet](complexity-cheatsheet.md) explain terminology used throughout the project.
 
@@ -19,10 +19,10 @@ If you already have a local checkout, enter its root directory. If you received 
 ```sh
 python3 --version
 python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements-dev.txt
+.venv/bin/python -m pip install -r requirements-ml-test.txt
 ```
 
-The development requirements support repository checks and pytest. They do not install ML frameworks or download datasets. A future algorithm that needs additional packages must describe those dependencies and installation commands in its own README.
+The full development requirements include NumPy and scikit-learn for independent ML references, alongside pytest and PyYAML. They do not download datasets or install deep-learning frameworks. DSA-only work can instead install `requirements-dev.txt` and run `.venv/bin/python -m pytest tests dsa --require-cpp`. ML runtime alone uses `requirements-ml.txt`.
 
 ## Check C++ availability
 
@@ -37,7 +37,7 @@ An alternative compiler can be selected with `CXX`, as described in [development
 ```sh
 .venv/bin/python scripts/validate_catalog.py
 .venv/bin/python scripts/generate_catalog_docs.py --check
-.venv/bin/python -m pytest
+.venv/bin/python -m pytest --require-cpp
 ```
 
 The validator checks the syllabus inventory, canonical locations, status consistency, and relative documentation links. The second command checks that generated navigation and progress documents match the catalog. Planned topics are allowed to lack implementation files; an implementation claim requires corresponding artifacts. Pytest exercises repository tooling and the completed algorithms, including C++ compilation and execution. Passing checks make no correctness claim for unimplemented topics.
@@ -48,7 +48,7 @@ If dependency installation or a check fails, preserve the exact error and identi
 
 ## Running examples after implementation
 
-Follow a completed [sorting topic](../dsa/sorting/README.md) for exact commands and input contracts. Implemented topics use this structure; planned topics do not yet contain these source/test files:
+Follow a completed [sorting topic](../dsa/sorting/README.md) for exact commands and input contracts. Implemented DSA topics use this structure; planned topics do not yet contain these source/test files:
 
 ```text
 <canonical-folder>/README.md
@@ -58,7 +58,14 @@ Follow a completed [sorting topic](../dsa/sorting/README.md) for exact commands 
 <canonical-folder>/tests/test_cpp.py
 ```
 
-For a dependency-free topic with standalone example entry points, the command pattern is:
+Classical ML requires the lesson, Python solution and Python test file; C++ files
+are optional and must be supplied as a source/test pair when implemented. The
+seven Regression topics include `python/example.py`; run one with
+`.venv/bin/python machine-learning/supervised-learning/regression/linear-regression/python/example.py`.
+The category's `experiments/benchmark.py` demonstrates training-only scaling and
+separate training/held-out metrics on small synthetic data.
+
+For a dependency-free DSA topic with standalone example entry points, the command pattern is:
 
 ```text
 .venv/bin/python <canonical-folder>/python/solution.py
@@ -71,6 +78,8 @@ Replace the angle-bracket path only when an implementation exists. Some topics w
 
 ## Approval checkpoint
 
-Follow the two [Divide & Conquer batches](divide-conquer-checkpoints.md), validate each before continuing, then stop for owner review. No other category, commit, push, or publication is authorized.
+The three [Regression batches](regression-checkpoints.md) are complete. Stop for
+explicit owner review of the report and verified package before starting another
+ML category. Deep Learning, AI, commits, pushes and publication remain unauthorized.
 
 No push or publication is authorized by local setup or a passing test run. Review checkpoints apply between every later development phase as well.

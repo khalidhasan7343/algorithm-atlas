@@ -1,0 +1,15 @@
+{
+  "revision": "5a3799b2913213923e9acaab846d77587993ea25",
+  "original_revision": "3bca5e03e254167d20f19af68797fca68ff27bbf",
+  "date": "2026-10-28 Asia/Dhaka",
+  "note": "HEAD advanced externally between sessions. All 1621 tracked source files match the tested first ZIP candidate; agent did not commit/push.",
+  "candidate_source_files_verified": 1621,
+  "owner_snapshot_package_preserved": "artifacts/review-packages/regression/history/2026-10-27",
+  "snapshot_sha256": "14e1bc3287e5dde1020d25b805e39e081e2f3846c7ae70b64446357b6f5e8140",
+  "historical_package_files": {
+    "artifacts/review-packages/regression/history/2026-10-27/algorithm-atlas-regression-review.json": "918767d1017d87a18fea152a22b81861205d404e5656978c98656a695f1e9399",
+    "artifacts/review-packages/regression/history/2026-10-27/algorithm-atlas-regression-review.zip": "14e1bc3287e5dde1020d25b805e39e081e2f3846c7ae70b64446357b6f5e8140",
+    "artifacts/review-packages/regression/history/2026-10-27/algorithm-atlas-regression-review.zip.sha256": "a315d3e3c2a17139d53b056523f67076f96316eedd7ea5e1e9ec9ebca97cdb28"
+  },
+  "algorithm_and_test_harness_files_unchanged_since_full_export": 635
+}

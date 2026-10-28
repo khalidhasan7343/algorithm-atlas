@@ -6,9 +6,10 @@
   "category_slug": "regression",
   "algorithm_count": 7,
   "implementation_count": 7,
-  "timestamp": "2026-10-27T11:42:26.167691+06:00",
+  "timestamp": "2026-10-28T09:33:42.678920+06:00",
   "starting_revision": "3bca5e03e254167d20f19af68797fca68ff27bbf",
   "branch": "main",
+  "review_revision": "5a3799b2913213923e9acaab846d77587993ea25",
   "python_test_status": {
     "command": [
       "python",
@@ -140,8 +141,8 @@
       "scripts/validate_catalog.py"
     ],
     "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
-    "timestamp": "2026-10-27T11:42:10.202996+06:00",
-    "elapsed_seconds": 0.583,
+    "timestamp": "2026-10-28T09:33:22.499254+06:00",
+    "elapsed_seconds": 0.62,
     "returncode": 0,
     "timed_out": false,
     "timeout_seconds": 1200,
@@ -151,7 +152,7 @@
       "OMP_NUM_THREADS": "1",
       "OPENBLAS_NUM_THREADS": "1"
     },
-    "log": "docs/regression-evidence/catalog-attempt6.txt",
+    "log": "docs/regression-evidence/catalog-attempt8.txt",
     "summary": "Validation passed. Test execution and external URLs are checked separately."
   },
   "documentation_validation_status": {
@@ -161,8 +162,8 @@
       "--check"
     ],
     "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
-    "timestamp": "2026-10-27T11:42:10.361407+06:00",
-    "elapsed_seconds": 0.158,
+    "timestamp": "2026-10-28T09:33:22.661550+06:00",
+    "elapsed_seconds": 0.162,
     "returncode": 0,
     "timed_out": false,
     "timeout_seconds": 1200,
@@ -172,7 +173,7 @@
       "OMP_NUM_THREADS": "1",
       "OPENBLAS_NUM_THREADS": "1"
     },
-    "log": "docs/regression-evidence/generated-attempt5.txt",
+    "log": "docs/regression-evidence/generated-attempt7.txt",
     "summary": "Checked 173 catalog documentation pages; 0 changes."
   },
   "dependency_information": {
@@ -204,9 +205,9 @@
   "phase11_owner_approval": "pending",
   "phase12_owner_approval": "pending",
   "archive": "algorithm-atlas-regression-review.zip",
-  "bytes": 3066994,
-  "sha256": "14e1bc3287e5dde1020d25b805e39e081e2f3846c7ae70b64446357b6f5e8140",
-  "files": 1621,
+  "bytes": 3152441,
+  "sha256": "8b435e18eea5e40c7f56875cc9ea9c8d1da995e2f181d97751d6d0136337e15b",
+  "files": 1636,
   "file_sha256": {
     ".editorconfig": "e74e511d97036b0f0e74af747a404ce20c91066ca17906da67b2b80267a3af9c",
     ".gitattributes": "167a38ccfe4c1ce36faeacbee047b2fc9c55d286710271d9fdc78d966d205069",
@@ -233,7 +234,8 @@
     "artifacts/review-packages/greedy/README.md": "de0000d5b11964465314f4cb8f039ae89ac8c77fcf8bef984eb3514b82a4d2b3",
     "artifacts/review-packages/number-theory/README.md": "390e1ef0e3ff0680ee2aefff09a3d382438209c64c890019c53d7ee71d20897a",
     "artifacts/review-packages/recursion-backtracking/README.md": "d38e0490f7877adc010a5ab910bf0350ded4cd7831dadff6c6447db540242e30",
-    "artifacts/review-packages/regression/README.md": "5b4a98247ce12e9b8f7991a6fbddc1f2839ebe61027b38979dbf25fdbf44bd4f",
+    "artifacts/review-packages/regression/README.md": "076e7042af52308456ba8aa34b648df224d1a7e809ddff4034e828fa77606349",
+    "artifacts/review-packages/regression/history/2026-10-27/README.md": "9b19c712c5cd5c3f92d337acffb36149e9547f9a2e7c49d6ac3674e602f3b57f",
     "artifacts/review-packages/searching/README.md": "478e1c424cf4b140a3db75e12270c5c7b1f55872c0c06aad53e2bcc04a105991",
     "artifacts/review-packages/sorting/README.md": "30828b7b8a5d4285f9c6a7a9f4c51391071c6687f4abc05bf719131f75b1efcc",
     "artifacts/review-packages/string-algorithms/README.md": "6db7bb9357a7efa70e0e6bb4b8f7c038b022544cce70d9e8be8fca339732265a",
@@ -457,8 +459,8 @@
     "docs/dynamic-programming-evidence/sanitizer-results.json": "1e2df844aee5e6e5e222f1e4015305e1bd4cac2bebbd7886f5d6e2b9e9041403",
     "docs/dynamic-programming-evidence/sanitizer-sanitizer.txt": "9864a7513e73dd07e245ce2f132653d0c674c968b59c7d45e7e2b30c3c6a81cf",
     "docs/dynamic-programming-evidence/tracking-results.json": "58cda81ca8f02cc9d4c6cbc9456d5a36eb30703786f4c06750affa04736401b5",
-    "docs/getting-started.md": "791e2aceec17c38d6b2c19b97173b9ff57292e1e56f2bea569a390a5177cf5dd",
-    "docs/glossary.md": "08e9227f780b68642d85215ffd1b53edb12a686f25ecf6a97a6000658a6efba7",
+    "docs/getting-started.md": "ae691c584d06026bf67fc8c7f6630ba39dd719a5a2d68d82b864a7c9c143d7e5",
+    "docs/glossary.md": "35f1b6f2488d5c74059df4c3ed50973fba4f300f36a2736832f21b19edff2244",
     "docs/graph-algorithms-checkpoints.md": "8f5e07272a3e289a72a8d4a817a52c29b748b7ae17601c9a82d6b541ee602ca2",
     "docs/graph-algorithms-evidence/README.md": "53f9298d339181ef9bbd0e55fb4d8f6bed875d7be25ae55f56e842cc067493d8",
     "docs/graph-algorithms-evidence/approved-baseline.json": "9870e259d417b1b1c4ac0155dc014a85669f421cc90fbba742581093a2d73210",
@@ -684,7 +686,7 @@
     "docs/recursion-backtracking-evidence/revalidation/sanitizer-results.json": "259dbd4805511d29586b63069e9a34684d76788bbd730b855fb07819cc0462d5",
     "docs/recursion-backtracking-evidence/sanitizer-backtracking-sanitizer.txt": "5bfee08986e253a2d7d8764bc3bed0187e4a99a240f7c5b84d9e40f7a5ee4218",
     "docs/recursion-backtracking-evidence/sanitizer-results.json": "435eb0c5c1c3210ec61bd5a89af02b097c3e6fe612187ac0c9596faee6b8e4e8",
-    "docs/regression-checkpoints.md": "86640a2411af4ac47575d3cbdd7f7203b45d184e381765e41f89c6ea88597f59",
+    "docs/regression-checkpoints.md": "1fa1614e2feed32c1043f884ed3f3f2f9853fbf2033c4e444095646d66549259",
     "docs/regression-evidence/baseline.json": "be67f01bdb3c79b3a94f537845b265206bd99edc200359ec8166b78f0f0023e7",
     "docs/regression-evidence/batch1-attempt1.json": "7519f578ac8add094e5c17264be7089477434ef64c64842d808b03c3012bf170",
     "docs/regression-evidence/batch1-attempt1.txt": "c5042dcee40bbade64c2eb188b8da1f73d6aade3570b30e6af98b66c18de36fb",
@@ -710,9 +712,14 @@
     "docs/regression-evidence/catalog-attempt5.txt": "ab753ea36d754034eb47c993cb58e492b9b09b17d4447d4058bf348c6cbf9aac",
     "docs/regression-evidence/catalog-attempt6.json": "ff2c2c162e2e39679c4d6f7f1e1cd35bb6bf03f30015cfa196771152bb425282",
     "docs/regression-evidence/catalog-attempt6.txt": "ab753ea36d754034eb47c993cb58e492b9b09b17d4447d4058bf348c6cbf9aac",
+    "docs/regression-evidence/catalog-attempt7.json": "f0416d68dcaa2f15a6ec587afda5c674621b0026c0c11bbd3539aa57a30066ad",
+    "docs/regression-evidence/catalog-attempt7.txt": "d83b2604e90dab49a8ccee3ef807710819d6d13b6e92f898fb6175a34465e8b0",
+    "docs/regression-evidence/catalog-attempt8.json": "0a7b8b2072f75e5a68c4902ef532bf61ce9aaa0a21f58989e43c01eeb3936181",
+    "docs/regression-evidence/catalog-attempt8.txt": "2ae0162f9e143b983d19b0520cfc7d2c0499fd3039ef914bbabec37186fb1692",
     "docs/regression-evidence/catalog-baseline.yaml": "f73ef0b6de9e72ea3db4960facf6ba12d57b9066113305116435f8d4fb67cd65",
-    "docs/regression-evidence/changed-files.json": "be2d4613780c4fe607b1fc7804310c36ee6daf2c2bb589705d27cba9cbb57262",
-    "docs/regression-evidence/configuration-results.json": "31416b29750cea65c9539fa6a9b48ad8fe12d135f947928f73f2bb641ccca744",
+    "docs/regression-evidence/changed-files.json": "332b2cab79da4a037d5bd1b2d4636df3118dc51eecf269ecf92a5c32ab87e7b7",
+    "docs/regression-evidence/configuration-results.json": "067a2b3997f30e76d9035b81b1d3d81c6b9cfd6169da1f406179d63df82e279c",
+    "docs/regression-evidence/continuation-baseline.json": "a8a816be72b14dd5cdd94a9652adefcd89681748461aa5a3642a2ce2afe35f46",
     "docs/regression-evidence/environment.json": "e05989099699697fcd785102a95215db54de5872196d0b5b27edab718616ca03",
     "docs/regression-evidence/examples-attempt1.json": "daaf888e00261509536d9a5e25b86d63db8d0bbacb2e9e418bf39cd264fdd3c2",
     "docs/regression-evidence/examples-attempt2.json": "c37d01409ddd7c05f7b719688702cb863fe5dcdf1f71be7fdceddd7d5be980f2",
@@ -730,6 +737,10 @@
     "docs/regression-evidence/generated-attempt4.txt": "2eea6f28706a55bee4fd82e2dfe5af5808cf95c8a2193f4ad2569e905395adc4",
     "docs/regression-evidence/generated-attempt5.json": "219a2f81d38bd322cfb01857128ae909a76004d954c1e512927510a10c8afc7f",
     "docs/regression-evidence/generated-attempt5.txt": "2eea6f28706a55bee4fd82e2dfe5af5808cf95c8a2193f4ad2569e905395adc4",
+    "docs/regression-evidence/generated-attempt6.json": "ff64f57c61455c16e1caff98c5fee47d8ef700658abba4601b609247f376df54",
+    "docs/regression-evidence/generated-attempt6.txt": "2eea6f28706a55bee4fd82e2dfe5af5808cf95c8a2193f4ad2569e905395adc4",
+    "docs/regression-evidence/generated-attempt7.json": "c02cd41357f8de60218900359c107036fe5123c5bb2e27e51a7a730b96e03c00",
+    "docs/regression-evidence/generated-attempt7.txt": "2eea6f28706a55bee4fd82e2dfe5af5808cf95c8a2193f4ad2569e905395adc4",
     "docs/regression-evidence/infrastructure-attempt1.json": "7050e4b6bb60f640c038c979cf9026436824a910888e8ec9f31997e1c959aa14",
     "docs/regression-evidence/infrastructure-attempt1.txt": "9ba4c992dd4a112f4d3d6a26ac32107d0f519c3d4ffd33c128448de6a1c894ab",
     "docs/regression-evidence/infrastructure-attempt2.json": "e59c0e162b9569b84cd8c2a7640d156f4aa47bf1284d962d63002281673b3737",
@@ -740,13 +751,18 @@
     "docs/regression-evidence/infrastructure-attempt4.txt": "c049f814ed096d69aa4d1a00639e864ddbcd2077bc067d0de6f494d727c33a0d",
     "docs/regression-evidence/infrastructure-attempt5.json": "8d52cd32469a9e3e538266ba7cf607d491b2f4d2604967476234d4bc8c79202a",
     "docs/regression-evidence/infrastructure-attempt5.txt": "f3fb0ca4e4392d8d865af80483e4a6c64c37528d6f118eee856fbfc2b2c3e619",
+    "docs/regression-evidence/infrastructure-attempt6.json": "717aead13afe1f1e9e47aeb56ad5f79a1fde943e2712d57d098b95004ae2cacc",
+    "docs/regression-evidence/infrastructure-attempt6.txt": "75fea6d75647b7cdba68a014cb2011bbbd37950a64c787873b5752d9326112aa",
+    "docs/regression-evidence/infrastructure-attempt7.json": "643cfa5854b84c6907e0b64b32be003741b96aa71df8a5fba4b4f64f52ebd24b",
+    "docs/regression-evidence/infrastructure-attempt7.txt": "c049f814ed096d69aa4d1a00639e864ddbcd2077bc067d0de6f494d727c33a0d",
     "docs/regression-evidence/infrastructure-initial.txt": "599882dd62ada3e0c4db9e294198d07d34a782cbc1c020b4237e04e19cad3ddd",
     "docs/regression-evidence/ml-attempt1.json": "842716ea4950016ccc41d7f594f56df2631e583362c8411cc70d95f13e32ee9d",
     "docs/regression-evidence/ml-attempt1.txt": "14131c989c3a9370ca03493cc912849a4517db865f16478e6fa8d007e7aaf1fa",
     "docs/regression-evidence/ml.xml": "4575c95854d6bdd78b12d59113326b1caa3cb8b72341aa55b24c8e76947fbf99",
     "docs/regression-evidence/numerical-attempt1.json": "3cdb24100c2b9ada5050a8466983f4367a6ecf2f21737bcfa28b0bdf4c374354",
     "docs/regression-evidence/numerical-attempt1.txt": "06d392d1fdb706ad6dd19c32b9b2c760c1aa39942d2b72ae57f03b2d35a9e72d",
-    "docs/regression-evidence/preservation-results.json": "788df8beeef8e365070ec7aa6f92665ac8d89297993d3efb5967b845541d37d4",
+    "docs/regression-evidence/package-candidate1.json": "8a00ecc2ebc1f739641c7a2717a9f02fac32e094f57acdaa9194feb638dd495d",
+    "docs/regression-evidence/preservation-results.json": "f9557cef11fdb4d72c5cc233e41f4450a2306eec5f4947c7236a3cafed0d9126",
     "docs/regression-evidence/reference-attempt1.json": "2064f88d3f1ac19d101c9705d2bbe06225a869196b4ba26ffd0837ca1d3b09c0",
     "docs/regression-evidence/reference-attempt1.txt": "ab3187bd27214987bbe90f094f068a5feae13219d8f07b944689f680bd81aa3b",
     "docs/regression-evidence/reference-sources.json": "91dc94a8a97ad974d1d8af1c53e0f02628c9eadf6250f172c5828313d1e383a0",
@@ -826,7 +842,7 @@
     "docs/reviews/number-theory/NUMBER-THEORY-REVIEW-REPORT.md": "7fe4f355d317e3c205c2487fce04553c3b340a4f375dab1698494294f620ce14",
     "docs/reviews/phase-0/PHASE-0-REPORT.md": "d4a87b4b8ed122c9e477f479fa67c46b05a41c64b6e54701f338d45bb7e8f49a",
     "docs/reviews/recursion-backtracking/RECURSION-BACKTRACKING-REVIEW-REPORT.md": "1f01ce7eb9f89bf30a62b6061e2709c4a0d486f0264c3c007c74dab8a5d853f7",
-    "docs/reviews/regression/REGRESSION-REVIEW-REPORT.md": "a21b19ca6e30bf7055d9e0f56be104d60e1381584e9d3374f9bb5062e8f77d29",
+    "docs/reviews/regression/REGRESSION-REVIEW-REPORT.md": "af39d5032a01b47dd3f08c9e525c761f3c49d34234404617c96c0fd1e6a87807",
     "docs/reviews/searching/SEARCHING-REVIEW-REPORT.md": "6bf1cf283ba23d1e6d7e85549d6ed6f5fa9514888ed32333832b23b8de5eaae9",
     "docs/reviews/sorting/SORTING-FINAL-AUDIT-REPORT.md": "148a6a4a33933e7a7c86d52e4321dea776f223e528efb008fc29d3b9f1046b47",
     "docs/reviews/sorting/SORTING-REVIEW-REPORT.md": "67212b88f8c4e7386744afce94b8baabcf975f8ac78a0489d924c23daf194571",
@@ -1767,7 +1783,7 @@
     "scripts/package_graph_algorithms_review.py": "c2c16fa45d88a30c03159f3d3a6b0fcb775dada020018310a60784f3091a8974",
     "scripts/package_greedy_review.py": "f9c89848bad92c8880c253575429bfebeb28fa8441be05dc9178d02f8e326576",
     "scripts/package_number_window_reviews.py": "ce2ec5ceba2d96136712170dc2381f6e48e445a5bdfdd1978e0f0e214e39852e",
-    "scripts/package_regression_review.py": "cbf91663611d72e7dd1252a4f02c8f3c77b63b15d2a7d3d8244ef2e3e7fe54b8",
+    "scripts/package_regression_review.py": "80ba40f54bc33bbabb3409604ff69bda936e8f0cad78e98ad955246c8651a64c",
     "scripts/package_string_algorithms_review.py": "cd89af18e66c36260caca44edd5a9b7b7358c6437d06134af115e9807e44b95f",
     "scripts/package_tree_algorithms_review.py": "4ca9fc853c4e3c673444d76b73f1e3b5fb935e1ae8a3906cb3c63611fa87414f",
     "scripts/review_paths.py": "4b8a9bd54208b572082c034caff740dbbe2918d4a53bab7af38ff9d5a0cb087b",
@@ -1809,7 +1825,7 @@
     "scripts/verify_number_window_scope.py": "245c7efba2e5de1c322bca0b102ec214b26fdf3526926266d0b4fd47e2702d78",
     "scripts/verify_number_window_tracking.py": "fadd6e2d450b2453d79587013739b27df72d000e75a20b9969c494b23a824155",
     "scripts/verify_regression_examples.py": "c66f141dcf120fda4438821f16ce4d38e63825e8e25490a87fd5a61ffd3fee20",
-    "scripts/verify_regression_scope.py": "9c8e5ac0b9fc824346e67b63ed7c72191de10d8533c7ab077fa8ff8e06b82605",
+    "scripts/verify_regression_scope.py": "c393184976d14e08fa339fdfe4958b84e5ed2959928eaf4ae290138914a0c9e0",
     "scripts/verify_root_cleanup.py": "7976382e472e1f0f3a223213db27f55d83a5d5932ebd8eb7c6676592648083dd",
     "scripts/verify_string_algorithms_scope.py": "d6d855d35625b56e08e8bbaac3135a8986e088c9ca85a3cd5d213ad23d0ebe84",
     "scripts/verify_string_cross_algorithms.py": "135a41024e6b71ccbca933ce696b9aba54dc29cc283ff77ffcb281d0e7cfd5de",
@@ -1838,8 +1854,8 @@
       ],
       "returncode": 0,
       "timed_out": false,
-      "elapsed_seconds": 0.556,
-      "output": "Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 360 Markdown files, and 4491 local links.\nValidation passed. Test execution and external URLs are checked separately.\n"
+      "elapsed_seconds": 0.572,
+      "output": "Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 361 Markdown files, and 4494 local links.\nValidation passed. Test execution and external URLs are checked separately.\n"
     },
     {
       "command": [
@@ -1849,7 +1865,7 @@
       ],
       "returncode": 0,
       "timed_out": false,
-      "elapsed_seconds": 0.163,
+      "elapsed_seconds": 0.164,
       "output": "Checked 173 catalog documentation pages; 0 changes.\n"
     },
     {
@@ -1861,7 +1877,7 @@
       ],
       "returncode": 0,
       "timed_out": false,
-      "elapsed_seconds": 0.294,
+      "elapsed_seconds": 0.293,
       "output": "Scope/preservation passed: 7 ML lessons, 97 DSA canonicals, 1205 protected files; inventory 35/256/235\n"
     },
     {
@@ -1872,7 +1888,7 @@
       ],
       "returncode": 0,
       "timed_out": false,
-      "elapsed_seconds": 1.2,
+      "elapsed_seconds": 1.242,
       "output": "7 lessons; 14 numerical example/CLI executions and 7 invalid-input CLI checks passed\n"
     },
     {
@@ -1880,17 +1896,33 @@
         "python",
         "-m",
         "pytest",
+        "tests",
+        "machine-learning/supervised-learning/regression",
         "--require-cpp",
         "-q"
       ],
       "returncode": 0,
       "timed_out": false,
-      "elapsed_seconds": 445.325,
-      "output": "........................................................................ [  3%]\n........................................................................ [  6%]\n........................................................................ [  9%]\n........................................................................ [ 12%]\n........................................................................ [ 16%]\n........................................................................ [ 19%]\n........................................................................ [ 22%]\n........................................................................ [ 25%]\n........................................................................ [ 29%]\n........................................................................ [ 32%]\n........................................................................ [ 35%]\n........................................................................ [ 38%]\n........................................................................ [ 42%]\n........................................................................ [ 45%]\n........................................................................ [ 48%]\n........................................................................ [ 51%]\n........................................................................ [ 55%]\n........................................................................ [ 58%]\n........................................................................ [ 61%]\n........................................................................ [ 64%]\n........................................................................ [ 68%]\n........................................................................ [ 71%]\n........................................................................ [ 74%]\n........................................................................ [ 77%]\n........................................................................ [ 81%]\n........................................................................ [ 84%]\n........................................................................ [ 87%]\n........................................................................ [ 90%]\n........................................................................ [ 94%]\n........................................................................ [ 97%]\n.........................................................                [100%]\n2217 passed in 444.99s (0:07:24)\n"
+      "elapsed_seconds": 4.37,
+      "output": "........................................................................ [ 13%]\n........................................................................ [ 27%]\n........................................................................ [ 40%]\n........................................................................ [ 54%]\n........................................................................ [ 67%]\n........................................................................ [ 81%]\n........................................................................ [ 95%]\n..........................                                               [100%]\n530 passed in 4.15s\n"
     }
   ],
   "extraction_validation_status": "passed",
   "report": "docs/reviews/regression/REGRESSION-REVIEW-REPORT.md",
+  "previous_full_export": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "--require-cpp",
+      "-q"
+    ],
+    "returncode": 0,
+    "timed_out": false,
+    "elapsed_seconds": 445.325,
+    "output": "........................................................................ [  3%]\n........................................................................ [  6%]\n........................................................................ [  9%]\n........................................................................ [ 12%]\n........................................................................ [ 16%]\n........................................................................ [ 19%]\n........................................................................ [ 22%]\n........................................................................ [ 25%]\n........................................................................ [ 29%]\n........................................................................ [ 32%]\n........................................................................ [ 35%]\n........................................................................ [ 38%]\n........................................................................ [ 42%]\n........................................................................ [ 45%]\n........................................................................ [ 48%]\n........................................................................ [ 51%]\n........................................................................ [ 55%]\n........................................................................ [ 58%]\n........................................................................ [ 61%]\n........................................................................ [ 64%]\n........................................................................ [ 68%]\n........................................................................ [ 71%]\n........................................................................ [ 74%]\n........................................................................ [ 77%]\n........................................................................ [ 81%]\n........................................................................ [ 84%]\n........................................................................ [ 87%]\n........................................................................ [ 90%]\n........................................................................ [ 94%]\n........................................................................ [ 97%]\n.........................................................                [100%]\n2217 passed in 444.99s (0:07:24)\n"
+  },
+  "final_export_test_scope": "Infrastructure and all ML after setup/glossary correction; full DSA source/tests unchanged from both successful full runs",
   "dependency_environment": "Existing local ML development interpreter; dependencies external, no bundled venv or network install",
   "historical_archives_included": false,
   "nested_archives": false,

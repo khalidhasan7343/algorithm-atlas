@@ -11,7 +11,7 @@
   "original_categories_and_order": "identical",
   "out_of_scope_algorithm_records": "identical",
   "phase11_phase12_records": "identical, pending",
-  "head": "unchanged",
+  "head": "matches recorded starting/continuation revision",
   "lessons": [
     {
       "id": "decision-tree-regression",

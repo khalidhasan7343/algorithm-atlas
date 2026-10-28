@@ -75,6 +75,15 @@ ML 214. All three internal batches are complete. The category is awaiting review
 its [report](reviews/regression/REGRESSION-REVIEW-REPORT.md) and package metadata
 record the final source/export checks. Owner approval remains pending.
 
+## Final package rebuild — 2026-10-28
+
+The first frozen ZIP passed the full **2,217 extracted tests in 444.99s**.
+Evidence is retained in `regression-evidence/package-candidate1.json`. Final guide
+inspection corrected stale Getting Started/glossary checkpoint text and full-suite
+dependency setup. The final archive rechecks catalog/generated docs, scope,
+examples and all 530 infrastructure/ML tests. DSA source/test bytes are identical
+to the two successful full runs; owner approval remains pending.
+
 ## Owner checkpoint
 
 **Owner approval: pending.** Stop after category completion and integrity-checked

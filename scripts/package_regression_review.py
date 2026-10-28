@@ -89,7 +89,7 @@ def main():
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(OUTPUT, "x", zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
         for name, data in payload.items():
-            entry = zipfile.ZipInfo(PREFIX+name, date_time=(2026, 10, 27, 0, 0, 0))
+            entry = zipfile.ZipInfo(PREFIX+name, date_time=(2026, 10, 28, 0, 0, 0))
             entry.create_system = 3
             entry.compress_type = zipfile.ZIP_DEFLATED
             entry.external_attr = (stat.S_IFREG | 0o644) << 16
@@ -99,6 +99,7 @@ def main():
     metadata = dict(phase_number=13, phase_name=development["phase"], category_id="B1", category_name="Supervised Learning — Regression",
                     category_slug="regression", algorithm_count=7, implementation_count=7,
                     timestamp=datetime.now(ZoneInfo("Asia/Dhaka")).isoformat(), starting_revision=baseline["revision"], branch=baseline["branch"],
+                    review_revision=json.loads((EVIDENCE/"continuation-baseline.json").read_text())["revision"],
                     python_test_status=final["ml"], optional_cpp_status="Optional, absent for all seven; no dummy files; DSA requirements unchanged",
                     mathematical_correctness_status="passed analytical identities, finite differences, KKT/gap/feasibility and brute-force split tests",
                     numerical_validation_status=final["numerical"], independent_reference_status=final["reference"],
@@ -117,6 +118,8 @@ def main():
                     archive=OUTPUT.name, bytes=OUTPUT.stat().st_size, sha256=digest, files=len(payload),
                     file_sha256={name: sha(data) for name, data in payload.items()},
                     extraction_checks=[], extraction_validation_status="running", report=REPORT,
+                    previous_full_export=json.loads((EVIDENCE/"package-candidate1.json").read_text())["extraction_checks"][-1],
+                    final_export_test_scope="Infrastructure and all ML after setup/glossary correction; full DSA source/tests unchanged from both successful full runs",
                     dependency_environment="Existing local ML development interpreter; dependencies external, no bundled venv or network install",
                     historical_archives_included=False, nested_archives=False, hosted_github_actions="not run or verified")
     sidecar.write_text(json.dumps(metadata, indent=2)+"\n")
@@ -135,7 +138,7 @@ def main():
             commands = [["scripts/validate_catalog.py"], ["scripts/generate_catalog_docs.py", "--check"],
                         ["scripts/verify_regression_scope.py", "--check-only", "--source-only"],
                         ["scripts/verify_regression_examples.py", "--check-only"],
-                        ["-m", "pytest", "--require-cpp", "-q"]]
+                        ["-m", "pytest", "tests", "machine-learning/supervised-learning/regression", "--require-cpp", "-q"]]
             env = os.environ.copy()
             env.pop("PYTHONPATH", None)
             env.update(PYTHONHASHSEED="0", OMP_NUM_THREADS="1", OPENBLAS_NUM_THREADS="1")
