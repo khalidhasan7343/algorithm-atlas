@@ -403,7 +403,7 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
                   + '. No other category is authorized.']
         if (development or {}).get('completion_report'):
             lines += ['', 'See ' + link(path, ROOT / development['completion_report'], 'the current audit report') + '.']
-    elif category['id'] == 'B1' and ml_active:
+    elif category['id'] == 'B1' and ml_active and (development or {}).get('category') == 'B1':
         lines += ['', 'Phase 13 implements these seven canonicals in three sequential batches. '
                   'Python/NumPy and mathematical/numerical tests are required; C++ is optional and absent. '
                   'Owner approval remains pending. Read '
@@ -416,11 +416,10 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
         if (development or {}).get('completion_report'):
             lines += ['', 'See '
                       + link(path, ROOT / development['completion_report'], 'the review report') + '.']
-    if category['id'] == 'B1' and ml_active and not regression_audit and (development or {}).get('phase_records', {}).get('13', {}).get('owner_approval') == 'approved':
-        lines += ['', 'Phase 13 Regression is explicitly owner-approved on 2026-10-28. '
-                  'Its seven canonical lessons/implementations remain preserved. Phase 14 '
-                  'Classification is the only newly authorized category; see '
-                  + link(path, ROOT / 'docs/classification-checkpoints.md', 'the current checkpoint') + '.']
+    if category['id'] == 'B1' and ml_active and (development or {}).get('category') != 'B1':
+        lines += ['', 'The seven Regression implementations and latest completion audit are owner-approved. '
+                  'Their original lessons, tests and package/evidence bytes are preserved. Read '
+                  + link(path, ROOT / 'docs/regression-evaluation.md', 'the evaluation contracts') + '.']
     if category['id'] == 'B2' and ml_active and (development or {}).get('category') == 'B2':
         lines += ['', 'Phase 14 covers these eleven canonicals in four sequential batches. '
                   'Python/NumPy, mathematical/numerical tests and exact 25-section lessons are required; '
@@ -433,9 +432,19 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
                   + '. No B3 or other category is authorized.']
         if (development or {}).get('completion_report'):
             lines += ['', 'See ' + link(path, ROOT / development['completion_report'], 'the review report') + '.']
-    elif category['id'] == 'B2' and regression_audit:
+    elif category['id'] == 'B2' and ml_active and (development or {}).get('category') != 'B2':
         lines += ['', 'Phase 14 Classification is owner-approved. Its eleven implementations, tests and lessons '
-                  'are preserved during the B1 Regression audit; no new Classification implementation is authorized.']
+                  'are preserved during subsequent authorized work; no new Classification implementation is authorized.']
+    if category['id'] == 'B3' and ml_active and (development or {}).get('category') == 'B3':
+        lines += ['', 'Phase 15 implements exactly these eight Ensemble Methods canonicals. '
+                  'Prior B1 audit, B2 Classification and DSA work is owner-approved; the new Phase 15 review remains pending. '
+                  'Read ' + link(path, ROOT / 'docs/ensemble-methods-scope.md', 'the scope lock') + ', '
+                  + link(path, ROOT / 'docs/ensemble-methods-conventions.md', 'the API/numerical contracts') + ' and '
+                  + link(path, ROOT / 'docs/ensemble-methods-checkpoints.md', 'the checkpoints') + '. '
+                  'Python/NumPy and mathematical tests are required; C++ is optional and absent. '
+                  'No Phase 16 or other category is authorized.']
+        if (development or {}).get('completion_report'):
+            lines += ['', 'See ' + link(path, ROOT / development['completion_report'], 'the Phase 15 report') + '.']
     if category['id'] == 'A11':
         graph_ids = {'dijkstra', 'prim', 'kruskal'}
         owned = [item for item in category['items'] if item['algorithm'] not in graph_ids]
@@ -500,9 +509,19 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
                   'Read ' + link(path, ROOT / f'docs/{slug}-conventions.md', 'the contracts')
                   + ' and ' + link(path, ROOT / f'docs/{slug}-checkpoints.md', 'the independent checkpoint')
                   + ('. Both categories are owner-approved; their historical reports/packages retain their original handoff status. '
-                     if regression_audit else '. Both categories are jointly authorized for implementation, with separate pending owner approvals, reports and review packages. ')
+                     if all((development or {}).get('phase_records', {}).get(p, {}).get('owner_approval') == 'approved' for p in ('11', '12')) else '. Both categories are jointly authorized for implementation, with separate pending owner approvals, reports and review packages. ')
                   + ('The owner subsequently authorized Phase 13 Regression; earlier approvals remain independent.'
                      if ml_active else 'No Phase 13 is authorized.')]
+    if category['id'] == 'B3' and ml_active and (development or {}).get('category') == 'B3':
+        lines += ['', 'Phase 15 implements exactly these eight Ensemble Methods canonicals. '
+                  'Prior B1 audit, B2 Classification and DSA work is owner-approved; the new Phase 15 review remains pending. '
+                  'Read ' + link(path, ROOT / 'docs/ensemble-methods-scope.md', 'the scope lock') + ', '
+                  + link(path, ROOT / 'docs/ensemble-methods-conventions.md', 'the API/numerical contracts') + ' and '
+                  + link(path, ROOT / 'docs/ensemble-methods-checkpoints.md', 'the checkpoints') + '. '
+                  'Python/NumPy and mathematical tests are required; C++ is optional and absent. '
+                  'No Phase 16 or other category is authorized.']
+        if (development or {}).get('completion_report'):
+            lines += ['', 'See ' + link(path, ROOT / development['completion_report'], 'the Phase 15 report') + '.']
     if category['id'] == 'A11':
         lines += ['', 'Dijkstra chooses the unsettled vertex with smallest tentative distance '
                   '(requiring nonnegative edge weights); Prim chooses a cheapest edge across '

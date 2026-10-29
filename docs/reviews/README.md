@@ -4,8 +4,9 @@ Review and audit reports are organized by canonical phase name. Their filenames 
 
 | Phase | Report |
 | --- | --- |
+| ensemble-methods (Phase 15 ML; review pending) | [ENSEMBLE-METHODS-REVIEW-REPORT.md](ensemble-methods/ENSEMBLE-METHODS-REVIEW-REPORT.md) |
 | classification (Phase 14 ML) | [CLASSIFICATION-REVIEW-REPORT.md](classification/CLASSIFICATION-REVIEW-REPORT.md) |
-| regression (Phase 13 B1 completion audit; current review pending) | [REGRESSION-REVIEW-REPORT.md](regression/REGRESSION-REVIEW-REPORT.md) |
+| regression (Phase 13 B1 completion audit; subsequently approved) | [REGRESSION-REVIEW-REPORT.md](regression/REGRESSION-REVIEW-REPORT.md) |
 | DSA final audit | [DSA-FINAL-AUDIT-REPORT.md](dsa-final-audit/DSA-FINAL-AUDIT-REPORT.md) |
 | number-theory | [NUMBER-THEORY-REVIEW-REPORT.md](number-theory/NUMBER-THEORY-REVIEW-REPORT.md) |
 | two-pointers-sliding-window | [TWO-POINTERS-SLIDING-WINDOW-REVIEW-REPORT.md](two-pointers-sliding-window/TWO-POINTERS-SLIDING-WINDOW-REVIEW-REPORT.md) |
@@ -41,3 +42,8 @@ DSA, and authorized only the B1 Regression completion audit. The existing
 [Regression report](regression/REGRESSION-REVIEW-REPORT.md) now records that audit;
 its new review approval is pending. Historical handoff statements and evidence
 remain historical. See [current checkpoints](../regression-audit-checkpoints.md).
+
+The owner explicitly approved the latest B1 completion-audit package and all prior
+work immediately before authorizing [Phase 15 B3 Ensemble Methods](ensemble-methods/ENSEMBLE-METHODS-REVIEW-REPORT.md).
+Current Phase 15 review approval remains pending. Earlier paragraphs/reports retain
+their handoff-time statements; see [current checkpoints](../ensemble-methods-checkpoints.md).

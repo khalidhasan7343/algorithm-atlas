@@ -7,7 +7,7 @@ Predicting discrete labels and probabilities with clearly specified feature assu
 This category preserves **11 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
 
-Phase 14 Classification is owner-approved. Its eleven implementations, tests and lessons are preserved during the B1 Regression audit; no new Classification implementation is authorized.
+Phase 14 Classification is owner-approved. Its eleven implementations, tests and lessons are preserved during subsequent authorized work; no new Classification implementation is authorized.
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
 | Logistic Regression | [logistic-regression](logistic-regression/README.md) | complete |

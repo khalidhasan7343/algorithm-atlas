@@ -1,0 +1,45 @@
+{
+  "seed": 15113,
+  "zero_weight_row": 0,
+  "ours_splits": [
+    [
+      0,
+      0.3207129488368332
+    ],
+    [
+      0,
+      -1.2094608888580192
+    ],
+    [
+      1,
+      0.7577595662950305
+    ]
+  ],
+  "reference_features": [
+    0,
+    2,
+    -2,
+    -2,
+    1,
+    -2,
+    -2
+  ],
+  "reference_thresholds": [
+    0.32071295380592346,
+    1.6323063969612122,
+    -2.0,
+    -2.0,
+    0.7577595673501492,
+    -2.0,
+    -2.0
+  ],
+  "training_positive_weight_max_prediction_difference": 4.440892098500626e-16,
+  "query7": [
+    -1.6623697218785196,
+    -0.6164148366335582,
+    1.560007356885294
+  ],
+  "ours_prediction": -1.0722579865467787,
+  "reference_prediction": 1.6553698020759655,
+  "finding": "Two equal-scoring feature rules isolate the same row 13. They give identical positive-weight training partitions and predictions, but different valid routing for query7. Source is correct under its documented deterministic first-feature tie policy."
+}

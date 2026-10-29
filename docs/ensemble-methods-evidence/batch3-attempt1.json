@@ -1,0 +1,24 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/ensemble-methods/xgboost",
+    "machine-learning/ensemble-methods/catboost",
+    "-q"
+  ],
+  "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+  "timestamp": "2026-10-28T23:18:40.574166+06:00",
+  "elapsed_seconds": 0.185,
+  "returncode": 0,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "environment": {
+    "CXX": null,
+    "PYTHONHASHSEED": "0",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "log": "docs/ensemble-methods-evidence/batch3-attempt1.txt",
+  "summary": "21 passed in 0.05s"
+}

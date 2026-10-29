@@ -6,9 +6,18 @@ Read `README.md`, `CONTRIBUTING.md`, `docs/progress.md`, and the relevant record
 
 ## Mandatory phase checkpoint
 
-The owner explicitly approved all previously completed work and authorized a **Phase 13 — B1 Regression completion audit** on **2026-10-28 (Asia/Dhaka)**. Retain the seven existing implementations; audit and fix only confirmed Regression defects under [the audit scope](docs/regression-audit-scope.md). Preserve approved Classification/DSA implementations, all historical evidence/packages and the pre-existing working-tree/staged changes. Inventory stays 35/256/235.
+The owner explicitly approved the latest B1 Regression completion audit and all
+prior work, and authorized **Phase 15 — B3 Ensemble Methods only**. Implement the
+eight catalog canonicals under [the scope lock](docs/ensemble-methods-scope.md),
+with actual stage gates in [the checkpoints](docs/ensemble-methods-checkpoints.md).
+Preserve approved B1/B2/DSA algorithms, tests, lessons and historical evidence/packages.
+Inventory remains 35 categories / 256 memberships / 235 canonicals.
 
-Python/numerical tests and exact 25-section lessons remain mandatory for ML, with C++ optional. DSA retains Python/C++ and both C++17/C++20. Follow [the audit checkpoint](docs/regression-audit-checkpoints.md). Prior owner approval is recorded separately from the **new Regression review, which remains pending**. Stop after the regenerated report and verified ZIP/checksum/JSON. No other category, commit, push or release. Never set Git identity from public email.
+Python/NumPy, numerical/oracle/reference tests and exact 25-section lessons are
+mandatory for ML; C++ is optional. DSA retains Python/C++ and both C++17/C++20.
+The **Phase 15 review approval remains pending**. Stop after its completion report
+and verified ZIP/checksum/JSON. No Phase 16, other category, commit, push, tag,
+release or publication. Never set Git identity from public email.
 
 ## Work and validation
 

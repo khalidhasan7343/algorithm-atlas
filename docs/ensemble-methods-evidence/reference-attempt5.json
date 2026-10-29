@@ -1,0 +1,25 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/ensemble-methods",
+    "-m",
+    "reference",
+    "-q"
+  ],
+  "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+  "timestamp": "2026-10-29T00:12:48.313320+06:00",
+  "elapsed_seconds": 0.718,
+  "returncode": 0,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "environment": {
+    "CXX": null,
+    "PYTHONHASHSEED": "0",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "log": "docs/ensemble-methods-evidence/reference-attempt5.txt",
+  "summary": "16 passed, 237 deselected in 0.53s"
+}

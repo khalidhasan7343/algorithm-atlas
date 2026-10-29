@@ -7,9 +7,7 @@ Predicting continuous targets with documented model and regularization assumptio
 This category preserves **7 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
 
-All seven existing Regression solvers are retained for the authorized Phase 13 completion audit. Previous work is owner-approved; this new review remains pending. Read [the audit scope](../../../docs/regression-audit-scope.md), [the audit checkpoint](../../../docs/regression-audit-checkpoints.md) and [the MSE/RMSE/MAE/R² contracts](../../../docs/regression-evaluation.md). Python/numerical tests are required and C++ remains optional. The fixed-split experiment is [benchmark.py](experiments/benchmark.py). No other category is authorized.
-
-See [the current audit report](../../../docs/reviews/regression/REGRESSION-REVIEW-REPORT.md).
+The seven Regression implementations and latest completion audit are owner-approved. Their original lessons, tests and package/evidence bytes are preserved. Read [the evaluation contracts](../../../docs/regression-evaluation.md).
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
 | Linear Regression | [linear-regression](linear-regression/README.md) | complete |

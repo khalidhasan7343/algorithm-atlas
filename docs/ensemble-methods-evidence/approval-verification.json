@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "owner_statement": "I approved previous now follow this",
+  "latest_regression_audit_approval": "approved",
+  "B2_classification_approval": "approved",
+  "new_phase15_approval": "pending",
+  "checks": {
+    "regression": {
+      "package_sha256": "5af6635b2dc87522993f193ff18e3c320e3d3218245e82b747cd4f903ff60588",
+      "extraction_validation": "passed",
+      "report": "docs/reviews/regression/REGRESSION-REVIEW-REPORT.md",
+      "generation_time_approval": "pending",
+      "current_owner_approval": "approved",
+      "evidence": "Owner: I approved previous now follow this; immediately follows completed B1 audit handoff and explicitly authorizes Phase 15."
+    },
+    "classification": {
+      "package_sha256": "a05104b755f1cd7857848b3de12e7495eade24f4dfc60de4c6a98407bfb5d7c5",
+      "extraction_validation": "passed",
+      "report": "docs/reviews/classification/CLASSIFICATION-REVIEW-REPORT.md",
+      "generation_time_approval": "pending",
+      "current_owner_approval": "approved",
+      "evidence": "Owner: I approved previous now follow this; immediately follows completed B1 audit handoff and explicitly authorizes Phase 15."
+    }
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "comparison": "Clean owner working tree captured before Phase 15",
+  "baseline_revision": "d5bd29d7444f8890b5384a2be4e9d428a33653d1",
+  "baseline_files": 1913,
+  "modified": [
+    {
+      "path": "AGENTS.md",
+      "before_sha256": "188ca1a8a5f54cef288e4cc3ecd2193fe1a2a2e4a3d392e8eb18d0513ab5dffc",
+      "after_sha256": "f19bb689c78c238ddebdf420b6876cd42723f259d7d71ca194125e22973d8d59"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "before_sha256": "63b2566d3ac0196add8c3d8ce7a42d46b096c24b293d76ae53d19f4b04ff2cd5",
+      "after_sha256": "c33949af68d6f2609312d303b56b00a9d38c80f2a6f9c2f51dae23da7f77f119"
+    },
+    {
+      "path": "README.md",
+      "before_sha256": "78092048f3dceb3ab5abb52340a4303c4c2fca6d7775f2737d395dfa966ddb20",
+      "after_sha256": "07b4a0c12252efe61977e9ad87a873e6f1371345138f23a6f731cfe8e106ea0a"
+    },
+    {
+      "path": "artifacts/review-packages/README.md",
+      "before_sha256": "10128861fc4652f453e92be9f437bf2154e82a839e5ad2ef23806488555993e3",
+      "after_sha256": "b503a491569aec6af4ec1c5ea70fe4ff3d63e291a1148bd5cca1a3e54207f684"
+    },
+    {
+      "path": "catalog.yaml",
+      "before_sha256": "a19eb6a4f74245f7f4f337233a4b64bd924d1b43a0ae678fd74ad4ce274537b4",
+      "after_sha256": "b18bf0e8c32a17c2d62906427fcbe612c4ae16c96fa983fb34072165d00b0fce"
+    },
+    {
+      "path": "docs/algorithm-index.md",
+      "before_sha256": "f5888182eff64b98345a02b3a653f816962330faf7202968929db0fd30aeab10",
+      "after_sha256": "77ac3ccc4cdae212ee4c1efaa96d99d5e4a6846b2475c5068476086a1aaf28d5"
+    },
+    {
+      "path": "docs/development.md",
+      "before_sha256": "5440eb0ad2686b20dd217d739ac6f2faf15c8e00c5aefed381406b997f43bdbf",
+      "after_sha256": "ac02e38c687ab99751a33434a62fb5edd90f1c27c815813103b98aa7ea988b18"
+    },
+    {
+      "path": "docs/getting-started.md",
+      "before_sha256": "f7b8af90e8049158ff345b5e4b1170d98835a4d455c8b99e9aaec97e76e84404",
+      "after_sha256": "3362531f7ded4e0a91d61d74ad4efee8ceabfc7fb3c8bd9e954aa8962e2cf2c8"
+    },
+    {
+      "path": "docs/glossary.md",
+      "before_sha256": "9ce0da14debd0bab9c5ffbd19f670cf4f0e3a9df4db7ad17b53f24f59624eb4e",
+      "after_sha256": "47053b144f7846747f6eb6c8ea980c92e7b1881c5765a61201a396c3db23d9ab"
+    },
+    {
+      "path": "docs/learning-roadmap.md",
+      "before_sha256": "823e23a379310640a85ec79e7755b21c84407fe64b5b87360e31a7fb2f62bd43",
+      "after_sha256": "4d3ce1ba7ed0c7f9447009b9af80e5438bafcd463fee5dc4c4d759de5e9028e9"
+    },
+    {
+      "path": "docs/ml-development.md",
+      "before_sha256": "a09e1e4fe800a183f4fdd272de00a5df1670102af77f177a4aaf49e426b90a6b",
+      "after_sha256": "a15b708964da84a6e036d62b4ebab49fbcb808e8e1e1a689035fa182a9ef143b"
+    },
+    {
+      "path": "docs/progress.md",
+      "before_sha256": "7b17601eb6ab43b4ea70c5dfc77692e6b24b049b1074234f35a69536b53be7e0",
+      "after_sha256": "01d728a3f4edfccec818c70d3b502ad68008d5300235ec1d1f7966b2fa0314ba"
+    },
+    {
+      "path": "docs/reviews/README.md",
+      "before_sha256": "d4d4727392c6bb4755d46cf1464c881fd0d1d6e7df01d90cbbd801d438542435",
+      "after_sha256": "fb1980465030bce2454b0378cc3a2322dfe75066ab34bf64064473ebc9dff8fa"
+    },
+    {
+      "path": "machine-learning/ensemble-methods/README.md",
+      "before_sha256": "d240d92463cea56333dbb3e79eba7779466b33d5d7c0c81a4ea1745cfb958290",
+      "after_sha256": "01e4f545c03786f95fe41cd1196f1b028cb9ac0f6ac9c760b3b1364d4496ca33"
+    },
+    {
+      "path": "machine-learning/ensemble-methods/adaboost/README.md",
+      "before_sha256": "cb0fccdfbe86ba326f80c17c5a945892ef5f0af62e4db26edd4264faef250ffe",
+      "after_sha256": "1bfb7a1abb383b56f53353e9747a35951e78338b81682d3b3115043d0c386451"
+    },
+    {
+      "path": "machine-learning/ensemble-methods/bagging/README.md",
+      "before_sha256": "91656f5e3a85fe2e88d0e3acc5393e021f910359cd9598ed478f490de30ea30b",
+      "after_sha256": "7a9d99ae39b43f09637a8a442ad3618456cce617d12384ec87dd7197a9ba3a79"
+    },
+    {
+      "path": "machine-learning/ensemble-methods/catboost/README.md",
+      "before_sha256": "15828d35feb2f7919d0cc287842a40390dcd6d80a0d9221e99441d1cbdaa73d8",
+      "after_sha256": "dcd90c735883df15343999bb755c84614a618fe5c4b4bbb801b8fafa3173ff60"
+    },
+    {
+      "path": "machine-learning/ensemble-methods/gradient-boosting-machine/README.md",
+      "before_sha256": "7fdb120e939c3c08ec503e4fa22cac1a7c1df83c501ddd5139b38c6ae1ae3ca3",
+      "after_sha256": "c3566ec345c88e908ff40492d683b31c954015f4907185f0de14405ac1f66cae"
+    },
+    {
+      "path": "machine-learning/ensemble-methods/random-forest/README.md",
+      "before_sha256": "e08c2dfcfe9d79b7d9d34bd77470fb15ff3774ac32a53b1734123d8f8d3d4606",
+      "after_sha256": "11b00aca2449d385bada340e8f3f8ef0b7adf046917dc5e3eb8261c5f923f04a"
+    },
+    {
+      "path": "machine-learning/ensemble-methods/stacking/README.md",
+      "before_sha256": "5b75d060dd22f3702e1e9d268096c44115ccb84d850c18924ade730b3f0d7d62",
+      "after_sha256": "a0e6a6336e817304b3d538e51b93015bf5bcf1fd87cb93c06c27312f2fec8395"
+    },
+    {
+      "path": "machine-learning/ensemble-methods/voting-classifiers/README.md",
+      "before_sha256": "c1b244af583c44a7d2932fd6b7c4afdc7a170a047ab5c5e8be18e7e78438ba65",
+      "after_sha256": "e36fe81c18a2e95c8122e377ecb076b294d8d339afa7edad8bfe671de90bf339"
+    },
+    {
+      "path": "machine-learning/ensemble-methods/xgboost/README.md",
+      "before_sha256": "2831925f44e932e008c3106841fc58a7db6f3c95117adb51394e842c0dee6b5d",
+      "after_sha256": "ae599400f14ae12236dea4395ab529d3fa12af3b16eb8781a36fcb18cecbdd47"
+    },
+    {
+      "path": "machine-learning/supervised-learning/classification/README.md",
+      "before_sha256": "9cf38f08c28ca34c9342af6c0a8fc7a25599978fd810bd13cff194b6103ec7a2",
+      "after_sha256": "6ce6559949208da876446e0883476ca6a9acd918b61ff38580a4d8eb1441a5db"
+    },
+    {
+      "path": "machine-learning/supervised-learning/regression/README.md",
+      "before_sha256": "5a38d5937d152e8e4ac86b637a0020f807a6cbf04ccd074853fdbc602fa88e38",
+      "after_sha256": "3a57b05e0aaad0999a363ea0b40c2b379d857dd42f3025822a921828fb0f2593"
+    },
+    {
+      "path": "pyproject.toml",
+      "before_sha256": "1ab80acee05e0378dd6440a5a0597aa7b616016acbfff1e8d223204026a414a7",
+      "after_sha256": "de73c2899f4b40b1d5b7ff3ca8f5a6ea42d1553907e25e306a7627eb62759082"
+    },
+    {
+      "path": "scripts/generate_catalog_docs.py",
+      "before_sha256": "e33aab27916478e19aac3394ffb8950d7364796a6da2859b4083af8aa4a0363f",
+      "after_sha256": "15fd58e4dae7fe18b56bd4aa7989675ca5e892956d88a7bbcbd188811c012c7c"
+    }
+  ],
+  "created": [
+    "artifacts/review-packages/ensemble-methods/README.md",
+    "docs/ensemble-methods-checkpoints.md",
+    "docs/ensemble-methods-conventions.md",
+    "docs/ensemble-methods-evidence/B1-attempt1.json",
+    "docs/ensemble-methods-evidence/B1-attempt1.txt",
+    "docs/ensemble-methods-evidence/B1-attempt2.json",
+    "docs/ensemble-methods-evidence/B1-attempt2.txt",
+    "docs/ensemble-methods-evidence/B2-attempt1.json",
+    "docs/ensemble-methods-evidence/B2-attempt1.txt",
+    "docs/ensemble-methods-evidence/B2-attempt2.json",
+    "docs/ensemble-methods-evidence/B2-attempt2.txt",
+    "docs/ensemble-methods-evidence/B3-attempt1.json",
+    "docs/ensemble-methods-evidence/B3-attempt1.txt",
+    "docs/ensemble-methods-evidence/B3-attempt2.json",
+    "docs/ensemble-methods-evidence/B3-attempt2.txt",
+    "docs/ensemble-methods-evidence/B3-attempt3.json",
+    "docs/ensemble-methods-evidence/B3-attempt3.txt",
+    "docs/ensemble-methods-evidence/B3-attempt4.json",
+    "docs/ensemble-methods-evidence/B3-attempt4.txt",
+    "docs/ensemble-methods-evidence/B3-attempt5.json",
+    "docs/ensemble-methods-evidence/B3-attempt5.txt",
+    "docs/ensemble-methods-evidence/B3-attempt6.json",
+    "docs/ensemble-methods-evidence/B3-attempt6.txt",
+    "docs/ensemble-methods-evidence/B3-attempt7.json",
+    "docs/ensemble-methods-evidence/B3-attempt7.txt",
+    "docs/ensemble-methods-evidence/B3.xml",
+    "docs/ensemble-methods-evidence/approval-verification.json",
+    "docs/ensemble-methods-evidence/baseline-B1-attempt1.json",
+    "docs/ensemble-methods-evidence/baseline-B1-attempt1.txt",
+    "docs/ensemble-methods-evidence/baseline-B2-attempt1.json",
+    "docs/ensemble-methods-evidence/baseline-B2-attempt1.txt",
+    "docs/ensemble-methods-evidence/baseline-results.json",
+    "docs/ensemble-methods-evidence/baseline.json",
+    "docs/ensemble-methods-evidence/batch1-attempt1.json",
+    "docs/ensemble-methods-evidence/batch1-attempt1.txt",
+    "docs/ensemble-methods-evidence/batch1-results.json",
+    "docs/ensemble-methods-evidence/batch2-attempt1.json",
+    "docs/ensemble-methods-evidence/batch2-attempt1.txt",
+    "docs/ensemble-methods-evidence/batch2-results.json",
+    "docs/ensemble-methods-evidence/batch3-attempt1.json",
+    "docs/ensemble-methods-evidence/batch3-attempt1.txt",
+    "docs/ensemble-methods-evidence/batch3-results.json",
+    "docs/ensemble-methods-evidence/batch4-attempt1.json",
+    "docs/ensemble-methods-evidence/batch4-attempt1.txt",
+    "docs/ensemble-methods-evidence/batch4-attempt2.json",
+    "docs/ensemble-methods-evidence/batch4-attempt2.txt",
+    "docs/ensemble-methods-evidence/batch4-results.json",
+    "docs/ensemble-methods-evidence/benchmark-attempt1.json",
+    "docs/ensemble-methods-evidence/benchmark-attempt1.txt",
+    "docs/ensemble-methods-evidence/benchmark.json",
+    "docs/ensemble-methods-evidence/catalog-attempt1.json",
+    "docs/ensemble-methods-evidence/catalog-attempt1.txt",
+    "docs/ensemble-methods-evidence/catalog-attempt2.json",
+    "docs/ensemble-methods-evidence/catalog-attempt2.txt",
+    "docs/ensemble-methods-evidence/catalog-attempt3.json",
+    "docs/ensemble-methods-evidence/catalog-attempt3.txt",
+    "docs/ensemble-methods-evidence/catalog-attempt4.json",
+    "docs/ensemble-methods-evidence/catalog-attempt4.txt",
+    "docs/ensemble-methods-evidence/catalog-baseline.yaml",
+    "docs/ensemble-methods-evidence/changed-files.json",
+    "docs/ensemble-methods-evidence/configuration-results.json",
+    "docs/ensemble-methods-evidence/development-findings.json",
+    "docs/ensemble-methods-evidence/environment.json",
+    "docs/ensemble-methods-evidence/example-inputs.json",
+    "docs/ensemble-methods-evidence/examples-attempt1.json",
+    "docs/ensemble-methods-evidence/examples-attempt1.txt",
+    "docs/ensemble-methods-evidence/examples-attempt2.json",
+    "docs/ensemble-methods-evidence/examples-attempt2.txt",
+    "docs/ensemble-methods-evidence/examples-results.json",
+    "docs/ensemble-methods-evidence/final-results-before-boundary-repair.json",
+    "docs/ensemble-methods-evidence/final-results.json",
+    "docs/ensemble-methods-evidence/full-suite-attempt1.json",
+    "docs/ensemble-methods-evidence/full-suite-attempt1.txt",
+    "docs/ensemble-methods-evidence/full-suite-attempt2.json",
+    "docs/ensemble-methods-evidence/full-suite-attempt2.txt",
+    "docs/ensemble-methods-evidence/full-suite-before-boundary-repair.xml",
+    "docs/ensemble-methods-evidence/full-suite.xml",
+    "docs/ensemble-methods-evidence/generated-attempt1.json",
+    "docs/ensemble-methods-evidence/generated-attempt1.txt",
+    "docs/ensemble-methods-evidence/generated-attempt2.json",
+    "docs/ensemble-methods-evidence/generated-attempt2.txt",
+    "docs/ensemble-methods-evidence/generated-attempt3.json",
+    "docs/ensemble-methods-evidence/generated-attempt3.txt",
+    "docs/ensemble-methods-evidence/infrastructure-attempt1.json",
+    "docs/ensemble-methods-evidence/infrastructure-attempt1.txt",
+    "docs/ensemble-methods-evidence/infrastructure-attempt2.json",
+    "docs/ensemble-methods-evidence/infrastructure-attempt2.txt",
+    "docs/ensemble-methods-evidence/infrastructure-attempt3.json",
+    "docs/ensemble-methods-evidence/infrastructure-attempt3.txt",
+    "docs/ensemble-methods-evidence/large-target-boundary-attempt1.json",
+    "docs/ensemble-methods-evidence/large-target-boundary-attempt1.txt",
+    "docs/ensemble-methods-evidence/numerical-attempt1.json",
+    "docs/ensemble-methods-evidence/numerical-attempt1.txt",
+    "docs/ensemble-methods-evidence/numerical-attempt2.json",
+    "docs/ensemble-methods-evidence/numerical-attempt2.txt",
+    "docs/ensemble-methods-evidence/numerical-attempt3.json",
+    "docs/ensemble-methods-evidence/numerical-attempt3.txt",
+    "docs/ensemble-methods-evidence/numerical-attempt4.json",
+    "docs/ensemble-methods-evidence/numerical-attempt4.txt",
+    "docs/ensemble-methods-evidence/numerical-attempt5.json",
+    "docs/ensemble-methods-evidence/numerical-attempt5.txt",
+    "docs/ensemble-methods-evidence/oracle-attempt1.json",
+    "docs/ensemble-methods-evidence/oracle-attempt1.txt",
+    "docs/ensemble-methods-evidence/oracle-attempt2.json",
+    "docs/ensemble-methods-evidence/oracle-attempt2.txt",
+    "docs/ensemble-methods-evidence/oracle-attempt3.json",
+    "docs/ensemble-methods-evidence/oracle-attempt3.txt",
+    "docs/ensemble-methods-evidence/oracle-attempt4.json",
+    "docs/ensemble-methods-evidence/oracle-attempt4.txt",
+    "docs/ensemble-methods-evidence/oracle-attempt5.json",
+    "docs/ensemble-methods-evidence/oracle-attempt5.txt",
+    "docs/ensemble-methods-evidence/preservation-results.json",
+    "docs/ensemble-methods-evidence/reference-attempt1.json",
+    "docs/ensemble-methods-evidence/reference-attempt1.txt",
+    "docs/ensemble-methods-evidence/reference-attempt2.json",
+    "docs/ensemble-methods-evidence/reference-attempt2.txt",
+    "docs/ensemble-methods-evidence/reference-attempt3.json",
+    "docs/ensemble-methods-evidence/reference-attempt3.txt",
+    "docs/ensemble-methods-evidence/reference-attempt4.json",
+    "docs/ensemble-methods-evidence/reference-attempt4.txt",
+    "docs/ensemble-methods-evidence/reference-attempt5.json",
+    "docs/ensemble-methods-evidence/reference-attempt5.txt",
+    "docs/ensemble-methods-evidence/reference-sources.json",
+    "docs/ensemble-methods-evidence/targeted-results.json",
+    "docs/ensemble-methods-evidence/test-matrix.json",
+    "docs/ensemble-methods-evidence/weighted-tree-reference-investigation.json",
+    "docs/ensemble-methods-scope.md",
+    "docs/reviews/ensemble-methods/ENSEMBLE-METHODS-REVIEW-REPORT.md",
+    "machine-learning/ensemble-methods/adaboost/python/example.py",
+    "machine-learning/ensemble-methods/adaboost/python/solution.py",
+    "machine-learning/ensemble-methods/adaboost/tests/test_python.py",
+    "machine-learning/ensemble-methods/bagging/python/example.py",
+    "machine-learning/ensemble-methods/bagging/python/solution.py",
+    "machine-learning/ensemble-methods/bagging/tests/test_python.py",
+    "machine-learning/ensemble-methods/catboost/python/example.py",
+    "machine-learning/ensemble-methods/catboost/python/solution.py",
+    "machine-learning/ensemble-methods/catboost/tests/test_python.py",
+    "machine-learning/ensemble-methods/conftest.py",
+    "machine-learning/ensemble-methods/experiments/benchmark.py",
+    "machine-learning/ensemble-methods/gradient-boosting-machine/python/example.py",
+    "machine-learning/ensemble-methods/gradient-boosting-machine/python/solution.py",
+    "machine-learning/ensemble-methods/gradient-boosting-machine/tests/test_python.py",
+    "machine-learning/ensemble-methods/random-forest/python/example.py",
+    "machine-learning/ensemble-methods/random-forest/python/solution.py",
+    "machine-learning/ensemble-methods/random-forest/tests/test_python.py",
+    "machine-learning/ensemble-methods/stacking/python/example.py",
+    "machine-learning/ensemble-methods/stacking/python/solution.py",
+    "machine-learning/ensemble-methods/stacking/tests/test_python.py",
+    "machine-learning/ensemble-methods/support.py",
+    "machine-learning/ensemble-methods/tests/test_contracts.py",
+    "machine-learning/ensemble-methods/tree.py",
+    "machine-learning/ensemble-methods/voting-classifiers/python/example.py",
+    "machine-learning/ensemble-methods/voting-classifiers/python/solution.py",
+    "machine-learning/ensemble-methods/voting-classifiers/tests/test_python.py",
+    "machine-learning/ensemble-methods/xgboost/python/example.py",
+    "machine-learning/ensemble-methods/xgboost/python/solution.py",
+    "machine-learning/ensemble-methods/xgboost/tests/test_python.py",
+    "scripts/package_ensemble_methods_review.py",
+    "scripts/run_ensemble_methods_validation.py",
+    "scripts/verify_ensemble_methods_examples.py",
+    "scripts/verify_ensemble_methods_scope.py"
+  ],
+  "removed": [],
+  "generated_review_deliverables": [
+    "artifacts/review-packages/ensemble-methods/algorithm-atlas-ensemble-methods-review.zip",
+    "artifacts/review-packages/ensemble-methods/algorithm-atlas-ensemble-methods-review.zip.sha256",
+    "artifacts/review-packages/ensemble-methods/algorithm-atlas-ensemble-methods-review.json"
+  ],
+  "self_hash": "Omitted to avoid recursive hashing; final package manifest hashes this file",
+  "index_change": "Only the required new completion report staged; no commit or unrelated staging"
+}

@@ -47,3 +47,8 @@ review approval remains pending. The approved prior Regression package set is
 preserved under the Regression history folder; Classification and all earlier
 package bytes remain unchanged. The active Regression ZIP/checksum/JSON contain
 the revised audit deliverables and actual extraction verification results.
+
+After accepting the latest B1 completion audit and all earlier work, the owner
+authorized [Phase 15 Ensemble Methods](ensemble-methods/README.md). Its new review
+approval remains pending. All prior Regression/Classification/DSA report/evidence/
+package bytes are preserved; their generation-time statuses remain historical.

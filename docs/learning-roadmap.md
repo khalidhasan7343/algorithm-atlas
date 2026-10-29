@@ -2,7 +2,7 @@
 
 Progress from foundational problem solving to specialized AI topics. These levels describe a study order, not repository development phases: learning a later level does not authorize implementation outside the approved development phase.
 
-**Current scope:** all previous work is owner-approved. The owner authorized only a B1 Regression completion audit, retaining its seven implementations. Follow [the audit scope](regression-audit-scope.md), [checkpoint](regression-audit-checkpoints.md) and [evaluation contracts](regression-evaluation.md). New review approval is pending; no other ML, Deep Learning or AI category is authorized.
+**Current scope:** Phase 15 B3 Ensemble Methods only, following explicit approval of the latest B1 audit and all previous work. Follow [scope](ensemble-methods-scope.md), [contracts](ensemble-methods-conventions.md) and [checkpoints](ensemble-methods-checkpoints.md). New Phase 15 review approval is pending; no later category is authorized.
 
 ## Level 1 — DSA Foundations
 
@@ -115,7 +115,7 @@ Choose branches according to the structure of the problem:
 
 Follow the prerequisites rather than treating levels as a fixed schedule. For each available completed topic, read its intuition and contract, predict a small example's output, inspect the implementation, run its documented tests, and explain its complexity in your own words. For unimplemented topics, use the linked planning notes to understand scope and prerequisites; runnable material follows only within an approved category.
 
-Contributors should consult the [development guide](development.md) and the current [progress tracker](progress.md). The current implementation authorization covers the seven B1 Regression canonicals only. Its three internal batches proceed after validation; stop after its review package for explicit owner approval.
+Contributors should consult the [development guide](development.md) and [progress tracker](progress.md). Implement only the eight catalog B3 canonicals, pass their internal gates and stop after the verified Phase 15 review package for owner acceptance.
 
 
 ## Graph Algorithms learning sequence
@@ -139,3 +139,10 @@ Phase 7 is owner-approved. Study these fourteen canonical lessons in the same fi
 5. Increase fanout with [B-Tree](../dsa/tree-algorithms/b-tree-operations/README.md) and [B+ Tree](../dsa/tree-algorithms/b-plus-tree-operations/README.md). Distinguish internal records from routing separators; verify occupancy, equal leaf depth and linked-leaf range scans through splitting, borrowing, merging and root contraction.
 
 [Tree conventions](tree-conventions.md) state each API's ownership, numeric bounds and mutation contract. These topics reuse their catalog paths. Do not start another category before explicit owner approval.
+
+## Current Phase 15 authorization
+
+The owner approved the latest B1 audit and all previous work, authorizing only
+[B3 Ensemble Methods](ensemble-methods-scope.md). Its eight canonicals retain their
+catalog paths. Follow [checkpoints](ensemble-methods-checkpoints.md); new review
+approval remains pending. No later ML, Deep Learning or AI category is authorized.

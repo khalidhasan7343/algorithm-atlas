@@ -1,0 +1,40 @@
+........................................................................ [ 28%]
+........................................................................ [ 57%]
+........................................................................ [ 85%]
+.F..................................                                     [100%]
+=================================== FAILURES ===================================
+_________ test_seeded_weighted_tree_external_oracle[15113-regression] __________
+
+ensemble_support = <module 'atlas_ensemble_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/ensemble-methods/support.py'>
+task = 'regression', seed = 15113
+
+    @pytest.mark.numerical
+    @pytest.mark.reference
+    @pytest.mark.parametrize('task',['classification','regression'])
+    @pytest.mark.parametrize('seed',[15111,15112,15113])
+    def test_seeded_weighted_tree_external_oracle(ensemble_support,task,seed):
+        from sklearn.tree import DecisionTreeClassifier,DecisionTreeRegressor
+        s=ensemble_support;tree=s.module_at('atlas_ensemble_tree',s.ROOT/'tree.py')
+        rng=np.random.default_rng(seed);X=rng.uniform(-2,2,(19,3));query=rng.uniform(-2,2,(11,3))
+        y=(X[:,0]+X[:,1]>0).astype(int) if task=='classification' else X[:,0]+X[:,1]**2
+        weight=rng.uniform(.1,2,19);weight[0]=0
+        ours=tree.WeightedTree(task=task,max_depth=2).fit(X,y,weight)
+        ref=(DecisionTreeClassifier if task=='classification' else DecisionTreeRegressor)(max_depth=2,random_state=0).fit(X,y,sample_weight=weight)
+>       assert_allclose(ours.predict(query).astype(float),ref.predict(query).astype(float),atol=1e-11)
+E       AssertionError: 
+E       Not equal to tolerance rtol=1e-07, atol=1e-11
+E       
+E       Mismatched elements: 1 / 11 (9.09%)
+E       Mismatch at index:
+E        [7]: -1.0722579865467787 (ACTUAL), 1.6553698020759655 (DESIRED)
+E       Max absolute difference among violations: 2.72762779
+E       Max relative difference among violations: 1.64774529
+E        ACTUAL: array([ 1.65537 ,  3.123928,  4.303589,  4.303589,  3.123928,  1.65537 ,
+E               3.123928, -1.072258,  1.65537 ,  1.65537 ,  1.65537 ])
+E        DESIRED: array([1.65537 , 3.123928, 4.303589, 4.303589, 3.123928, 1.65537 ,
+E              3.123928, 1.65537 , 1.65537 , 1.65537 , 1.65537 ])
+
+machine-learning/ensemble-methods/tests/test_contracts.py:84: AssertionError
+=========================== short test summary info ============================
+FAILED machine-learning/ensemble-methods/tests/test_contracts.py::test_seeded_weighted_tree_external_oracle[15113-regression]
+1 failed, 251 passed in 0.97s

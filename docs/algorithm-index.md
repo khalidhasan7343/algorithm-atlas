@@ -207,14 +207,14 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Random Forest | [random-forest](../machine-learning/ensemble-methods/random-forest/README.md) | planned |
-| Gradient Boosting Machine (GBM) | [gradient-boosting-machine](../machine-learning/ensemble-methods/gradient-boosting-machine/README.md) | planned |
-| XGBoost | [xgboost](../machine-learning/ensemble-methods/xgboost/README.md) | planned |
-| CatBoost | [catboost](../machine-learning/ensemble-methods/catboost/README.md) | planned |
-| AdaBoost | [adaboost](../machine-learning/ensemble-methods/adaboost/README.md) | planned |
-| Bagging | [bagging](../machine-learning/ensemble-methods/bagging/README.md) | planned |
-| Stacking | [stacking](../machine-learning/ensemble-methods/stacking/README.md) | planned |
-| Voting Classifiers | [voting-classifiers](../machine-learning/ensemble-methods/voting-classifiers/README.md) | planned |
+| Random Forest | [random-forest](../machine-learning/ensemble-methods/random-forest/README.md) | complete |
+| Gradient Boosting Machine (GBM) | [gradient-boosting-machine](../machine-learning/ensemble-methods/gradient-boosting-machine/README.md) | complete |
+| XGBoost | [xgboost](../machine-learning/ensemble-methods/xgboost/README.md) | complete |
+| CatBoost | [catboost](../machine-learning/ensemble-methods/catboost/README.md) | complete |
+| AdaBoost | [adaboost](../machine-learning/ensemble-methods/adaboost/README.md) | complete |
+| Bagging | [bagging](../machine-learning/ensemble-methods/bagging/README.md) | complete |
+| Stacking | [stacking](../machine-learning/ensemble-methods/stacking/README.md) | complete |
+| Voting Classifiers | [voting-classifiers](../machine-learning/ensemble-methods/voting-classifiers/README.md) | complete |
 
 ## B4. [Unsupervised Learning — Clustering](../machine-learning/unsupervised-learning/clustering/README.md)
 

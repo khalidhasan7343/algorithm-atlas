@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python",
+    "scripts/verify_ensemble_methods_examples.py"
+  ],
+  "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+  "timestamp": "2026-10-28T23:23:03.083116+06:00",
+  "elapsed_seconds": 1.328,
+  "returncode": 1,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "environment": {
+    "CXX": null,
+    "PYTHONHASHSEED": "0",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "log": "docs/ensemble-methods-evidence/examples-attempt1.txt",
+  "summary": " DESIRED: array([0.4, 3.6])"
+}

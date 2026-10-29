@@ -1,6 +1,6 @@
 # Getting Started
 
-Algorithm Atlas is an educational repository for DSA, machine learning and artificial intelligence topics. **All previous work is owner-approved; only the B1 Regression completion audit is currently authorized.** DSA requires Python/C++ and both C++17/C++20; classical ML requires Python/numerical tests with optional C++. Follow the [Regression audit checkpoint](regression-audit-checkpoints.md) and [ML standard](ml-development.md). Catalog statuses remain authoritative; later categories require separate approval.
+Algorithm Atlas is an educational repository for DSA, machine learning and artificial intelligence topics. **The latest B1 Regression audit and all previous work are owner-approved; Phase 15 B3 Ensemble Methods is currently authorized.** DSA requires Python/C++ and both C++17/C++20; classical ML requires Python/numerical tests with optional C++. Follow the [B3 checkpoints](ensemble-methods-checkpoints.md) and [ML standard](ml-development.md). New B3 review approval is pending; later categories require separate authorization.
 
 Start with the [learning roadmap](learning-roadmap.md), browse the [complete algorithm index](algorithm-index.md), and consult the [progress tracker](progress.md) before choosing a topic. The [glossary](glossary.md) and [complexity cheat sheet](complexity-cheatsheet.md) explain terminology used throughout the project.
 

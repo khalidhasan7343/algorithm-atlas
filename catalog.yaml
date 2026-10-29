@@ -1,28 +1,31 @@
 schema_version: 1
 project: Algorithm Atlas
 development:
-  phase: Phase 13 — B1 Regression completion audit
-  phase_number: 13
+  phase: Phase 15 — Ensemble Methods
+  phase_number: 15
   track: machine-learning
-  category: B1
-  scope: Supervised Learning — Regression completion audit only
+  category: B3
+  scope: B3 Ensemble Methods only
   status: awaiting-review
   active_batch: null
   completed_batches:
   - 1
+  - 2
+  - 3
+  - 4
   batch_plan:
-  - - linear-regression
-    - ridge-regression
-    - lasso-regression
-    - elastic-net
-    - polynomial-regression
-    - support-vector-regression
-    - decision-tree-regression
-  checkpoint: docs/regression-audit-checkpoints.md
-  approval: Owner explicitly approved all previously completed work, including Phase 14 Classification
-    and DSA work, and authorized B1 Regression completion/audit only on 2026-10-28 (Asia/Dhaka).
-    Retain existing solvers; fix only confirmed defects. Approval of the new review/artifacts
-    is pending. No other category, commit, push or release.
+  - - bagging
+    - random-forest
+  - - adaboost
+    - gradient-boosting-machine
+  - - xgboost
+    - catboost
+  - - voting-classifiers
+    - stacking
+  checkpoint: docs/ensemble-methods-checkpoints.md
+  approval: Owner explicitly approved the latest B1 Regression completion audit and all previous
+    work, and authorized Phase 15 B3 only. Current Phase 15 review approval pending. No next
+    category, commit, push, tag or release.
   phase_records:
     '11':
       phase_number: 11
@@ -63,6 +66,13 @@ development:
       completion_report: docs/reviews/regression/REGRESSION-REVIEW-REPORT.md
       approved_on: 2026-10-28 Asia/Dhaka
       approval_evidence: 'Explicit owner statement: OWNER-APPROVAL CHECKPOINT IS SATISFIED.'
+      latest_completion_audit:
+        id: regression-completion-audit-2026-10-28
+        owner_approval: approved
+        approved_on: '2026-10-28T23:13:15.794542+06:00'
+        evidence: Owner explicitly approved previous work immediately after final B1 audit package
+          handoff.
+        package_sha256: 5af6635b2dc87522993f193ff18e3c320e3d3218245e82b747cd4f903ff60588
     '14':
       phase_number: 14
       category: B2
@@ -78,19 +88,26 @@ development:
       approved_on: 2026-10-28 Asia/Dhaka
       approval_evidence: Owner explicitly confirmed all previously completed work owner-approved
         in the B1 Regression completion-audit request.
+    '15':
+      phase_number: 15
+      category: B3
+      status: awaiting-review
+      checkpoint: docs/ensemble-methods-checkpoints.md
+      owner_approval: pending
+      completed_batches:
+      - 1
+      - 2
+      - 3
+      - 4
+      completion_report: docs/reviews/ensemble-methods/ENSEMBLE-METHODS-REVIEW-REPORT.md
   current_review:
-    id: regression-completion-audit-2026-10-28
-    phase_number: 13
-    category: B1
+    id: ensemble-methods-phase15
+    phase_number: 15
+    category: B3
     status: awaiting-review
     owner_approval: pending
-    previous_work_owner_approval: approved
-    completion_report: docs/reviews/regression/REGRESSION-REVIEW-REPORT.md
-  previous_work_approval:
-    status: owner-approved
-    evidence: Explicit owner confirmation that all previously completed work has been owner-approved.
-    DSA_final_audit: owner-approved; historical technical findings/recommendation retained
-  completion_report: docs/reviews/regression/REGRESSION-REVIEW-REPORT.md
+    completion_report: docs/reviews/ensemble-methods/ENSEMBLE-METHODS-REVIEW-REPORT.md
+  completion_report: docs/reviews/ensemble-methods/ENSEMBLE-METHODS-REVIEW-REPORT.md
 categories:
   - id: "A1"
     name: "Sorting"
@@ -2244,110 +2261,127 @@ algorithms:
       - "logistic-regression"
       - "k-nearest-neighbors"
     notes: "Phase 14 Batch 4: Per-class unbiased sample covariances with identity shrinkage, eigenvalue resolution checks, Cholesky log determinants and quadratic discriminants; requires two samples per class. Independent Gaussian and scikit-learn reference tests passed. C++ optional and absent; owner review pending."
-  - id: "random-forest"
-    name: "Random Forest"
-    category: "B3"
-    canonical_location: "machine-learning/ensemble-methods/random-forest"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+  - id: random-forest
+    name: Random Forest
+    category: B3
+    canonical_location: machine-learning/ensemble-methods/random-forest
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "gradient-boosting-machine"
-      - "xgboost"
-    notes: "Combine randomized decision trees for supervised prediction. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "gradient-boosting-machine"
-    name: "Gradient Boosting Machine (GBM)"
-    category: "B3"
-    canonical_location: "machine-learning/ensemble-methods/gradient-boosting-machine"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - gradient-boosting-machine
+    - xgboost
+    notes: From-scratch bootstrap forests with per-node feature sampling, weighted Gini/squared-error
+      trees and aligned leaf-probability/scalar averaging. Zero-gain nodes stop.
+
+  - id: gradient-boosting-machine
+    name: Gradient Boosting Machine (GBM)
+    category: B3
+    canonical_location: machine-learning/ensemble-methods/gradient-boosting-machine
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "random-forest"
-      - "xgboost"
-    notes: "Fit additive predictors that reduce a specified differentiable loss. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "xgboost"
-    name: "XGBoost"
-    category: "B3"
-    canonical_location: "machine-learning/ensemble-methods/xgboost"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - random-forest
+    - xgboost
+    notes: Squared-error scalar regression, exact mean initialization, residual trees, learning-rate
+      shrinkage and staged/loss diagnostics.
+
+  - id: xgboost
+    name: XGBoost
+    category: B3
+    canonical_location: machine-learning/ensemble-methods/xgboost
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "random-forest"
-      - "gradient-boosting-machine"
-    notes: "Study the XGBoost boosting framework and its regularized tree objective. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "catboost"
-    name: "CatBoost"
-    category: "B3"
-    canonical_location: "machine-learning/ensemble-methods/catboost"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - random-forest
+    - gradient-boosting-machine
+    notes: Dense exact greedy second-order squared-error regression with L2/gamma Newton leaves,
+      Hessian mass bounds, seeded row/tree-column subsampling; no full production-library parity.
+
+  - id: catboost
+    name: CatBoost
+    category: B3
+    canonical_location: machine-learning/ensemble-methods/catboost
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "random-forest"
-      - "gradient-boosting-machine"
-    notes: "Study gradient boosting with explicit treatment of categorical features. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "adaboost"
-    name: "AdaBoost"
-    category: "B3"
-    canonical_location: "machine-learning/ensemble-methods/adaboost"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - random-forest
+    - gradient-boosting-machine
+    notes: Naive prefix-model ordered boosting (original paper Algorithm 1), ordered categorical
+      target statistics and symmetric trees, squared-loss regression. Strict n<=64/p<=8/rounds<=16/depth<=3;
+      no production shared-tree Algorithm 2 parity.
+
+  - id: adaboost
+    name: AdaBoost
+    category: B3
+    canonical_location: machine-learning/ensemble-methods/adaboost
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "random-forest"
-      - "gradient-boosting-machine"
-    notes: "Combine weak learners through adaptive example weighting. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "bagging"
-    name: "Bagging"
-    category: "B3"
-    canonical_location: "machine-learning/ensemble-methods/bagging"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - random-forest
+    - gradient-boosting-machine
+    notes: Discrete multiclass SAMME with weighted shallow trees, log-domain sample updates, explicit
+      perfect/chance stopping and staged predictions; no SAMME.R.
+
+  - id: bagging
+    name: Bagging
+    category: B3
+    canonical_location: machine-learning/ensemble-methods/bagging
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "random-forest"
-      - "gradient-boosting-machine"
-    notes: "Combine estimators trained on bootstrap samples. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "stacking"
-    name: "Stacking"
-    category: "B3"
-    canonical_location: "machine-learning/ensemble-methods/stacking"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - random-forest
+    - gradient-boosting-machine
+    notes: From-scratch classifier/regressor bootstrap aggregation with independent seed-taking
+      factories, hard-vote fractions/means and optional covered-only OOB diagnostics.
+
+  - id: stacking
+    name: Stacking
+    category: B3
+    canonical_location: machine-learning/ensemble-methods/stacking
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "random-forest"
-      - "gradient-boosting-machine"
-    notes: "Combine base-model predictions with a separately trained meta-model. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "voting-classifiers"
-    name: "Voting Classifiers"
-    category: "B3"
-    canonical_location: "machine-learning/ensemble-methods/voting-classifiers"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - random-forest
+    - gradient-boosting-machine
+    notes: Leakage-controlled out-of-fold classifier/regressor meta-training with fresh base instances
+      and full-data refits; default canonical Gaussian NB/Ridge meta-models.
+
+  - id: voting-classifiers
+    name: Voting Classifiers
+    category: B3
+    canonical_location: machine-learning/ensemble-methods/voting-classifiers
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "random-forest"
-      - "gradient-boosting-machine"
-    notes: "Combine classifier decisions using hard or soft voting. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    - random-forest
+    - gradient-boosting-machine
+    notes: Fresh factory-based classifier hard/soft weighted voting, deterministic sorted labels
+      and explicit probability-column alignment.
+
   - id: "k-means"
     name: "K-Means"
     category: "B4"

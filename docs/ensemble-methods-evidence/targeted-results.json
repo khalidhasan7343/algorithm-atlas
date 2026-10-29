@@ -1,0 +1,101 @@
+{
+  "B3": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/ensemble-methods",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/ensemble-methods-evidence/B3.xml"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-29T00:12:10.153830+06:00",
+    "elapsed_seconds": 1.143,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/ensemble-methods-evidence/B3-attempt6.txt",
+    "summary": "253 passed in 0.95s"
+  },
+  "numerical": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/ensemble-methods",
+      "-m",
+      "numerical",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-29T00:12:10.865610+06:00",
+    "elapsed_seconds": 0.711,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/ensemble-methods-evidence/numerical-attempt4.txt",
+    "summary": "24 passed, 229 deselected in 0.53s"
+  },
+  "oracle": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/ensemble-methods",
+      "-m",
+      "oracle",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-29T00:12:11.071431+06:00",
+    "elapsed_seconds": 0.205,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/ensemble-methods-evidence/oracle-attempt4.txt",
+    "summary": "19 passed, 234 deselected in 0.07s"
+  },
+  "reference": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/ensemble-methods",
+      "-m",
+      "reference",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-29T00:12:11.780903+06:00",
+    "elapsed_seconds": 0.709,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/ensemble-methods-evidence/reference-attempt4.txt",
+    "summary": "16 passed, 237 deselected in 0.52s"
+  }
+}

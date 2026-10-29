@@ -1,0 +1,1 @@
+8 lessons; 16 example/CLI executions and 8 invalid-input CLI checks passed

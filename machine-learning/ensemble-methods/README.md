@@ -6,16 +6,24 @@ Combining multiple estimators through averaging, boosting, and learned aggregati
 
 This category preserves **8 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
+
+Phase 15 implements exactly these eight Ensemble Methods canonicals. Prior B1 audit, B2 Classification and DSA work is owner-approved; the new Phase 15 review remains pending. Read [the scope lock](../../docs/ensemble-methods-scope.md), [the API/numerical contracts](../../docs/ensemble-methods-conventions.md) and [the checkpoints](../../docs/ensemble-methods-checkpoints.md). Python/NumPy and mathematical tests are required; C++ is optional and absent. No Phase 16 or other category is authorized.
+
+See [the Phase 15 report](../../docs/reviews/ensemble-methods/ENSEMBLE-METHODS-REVIEW-REPORT.md).
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Random Forest | [random-forest](random-forest/README.md) | planned |
-| Gradient Boosting Machine (GBM) | [gradient-boosting-machine](gradient-boosting-machine/README.md) | planned |
-| XGBoost | [xgboost](xgboost/README.md) | planned |
-| CatBoost | [catboost](catboost/README.md) | planned |
-| AdaBoost | [adaboost](adaboost/README.md) | planned |
-| Bagging | [bagging](bagging/README.md) | planned |
-| Stacking | [stacking](stacking/README.md) | planned |
-| Voting Classifiers | [voting-classifiers](voting-classifiers/README.md) | planned |
+| Random Forest | [random-forest](random-forest/README.md) | complete |
+| Gradient Boosting Machine (GBM) | [gradient-boosting-machine](gradient-boosting-machine/README.md) | complete |
+| XGBoost | [xgboost](xgboost/README.md) | complete |
+| CatBoost | [catboost](catboost/README.md) | complete |
+| AdaBoost | [adaboost](adaboost/README.md) | complete |
+| Bagging | [bagging](bagging/README.md) | complete |
+| Stacking | [stacking](stacking/README.md) | complete |
+| Voting Classifiers | [voting-classifiers](voting-classifiers/README.md) | complete |
+
+Phase 15 implements exactly these eight Ensemble Methods canonicals. Prior B1 audit, B2 Classification and DSA work is owner-approved; the new Phase 15 review remains pending. Read [the scope lock](../../docs/ensemble-methods-scope.md), [the API/numerical contracts](../../docs/ensemble-methods-conventions.md) and [the checkpoints](../../docs/ensemble-methods-checkpoints.md). Python/NumPy and mathematical tests are required; C++ is optional and absent. No Phase 16 or other category is authorized.
+
+See [the Phase 15 report](../../docs/reviews/ensemble-methods/ENSEMBLE-METHODS-REVIEW-REPORT.md).
 
 ## Learning and contribution scope
 

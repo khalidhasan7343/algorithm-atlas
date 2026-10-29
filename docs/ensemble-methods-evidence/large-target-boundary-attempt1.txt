@@ -1,0 +1,56 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+________ test_valid_boundary_targets_can_have_larger_internal_residuals ________
+
+ensemble_support = <module 'atlas_ensemble_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/ensemble-methods/support.py'>
+
+    @pytest.mark.numerical
+    @pytest.mark.oracle
+    def test_valid_boundary_targets_can_have_larger_internal_residuals(ensemble_support):
+        X=np.arange(3.)[:,None];y=np.array([-1e12,1e12,1e12]);mean=y.mean()
+        cls=ensemble_support.load('gradient-boosting-machine').GradientBoostingRegressor
+>       model=cls(n_estimators=2,learning_rate=.5,max_depth=1).fit(X,y)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+machine-learning/ensemble-methods/gradient-boosting-machine/tests/test_python.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+machine-learning/supervised-learning/classification/support.py:28: in guarded
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+machine-learning/ensemble-methods/gradient-boosting-machine/python/solution.py:42: in fit
+    model = tree.WeightedTree(max_depth=depth, min_samples_leaf=leaf, random_state=int(rng.integers(2**32))).fit(X, residual)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+machine-learning/supervised-learning/classification/support.py:28: in guarded
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+machine-learning/ensemble-methods/tree.py:43: in fit
+    X, y, classes, _ = s.training(X, y, self.task)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+machine-learning/ensemble-methods/support.py:44: in training
+    return X, regression.targets(y, len(X)), None, None
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+machine-learning/supervised-learning/regression/support.py:84: in targets
+    y = _array(y, "y")
+        ^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+value = array([-1.33333333e+12,  6.66666667e+11,  6.66666667e+11]), name = 'y'
+
+    def _array(value, name):
+        try:
+            array = np.asarray(value)
+            if array.size > MAX_CELLS:
+                raise ValueError(f"{name} exceeds the cell resource budget")
+            if array.dtype.kind not in "iuf":
+                raise ValueError(f"{name} must contain real numeric values, excluding bool")
+            result = np.array(array, dtype=np.float64, copy=True)
+        except (TypeError, OverflowError) as error:
+            raise ValueError(f"{name} cannot be converted to float64") from error
+        if not np.isfinite(result).all() or np.any(np.abs(result) > MAX_VALUE):
+>           raise ValueError(f"{name} must be finite and have magnitude <= 10^12")
+E           ValueError: y must be finite and have magnitude <= 10^12
+
+machine-learning/supervised-learning/regression/support.py:67: ValueError
+=========================== short test summary info ============================
+FAILED machine-learning/ensemble-methods/gradient-boosting-machine/tests/test_python.py::test_valid_boundary_targets_can_have_larger_internal_residuals
+1 failed, 12 deselected in 0.05s

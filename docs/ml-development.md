@@ -1,9 +1,18 @@
 # Machine Learning development standard
 
 Maintainer: **MD.Khalid Hasan**. [MIT License](../LICENSE).
-All previously completed work is owner-approved. Current authorization is only
-the [B1 Regression completion audit](regression-audit-scope.md); the revised
-review/package remains pending. See [evaluation contracts](regression-evaluation.md).
+The owner explicitly approved the latest B1 Regression completion audit and all
+prior work, and authorized **Phase 15 — B3 Ensemble Methods only**. Implement the
+eight catalog canonicals under [the scope lock](ensemble-methods-scope.md),
+with actual stage gates in [the checkpoints](ensemble-methods-checkpoints.md).
+Preserve approved B1/B2/DSA algorithms, tests, lessons and historical evidence/packages.
+Inventory remains 35 categories / 256 memberships / 235 canonicals.
+
+Python/NumPy, numerical/oracle/reference tests and exact 25-section lessons are
+mandatory for ML; C++ is optional. DSA retains Python/C++ and both C++17/C++20.
+The **Phase 15 review approval remains pending**. Stop after its completion report
+and verified ZIP/checksum/JSON. No Phase 16, other category, commit, push, tag,
+release or publication. Never set Git identity from public email.
 
 ## Track and language policy
 
@@ -101,3 +110,11 @@ The [classification contracts](classification-conventions.md) define strict labe
 families, binary versus multiclass APIs, class/probability ordering, numeric and
 categorical domains, convergence/errors, metrics and held-out evaluation. They
 extend this Python-first foundation without changing B1 or DSA implementations.
+
+## Ensemble extension — Phase 15
+
+The [B3 contracts](ensemble-methods-conventions.md) specify factory independence,
+bootstrap and split RNGs, hard versus soft probability semantics, ordered prefix
+boosting, target-statistic leakage avoidance and out-of-fold meta-training.
+The exact variants and their deliberately bounded resource limits are part of the
+lessons. XGBoost/CatBoost production-library parity is not claimed.

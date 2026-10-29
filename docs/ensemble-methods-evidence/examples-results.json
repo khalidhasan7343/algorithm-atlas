@@ -1,0 +1,151 @@
+{
+  "status": "passed",
+  "executions": 16,
+  "invalid_cli_checks": 8,
+  "records": [
+    {
+      "topic": "bagging",
+      "command": [
+        "python",
+        "machine-learning/ensemble-methods/bagging/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"predictions\": [\"cold\", \"warm\"]}"
+    },
+    {
+      "topic": "bagging",
+      "command": [
+        "python",
+        "machine-learning/ensemble-methods/bagging/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"predictions\": [\"cold\", \"warm\"]}"
+    },
+    {
+      "topic": "random-forest",
+      "command": [
+        "python",
+        "machine-learning/ensemble-methods/random-forest/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"predictions\": [\"cold\", \"warm\"]}"
+    },
+    {
+      "topic": "random-forest",
+      "command": [
+        "python",
+        "machine-learning/ensemble-methods/random-forest/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"predictions\": [\"cold\", \"warm\"]}"
+    },
+    {
+      "topic": "adaboost",
+      "command": [
+        "python",
+        "machine-learning/ensemble-methods/adaboost/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"predictions\": [\"cold\", \"warm\"]}"
+    },
+    {
+      "topic": "adaboost",
+      "command": [
+        "python",
+        "machine-learning/ensemble-methods/adaboost/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"predictions\": [\"cold\", \"warm\"]}"
+    },
+    {
+      "topic": "gradient-boosting-machine",
+      "command": [
+        "python",
+        "machine-learning/ensemble-methods/gradient-boosting-machine/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"predictions\": [0.25, 3.75]}"
+    },
+    {
+      "topic": "gradient-boosting-machine",
+      "command": [
+        "python",
+        "machine-learning/ensemble-methods/gradient-boosting-machine/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"predictions\": [0.25, 3.75]}"
+    },
+    {
+      "topic": "xgboost",
+      "command": [
+        "python",
+        "machine-learning/ensemble-methods/xgboost/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"predictions\": [1.5, 2.5]}"
+    },
+    {
+      "topic": "xgboost",
+      "command": [
+        "python",
+        "machine-learning/ensemble-methods/xgboost/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"predictions\": [1.5, 2.5]}"
+    },
+    {
+      "topic": "catboost",
+      "command": [
+        "python",
+        "machine-learning/ensemble-methods/catboost/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"predictions\": [0.0, 4.0]}"
+    },
+    {
+      "topic": "catboost",
+      "command": [
+        "python",
+        "machine-learning/ensemble-methods/catboost/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"predictions\": [0.0, 4.0]}"
+    },
+    {
+      "topic": "voting-classifiers",
+      "command": [
+        "python",
+        "machine-learning/ensemble-methods/voting-classifiers/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"predictions\": [\"cold\", \"warm\"]}"
+    },
+    {
+      "topic": "voting-classifiers",
+      "command": [
+        "python",
+        "machine-learning/ensemble-methods/voting-classifiers/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"predictions\": [\"cold\", \"warm\"]}"
+    },
+    {
+      "topic": "stacking",
+      "command": [
+        "python",
+        "machine-learning/ensemble-methods/stacking/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"predictions\": [0.8439306358381503, 3.2485549132947975]}"
+    },
+    {
+      "topic": "stacking",
+      "command": [
+        "python",
+        "machine-learning/ensemble-methods/stacking/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"predictions\": [0.8439306358381503, 3.2485549132947975]}"
+    }
+  ]
+}

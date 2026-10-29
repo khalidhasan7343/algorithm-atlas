@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "inventory": {
+    "categories": 35,
+    "memberships": 256,
+    "canonicals": 235
+  },
+  "B3_canonicals": 8,
+  "implemented": 8,
+  "protected_preexisting_files": 1855,
+  "historical_artifacts_omitted_from_export": [],
+  "lessons": [
+    {
+      "id": "random-forest",
+      "sections": 25,
+      "python": "from-scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "gradient-boosting-machine",
+      "sections": 25,
+      "python": "from-scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "xgboost",
+      "sections": 25,
+      "python": "from-scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "catboost",
+      "sections": 25,
+      "python": "from-scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "adaboost",
+      "sections": 25,
+      "python": "from-scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "bagging",
+      "sections": 25,
+      "python": "from-scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "stacking",
+      "sections": 25,
+      "python": "from-scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "voting-classifiers",
+      "sections": 25,
+      "python": "from-scratch",
+      "cpp": "optional, absent"
+    }
+  ],
+  "B1_B2_DSA_preservation": "all approved implementations/tests/lessons/reports/evidence/packages byte-identical",
+  "latest_B1_audit_owner_approval": "approved",
+  "B2_owner_approval": "approved",
+  "phase15_owner_approval": "pending",
+  "report_tracking": "tracked and unignored"
+}

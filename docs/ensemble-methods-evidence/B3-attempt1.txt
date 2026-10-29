@@ -1,0 +1,127 @@
+........................................................................ [ 31%]
+........................................................................ [ 62%]
+.................................F.F.F...FF............................. [ 93%]
+...............                                                          [100%]
+=================================== FAILURES ===================================
+________ test_unfitted_and_wrong_query_shape[bagging-BaggingClassifier] ________
+
+ensemble_support = <module 'atlas_ensemble_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/ensemble-methods/support.py'>
+name = 'bagging', cls = 'BaggingClassifier'
+
+    @pytest.mark.parametrize('name,cls',SPECS)
+    def test_unfitted_and_wrong_query_shape(ensemble_support,name,cls):
+        m=model(ensemble_support,name,cls)
+>       with pytest.raises(ValueError):m.predict([[0,1]])
+                                       ^^^^^^^^^^^^^^^^^^
+
+machine-learning/ensemble-methods/tests/test_contracts.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <atlas_ensemble_bagging.BaggingClassifier object at 0x1103edd90>
+X = [[0, 1]]
+
+    def predict(self, X):
+>       return self.classes_[np.argmax(self.predict_proba(X), axis=1)]
+               ^^^^^^^^^^^^^
+E       AttributeError: 'BaggingClassifier' object has no attribute 'classes_'
+
+machine-learning/ensemble-methods/support.py:155: AttributeError
+__ test_unfitted_and_wrong_query_shape[random-forest-RandomForestClassifier] ___
+
+ensemble_support = <module 'atlas_ensemble_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/ensemble-methods/support.py'>
+name = 'random-forest', cls = 'RandomForestClassifier'
+
+    @pytest.mark.parametrize('name,cls',SPECS)
+    def test_unfitted_and_wrong_query_shape(ensemble_support,name,cls):
+        m=model(ensemble_support,name,cls)
+>       with pytest.raises(ValueError):m.predict([[0,1]])
+                                       ^^^^^^^^^^^^^^^^^^
+
+machine-learning/ensemble-methods/tests/test_contracts.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <atlas_ensemble_random_forest.RandomForestClassifier object at 0x11043ac10>
+X = [[0, 1]]
+
+    def predict(self, X):
+>       return self.classes_[np.argmax(self.predict_proba(X), axis=1)]
+               ^^^^^^^^^^^^^
+E       AttributeError: 'RandomForestClassifier' object has no attribute 'classes_'
+
+machine-learning/ensemble-methods/support.py:155: AttributeError
+_______ test_unfitted_and_wrong_query_shape[adaboost-AdaBoostClassifier] _______
+
+ensemble_support = <module 'atlas_ensemble_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/ensemble-methods/support.py'>
+name = 'adaboost', cls = 'AdaBoostClassifier'
+
+    @pytest.mark.parametrize('name,cls',SPECS)
+    def test_unfitted_and_wrong_query_shape(ensemble_support,name,cls):
+        m=model(ensemble_support,name,cls)
+>       with pytest.raises(ValueError):m.predict([[0,1]])
+                                       ^^^^^^^^^^^^^^^^^^
+
+machine-learning/ensemble-methods/tests/test_contracts.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <atlas_ensemble_adaboost.AdaBoostClassifier object at 0x1104fe620>
+X = [[0, 1]]
+
+    def predict(self, X):
+>       return self.classes_[np.argmax(self.predict_proba(X), axis=1)]
+               ^^^^^^^^^^^^^
+E       AttributeError: 'AdaBoostClassifier' object has no attribute 'classes_'
+
+machine-learning/ensemble-methods/support.py:155: AttributeError
+___ test_unfitted_and_wrong_query_shape[voting-classifiers-VotingClassifier] ___
+
+ensemble_support = <module 'atlas_ensemble_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/ensemble-methods/support.py'>
+name = 'voting-classifiers', cls = 'VotingClassifier'
+
+    @pytest.mark.parametrize('name,cls',SPECS)
+    def test_unfitted_and_wrong_query_shape(ensemble_support,name,cls):
+        m=model(ensemble_support,name,cls)
+>       with pytest.raises(ValueError):m.predict([[0,1]])
+                                       ^^^^^^^^^^^^^^^^^^
+
+machine-learning/ensemble-methods/tests/test_contracts.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <atlas_ensemble_voting_classifiers.VotingClassifier object at 0x11040af30>
+X = [[0, 1]]
+
+    def predict(self, X):
+>       return self.classes_[np.argmax(self.predict_proba(X), axis=1)]
+               ^^^^^^^^^^^^^
+E       AttributeError: 'VotingClassifier' object has no attribute 'classes_'
+
+machine-learning/ensemble-methods/support.py:155: AttributeError
+_______ test_unfitted_and_wrong_query_shape[stacking-StackingClassifier] _______
+
+ensemble_support = <module 'atlas_ensemble_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/ensemble-methods/support.py'>
+name = 'stacking', cls = 'StackingClassifier'
+
+    @pytest.mark.parametrize('name,cls',SPECS)
+    def test_unfitted_and_wrong_query_shape(ensemble_support,name,cls):
+        m=model(ensemble_support,name,cls)
+>       with pytest.raises(ValueError):m.predict([[0,1]])
+                                       ^^^^^^^^^^^^^^^^^^
+
+machine-learning/ensemble-methods/tests/test_contracts.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <atlas_ensemble_stacking.StackingClassifier object at 0x1101ea4e0>
+X = [[0, 1]]
+
+    def predict(self, X):
+>       return self.classes_[np.argmax(self.predict_proba(X), axis=1)]
+               ^^^^^^^^^^^^^
+E       AttributeError: 'StackingClassifier' object has no attribute 'classes_'
+
+machine-learning/ensemble-methods/support.py:155: AttributeError
+=========================== short test summary info ============================
+FAILED machine-learning/ensemble-methods/tests/test_contracts.py::test_unfitted_and_wrong_query_shape[bagging-BaggingClassifier]
+FAILED machine-learning/ensemble-methods/tests/test_contracts.py::test_unfitted_and_wrong_query_shape[random-forest-RandomForestClassifier]
+FAILED machine-learning/ensemble-methods/tests/test_contracts.py::test_unfitted_and_wrong_query_shape[adaboost-AdaBoostClassifier]
+FAILED machine-learning/ensemble-methods/tests/test_contracts.py::test_unfitted_and_wrong_query_shape[voting-classifiers-VotingClassifier]
+FAILED machine-learning/ensemble-methods/tests/test_contracts.py::test_unfitted_and_wrong_query_shape[stacking-StackingClassifier]
+5 failed, 226 passed in 0.74s

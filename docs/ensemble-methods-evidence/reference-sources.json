@@ -1,0 +1,62 @@
+{
+  "sources": [
+    {
+      "title": "Breiman Bagging 1996",
+      "url": "https://doi.org/10.1007/BF00058655",
+      "verification": "Publisher abstract/metadata retrieved"
+    },
+    {
+      "title": "Breiman Random Forests 2001",
+      "url": "https://stat-www.berkeley.edu/~breiman/randomforest2001.pdf",
+      "verification": "Author PDF verified in search; DOI publisher confirmed by search after direct redirect fetch failed"
+    },
+    {
+      "title": "Multiclass AdaBoost 2009",
+      "url": "https://web.stanford.edu/~hastie/Papers/SII-2-3-A8-Zhu.pdf",
+      "verification": "Author-hosted paper retrieved through search; DOI endpoint unavailable"
+    },
+    {
+      "title": "Friedman GBM 2001",
+      "url": "https://doi.org/10.1214/aos/1013203451",
+      "verification": "Publisher redirect retrieved; page is an iframe; sklearn primary guide also supports residual method"
+    },
+    {
+      "title": "XGBoost 2016",
+      "url": "https://arxiv.org/abs/1603.02754",
+      "verification": "Original paper identified; official objective tutorial retrieved"
+    },
+    {
+      "title": "XGBoost objective",
+      "url": "https://xgboost.readthedocs.io/en/stable/tutorials/model.html",
+      "verification": "Official leaf/gain equations retrieved"
+    },
+    {
+      "title": "CatBoost 2018",
+      "url": "https://papers.nips.cc/paper/7898-catboost-unbiased-boosting-with-categorical-features.pdf",
+      "verification": "Original paper read: ordered statistics, Algorithm 1 prefix fitting, distinction from Algorithm 2"
+    },
+    {
+      "title": "CatBoost unbiased boosting",
+      "url": "https://catboost.ai/docs/en/concepts/algorithm-main-stages_fighting-biases",
+      "verification": "Official overview identified"
+    },
+    {
+      "title": "Wolpert stacking 1992",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0893608005800231",
+      "verification": "Publisher search metadata/abstract verified; DOI direct fetch returned 403"
+    },
+    {
+      "title": "scikit-learn 1.8 ensembles",
+      "url": "https://scikit-learn.org/1.8/modules/ensemble.html",
+      "verification": "Official versioned guide retrieved"
+    },
+    {
+      "title": "VotingClassifier API",
+      "url": "https://scikit-learn.org/1.8/modules/generated/sklearn.ensemble.VotingClassifier.html",
+      "verification": "Official versioned API retrieved"
+    }
+  ],
+  "policy": "No external source code/prose copied. Core algorithms use NumPy/local code only; sklearn is a dev-test reference.",
+  "reference_alignment": "Actual bootstrap cohorts, objective normalization, full sampling, explicit CV folds, tree depths and class-column order aligned. No full XGBoost/CatBoost library parity claim.",
+  "catboost_reference": "Independent ordered-statistic, prefix-exclusion, constant-prefix and symmetric-tree enumeration oracles; production CatBoost Algorithm 2 is a different implementation, so exact output equality is not asserted."
+}

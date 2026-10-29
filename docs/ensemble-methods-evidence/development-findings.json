@@ -1,0 +1,35 @@
+{
+  "confirmed_implementation_defects_fixed": 2,
+  "findings": [
+    {
+      "id": "E1",
+      "scope": "new B3 classifier prediction contract",
+      "symptom": "predict-before-fit raised AttributeError due to evaluating classes_ before probability state validation",
+      "tests": "5 failed / 226 passed in B3-attempt1",
+      "fix": "Validate predict_proba state before reading fitted classes; no prior B2 source changed"
+    },
+    {
+      "id": "E2",
+      "scope": "new B3 GBM residual-tree boundary",
+      "symptom": "Valid observed targets [-1e12,1e12,1e12] yield an internal residual below -1e12 and were rejected by the observed-target contract",
+      "tests": "large-target-boundary-attempt1: 1 failed, 12 deselected",
+      "fix": "Keep public observed-target limit unchanged; use a separate finite 1e15 internal weighted-tree target bound and an independent two-stage analytical regression test."
+    }
+  ],
+  "test_corrections": [
+    {
+      "attempt": "batch4-attempt1",
+      "failure": "1 failed / 19 passed",
+      "reason": "A mathematical decimal tie is not necessarily an exact float64 tie; replaced the oracle inputs with exactly representable binary fractions and tested both weighting and exact ties"
+    },
+    {
+      "attempt": "examples-attempt1",
+      "reason": "Initial stacking expected-value placeholder was incorrect; independently derived OOF design, Ridge normal equations and exact rational predictions 146/173 and 562/173 before accepting executed output."
+    },
+    {
+      "attempt": "B3-attempt3",
+      "failure": "1 failed / 251 passed",
+      "reason": "Seed 15113 selected different equal-scoring features isolating exactly the same positive-weight training singleton. Training predictions agree within 4.45e-16; off-training routing can legitimately differ. Reference checks now compare fitted training predictions/objectives and verify query invariants, with full investigation preserved. No implementation change."
+    }
+  ]
+}

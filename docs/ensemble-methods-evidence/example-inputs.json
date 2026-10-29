@@ -1,0 +1,316 @@
+{
+  "bagging": {
+    "class_name": "BaggingClassifier",
+    "payload": {
+      "X": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "y": [
+        "cold",
+        "cold",
+        "warm",
+        "warm"
+      ],
+      "predict": [
+        [
+          0
+        ],
+        [
+          3
+        ]
+      ],
+      "parameters": {
+        "n_estimators": 3,
+        "max_depth": 1,
+        "random_state": 0
+      }
+    }
+  },
+  "random-forest": {
+    "class_name": "RandomForestClassifier",
+    "payload": {
+      "X": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "y": [
+        "cold",
+        "cold",
+        "warm",
+        "warm"
+      ],
+      "predict": [
+        [
+          0
+        ],
+        [
+          3
+        ]
+      ],
+      "parameters": {
+        "n_estimators": 3,
+        "max_depth": 1,
+        "random_state": 0
+      }
+    }
+  },
+  "adaboost": {
+    "class_name": "AdaBoostClassifier",
+    "payload": {
+      "X": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "y": [
+        "cold",
+        "cold",
+        "warm",
+        "warm"
+      ],
+      "predict": [
+        [
+          0
+        ],
+        [
+          3
+        ]
+      ],
+      "parameters": {
+        "n_estimators": 3,
+        "random_state": 0
+      }
+    }
+  },
+  "gradient-boosting-machine": {
+    "class_name": "GradientBoostingRegressor",
+    "payload": {
+      "X": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "y": [
+        0,
+        0,
+        4,
+        4
+      ],
+      "predict": [
+        [
+          0
+        ],
+        [
+          3
+        ]
+      ],
+      "parameters": {
+        "n_estimators": 3,
+        "learning_rate": 0.5,
+        "max_depth": 1,
+        "random_state": 0
+      }
+    }
+  },
+  "xgboost": {
+    "class_name": "XGBoostRegressor",
+    "payload": {
+      "X": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "y": [
+        0,
+        0,
+        4,
+        4
+      ],
+      "predict": [
+        [
+          0
+        ],
+        [
+          3
+        ]
+      ],
+      "parameters": {
+        "n_estimators": 1,
+        "learning_rate": 0.5,
+        "max_depth": 1,
+        "reg_lambda": 2,
+        "random_state": 0
+      }
+    }
+  },
+  "catboost": {
+    "class_name": "CatBoostRegressor",
+    "payload": {
+      "X": [
+        [
+          "a",
+          0
+        ],
+        [
+          "a",
+          1
+        ],
+        [
+          "b",
+          2
+        ],
+        [
+          "b",
+          3
+        ]
+      ],
+      "y": [
+        0,
+        0,
+        4,
+        4
+      ],
+      "predict": [
+        [
+          "a",
+          0
+        ],
+        [
+          "b",
+          3
+        ]
+      ],
+      "parameters": {
+        "categorical_features": [
+          0
+        ],
+        "n_estimators": 1,
+        "learning_rate": 1,
+        "max_depth": 1,
+        "random_state": 0
+      }
+    }
+  },
+  "voting-classifiers": {
+    "class_name": "VotingClassifier",
+    "payload": {
+      "X": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "y": [
+        "cold",
+        "cold",
+        "warm",
+        "warm"
+      ],
+      "predict": [
+        [
+          0
+        ],
+        [
+          3
+        ]
+      ],
+      "parameters": {
+        "voting": "soft",
+        "random_state": 0
+      }
+    }
+  },
+  "stacking": {
+    "class_name": "StackingRegressor",
+    "payload": {
+      "X": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "y": [
+        0,
+        0,
+        4,
+        4
+      ],
+      "predict": [
+        [
+          0
+        ],
+        [
+          3
+        ]
+      ],
+      "parameters": {
+        "n_splits": 2,
+        "random_state": 0
+      }
+    }
+  }
+}
