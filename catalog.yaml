@@ -1,31 +1,31 @@
 schema_version: 1
 project: Algorithm Atlas
 development:
-  phase: Phase 15 — Ensemble Methods
-  phase_number: 15
+  phase: Phase 16 — Unsupervised Learning — Clustering
+  phase_number: 16
   track: machine-learning
-  category: B3
-  scope: B3 Ensemble Methods only
+  category: B4
+  scope: B4 Unsupervised Learning — Clustering only
   status: awaiting-review
   active_batch: null
-  completed_batches:
+  completed_batches: &id001
   - 1
   - 2
   - 3
   - 4
   batch_plan:
-  - - bagging
-    - random-forest
-  - - adaboost
-    - gradient-boosting-machine
-  - - xgboost
-    - catboost
-  - - voting-classifiers
-    - stacking
-  checkpoint: docs/ensemble-methods-checkpoints.md
-  approval: Owner explicitly approved the latest B1 Regression completion audit and all previous
-    work, and authorized Phase 15 B3 only. Current Phase 15 review approval pending. No next
-    category, commit, push, tag or release.
+  - - k-means
+    - agglomerative-hierarchical-clustering
+  - - divisive-hierarchical-clustering
+    - dbscan
+  - - hdbscan
+    - mean-shift
+  - - gaussian-mixture-models
+    - spectral-clustering
+  checkpoint: docs/clustering-checkpoints.md
+  approval: Owner explicitly approved the completed latest Phase 15 Ensemble Methods package
+    and previous work, and authorized Phase 16 B4 only. Current Phase 16 review approval pending.
+    No Phase 17, other category, commit, push, tag or release.
   phase_records:
     '11':
       phase_number: 11
@@ -91,23 +91,35 @@ development:
     '15':
       phase_number: 15
       category: B3
-      status: awaiting-review
+      status: owner-approved
       checkpoint: docs/ensemble-methods-checkpoints.md
-      owner_approval: pending
+      owner_approval: approved
       completed_batches:
       - 1
       - 2
       - 3
       - 4
       completion_report: docs/reviews/ensemble-methods/ENSEMBLE-METHODS-REVIEW-REPORT.md
+      approved_on: 2026-10-30 Asia/Dhaka
+      approval_evidence: Explicit owner approval of previous work immediately after the verified
+        Phase 15 review handoff.
+      approved_package_sha256: b5d6897ab609a425acdb403b169cd811eed1114f3a61d4670ac5e8fdb74d73e9
+    '16':
+      phase_number: 16
+      category: B4
+      status: awaiting-review
+      checkpoint: docs/clustering-checkpoints.md
+      owner_approval: pending
+      completed_batches: *id001
+      completion_report: docs/reviews/clustering/CLUSTERING-REVIEW-REPORT.md
   current_review:
-    id: ensemble-methods-phase15
-    phase_number: 15
-    category: B3
+    id: clustering-phase16
+    phase_number: 16
+    category: B4
     status: awaiting-review
     owner_approval: pending
-    completion_report: docs/reviews/ensemble-methods/ENSEMBLE-METHODS-REVIEW-REPORT.md
-  completion_report: docs/reviews/ensemble-methods/ENSEMBLE-METHODS-REVIEW-REPORT.md
+    completion_report: docs/reviews/clustering/CLUSTERING-REVIEW-REPORT.md
+  completion_report: docs/reviews/clustering/CLUSTERING-REVIEW-REPORT.md
 categories:
   - id: "A1"
     name: "Sorting"
@@ -2382,110 +2394,120 @@ algorithms:
     notes: Fresh factory-based classifier hard/soft weighted voting, deterministic sorted labels
       and explicit probability-column alignment.
 
-  - id: "k-means"
-    name: "K-Means"
-    category: "B4"
-    canonical_location: "machine-learning/unsupervised-learning/clustering/k-means"
-    difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+  - id: k-means
+    name: K-Means
+    category: B4
+    canonical_location: machine-learning/unsupervised-learning/clustering/k-means
+    difficulty: intermediate
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "agglomerative-hierarchical-clustering"
-      - "divisive-hierarchical-clustering"
-    notes: "Partition numeric observations by minimizing within-cluster squared distances. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "agglomerative-hierarchical-clustering"
-    name: "Agglomerative Hierarchical Clustering"
-    category: "B4"
-    canonical_location: "machine-learning/unsupervised-learning/clustering/agglomerative-hierarchical-clustering"
-    difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - agglomerative-hierarchical-clustering
+    - divisive-hierarchical-clustering
+    notes: Seeded from-scratch Lloyd fixed-point clustering, k-means++/random/explicit initialization,
+      deterministic empty-cluster repair and stable normalized fitting. Physical tiny inertia
+      may underflow; no global-optimum guarantee.
+  - id: agglomerative-hierarchical-clustering
+    name: Agglomerative Hierarchical Clustering
+    category: B4
+    canonical_location: machine-learning/unsupervised-learning/clustering/agglomerative-hierarchical-clustering
+    difficulty: intermediate
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "k-means"
-      - "divisive-hierarchical-clustering"
-    notes: "Build a cluster hierarchy by merging groups under a chosen linkage rule. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "divisive-hierarchical-clustering"
-    name: "Divisive Hierarchical Clustering"
-    category: "B4"
-    canonical_location: "machine-learning/unsupervised-learning/clustering/divisive-hierarchical-clustering"
-    difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - k-means
+    - divisive-hierarchical-clustering
+    notes: Dense Euclidean single/complete/average/Ward hierarchy with a requested cut and full
+      merge/count evidence; deterministic ties and stable square-root Ward heights; n<=128.
+  - id: divisive-hierarchical-clustering
+    name: Divisive Hierarchical Clustering
+    category: B4
+    canonical_location: machine-learning/unsupervised-learning/clustering/divisive-hierarchical-clustering
+    difficulty: intermediate
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "k-means"
-      - "agglomerative-hierarchical-clustering"
-    notes: "Build a cluster hierarchy by repeatedly splitting groups. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "dbscan"
-    name: "DBSCAN"
-    category: "B4"
-    canonical_location: "machine-learning/unsupervised-learning/clustering/dbscan"
-    difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - k-means
+    - agglomerative-hierarchical-clustering
+    notes: DIANA largest-diameter splinter-group division with full hierarchy/cut diagnostics;
+      Euclidean dissimilarity, deterministic ties; no bisecting-K-Means substitution.
+  - id: dbscan
+    name: DBSCAN
+    category: B4
+    canonical_location: machine-learning/unsupervised-learning/clustering/dbscan
+    difficulty: intermediate
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "k-means"
-      - "agglomerative-hierarchical-clustering"
-    notes: "Find dense regions and noise using neighborhood radius and minimum support. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "hdbscan"
-    name: "HDBSCAN"
-    category: "B4"
-    canonical_location: "machine-learning/unsupervised-learning/clustering/hdbscan"
-    difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - k-means
+    - agglomerative-hierarchical-clustering
+    notes: Euclidean self-inclusive support, explicit core/border/noise expansion and deterministic
+      first-reached ambiguous borders; transductive fit/fit_predict only.
+  - id: hdbscan
+    name: HDBSCAN
+    category: B4
+    canonical_location: machine-learning/unsupervised-learning/clustering/hdbscan
+    difficulty: intermediate
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "k-means"
-      - "agglomerative-hierarchical-clustering"
-    notes: "Study density-based clustering across changing density scales. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "mean-shift"
-    name: "Mean Shift"
-    category: "B4"
-    canonical_location: "machine-learning/unsupervised-learning/clustering/mean-shift"
-    difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - k-means
+    - agglomerative-hierarchical-clustering
+    notes: Self-inclusive core distances, mutual reachability, exact dense MST, condensed hierarchy
+      and EOM stability selection with root excluded. Explicit duplicate/infinite-density conventions;
+      transductive only.
+  - id: mean-shift
+    name: Mean Shift
+    category: B4
+    canonical_location: machine-learning/unsupervised-learning/clustering/mean-shift
+    difficulty: intermediate
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "k-means"
-      - "agglomerative-hierarchical-clustering"
-    notes: "Seek density modes through repeated neighborhood-based shifts. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "gaussian-mixture-models"
-    name: "Gaussian Mixture Models (GMM)"
-    category: "B4"
-    canonical_location: "machine-learning/unsupervised-learning/clustering/gaussian-mixture-models"
-    difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - k-means
+    - agglomerative-hierarchical-clustering
+    notes: Fixed flat-kernel bandwidth, every-row mode seeds, bounded mean shifts, deterministic
+      support-based merging and optional unassigned noise; meaningful nearest-mode prediction.
+  - id: gaussian-mixture-models
+    name: Gaussian Mixture Models (GMM)
+    category: B4
+    canonical_location: machine-learning/unsupervised-learning/clustering/gaussian-mixture-models
+    difficulty: intermediate
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "k-means"
-      - "agglomerative-hierarchical-clustering"
-    notes: "Represent observations through a probabilistic mixture of Gaussian components. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "spectral-clustering"
-    name: "Spectral Clustering"
-    category: "B4"
-    canonical_location: "machine-learning/unsupervised-learning/clustering/spectral-clustering"
-    difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - k-means
+    - agglomerative-hierarchical-clustering
+    notes: Full-covariance regularized EM, stable log responsibilities and Cholesky likelihoods,
+      bounded convergence, independent likelihood/M-step checks and component predictions.
+  - id: spectral-clustering
+    name: Spectral Clustering
+    category: B4
+    canonical_location: machine-learning/unsupervised-learning/clustering/spectral-clustering
+    difficulty: intermediate
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "k-means"
-      - "agglomerative-hierarchical-clustering"
-    notes: "Partition observations using a similarity graph and spectral embedding. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    - k-means
+    - agglomerative-hierarchical-clustering
+    notes: Normalized affinity eigenspace, row normalization and canonical K-Means reuse; RBF/precomputed
+      symmetric nonnegative affinities, graph/eigen diagnostics and transductive labels.
   - id: "principal-component-analysis"
     name: "Principal Component Analysis (PCA)"
     category: "B5"

@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "topics": [
+    "divisive-hierarchical-clustering",
+    "dbscan"
+  ],
+  "executions": 4,
+  "invalid_cli_checks": 2,
+  "records": [
+    {
+      "topic": "divisive-hierarchical-clustering",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/divisive-hierarchical-clustering/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 1, 1]}"
+    },
+    {
+      "topic": "divisive-hierarchical-clustering",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/divisive-hierarchical-clustering/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 1, 1]}"
+    },
+    {
+      "topic": "dbscan",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/dbscan/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 1, 1, -1]}"
+    },
+    {
+      "topic": "dbscan",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/dbscan/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 1, 1, -1]}"
+    }
+  ]
+}

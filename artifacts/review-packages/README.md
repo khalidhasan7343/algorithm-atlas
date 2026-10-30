@@ -52,3 +52,8 @@ After accepting the latest B1 completion audit and all earlier work, the owner
 authorized [Phase 15 Ensemble Methods](ensemble-methods/README.md). Its new review
 approval remains pending. All prior Regression/Classification/DSA report/evidence/
 package bytes are preserved; their generation-time statuses remain historical.
+
+The owner subsequently approved the latest Ensemble Methods review and authorized
+[Phase 16 Clustering](clustering/README.md), whose new owner review remains pending.
+All previous package/report/evidence bytes are preserved; generation-time pending
+statuses remain historical rather than rewritten after approval.

@@ -1,0 +1,107 @@
+{
+  "tests": 3141,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "dsa": {
+    "tests": 1687,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "python": 1149,
+    "cpp17": 269,
+    "cpp20": 269
+  },
+  "B1": {
+    "tests": 281,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "by_module": {
+      "machine-learning.supervised-learning.regression.decision-tree-regression.tests.test_python": 17,
+      "machine-learning.supervised-learning.regression.elastic-net.tests.test_python": 19,
+      "machine-learning.supervised-learning.regression.lasso-regression.tests.test_python": 20,
+      "machine-learning.supervised-learning.regression.linear-regression.tests.test_python": 15,
+      "machine-learning.supervised-learning.regression.polynomial-regression.tests.test_python": 12,
+      "machine-learning.supervised-learning.regression.ridge-regression.tests.test_python": 17,
+      "machine-learning.supervised-learning.regression.support-vector-regression.tests.test_python": 18,
+      "machine-learning.supervised-learning.regression.tests.test_completion_audit_oracles": 8,
+      "machine-learning.supervised-learning.regression.tests.test_contracts": 96,
+      "machine-learning.supervised-learning.regression.tests.test_metrics_audit": 59
+    }
+  },
+  "B2": {
+    "tests": 398,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "by_module": {
+      "machine-learning.supervised-learning.classification.bernoulli-naive-bayes.tests.test_python": 14,
+      "machine-learning.supervised-learning.classification.c4-5-decision-trees.tests.test_python": 10,
+      "machine-learning.supervised-learning.classification.cart-decision-trees.tests.test_python": 11,
+      "machine-learning.supervised-learning.classification.gaussian-naive-bayes.tests.test_python": 17,
+      "machine-learning.supervised-learning.classification.id3-decision-trees.tests.test_python": 11,
+      "machine-learning.supervised-learning.classification.k-nearest-neighbors.tests.test_python": 14,
+      "machine-learning.supervised-learning.classification.linear-discriminant-analysis.tests.test_python": 14,
+      "machine-learning.supervised-learning.classification.logistic-regression.tests.test_python": 22,
+      "machine-learning.supervised-learning.classification.multinomial-naive-bayes.tests.test_python": 17,
+      "machine-learning.supervised-learning.classification.quadratic-discriminant-analysis.tests.test_python": 16,
+      "machine-learning.supervised-learning.classification.support-vector-machines.tests.test_python": 20,
+      "machine-learning.supervised-learning.classification.tests.test_contracts": 220,
+      "machine-learning.supervised-learning.classification.tests.test_metrics_and_cross_models": 12
+    }
+  },
+  "B3": {
+    "tests": 253,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "by_module": {
+      "machine-learning.ensemble-methods.adaboost.tests.test_python": 10,
+      "machine-learning.ensemble-methods.bagging.tests.test_python": 18,
+      "machine-learning.ensemble-methods.catboost.tests.test_python": 10,
+      "machine-learning.ensemble-methods.gradient-boosting-machine.tests.test_python": 13,
+      "machine-learning.ensemble-methods.random-forest.tests.test_python": 11,
+      "machine-learning.ensemble-methods.stacking.tests.test_python": 9,
+      "machine-learning.ensemble-methods.tests.test_contracts": 159,
+      "machine-learning.ensemble-methods.voting-classifiers.tests.test_python": 11,
+      "machine-learning.ensemble-methods.xgboost.tests.test_python": 12
+    }
+  },
+  "B4": {
+    "tests": 206,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "by_module": {
+      "machine-learning.unsupervised-learning.clustering.agglomerative-hierarchical-clustering.tests.test_python": 13,
+      "machine-learning.unsupervised-learning.clustering.dbscan.tests.test_python": 12,
+      "machine-learning.unsupervised-learning.clustering.divisive-hierarchical-clustering.tests.test_python": 9,
+      "machine-learning.unsupervised-learning.clustering.gaussian-mixture-models.tests.test_python": 16,
+      "machine-learning.unsupervised-learning.clustering.hdbscan.tests.test_python": 12,
+      "machine-learning.unsupervised-learning.clustering.k-means.tests.test_python": 11,
+      "machine-learning.unsupervised-learning.clustering.mean-shift.tests.test_python": 12,
+      "machine-learning.unsupervised-learning.clustering.spectral-clustering.tests.test_python": 16,
+      "machine-learning.unsupervised-learning.clustering.tests.test_contracts": 91,
+      "machine-learning.unsupervised-learning.clustering.tests.test_metrics": 14
+    }
+  },
+  "infrastructure": {
+    "tests": 316,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "by_module": {
+      "tests.test_bit_oracles": 1,
+      "tests.test_cpp_toolchain": 4,
+      "tests.test_generate_catalog_docs": 26,
+      "tests.test_number_window_oracles": 2,
+      "tests.test_review_paths": 10,
+      "tests.test_string_cross_algorithms": 1,
+      "tests.test_track_policy": 14,
+      "tests.test_validate_catalog": 258
+    }
+  },
+  "source": "docs/clustering-evidence/full-suite.xml",
+  "subset_note": "Numerical/oracle/reference selections overlap and are not additive counts; extra reference-audit cases are separate from pytest."
+}

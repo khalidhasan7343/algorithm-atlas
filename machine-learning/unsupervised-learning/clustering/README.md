@@ -6,16 +6,24 @@ Discovering groups through geometric, density, probabilistic, and graph-based st
 
 This category preserves **8 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
+
+Phase 16 implements exactly these eight catalog Clustering canonicals. Prior B1/B2/B3 and DSA work is owner-approved; this new review remains pending. Read [the scope lock](../../../docs/clustering-scope.md) and [the internal checkpoints](../../../docs/clustering-checkpoints.md). Python/NumPy, exact lessons and mathematical tests are mandatory; C++ is optional and absent. No Phase 17 or another category is authorized.
+
+See [the Phase 16 report](../../../docs/reviews/clustering/CLUSTERING-REVIEW-REPORT.md).
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| K-Means | [k-means](k-means/README.md) | planned |
-| Agglomerative Hierarchical Clustering | [agglomerative-hierarchical-clustering](agglomerative-hierarchical-clustering/README.md) | planned |
-| Divisive Hierarchical Clustering | [divisive-hierarchical-clustering](divisive-hierarchical-clustering/README.md) | planned |
-| DBSCAN | [dbscan](dbscan/README.md) | planned |
-| HDBSCAN | [hdbscan](hdbscan/README.md) | planned |
-| Mean Shift | [mean-shift](mean-shift/README.md) | planned |
-| Gaussian Mixture Models (GMM) | [gaussian-mixture-models](gaussian-mixture-models/README.md) | planned |
-| Spectral Clustering | [spectral-clustering](spectral-clustering/README.md) | planned |
+| K-Means | [k-means](k-means/README.md) | complete |
+| Agglomerative Hierarchical Clustering | [agglomerative-hierarchical-clustering](agglomerative-hierarchical-clustering/README.md) | complete |
+| Divisive Hierarchical Clustering | [divisive-hierarchical-clustering](divisive-hierarchical-clustering/README.md) | complete |
+| DBSCAN | [dbscan](dbscan/README.md) | complete |
+| HDBSCAN | [hdbscan](hdbscan/README.md) | complete |
+| Mean Shift | [mean-shift](mean-shift/README.md) | complete |
+| Gaussian Mixture Models (GMM) | [gaussian-mixture-models](gaussian-mixture-models/README.md) | complete |
+| Spectral Clustering | [spectral-clustering](spectral-clustering/README.md) | complete |
+
+Phase 16 implements exactly these eight catalog Clustering canonicals. Prior B1/B2/B3 and DSA work is owner-approved; this new review remains pending. Read [the scope lock](../../../docs/clustering-scope.md) and [the internal checkpoints](../../../docs/clustering-checkpoints.md). Python/NumPy, exact lessons and mathematical tests are mandatory; C++ is optional and absent. No Phase 17 or another category is authorized.
+
+See [the Phase 16 report](../../../docs/reviews/clustering/CLUSTERING-REVIEW-REPORT.md).
 
 ## Learning and contribution scope
 

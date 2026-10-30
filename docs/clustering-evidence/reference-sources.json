@@ -1,0 +1,57 @@
+{
+  "sources": [
+    {
+      "title": "sklearn 1.8 clustering guide",
+      "url": "https://scikit-learn.org/1.8/modules/clustering.html",
+      "verification": "Official versioned guide retrieved"
+    },
+    {
+      "title": "k-means++ original paper",
+      "url": "https://theory.stanford.edu/~sergei/papers/kMeansPP-soda.pdf",
+      "verification": "Direct PDF request timed out; author-hosted search result verified title/authors and D\u00b2 seeding definition"
+    },
+    {
+      "title": "SciPy linkage",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html",
+      "verification": "Official definitions and warning on nonunique equal-distance merge order retrieved"
+    },
+    {
+      "title": "DIANA",
+      "url": "https://stat.ethz.ch/R-manual/R-devel/library/cluster/html/diana.html",
+      "verification": "Official R/cluster algorithm description retrieved; no installed direct DIANA reference substituted"
+    },
+    {
+      "title": "DBSCAN original paper",
+      "url": "https://cdn.aaai.org/KDD/1996/KDD96-037.pdf",
+      "verification": "Original AAAI paper retrieved"
+    },
+    {
+      "title": "HDBSCAN developer algorithm",
+      "url": "https://hdbscan.readthedocs.io/en/latest/how_hdbscan_works.html",
+      "verification": "Primary implementation-author explanation retrieved: mutual reachability, MST, condensation, stability and EOM"
+    },
+    {
+      "title": "sklearn HDBSCAN 1.8",
+      "url": "https://scikit-learn.org/1.8/modules/generated/sklearn.cluster.HDBSCAN.html",
+      "verification": "Official versioned API retrieved; self-inclusive support and exact brute/root-excluded reference settings checked"
+    },
+    {
+      "title": "sklearn mixture",
+      "url": "https://scikit-learn.org/1.8/modules/mixture.html",
+      "verification": "Official full-covariance EM formulation retrieved"
+    },
+    {
+      "title": "SciPy Gaussian density",
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.multivariate_normal.html",
+      "verification": "Official independent density API retrieved"
+    },
+    {
+      "title": "Ng Jordan Weiss spectral clustering",
+      "url": "https://papers.nips.cc/paper/2001/hash/801272ee79cfde7fa5960571fee36b9b-Abstract.html",
+      "verification": "Original proceedings metadata/title/authors verified; row-normalized graph embedding subset stated explicitly"
+    }
+  ],
+  "policy": "No external source code/prose copied. Core code uses NumPy/local numerical primitives, never external clustering estimators.",
+  "alignments": "Explicit Lloyd centers; Euclidean linkage heights with tie-aware checks; DBSCAN self-inclusive neighborhoods; HDBSCAN self-inclusive support/exact dense MST/EOM/root exclusion; flat Mean Shift; aligned full-covariance EM initialization; spectral eigenspace/partition invariants.",
+  "limitations": "DIANA uses full independent splinter-trace oracles rather than a different algorithm as a reference. Spectral row normalization and HDBSCAN lambda scaling conventions are explicit."
+}

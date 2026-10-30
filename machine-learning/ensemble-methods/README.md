@@ -7,9 +7,7 @@ Combining multiple estimators through averaging, boosting, and learned aggregati
 This category preserves **8 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
 
-Phase 15 implements exactly these eight Ensemble Methods canonicals. Prior B1 audit, B2 Classification and DSA work is owner-approved; the new Phase 15 review remains pending. Read [the scope lock](../../docs/ensemble-methods-scope.md), [the API/numerical contracts](../../docs/ensemble-methods-conventions.md) and [the checkpoints](../../docs/ensemble-methods-checkpoints.md). Python/NumPy and mathematical tests are required; C++ is optional and absent. No Phase 16 or other category is authorized.
-
-See [the Phase 15 report](../../docs/reviews/ensemble-methods/ENSEMBLE-METHODS-REVIEW-REPORT.md).
+All eight Ensemble Methods canonicals and the latest Phase 15 package are owner-approved. Their implementations, tests, lessons and historical review artifacts remain preserved.
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
 | Random Forest | [random-forest](random-forest/README.md) | complete |
@@ -21,9 +19,7 @@ See [the Phase 15 report](../../docs/reviews/ensemble-methods/ENSEMBLE-METHODS-R
 | Stacking | [stacking](stacking/README.md) | complete |
 | Voting Classifiers | [voting-classifiers](voting-classifiers/README.md) | complete |
 
-Phase 15 implements exactly these eight Ensemble Methods canonicals. Prior B1 audit, B2 Classification and DSA work is owner-approved; the new Phase 15 review remains pending. Read [the scope lock](../../docs/ensemble-methods-scope.md), [the API/numerical contracts](../../docs/ensemble-methods-conventions.md) and [the checkpoints](../../docs/ensemble-methods-checkpoints.md). Python/NumPy and mathematical tests are required; C++ is optional and absent. No Phase 16 or other category is authorized.
-
-See [the Phase 15 report](../../docs/reviews/ensemble-methods/ENSEMBLE-METHODS-REVIEW-REPORT.md).
+All eight Ensemble Methods canonicals and the latest Phase 15 package are owner-approved. Their implementations, tests, lessons and historical review artifacts remain preserved.
 
 ## Learning and contribution scope
 

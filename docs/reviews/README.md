@@ -4,7 +4,8 @@ Review and audit reports are organized by canonical phase name. Their filenames 
 
 | Phase | Report |
 | --- | --- |
-| ensemble-methods (Phase 15 ML; review pending) | [ENSEMBLE-METHODS-REVIEW-REPORT.md](ensemble-methods/ENSEMBLE-METHODS-REVIEW-REPORT.md) |
+| clustering (Phase 16 ML; review pending) | [CLUSTERING-REVIEW-REPORT.md](clustering/CLUSTERING-REVIEW-REPORT.md) |
+| ensemble-methods (Phase 15 ML; subsequently approved) | [ENSEMBLE-METHODS-REVIEW-REPORT.md](ensemble-methods/ENSEMBLE-METHODS-REVIEW-REPORT.md) |
 | classification (Phase 14 ML) | [CLASSIFICATION-REVIEW-REPORT.md](classification/CLASSIFICATION-REVIEW-REPORT.md) |
 | regression (Phase 13 B1 completion audit; subsequently approved) | [REGRESSION-REVIEW-REPORT.md](regression/REGRESSION-REVIEW-REPORT.md) |
 | DSA final audit | [DSA-FINAL-AUDIT-REPORT.md](dsa-final-audit/DSA-FINAL-AUDIT-REPORT.md) |
@@ -47,3 +48,8 @@ The owner explicitly approved the latest B1 completion-audit package and all pri
 work immediately before authorizing [Phase 15 B3 Ensemble Methods](ensemble-methods/ENSEMBLE-METHODS-REVIEW-REPORT.md).
 Current Phase 15 review approval remains pending. Earlier paragraphs/reports retain
 their handoff-time statements; see [current checkpoints](../ensemble-methods-checkpoints.md).
+
+The owner explicitly approved the latest Phase 15 report/package and previous work,
+then authorized only [Phase 16 B4 Clustering](clustering/CLUSTERING-REVIEW-REPORT.md).
+The new review approval is pending. Historical reports/sidecars retain their original
+handoff states and bytes; see [current checkpoints](../clustering-checkpoints.md).

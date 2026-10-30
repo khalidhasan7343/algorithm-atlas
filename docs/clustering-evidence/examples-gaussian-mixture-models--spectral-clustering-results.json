@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "topics": [
+    "gaussian-mixture-models",
+    "spectral-clustering"
+  ],
+  "executions": 4,
+  "invalid_cli_checks": 2,
+  "records": [
+    {
+      "topic": "gaussian-mixture-models",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/gaussian-mixture-models/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 0, 1, 1, 1]}"
+    },
+    {
+      "topic": "gaussian-mixture-models",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/gaussian-mixture-models/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 0, 1, 1, 1]}"
+    },
+    {
+      "topic": "spectral-clustering",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/spectral-clustering/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 0, 1, 1, 1]}"
+    },
+    {
+      "topic": "spectral-clustering",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/spectral-clustering/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 0, 1, 1, 1]}"
+    }
+  ]
+}

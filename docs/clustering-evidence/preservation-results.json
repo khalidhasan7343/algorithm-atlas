@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "inventory": {
+    "categories": 35,
+    "memberships": 256,
+    "canonicals": 235
+  },
+  "B4_canonicals": 8,
+  "implemented": 8,
+  "protected_preexisting_files": 2020,
+  "historical_artifacts_omitted_from_export": [],
+  "lessons": [
+    {
+      "id": "k-means",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "agglomerative-hierarchical-clustering",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "divisive-hierarchical-clustering",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "dbscan",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "hdbscan",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "mean-shift",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "gaussian-mixture-models",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "spectral-clustering",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    }
+  ],
+  "B1_B2_B3_DSA_preservation": "all approved implementations/tests/lessons/reports/evidence/packages byte-identical",
+  "phase15_owner_approval": "approved",
+  "phase16_owner_approval": "pending",
+  "report_tracking": "tracked and unignored",
+  "core_external_estimator_imports": "none",
+  "language_policy": "DSA Python/C++ mandatory; ML Python mandatory, C++ optional"
+}

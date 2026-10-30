@@ -1,0 +1,10 @@
+.......................                                                  [100%]
+=============================== warnings summary ===============================
+machine-learning/unsupervised-learning/clustering/hdbscan/tests/test_python.py::test_reference_core_distances_mst_partition_and_probabilities[16031]
+machine-learning/unsupervised-learning/clustering/hdbscan/tests/test_python.py::test_reference_core_distances_mst_partition_and_probabilities[16032]
+machine-learning/unsupervised-learning/clustering/hdbscan/tests/test_python.py::test_reference_core_distances_mst_partition_and_probabilities[16033]
+  /Users/khalidhasan/Desktop/algorithm-atlas/.venv/lib/python3.14/site-packages/sklearn/cluster/_hdbscan/hdbscan.py:722: FutureWarning: The default value of `copy` will change from False to True in 1.10. Explicitly set a value for `copy` to silence this warning.
+    warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+23 passed, 3 warnings in 0.81s

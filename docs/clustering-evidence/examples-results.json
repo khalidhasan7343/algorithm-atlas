@@ -1,0 +1,161 @@
+{
+  "status": "passed",
+  "topics": [
+    "k-means",
+    "agglomerative-hierarchical-clustering",
+    "divisive-hierarchical-clustering",
+    "dbscan",
+    "hdbscan",
+    "mean-shift",
+    "gaussian-mixture-models",
+    "spectral-clustering"
+  ],
+  "executions": 16,
+  "invalid_cli_checks": 8,
+  "records": [
+    {
+      "topic": "k-means",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/k-means/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 1, 1]}"
+    },
+    {
+      "topic": "k-means",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/k-means/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 1, 1]}"
+    },
+    {
+      "topic": "agglomerative-hierarchical-clustering",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/agglomerative-hierarchical-clustering/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 1, 1]}"
+    },
+    {
+      "topic": "agglomerative-hierarchical-clustering",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/agglomerative-hierarchical-clustering/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 1, 1]}"
+    },
+    {
+      "topic": "divisive-hierarchical-clustering",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/divisive-hierarchical-clustering/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 1, 1]}"
+    },
+    {
+      "topic": "divisive-hierarchical-clustering",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/divisive-hierarchical-clustering/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 1, 1]}"
+    },
+    {
+      "topic": "dbscan",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/dbscan/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 1, 1, -1]}"
+    },
+    {
+      "topic": "dbscan",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/dbscan/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 1, 1, -1]}"
+    },
+    {
+      "topic": "hdbscan",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/hdbscan/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 0, 1, 1, 1, -1]}"
+    },
+    {
+      "topic": "hdbscan",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/hdbscan/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 0, 1, 1, 1, -1]}"
+    },
+    {
+      "topic": "mean-shift",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/mean-shift/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [1, 1, 0, 0]}"
+    },
+    {
+      "topic": "mean-shift",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/mean-shift/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [1, 1, 0, 0]}"
+    },
+    {
+      "topic": "gaussian-mixture-models",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/gaussian-mixture-models/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 0, 1, 1, 1]}"
+    },
+    {
+      "topic": "gaussian-mixture-models",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/gaussian-mixture-models/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 0, 1, 1, 1]}"
+    },
+    {
+      "topic": "spectral-clustering",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/spectral-clustering/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 0, 1, 1, 1]}"
+    },
+    {
+      "topic": "spectral-clustering",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/spectral-clustering/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 0, 1, 1, 1]}"
+    }
+  ]
+}

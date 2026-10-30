@@ -1,0 +1,386 @@
+{
+  "seed": 16027,
+  "cohort": 96,
+  "n_train": 64,
+  "n_test": 32,
+  "p": 2,
+  "train_indices": [
+    23,
+    35,
+    42,
+    43,
+    61,
+    26,
+    58,
+    86,
+    13,
+    16,
+    32,
+    49,
+    0,
+    85,
+    81,
+    9,
+    8,
+    87,
+    47,
+    69,
+    73,
+    83,
+    62,
+    53,
+    79,
+    63,
+    70,
+    66,
+    34,
+    41,
+    84,
+    24,
+    91,
+    11,
+    40,
+    56,
+    89,
+    4,
+    64,
+    3,
+    25,
+    67,
+    45,
+    2,
+    22,
+    82,
+    90,
+    12,
+    51,
+    68,
+    72,
+    94,
+    33,
+    60,
+    37,
+    14,
+    28,
+    52,
+    75,
+    59,
+    17,
+    93,
+    10,
+    78
+  ],
+  "test_indices": [
+    36,
+    15,
+    95,
+    29,
+    18,
+    27,
+    44,
+    21,
+    54,
+    7,
+    20,
+    19,
+    76,
+    80,
+    30,
+    39,
+    1,
+    57,
+    38,
+    74,
+    6,
+    77,
+    92,
+    48,
+    50,
+    31,
+    71,
+    46,
+    65,
+    55,
+    5,
+    88
+  ],
+  "construction": "40 rows N((-2.5,-2.5),.12\u00b2 I), 40 rows N((2.5,2.5),.12\u00b2 I), 16 uniform background rows in [-4,4]^2; background truth label=-1.",
+  "preprocessing": "None fitted; raw same numeric features. Fixed hyperparameters and initial means specified before evaluation; no test tuning or target labels passed to fit.",
+  "evaluation": "ARI includes all rows and treats noise as one label. Silhouette excludes predicted noise, reports coverage, and is None when undefined. True labels are synthetic provenance, not guaranteed geometric groups.",
+  "limitations": "Single controlled construction/split; transductive training labels are not held-out classifier accuracy. GMM is misspecified for uniform background. Timings are observational, with no universal winner/speed claim.",
+  "results": [
+    {
+      "algorithm": "k-means",
+      "parameters": {
+        "n_clusters": 2,
+        "n_init": 5,
+        "random_state": 16027
+      },
+      "fit_seconds": 0.005955041997367516,
+      "train": {
+        "n_clusters": 2,
+        "noise_count": 0,
+        "coverage": 1.0,
+        "cluster_sizes": {
+          "0": 30,
+          "1": 34
+        },
+        "silhouette": 0.7683211779463512,
+        "silhouette_noise_policy": "exclude -1; undefined -> None",
+        "adjusted_rand": 0.6535836177474402,
+        "adjusted_rand_noise_policy": "all rows; -1 treated as one label"
+      },
+      "test": {
+        "n_clusters": 2,
+        "noise_count": 0,
+        "coverage": 1.0,
+        "cluster_sizes": {
+          "0": 18,
+          "1": 14
+        },
+        "silhouette": 0.8634187002151554,
+        "silhouette_noise_policy": "exclude -1; undefined -> None",
+        "adjusted_rand": 0.7571801566579635,
+        "adjusted_rand_noise_policy": "all rows; -1 treated as one label"
+      },
+      "test_policy": "New-row centroid/mode/component assignment from fitted training model",
+      "test_prediction_seconds": 0.0002723330107983202,
+      "diagnostics": {
+        "train_inertia": 166.44668013021095,
+        "test_squared_distance_sum": 42.38758219545337,
+        "iterations": 1
+      }
+    },
+    {
+      "algorithm": "agglomerative-hierarchical-clustering",
+      "parameters": {
+        "n_clusters": 2,
+        "linkage": "ward"
+      },
+      "fit_seconds": 0.20516887499252334,
+      "train": {
+        "n_clusters": 2,
+        "noise_count": 0,
+        "coverage": 1.0,
+        "cluster_sizes": {
+          "0": 32,
+          "1": 32
+        },
+        "silhouette": 0.7526448937490179,
+        "silhouette_noise_policy": "exclude -1; undefined -> None",
+        "adjusted_rand": 0.6651480637813212,
+        "adjusted_rand_noise_policy": "all rows; -1 treated as one label"
+      },
+      "test": null,
+      "test_policy": "Transductive method; no invented out-of-sample labels"
+    },
+    {
+      "algorithm": "divisive-hierarchical-clustering",
+      "parameters": {
+        "n_clusters": 2
+      },
+      "fit_seconds": 0.014509958011331037,
+      "train": {
+        "n_clusters": 2,
+        "noise_count": 0,
+        "coverage": 1.0,
+        "cluster_sizes": {
+          "0": 57,
+          "1": 7
+        },
+        "silhouette": 0.29674153810016285,
+        "silhouette_noise_policy": "exclude -1; undefined -> None",
+        "adjusted_rand": 0.18189509306260576,
+        "adjusted_rand_noise_policy": "all rows; -1 treated as one label"
+      },
+      "test": null,
+      "test_policy": "Transductive method; no invented out-of-sample labels"
+    },
+    {
+      "algorithm": "dbscan",
+      "parameters": {
+        "eps": 0.5,
+        "min_samples": 4
+      },
+      "fit_seconds": 0.0005784590030089021,
+      "train": {
+        "n_clusters": 2,
+        "noise_count": 12,
+        "coverage": 0.8125,
+        "cluster_sizes": {
+          "0": 24,
+          "1": 28
+        },
+        "silhouette": 0.972143022535766,
+        "silhouette_noise_policy": "exclude -1; undefined -> None",
+        "adjusted_rand": 1.0,
+        "adjusted_rand_noise_policy": "all rows; -1 treated as one label"
+      },
+      "test": null,
+      "test_policy": "Transductive method; no invented out-of-sample labels"
+    },
+    {
+      "algorithm": "hdbscan",
+      "parameters": {
+        "min_cluster_size": 5,
+        "min_samples": 4
+      },
+      "fit_seconds": 0.0013755000254604965,
+      "train": {
+        "n_clusters": 3,
+        "noise_count": 2,
+        "coverage": 0.96875,
+        "cluster_sizes": {
+          "0": 25,
+          "1": 30,
+          "2": 7
+        },
+        "silhouette": 0.8908538602569257,
+        "silhouette_noise_policy": "exclude -1; undefined -> None",
+        "adjusted_rand": 0.8686298443698505,
+        "adjusted_rand_noise_policy": "all rows; -1 treated as one label"
+      },
+      "test": null,
+      "test_policy": "Transductive method; no invented out-of-sample labels",
+      "diagnostics": {
+        "selected_clusters": 3,
+        "mean_assigned_membership": 0.7726992618271422
+      }
+    },
+    {
+      "algorithm": "mean-shift",
+      "parameters": {
+        "bandwidth": 0.5,
+        "cluster_all": false
+      },
+      "fit_seconds": 0.003499124984955415,
+      "train": {
+        "n_clusters": 14,
+        "noise_count": 0,
+        "coverage": 1.0,
+        "cluster_sizes": {
+          "0": 28,
+          "1": 24,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "5": 1,
+          "6": 1,
+          "7": 1,
+          "8": 1,
+          "9": 1,
+          "10": 1,
+          "11": 1,
+          "12": 1,
+          "13": 1
+        },
+        "silhouette": 0.6583039797354704,
+        "silhouette_noise_policy": "exclude -1; undefined -> None",
+        "adjusted_rand": 0.9272211720226843,
+        "adjusted_rand_noise_policy": "all rows; -1 treated as one label"
+      },
+      "test": {
+        "n_clusters": 2,
+        "noise_count": 4,
+        "coverage": 0.875,
+        "cluster_sizes": {
+          "0": 12,
+          "1": 16
+        },
+        "silhouette": 0.9672655340540747,
+        "silhouette_noise_policy": "exclude -1; undefined -> None",
+        "adjusted_rand": 1.0,
+        "adjusted_rand_noise_policy": "all rows; -1 treated as one label"
+      },
+      "test_policy": "New-row centroid/mode/component assignment from fitted training model",
+      "test_prediction_seconds": 0.00021066699991934001,
+      "diagnostics": {
+        "modes": 14,
+        "max_seed_iterations": 3
+      }
+    },
+    {
+      "algorithm": "gaussian-mixture-models",
+      "parameters": {
+        "n_components": 2,
+        "means_init": [
+          [
+            -2.5,
+            -2.5
+          ],
+          [
+            2.5,
+            2.5
+          ]
+        ],
+        "reg_covar": 0.001,
+        "tol": 1e-06
+      },
+      "fit_seconds": 0.001228790992172435,
+      "train": {
+        "n_clusters": 2,
+        "noise_count": 0,
+        "coverage": 1.0,
+        "cluster_sizes": {
+          "0": 28,
+          "1": 36
+        },
+        "silhouette": 0.7228653383261971,
+        "silhouette_noise_policy": "exclude -1; undefined -> None",
+        "adjusted_rand": 0.6507936507936508,
+        "adjusted_rand_noise_policy": "all rows; -1 treated as one label"
+      },
+      "test": {
+        "n_clusters": 2,
+        "noise_count": 0,
+        "coverage": 1.0,
+        "cluster_sizes": {
+          "0": 18,
+          "1": 14
+        },
+        "silhouette": 0.7802729775467855,
+        "silhouette_noise_policy": "exclude -1; undefined -> None",
+        "adjusted_rand": 0.7571801566579635,
+        "adjusted_rand_noise_policy": "all rows; -1 treated as one label"
+      },
+      "test_policy": "New-row centroid/mode/component assignment from fitted training model",
+      "test_prediction_seconds": 4.570800228975713e-05,
+      "diagnostics": {
+        "train_mean_log_likelihood": -3.0893840855104284,
+        "test_mean_log_likelihood": -3.1424998237868897,
+        "train_aic": 417.44116294533484,
+        "train_bic": 441.18887686229124,
+        "iterations": 8
+      }
+    },
+    {
+      "algorithm": "spectral-clustering",
+      "parameters": {
+        "n_clusters": 2,
+        "gamma": 0.3,
+        "n_init": 5,
+        "random_state": 16027
+      },
+      "fit_seconds": 0.004005666996818036,
+      "train": {
+        "n_clusters": 2,
+        "noise_count": 0,
+        "coverage": 1.0,
+        "cluster_sizes": {
+          "0": 26,
+          "1": 38
+        },
+        "silhouette": 0.7589172262914665,
+        "silhouette_noise_policy": "exclude -1; undefined -> None",
+        "adjusted_rand": 0.6567080045095829,
+        "adjusted_rand_noise_policy": "all rows; -1 treated as one label"
+      },
+      "test": null,
+      "test_policy": "Transductive method; no invented out-of-sample labels",
+      "diagnostics": {
+        "normalized_cut": 0.007805378450372777,
+        "graph_components": 1
+      }
+    }
+  ]
+}

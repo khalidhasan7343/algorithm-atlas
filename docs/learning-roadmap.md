@@ -2,7 +2,7 @@
 
 Progress from foundational problem solving to specialized AI topics. These levels describe a study order, not repository development phases: learning a later level does not authorize implementation outside the approved development phase.
 
-**Current scope:** Phase 15 B3 Ensemble Methods only, following explicit approval of the latest B1 audit and all previous work. Follow [scope](ensemble-methods-scope.md), [contracts](ensemble-methods-conventions.md) and [checkpoints](ensemble-methods-checkpoints.md). New Phase 15 review approval is pending; no later category is authorized.
+**Current scope:** Phase 16 B4 Clustering only, following explicit approval of the latest Phase 15 package. Follow [scope](clustering-scope.md) and [checkpoints](clustering-checkpoints.md). All eight catalog canonicals are authorized; the new Phase 16 review remains pending. No later category is authorized.
 
 ## Level 1 — DSA Foundations
 
@@ -140,9 +140,9 @@ Phase 7 is owner-approved. Study these fourteen canonical lessons in the same fi
 
 [Tree conventions](tree-conventions.md) state each API's ownership, numeric bounds and mutation contract. These topics reuse their catalog paths. Do not start another category before explicit owner approval.
 
-## Current Phase 15 authorization
+## Current Phase 16 authorization
 
-The owner approved the latest B1 audit and all previous work, authorizing only
-[B3 Ensemble Methods](ensemble-methods-scope.md). Its eight canonicals retain their
-catalog paths. Follow [checkpoints](ensemble-methods-checkpoints.md); new review
-approval remains pending. No later ML, Deep Learning or AI category is authorized.
+The owner explicitly approved the latest Phase 15 package and previous work,
+authorizing only [B4 Clustering](clustering-scope.md). Its eight canonicals keep
+their existing IDs/paths. Follow [checkpoints](clustering-checkpoints.md); new
+Phase 16 review approval is pending. No Phase 17, Deep Learning or AI work.

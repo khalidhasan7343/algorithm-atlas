@@ -1,0 +1,11 @@
+{
+  "confirmed_implementation_defects_fixed": 0,
+  "findings": [],
+  "test_corrections": [
+    {
+      "attempt": "batch1-attempt1",
+      "result": "1 failed / 22 passed",
+      "reason": "Single-linkage equal distances permit different valid merge orders and internal cluster sizes. Heights agree; exact reference fixture is now tie-free, and a separate oracle verifies tied hierarchy heights, disjoint children and complete membership. No implementation change."
+    }
+  ]
+}

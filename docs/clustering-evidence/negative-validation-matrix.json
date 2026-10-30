@@ -1,0 +1,107 @@
+{
+  "status": "all named negative-validation requirements verified passed in final JUnit",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests",
+    "--require-cpp",
+    "-q"
+  ],
+  "evidence": "docs/clustering-evidence/configuration-results.json",
+  "cases": [
+    {
+      "requirement": "DSA missing Python",
+      "test": "tests/test_track_policy.py::test_python_source_and_tests_are_required_for_both[python/solution.py-False]",
+      "status": "passed",
+      "matched_cases": 1,
+      "junit_names": [
+        "test_python_source_and_tests_are_required_for_both[python/solution.py-False]"
+      ]
+    },
+    {
+      "requirement": "DSA missing C++",
+      "test": "tests/test_track_policy.py::test_required_languages_follow_track[False-False-False]",
+      "status": "passed",
+      "matched_cases": 1,
+      "junit_names": [
+        "test_required_languages_follow_track[False-False-False]"
+      ]
+    },
+    {
+      "requirement": "ML missing Python",
+      "test": "tests/test_track_policy.py::test_python_source_and_tests_are_required_for_both[python/solution.py-True]",
+      "status": "passed",
+      "matched_cases": 1,
+      "junit_names": [
+        "test_python_source_and_tests_are_required_for_both[python/solution.py-True]"
+      ]
+    },
+    {
+      "requirement": "ML missing Python tests",
+      "test": "tests/test_track_policy.py::test_python_source_and_tests_are_required_for_both[tests/test_python.py-True]",
+      "status": "passed",
+      "matched_cases": 1,
+      "junit_names": [
+        "test_python_source_and_tests_are_required_for_both[tests/test_python.py-True]"
+      ]
+    },
+    {
+      "requirement": "ML without optional C++ valid",
+      "test": "tests/test_track_policy.py::test_required_languages_follow_track[True-False-True]",
+      "status": "passed",
+      "matched_cases": 1,
+      "junit_names": [
+        "test_required_languages_follow_track[True-False-True]"
+      ]
+    },
+    {
+      "requirement": "Incomplete optional C++ detected",
+      "test": "tests/test_track_policy.py::test_partial_optional_cpp_is_rejected",
+      "status": "passed",
+      "matched_cases": 2,
+      "junit_names": [
+        "test_partial_optional_cpp_is_rejected[cpp/solution.cpp]",
+        "test_partial_optional_cpp_is_rejected[tests/test_cpp.py]"
+      ]
+    },
+    {
+      "requirement": "Duplicate canonical IDs rejected",
+      "test": "tests/test_track_policy.py::test_ml_policy_cannot_bypass_catalog_identity[duplicate]",
+      "status": "passed",
+      "matched_cases": 1,
+      "junit_names": [
+        "test_ml_policy_cannot_bypass_catalog_identity[duplicate]"
+      ]
+    },
+    {
+      "requirement": "Invalid canonical paths rejected",
+      "test": "tests/test_track_policy.py::test_ml_policy_cannot_bypass_catalog_identity[path]",
+      "status": "passed",
+      "matched_cases": 1,
+      "junit_names": [
+        "test_ml_policy_cannot_bypass_catalog_identity[path]"
+      ]
+    },
+    {
+      "requirement": "Documentation drift detected",
+      "test": "tests/test_generate_catalog_docs.py::test_check_reports_drift_without_mutating_files",
+      "status": "passed",
+      "matched_cases": 1,
+      "junit_names": [
+        "test_check_reports_drift_without_mutating_files"
+      ]
+    },
+    {
+      "requirement": "Missing required README sections detected",
+      "test": "tests/test_validate_catalog.py::test_completed_documentation_requires_all_25_sections",
+      "status": "passed",
+      "matched_cases": 1,
+      "junit_names": [
+        "test_completed_documentation_requires_all_25_sections"
+      ]
+    }
+  ],
+  "policy": "Existing real synthetic-fixture mutation tests; no rule weakened or new tautological tests added. Final JUnit evidence independently enumerates actual cases.",
+  "junit": "docs/clustering-evidence/full-suite.xml"
+}

@@ -1,18 +1,19 @@
 # Machine Learning development standard
 
 Maintainer: **MD.Khalid Hasan**. [MIT License](../LICENSE).
-The owner explicitly approved the latest B1 Regression completion audit and all
-prior work, and authorized **Phase 15 — B3 Ensemble Methods only**. Implement the
-eight catalog canonicals under [the scope lock](ensemble-methods-scope.md),
-with actual stage gates in [the checkpoints](ensemble-methods-checkpoints.md).
-Preserve approved B1/B2/DSA algorithms, tests, lessons and historical evidence/packages.
-Inventory remains 35 categories / 256 memberships / 235 canonicals.
+The owner explicitly approved the latest Phase 15 Ensemble Methods review package
+and all earlier work, then authorized **Phase 16 — B4 Clustering only**. Implement
+exactly its eight catalog canonicals under [the scope lock](clustering-scope.md)
+and [checkpoints](clustering-checkpoints.md). Preserve B1/B2/B3/DSA code,
+original tests/lessons and all historical reports/evidence/packages. Inventory
+remains 35 categories / 256 memberships / 235 canonicals.
 
-Python/NumPy, numerical/oracle/reference tests and exact 25-section lessons are
-mandatory for ML; C++ is optional. DSA retains Python/C++ and both C++17/C++20.
-The **Phase 15 review approval remains pending**. Stop after its completion report
-and verified ZIP/checksum/JSON. No Phase 16, other category, commit, push, tag,
-release or publication. Never set Git identity from public email.
+Python/NumPy, numerical/oracle/reference tests and exact 25-section lessons remain
+mandatory for ML; C++ is optional. DSA retains Python/C++ and actual C++17/C++20.
+The **new Phase 16 review approval remains pending**. Proceed between passing
+internal batches automatically; stop after the tracked report and verified
+ZIP/checksum/JSON for owner review. No Phase 17, other category, commit, push,
+tag, release or publication. Never set Git identity from public email.
 
 ## Track and language policy
 
@@ -118,3 +119,13 @@ bootstrap and split RNGs, hard versus soft probability semantics, ordered prefix
 boosting, target-statistic leakage avoidance and out-of-fold meta-training.
 The exact variants and their deliberately bounded resource limits are part of the
 lessons. XGBoost/CatBoost production-library parity is not claimed.
+
+## Clustering extension — Phase 16
+
+The [B4 contracts](clustering-conventions.md) define fit(X), label/metric semantics,
+transductive versus meaningful new-row methods, bounded convergence and numerical
+limits. Complete [scope](clustering-scope.md) only; current review approval is pending.
+K-Means is reused canonically by GMM initialization and spectral partitioning.
+Hierarchies/DBSCAN/HDBSCAN/spectral do not expose an invented centroid predictor.
+Clustering metrics use explicit noise coverage and label-permutation agreement;
+likelihood and held-out assignment are reported only where meaningful.

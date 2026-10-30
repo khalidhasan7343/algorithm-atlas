@@ -220,14 +220,14 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| K-Means | [k-means](../machine-learning/unsupervised-learning/clustering/k-means/README.md) | planned |
-| Agglomerative Hierarchical Clustering | [agglomerative-hierarchical-clustering](../machine-learning/unsupervised-learning/clustering/agglomerative-hierarchical-clustering/README.md) | planned |
-| Divisive Hierarchical Clustering | [divisive-hierarchical-clustering](../machine-learning/unsupervised-learning/clustering/divisive-hierarchical-clustering/README.md) | planned |
-| DBSCAN | [dbscan](../machine-learning/unsupervised-learning/clustering/dbscan/README.md) | planned |
-| HDBSCAN | [hdbscan](../machine-learning/unsupervised-learning/clustering/hdbscan/README.md) | planned |
-| Mean Shift | [mean-shift](../machine-learning/unsupervised-learning/clustering/mean-shift/README.md) | planned |
-| Gaussian Mixture Models (GMM) | [gaussian-mixture-models](../machine-learning/unsupervised-learning/clustering/gaussian-mixture-models/README.md) | planned |
-| Spectral Clustering | [spectral-clustering](../machine-learning/unsupervised-learning/clustering/spectral-clustering/README.md) | planned |
+| K-Means | [k-means](../machine-learning/unsupervised-learning/clustering/k-means/README.md) | complete |
+| Agglomerative Hierarchical Clustering | [agglomerative-hierarchical-clustering](../machine-learning/unsupervised-learning/clustering/agglomerative-hierarchical-clustering/README.md) | complete |
+| Divisive Hierarchical Clustering | [divisive-hierarchical-clustering](../machine-learning/unsupervised-learning/clustering/divisive-hierarchical-clustering/README.md) | complete |
+| DBSCAN | [dbscan](../machine-learning/unsupervised-learning/clustering/dbscan/README.md) | complete |
+| HDBSCAN | [hdbscan](../machine-learning/unsupervised-learning/clustering/hdbscan/README.md) | complete |
+| Mean Shift | [mean-shift](../machine-learning/unsupervised-learning/clustering/mean-shift/README.md) | complete |
+| Gaussian Mixture Models (GMM) | [gaussian-mixture-models](../machine-learning/unsupervised-learning/clustering/gaussian-mixture-models/README.md) | complete |
+| Spectral Clustering | [spectral-clustering](../machine-learning/unsupervised-learning/clustering/spectral-clustering/README.md) | complete |
 
 ## B5. [Dimensionality Reduction](../machine-learning/unsupervised-learning/dimensionality-reduction/README.md)
 

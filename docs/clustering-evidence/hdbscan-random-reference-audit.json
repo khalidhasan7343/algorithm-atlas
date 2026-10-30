@@ -1,0 +1,75 @@
+{
+  "cases": [
+    {
+      "seed": 16200,
+      "rows": 18,
+      "features": 2,
+      "adjusted_rand": 1.0,
+      "max_probability_difference": 7.771561172376096e-16
+    },
+    {
+      "seed": 16201,
+      "rows": 18,
+      "features": 2,
+      "adjusted_rand": 1.0,
+      "max_probability_difference": 1.6653345369377348e-16
+    },
+    {
+      "seed": 16202,
+      "rows": 18,
+      "features": 2,
+      "adjusted_rand": 1.0,
+      "max_probability_difference": 0.0
+    },
+    {
+      "seed": 16203,
+      "rows": 18,
+      "features": 2,
+      "adjusted_rand": 1.0,
+      "max_probability_difference": 2.55351295663786e-15
+    },
+    {
+      "seed": 16204,
+      "rows": 18,
+      "features": 2,
+      "adjusted_rand": 1.0,
+      "max_probability_difference": 3.885780586188048e-16
+    },
+    {
+      "seed": 16205,
+      "rows": 18,
+      "features": 2,
+      "adjusted_rand": 1.0,
+      "max_probability_difference": 4.440892098500626e-16
+    },
+    {
+      "seed": 16206,
+      "rows": 18,
+      "features": 2,
+      "adjusted_rand": 1.0,
+      "max_probability_difference": 4.440892098500626e-16
+    },
+    {
+      "seed": 16207,
+      "rows": 18,
+      "features": 2,
+      "adjusted_rand": 1.0,
+      "max_probability_difference": 4.440892098500626e-16
+    },
+    {
+      "seed": 16208,
+      "rows": 18,
+      "features": 2,
+      "adjusted_rand": 1.0,
+      "max_probability_difference": 1.1102230246251565e-15
+    },
+    {
+      "seed": 16209,
+      "rows": 18,
+      "features": 2,
+      "adjusted_rand": 1.0,
+      "max_probability_difference": 1.2212453270876722e-15
+    }
+  ],
+  "all_partitions_equal": true
+}

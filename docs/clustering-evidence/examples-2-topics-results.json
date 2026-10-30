@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "topics": [
+    "k-means",
+    "agglomerative-hierarchical-clustering"
+  ],
+  "executions": 4,
+  "invalid_cli_checks": 2,
+  "records": [
+    {
+      "topic": "k-means",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/k-means/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 1, 1]}"
+    },
+    {
+      "topic": "k-means",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/k-means/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 1, 1]}"
+    },
+    {
+      "topic": "agglomerative-hierarchical-clustering",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/agglomerative-hierarchical-clustering/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 1, 1]}"
+    },
+    {
+      "topic": "agglomerative-hierarchical-clustering",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/agglomerative-hierarchical-clustering/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 1, 1]}"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+...........F...........                                                  [100%]
+=================================== FAILURES ===================================
+__________________ test_linkage_heights_against_scipy[single] __________________
+
+clustering_support = <module 'atlas_clustering_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/unsupervised-learning/clustering/support.py'>
+linkage = 'single'
+
+    @pytest.mark.reference
+    @pytest.mark.parametrize('linkage', ['single', 'complete', 'average', 'ward'])
+    def test_linkage_heights_against_scipy(clustering_support, linkage):
+        from scipy.cluster.hierarchy import linkage as reference
+        X = np.array([[0.], [1.], [5.], [9.], [13.2]])
+        model = clustering_support.load('agglomerative-hierarchical-clustering').AgglomerativeClustering(2, linkage=linkage).fit(X)
+        ref = reference(X, method=linkage, metric='euclidean')
+        assert_allclose(model.distances_, ref[:, 2], atol=1e-12)
+>       assert_array_equal(model.counts_, ref[:, 3].astype(int))
+E       AssertionError: 
+E       Arrays are not equal
+E       
+E       Mismatched elements: 1 / 4 (25%)
+E       Mismatch at index:
+E        [1]: 2 (ACTUAL), 3 (DESIRED)
+E       Max absolute difference among violations: 1
+E       Max relative difference among violations: 0.33333333
+E        ACTUAL: array([2, 2, 4, 5])
+E        DESIRED: array([2, 3, 4, 5])
+
+machine-learning/unsupervised-learning/clustering/agglomerative-hierarchical-clustering/tests/test_python.py:16: AssertionError
+=========================== short test summary info ============================
+FAILED machine-learning/unsupervised-learning/clustering/agglomerative-hierarchical-clustering/tests/test_python.py::test_linkage_heights_against_scipy[single]
+1 failed, 22 passed in 2.89s

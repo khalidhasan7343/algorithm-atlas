@@ -445,6 +445,18 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
                   'No Phase 16 or other category is authorized.']
         if (development or {}).get('completion_report'):
             lines += ['', 'See ' + link(path, ROOT / development['completion_report'], 'the Phase 15 report') + '.']
+    if category['id'] == 'B3' and ml_active and (development or {}).get('category') != 'B3':
+        lines += ['', 'All eight Ensemble Methods canonicals and the latest Phase 15 package are owner-approved. '
+                  'Their implementations, tests, lessons and historical review artifacts remain preserved.']
+    if category['id'] == 'B4' and ml_active and (development or {}).get('category') == 'B4':
+        lines += ['', 'Phase 16 implements exactly these eight catalog Clustering canonicals. '
+                  'Prior B1/B2/B3 and DSA work is owner-approved; this new review remains pending. '
+                  'Read ' + link(path, ROOT / 'docs/clustering-scope.md', 'the scope lock') + ' and '
+                  + link(path, ROOT / 'docs/clustering-checkpoints.md', 'the internal checkpoints') + '. '
+                  'Python/NumPy, exact lessons and mathematical tests are mandatory; C++ is optional and absent. '
+                  'No Phase 17 or another category is authorized.']
+        if (development or {}).get('completion_report'):
+            lines += ['', 'See ' + link(path, ROOT / development['completion_report'], 'the Phase 16 report') + '.']
     if category['id'] == 'A11':
         graph_ids = {'dijkstra', 'prim', 'kruskal'}
         owned = [item for item in category['items'] if item['algorithm'] not in graph_ids]
@@ -522,6 +534,18 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
                   'No Phase 16 or other category is authorized.']
         if (development or {}).get('completion_report'):
             lines += ['', 'See ' + link(path, ROOT / development['completion_report'], 'the Phase 15 report') + '.']
+    if category['id'] == 'B3' and ml_active and (development or {}).get('category') != 'B3':
+        lines += ['', 'All eight Ensemble Methods canonicals and the latest Phase 15 package are owner-approved. '
+                  'Their implementations, tests, lessons and historical review artifacts remain preserved.']
+    if category['id'] == 'B4' and ml_active and (development or {}).get('category') == 'B4':
+        lines += ['', 'Phase 16 implements exactly these eight catalog Clustering canonicals. '
+                  'Prior B1/B2/B3 and DSA work is owner-approved; this new review remains pending. '
+                  'Read ' + link(path, ROOT / 'docs/clustering-scope.md', 'the scope lock') + ' and '
+                  + link(path, ROOT / 'docs/clustering-checkpoints.md', 'the internal checkpoints') + '. '
+                  'Python/NumPy, exact lessons and mathematical tests are mandatory; C++ is optional and absent. '
+                  'No Phase 17 or another category is authorized.']
+        if (development or {}).get('completion_report'):
+            lines += ['', 'See ' + link(path, ROOT / development['completion_report'], 'the Phase 16 report') + '.']
     if category['id'] == 'A11':
         lines += ['', 'Dijkstra chooses the unsettled vertex with smallest tentative distance '
                   '(requiring nonnegative edge weights); Prim chooses a cheapest edge across '

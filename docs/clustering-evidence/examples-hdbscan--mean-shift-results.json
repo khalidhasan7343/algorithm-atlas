@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "topics": [
+    "hdbscan",
+    "mean-shift"
+  ],
+  "executions": 4,
+  "invalid_cli_checks": 2,
+  "records": [
+    {
+      "topic": "hdbscan",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/hdbscan/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 0, 1, 1, 1, -1]}"
+    },
+    {
+      "topic": "hdbscan",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/hdbscan/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [0, 0, 0, 1, 1, 1, -1]}"
+    },
+    {
+      "topic": "mean-shift",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/mean-shift/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [1, 1, 0, 0]}"
+    },
+    {
+      "topic": "mean-shift",
+      "command": [
+        "python",
+        "machine-learning/unsupervised-learning/clustering/mean-shift/python/solution.py"
+      ],
+      "returncode": 0,
+      "output": "{\"labels\": [1, 1, 0, 0]}"
+    }
+  ]
+}
