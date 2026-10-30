@@ -6,11 +6,25 @@ Mining frequent itemsets and association patterns from transactions.
 
 This category preserves **3 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
+
+Association Rule Learning separates frequent itemsets from rules. For N binary transactions, support(X)=count(X)/N; confidence(A→B)=count(A∪B)/count(A); lift=N*count(A∪B)/(count(A)*count(B)). Rules have nonempty disjoint sides. Association does not imply causation, and high confidence need not mean high lift.
+
+| Miner | Core mechanism | Main tradeoff |
+| --- | --- | --- |
+| Apriori | Level-wise prefix joins, subset pruning, horizontal counting | Candidate explosion and scans |
+| Eclat | Vertical TID sets and depth-first intersections | Active TID-set memory |
+| FP-Growth | Counted prefix tree, weighted conditional bases/trees | Compression depends on shared prefixes |
+
+Input is a list/tuple of transactions, each list/tuple/set/frozenset with homogeneous native integer or nonempty string IDs. Repeated row items count once; repeated rows remain observations; empty rows stay in the denominator. min_support is always a relative native float in (0,1], not an absolute count. Exact decimal threshold comparisons and size/lexicographic output ordering are specified in [the contracts](../../../docs/association-rule-learning-conventions.md).
+
+Run `python machine-learning/unsupervised-learning/association-rule-learning/apriori/python/example.py` from repository root. For rows [abc,abc,ab,ac,bc] at support0.4, counts are a4,b4,c4,ab3,ac3,bc3,abc2. Rule a→b has support0.6, confidence0.75, lift15/16. [Shared rule generation](rules.py) applies to every complete count map, without adding a catalog algorithm.
+
+These bounded standard-library implementations can still have exponential output; work/output limits fail explicitly without partial results. No universal speed winner, weighted public transactions or absolute-support API is claimed. Python/math/oracle tests and exact lessons are required; C++ optional/absent. Phase17 is approved; new Phase18 review pending. Read [scope](../../../docs/association-rule-learning-scope.md) and [checkpoints](../../../docs/association-rule-learning-checkpoints.md). No Phase19/B7 or publication.
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Apriori | [apriori](apriori/README.md) | planned |
-| FP-Growth | [fp-growth](fp-growth/README.md) | planned |
-| Eclat | [eclat](eclat/README.md) | planned |
+| Apriori | [apriori](apriori/README.md) | complete |
+| FP-Growth | [fp-growth](fp-growth/README.md) | complete |
+| Eclat | [eclat](eclat/README.md) | complete |
 
 ## Learning and contribution scope
 

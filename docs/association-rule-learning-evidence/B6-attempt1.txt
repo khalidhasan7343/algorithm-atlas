@@ -1,0 +1,27 @@
+
+==================================== ERRORS ====================================
+_ ERROR collecting machine-learning/unsupervised-learning/association-rule-learning/tests/test_contracts.py _
+.venv/lib/python3.14/site-packages/_pytest/python.py:508: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.14/site-packages/_pytest/pathlib.py:572: in import_path
+    mod = _import_module_using_spec(module_name, path, insert_modules=True)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/pathlib.py:716: in _import_module_using_spec
+    spec.loader.exec_module(mod)  # type: ignore[union-attr]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/assertion/rewrite.py:179: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.venv/lib/python3.14/site-packages/_pytest/assertion/rewrite.py:348: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/ast.py:46: in parse
+    return compile(source, filename, mode, flags,
+E     File "/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/unsupervised-learning/association-rule-learning/tests/test_contracts.py", line 17
+E       @pytest.mark.parametrize('data',['abc',None,{'a':1},['abc'],[[True]],[[1.0]],[[None]],[[[]]],[['']],[[2**63]],[['x',1]],[[('tuple',)]])
+E                                                                                                                                             ^
+E   SyntaxError: closing parenthesis ')' does not match opening parenthesis '['
+=========================== short test summary info ============================
+ERROR machine-learning/unsupervised-learning/association-rule-learning/tests/test_contracts.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.09s

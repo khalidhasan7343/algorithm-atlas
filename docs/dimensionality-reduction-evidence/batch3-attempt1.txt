@@ -1,0 +1,36 @@
+.................F......                                                 [100%]
+=================================== FAILURES ===================================
+__________ test_duplicates_disconnected_finite_and_deterministic[X1] ___________
+
+b5 = <module 'atlas_b5_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/unsupervised-learning/dimensionality-reduction/support.py'>
+X = [[0, 0], [0, 0], [1, 0], [1, 0], [10, 10], [10, 10]]
+
+    @pytest.mark.numerical
+    @pytest.mark.parametrize('X',[np.zeros((5,2)),[[0,0],[0,0],[1,0],[1,0],[10,10],[10,10]]])
+    def test_duplicates_disconnected_finite_and_deterministic(b5,X):
+        cls=b5.load('umap').UMAP;m=cls(n_neighbors=2,max_iter=30).fit(X)
+        assert np.isfinite(m.embedding_).all();assert np.all(np.diff(m.objective_history_)<=1e-10)
+        assert m.n_iter_<=30;assert m.saturated_rows_.any()
+        assert_array_equal(m.embedding_,cls(n_neighbors=2,max_iter=30).fit_transform(X))
+        assert not hasattr(m,'transform')
+>       if len(X)==6:assert_allclose(m.graph_[:4,4:],0)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: 
+E       Not equal to tolerance rtol=1e-07, atol=0
+E       
+E       Mismatched elements: 2 / 8 (25%)
+E       Mismatch at indices:
+E        [2, 0]: 1.0 (ACTUAL), 0 (DESIRED)
+E        [2, 1]: 1.0 (ACTUAL), 0 (DESIRED)
+E       Max absolute difference among violations: 1.
+E       Max relative difference among violations: inf
+E        ACTUAL: array([[0., 0.],
+E              [0., 0.],
+E              [1., 1.],
+E              [0., 0.]])
+E        DESIRED: array(0)
+
+machine-learning/unsupervised-learning/dimensionality-reduction/umap/tests/test_python.py:65: AssertionError
+=========================== short test summary info ============================
+FAILED machine-learning/unsupervised-learning/dimensionality-reduction/umap/tests/test_python.py::test_duplicates_disconnected_finite_and_deterministic[X1]
+1 failed, 23 passed in 0.77s

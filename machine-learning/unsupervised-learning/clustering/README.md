@@ -7,9 +7,7 @@ Discovering groups through geometric, density, probabilistic, and graph-based st
 This category preserves **8 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
 
-Phase 16 implements exactly these eight catalog Clustering canonicals. Prior B1/B2/B3 and DSA work is owner-approved; this new review remains pending. Read [the scope lock](../../../docs/clustering-scope.md) and [the internal checkpoints](../../../docs/clustering-checkpoints.md). Python/NumPy, exact lessons and mathematical tests are mandatory; C++ is optional and absent. No Phase 17 or another category is authorized.
-
-See [the Phase 16 report](../../../docs/reviews/clustering/CLUSTERING-REVIEW-REPORT.md).
+Phase 16 Clustering and its latest verified package are owner-approved. All eight canonical implementations, tests, lessons and historical artifacts are preserved.
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
 | K-Means | [k-means](k-means/README.md) | complete |
@@ -20,10 +18,6 @@ See [the Phase 16 report](../../../docs/reviews/clustering/CLUSTERING-REVIEW-REP
 | Mean Shift | [mean-shift](mean-shift/README.md) | complete |
 | Gaussian Mixture Models (GMM) | [gaussian-mixture-models](gaussian-mixture-models/README.md) | complete |
 | Spectral Clustering | [spectral-clustering](spectral-clustering/README.md) | complete |
-
-Phase 16 implements exactly these eight catalog Clustering canonicals. Prior B1/B2/B3 and DSA work is owner-approved; this new review remains pending. Read [the scope lock](../../../docs/clustering-scope.md) and [the internal checkpoints](../../../docs/clustering-checkpoints.md). Python/NumPy, exact lessons and mathematical tests are mandatory; C++ is optional and absent. No Phase 17 or another category is authorized.
-
-See [the Phase 16 report](../../../docs/reviews/clustering/CLUSTERING-REVIEW-REPORT.md).
 
 ## Learning and contribution scope
 

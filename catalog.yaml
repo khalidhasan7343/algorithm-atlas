@@ -1,31 +1,25 @@
 schema_version: 1
 project: Algorithm Atlas
 development:
-  phase: Phase 16 — Unsupervised Learning — Clustering
-  phase_number: 16
+  phase: Phase 18 — Association Rule Learning
+  phase_number: 18
   track: machine-learning
-  category: B4
-  scope: B4 Unsupervised Learning — Clustering only
+  category: B6
+  scope: 'B6 Association Rule Learning only: Apriori, Eclat, FP-Growth and shared rule generation'
   status: awaiting-review
   active_batch: null
-  completed_batches: &id001
+  completed_batches:
   - 1
   - 2
   - 3
-  - 4
   batch_plan:
-  - - k-means
-    - agglomerative-hierarchical-clustering
-  - - divisive-hierarchical-clustering
-    - dbscan
-  - - hdbscan
-    - mean-shift
-  - - gaussian-mixture-models
-    - spectral-clustering
-  checkpoint: docs/clustering-checkpoints.md
-  approval: Owner explicitly approved the completed latest Phase 15 Ensemble Methods package
-    and previous work, and authorized Phase 16 B4 only. Current Phase 16 review approval pending.
-    No Phase 17, other category, commit, push, tag or release.
+  - - apriori
+  - - eclat
+  - - fp-growth
+  checkpoint: docs/association-rule-learning-checkpoints.md
+  approval: Owner explicitly approved latest Phase 17 review and authorized Phase 18 B6 only.
+    Three mining batches followed by mandatory category-local rule audit; new review pending.
+    No Phase 19/B7, commit, push, tag, release or publication.
   phase_records:
     '11':
       phase_number: 11
@@ -70,8 +64,8 @@ development:
         id: regression-completion-audit-2026-10-28
         owner_approval: approved
         approved_on: '2026-10-28T23:13:15.794542+06:00'
-        evidence: Owner explicitly approved previous work immediately after final B1 audit package
-          handoff.
+        evidence: Owner explicitly approved previous work immediately after final B1 audit
+          package handoff.
         package_sha256: 5af6635b2dc87522993f193ff18e3c320e3d3218245e82b747cd4f903ff60588
     '14':
       phase_number: 14
@@ -107,19 +101,55 @@ development:
     '16':
       phase_number: 16
       category: B4
-      status: awaiting-review
+      status: owner-approved
       checkpoint: docs/clustering-checkpoints.md
-      owner_approval: pending
-      completed_batches: *id001
+      owner_approval: approved
+      completed_batches:
+      - 1
+      - 2
+      - 3
+      - 4
       completion_report: docs/reviews/clustering/CLUSTERING-REVIEW-REPORT.md
+      approved_on: 2026-10-30 Asia/Dhaka
+      approval_evidence: 'Explicit owner statement after latest verified Phase 16 handoff:
+        Approved pervious work and review done.now follow this properly'
+      approved_package_sha256: df8bb7c03e463aed7ff6d342a3ffa77a5214b2dc1d1d25f06e632de985974e3a
+    '17':
+      phase_number: 17
+      category: B5
+      status: owner-approved
+      checkpoint: docs/dimensionality-reduction-checkpoints.md
+      completion_report: docs/reviews/dimensionality-reduction/DIMENSIONALITY-REDUCTION-REVIEW-REPORT.md
+      owner_approval: approved
+      completed_batches:
+      - 1
+      - 2
+      - 3
+      - 4
+      approved_on: 2026-10-30 Asia/Dhaka
+      approval_evidence: 'Explicit owner statement after verified Phase 17 handoff: Approved
+        pervious work and review done.now follow this properly'
+      approved_package_sha256: 05cd7419f8e8fc938cf050996186125736df60acc84e6a3effe8f405d761b7b4
+    '18':
+      phase_number: 18
+      category: B6
+      status: awaiting-review
+      checkpoint: docs/association-rule-learning-checkpoints.md
+      completion_report: docs/reviews/association-rule-learning/ASSOCIATION-RULE-LEARNING-REVIEW-REPORT.md
+      owner_approval: pending
+      completed_batches:
+      - 1
+      - 2
+      - 3
+      rule_generation_status: tested
   current_review:
-    id: clustering-phase16
-    phase_number: 16
-    category: B4
+    id: association-rule-learning-phase18
+    phase_number: 18
+    category: B6
     status: awaiting-review
     owner_approval: pending
-    completion_report: docs/reviews/clustering/CLUSTERING-REVIEW-REPORT.md
-  completion_report: docs/reviews/clustering/CLUSTERING-REVIEW-REPORT.md
+    completion_report: docs/reviews/association-rule-learning/ASSOCIATION-RULE-LEARNING-REVIEW-REPORT.md
+  completion_report: docs/reviews/association-rule-learning/ASSOCIATION-RULE-LEARNING-REVIEW-REPORT.md
 categories:
   - id: "A1"
     name: "Sorting"
@@ -2508,138 +2538,157 @@ algorithms:
     - agglomerative-hierarchical-clustering
     notes: Normalized affinity eigenspace, row normalization and canonical K-Means reuse; RBF/precomputed
       symmetric nonnegative affinities, graph/eigen diagnostics and transductive labels.
-  - id: "principal-component-analysis"
-    name: "Principal Component Analysis (PCA)"
-    category: "B5"
-    canonical_location: "machine-learning/unsupervised-learning/dimensionality-reduction/principal-component-analysis"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+  - id: principal-component-analysis
+    name: Principal Component Analysis (PCA)
+    category: B5
+    canonical_location: machine-learning/unsupervised-learning/dimensionality-reduction/principal-component-analysis
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "t-sne"
-      - "umap"
-    notes: "Project centered data onto directions of high variance. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "t-sne"
-    name: "t-SNE"
-    category: "B5"
-    canonical_location: "machine-learning/unsupervised-learning/dimensionality-reduction/t-sne"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - t-sne
+    - umap
+    notes: Phase 17 batch 1 passed 24 actual tests, executed examples and full 25-section
+      lesson. Reduced Jacobi SVD is reused by centered PCA. C++ optional and absent; owner
+      review pending.
+  - id: t-sne
+    name: t-SNE
+    category: B5
+    canonical_location: machine-learning/unsupervised-learning/dimensionality-reduction/t-sne
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "principal-component-analysis"
-      - "umap"
-    notes: "Visualize local neighborhood relationships through a low-dimensional stochastic embedding. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "umap"
-    name: "UMAP"
-    category: "B5"
-    canonical_location: "machine-learning/unsupervised-learning/dimensionality-reduction/umap"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - principal-component-analysis
+    - umap
+    notes: Phase 17 B5 batch 3 passed actual tests and executed examples with full 25-section
+      lesson. C++ optional and absent; new owner review pending.
+  - id: umap
+    name: UMAP
+    category: B5
+    canonical_location: machine-learning/unsupervised-learning/dimensionality-reduction/umap
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "principal-component-analysis"
-      - "t-sne"
-    notes: "Study low-dimensional embeddings from a neighborhood graph and a documented objective. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "linear-discriminant-analysis-projection"
-    name: "Linear Discriminant Analysis (Supervised Variant)"
-    category: "B5"
-    canonical_location: "machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - principal-component-analysis
+    - t-sne
+    notes: Phase 17 B5 batch 3 passed actual tests and executed examples with full 25-section
+      lesson. C++ optional and absent; new owner review pending.
+  - id: linear-discriminant-analysis-projection
+    name: Linear Discriminant Analysis (Supervised Variant)
+    category: B5
+    canonical_location: machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "linear-discriminant-analysis"
-      - "principal-component-analysis"
-    notes: "Learn a supervised low-dimensional projection that separates labeled classes. Meaningful supervised dimensionality-reduction variant of Linear Discriminant Analysis. It returns a learned projection or transformed observations rather than classifier predictions. Document class-label requirements, projection dimension bounds, and shared mathematical background with the classification variant. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "vanilla-autoencoders"
-    name: "Vanilla Autoencoders"
-    category: "B7"
-    canonical_location: "machine-learning/deep-learning/vanilla-autoencoders"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - linear-discriminant-analysis
+    - principal-component-analysis
+    notes: Phase 17 B5 batch 2 passed actual tests and executed examples with full 25-section
+      lesson. C++ optional and absent; new owner review pending.
+  - id: vanilla-autoencoders
+    name: Vanilla Autoencoders
+    category: B7
+    canonical_location: machine-learning/deep-learning/vanilla-autoencoders
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "principal-component-analysis"
-      - "denoising-autoencoders"
-      - "sparse-autoencoders"
-      - "variational-autoencoders"
-    notes: "Learn reconstruction-based latent representations, including bottleneck dimensionality reduction. Canonical scope is a basic reconstruction autoencoder, including a bottleneck representation for dimensionality reduction. B5 and B7 share this foundation; denoising, sparse, and variational autoencoders remain distinct requested variants. The canonical folder is under B7 deep learning. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "independent-component-analysis"
-    name: "Independent Component Analysis (ICA)"
-    category: "B5"
-    canonical_location: "machine-learning/unsupervised-learning/dimensionality-reduction/independent-component-analysis"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - principal-component-analysis
+    - denoising-autoencoders
+    - sparse-autoencoders
+    - variational-autoencoders
+    notes: Phase 17 B5 batch 4 passed actual tests and executed examples with full 25-section
+      lesson. One B7-owned NumPy canonical shared by B5/B7; no duplicate implementation.
+      C++ optional and absent; new owner review pending.
+  - id: independent-component-analysis
+    name: Independent Component Analysis (ICA)
+    category: B5
+    canonical_location: machine-learning/unsupervised-learning/dimensionality-reduction/independent-component-analysis
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "principal-component-analysis"
-      - "t-sne"
-    notes: "Separate latent components under an independence assumption. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "singular-value-decomposition"
-    name: "Singular Value Decomposition (SVD)"
-    category: "B5"
-    canonical_location: "machine-learning/unsupervised-learning/dimensionality-reduction/singular-value-decomposition"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - principal-component-analysis
+    - t-sne
+    notes: Phase 17 B5 batch 2 passed actual tests and executed examples with full 25-section
+      lesson. C++ optional and absent; new owner review pending.
+  - id: singular-value-decomposition
+    name: Singular Value Decomposition (SVD)
+    category: B5
+    canonical_location: machine-learning/unsupervised-learning/dimensionality-reduction/singular-value-decomposition
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "principal-component-analysis"
-      - "t-sne"
-    notes: "Factor a matrix into singular vectors and singular values. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "apriori"
-    name: "Apriori"
-    category: "B6"
-    canonical_location: "machine-learning/unsupervised-learning/association-rule-learning/apriori"
-    difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - principal-component-analysis
+    - t-sne
+    notes: Phase 17 batch 1 passed 24 actual tests, executed examples and full 25-section
+      lesson. Reduced Jacobi SVD is reused by centered PCA. C++ optional and absent; owner
+      review pending.
+  - id: apriori
+    name: Apriori
+    category: B6
+    canonical_location: machine-learning/unsupervised-learning/association-rule-learning/apriori
+    difficulty: intermediate
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "fp-growth"
-      - "eclat"
-    notes: "Find frequent itemsets with level-wise candidate generation and pruning. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "fp-growth"
-    name: "FP-Growth"
-    category: "B6"
-    canonical_location: "machine-learning/unsupervised-learning/association-rule-learning/fp-growth"
-    difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - fp-growth
+    - eclat
+    notes: 'Phase18 B6: genuine Apriori, full25-section lesson and executed example/CLIs;
+      initial canonical gate14 tests, final shared rule/brute-force/cross-miner audit passed.
+      Exact integer support, decimal relative thresholds and bounded complete search. C++
+      optional/absent; owner review pending.'
+  - id: fp-growth
+    name: FP-Growth
+    category: B6
+    canonical_location: machine-learning/unsupervised-learning/association-rule-learning/fp-growth
+    difficulty: intermediate
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "apriori"
-      - "eclat"
-    notes: "Mine frequent patterns through a compressed transaction tree. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "eclat"
-    name: "Eclat"
-    category: "B6"
-    canonical_location: "machine-learning/unsupervised-learning/association-rule-learning/eclat"
-    difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - apriori
+    - eclat
+    notes: 'Phase18 B6: genuine FP-Growth, full25-section lesson and executed example/CLIs;
+      initial canonical gate16 tests, final shared rule/brute-force/cross-miner audit passed.
+      Exact integer support, decimal relative thresholds and bounded complete search. C++
+      optional/absent; owner review pending.'
+  - id: eclat
+    name: Eclat
+    category: B6
+    canonical_location: machine-learning/unsupervised-learning/association-rule-learning/eclat
+    difficulty: intermediate
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "apriori"
-      - "fp-growth"
-    notes: "Mine frequent itemsets using vertical transaction identifiers. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    - apriori
+    - fp-growth
+    notes: 'Phase18 B6: genuine Eclat, full25-section lesson and executed example/CLIs;
+      initial canonical gate13 tests, final shared rule/brute-force/cross-miner audit passed.
+      Exact integer support, decimal relative thresholds and bounded complete search. C++
+      optional/absent; owner review pending.'
   - id: "multilayer-perceptron"
     name: "Multilayer Perceptron (MLP)"
     category: "B7"

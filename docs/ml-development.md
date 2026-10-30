@@ -1,19 +1,26 @@
 # Machine Learning development standard
 
 Maintainer: **MD.Khalid Hasan**. [MIT License](../LICENSE).
-The owner explicitly approved the latest Phase 15 Ensemble Methods review package
-and all earlier work, then authorized **Phase 16 — B4 Clustering only**. Implement
-exactly its eight catalog canonicals under [the scope lock](clustering-scope.md)
-and [checkpoints](clustering-checkpoints.md). Preserve B1/B2/B3/DSA code,
-original tests/lessons and all historical reports/evidence/packages. Inventory
-remains 35 categories / 256 memberships / 235 canonicals.
+The owner explicitly approved the latest Phase 17 Dimensionality Reduction
+report/package on client session date 2026-10-30 Asia/Dhaka and authorized
+**Phase 18 — B6 Association Rule Learning only**. Implement the three existing
+canonicals Apriori, Eclat and FP-Growth in that batch order, then the mandatory
+shared rule-generation audit; see [scope](association-rule-learning-scope.md)
+and [checkpoints](association-rule-learning-checkpoints.md). Rule generation
+is a category-local utility, not another catalog algorithm. Preserve accepted
+B1–B5/DSA source, tests, lessons, historical reports/evidence/packages and existing
+staged changes. Inventory stays35 categories /256 memberships /235 canonicals.
 
-Python/NumPy, numerical/oracle/reference tests and exact 25-section lessons remain
-mandatory for ML; C++ is optional. DSA retains Python/C++ and actual C++17/C++20.
-The **new Phase 16 review approval remains pending**. Proceed between passing
-internal batches automatically; stop after the tracked report and verified
-ZIP/checksum/JSON for owner review. No Phase 17, other category, commit, push,
-tag, release or publication. Never set Git identity from public email.
+Python and mathematical/oracle/reference tests and exact25-section lessons are
+mandatory. These combinatorial miners use standard-library sets/dicts and integer
+counts; NumPy is unnecessary in core. ML C++ remains optional; DSA requires both
+languages and actual C++17/C++20 checks. Keep the existing shared-autoencoder and
+other deferred B7/AI policy intact. Continue automatically through passing batches,
+then deliver the tracked report and verified ZIP/checksum/JSON and STOP for owner
+review. **New Phase 18 approval pending.** No Phase19/B7/other category, commit,
+push, tag, release or publication. Never set Git identity from public email.
+
+
 
 ## Track and language policy
 
@@ -21,10 +28,11 @@ tag, release or publication. Never set Git identity from public email.
 | --- | --- | --- |
 | DSA | Python, C++, Python tests, C++ tests | Both C++17 and C++20 remain mandatory |
 | Classical ML | Python, numerical tests, mathematical explanation, reproducible examples | Optional; source and executable C++ test must be provided together |
-| Future Deep Learning / AI | Not authorized here | Retains previous structural rules until a separate language/framework policy is authorized |
+| Shared B5/B7 vanilla autoencoder | Python/NumPy, tests; B5 scope only | Optional C++ |
+| Other future Deep Learning / AI | Not authorized here | Retains previous structural rules until a separate language/framework policy is authorized |
 
 [The central policy](../scripts/track_policy.py) identifies tracks from canonical
-paths checked against their catalog owners. No algorithm IDs are special-cased.
+paths checked against their catalog owners. Phase 17 adds one exact-identity exception for the B5/B7 shared NumPy autoencoder; other deferred topics remain unchanged.
 The catalog schema and status vocabulary are unchanged. A Python-only ML record
 leaves `cpp_status: planned`, explicitly meaning optional and not implemented;
 this does not prevent Python-based completion. Optional C++ source/test files
@@ -66,8 +74,9 @@ Every topic exposes its genuine mathematical logic. Reusing a canonical topic
 squares is a numerical primitive, not a hidden estimator. Define the exact loss
 normalization, intercept treatment, regularization, optimization, stopping
 conditions and failure behavior. Deterministic bounded solvers expose iteration
-and convergence diagnostics. Exhausting an iterative solver raises an explicit
-convergence error; a partial fit is not presented as success.
+and convergence diagnostics. Exhausting a convergence-required solver raises an explicit convergence error.
+Finite-budget embedding/neural experiments expose converged_, optimization_status_
+and objective history without claiming convergence; see the B5 contracts.
 
 Dense single-output float64 regression is the initial scope. Inputs have shape
 `X=(n_samples,n_features)`, `y=(n_samples,)`; one-dimensional X or column-vector
@@ -124,8 +133,21 @@ lessons. XGBoost/CatBoost production-library parity is not claimed.
 
 The [B4 contracts](clustering-conventions.md) define fit(X), label/metric semantics,
 transductive versus meaningful new-row methods, bounded convergence and numerical
-limits. Complete [scope](clustering-scope.md) only; current review approval is pending.
+limits. Phase 16 [scope](clustering-scope.md) is now owner-approved; historical handoff evidence remains unchanged.
 K-Means is reused canonically by GMM initialization and spectral partitioning.
 Hierarchies/DBSCAN/HDBSCAN/spectral do not expose an invented centroid predictor.
 Clustering metrics use explicit noise coverage and label-permutation agreement;
 likelihood and held-out assignment are reported only where meaningful.
+
+## Dimensionality reduction extension — Phase 17
+
+See [B5 contracts](dimensionality-reduction-conventions.md) for decomposition, supervised projection, independence, graph/probability embedding and canonical NumPy reconstruction semantics. B4 historical handoff approval fields remain generation-time evidence; current Phase 16 approval is recorded in the catalog.
+
+## Association Rule Learning extension — Phase18
+
+[Transactions and exact thresholds](association-rule-learning-conventions.md) replace
+numeric feature matrices for B6. Standard-library combinatorial core logic is
+appropriate; NumPy is used only where useful in independent references. Frequent
+itemsets and rule support/confidence/lift have distinct contracts. Each miner has
+its own mechanism; shared rules do not add a catalog canonical. Earlier B5 contracts
+and all language policies are preserved.

@@ -1,0 +1,61 @@
+[
+  {
+    "id": "eclat",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "n_transactions": 5,
+      "min_count": 2,
+      "itemsets": [
+        {
+          "items": [
+            "a"
+          ],
+          "support_count": 4
+        },
+        {
+          "items": [
+            "b"
+          ],
+          "support_count": 4
+        },
+        {
+          "items": [
+            "c"
+          ],
+          "support_count": 4
+        },
+        {
+          "items": [
+            "a",
+            "b"
+          ],
+          "support_count": 3
+        },
+        {
+          "items": [
+            "a",
+            "c"
+          ],
+          "support_count": 3
+        },
+        {
+          "items": [
+            "b",
+            "c"
+          ],
+          "support_count": 3
+        },
+        {
+          "items": [
+            "a",
+            "b",
+            "c"
+          ],
+          "support_count": 2
+        }
+      ]
+    }
+  }
+]

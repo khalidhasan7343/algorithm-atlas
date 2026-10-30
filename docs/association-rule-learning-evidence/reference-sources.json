@@ -1,0 +1,27 @@
+{
+  "sources": [
+    {
+      "title": "Agrawal and Srikant, Fast Algorithms for Mining Association Rules,1994",
+      "url": "https://rsrikant.com/papers/vldb94.pdf",
+      "status": "author-hosted primary PDF retrieved"
+    },
+    {
+      "title": "Han, Pei, Yin, Mao, Frequent-Pattern Tree Approach,2004 expanded paper",
+      "url": "https://www.cs.sfu.ca/~jpei/publications/dami03_fpgrowth.pdf",
+      "status": "author-hosted primary PDF retrieved"
+    },
+    {
+      "title": "Zaki, Scalable Algorithms for Association Mining,2000",
+      "url": "https://www.cs.rpi.edu/~zaki/publications/",
+      "status": "author publication index retrieved"
+    }
+  ],
+  "reference_testing": "No external whole-miner package installed or claimed. Required independent ground truth is raw-transaction powerset counting. sklearn MultiLabelBinarizer/SciPy sparse incidence counts and SciPy contingency expected frequencies provide additional independent reference comparisons.",
+  "code_reuse": "No external source/prose copied or runtime dependency installed",
+  "retrieval_notes": [
+    {
+      "url": "https://www.cs.rpi.edu/~zaki/PaperDir/TKDE00.pdf",
+      "status": "Direct author-PDF retrieval timed out; title/year/pages/DOI and ECLAT code link verified through author publication index. Not claimed read in full."
+    }
+  ]
+}

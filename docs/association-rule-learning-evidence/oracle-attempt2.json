@@ -1,0 +1,25 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/unsupervised-learning/association-rule-learning",
+    "-m",
+    "oracle",
+    "-q"
+  ],
+  "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+  "timestamp": "2026-10-30T14:38:30.971676+06:00",
+  "elapsed_seconds": 0.318,
+  "returncode": 0,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "environment": {
+    "CXX": null,
+    "PYTHONHASHSEED": "0",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "log": "docs/association-rule-learning-evidence/oracle-attempt2.txt",
+  "summary": "51 passed, 111 deselected in 0.21s"
+}

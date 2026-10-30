@@ -1,0 +1,22 @@
+[
+  {
+    "id": "B5-001",
+    "kind": "new implementation integration defect",
+    "evidence": "batch2-attempt1.txt",
+    "finding": "LDA unpacked two outputs from preserved three-output label helper.",
+    "repair": "Unpack ignored original labels, classes and encoded labels; all five affected tests pass in attempt2; no B2 changes."
+  },
+  {
+    "id": "B5-002",
+    "kind": "incorrect test fixture",
+    "evidence": "batch3-attempt1.txt",
+    "finding": "Groups of size two do not guarantee disconnected self-excluding two-neighbor graph.",
+    "repair": "Use two groups of three duplicate rows and verify zero cross-block weights. Keep k=2 and core unchanged; attempt2 passed."
+  },
+  {
+    "id": "B5-003",
+    "kind": "new API units defect corrected during audit",
+    "finding": "Using original-feature magnitude cap for inverse-transform latent inputs rejects legitimate projections >1e12.",
+    "repair": "Dedicated finite real latent validator preserves shape/row bounds and overflow errors; large SVD/PCA round trips and invalid latent arrays verified in cross-model tests. Prior helpers unchanged."
+  }
+]

@@ -1,0 +1,266 @@
+{
+  "B6": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/association-rule-learning",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/association-rule-learning-evidence/B6.xml"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T14:46:36.362404+06:00",
+    "elapsed_seconds": 1.242,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/association-rule-learning-evidence/B6-attempt4.txt",
+    "summary": "162 passed in 1.08s"
+  },
+  "numerical": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/association-rule-learning",
+      "-m",
+      "numerical",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T14:46:36.489614+06:00",
+    "elapsed_seconds": 0.127,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/association-rule-learning-evidence/numerical-attempt3.txt",
+    "summary": "5 passed, 157 deselected in 0.02s"
+  },
+  "oracle": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/association-rule-learning",
+      "-m",
+      "oracle",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T14:46:36.783087+06:00",
+    "elapsed_seconds": 0.293,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/association-rule-learning-evidence/oracle-attempt3.txt",
+    "summary": "51 passed, 111 deselected in 0.18s"
+  },
+  "reference": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/association-rule-learning",
+      "-m",
+      "reference",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T14:46:37.349717+06:00",
+    "elapsed_seconds": 0.566,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/association-rule-learning-evidence/reference-attempt3.txt",
+    "summary": "7 passed, 155 deselected in 0.41s"
+  },
+  "randomized": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/association-rule-learning",
+      "-k",
+      "randomized",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T14:46:37.551000+06:00",
+    "elapsed_seconds": 0.201,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/association-rule-learning-evidence/randomized-attempt2.txt",
+    "summary": "18 passed, 144 deselected in 0.09s"
+  },
+  "B1": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/regression",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T14:46:38.441487+06:00",
+    "elapsed_seconds": 0.89,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/association-rule-learning-evidence/B1-attempt1.txt",
+    "summary": "281 passed in 0.72s"
+  },
+  "B2": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/classification",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T14:46:39.419328+06:00",
+    "elapsed_seconds": 0.977,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/association-rule-learning-evidence/B2-attempt1.txt",
+    "summary": "398 passed in 0.81s"
+  },
+  "B3": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/ensemble-methods",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T14:46:40.311657+06:00",
+    "elapsed_seconds": 0.892,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/association-rule-learning-evidence/B3-attempt1.txt",
+    "summary": "253 passed in 0.70s"
+  },
+  "B4": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/clustering",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T14:46:41.184316+06:00",
+    "elapsed_seconds": 0.872,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/association-rule-learning-evidence/B4-attempt1.txt",
+    "summary": "206 passed in 0.68s"
+  },
+  "B5": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/dimensionality-reduction",
+      "machine-learning/deep-learning/vanilla-autoencoders",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T14:46:41.984229+06:00",
+    "elapsed_seconds": 0.799,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/association-rule-learning-evidence/B5-attempt1.txt",
+    "summary": "162 passed in 0.61s"
+  },
+  "full-suite": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "--require-cpp",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/association-rule-learning-evidence/full-suite.xml"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T14:53:57.015951+06:00",
+    "elapsed_seconds": 435.029,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/association-rule-learning-evidence/full-suite-attempt1.txt",
+    "summary": "3472 passed in 434.70s (0:07:14)"
+  }
+}

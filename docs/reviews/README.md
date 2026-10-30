@@ -4,7 +4,9 @@ Review and audit reports are organized by canonical phase name. Their filenames 
 
 | Phase | Report |
 | --- | --- |
-| clustering (Phase 16 ML; review pending) | [CLUSTERING-REVIEW-REPORT.md](clustering/CLUSTERING-REVIEW-REPORT.md) |
+| association-rule-learning (Phase18 B6; review pending) | [ASSOCIATION-RULE-LEARNING-REVIEW-REPORT.md](association-rule-learning/ASSOCIATION-RULE-LEARNING-REVIEW-REPORT.md) |
+| dimensionality-reduction (Phase 17 B5; subsequently approved) | [DIMENSIONALITY-REDUCTION-REVIEW-REPORT.md](dimensionality-reduction/DIMENSIONALITY-REDUCTION-REVIEW-REPORT.md) |
+| clustering (Phase 16 ML; subsequently approved) | [CLUSTERING-REVIEW-REPORT.md](clustering/CLUSTERING-REVIEW-REPORT.md) |
 | ensemble-methods (Phase 15 ML; subsequently approved) | [ENSEMBLE-METHODS-REVIEW-REPORT.md](ensemble-methods/ENSEMBLE-METHODS-REVIEW-REPORT.md) |
 | classification (Phase 14 ML) | [CLASSIFICATION-REVIEW-REPORT.md](classification/CLASSIFICATION-REVIEW-REPORT.md) |
 | regression (Phase 13 B1 completion audit; subsequently approved) | [REGRESSION-REVIEW-REPORT.md](regression/REGRESSION-REVIEW-REPORT.md) |
@@ -53,3 +55,10 @@ The owner explicitly approved the latest Phase 15 report/package and previous wo
 then authorized only [Phase 16 B4 Clustering](clustering/CLUSTERING-REVIEW-REPORT.md).
 The new review approval is pending. Historical reports/sidecars retain their original
 handoff states and bytes; see [current checkpoints](../clustering-checkpoints.md).
+
+The owner explicitly accepted the latest Phase 16 Clustering review and authorized
+[Phase 17 B5 Dimensionality Reduction](dimensionality-reduction/DIMENSIONALITY-REDUCTION-REVIEW-REPORT.md).
+Only its shared NumPy autoencoder uses an existing B7 canonical; other B7 work is
+deferred. New Phase 17 review pending; historical statuses remain unchanged.
+
+The owner accepted the latest Phase17 package and authorized [Phase18 B6](association-rule-learning/ASSOCIATION-RULE-LEARNING-REVIEW-REPORT.md). Three canonicals plus a shared rule utility only; new owner review pending. Historical handoff statuses remain unchanged.

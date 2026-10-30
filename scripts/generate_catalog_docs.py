@@ -457,6 +457,55 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
                   'No Phase 17 or another category is authorized.']
         if (development or {}).get('completion_report'):
             lines += ['', 'See ' + link(path, ROOT / development['completion_report'], 'the Phase 16 report') + '.']
+    if category['id'] == 'B5' and ml_active and (development or {}).get('category') == 'B6':
+        lines += ['', 'All seven Phase 17 B5 members and its latest verified package are owner-approved. '
+                  'The one shared autoencoder remains at its B7 canonical path. '
+                  'Prior implementations, tests, lessons and review artifacts are preserved.']
+    if category['id'] == 'B7' and ml_active and (development or {}).get('category') == 'B6':
+        lines += ['', 'The shared vanilla autoencoder is complete and owner-approved under Phase 17 B5. '
+                  'Its one canonical implementation serves B5/B7; every other B7 topic remains deferred.']
+    if category['id'] == 'B6' and ml_active and (development or {}).get('category') == 'B6':
+        lines += ['', 'Association Rule Learning separates frequent itemsets from rules. '
+                  'For N binary transactions, support(X)=count(X)/N; confidence(A→B)=count(A∪B)/count(A); '
+                  'lift=N*count(A∪B)/(count(A)*count(B)). Rules have nonempty disjoint sides. '
+                  'Association does not imply causation, and high confidence need not mean high lift.', '',
+                  '| Miner | Core mechanism | Main tradeoff |', '| --- | --- | --- |',
+                  '| Apriori | Level-wise prefix joins, subset pruning, horizontal counting | Candidate explosion and scans |',
+                  '| Eclat | Vertical TID sets and depth-first intersections | Active TID-set memory |',
+                  '| FP-Growth | Counted prefix tree, weighted conditional bases/trees | Compression depends on shared prefixes |', '',
+                  'Input is a list/tuple of transactions, each list/tuple/set/frozenset with homogeneous '
+                  'native integer or nonempty string IDs. Repeated row items count once; repeated rows '
+                  'remain observations; empty rows stay in the denominator. min_support is always a '
+                  'relative native float in (0,1], not an absolute count. Exact decimal threshold '
+                  'comparisons and size/lexicographic output ordering are specified in '
+                  + link(path, ROOT / 'docs/association-rule-learning-conventions.md', 'the contracts') + '.', '',
+                  'Run `python machine-learning/unsupervised-learning/association-rule-learning/apriori/python/example.py` '
+                  'from repository root. For rows [abc,abc,ab,ac,bc] at support0.4, counts are '
+                  'a4,b4,c4,ab3,ac3,bc3,abc2. Rule a→b has support0.6, confidence0.75, lift15/16. '
+                  + link(path, ROOT / 'machine-learning/unsupervised-learning/association-rule-learning/rules.py', 'Shared rule generation')
+                  + ' applies to every complete count map, without adding a catalog algorithm.', '',
+                  'These bounded standard-library implementations can still have exponential output; '
+                  'work/output limits fail explicitly without partial results. No universal speed winner, '
+                  'weighted public transactions or absolute-support API is claimed. Python/math/oracle tests '
+                  'and exact lessons are required; C++ optional/absent. Phase17 is approved; new Phase18 '
+                  'review pending. Read ' + link(path, ROOT / 'docs/association-rule-learning-scope.md', 'scope')
+                  + ' and ' + link(path, ROOT / 'docs/association-rule-learning-checkpoints.md', 'checkpoints')
+                  + '. No Phase19/B7 or publication.']
+    if category['id'] == 'B4' and ml_active and (development or {}).get('category') in {'B5','B6'}:
+        lines += ['', 'Phase 16 Clustering and its latest verified package are owner-approved. '
+                  'All eight canonical implementations, tests, lessons and historical artifacts are preserved.']
+    if category['id'] == 'B5' and ml_active and (development or {}).get('category') == 'B5':
+        lines += ['', 'Phase 17 covers these seven catalog members. Six are B5-owned; the one '
+                  'vanilla autoencoder retains its B7 canonical path and is shared without duplication. '
+                  'Supervised LDA projection requires labels and differs from B2 classification. '
+                  'Read ' + link(path, ROOT / 'docs/dimensionality-reduction-scope.md', 'scope') + ' and '
+                  + link(path, ROOT / 'docs/dimensionality-reduction-checkpoints.md', 'checkpoints') + '. '
+                  'Python/NumPy, exact lessons and numerical/oracle/reference tests are required; '
+                  'C++ is optional and absent. New owner review pending; no Phase 18 or other B7 work.']
+    if category['id'] == 'B7' and ml_active and (development or {}).get('category') == 'B5':
+        lines += ['', 'Only the shared vanilla autoencoder is implemented here under Phase 17 B5 '
+                  'authorization. Its one canonical implementation also serves B5. '
+                  'All other B7 topics remain deferred and retain their language policy.']
     if category['id'] == 'A11':
         graph_ids = {'dijkstra', 'prim', 'kruskal'}
         owned = [item for item in category['items'] if item['algorithm'] not in graph_ids]

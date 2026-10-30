@@ -1,0 +1,65 @@
+{
+  "method": "Primary publication/author/official documentation retrieved through web tool; no source prose/code copied. Live docs versions may differ from installed references recorded separately.",
+  "sources": [
+    {
+      "title": "t-SNE paper",
+      "url": "https://jmlr.org/papers/v9/vandermaaten08a.html",
+      "status": "retrieved or primary search metadata verified"
+    },
+    {
+      "title": "UMAP paper",
+      "url": "https://arxiv.org/abs/1802.03426",
+      "status": "retrieved or primary search metadata verified"
+    },
+    {
+      "title": "UMAP author guide",
+      "url": "https://umap-learn.readthedocs.io/en/latest/how_umap_works.html",
+      "status": "retrieved or primary search metadata verified"
+    },
+    {
+      "title": "UMAP reference graph source",
+      "url": "https://github.com/lmcinnes/umap/blob/master/umap/umap_.py",
+      "status": "retrieved or primary search metadata verified"
+    },
+    {
+      "title": "FastICA author publications",
+      "url": "https://www.cs.helsinki.fi/u/ahyvarin/papers/fastica.shtml",
+      "status": "retrieved or primary search metadata verified"
+    },
+    {
+      "title": "PCA reference API",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html",
+      "status": "retrieved or primary search metadata verified"
+    },
+    {
+      "title": "LDA guide",
+      "url": "https://scikit-learn.org/stable/modules/lda_qda.html",
+      "status": "retrieved or primary search metadata verified"
+    },
+    {
+      "title": "NumPy SVD oracle",
+      "url": "https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.html",
+      "status": "retrieved or primary search metadata verified"
+    },
+    {
+      "title": "Neural dimensionality reduction author bibliography",
+      "url": "https://www.cs.toronto.edu/~rsalakhu/bibtex/HinSal06.html",
+      "status": "retrieved or primary search metadata verified"
+    },
+    {
+      "title": "Jacobi SVD",
+      "url": "https://netlib.org/lapack/explore-html/d9/deb/group__gesvj_ga7aec05d2a1523bbeee77ece21b12187c.html",
+      "status": "retrieved or primary search metadata verified"
+    }
+  ],
+  "retrieval_findings": [
+    {
+      "url": "https://netlib.org/lapack/explore-html/d9/deb/group__gesvj_ga7aec05d2a1523bbeee77ece21b8e73ab.html",
+      "status": "not accessible: incorrect URL suffix; corrected from official Netlib search"
+    },
+    {
+      "url": "https://netlib.org/lapack/lug/node54.html",
+      "status": "retrieved; generalized symmetric eigenproblem, useful for LDA but not Jacobi SVD; corrected lesson citation"
+    }
+  ]
+}

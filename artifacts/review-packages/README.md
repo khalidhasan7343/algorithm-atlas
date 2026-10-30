@@ -57,3 +57,9 @@ The owner subsequently approved the latest Ensemble Methods review and authorize
 [Phase 16 Clustering](clustering/README.md), whose new owner review remains pending.
 All previous package/report/evidence bytes are preserved; generation-time pending
 statuses remain historical rather than rewritten after approval.
+
+The owner accepted the latest Phase 16 package and authorized [Phase 17 B5
+Dimensionality Reduction](dimensionality-reduction/README.md). Its new review is
+pending; previous package/evidence bytes remain historical and unchanged.
+
+The owner approved latest Phase17 and authorized [Phase18 Association Rule Learning](association-rule-learning/README.md). New review pending; all older package/report/evidence bytes and generation-time statuses remain preserved.

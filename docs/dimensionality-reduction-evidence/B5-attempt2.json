@@ -1,0 +1,25 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/unsupervised-learning/dimensionality-reduction",
+    "machine-learning/deep-learning/vanilla-autoencoders",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/dimensionality-reduction-evidence/B5.xml"
+  ],
+  "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+  "timestamp": "2026-10-30T13:54:19.246931+06:00",
+  "elapsed_seconds": 1.02,
+  "returncode": 0,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "environment": {
+    "CXX": null,
+    "PYTHONHASHSEED": "0",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "log": "docs/dimensionality-reduction-evidence/B5-attempt2.txt",
+  "summary": "162 passed in 0.80s"
+}

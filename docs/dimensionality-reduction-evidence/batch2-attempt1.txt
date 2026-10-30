@@ -1,0 +1,197 @@
+FFFF.....F..........                                                     [100%]
+=================================== FAILURES ===================================
+____________________ test_analytical_scatter_and_direction _____________________
+
+b5 = <module 'atlas_b5_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/unsupervised-learning/dimensionality-reduction/support.py'>
+
+    @pytest.mark.oracle
+    @pytest.mark.numerical
+    def test_analytical_scatter_and_direction(b5):
+        X=np.array([[-2.,-1.],[-2.,1.],[2.,-1.],[2.,1.]])
+>       m=b5.load('linear-discriminant-analysis-projection').LDAProjection(1,reg=.1).fit(X,[0,0,1,1])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/tests/test_python.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+machine-learning/supervised-learning/classification/support.py:28: in guarded
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <atlas_b5_linear_discriminant_analysis_projection.LDAProjection object at 0x10bb878c0>
+X = array([[-2., -1.],
+       [-2.,  1.],
+       [ 2., -1.],
+       [ 2.,  1.]])
+y = [0, 0, 1, 1]
+
+    @support.numerical
+    def fit(self, X, y=None):
+        self._parameters()
+        X = support.features(X, fitting=True)
+>       classes, labels = support.encode_labels(y, n=len(X))
+        ^^^^^^^^^^^^^^^
+E       ValueError: too many values to unpack (expected 2, got 3)
+
+machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/python/solution.py:28: ValueError
+______________ test_multiclass_scipy_and_sklearn_subspaces[17011] ______________
+
+b5 = <module 'atlas_b5_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/unsupervised-learning/dimensionality-reduction/support.py'>
+seed = 17011
+
+    @pytest.mark.reference
+    @pytest.mark.parametrize('seed',[17011,17012,17013])
+    def test_multiclass_scipy_and_sklearn_subspaces(b5,seed):
+        from scipy.linalg import eigh
+        from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+        rng=np.random.default_rng(seed);X=rng.normal(size=(60,4))+np.repeat([[0,0,0,0],[3,1,0,0],[0,3,1,0]],20,axis=0);y=np.repeat(['a','b','c'],20)
+>       m=b5.load('linear-discriminant-analysis-projection').LDAProjection(2).fit(X,y)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/tests/test_python.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+machine-learning/supervised-learning/classification/support.py:28: in guarded
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <atlas_b5_linear_discriminant_analysis_projection.LDAProjection object at 0x10f9be710>
+X = array([[ 4.27173951e-01, -6.57280840e-01, -7.44185699e-01,
+         1.30785434e+00],
+       [-3.08273049e-01, -1.11169...06e+00,
+         6.31614792e-01],
+       [-1.66351973e+00,  1.88527663e+00,  1.45129511e-01,
+        -1.78329399e+00]])
+y = array(['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a',
+       'a', 'a', 'a', 'a', 'a', 'a', 'a', 'b',...c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c',
+       'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c'], dtype='<U1')
+
+    @support.numerical
+    def fit(self, X, y=None):
+        self._parameters()
+        X = support.features(X, fitting=True)
+>       classes, labels = support.encode_labels(y, n=len(X))
+        ^^^^^^^^^^^^^^^
+E       ValueError: too many values to unpack (expected 2, got 3)
+
+machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/python/solution.py:28: ValueError
+______________ test_multiclass_scipy_and_sklearn_subspaces[17012] ______________
+
+b5 = <module 'atlas_b5_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/unsupervised-learning/dimensionality-reduction/support.py'>
+seed = 17012
+
+    @pytest.mark.reference
+    @pytest.mark.parametrize('seed',[17011,17012,17013])
+    def test_multiclass_scipy_and_sklearn_subspaces(b5,seed):
+        from scipy.linalg import eigh
+        from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+        rng=np.random.default_rng(seed);X=rng.normal(size=(60,4))+np.repeat([[0,0,0,0],[3,1,0,0],[0,3,1,0]],20,axis=0);y=np.repeat(['a','b','c'],20)
+>       m=b5.load('linear-discriminant-analysis-projection').LDAProjection(2).fit(X,y)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/tests/test_python.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+machine-learning/supervised-learning/classification/support.py:28: in guarded
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <atlas_b5_linear_discriminant_analysis_projection.LDAProjection object at 0x10bbc07d0>
+X = array([[ 2.73262849e-01,  2.68734903e-03, -3.41924693e-01,
+         1.12883347e+00],
+       [-5.13430734e-01, -1.16475...84e+00,
+         1.87710867e+00],
+       [-5.47635171e-01,  4.00617186e+00,  2.12222379e+00,
+        -1.62119113e+00]])
+y = array(['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a',
+       'a', 'a', 'a', 'a', 'a', 'a', 'a', 'b',...c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c',
+       'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c'], dtype='<U1')
+
+    @support.numerical
+    def fit(self, X, y=None):
+        self._parameters()
+        X = support.features(X, fitting=True)
+>       classes, labels = support.encode_labels(y, n=len(X))
+        ^^^^^^^^^^^^^^^
+E       ValueError: too many values to unpack (expected 2, got 3)
+
+machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/python/solution.py:28: ValueError
+______________ test_multiclass_scipy_and_sklearn_subspaces[17013] ______________
+
+b5 = <module 'atlas_b5_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/unsupervised-learning/dimensionality-reduction/support.py'>
+seed = 17013
+
+    @pytest.mark.reference
+    @pytest.mark.parametrize('seed',[17011,17012,17013])
+    def test_multiclass_scipy_and_sklearn_subspaces(b5,seed):
+        from scipy.linalg import eigh
+        from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+        rng=np.random.default_rng(seed);X=rng.normal(size=(60,4))+np.repeat([[0,0,0,0],[3,1,0,0],[0,3,1,0]],20,axis=0);y=np.repeat(['a','b','c'],20)
+>       m=b5.load('linear-discriminant-analysis-projection').LDAProjection(2).fit(X,y)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/tests/test_python.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+machine-learning/supervised-learning/classification/support.py:28: in guarded
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <atlas_b5_linear_discriminant_analysis_projection.LDAProjection object at 0x1106e8c30>
+X = array([[-0.2362052 , -0.06659148,  0.23192131, -0.6600332 ],
+       [ 0.08378683,  0.15230628, -0.4505275 , -0.3966992...    [-0.60911426,  3.54203528,  0.75818548,  0.35597912],
+       [ 2.22775823,  3.41105429,  1.67324934, -1.83098684]])
+y = array(['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a',
+       'a', 'a', 'a', 'a', 'a', 'a', 'a', 'b',...c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c',
+       'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c'], dtype='<U1')
+
+    @support.numerical
+    def fit(self, X, y=None):
+        self._parameters()
+        X = support.features(X, fitting=True)
+>       classes, labels = support.encode_labels(y, n=len(X))
+        ^^^^^^^^^^^^^^^
+E       ValueError: too many values to unpack (expected 2, got 3)
+
+machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/python/solution.py:28: ValueError
+______________ test_singular_regularization_and_dimension_bounds _______________
+
+b5 = <module 'atlas_b5_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/unsupervised-learning/dimensionality-reduction/support.py'>
+
+    @pytest.mark.numerical
+    def test_singular_regularization_and_dimension_bounds(b5):
+        cls=b5.load('linear-discriminant-analysis-projection').LDAProjection;X=[[0,0],[0,0],[1,1],[1,1]];y=[0,0,1,1]
+        with pytest.raises(ValueError):cls().fit(X,y)
+>       m=cls(reg=.1).fit(X,y);assert np.isfinite(m.transform(X)).all()
+          ^^^^^^^^^^^^^^^^^^^^
+
+machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/tests/test_python.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+machine-learning/supervised-learning/classification/support.py:28: in guarded
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <atlas_b5_linear_discriminant_analysis_projection.LDAProjection object at 0x1107297c0>
+X = array([[0., 0.],
+       [0., 0.],
+       [1., 1.],
+       [1., 1.]])
+y = [0, 0, 1, 1]
+
+    @support.numerical
+    def fit(self, X, y=None):
+        self._parameters()
+        X = support.features(X, fitting=True)
+>       classes, labels = support.encode_labels(y, n=len(X))
+        ^^^^^^^^^^^^^^^
+E       ValueError: too many values to unpack (expected 2, got 3)
+
+machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/python/solution.py:28: ValueError
+=========================== short test summary info ============================
+FAILED machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/tests/test_python.py::test_analytical_scatter_and_direction
+FAILED machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/tests/test_python.py::test_multiclass_scipy_and_sklearn_subspaces[17011]
+FAILED machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/tests/test_python.py::test_multiclass_scipy_and_sklearn_subspaces[17012]
+FAILED machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/tests/test_python.py::test_multiclass_scipy_and_sklearn_subspaces[17013]
+FAILED machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/tests/test_python.py::test_singular_regularization_and_dimension_bounds
+5 failed, 15 passed in 0.73s

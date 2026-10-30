@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "inventory": {
+    "categories": 35,
+    "memberships": 256,
+    "canonicals": 235
+  },
+  "B6_canonicals": 3,
+  "implemented": 3,
+  "protected_preexisting_files": 2321,
+  "historical_artifacts_omitted_from_export": [],
+  "lessons": [
+    {
+      "id": "apriori",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "fp-growth",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "eclat",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    }
+  ],
+  "B1_B2_B3_B4_B5_DSA_preservation": "all approved implementations/tests/lessons/reports/evidence/packages byte-identical",
+  "phase17_owner_approval": "approved",
+  "phase18_owner_approval": "pending",
+  "report_tracking": "tracked and unignored",
+  "core_external_estimator_imports": "none",
+  "language_policy": "DSA Python/C++ mandatory; ML Python mandatory, C++ optional"
+}

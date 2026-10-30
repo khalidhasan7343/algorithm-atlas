@@ -1,0 +1,521 @@
+[
+  {
+    "id": "apriori",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "n_transactions": 5,
+      "min_count": 2,
+      "itemsets": [
+        {
+          "items": [
+            "a"
+          ],
+          "support_count": 4
+        },
+        {
+          "items": [
+            "b"
+          ],
+          "support_count": 4
+        },
+        {
+          "items": [
+            "c"
+          ],
+          "support_count": 4
+        },
+        {
+          "items": [
+            "a",
+            "b"
+          ],
+          "support_count": 3
+        },
+        {
+          "items": [
+            "a",
+            "c"
+          ],
+          "support_count": 3
+        },
+        {
+          "items": [
+            "b",
+            "c"
+          ],
+          "support_count": 3
+        },
+        {
+          "items": [
+            "a",
+            "b",
+            "c"
+          ],
+          "support_count": 2
+        }
+      ]
+    },
+    "rule_cli": "passed",
+    "rule_output": [
+      {
+        "antecedent": [
+          "a"
+        ],
+        "consequent": [
+          "b"
+        ],
+        "support_count": 3,
+        "support": 0.6,
+        "confidence": 0.75,
+        "lift": 0.9375
+      },
+      {
+        "antecedent": [
+          "a"
+        ],
+        "consequent": [
+          "c"
+        ],
+        "support_count": 3,
+        "support": 0.6,
+        "confidence": 0.75,
+        "lift": 0.9375
+      },
+      {
+        "antecedent": [
+          "b"
+        ],
+        "consequent": [
+          "a"
+        ],
+        "support_count": 3,
+        "support": 0.6,
+        "confidence": 0.75,
+        "lift": 0.9375
+      },
+      {
+        "antecedent": [
+          "b"
+        ],
+        "consequent": [
+          "c"
+        ],
+        "support_count": 3,
+        "support": 0.6,
+        "confidence": 0.75,
+        "lift": 0.9375
+      },
+      {
+        "antecedent": [
+          "c"
+        ],
+        "consequent": [
+          "a"
+        ],
+        "support_count": 3,
+        "support": 0.6,
+        "confidence": 0.75,
+        "lift": 0.9375
+      },
+      {
+        "antecedent": [
+          "c"
+        ],
+        "consequent": [
+          "b"
+        ],
+        "support_count": 3,
+        "support": 0.6,
+        "confidence": 0.75,
+        "lift": 0.9375
+      },
+      {
+        "antecedent": [
+          "a",
+          "b"
+        ],
+        "consequent": [
+          "c"
+        ],
+        "support_count": 2,
+        "support": 0.4,
+        "confidence": 0.6666666666666666,
+        "lift": 0.8333333333333334
+      },
+      {
+        "antecedent": [
+          "a",
+          "c"
+        ],
+        "consequent": [
+          "b"
+        ],
+        "support_count": 2,
+        "support": 0.4,
+        "confidence": 0.6666666666666666,
+        "lift": 0.8333333333333334
+      },
+      {
+        "antecedent": [
+          "b",
+          "c"
+        ],
+        "consequent": [
+          "a"
+        ],
+        "support_count": 2,
+        "support": 0.4,
+        "confidence": 0.6666666666666666,
+        "lift": 0.8333333333333334
+      }
+    ]
+  },
+  {
+    "id": "eclat",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "n_transactions": 5,
+      "min_count": 2,
+      "itemsets": [
+        {
+          "items": [
+            "a"
+          ],
+          "support_count": 4
+        },
+        {
+          "items": [
+            "b"
+          ],
+          "support_count": 4
+        },
+        {
+          "items": [
+            "c"
+          ],
+          "support_count": 4
+        },
+        {
+          "items": [
+            "a",
+            "b"
+          ],
+          "support_count": 3
+        },
+        {
+          "items": [
+            "a",
+            "c"
+          ],
+          "support_count": 3
+        },
+        {
+          "items": [
+            "b",
+            "c"
+          ],
+          "support_count": 3
+        },
+        {
+          "items": [
+            "a",
+            "b",
+            "c"
+          ],
+          "support_count": 2
+        }
+      ]
+    },
+    "rule_cli": "passed",
+    "rule_output": [
+      {
+        "antecedent": [
+          "a"
+        ],
+        "consequent": [
+          "b"
+        ],
+        "support_count": 3,
+        "support": 0.6,
+        "confidence": 0.75,
+        "lift": 0.9375
+      },
+      {
+        "antecedent": [
+          "a"
+        ],
+        "consequent": [
+          "c"
+        ],
+        "support_count": 3,
+        "support": 0.6,
+        "confidence": 0.75,
+        "lift": 0.9375
+      },
+      {
+        "antecedent": [
+          "b"
+        ],
+        "consequent": [
+          "a"
+        ],
+        "support_count": 3,
+        "support": 0.6,
+        "confidence": 0.75,
+        "lift": 0.9375
+      },
+      {
+        "antecedent": [
+          "b"
+        ],
+        "consequent": [
+          "c"
+        ],
+        "support_count": 3,
+        "support": 0.6,
+        "confidence": 0.75,
+        "lift": 0.9375
+      },
+      {
+        "antecedent": [
+          "c"
+        ],
+        "consequent": [
+          "a"
+        ],
+        "support_count": 3,
+        "support": 0.6,
+        "confidence": 0.75,
+        "lift": 0.9375
+      },
+      {
+        "antecedent": [
+          "c"
+        ],
+        "consequent": [
+          "b"
+        ],
+        "support_count": 3,
+        "support": 0.6,
+        "confidence": 0.75,
+        "lift": 0.9375
+      },
+      {
+        "antecedent": [
+          "a",
+          "b"
+        ],
+        "consequent": [
+          "c"
+        ],
+        "support_count": 2,
+        "support": 0.4,
+        "confidence": 0.6666666666666666,
+        "lift": 0.8333333333333334
+      },
+      {
+        "antecedent": [
+          "a",
+          "c"
+        ],
+        "consequent": [
+          "b"
+        ],
+        "support_count": 2,
+        "support": 0.4,
+        "confidence": 0.6666666666666666,
+        "lift": 0.8333333333333334
+      },
+      {
+        "antecedent": [
+          "b",
+          "c"
+        ],
+        "consequent": [
+          "a"
+        ],
+        "support_count": 2,
+        "support": 0.4,
+        "confidence": 0.6666666666666666,
+        "lift": 0.8333333333333334
+      }
+    ]
+  },
+  {
+    "id": "fp-growth",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "n_transactions": 5,
+      "min_count": 2,
+      "itemsets": [
+        {
+          "items": [
+            "a"
+          ],
+          "support_count": 4
+        },
+        {
+          "items": [
+            "b"
+          ],
+          "support_count": 4
+        },
+        {
+          "items": [
+            "c"
+          ],
+          "support_count": 4
+        },
+        {
+          "items": [
+            "a",
+            "b"
+          ],
+          "support_count": 3
+        },
+        {
+          "items": [
+            "a",
+            "c"
+          ],
+          "support_count": 3
+        },
+        {
+          "items": [
+            "b",
+            "c"
+          ],
+          "support_count": 3
+        },
+        {
+          "items": [
+            "a",
+            "b",
+            "c"
+          ],
+          "support_count": 2
+        }
+      ]
+    },
+    "rule_cli": "passed",
+    "rule_output": [
+      {
+        "antecedent": [
+          "a"
+        ],
+        "consequent": [
+          "b"
+        ],
+        "support_count": 3,
+        "support": 0.6,
+        "confidence": 0.75,
+        "lift": 0.9375
+      },
+      {
+        "antecedent": [
+          "a"
+        ],
+        "consequent": [
+          "c"
+        ],
+        "support_count": 3,
+        "support": 0.6,
+        "confidence": 0.75,
+        "lift": 0.9375
+      },
+      {
+        "antecedent": [
+          "b"
+        ],
+        "consequent": [
+          "a"
+        ],
+        "support_count": 3,
+        "support": 0.6,
+        "confidence": 0.75,
+        "lift": 0.9375
+      },
+      {
+        "antecedent": [
+          "b"
+        ],
+        "consequent": [
+          "c"
+        ],
+        "support_count": 3,
+        "support": 0.6,
+        "confidence": 0.75,
+        "lift": 0.9375
+      },
+      {
+        "antecedent": [
+          "c"
+        ],
+        "consequent": [
+          "a"
+        ],
+        "support_count": 3,
+        "support": 0.6,
+        "confidence": 0.75,
+        "lift": 0.9375
+      },
+      {
+        "antecedent": [
+          "c"
+        ],
+        "consequent": [
+          "b"
+        ],
+        "support_count": 3,
+        "support": 0.6,
+        "confidence": 0.75,
+        "lift": 0.9375
+      },
+      {
+        "antecedent": [
+          "a",
+          "b"
+        ],
+        "consequent": [
+          "c"
+        ],
+        "support_count": 2,
+        "support": 0.4,
+        "confidence": 0.6666666666666666,
+        "lift": 0.8333333333333334
+      },
+      {
+        "antecedent": [
+          "a",
+          "c"
+        ],
+        "consequent": [
+          "b"
+        ],
+        "support_count": 2,
+        "support": 0.4,
+        "confidence": 0.6666666666666666,
+        "lift": 0.8333333333333334
+      },
+      {
+        "antecedent": [
+          "b",
+          "c"
+        ],
+        "consequent": [
+          "a"
+        ],
+        "support_count": 2,
+        "support": 0.4,
+        "confidence": 0.6666666666666666,
+        "lift": 0.8333333333333334
+      }
+    ]
+  }
+]

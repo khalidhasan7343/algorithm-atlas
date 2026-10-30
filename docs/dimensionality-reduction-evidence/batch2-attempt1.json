@@ -1,0 +1,24 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection",
+    "machine-learning/unsupervised-learning/dimensionality-reduction/independent-component-analysis",
+    "-q"
+  ],
+  "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+  "timestamp": "2026-10-30T09:35:16.269746+06:00",
+  "elapsed_seconds": 0.981,
+  "returncode": 1,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "environment": {
+    "CXX": null,
+    "PYTHONHASHSEED": "0",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "log": "docs/dimensionality-reduction-evidence/batch2-attempt1.txt",
+  "summary": "5 failed, 15 passed in 0.73s"
+}

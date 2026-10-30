@@ -1,0 +1,122 @@
+{
+  "status": "all named requirements verified passed in actual final JUnit",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests",
+    "--require-cpp",
+    "-q"
+  ],
+  "evidence": "docs/dimensionality-reduction-evidence/configuration-results.json",
+  "cases": [
+    {
+      "requirement": "DSA missing Python",
+      "test": "tests/test_track_policy.py::test_python_source_and_tests_are_required_for_both[python/solution.py-False]",
+      "status": "passed",
+      "matched_cases": 1,
+      "junit_names": [
+        "test_python_source_and_tests_are_required_for_both[python/solution.py-False]"
+      ]
+    },
+    {
+      "requirement": "DSA missing C++",
+      "test": "tests/test_track_policy.py::test_required_languages_follow_track[False-False-False]",
+      "status": "passed",
+      "matched_cases": 1,
+      "junit_names": [
+        "test_required_languages_follow_track[False-False-False]"
+      ]
+    },
+    {
+      "requirement": "ML missing Python",
+      "test": "tests/test_track_policy.py::test_python_source_and_tests_are_required_for_both[python/solution.py-True]",
+      "status": "passed",
+      "matched_cases": 1,
+      "junit_names": [
+        "test_python_source_and_tests_are_required_for_both[python/solution.py-True]"
+      ]
+    },
+    {
+      "requirement": "ML missing Python tests",
+      "test": "tests/test_track_policy.py::test_python_source_and_tests_are_required_for_both[tests/test_python.py-True]",
+      "status": "passed",
+      "matched_cases": 1,
+      "junit_names": [
+        "test_python_source_and_tests_are_required_for_both[tests/test_python.py-True]"
+      ]
+    },
+    {
+      "requirement": "ML without optional C++ valid",
+      "test": "tests/test_track_policy.py::test_required_languages_follow_track[True-False-True]",
+      "status": "passed",
+      "matched_cases": 1,
+      "junit_names": [
+        "test_required_languages_follow_track[True-False-True]"
+      ]
+    },
+    {
+      "requirement": "Incomplete optional C++ detected",
+      "test": "tests/test_track_policy.py::test_partial_optional_cpp_is_rejected",
+      "status": "passed",
+      "matched_cases": 2,
+      "junit_names": [
+        "test_partial_optional_cpp_is_rejected[cpp/solution.cpp]",
+        "test_partial_optional_cpp_is_rejected[tests/test_cpp.py]"
+      ]
+    },
+    {
+      "requirement": "Duplicate canonical IDs rejected",
+      "test": "tests/test_track_policy.py::test_ml_policy_cannot_bypass_catalog_identity[duplicate]",
+      "status": "passed",
+      "matched_cases": 1,
+      "junit_names": [
+        "test_ml_policy_cannot_bypass_catalog_identity[duplicate]"
+      ]
+    },
+    {
+      "requirement": "Invalid canonical paths rejected",
+      "test": "tests/test_track_policy.py::test_ml_policy_cannot_bypass_catalog_identity[path]",
+      "status": "passed",
+      "matched_cases": 1,
+      "junit_names": [
+        "test_ml_policy_cannot_bypass_catalog_identity[path]"
+      ]
+    },
+    {
+      "requirement": "Documentation drift detected",
+      "test": "tests/test_generate_catalog_docs.py::test_check_reports_drift_without_mutating_files",
+      "status": "passed",
+      "matched_cases": 1,
+      "junit_names": [
+        "test_check_reports_drift_without_mutating_files"
+      ]
+    },
+    {
+      "requirement": "Missing required README sections detected",
+      "test": "tests/test_validate_catalog.py::test_completed_documentation_requires_all_25_sections",
+      "status": "passed",
+      "matched_cases": 1,
+      "junit_names": [
+        "test_completed_documentation_requires_all_25_sections"
+      ]
+    },
+    {
+      "requirement": "Shared B5/B7 exact identity and complete deliverables/batch invariants",
+      "test": "tests/test_b5_shared_canonical_policy.py",
+      "status": "passed",
+      "matched_cases": 7,
+      "junit_names": [
+        "test_shared_numpy_autoencoder_only_exception",
+        "test_shared_member_required_exactly_once_with_real_deliverables",
+        "test_shared_member_cannot_weaken_batch_or_language_checks[missing-shared]",
+        "test_shared_member_cannot_weaken_batch_or_language_checks[duplicate-shared]",
+        "test_shared_member_cannot_weaken_batch_or_language_checks[unrelated]",
+        "test_shared_member_cannot_weaken_batch_or_language_checks[missing-python]",
+        "test_shared_member_cannot_weaken_batch_or_language_checks[partial-cpp]"
+      ]
+    }
+  ],
+  "policy": "Existing negative tests preserved; seven extra exact-shared-canonical checks preserve deferred B7/AI/DSA policy.",
+  "junit": "docs/dimensionality-reduction-evidence/full-suite.xml"
+}

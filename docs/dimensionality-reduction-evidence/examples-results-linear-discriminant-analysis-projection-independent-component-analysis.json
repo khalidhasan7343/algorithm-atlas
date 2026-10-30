@@ -1,0 +1,50 @@
+[
+  {
+    "id": "linear-discriminant-analysis-projection",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "embedding": [
+        [
+          -2.0
+        ],
+        [
+          -2.0
+        ],
+        [
+          2.0
+        ],
+        [
+          2.0
+        ]
+      ]
+    }
+  },
+  {
+    "id": "independent-component-analysis",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "embedding": [
+        [
+          -1.0000000000000002,
+          -1.0
+        ],
+        [
+          -1.0000000000000002,
+          0.9999999999999999
+        ],
+        [
+          1.0000000000000002,
+          -0.9999999999999999
+        ],
+        [
+          1.0000000000000002,
+          1.0
+        ]
+      ]
+    }
+  }
+]

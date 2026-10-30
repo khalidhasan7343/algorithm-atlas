@@ -1,0 +1,16 @@
+[
+  {
+    "id": "B6-001",
+    "kind": "test syntax defect",
+    "evidence": "B6-attempt1.txt",
+    "finding": "New invalid-input parametrization missed one closing list bracket, preventing collection.",
+    "repair": "Corrected bracket; B6-attempt2 passed162 tests, no expectations removed.",
+    "prior_approved_code_changed": false
+  },
+  {
+    "id": "B6-002",
+    "kind": "benchmark measurement correction",
+    "finding": "Initial sparse-regime timing included first canonical module imports; not a fair fit-only measurement.",
+    "repair": "Preload all three classes outside timing; rerun observations. Initial actual output retained as benchmark-attempt1.json. No speed ranking or algorithm defect claimed."
+  }
+]

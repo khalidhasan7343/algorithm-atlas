@@ -1,0 +1,168 @@
+[
+  {
+    "id": "singular-value-decomposition",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "embedding": [
+        [
+          3.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.0
+        ]
+      ]
+    }
+  },
+  {
+    "id": "principal-component-analysis",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "embedding": [
+        [
+          -2.0
+        ],
+        [
+          0.0
+        ],
+        [
+          2.0
+        ],
+        [
+          0.0
+        ]
+      ]
+    }
+  },
+  {
+    "id": "linear-discriminant-analysis-projection",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "embedding": [
+        [
+          -2.0
+        ],
+        [
+          -2.0
+        ],
+        [
+          2.0
+        ],
+        [
+          2.0
+        ]
+      ]
+    }
+  },
+  {
+    "id": "independent-component-analysis",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "embedding": [
+        [
+          -1.0000000000000002,
+          -1.0
+        ],
+        [
+          -1.0000000000000002,
+          0.9999999999999999
+        ],
+        [
+          1.0000000000000002,
+          -0.9999999999999999
+        ],
+        [
+          1.0000000000000002,
+          1.0
+        ]
+      ]
+    }
+  },
+  {
+    "id": "t-sne",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "embedding": [
+        [
+          -1.4734449079516254,
+          -1.1431964373007881
+        ],
+        [
+          -0.29529197242150956,
+          -0.8779893754642524
+        ],
+        [
+          0.2828371112636464,
+          0.3084935864565127
+        ],
+        [
+          1.4874342526529936,
+          1.7139736975804278
+        ]
+      ],
+      "optimization_status": "budget-exhausted"
+    }
+  },
+  {
+    "id": "umap",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "embedding": [
+        [
+          0.22128569116134306,
+          -0.6126050501275904
+        ],
+        [
+          0.2790706149302436,
+          -0.2805029388991007
+        ],
+        [
+          0.4881711884673742,
+          0.9212385693433167
+        ],
+        [
+          0.5459560489467404,
+          1.2533406915838392
+        ]
+      ],
+      "optimization_status": "gradient-tolerance"
+    }
+  },
+  {
+    "id": "vanilla-autoencoders",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "embedding": [
+        [
+          0.9204819714528826
+        ],
+        [
+          0.0
+        ],
+        [
+          -0.9204819714528826
+        ]
+      ],
+      "optimization_status": "gradient-tolerance"
+    }
+  }
+]

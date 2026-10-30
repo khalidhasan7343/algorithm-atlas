@@ -4,19 +4,26 @@ Algorithm Atlas is maintained by [MD.Khalid Hasan](https://github.com/khalidhasa
 
 ## Current phase and approval
 
-The owner explicitly approved the latest Phase 15 Ensemble Methods review package
-and all earlier work, then authorized **Phase 16 — B4 Clustering only**. Implement
-exactly its eight catalog canonicals under [the scope lock](docs/clustering-scope.md)
-and [checkpoints](docs/clustering-checkpoints.md). Preserve B1/B2/B3/DSA code,
-original tests/lessons and all historical reports/evidence/packages. Inventory
-remains 35 categories / 256 memberships / 235 canonicals.
+The owner explicitly approved the latest Phase 17 Dimensionality Reduction
+report/package on client session date 2026-10-30 Asia/Dhaka and authorized
+**Phase 18 — B6 Association Rule Learning only**. Implement the three existing
+canonicals Apriori, Eclat and FP-Growth in that batch order, then the mandatory
+shared rule-generation audit; see [scope](docs/association-rule-learning-scope.md)
+and [checkpoints](docs/association-rule-learning-checkpoints.md). Rule generation
+is a category-local utility, not another catalog algorithm. Preserve accepted
+B1–B5/DSA source, tests, lessons, historical reports/evidence/packages and existing
+staged changes. Inventory stays35 categories /256 memberships /235 canonicals.
 
-Python/NumPy, numerical/oracle/reference tests and exact 25-section lessons remain
-mandatory for ML; C++ is optional. DSA retains Python/C++ and actual C++17/C++20.
-The **new Phase 16 review approval remains pending**. Proceed between passing
-internal batches automatically; stop after the tracked report and verified
-ZIP/checksum/JSON for owner review. No Phase 17, other category, commit, push,
-tag, release or publication. Never set Git identity from public email.
+Python and mathematical/oracle/reference tests and exact25-section lessons are
+mandatory. These combinatorial miners use standard-library sets/dicts and integer
+counts; NumPy is unnecessary in core. ML C++ remains optional; DSA requires both
+languages and actual C++17/C++20 checks. Keep the existing shared-autoencoder and
+other deferred B7/AI policy intact. Continue automatically through passing batches,
+then deliver the tracked report and verified ZIP/checksum/JSON and STOP for owner
+review. **New Phase 18 approval pending.** No Phase19/B7/other category, commit,
+push, tag, release or publication. Never set Git identity from public email.
+
+
 
 ## Prepare a development environment
 

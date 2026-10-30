@@ -6,7 +6,7 @@ From Fundamental Algorithms to Advanced Artificial Intelligence — Learn, Imple
 
 Algorithm Atlas is an educational, open-source project maintained by **MD.Khalid Hasan**. Its goal is to explain algorithms from first principles through clear documentation, Python and modern C++ implementations, meaningful tests, complexity analysis, and practical applications.
 
-**Current state: Phase 16 — B4 Unsupervised Learning: Clustering is authorized.** The owner approved the latest Phase 15 package and all prior work. Follow [the exact B4 scope](docs/clustering-scope.md) and [checkpoints](docs/clustering-checkpoints.md). The new Phase 16 review is pending; no later category is authorized.
+**Current scope: Phase18 — B6 Association Rule Learning.** Latest Phase17 explicitly owner-approved; new Phase18 review pending. Exactly Apriori, Eclat and FP-Growth plus shared rule generation. See [scope](docs/association-rule-learning-scope.md) and [checkpoints](docs/association-rule-learning-checkpoints.md). DSA Python/C++17/C++20 remain required; ML C++ optional. No Phase19/B7, commit or publication.
 
 The [DSA final audit](docs/reviews/dsa-final-audit/DSA-FINAL-AUDIT-REPORT.md) retains its conditional recommendation and original evidence. ML authorization does not retroactively approve historical milestones.
 
@@ -167,7 +167,7 @@ Use the [complexity cheat sheet](docs/complexity-cheatsheet.md) for asymptotic n
 
 [Progress tracking](docs/progress.md) records catalog totals, completed and remaining algorithms, blockers, and the next proposed batch. The [Phase 0 review report](docs/phase-0-review.md) and [complete file inventory](docs/phase-0-files.md) document the foundation handoff. Phase 0 supplies the foundation only. The term **Dynamic Policy Optimization (DPO)** is retained from the syllabus and blocked pending clarification; it has not been replaced by Direct Preference Optimization.
 
-Previous Regression, Classification, Ensemble Methods and DSA work is owner-approved. [Phase 16 Clustering](docs/clustering-checkpoints.md) is the current scope; its new review approval remains pending. No Phase 17, commit, push, tag or release is authorized.
+Previous B1–B5 and DSA work is owner-approved. [Phase18 B6](docs/association-rule-learning-checkpoints.md) is current; new review approval pending. No next category, commit, push, tag or release.
 
 ## Contribution Guidelines
 

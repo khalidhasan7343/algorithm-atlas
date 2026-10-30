@@ -235,7 +235,13 @@ def _validate_development(
 
     if state.get("track") == "machine-learning":
         category = state.get("category")
-        owned = {aid: a for aid, a in algorithms.items() if a.get("category") == category}
+        # B5 includes the one existing NumPy autoencoder owned by B7.
+        # The literal identity is also enforced by track_policy; no arbitrary
+        # deferred topic can be smuggled into a classical ML batch.
+        owned = {aid: a for aid, a in algorithms.items() if a.get("category") == category
+                 or (category == "B5" and aid == "vanilla-autoencoders"
+                     and a.get("category") == "B7"
+                     and a.get("canonical_location") == "machine-learning/deep-learning/vanilla-autoencoders")}
         if not owned or any(track(a) != "machine-learning" for a in owned.values()):
             report.errors.append("development ML category must own classical ML canonical topics")
         plan = state.get("batch_plan")

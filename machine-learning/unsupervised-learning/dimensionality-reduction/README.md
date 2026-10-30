@@ -6,15 +6,17 @@ Constructing lower-dimensional representations with explicit information and sup
 
 This category preserves **7 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
+
+All seven Phase 17 B5 members and its latest verified package are owner-approved. The one shared autoencoder remains at its B7 canonical path. Prior implementations, tests, lessons and review artifacts are preserved.
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Principal Component Analysis (PCA) | [principal-component-analysis](principal-component-analysis/README.md) | planned |
-| t-SNE | [t-sne](t-sne/README.md) | planned |
-| UMAP | [umap](umap/README.md) | planned |
-| Linear Discriminant Analysis (Supervised Variant) | [linear-discriminant-analysis-projection](linear-discriminant-analysis-projection/README.md) | planned |
-| Autoencoders for Dimensionality Reduction | [vanilla-autoencoders](../../deep-learning/vanilla-autoencoders/README.md) | planned |
-| Independent Component Analysis (ICA) | [independent-component-analysis](independent-component-analysis/README.md) | planned |
-| Singular Value Decomposition (SVD) | [singular-value-decomposition](singular-value-decomposition/README.md) | planned |
+| Principal Component Analysis (PCA) | [principal-component-analysis](principal-component-analysis/README.md) | complete |
+| t-SNE | [t-sne](t-sne/README.md) | complete |
+| UMAP | [umap](umap/README.md) | complete |
+| Linear Discriminant Analysis (Supervised Variant) | [linear-discriminant-analysis-projection](linear-discriminant-analysis-projection/README.md) | complete |
+| Autoencoders for Dimensionality Reduction | [vanilla-autoencoders](../../deep-learning/vanilla-autoencoders/README.md) | complete |
+| Independent Component Analysis (ICA) | [independent-component-analysis](independent-component-analysis/README.md) | complete |
+| Singular Value Decomposition (SVD) | [singular-value-decomposition](singular-value-decomposition/README.md) | complete |
 
 ## Learning and contribution scope
 

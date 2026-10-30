@@ -7,11 +7,19 @@ tracks retain the previous two-language requirement until separately authorized.
 READY = frozenset({"implemented", "tested", "reviewed"})
 
 
+# Phase 17 authorizes this existing shared B5/B7 NumPy canonical only.
+# Match all identity fields; unrelated deep-learning/AI remains deferred.
+def shared_numpy_autoencoder(algorithm: dict) -> bool:
+    return (algorithm.get("id") == "vanilla-autoencoders"
+            and algorithm.get("category") == "B7"
+            and algorithm.get("canonical_location") == "machine-learning/deep-learning/vanilla-autoencoders")
+
+
 def track(algorithm: dict) -> str:
     path = algorithm.get("canonical_location", "")
     if path.startswith("dsa/"):
         return "dsa"
-    if path.startswith("machine-learning/") and not path.startswith("machine-learning/deep-learning/"):
+    if path.startswith("machine-learning/") and (not path.startswith("machine-learning/deep-learning/") or shared_numpy_autoencoder(algorithm)):
         return "machine-learning"
     return "deferred"
 

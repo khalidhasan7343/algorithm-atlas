@@ -1,0 +1,67 @@
+{
+  "catalog": {
+    "command": [
+      "python",
+      "scripts/validate_catalog.py"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T14:01:55.502788+06:00",
+    "elapsed_seconds": 0.881,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/dimensionality-reduction-evidence/catalog-attempt3.txt",
+    "summary": "Validation passed. Test execution and external URLs are checked separately."
+  },
+  "generated": {
+    "command": [
+      "python",
+      "scripts/generate_catalog_docs.py",
+      "--check"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T14:01:55.678117+06:00",
+    "elapsed_seconds": 0.175,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/dimensionality-reduction-evidence/generated-attempt3.txt",
+    "summary": "Checked 139 catalog documentation pages; 0 changes."
+  },
+  "infrastructure": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "tests",
+      "--require-cpp",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T14:01:59.150859+06:00",
+    "elapsed_seconds": 3.472,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/dimensionality-reduction-evidence/infrastructure-attempt3.txt",
+    "summary": "323 passed in 3.33s"
+  }
+}

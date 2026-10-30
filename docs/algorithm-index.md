@@ -233,21 +233,21 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Principal Component Analysis (PCA) | [principal-component-analysis](../machine-learning/unsupervised-learning/dimensionality-reduction/principal-component-analysis/README.md) | planned |
-| t-SNE | [t-sne](../machine-learning/unsupervised-learning/dimensionality-reduction/t-sne/README.md) | planned |
-| UMAP | [umap](../machine-learning/unsupervised-learning/dimensionality-reduction/umap/README.md) | planned |
-| Linear Discriminant Analysis (Supervised Variant) | [linear-discriminant-analysis-projection](../machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/README.md) | planned |
-| Autoencoders for Dimensionality Reduction | [vanilla-autoencoders](../machine-learning/deep-learning/vanilla-autoencoders/README.md) | planned |
-| Independent Component Analysis (ICA) | [independent-component-analysis](../machine-learning/unsupervised-learning/dimensionality-reduction/independent-component-analysis/README.md) | planned |
-| Singular Value Decomposition (SVD) | [singular-value-decomposition](../machine-learning/unsupervised-learning/dimensionality-reduction/singular-value-decomposition/README.md) | planned |
+| Principal Component Analysis (PCA) | [principal-component-analysis](../machine-learning/unsupervised-learning/dimensionality-reduction/principal-component-analysis/README.md) | complete |
+| t-SNE | [t-sne](../machine-learning/unsupervised-learning/dimensionality-reduction/t-sne/README.md) | complete |
+| UMAP | [umap](../machine-learning/unsupervised-learning/dimensionality-reduction/umap/README.md) | complete |
+| Linear Discriminant Analysis (Supervised Variant) | [linear-discriminant-analysis-projection](../machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/README.md) | complete |
+| Autoencoders for Dimensionality Reduction | [vanilla-autoencoders](../machine-learning/deep-learning/vanilla-autoencoders/README.md) | complete |
+| Independent Component Analysis (ICA) | [independent-component-analysis](../machine-learning/unsupervised-learning/dimensionality-reduction/independent-component-analysis/README.md) | complete |
+| Singular Value Decomposition (SVD) | [singular-value-decomposition](../machine-learning/unsupervised-learning/dimensionality-reduction/singular-value-decomposition/README.md) | complete |
 
 ## B6. [Association Rule Learning](../machine-learning/unsupervised-learning/association-rule-learning/README.md)
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Apriori | [apriori](../machine-learning/unsupervised-learning/association-rule-learning/apriori/README.md) | planned |
-| FP-Growth | [fp-growth](../machine-learning/unsupervised-learning/association-rule-learning/fp-growth/README.md) | planned |
-| Eclat | [eclat](../machine-learning/unsupervised-learning/association-rule-learning/eclat/README.md) | planned |
+| Apriori | [apriori](../machine-learning/unsupervised-learning/association-rule-learning/apriori/README.md) | complete |
+| FP-Growth | [fp-growth](../machine-learning/unsupervised-learning/association-rule-learning/fp-growth/README.md) | complete |
+| Eclat | [eclat](../machine-learning/unsupervised-learning/association-rule-learning/eclat/README.md) | complete |
 
 ## B7. [Neural Networks and Deep Learning](../machine-learning/deep-learning/README.md)
 
@@ -264,7 +264,7 @@ Foundation checks validate repository structure; they are separate from tests of
 | Diffusion Models | [diffusion-models](../machine-learning/deep-learning/diffusion-models/README.md) | planned |
 | Graph Neural Networks (GNN) | [graph-neural-networks](../machine-learning/deep-learning/graph-neural-networks/README.md) | planned |
 | Residual Networks (ResNet) | [residual-networks](../machine-learning/deep-learning/residual-networks/README.md) | planned |
-| Vanilla Autoencoders | [vanilla-autoencoders](../machine-learning/deep-learning/vanilla-autoencoders/README.md) | planned |
+| Vanilla Autoencoders | [vanilla-autoencoders](../machine-learning/deep-learning/vanilla-autoencoders/README.md) | complete |
 | Denoising Autoencoders | [denoising-autoencoders](../machine-learning/deep-learning/denoising-autoencoders/README.md) | planned |
 | Sparse Autoencoders | [sparse-autoencoders](../machine-learning/deep-learning/sparse-autoencoders/README.md) | planned |
 

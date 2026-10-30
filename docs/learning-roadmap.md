@@ -2,7 +2,7 @@
 
 Progress from foundational problem solving to specialized AI topics. These levels describe a study order, not repository development phases: learning a later level does not authorize implementation outside the approved development phase.
 
-**Current scope:** Phase 16 B4 Clustering only, following explicit approval of the latest Phase 15 package. Follow [scope](clustering-scope.md) and [checkpoints](clustering-checkpoints.md). All eight catalog canonicals are authorized; the new Phase 16 review remains pending. No later category is authorized.
+**Current scope: Phase18 — B6 Association Rule Learning.** Latest Phase17 explicitly owner-approved; new Phase18 review pending. Exactly Apriori, Eclat and FP-Growth plus shared rule generation. See [scope](association-rule-learning-scope.md) and [checkpoints](association-rule-learning-checkpoints.md). DSA Python/C++17/C++20 remain required; ML C++ optional. No Phase19/B7, commit or publication.
 
 ## Level 1 — DSA Foundations
 
@@ -115,7 +115,7 @@ Choose branches according to the structure of the problem:
 
 Follow the prerequisites rather than treating levels as a fixed schedule. For each available completed topic, read its intuition and contract, predict a small example's output, inspect the implementation, run its documented tests, and explain its complexity in your own words. For unimplemented topics, use the linked planning notes to understand scope and prerequisites; runnable material follows only within an approved category.
 
-Contributors should consult the [development guide](development.md) and [progress tracker](progress.md). Implement only the eight catalog B3 canonicals, pass their internal gates and stop after the verified Phase 15 review package for owner acceptance.
+Contributors should consult the [development guide](development.md) and [progress tracker](progress.md). Implement only the three B6 canonicals and shared rule utility; pass all four internal gates and stop after the verified Phase18 package for owner review.
 
 
 ## Graph Algorithms learning sequence
@@ -140,9 +140,9 @@ Phase 7 is owner-approved. Study these fourteen canonical lessons in the same fi
 
 [Tree conventions](tree-conventions.md) state each API's ownership, numeric bounds and mutation contract. These topics reuse their catalog paths. Do not start another category before explicit owner approval.
 
-## Current Phase 16 authorization
+## Current Phase18 authorization
 
-The owner explicitly approved the latest Phase 15 package and previous work,
-authorizing only [B4 Clustering](clustering-scope.md). Its eight canonicals keep
-their existing IDs/paths. Follow [checkpoints](clustering-checkpoints.md); new
-Phase 16 review approval is pending. No Phase 17, Deep Learning or AI work.
+The owner approved the latest Phase17 package and authorized only B6 Association
+Rule Learning. See [scope](association-rule-learning-scope.md). Three canonical
+mining batches and one shared-rule gate precede the new pending owner review.
+The B5/B7 autoencoder stays one approved canonical; no new B7/AI work is authorized.

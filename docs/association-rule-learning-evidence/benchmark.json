@@ -1,0 +1,122 @@
+{
+  "results": [
+    {
+      "regime": "sparse",
+      "seed": 18060,
+      "transactions": 96,
+      "universe": 8,
+      "min_support": 0.25,
+      "algorithm": "apriori",
+      "frequent_itemsets": 0,
+      "work_units": 209,
+      "seconds": 6.50830043014139e-05,
+      "fp_tree_nodes": null,
+      "direct_count_oracle": "passed"
+    },
+    {
+      "regime": "sparse",
+      "seed": 18060,
+      "transactions": 96,
+      "universe": 8,
+      "min_support": 0.25,
+      "algorithm": "eclat",
+      "frequent_itemsets": 0,
+      "work_units": 209,
+      "seconds": 5.979198613204062e-05,
+      "fp_tree_nodes": null,
+      "direct_count_oracle": "passed"
+    },
+    {
+      "regime": "sparse",
+      "seed": 18060,
+      "transactions": 96,
+      "universe": 8,
+      "min_support": 0.25,
+      "algorithm": "fp-growth",
+      "frequent_itemsets": 0,
+      "work_units": 418,
+      "seconds": 0.00010666600428521633,
+      "fp_tree_nodes": 0,
+      "direct_count_oracle": "passed"
+    },
+    {
+      "regime": "dense",
+      "seed": 18061,
+      "transactions": 96,
+      "universe": 8,
+      "min_support": 0.25,
+      "algorithm": "apriori",
+      "frequent_itemsets": 244,
+      "work_units": 96244,
+      "seconds": 0.002489417005563155,
+      "fp_tree_nodes": null,
+      "direct_count_oracle": "passed"
+    },
+    {
+      "regime": "dense",
+      "seed": 18061,
+      "transactions": 96,
+      "universe": 8,
+      "min_support": 0.25,
+      "algorithm": "eclat",
+      "frequent_itemsets": 244,
+      "work_units": 12742,
+      "seconds": 0.0006162080098874867,
+      "fp_tree_nodes": null,
+      "direct_count_oracle": "passed"
+    },
+    {
+      "regime": "dense",
+      "seed": 18061,
+      "transactions": 96,
+      "universe": 8,
+      "min_support": 0.25,
+      "algorithm": "fp-growth",
+      "frequent_itemsets": 244,
+      "work_units": 6772,
+      "seconds": 0.0014588340127374977,
+      "fp_tree_nodes": 101,
+      "direct_count_oracle": "passed"
+    },
+    {
+      "regime": "shared-prefix",
+      "seed": 18062,
+      "transactions": 96,
+      "universe": 8,
+      "min_support": 0.25,
+      "algorithm": "apriori",
+      "frequent_itemsets": 16,
+      "work_units": 4026,
+      "seconds": 0.00024329201551154256,
+      "fp_tree_nodes": null,
+      "direct_count_oracle": "passed"
+    },
+    {
+      "regime": "shared-prefix",
+      "seed": 18062,
+      "transactions": 96,
+      "universe": 8,
+      "min_support": 0.25,
+      "algorithm": "eclat",
+      "frequent_itemsets": 16,
+      "work_units": 1481,
+      "seconds": 0.00012650000280700624,
+      "fp_tree_nodes": null,
+      "direct_count_oracle": "passed"
+    },
+    {
+      "regime": "shared-prefix",
+      "seed": 18062,
+      "transactions": 96,
+      "universe": 8,
+      "min_support": 0.25,
+      "algorithm": "fp-growth",
+      "frequent_itemsets": 16,
+      "work_units": 1227,
+      "seconds": 0.0002331669966224581,
+      "fp_tree_nodes": 17,
+      "direct_count_oracle": "passed"
+    }
+  ],
+  "interpretation": "Canonical imports excluded. Single bounded seeded construction/fit experiments, not repeated performance estimates or a universal winner; work units differ by algorithm and are not comparable CPU instructions."
+}

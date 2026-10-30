@@ -1,0 +1,46 @@
+[
+  {
+    "id": "singular-value-decomposition",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "embedding": [
+        [
+          3.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.0
+        ]
+      ]
+    }
+  },
+  {
+    "id": "principal-component-analysis",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "embedding": [
+        [
+          -2.0
+        ],
+        [
+          0.0
+        ],
+        [
+          2.0
+        ],
+        [
+          0.0
+        ]
+      ]
+    }
+  }
+]

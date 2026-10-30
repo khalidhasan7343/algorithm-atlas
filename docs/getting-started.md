@@ -1,6 +1,6 @@
 # Getting Started
 
-Algorithm Atlas is an educational repository for DSA, machine learning and artificial intelligence topics. **Phase 16 B4 Clustering is authorized after owner acceptance of the latest Phase 15 package.** DSA requires Python/C++ and both C++17/C++20; ML requires Python/numerical tests with optional C++. Follow [Clustering checkpoints](clustering-checkpoints.md) and [ML development](ml-development.md). The new Phase 16 review remains pending.
+**Current scope: Phase18 — B6 Association Rule Learning.** Latest Phase17 explicitly owner-approved; new Phase18 review pending. Exactly Apriori, Eclat and FP-Growth plus shared rule generation. See [scope](association-rule-learning-scope.md) and [checkpoints](association-rule-learning-checkpoints.md). DSA Python/C++17/C++20 remain required; ML C++ optional. No Phase19/B7, commit or publication.
 
 Start with the [learning roadmap](learning-roadmap.md), browse the [complete algorithm index](algorithm-index.md), and consult the [progress tracker](progress.md) before choosing a topic. The [glossary](glossary.md) and [complexity cheat sheet](complexity-cheatsheet.md) explain terminology used throughout the project.
 

@@ -1,0 +1,135 @@
+{
+  "baseline-B1": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/regression",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T09:28:24.470693+06:00",
+    "elapsed_seconds": 1.196,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/dimensionality-reduction-evidence/baseline-B1-attempt1.txt",
+    "summary": "281 passed in 0.97s"
+  },
+  "baseline-B2": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/classification",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T09:28:25.454438+06:00",
+    "elapsed_seconds": 0.983,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/dimensionality-reduction-evidence/baseline-B2-attempt1.txt",
+    "summary": "398 passed in 0.81s"
+  },
+  "baseline-B3": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/ensemble-methods",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T09:28:26.334962+06:00",
+    "elapsed_seconds": 0.88,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/dimensionality-reduction-evidence/baseline-B3-attempt1.txt",
+    "summary": "253 passed in 0.69s"
+  },
+  "baseline-B4": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/clustering",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T09:28:27.202413+06:00",
+    "elapsed_seconds": 0.867,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/dimensionality-reduction-evidence/baseline-B4-attempt1.txt",
+    "summary": "206 passed in 0.68s"
+  },
+  "baseline-catalog": {
+    "command": [
+      "python",
+      "scripts/validate_catalog.py"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T09:28:27.903209+06:00",
+    "elapsed_seconds": 0.7,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/dimensionality-reduction-evidence/baseline-catalog-attempt1.txt",
+    "summary": "Validation passed. Test execution and external URLs are checked separately."
+  },
+  "baseline-generated": {
+    "command": [
+      "python",
+      "scripts/generate_catalog_docs.py",
+      "--check"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T09:28:28.069737+06:00",
+    "elapsed_seconds": 0.166,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/dimensionality-reduction-evidence/baseline-generated-attempt1.txt",
+    "summary": "Checked 146 catalog documentation pages; 0 changes."
+  }
+}

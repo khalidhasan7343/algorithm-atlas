@@ -1,0 +1,101 @@
+{
+  "apriori": {
+    "canonical_location": "machine-learning/unsupervised-learning/association-rule-learning/apriori",
+    "class_name": "Apriori",
+    "payload": {
+      "transactions": [
+        [
+          "a",
+          "b",
+          "c"
+        ],
+        [
+          "a",
+          "b",
+          "c"
+        ],
+        [
+          "a",
+          "b"
+        ],
+        [
+          "a",
+          "c"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "parameters": {
+        "min_support": 0.4
+      }
+    }
+  },
+  "eclat": {
+    "canonical_location": "machine-learning/unsupervised-learning/association-rule-learning/eclat",
+    "class_name": "Eclat",
+    "payload": {
+      "transactions": [
+        [
+          "a",
+          "b",
+          "c"
+        ],
+        [
+          "a",
+          "b",
+          "c"
+        ],
+        [
+          "a",
+          "b"
+        ],
+        [
+          "a",
+          "c"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "parameters": {
+        "min_support": 0.4
+      }
+    }
+  },
+  "fp-growth": {
+    "canonical_location": "machine-learning/unsupervised-learning/association-rule-learning/fp-growth",
+    "class_name": "FPGrowth",
+    "payload": {
+      "transactions": [
+        [
+          "a",
+          "b",
+          "c"
+        ],
+        [
+          "a",
+          "b",
+          "c"
+        ],
+        [
+          "a",
+          "b"
+        ],
+        [
+          "a",
+          "c"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "parameters": {
+        "min_support": 0.4
+      }
+    }
+  }
+}
