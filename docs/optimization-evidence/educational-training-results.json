@@ -1,0 +1,229 @@
+{
+  "description": "One noisy small least-squares objective and one12-bit Hamming target; all declared seeds/outcomes retained.",
+  "analytic_task_optimum": [
+    1.0749999999999997,
+    -2.0124999999999997
+  ],
+  "analytic_task_minimum": 0.005312500000000005,
+  "continuous": [
+    {
+      "topic": "batch-gradient-descent",
+      "x": [
+        1.075000003834633,
+        -2.012499993999049
+      ],
+      "objective": 0.005312500000000036,
+      "gap_to_task_optimum": 3.122502256758253e-17,
+      "iterations": 140,
+      "nfev": 141,
+      "status": "gradient-tolerance",
+      "converged": true,
+      "gradient_norm": 9.495339096474444e-09,
+      "elapsed_seconds": 0.0038474580214824528
+    },
+    {
+      "topic": "momentum",
+      "x": [
+        1.0749999995027446,
+        -2.0125000007781724
+      ],
+      "objective": 0.005312500000000005,
+      "gap_to_task_optimum": 0.0,
+      "iterations": 165,
+      "nfev": 166,
+      "status": "gradient-tolerance",
+      "converged": true,
+      "gradient_norm": 1.2313066036463674e-09,
+      "elapsed_seconds": 0.004629959003068507
+    },
+    {
+      "topic": "rmsprop",
+      "x": [
+        1.0700000074999998,
+        -2.0174999925000003
+      ],
+      "objective": 0.00534583323333342,
+      "gap_to_task_optimum": 3.333323333341506e-05,
+      "iterations": 1000,
+      "nfev": 1001,
+      "status": "iteration-budget",
+      "converged": false,
+      "gradient_norm": 0.009428076273685571,
+      "elapsed_seconds": 0.02672045901999809
+    },
+    {
+      "topic": "adam",
+      "x": [
+        1.0750000046449053,
+        -2.012500004238115
+      ],
+      "objective": 0.005312500000000028,
+      "gap_to_task_optimum": 2.3418766925686896e-17,
+      "iterations": 387,
+      "nfev": 388,
+      "status": "gradient-tolerance",
+      "converged": true,
+      "gradient_norm": 8.383768769509453e-09,
+      "elapsed_seconds": 0.01198508299421519
+    },
+    {
+      "topic": "adamw",
+      "x": [
+        1.071340363876461,
+        -2.0124999999999993
+      ],
+      "objective": 0.005321428624371144,
+      "gap_to_task_optimum": 8.928624371139053e-06,
+      "iterations": 1000,
+      "nfev": 1001,
+      "status": "iteration-budget",
+      "converged": false,
+      "gradient_norm": 0.004879514831385462,
+      "elapsed_seconds": 0.038334667013259605
+    },
+    {
+      "topic": "l-bfgs",
+      "x": [
+        1.0749999999999997,
+        -2.0124999999999997
+      ],
+      "objective": 0.005312500000000005,
+      "gap_to_task_optimum": 0.0,
+      "iterations": 2,
+      "nfev": 3,
+      "status": "gradient-tolerance",
+      "converged": true,
+      "gradient_norm": 2.62865149002855e-16,
+      "elapsed_seconds": 0.0004301249864511192
+    }
+  ],
+  "stochastic": [
+    {
+      "topic": "stochastic-gradient-descent",
+      "seed": 21,
+      "objective": 0.005333470184256949,
+      "gap_to_task_optimum": 2.0970184256944267e-05,
+      "gradient_norm": 0.007478000491565279,
+      "status": "epoch-budget",
+      "converged": false,
+      "epochs": 50,
+      "updates": 300
+    },
+    {
+      "topic": "mini-batch-gradient-descent",
+      "seed": 21,
+      "objective": 0.0053157530814134666,
+      "gap_to_task_optimum": 3.253081413461846e-06,
+      "gradient_norm": 0.0029453155636063487,
+      "status": "epoch-budget",
+      "converged": false,
+      "epochs": 50,
+      "updates": 150
+    },
+    {
+      "topic": "genetic-algorithms",
+      "seed": 21,
+      "initial_best": 5.0,
+      "objective": 0.0,
+      "iterations": 6,
+      "nfev": 78,
+      "status": "target-reached",
+      "converged": true
+    },
+    {
+      "topic": "simulated-annealing",
+      "seed": 21,
+      "initial_best": 6.0,
+      "objective": 0.0,
+      "iterations": 39,
+      "nfev": 40,
+      "status": "target-reached",
+      "converged": true
+    },
+    {
+      "topic": "stochastic-gradient-descent",
+      "seed": 22,
+      "objective": 0.00531386341064104,
+      "gap_to_task_optimum": 1.3634106410349497e-06,
+      "gradient_norm": 0.0019067673453850896,
+      "status": "epoch-budget",
+      "converged": false,
+      "epochs": 50,
+      "updates": 300
+    },
+    {
+      "topic": "mini-batch-gradient-descent",
+      "seed": 22,
+      "objective": 0.005312737705198744,
+      "gap_to_task_optimum": 2.377051987389675e-07,
+      "gradient_norm": 0.0007961661447071739,
+      "status": "epoch-budget",
+      "converged": false,
+      "epochs": 50,
+      "updates": 150
+    },
+    {
+      "topic": "genetic-algorithms",
+      "seed": 22,
+      "initial_best": 4.0,
+      "objective": 0.0,
+      "iterations": 9,
+      "nfev": 111,
+      "status": "target-reached",
+      "converged": true
+    },
+    {
+      "topic": "simulated-annealing",
+      "seed": 22,
+      "initial_best": 6.0,
+      "objective": 0.0,
+      "iterations": 48,
+      "nfev": 49,
+      "status": "target-reached",
+      "converged": true
+    },
+    {
+      "topic": "stochastic-gradient-descent",
+      "seed": 23,
+      "objective": 0.005316084437072109,
+      "gap_to_task_optimum": 3.584437072104256e-06,
+      "gradient_norm": 0.0030916822053606136,
+      "status": "epoch-budget",
+      "converged": false,
+      "epochs": 50,
+      "updates": 300
+    },
+    {
+      "topic": "mini-batch-gradient-descent",
+      "seed": 23,
+      "objective": 0.005319541762119251,
+      "gap_to_task_optimum": 7.041762119246349e-06,
+      "gradient_norm": 0.004333362703259098,
+      "status": "epoch-budget",
+      "converged": false,
+      "epochs": 50,
+      "updates": 150
+    },
+    {
+      "topic": "genetic-algorithms",
+      "seed": 23,
+      "initial_best": 4.0,
+      "objective": 0.0,
+      "iterations": 9,
+      "nfev": 111,
+      "status": "target-reached",
+      "converged": true
+    },
+    {
+      "topic": "simulated-annealing",
+      "seed": 23,
+      "initial_best": 6.0,
+      "objective": 0.0,
+      "iterations": 35,
+      "nfev": 36,
+      "status": "target-reached",
+      "converged": true
+    }
+  ],
+  "limits": "Observed objective progress is not global convergence. AdamW reports raw task loss,not a coupled L2 objective. Constant-rate sampled methods can exhaust budgets on noisy data. Binary target flags certify only the explicit known threshold. Times are measured teaching runs,not comparative benchmarks."
+}

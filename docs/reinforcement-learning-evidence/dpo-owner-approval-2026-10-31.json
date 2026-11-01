@@ -1,0 +1,23 @@
+{
+  "client_date": "2026-10-31 Asia/Dhaka",
+  "owner": "MD.Khalid Hasan",
+  "outcome": 3,
+  "decision": "remain-blocked",
+  "dpo_specification_owner_approval": "approved",
+  "phase20_implementation_owner_approval": "pending",
+  "owner_statement": "I explicitly approve Outcome 3 — Keep Dynamic Policy Optimization (DPO) Blocked.",
+  "canonical_id": "dynamic-policy-optimization",
+  "canonical_path": "machine-learning/reinforcement-learning/dynamic-policy-optimization",
+  "artifact_statuses": {
+    "documentation_status": "blocked",
+    "python_status": "blocked",
+    "cpp_status": "blocked",
+    "test_status": "blocked"
+  },
+  "substitution_authorized": false,
+  "scope": "9 completed algorithms + 1 intentionally blocked algorithm; full catalog completion remains false",
+  "research_report": "docs/reviews/reinforcement-learning/DPO-SPECIFICATION-DECISION-REPORT.md",
+  "research_body_sha256_before": "8f089a3dbaa34e54a9f3632d828b9ac88c592a2c1413ae70b51a1a3b4917612a",
+  "research_body_sha256_after": "8f089a3dbaa34e54a9f3632d828b9ac88c592a2c1413ae70b51a1a3b4917612a",
+  "authorization": "Update report/progress; run catalog/generated/B8/full regressions; regenerate verified ZIP/checksum/JSON; stop for owner review; no commit/push/release/Phase21"
+}

@@ -1,0 +1,40 @@
+{
+  "topic": "sarima",
+  "command": [
+    "python",
+    "machine-learning/time-series/sarima/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"seasonal_order\": [1, 0, 0, 4], \"status\": \"gradient-tolerance\", \"converged\": true, \"iterations\": 6, \"seasonal_ar\": [0.53938392], \"forecast\": [0.01013655, -0.03190306, 0.12595536, -0.05328388, 0.00546749, -0.017208], \"index\": [80.0, 81.0, 82.0, 83.0, 84.0, 85.0]}\n",
+  "parsed": {
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      4
+    ],
+    "status": "gradient-tolerance",
+    "converged": true,
+    "iterations": 6,
+    "seasonal_ar": [
+      0.53938392
+    ],
+    "forecast": [
+      0.01013655,
+      -0.03190306,
+      0.12595536,
+      -0.05328388,
+      0.00546749,
+      -0.017208
+    ],
+    "index": [
+      80.0,
+      81.0,
+      82.0,
+      83.0,
+      84.0,
+      85.0
+    ]
+  },
+  "sections": 25
+}

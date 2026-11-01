@@ -1,0 +1,30 @@
+{
+  "batch": 4,
+  "test_record": "docs/reinforcement-learning-evidence/batch4-02.json",
+  "returncode": 0,
+  "examples": [
+    {
+      "topic": "proximal-policy-optimization",
+      "command": [
+        "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+        "/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/proximal-policy-optimization/python/example.py"
+      ],
+      "returncode": 0,
+      "sections": 25,
+      "output": "{\"loss\": 0.10000000000000009}",
+      "elapsed_seconds": 0.0484
+    },
+    {
+      "topic": "deep-deterministic-policy-gradient",
+      "command": [
+        "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+        "/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/deep-deterministic-policy-gradient/python/example.py"
+      ],
+      "returncode": 0,
+      "sections": 25,
+      "output": "{\"action\": 1.0, \"target_bias\": 0.5}",
+      "elapsed_seconds": 0.0587
+    }
+  ],
+  "dpo": "unchanged"
+}

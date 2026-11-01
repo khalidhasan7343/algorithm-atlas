@@ -1,0 +1,29 @@
+.....F................                                                   [100%]
+=================================== FAILURES ===================================
+___________ test_transactional_state_empty_outputs_and_invalid_data ____________
+
+algorithm = <module 'classification_test_gaussian_naive_bayes' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/supervised-learning/classification/gaussian-naive-bayes/python/solution.py'>
+
+    def test_transactional_state_empty_outputs_and_invalid_data(algorithm):
+        X=np.array([[0.],[1],[5],[6]]);saved=X.copy();model=algorithm.GaussianNaiveBayes()
+>       with pytest.raises(ValueError):model.predict(X)
+                                       ^^^^^^^^^^^^^^^^
+
+machine-learning/supervised-learning/classification/gaussian-naive-bayes/tests/test_python.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <classification_test_gaussian_naive_bayes.GaussianNaiveBayes object at 0x10f040380>
+X = array([[0.],
+       [1.],
+       [5.],
+       [6.]])
+
+    def predict(self, X):
+>       return self.classes_[np.argmax(self._comparative_scores(X), axis=1)]
+               ^^^^^^^^^^^^^
+E       AttributeError: 'GaussianNaiveBayes' object has no attribute 'classes_'
+
+machine-learning/supervised-learning/classification/gaussian-naive-bayes/python/solution.py:65: AttributeError
+=========================== short test summary info ============================
+FAILED machine-learning/supervised-learning/classification/gaussian-naive-bayes/tests/test_python.py::test_transactional_state_empty_outputs_and_invalid_data
+1 failed, 21 passed in 0.63s

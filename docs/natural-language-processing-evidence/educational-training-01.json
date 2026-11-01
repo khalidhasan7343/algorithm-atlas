@@ -1,0 +1,18 @@
+{
+  "label": "educational-training",
+  "command": [
+    "python",
+    "scripts/evaluate_natural_language_processing.py"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "scripts/evaluate_natural_language_processing.py"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-01T19:06:08.810735+06:00",
+  "elapsed_seconds": 0.773,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/natural-language-processing-evidence/educational-training-01.txt"
+}

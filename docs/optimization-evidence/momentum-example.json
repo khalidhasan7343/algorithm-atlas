@@ -1,0 +1,32 @@
+{
+  "topic": "momentum",
+  "command": [
+    "python",
+    "machine-learning/optimization/momentum/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"converged\": true, \"gradient_norm\": 4.3e-09, \"initial\": [3.0, 1.0], \"iterations\": 180, \"learning_rate\": 0.1, \"objective\": -9.0, \"objective_evaluations\": 181, \"status\": \"gradient-tolerance\", \"task_optimum\": [1.0, -2.0], \"updates\": 180, \"x\": [1.0, -2.0]}\n",
+  "sections": 25,
+  "parsed": {
+    "converged": true,
+    "gradient_norm": 4.3e-09,
+    "initial": [
+      3.0,
+      1.0
+    ],
+    "iterations": 180,
+    "learning_rate": 0.1,
+    "objective": -9.0,
+    "objective_evaluations": 181,
+    "status": "gradient-tolerance",
+    "task_optimum": [
+      1.0,
+      -2.0
+    ],
+    "updates": 180,
+    "x": [
+      1.0,
+      -2.0
+    ]
+  }
+}

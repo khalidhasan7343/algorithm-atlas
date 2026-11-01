@@ -1,0 +1,25 @@
+{
+  "label": "batch5-development",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/natural-language-processing/cyk-parsing",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/natural-language-processing/cyk-parsing",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/batch5-development-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-01T18:59:54.250629+06:00",
+  "elapsed_seconds": 0.262,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/natural-language-processing-evidence/batch5-development-01.txt"
+}

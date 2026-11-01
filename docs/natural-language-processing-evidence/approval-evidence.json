@@ -1,0 +1,16 @@
+{
+  "owner": "MD.Khalid Hasan",
+  "approved_on": "2026-11-01 Asia/Dhaka",
+  "owner_statement": "Approved pervious work and review done.now follow this properly.",
+  "context": "Owner explicitly approves immediately after Phase24 verified final handoff and attaches Phase25 B13 master prompt.",
+  "phase24_owner_approval": "approved",
+  "phase25_owner_approval": "pending",
+  "approved_package_sha256": "2f50fc57639736f2544f056a45fe1b94859ac5cc4aaae01dd488969b741754a6",
+  "accepted_package_files": 3606,
+  "accepted_required_files": 879,
+  "accepted_package_crc": "passed",
+  "accepted_manifest_matches_starting_source": true,
+  "accepted_extraction_checks": 10,
+  "accepted_extracted_full_summary": "4734 passed in448.29s",
+  "authorized_next_scope": "Phase25 B13 only:11 existing canonicals in five internal batches"
+}

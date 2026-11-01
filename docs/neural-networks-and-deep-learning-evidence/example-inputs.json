@@ -1,0 +1,651 @@
+{
+  "multilayer-perceptron": {
+    "canonical_location": "machine-learning/deep-learning/multilayer-perceptron",
+    "class_name": "MLPClassifier",
+    "kind": "classifier",
+    "payload": {
+      "X": [
+        [
+          -1,
+          -1
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "y": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "parameters": {
+        "hidden_dim": 8,
+        "epochs": 600,
+        "learning_rate": 0.5,
+        "batch_size": 4,
+        "random_state": 19002
+      }
+    }
+  },
+  "vanilla-autoencoders": {
+    "id": "vanilla-autoencoders",
+    "canonical_location": "machine-learning/deep-learning/vanilla-autoencoders",
+    "class_name": "Autoencoder",
+    "payload": {
+      "X": [
+        [
+          -1,
+          -0.5
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0.5
+        ]
+      ],
+      "parameters": {
+        "latent_dim": 1,
+        "max_iter": 30,
+        "random_state": 0
+      }
+    },
+    "kind": "legacy"
+  },
+  "convolutional-neural-networks": {
+    "canonical_location": "machine-learning/deep-learning/convolutional-neural-networks",
+    "class_name": "CNNRegressor",
+    "kind": "cnn",
+    "payload": {
+      "X": [
+        [
+          [
+            [
+              -1,
+              -0.5
+            ],
+            [
+              0,
+              0.5
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              -0.5,
+              0
+            ],
+            [
+              0.5,
+              1
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              0,
+              0.5
+            ],
+            [
+              1,
+              0.5
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              0.5,
+              1
+            ],
+            [
+              0.5,
+              0
+            ]
+          ]
+        ]
+      ],
+      "y": [
+        [
+          -0.25
+        ],
+        [
+          0.25
+        ],
+        [
+          0.5
+        ],
+        [
+          0.5
+        ]
+      ],
+      "parameters": {
+        "filters": 2,
+        "epochs": 50,
+        "batch_size": 4
+      }
+    }
+  },
+  "residual-networks": {
+    "canonical_location": "machine-learning/deep-learning/residual-networks",
+    "class_name": "ResidualRegressor",
+    "kind": "regression",
+    "payload": {
+      "X": [
+        [
+          -1,
+          -0.5
+        ],
+        [
+          -0.2,
+          -0.1
+        ],
+        [
+          0.3,
+          0.1
+        ],
+        [
+          1,
+          0.5
+        ]
+      ],
+      "y": [
+        [
+          -1.5
+        ],
+        [
+          -0.3
+        ],
+        [
+          0.4
+        ],
+        [
+          1.5
+        ]
+      ],
+      "parameters": {
+        "hidden_dim": 3,
+        "epochs": 80,
+        "batch_size": 4
+      }
+    }
+  },
+  "recurrent-neural-networks": {
+    "canonical_location": "machine-learning/deep-learning/recurrent-neural-networks",
+    "class_name": "RNNRegressor",
+    "kind": "sequence",
+    "payload": {
+      "X": [
+        [
+          [
+            -0.4
+          ],
+          [
+            -0.2
+          ]
+        ],
+        [
+          [
+            -0.2
+          ],
+          [
+            0.1
+          ]
+        ],
+        [
+          [
+            0.1
+          ],
+          [
+            0.3
+          ]
+        ],
+        [
+          [
+            0.4
+          ],
+          [
+            0.2
+          ]
+        ]
+      ],
+      "y": [
+        [
+          -0.6
+        ],
+        [
+          -0.1
+        ],
+        [
+          0.4
+        ],
+        [
+          0.6
+        ]
+      ],
+      "parameters": {
+        "hidden_dim": 3,
+        "epochs": 100,
+        "learning_rate": 0.2,
+        "batch_size": 4
+      }
+    }
+  },
+  "long-short-term-memory": {
+    "canonical_location": "machine-learning/deep-learning/long-short-term-memory",
+    "class_name": "LSTMRegressor",
+    "kind": "sequence",
+    "payload": {
+      "X": [
+        [
+          [
+            -0.4
+          ],
+          [
+            -0.2
+          ]
+        ],
+        [
+          [
+            -0.2
+          ],
+          [
+            0.1
+          ]
+        ],
+        [
+          [
+            0.1
+          ],
+          [
+            0.3
+          ]
+        ],
+        [
+          [
+            0.4
+          ],
+          [
+            0.2
+          ]
+        ]
+      ],
+      "y": [
+        [
+          -0.6
+        ],
+        [
+          -0.1
+        ],
+        [
+          0.4
+        ],
+        [
+          0.6
+        ]
+      ],
+      "parameters": {
+        "hidden_dim": 3,
+        "epochs": 100,
+        "learning_rate": 0.2,
+        "batch_size": 4
+      }
+    }
+  },
+  "gated-recurrent-units": {
+    "canonical_location": "machine-learning/deep-learning/gated-recurrent-units",
+    "class_name": "GRURegressor",
+    "kind": "sequence",
+    "payload": {
+      "X": [
+        [
+          [
+            -0.4
+          ],
+          [
+            -0.2
+          ]
+        ],
+        [
+          [
+            -0.2
+          ],
+          [
+            0.1
+          ]
+        ],
+        [
+          [
+            0.1
+          ],
+          [
+            0.3
+          ]
+        ],
+        [
+          [
+            0.4
+          ],
+          [
+            0.2
+          ]
+        ]
+      ],
+      "y": [
+        [
+          -0.6
+        ],
+        [
+          -0.1
+        ],
+        [
+          0.4
+        ],
+        [
+          0.6
+        ]
+      ],
+      "parameters": {
+        "hidden_dim": 3,
+        "epochs": 100,
+        "learning_rate": 0.2,
+        "batch_size": 4
+      }
+    }
+  },
+  "transformers": {
+    "canonical_location": "machine-learning/deep-learning/transformers",
+    "class_name": "TransformerRegressor",
+    "kind": "sequence",
+    "payload": {
+      "X": [
+        [
+          [
+            -0.4
+          ],
+          [
+            -0.2
+          ]
+        ],
+        [
+          [
+            -0.2
+          ],
+          [
+            0.1
+          ]
+        ],
+        [
+          [
+            0.1
+          ],
+          [
+            0.3
+          ]
+        ],
+        [
+          [
+            0.4
+          ],
+          [
+            0.2
+          ]
+        ]
+      ],
+      "y": [
+        [
+          -0.2
+        ],
+        [
+          0.1
+        ],
+        [
+          0.3
+        ],
+        [
+          0.2
+        ]
+      ],
+      "parameters": {
+        "d_model": 4,
+        "heads": 2,
+        "hidden_dim": 4,
+        "epochs": 50,
+        "learning_rate": 0.03,
+        "batch_size": 4
+      }
+    }
+  },
+  "denoising-autoencoders": {
+    "canonical_location": "machine-learning/deep-learning/denoising-autoencoders",
+    "class_name": "DenoisingAutoencoder",
+    "kind": "ae",
+    "payload": {
+      "X": [
+        [
+          -1,
+          -0.5
+        ],
+        [
+          -0.3,
+          -0.15
+        ],
+        [
+          0.3,
+          0.15
+        ],
+        [
+          1,
+          0.5
+        ]
+      ],
+      "parameters": {
+        "latent_dim": 1,
+        "epochs": 80,
+        "learning_rate": 0.2,
+        "batch_size": 4
+      }
+    }
+  },
+  "sparse-autoencoders": {
+    "canonical_location": "machine-learning/deep-learning/sparse-autoencoders",
+    "class_name": "SparseAutoencoder",
+    "kind": "ae",
+    "payload": {
+      "X": [
+        [
+          -1,
+          -0.5
+        ],
+        [
+          -0.3,
+          -0.15
+        ],
+        [
+          0.3,
+          0.15
+        ],
+        [
+          1,
+          0.5
+        ]
+      ],
+      "parameters": {
+        "latent_dim": 1,
+        "epochs": 80,
+        "learning_rate": 0.2,
+        "batch_size": 4
+      }
+    }
+  },
+  "variational-autoencoders": {
+    "canonical_location": "machine-learning/deep-learning/variational-autoencoders",
+    "class_name": "VariationalAutoencoder",
+    "kind": "vae",
+    "payload": {
+      "X": [
+        [
+          -1,
+          -0.5
+        ],
+        [
+          -0.3,
+          -0.15
+        ],
+        [
+          0.3,
+          0.15
+        ],
+        [
+          1,
+          0.5
+        ]
+      ],
+      "parameters": {
+        "latent_dim": 1,
+        "epochs": 40,
+        "learning_rate": 0.03,
+        "batch_size": 4
+      }
+    }
+  },
+  "generative-adversarial-networks": {
+    "canonical_location": "machine-learning/deep-learning/generative-adversarial-networks",
+    "class_name": "GAN",
+    "kind": "generative",
+    "payload": {
+      "X": [
+        [
+          -1
+        ],
+        [
+          -0.8
+        ],
+        [
+          0.8
+        ],
+        [
+          1
+        ]
+      ],
+      "parameters": {
+        "latent_dim": 1,
+        "hidden_dim": 4,
+        "epochs": 30,
+        "learning_rate": 0.05,
+        "batch_size": 4
+      }
+    }
+  },
+  "diffusion-models": {
+    "canonical_location": "machine-learning/deep-learning/diffusion-models",
+    "class_name": "DiffusionModel",
+    "kind": "generative",
+    "payload": {
+      "X": [
+        [
+          -1
+        ],
+        [
+          -0.8
+        ],
+        [
+          0.8
+        ],
+        [
+          1
+        ]
+      ],
+      "parameters": {
+        "n_steps": 4,
+        "hidden_dim": 4,
+        "epochs": 30,
+        "learning_rate": 0.05,
+        "batch_size": 4
+      }
+    }
+  },
+  "graph-neural-networks": {
+    "canonical_location": "machine-learning/deep-learning/graph-neural-networks",
+    "class_name": "GCNRegressor",
+    "kind": "gnn",
+    "payload": {
+      "X": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0.5,
+          0.2
+        ]
+      ],
+      "y": [
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          0.7
+        ]
+      ],
+      "adjacency": [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "parameters": {
+        "hidden_dim": 3,
+        "epochs": 100
+      }
+    }
+  }
+}

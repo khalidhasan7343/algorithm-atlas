@@ -1,0 +1,271 @@
+{
+  "status": "passed",
+  "algorithms": 22,
+  "required_sections": 550,
+  "records": [
+    {
+      "id": "pagerank",
+      "category": "B9",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/graph-learning/pagerank/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"adjacency\": [[0, 1, 1], [0, 0, 1], [0, 0, 0]], \"converged\": true, \"damping\": 0.85, \"scores\": [0.19757965, 0.281551, 0.52086935], \"sum\": 1.0, \"transition\": [[0.0, 0.5, 0.5], [0.0, 0.0, 1.0], [0.33333333, 0.33333333, 0.33333333]]}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "node2vec",
+      "category": "B9",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/graph-learning/node2vec/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"cosine_0_1\": 0.99854875, \"cosine_0_4\": 0.1862712, \"loss_final\": 1.78973212, \"loss_initial\": 2.77789917, \"pairs\": [[0, 1], [0, 0], [1, 0], [1, 0], [1, 2], [0, 0]], \"shape\": [6, 4], \"updates\": 100, \"walks\": [[0, 1, 0, 2, 0, 1, 2, 1], [1, 0, 2, 3, 2, 3, 5, 3]]}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "graph-convolutional-networks",
+      "category": "B9",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/graph-learning/graph-convolutional-networks/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"first_propagated_feature\": [0.928997, 0.099458], \"loss_final\": 0.00817123, \"loss_initial\": 0.63393832, \"normalized_adjacency\": [[0.333333, 0.333333, 0.327913, 0.0, 0.0, 0.0], [0.333333, 0.333333, 0.327913, 0.0, 0.0, 0.0], [0.327913, 0.327913, 0.322581, 0.032258, 0.0, 0.0], [0.0, 0.0, 0.032258, 0.322581, 0.327913, 0.327913], [0.0, 0.0, 0.0, 0.327913, 0.333333, 0.333333], [0.0, 0.0, 0.0, 0.327913, 0.333333, 0.333333]], \"predictions\": [0, 0, 0, 1, 1, 1], \"updates\": 200}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "batch-gradient-descent",
+      "category": "B10",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/optimization/batch-gradient-descent/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"analytical\": [1.0, -2.0], \"converged\": true, \"gradient_evaluations\": 141, \"initial\": [3.0, 1.0], \"iterations\": 140, \"learning_rate\": 0.1, \"objective\": 0.0, \"objective_evaluations\": 141, \"status\": \"gradient-tolerance\", \"updates\": 140, \"x\": [1.0, -1.99999999]}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "stochastic-gradient-descent",
+      "category": "B10",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/optimization/stochastic-gradient-descent/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"analytical\": [1.0, -2.0], \"converged\": true, \"gradient_evaluations\": 141, \"initial\": [3.0, 1.0], \"iterations\": 20, \"learning_rate\": 0.1, \"objective\": 0.0, \"objective_evaluations\": 21, \"status\": \"gradient-tolerance\", \"updates\": 120, \"x\": [1.0, -2.0]}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "mini-batch-gradient-descent",
+      "category": "B10",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/optimization/mini-batch-gradient-descent/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"analytical\": [1.0, -2.0], \"converged\": true, \"gradient_evaluations\": 177, \"initial\": [3.0, 1.0], \"iterations\": 44, \"learning_rate\": 0.1, \"objective\": 0.0, \"objective_evaluations\": 45, \"status\": \"gradient-tolerance\", \"updates\": 132, \"x\": [1.0, -1.99999999]}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "momentum",
+      "category": "B10",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/optimization/momentum/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"converged\": true, \"gradient_norm\": 4.3e-09, \"initial\": [3.0, 1.0], \"iterations\": 180, \"learning_rate\": 0.1, \"objective\": -9.0, \"objective_evaluations\": 181, \"status\": \"gradient-tolerance\", \"task_optimum\": [1.0, -2.0], \"updates\": 180, \"x\": [1.0, -2.0]}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "rmsprop",
+      "category": "B10",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/optimization/rmsprop/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"converged\": true, \"gradient_norm\": 2.7e-09, \"initial\": [3.0, 1.0], \"iterations\": 362, \"learning_rate\": 0.01, \"objective\": -9.0, \"objective_evaluations\": 363, \"status\": \"gradient-tolerance\", \"task_optimum\": [1.0, -2.0], \"updates\": 362, \"x\": [1.0, -2.0]}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "adam",
+      "category": "B10",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/optimization/adam/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"converged\": true, \"gradient_norm\": 7.7e-09, \"initial\": [3.0, 1.0], \"iterations\": 387, \"learning_rate\": 0.05, \"objective\": -9.0, \"objective_evaluations\": 388, \"status\": \"gradient-tolerance\", \"task_optimum\": [1.0, -2.0], \"updates\": 387, \"x\": [1.0, -2.0]}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "adamw",
+      "category": "B10",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/optimization/adamw/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"converged\": false, \"gradient_norm\": 0.0072123206, \"initial\": [3.0, 1.0], \"iterations\": 1000, \"learning_rate\": 0.05, \"objective\": -8.999986995608, \"objective_evaluations\": 1001, \"status\": \"iteration-budget\", \"task_optimum\": [1.0, -2.0], \"updates\": 1000, \"x\": [0.99639384, -2.0]}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "l-bfgs",
+      "category": "B10",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/optimization/l-bfgs/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"analytical\": [1.0, 1.0], \"converged\": true, \"gradient_evaluations\": 66, \"gradient_norm\": 3.9e-09, \"history_size\": 5, \"initial\": [-1.2, 1.0], \"iterations\": 36, \"objective\": 0.0, \"objective_evaluations\": 66, \"status\": \"gradient-tolerance\", \"x\": [1.0, 1.0]}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "genetic-algorithms",
+      "category": "B10",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/optimization/genetic-algorithms/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"converged\": true, \"initial_best\": 4.0, \"iterations\": 9, \"known_target_value\": 0, \"objective\": 0.0, \"objective_evaluations\": 111, \"seed\": 22, \"status\": \"target-reached\", \"x\": [1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0]}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "simulated-annealing",
+      "category": "B10",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/optimization/simulated-annealing/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"converged\": true, \"initial_best\": 6.0, \"iterations\": 48, \"known_target_value\": 0, \"objective\": 0.0, \"objective_evaluations\": 49, \"seed\": 22, \"status\": \"target-reached\", \"x\": [1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0]}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "arima",
+      "category": "B11",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/time-series/arima/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"order\": [1, 1, 1], \"status\": \"gradient-tolerance\", \"converged\": true, \"iterations\": 88, \"intercept\": 0.03358521, \"ar\": [0.85969686], \"ma\": [-0.95], \"forecast\": [15.0998527, 15.32689555, 15.55566878, 15.78592963], \"index\": [60.0, 61.0, 62.0, 63.0]}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "sarima",
+      "category": "B11",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/time-series/sarima/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"seasonal_order\": [1, 0, 0, 4], \"status\": \"gradient-tolerance\", \"converged\": true, \"iterations\": 6, \"seasonal_ar\": [0.53938392], \"forecast\": [0.01013655, -0.03190306, 0.12595536, -0.05328388, 0.00546749, -0.017208], \"index\": [80.0, 81.0, 82.0, 83.0, 84.0, 85.0]}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "exponential-smoothing",
+      "category": "B11",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/time-series/exponential-smoothing/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"levels\": [1.0, 2.5, 5.25], \"fitted\": [0.0, 1.0, 2.5], \"forecast\": [5.25, 5.25, 5.25], \"index\": [3.0, 4.0, 5.0], \"status\": \"fixed-coefficient-recursion\"}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "holt-winters",
+      "category": "B11",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/time-series/holt-winters/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"level\": 14.75, \"trend\": 0.25, \"seasonal\": [-1.0, 1.0], \"forecast\": [14.0, 16.25, 14.5, 16.75], \"index\": [20.0, 21.0, 22.0, 23.0], \"status\": \"fixed-coefficient-recursion\"}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "prophet",
+      "category": "B11",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/time-series/prophet/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"svd-solved\", \"converged\": true, \"design_rank\": 5, \"objective\": 0.21062965, \"forecast\": [14.19055167, 15.20034129, 15.62430304, 15.32863865], \"trend\": [14.17609088, 14.4223705, 14.66865012, 14.91492975], \"seasonal\": [0.0144608, 0.77797079, 0.95565292, 0.4137089], \"index\": [56.0, 57.0, 58.0, 59.0]}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "hidden-markov-models",
+      "category": "B11",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/time-series/hidden-markov-models/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"initial_log_likelihood\": -3.64812146, \"viterbi\": [0, 1, 1, 1, 1], \"path_log_probability\": -4.88137027, \"posterior\": [[0.67096774, 0.32903226], [0.21290323, 0.78709677], [0.16129032, 0.83870968], [0.36129032, 0.63870968], [0.18709677, 0.81290323]], \"training_log_likelihood_before\": -7.53838298, \"training_log_likelihood_after\": -6.52482708, \"iterations\": 25, \"status\": \"iteration-budget\", \"converged\": false}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "isolation-forest",
+      "category": "B12",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/anomaly-detection/isolation-forest/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"training\": [[-0.2, 0.0], [0.1, 0.1], [0.0, -0.1], [0.2, 0.0], [-0.1, 0.2], [0.1, -0.2], [4.0, 4.0], [5.0, 4.0]], \"roots\": [{\"feature\": 0, \"split\": 3.660871, \"count\": 8, \"left\": 6, \"right\": 2}, {\"feature\": 0, \"split\": 3.141524, \"count\": 8, \"left\": 6, \"right\": 2}, {\"feature\": 1, \"split\": 1.15935, \"count\": 8, \"left\": 6, \"right\": 2}], \"scores\": [0.51150878, 0.42158579, 0.42873353, 0.45952177, 0.47125756, 0.45855709, 0.65961136, 0.65961136], \"threshold\": 0.54853442, \"decisions\": [0.03702565, 0.12694864, 0.1198009, 0.08901265, 0.07727687, 0.08997734, -0.11107694, -0.11107694], \"labels\": [1, 1, 1, 1, 1, 1, -1, -1], \"status\": \"constructed\"}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "one-class-svm",
+      "category": "B12",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/anomaly-detection/one-class-svm/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"training\": [[-1.0], [-0.7], [-0.3], [0.0], [0.2], [0.6], [1.0]], \"kernel\": \"rbf\", \"nu\": 0.3, \"gamma\": 0.8, \"status\": \"kkt-tolerance\", \"converged\": true, \"iterations\": 36, \"support\": [0, 3, 6], \"alpha\": [0.4428587, 0.0, 0.0, 0.1142826, 0.0, 0.0, 0.4428587], \"rho\": 0.51226108, \"objective\": 0.25613054, \"kkt_residual\": 8.84e-10, \"feasibility\": 0.0, \"query\": [[0.0], [0.5], [4.0]], \"decisions\": [0.0, 0.01709169, -0.51193013], \"labels\": [1, 1, -1]}\n",
+      "output_matches_lesson": true
+    },
+    {
+      "id": "local-outlier-factor",
+      "category": "B12",
+      "sections": 25,
+      "command": [
+        "python",
+        "machine-learning/anomaly-detection/local-outlier-factor/python/example.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"training\": [[-11.0], [-10.0], [0.0], [10.0]], \"neighbors\": [[1], [0], [1, 3], [2]], \"k_distance\": [1.0, 1.0, 10.0, 10.0], \"mean_reach\": [1.0, 1.0, 10.0, 10.0], \"density\": [1.0, 1.0, 0.09999999999999998, 0.09999999999999998], \"lof\": [1.0, 1.0, 5.5, 1.0], \"threshold\": 1.5, \"decisions\": [0.5, 0.5, -4.0, 0.5], \"labels\": [1, 1, -1, 1], \"status\": \"training-lof-computed\"}\n",
+      "output_matches_lesson": true
+    }
+  ]
+}

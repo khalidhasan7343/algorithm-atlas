@@ -1,0 +1,10 @@
+........................................................................ [ 98%]
+.                                                                        [100%]
+=============================== warnings summary ===============================
+machine-learning/time-series/tests/test_time_contracts.py::test_datetime_and_frequency_alignment[exponential-smoothing]
+machine-learning/time-series/tests/test_time_contracts.py::test_datetime_and_frequency_alignment[holt-winters]
+  /Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/time-series/tests/test_time_contracts.py:29: DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`). Please use a specific unit instead.
+    times[3]=np.datetime64('NaT')
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+73 passed, 2 warnings in 0.13s

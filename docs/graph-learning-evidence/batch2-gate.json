@@ -1,0 +1,53 @@
+{
+  "batch": 2,
+  "topic": "node2vec",
+  "returncode": 0,
+  "counts": {
+    "tests": 42,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/graph-learning/node2vec",
+    "-q"
+  ],
+  "execution": {
+    "label": "batch2",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/graph-learning/node2vec",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/graph-learning/node2vec",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/graph-learning-evidence/batch2-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T20:05:02.124929+06:00",
+    "elapsed_seconds": 0.305,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/graph-learning-evidence/batch2-01.txt"
+  },
+  "lesson_sections": 25,
+  "example": {
+    "command": [
+      "python",
+      "machine-learning/graph-learning/node2vec/python/example.py"
+    ],
+    "returncode": 0,
+    "output": "{\"cosine_0_1\": 0.99854875, \"cosine_0_4\": 0.1862712, \"loss_final\": 1.78973212, \"loss_initial\": 2.77789917, \"pairs\": [[0, 1], [0, 0], [1, 0], [1, 0], [1, 2], [0, 0]], \"shape\": [6, 4], \"updates\": 100, \"walks\": [[0, 1, 0, 2, 0, 1, 2, 1], [1, 0, 2, 3, 2, 3, 5, 3]]}\n",
+    "sections": 25
+  }
+}

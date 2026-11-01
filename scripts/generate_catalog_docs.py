@@ -179,7 +179,7 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
         f'| In-progress canonical topics | {statuses["in-progress"]} |',
         f'| Blocked canonical topics | {statuses["blocked"]} |', '',
         'Completion requires full educational documentation, track-required '
-        'implementations (Python/C++ for DSA; Python for classical ML), runnable examples, and genuinely passed algorithm '
+        'implementations (Python/C++ for DSA; Python for ML), runnable examples, and genuinely passed algorithm '
         'tests. A planning README alone does not satisfy those requirements. '
         'Completed does not imply human review or approval for another category.', '',
         '## Completed algorithms', '',
@@ -205,7 +205,8 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
             number_window, graph, greedy, state.get('scope') == 'Sorting category only',
         ))
         ml_category = next((c for c in catalog['categories'] if c['id'] == state.get('category')), None)
-        ml_slug = Path(ml_category['path']).name if ml_category else 'regression'
+        final_ml_audit = state.get('mode') == 'final-ml-audit'
+        ml_slug = 'final comprehensive audit' if final_ml_audit else Path(ml_category['path']).name if ml_category else 'regression'
         label = f'ML {ml_slug}' if ml else 'number theory/window' if number_window else 'bit manipulation' if bits else 'string algorithms' if strings else 'tree algorithms' if tree else 'graph algorithms' if graph else 'greedy' if greedy else 'dynamic programming' if dynamic else 'divide/conquer' if divide else 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
         batches = state.get('completed_batches', [])
         lines.append(f'Validated {label} batches: ' +
@@ -218,11 +219,82 @@ def progress_page(catalog: dict, algorithms: dict) -> str:
         if state.get('completion_report'):
             lines += ['', 'See the '
                       + link(path, ROOT / state['completion_report'], f'{label} completion report') + '.']
+        decision = state.get('dpo_specification_decision', {})
+        if state.get('category') == 'B8' and decision.get('owner_approval') == 'approved':
+            owned = [a for a in algorithms.values() if a['category'] == 'B8']
+            ready = sum(is_complete(a) for a in owned)
+            blocked_count = sum(overall_status(a) == 'blocked' for a in owned)
+            lines += ['', '### Phase 20 completion and separate approvals', '',
+                      '| Measure | Result |', '| --- | --- |',
+                      f'| Defined algorithms completed | {ready} / {len(owned) - blocked_count} |',
+                      f'| Full B8 catalog completed | {ready} / {len(owned)}; {blocked_count} intentionally blocked |',
+                      '| DPO specification decision | Owner-approved: remain blocked (Outcome 3) |',
+                      '| Phase 20 implementation review | Pending owner review of the final package |', '',
+                      'The canonical ID/path and every DPO artifact status remain unchanged. '
+                      'No substitute algorithm is authorized. See '
+                      + link(path, ROOT / decision['report'], 'the preserved specification decision report')
+                      + '. The blocker decision does not approve the implementation review or make the full catalog complete.']
+        if (state.get('category') == 'B9'
+                and state.get('phase_records', {}).get('20', {}).get('owner_approval') == 'approved'
+                and decision.get('owner_approval') == 'approved' and decision.get('report')):
+            b8 = [a for a in algorithms.values() if a['category'] == 'B8']
+            b8_done = sum(is_complete(a) for a in b8)
+            lines += ['', '### Approved Phase 20 checkpoint and retained DPO blocker', '',
+                      f'Phase20 implementation review is owner-approved: {b8_done} completed algorithms '
+                      f'plus {len(b8) - b8_done} intentionally blocked entry. Full B8 catalog completion '
+                      f'is {b8_done}/{len(b8)},not10/10. DPO specification decision remains '
+                      'owner-approved: remain blocked (Outcome3). Its canonical ID,path and four '
+                      'blocked statuses are preserved; no substitution is authorized. See '
+                      + link(path, ROOT / decision['report'], 'the preserved DPO decision report')
+                      + '. Historical handoff reports/packages retain their generation-time status. '
+                      'The new Phase21 B9 implementation review remains pending.']
+        if state.get('mode') == 'final-ml-audit':
+            lines += ['', '### Phase26 final ML audit and separate owner sign-off', '',
+                      'The owner approved Phase25 and authorized audit/stabilization of all B1–B13. '
+                      'Seven audit workstreams review catalog,mathematics,oracles/tests,documentation,CI/dependencies,security/reproducibility and final regression/packaging. '
+                      'Implemented canonical algorithms and shared syllabus memberships are counted separately. '
+                      'DPO remains owner-approved:remain blocked,with its exact identity,path,four statuses and research. '
+                      'Final B Track audit approval remains pending. No C1,nextphase,commit,push,tag,release or publication.']
+        if (state.get('category') == 'B13'
+                and state.get('phase_records', {}).get('24', {}).get('owner_approval') == 'approved'):
+            lines += ['', '### Approved Phase24 checkpoint and retained DPO blocker', '',
+                      'Phase24 B12 is owner-approved:three completed anomaly detectors. '
+                      'Phase25 B13 is the final ML category with11 existing canonicals in five batches; '
+                      'its owner review remains pending. B8 remains9 completed+1 intentionally blocked DPO. '
+                      'DPO identity,path,four blocked statuses,research and owner-approved remain-blocked '
+                      'decision remain unchanged. Final B Track readiness is distinct from a separately '
+                      'authorized comprehensive final ML audit; neither that audit nor C1 is authorized.']
+        if (state.get('category') == 'B12'
+                and state.get('phase_records', {}).get('23', {}).get('owner_approval') == 'approved'):
+            lines += ['', '### Approved Phase23 checkpoint and retained DPO blocker', '',
+                      'Phase23 B11 is owner-approved:six completed Time Series canonicals. '
+                      'Phase24 B12 completes three anomaly-detection canonicals;new owner review '
+                      'remains pending. B8 remains9 completed+1 intentionally blocked DPO,not10/10. '
+                      'Its identity,path,four blocked statuses,owner-approved decision and research '
+                      'remain preserved. Historical handoff evidence keeps generation-time states.']
+        if (state.get('category') == 'B11'
+                and state.get('phase_records', {}).get('22', {}).get('owner_approval') == 'approved'):
+            lines += ['', '### Approved Phase 22 checkpoint and retained DPO blocker', '',
+                      'Phase22 B10 is owner-approved:10 completed Optimization canonicals. '
+                      'Phase23 B11 has six completed Time Series canonicals; its new owner review '
+                      'remains pending. B8 remains9 completed+1 intentionally blocked DPO,not10/10. '
+                      'DPO identity,path,four blocked statuses,owner-approved remain-blocked decision '
+                      'and research are preserved. Historical handoff reports retain their generation-time status.']
+        if (state.get('category') == 'B10'
+                and state.get('phase_records', {}).get('21', {}).get('owner_approval') == 'approved'):
+            lines += ['', '### Approved Phase 21 checkpoint and retained DPO blocker', '',
+                      'Phase21 B9 review is owner-approved:3 completed graph-learning canonicals. '
+                      'Phase22 B10 is the current authorized category; its owner review remains pending. '
+                      'B8 remains9 completed+1 intentionally blocked DPO,not10/10. '
+                      'Its owner-approved remain-blocked decision,ID,path,four statuses and research '
+                      'are preserved. Historical handoff reports/packages keep generation-time statuses.']
+            if decision.get('report'):
+                lines += ['', 'See ' + link(path, ROOT / decision['report'], 'the preserved DPO decision report') + '.']
         if ml:
             lines += ['', state['approval'], '',
                       'Python and numerical tests are required for classical ML; optional C++ is '
                       'recorded honestly. DSA retains both languages and C++17/C++20 tests. '
-                      f'The active authorized ML category is {ml_category["name"] if ml_category else state["scope"]}. '
+                      f'The active authorized ML work is {ml_category["name"] if ml_category else state["scope"]}. '
                       'Each internal batch must pass before the next; final owner approval is pending.', '',
                       'Historical Phase 11/12 and DSA final-audit approvals are not inferred from '
                       'ML authorization. Preserve their reports, execution evidence and archives. '
@@ -457,6 +529,303 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
                   'No Phase 17 or another category is authorized.']
         if (development or {}).get('completion_report'):
             lines += ['', 'See ' + link(path, ROOT / development['completion_report'], 'the Phase 16 report') + '.']
+    if category['id'] == 'B13' and ml_active and ((development or {}).get('category') == 'B13' or (development or {}).get('mode') == 'final-ml-audit'):
+        lines += ['', '## Natural language and explicit text contracts', '',
+                  'NLP models text representations,conditional sequence probabilities,token labels and grammar structure. '
+                  'Unicode NFC,optional casefold,word runs and individual punctuation are explicit conventions,not universal linguistic segmentation. '
+                  'Training-only vocabulary reserves UNK,uses declared count pruning and deterministic lexical indices. '
+                  'Document/sentence boundaries remain separate;unknowns,padding,BOS/EOS and maximum lengths are model-specific and tested.', '',
+                  '## Statistical representations and language modeling', '',
+                  'BoW counts retained words;TF-IDF reuses BoW with raw TF and smoothed log IDF,optional L2 normalization. '
+                  'Add-k N-grams predict from n-1 previous tokens and score one EOS per sentence;perplexity counts the same events.', '',
+                  '## Neural embeddings and Transformer architectures', '',
+                  'Word2Vec trains local-context SGNS input/output vectors;GloVe fits weighted positive cooccurrences and biases. '
+                  'Their objectives and complete implemented gradients have independent oracles. '
+                  'BERT uses bidirectional attention and masked-token targets;GPT uses causal attention and shifted next-token prediction. '
+                  'Both are compact genuine attention/residual/layer-normalization/FFN stacks with frozen random backbones and trainable vocabulary heads only. '
+                  'No pretrained understanding,full end-to-end pretraining,production parity,NSP or downloaded weights is claimed.', '',
+                  '## Probabilistic sequence labels and parsing', '',
+                  'Supervised HMM POS estimates sentence-local counts and reuses unchanged B11 log-space inference. '
+                  'The globally normalized CRF trains emission/transition/start/end parameters;NER is a declared feature-based BIO CRF task baseline. '
+                  'NER exact typed spans use half-open token offsets and are evaluated separately from token accuracy. '
+                  'CNF CYK builds substring charts/backpointers;unsupported CFG/unit/epsilon rules fail explicitly.', '',
+                  '## Comparison, evaluation and numerical behavior', '',
+                  '| Family | Output | Main computational cost |', '|---|---|---|',
+                  '| BoW/TF-IDF | Document vectors | Dense N*V |',
+                  '| N-gram | Finite-context probabilities/perplexity | Count table and per-query V |',
+                  '| Word2Vec/GloVe | Trained static vectors | Context pairs or positive cooccurrences times dimension/epochs |',
+                  '| BERT/GPT | Contextual representations/logits | Dense attention quadratic in sequence length |',
+                  '| HMM/CRF/NER | Token-label paths/spans | T*K squared inference plus feature/training cost |',
+                  '| CYK | Grammar membership/one parse tree | Cubic sentence length times binary grammar size |', '',
+                  'Use stable softplus,log-sum-exp and masked softmax;validate all-masked rows and finite parameters. '
+                  'Bound corpora,vocabularies,sequences,heads,layers,epochs and generation;all mandatory execution is offline CPU-only. '
+                  'Verify hand counts/losses,finite-difference gradients,exhaustive tag paths and independent grammar derivations. '
+                  'Toy loss decrease does not prove semantic quality;never fit vocabulary,IDF,counts or features on evaluation data.', '',
+                  '## Learning roadmap and runnable examples', '',
+                  'Start with BoW/TF-IDF/N-grams,then embeddings,then B7-informed attention architectures,then HMM/CRF task labeling and CYK. '
+                  'Every canonical lesson links its source,independent tests and real python/example.py output. '
+                  'Read ' + link(path, ROOT / 'docs/natural-language-processing-scope.md','scope') + ', '
+                  + link(path, ROOT / 'docs/natural-language-processing-conventions.md','contracts') + ' and '
+                  + link(path, ROOT / 'docs/natural-language-processing-checkpoints.md','checkpoints') + '. '
+                  'Phase25 owner approval remains pending. DPO remains blocked;B Track readiness does not approve a final ML audit.']
+    if category['id'] == 'B12' and ml_active and ((development or {}).get('category') == 'B12' or (development or {}).get('mode') == 'final-ml-audit'):
+        lines += ['', '## Unsupervised anomaly detection', '',
+                  'Fit unlabeled reference features to identify unusual observations. Isolation Forest '
+                  'uses random partitions, One-Class SVM optimizes kernel support, and LOF compares '
+                  'local reachability densities. Supervised evaluation labels never enter fitting.', '',
+                  '## Outlier versus novelty detection', '',
+                  'Isolation Forest and One-Class SVM support new query observations. This LOF '
+                  'canonical scores only its training set; supplying query X raises an explicit error. '
+                  'Adding queries to the reference set changes neighborhoods and is not the same model.', '',
+                  '## Mathematical comparison and canonical lessons', '',
+                  '| Method | Mechanism | High anomaly raw score | Decision/threshold |',
+                  '| --- | --- | --- | --- |',
+                  '| Isolation Forest | Random isolation trees, corrected expected path | Positive paper score | threshold minus raw; auto .5 |',
+                  '| One-Class SVM | PSD RBF dual, capped simplex, feasible pair updates | Negative kernel normality | g minus KKT rho; nu is not contamination |',
+                  '| LOF | All tied k-neighbors, reachability density ratios | LOF including controlled positive infinity | training cutoff minus raw with extended tie rules; auto 1.5 |', '']
+        lines += ['- ' + link(path, ROOT / algorithms[item['algorithm']]['canonical_location'] / 'README.md', item['name']) for item in category['items']]
+        lines += ['', '## Score interpretation, thresholds and contamination', '',
+                  'Prediction +1 means inlier and -1 means outlier. Nonnegative decisions include '
+                  'the boundary as inlier. Scores are not calibrated anomaly probabilities. Numeric '
+                  'IF/LOF contamination in (0,.5] selects the linear training-score quantile at1-f. '
+                  'Ties remain inliers; do not force an exact anomaly count. Positive weight on an '
+                  'infinite quantile endpoint gives an infinite threshold; infinite-score boundary '
+                  'ties have decision0, avoiding undefined infinity-infinity. Nu defines the SVM '
+                  'dual cap and its own KKT boundary, not a separate label quota.', '',
+                  '## Numerical stability and degeneracies', '',
+                  'Isolation trees keep nonempty splits, bounded depth and exact harmonic corrections; '
+                  'a one-sample normalization is neutral .5. SVM preserves equality/box feasibility, '
+                  'tracks actual objective/KKT gaps and derives rho from free vectors or justified '
+                  'bounds. At nu1 the dual is fixed and rho uses a valid finite interval endpoint. '
+                  'LOF excludes self and includes all k-distance ties. Its duplicate extension uses '
+                  'a common-epsilon limit,log means and density ratios; true structural infinity '
+                  'is distinguished from display overflow. No arbitrary finite density epsilon is used.', '',
+                  '## Computational complexity and resource limits', '',
+                  'IF construction is bounded by tree count,subsample size,features and depth;scoring '
+                  'traverses each tree. SVM stores a dense n-by-n Gram matrix and performs bounded '
+                  'feasible pair-coordinate steps. LOF uses brute-force n-squared distances and '
+                  'tie-inclusive neighborhoods,not an indexed-neighbor scaling claim. Training n<=256, '
+                  'features<=32;query rows<=1024 for supported novelty methods. No GPU or download.', '',
+                  '## Evaluation methodology and reproducible examples', '',
+                  'Use declared deterministic synthetic generators and unseen evaluation sets for '
+                  'IF/SVM;label LOF evaluation explicitly as training-set detection. Evaluate high '
+                  'anomaly scores with tie-aware ROC-AUC and grouped-step average precision,plus '
+                  'precision/recall/F1 and confusion counts with -1 as the positive class. Single-class '
+                  'or zero-denominator metrics have explicit unavailable/zero semantics. Independent '
+                  'reference comparisons align randomness,scales,kernel/nu or neighbor definitions; '
+                  'fixed-k stabilized sklearn LOF is not identical on ties/duplicate degeneracies.', '']
+        lines += ['- ' + link(path, ROOT / algorithms[item['algorithm']]['canonical_location'] / 'python/example.py', item['name']) for item in category['items'] if (ROOT / algorithms[item['algorithm']]['canonical_location'] / 'python/example.py').is_file()]
+        lines += ['', 'Study isolation paths,then constrained kernel support,then local reachability ratios. '
+                  + link(path, ROOT / 'docs/anomaly-detection-scope.md', 'Locked scope') + '; '
+                  + link(path, ROOT / 'docs/anomaly-detection-conventions.md', 'exact contracts') + '; '
+                  + link(path, ROOT / 'docs/anomaly-detection-checkpoints.md', 'batch evidence') + '.', '',
+                  'Phase23 B11 is owner-approved;new Phase24 B12 owner review remains pending. '
+                  'Preserve B1-B11/DSA and blocked DPO. No Phase25,other category,commit,push,tag,release or publication.']
+    if category['id'] in {'B2','B3','B4','B5','B7','B10','B11'} and ml_active and (development or {}).get('category') == 'B12':
+        lines += ['', 'Approved prior canonical source/tests/lessons remain unchanged. Phase24 '
+                  'B12 reuses suitable verified validation/distance/kernel helpers without replacing '
+                  'their implementations. Phase23 is owner-approved;Phase24 owner review remains pending.']
+    if category['id'] == 'B11' and ml_active and ((development or {}).get('category') == 'B11' or (development or {}).get('mode') == 'final-ml-audit'):
+        lines += ['', '## Forecasting and sequence-modeling overview', '',
+                  'B11 has exactly six canonicals. SES models a level; additive Holt-Winters '
+                  'models level/trend/phase; ARIMA models differenced AR/MA innovations; SARIMA '
+                  'multiplies seasonal/nonseasonal lag polynomials. The Prophet educational subset '
+                  'fits continuous trend hinges and Fourier seasonality with declared Gaussian ridge '
+                  'priors. Categorical HMM models hidden states and symbolic emissions, with '
+                  'forward/backward, Viterbi and Baum-Welch rather than an invented forecasting API.', '',
+                  '| Method | Structure | Estimation/inference |', '| --- | --- | --- |',
+                  '| SES | Level | Fixed-alpha recursion |',
+                  '| Holt-Winters | Level, trend, additive seasonal phase | Fixed-coefficient triple smoothing |',
+                  '| ARIMA | Ordinary differences, AR observations, MA innovations | Conditional sum of squares |',
+                  '| SARIMA | Full multiplicative seasonal/nonseasonal polynomials | Conditional sum of squares |',
+                  '| Prophet subset | Explicit trend changepoints and Fourier waves | Gaussian ridge/SVD; not full library parity |',
+                  '| HMM | Latent categorical Markov chain | Log inference, Viterbi, ML EM |', '',
+                  '## Stationarity and differencing', '',
+                  'ARIMA assumes the differenced process has a stable mean and lag-dependent '
+                  'covariance structure. Ordinary differences remove successive level changes; '
+                  'seasonal differences compare observations one known period apart. Transform only '
+                  'the permitted training history and undo operators in reverse order for original-unit '
+                  'forecasts. Admissible AR/MA coefficient boxes ensure model stationarity/invertibility; '
+                  'they do not establish empirical stationarity or a correct differencing order.', '',
+                  '## Chronological validation and metrics', '',
+                  'Use chronological holdout, expanding prefixes or rolling windows. Fit differencing '
+                  'histories, normalization and parameters on each training set alone. Forecast a whole '
+                  'horizon recursively without observing its targets. MAE/MSE/RMSE have explicit units; '
+                  'MAPE is unavailable when any actual is zero; sMAPE defines zero/zero as zero; MASE '
+                  'uses only training differences and rejects zero scale. Fitted initialization errors '
+                  'are not out-of-sample evidence.', '',
+                  '## Numerical choices and learning order', '',
+                  'Study SES then additive Holt-Winters, ARIMA then SARIMA, then the explicit Prophet '
+                  'subset and categorical HMM. Bound lengths/orders/periods/columns/iterations/state '
+                  'counts. ARIMA/SARIMA reuse the unchanged approved B10 L-BFGS with analytic '
+                  'innovation sensitivities and honest non-convergence statuses. Prophet uses stable '
+                  'augmented SVD. HMM uses log-space sums and defined impossible-sequence behavior.', '',
+                  '## Source, examples and scope', '']
+        lines += ['- ' + link(path, ROOT / algorithms[item['algorithm']]['canonical_location'] / 'python/example.py', item['name'])
+                  for item in category['items'] if (ROOT / algorithms[item['algorithm']]['canonical_location'] / 'python/example.py').is_file()]
+        lines += ['', 'Exact contracts and resource limits: '
+                  + link(path, ROOT / 'docs/time-series-conventions.md', 'mathematical contracts') + '. '
+                  + link(path, ROOT / 'docs/time-series-scope.md', 'Locked scope') + '; '
+                  + link(path, ROOT / 'docs/time-series-checkpoints.md', 'batch evidence') + '.', '',
+                  'Phase22 B10 is owner-approved; prior learner/source behavior and DPO remain '
+                  'preserved. Phase23 owner approval is pending. No B12/Phase24, commit, push, '
+                  'tag, release or publication is authorized.']
+    if category['id'] in {'B7','B8','B9','B10'} and ml_active and (development or {}).get('category') == 'B11':
+        lines += ['', 'Prior canonical implementations/tests/lessons are preserved. Phase22 '
+                  'B10 is now explicitly owner-approved; Phase23 only adds the six B11 time-series '
+                  'canonicals. Its new owner review remains pending. DPO remains intentionally blocked.']
+    if category['id'] == 'B10' and ml_active and ((development or {}).get('category') == 'B10' or (development or {}).get('mode') == 'final-ml-audit'):
+        families = {
+            'batch-gradient-descent': ('Full first order', 'Full exact callback gradient; fixed rate'),
+            'stochastic-gradient-descent': ('Sampled first order', 'One observation; random reshuffling'),
+            'mini-batch-gradient-descent': ('Sampled first order', 'Actual selected mean; tail included'),
+            'momentum': ('First-order velocity', 'Heavy-ball beta*v+g; no Nesterov'),
+            'rmsprop': ('Adaptive first order', 'Uncentered squared EMA; epsilon outside sqrt'),
+            'adam': ('Adaptive first order', 'Bias-corrected raw moments'),
+            'adamw': ('Adaptive plus decay', 'Canonical Adam plus decoupled masked old-x decay'),
+            'l-bfgs': ('Quasi-Newton', 'Limited pairs; bounded strong-Wolfe search'),
+            'genetic-algorithms': ('Population derivative-free', 'Binary tournaments/crossover/mutation/elitism'),
+            'simulated-annealing': ('Single-chain derivative-free', 'Binary one-bit Metropolis/geometric cooling')}
+        lines += ['', '## Mathematical taxonomy and exact variants', '',
+                  'Phase22 covers the current catalog inventory in4 logical batches: foundational '
+                  'gradient methods; momentum/adaptive methods; L-BFGS; binary GA/annealing. '
+                  'No extra optimizer is added to fill a batch. Current owner review remains pending. '
+                  'No Phase23,commit,push,tag,release or publication.', '',
+                  '| Canonical method | Family | Implemented convention |', '| --- | --- | --- |']
+        for item in category['items']:
+            aid = item['algorithm']; a = algorithms[aid]
+            family, convention = families.get(aid, ('Catalog-defined', 'See its exact lesson'))
+            lines += ['| ' + link(path, ROOT / a['canonical_location'] / 'README.md', item['name'])
+                      + ' | ' + family + ' | ' + convention + ' |']
+        lines += ['', '## Objectives,convergence and numerical choices', '',
+                  'Continuous methods minimize caller-defined smooth vector objectives. SGD and '
+                  'mini-batch callbacks return the selected mean gradient; full gradients govern '
+                  'epoch stopping. Other first-order drivers use full callbacks. L-BFGS is '
+                  'unconstrained,not L-BFGS-B or exact Newton. Binary GA/SA require no derivatives; '
+                  'their representation is not a general constraint solver.', '',
+                  'Gradient tolerance certifies approximate stationarity,not a global optimum. '
+                  'Active AdamW decay disables raw-task-gradient convergence claims. Line-search '
+                  'failure,budgets,temperature floors and stagnation remain distinct from convergence. '
+                  'A supplied binary target is an explicit threshold,not an automatic optimality proof.', '',
+                  'Rates,beta values,epsilon placement,decay masks and initialization materially '
+                  'change the methods. Validate finite shapes/scales; bound iterations,samples, '
+                  'populations and line searches. Stable bias correction and log acceptance address '
+                  'specific numerical risks without repairing arbitrary NaNs. Callbacks must be '
+                  'trusted,pure and prompt; evaluation counts do not bound their wall time.', '',
+                  '## Reproducible examples and computational tradeoffs', '',
+                  'Run each canonical python/example.py from repository root with NumPy:', '']
+        lines += ['- ' + link(path, ROOT / algorithms[item['algorithm']]['canonical_location'] / 'python/example.py', item['name'])
+                  for item in category['items'] if (ROOT / algorithms[item['algorithm']]['canonical_location'] / 'python/example.py').is_file()]
+        lines += ['', 'The lessons contain actual printed results,including honest non-converged '
+                  'budget statuses. Per-step vector work is linear for first-order state; L-BFGS '
+                  'uses O(history*dimension) internal curvature storage. GA uses bounded populations '
+                  'and SA one current state. Returned histories/trajectories add real memory costs; '
+                  'callback costs and conditioning dominate many problems. No universal winner is claimed.', '',
+                  '## Learning roadmap and canonical compatibility', '',
+                  'Study objective/gradient checks and batch normalization first,then stateful '
+                  'moments and decoupled decay,then curvature/line search,and finally stochastic '
+                  'binary transitions. GA and SA retain one B10 canonical each serving C3/C4. '
+                  'Other AI topics remain deferred. Previous learner optimizers are not replaced. '
+                  'ML C++ is optional and absent; DSA C++17/C++20 remain mandatory. Read '
+                  + link(path, ROOT / 'docs/optimization-scope.md', 'scope') + ', '
+                  + link(path, ROOT / 'docs/optimization-conventions.md', 'contracts') + ' and '
+                  + link(path, ROOT / 'docs/optimization-checkpoints.md', 'checkpoints') + '.', '',
+                  'References and independent mathematical checks are in the canonical25-section lessons. '
+                  'Optional SciPy is a test oracle only; no third-party complete optimizer is used in core.']
+    if category['id'] in {'B7','B8','B9'} and ml_active and (development or {}).get('category') == 'B10':
+        lines += ['', 'This category is owner-approved. Its original source/tests/lessons and '
+                  'historical evidence remain unchanged; Phase22 adds B10 optimizers without '
+                  'rerouting prior training. B8 remains9 completed+1 intentionally blocked DPO '
+                  'under the owner-approved remain-blocked decision; no substitute is authorized.']
+    if category['id'] in {'C3','C4'} and (development or {}).get('category') == 'B10':
+        lines += ['', 'The GA/SA memberships reuse their existing B10 ML canonicals. Phase22 '
+                  'authorizes those shared foundations only; it does not implement or relax '
+                  'language requirements for unrelated AI-owned canonicals.']
+    if category['id'] == 'B9' and ml_active and ((development or {}).get('category') == 'B9' or (development or {}).get('mode') == 'final-ml-audit'):
+        lines += ['', 'Phase21 covers exactly PageRank,Node2Vec and Graph Convolutional Networks '
+                  'in three internal batches. Phase20 is owner-approved as9 completed algorithms '
+                  'plus one intentionally blocked DPO; its identity/statuses/research remain preserved. '
+                  'New Phase21 owner review pending. No Phase22,commit,push,tag,release or publication.', '',
+                  '## Graph representation and tasks', '',
+                  'Dense float64 adjacency A uses node IDs0..n-1 and A[i,j] as outgoing weight '
+                  'i→j. Nonnegative finite weights,1..32 nodes and explicit node order are required. '
+                  'Duplicate edges must be aggregated explicitly before matrix construction. '
+                  'PageRank supports direction and self-loops; Node2Vec/GCN require exactly '
+                  'symmetric undirected matrices and zero input diagonal. No direction or weight is discarded.', '',
+                  '| Method | Output and objective | Main cost in this implementation |',
+                  '| --- | --- | --- |',
+                  '| PageRank | Stationary importance; weighted random surfer | O(K n²) iteration |',
+                  '| Node2Vec | Biased walks; trained SGNS node vectors | Walks plus O(E M(k+1)d) embedding updates |',
+                  '| GCN | Masked node classes; normalized feature/message propagation | Dense graph products per epoch |', '',
+                  'PageRank uses row-stochastic P and propagates with P.T. GCN uses symmetric '
+                  'D^(-1/2)(A+I)D^(-1/2),not a row-stochastic substitute. Node2Vec uses previous/current '
+                  'walk nodes and exact p/q bias. GCN features have one row per node and training '
+                  'labels/masks follow the same order; -1 means an unknown label.', '',
+                  '## Reproducible examples', '',
+                  'Run the canonical python/example.py files from the repository root:', '',
+                  *['- ' + link(path, ROOT / category['path'] / topic / 'python/example.py', topic)
+                    for topic in ('pagerank','node2vec','graph-convolutional-networks')], '',
+                  'The lessons include their actual printed outputs. Local seeded generators '
+                  'avoid global RNG mutation. PageRank is ranking,Node2Vec is unsupervised '
+                  'representation learning,and GCN is supervised graph message passing.', '',
+                  '## Numerical and computational tradeoffs', '',
+                  'Handle dangling/zero-degree nodes explicitly; use stable softplus and softmax; '
+                  'bound walks,pairs,epochs,dimensions and allocations. PageRank reports residual '
+                  'non-convergence. Both learners expose finite-epoch objective histories without '
+                  'claiming universal convergence or embedding quality. Dense storage is O(n²) '
+                  'even for a sparse graph. C++ is optional and absent.', '',
+                  'B9 GCN reuses the approved B7 normalization utility; the B7 scalar regressor '
+                  'and B9 masked classifier keep distinct canonical IDs and unchanged prior source. '
+                  'Independent stationary solves,walk probabilities,loss/forward oracles,finite '
+                  'differences and node-permutation equivariance support verification. Read '
+                  + link(path, ROOT / 'docs/graph-learning-scope.md', 'scope') + ', '
+                  + link(path, ROOT / 'docs/graph-learning-conventions.md', 'contracts') + ' and '
+                  + link(path, ROOT / 'docs/graph-learning-checkpoints.md', 'checkpoints') + '.']
+    if category['id'] == 'B8' and ml_active and (development or {}).get('category') == 'B9':
+        lines += ['', 'Phase20 implementation review is owner-approved:9 completed algorithms '
+                  'plus one intentionally blocked DPO,not10/10. The separate Outcome3 decision '
+                  'remains owner-approved: remain blocked. All canonical source/tests/lessons '
+                  'and historical reports/packages are preserved. Current B9 authorization '
+                  'does not permit substituting or implementing unresolved DPO.']
+    if category['id'] == 'B7' and ml_active and (development or {}).get('category') == 'B9':
+        lines += ['', 'B7 is owner-approved. Source/tests/lessons and historical evidence remain '
+                  'unchanged,including the shared vanilla autoencoder,CNN and GNN. B9 retains '
+                  'a distinct GCN classifier and reuses compatible normalization without rewriting B7.']
+    if category['id'] == 'B7' and ml_active and (development or {}).get('category') == 'B7':
+        lines += ['', 'Phase19 completes all14 existing B7 canonicals in7 batches. '
+                  'The approved vanilla autoencoder is preserved byte-for-byte and shared with B5; '
+                  'CNN remains one B7 canonical shared with C10. Read '
+                  + link(path, ROOT / 'docs/neural-networks-and-deep-learning-scope.md', 'scope') + ', '
+                  + link(path, ROOT / 'docs/neural-networks-and-deep-learning-conventions.md', 'numerical/API contracts') + ' and '
+                  + link(path, ROOT / 'docs/neural-networks-and-deep-learning-checkpoints.md', 'checkpoints') + '. '
+                  'Compact NumPy forward/backprop/training and independent finite differences are required; '
+                  'C++ optional/absent. Shapes, objectives, fixed budgets and educational limits are explicit. '
+                  'No framework/pretrained weights/dataset downloads or production-parity claims. '
+                  'New owner review pending; no Phase20/B8 or publication.']
+    if category['id'] == 'B8' and ml_active and (development or {}).get('category') == 'B8':
+        dpo_decision = (development or {}).get('dpo_specification_decision', {})
+        decision_text = ('The owner approved Outcome 3: remain blocked; this is nine completed algorithms '
+                         'plus one intentionally blocked algorithm. Phase 20 implementation review remains pending. '
+                         if dpo_decision.get('owner_approval') == 'approved' else
+                         'The owner explicitly deferred that decision; this is nine implemented plus one blocked, ')
+        lines += ['', 'Phase20 implements nine defined reinforcement-learning canonicals in five batches. '
+                  'Dynamic Policy Optimization retains its exact identity and all blocked statuses: '
+                  'the defining paper, mathematical objective and intended variant are missing. '
+                  + decision_text + 'Never claim 10/10 complete. Read '
+                  + link(path, ROOT / 'docs/reinforcement-learning-scope.md', 'scope') + ', '
+                  + link(path, ROOT / 'docs/reinforcement-learning-conventions.md', 'environment/numerical contracts') + ' and '
+                  + link(path, ROOT / 'docs/reinforcement-learning-checkpoints.md', 'checkpoints') + '. '
+                  'Actual NumPy learning, independent Bellman/gradient oracles, concurrent A3C workers '
+                  'and bounded deterministic single-agent MCTS are required. C++ optional/absent. '
+                  'Phase19 is owner-approved; Phase20 owner review pending. No Phase21 or publication.']
+    if category['id'] in {'B4', 'B5', 'B6', 'B7'} and ml_active and (development or {}).get('category') == 'B8':
+        lines += ['', 'This category and its latest verified review package are owner-approved. '
+                  'Prior source/tests/lessons and historical review evidence remain preserved. '
+                  'The shared vanilla autoencoder and B7/C10 CNN retain one canonical each.']
+    if category['id'] in {'B5','B6'} and ml_active and (development or {}).get('category') == 'B7':
+        lines += ['', 'This category and its latest verified review package are owner-approved. '
+                  'All earlier implementation/test/lesson/evidence/package bytes are preserved. '
+                  'B5 keeps its one shared B7 vanilla autoencoder with unchanged API.']
     if category['id'] == 'B5' and ml_active and (development or {}).get('category') == 'B6':
         lines += ['', 'All seven Phase 17 B5 members and its latest verified package are owner-approved. '
                   'The one shared autoencoder remains at its B7 canonical path. '
@@ -491,7 +860,7 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
                   'review pending. Read ' + link(path, ROOT / 'docs/association-rule-learning-scope.md', 'scope')
                   + ' and ' + link(path, ROOT / 'docs/association-rule-learning-checkpoints.md', 'checkpoints')
                   + '. No Phase19/B7 or publication.']
-    if category['id'] == 'B4' and ml_active and (development or {}).get('category') in {'B5','B6'}:
+    if category['id'] == 'B4' and ml_active and (development or {}).get('category') in {'B5','B6','B7'}:
         lines += ['', 'Phase 16 Clustering and its latest verified package are owner-approved. '
                   'All eight canonical implementations, tests, lessons and historical artifacts are preserved.']
     if category['id'] == 'B5' and ml_active and (development or {}).get('category') == 'B5':
@@ -616,13 +985,19 @@ def category_page(category: dict, algorithms: dict, development: dict | None = N
         'Choose prerequisites through the '
         + link(path, ROOT / 'docs/learning-roadmap.md', 'learning roadmap')
         + '. Each future completed topic must include the full 25-part '
-        'educational article, ' + ('working Python with numerical tests and optional C++' if category['path'].startswith('machine-learning/') and not category['path'].startswith('machine-learning/deep-learning') else 'working Python and C++ programs') + ', executable '
+        'educational article, ' + ('working Python with numerical tests and optional C++' if category['path'].startswith('machine-learning/') else 'working Python and C++ programs') + ', executable '
         'examples, accurate complexity analysis, and relevant tests described '
         'in ' + link(path, ROOT / 'CONTRIBUTING.md', 'the contribution standards') + '.', '',
         'Completion is shown by the catalog status and topic artifacts. The '
         'current implementation authorization is recorded in the progress tracker; '
         'other categories require explicit user approval.', '', navigation(path), '',
     ]
+    if ml_active and (development or {}).get('mode') == 'final-ml-audit' and category['id'].startswith('B'):
+        # Existing educational text is retained; current audit approval has its own boundary.
+        lines += ['', '## Current final-audit checkpoint', '',
+                  'This category implementation review is owner-approved in the current catalog. '
+                  'Historical handoff reports retain generation-time states. Phase26 audits all B1–B13; '
+                  'final B Track owner approval remains pending. DPO remains blocked;no C1 or publication.']
     return '\n'.join(lines)
 
 

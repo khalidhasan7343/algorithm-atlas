@@ -1,0 +1,29 @@
+{
+  "label": "review-B10-adamw-before",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/optimization/adamw",
+    "-k",
+    "stationary_minimize_rejects",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/optimization/adamw",
+    "-k",
+    "stationary_minimize_rejects",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/ml-final-audit-evidence/review-B10-adamw-before-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-01T19:37:35.847808+06:00",
+  "elapsed_seconds": 0.175,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 1,
+  "output": "docs/ml-final-audit-evidence/review-B10-adamw-before-01.txt"
+}

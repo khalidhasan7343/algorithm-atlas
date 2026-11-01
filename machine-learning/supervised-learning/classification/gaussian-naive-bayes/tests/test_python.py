@@ -64,3 +64,30 @@ def test_invalid_smoothing(algorithm,value):
 @pytest.mark.parametrize('prior',[[1],[-1,2],[0,1],[.2,.2],[np.nan,1]])
 def test_invalid_class_priors(algorithm,prior):
     with pytest.raises(ValueError):algorithm.GaussianNaiveBayes(priors=prior).fit([[0],[1]],[0,1])
+
+
+@pytest.mark.numerical
+@pytest.mark.parametrize('query',[1e6,1e12])
+def test_far_identical_density_preserves_unequal_priors(algorithm,query):
+    # Exactly equal class densities cancel for every query, however far away.
+    model=algorithm.GaussianNaiveBayes().fit(np.ones((4,128)),[0,1,1,1])
+    assert_allclose(model.predict_proba(np.full((1,128),query)),[[.25,.75]],atol=1e-15,rtol=1e-15)
+    assert_array_equal(model.predict(np.full((1,128),query)),[1])
+    assert model.predict_proba(np.empty((0,128))).shape==(0,2)
+
+
+@pytest.mark.numerical
+@pytest.mark.parametrize('query,delta',[(1e6,1e-6),(1e12,1e-12)])
+def test_far_nearly_identical_means_use_relative_quadratic(algorithm,query,delta):
+    # Equal variance1 and means0,delta give log likelihood ratio x*delta-delta²/2.
+    model=algorithm.GaussianNaiveBayes(var_smoothing=1.).fit([[0.],[0.],[delta],[delta]],[0,0,1,1])
+    odds=np.exp(query*delta-delta*delta/2)
+    assert_allclose(model.predict_proba([[query]]),[[1/(1+odds),odds/(1+odds)]],atol=2e-15,rtol=2e-15)
+    assert_array_equal(model.predict([[query]]),[1])
+
+
+@pytest.mark.numerical
+def test_variance_floor_independent_global_population_calculation(algorithm):
+    model=algorithm.GaussianNaiveBayes(var_smoothing=.01).fit([[0.],[1.],[5.],[6.]],[0,0,1,1])
+    assert_allclose(model.epsilon_,.065,atol=1e-15,rtol=1e-15)
+    assert_allclose(model.var_,[[.315],[.315]],atol=1e-15,rtol=1e-15)

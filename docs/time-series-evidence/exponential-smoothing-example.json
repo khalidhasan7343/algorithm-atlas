@@ -1,0 +1,33 @@
+{
+  "topic": "exponential-smoothing",
+  "command": [
+    "python",
+    "machine-learning/time-series/exponential-smoothing/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"levels\": [1.0, 2.5, 5.25], \"fitted\": [0.0, 1.0, 2.5], \"forecast\": [5.25, 5.25, 5.25], \"index\": [3.0, 4.0, 5.0], \"status\": \"fixed-coefficient-recursion\"}\n",
+  "parsed": {
+    "levels": [
+      1.0,
+      2.5,
+      5.25
+    ],
+    "fitted": [
+      0.0,
+      1.0,
+      2.5
+    ],
+    "forecast": [
+      5.25,
+      5.25,
+      5.25
+    ],
+    "index": [
+      3.0,
+      4.0,
+      5.0
+    ],
+    "status": "fixed-coefficient-recursion"
+  },
+  "sections": 25
+}

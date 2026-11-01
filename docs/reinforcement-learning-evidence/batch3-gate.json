@@ -1,0 +1,30 @@
+{
+  "batch": 3,
+  "test_record": "docs/reinforcement-learning-evidence/batch3-01.json",
+  "returncode": 0,
+  "examples": [
+    {
+      "topic": "advantage-actor-critic",
+      "command": [
+        "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+        "/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/advantage-actor-critic/python/example.py"
+      ],
+      "returncode": 0,
+      "sections": 25,
+      "output": "{\"actor_loss\": 0.5198603854199589, \"critic_loss\": 0.28125}",
+      "elapsed_seconds": 0.0567
+    },
+    {
+      "topic": "asynchronous-advantage-actor-critic",
+      "command": [
+        "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+        "/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/asynchronous-advantage-actor-critic/python/example.py"
+      ],
+      "returncode": 0,
+      "sections": 25,
+      "output": "{\"updates\": 2, \"workers_alive\": 0}",
+      "elapsed_seconds": 0.0597
+    }
+  ],
+  "dpo": "unchanged"
+}

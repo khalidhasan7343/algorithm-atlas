@@ -1,0 +1,39 @@
+{
+  "topic": "arima",
+  "command": [
+    "python",
+    "machine-learning/time-series/arima/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"order\": [1, 1, 1], \"status\": \"gradient-tolerance\", \"converged\": true, \"iterations\": 88, \"intercept\": 0.03358521, \"ar\": [0.85969686], \"ma\": [-0.95], \"forecast\": [15.0998527, 15.32689555, 15.55566878, 15.78592963], \"index\": [60.0, 61.0, 62.0, 63.0]}\n",
+  "parsed": {
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "status": "gradient-tolerance",
+    "converged": true,
+    "iterations": 88,
+    "intercept": 0.03358521,
+    "ar": [
+      0.85969686
+    ],
+    "ma": [
+      -0.95
+    ],
+    "forecast": [
+      15.0998527,
+      15.32689555,
+      15.55566878,
+      15.78592963
+    ],
+    "index": [
+      60.0,
+      61.0,
+      62.0,
+      63.0
+    ]
+  },
+  "sections": 25
+}

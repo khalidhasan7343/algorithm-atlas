@@ -1,0 +1,38 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+_______ test_nonrepresentable_metric_ratio_reports_numerical_error[mape] _______
+
+b11 = <module 'atlas_b11_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/time-series/support.py'>
+metric = 'mape'
+
+    @pytest.mark.numerical
+    @pytest.mark.parametrize('metric',['mape','mase'])
+    def test_nonrepresentable_metric_ratio_reports_numerical_error(b11,metric):
+        import warnings
+        with warnings.catch_warnings(record=True) as caught:
+            warnings.simplefilter('always')
+>           with pytest.raises(b11.NumericalError):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           Failed: DID NOT RAISE NumericalError
+
+machine-learning/time-series/tests/test_time_contracts.py:120: Failed
+_______ test_nonrepresentable_metric_ratio_reports_numerical_error[mase] _______
+
+b11 = <module 'atlas_b11_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/time-series/support.py'>
+metric = 'mase'
+
+    @pytest.mark.numerical
+    @pytest.mark.parametrize('metric',['mape','mase'])
+    def test_nonrepresentable_metric_ratio_reports_numerical_error(b11,metric):
+        import warnings
+        with warnings.catch_warnings(record=True) as caught:
+            warnings.simplefilter('always')
+>           with pytest.raises(b11.NumericalError):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           Failed: DID NOT RAISE NumericalError
+
+machine-learning/time-series/tests/test_time_contracts.py:120: Failed
+=========================== short test summary info ============================
+FAILED machine-learning/time-series/tests/test_time_contracts.py::test_nonrepresentable_metric_ratio_reports_numerical_error[mape]
+FAILED machine-learning/time-series/tests/test_time_contracts.py::test_nonrepresentable_metric_ratio_reports_numerical_error[mase]
+2 failed, 116 deselected in 0.05s

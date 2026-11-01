@@ -1,0 +1,34 @@
+{
+  "topic": "genetic-algorithms",
+  "command": [
+    "python",
+    "machine-learning/optimization/genetic-algorithms/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"converged\": true, \"initial_best\": 4.0, \"iterations\": 9, \"known_target_value\": 0, \"objective\": 0.0, \"objective_evaluations\": 111, \"seed\": 22, \"status\": \"target-reached\", \"x\": [1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0]}\n",
+  "sections": 25,
+  "parsed": {
+    "converged": true,
+    "initial_best": 4.0,
+    "iterations": 9,
+    "known_target_value": 0,
+    "objective": 0.0,
+    "objective_evaluations": 111,
+    "seed": 22,
+    "status": "target-reached",
+    "x": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ]
+  }
+}

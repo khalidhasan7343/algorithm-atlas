@@ -1,0 +1,25 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/deep-learning",
+    "-m",
+    "numerical",
+    "-q"
+  ],
+  "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+  "timestamp": "2026-10-30T15:46:46.923834+06:00",
+  "elapsed_seconds": 0.665,
+  "returncode": 0,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "environment": {
+    "CXX": null,
+    "PYTHONHASHSEED": "0",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "log": "docs/neural-networks-and-deep-learning-evidence/numerical-attempt4.txt",
+  "summary": "58 passed, 163 deselected in 0.53s"
+}

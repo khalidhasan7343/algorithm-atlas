@@ -1,0 +1,58 @@
+{
+  "topic": "word2vec",
+  "command": [
+    "python",
+    "machine-learning/natural-language-processing/word2vec/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"texts\": [\"red fox runs\", \"red fox jumps\", \"blue bird flies\", \"blue bird sings\"], \"configuration\": {\"dimension\": 4, \"window\": 2, \"negative_samples\": 3, \"epochs\": 80, \"random_state\": 21}, \"vocabulary\": [\"<UNK>\", \"bird\", \"blue\", \"flies\", \"fox\", \"jumps\", \"red\", \"runs\", \"sings\"], \"pairs\": 24, \"loss_initial\": 2.769128, \"loss_final\": 2.144723, \"status\": \"iteration-budget\", \"red_embedding\": [0.1941, 0.3151, 0.5679, 0.9533], \"fox_embedding\": [0.7267, 0.9511, -0.0381, 0.918], \"unknown_embedding\": [0.0, 0.0, 0.0, 0.0]}\n",
+  "parsed": {
+    "texts": [
+      "red fox runs",
+      "red fox jumps",
+      "blue bird flies",
+      "blue bird sings"
+    ],
+    "configuration": {
+      "dimension": 4,
+      "window": 2,
+      "negative_samples": 3,
+      "epochs": 80,
+      "random_state": 21
+    },
+    "vocabulary": [
+      "<UNK>",
+      "bird",
+      "blue",
+      "flies",
+      "fox",
+      "jumps",
+      "red",
+      "runs",
+      "sings"
+    ],
+    "pairs": 24,
+    "loss_initial": 2.769128,
+    "loss_final": 2.144723,
+    "status": "iteration-budget",
+    "red_embedding": [
+      0.1941,
+      0.3151,
+      0.5679,
+      0.9533
+    ],
+    "fox_embedding": [
+      0.7267,
+      0.9511,
+      -0.0381,
+      0.918
+    ],
+    "unknown_embedding": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "sections": 25
+}

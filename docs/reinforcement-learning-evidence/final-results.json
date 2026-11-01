@@ -1,0 +1,576 @@
+{
+  "B8": {
+    "label": "outcome3-B8",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/outcome3-B8-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T18:50:06.959920+06:00",
+    "elapsed_seconds": 6.909,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/reinforcement-learning-evidence/outcome3-B8-01.txt",
+    "counts": {
+      "tests": 141,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence_period": "owner-approved Outcome3 finalization"
+  },
+  "gradient": {
+    "label": "gradient",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-k",
+      "finite_difference",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-k",
+      "finite_difference",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/gradient-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T10:10:20.072795+06:00",
+    "elapsed_seconds": 0.339,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/reinforcement-learning-evidence/gradient-01.txt",
+    "counts": {
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence_period": "initial implementation review; retained actual execution record"
+  },
+  "numerical": {
+    "label": "numerical",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-m",
+      "numerical",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-m",
+      "numerical",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/numerical-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T10:10:20.072799+06:00",
+    "elapsed_seconds": 0.339,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/reinforcement-learning-evidence/numerical-01.txt",
+    "counts": {
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence_period": "initial implementation review; retained actual execution record"
+  },
+  "oracle": {
+    "label": "oracle",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-m",
+      "oracle",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-m",
+      "oracle",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/oracle-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T10:10:20.072803+06:00",
+    "elapsed_seconds": 0.566,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/reinforcement-learning-evidence/oracle-01.txt",
+    "counts": {
+      "tests": 36,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence_period": "initial implementation review; retained actual execution record"
+  },
+  "bellman": {
+    "label": "bellman",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-k",
+      "bellman or exact_mdp or stochastic_finite",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-k",
+      "bellman or exact_mdp or stochastic_finite",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/bellman-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T10:14:00.781058+06:00",
+    "elapsed_seconds": 0.488,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/reinforcement-learning-evidence/bellman-01.txt",
+    "counts": {
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence_period": "initial implementation review; retained actual execution record"
+  },
+  "environment": {
+    "label": "environment",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-k",
+      "environment",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-k",
+      "environment",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/environment-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T10:14:00.781052+06:00",
+    "elapsed_seconds": 0.318,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/reinforcement-learning-evidence/environment-01.txt",
+    "counts": {
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence_period": "initial implementation review; retained actual execution record"
+  },
+  "reproducibility": {
+    "label": "reproducibility",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-k",
+      "seeded or reproducibility or sampling or noise or single_worker",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-k",
+      "seeded or reproducibility or sampling or noise or single_worker",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/reproducibility-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T10:14:00.781060+06:00",
+    "elapsed_seconds": 6.456,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/reinforcement-learning-evidence/reproducibility-01.txt",
+    "counts": {
+      "tests": 24,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence_period": "initial implementation review; retained actual execution record"
+  },
+  "concurrency": {
+    "label": "concurrency",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-k",
+      "worker or concurrency",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-k",
+      "worker or concurrency",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/concurrency-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T10:14:00.781063+06:00",
+    "elapsed_seconds": 0.429,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/reinforcement-learning-evidence/concurrency-01.txt",
+    "counts": {
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence_period": "initial implementation review; retained actual execution record"
+  },
+  "infrastructure-B8": {
+    "label": "outcome3-infrastructure",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "tests/test_b8_language_and_blocker_policy.py",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/test_b8_language_and_blocker_policy.py",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/outcome3-infrastructure-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T18:50:06.960020+06:00",
+    "elapsed_seconds": 0.588,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/reinforcement-learning-evidence/outcome3-infrastructure-01.txt",
+    "counts": {
+      "tests": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence_period": "owner-approved Outcome3 finalization"
+  },
+  "B1": {
+    "label": "B1",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/regression",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/regression",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/B1-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T10:09:30.500182+06:00",
+    "elapsed_seconds": 1.546,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/reinforcement-learning-evidence/B1-01.txt",
+    "counts": {
+      "tests": 281,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence_period": "initial implementation review; retained actual execution record"
+  },
+  "B2": {
+    "label": "B2",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/classification",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/classification",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/B2-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T10:09:30.494075+06:00",
+    "elapsed_seconds": 1.722,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/reinforcement-learning-evidence/B2-01.txt",
+    "counts": {
+      "tests": 398,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence_period": "initial implementation review; retained actual execution record"
+  },
+  "B3": {
+    "label": "B3",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/ensemble-methods",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/ensemble-methods",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/B3-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T10:09:30.508153+06:00",
+    "elapsed_seconds": 1.636,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/reinforcement-learning-evidence/B3-01.txt",
+    "counts": {
+      "tests": 253,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence_period": "initial implementation review; retained actual execution record"
+  },
+  "B4": {
+    "label": "B4",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/clustering",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/clustering",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/B4-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T10:09:30.503507+06:00",
+    "elapsed_seconds": 1.603,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/reinforcement-learning-evidence/B4-01.txt",
+    "counts": {
+      "tests": 206,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence_period": "initial implementation review; retained actual execution record"
+  },
+  "B5": {
+    "label": "B5",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/dimensionality-reduction",
+      "machine-learning/deep-learning/vanilla-autoencoders",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/dimensionality-reduction",
+      "machine-learning/deep-learning/vanilla-autoencoders",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/B5-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T10:09:30.514789+06:00",
+    "elapsed_seconds": 1.493,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/reinforcement-learning-evidence/B5-01.txt",
+    "counts": {
+      "tests": 162,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence_period": "initial implementation review; retained actual execution record"
+  },
+  "B6": {
+    "label": "B6",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/association-rule-learning",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/association-rule-learning",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/B6-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T10:09:30.508146+06:00",
+    "elapsed_seconds": 1.801,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/reinforcement-learning-evidence/B6-01.txt",
+    "counts": {
+      "tests": 162,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence_period": "initial implementation review; retained actual execution record"
+  },
+  "B7": {
+    "label": "B7",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/deep-learning",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/deep-learning",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/B7-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T10:09:30.494205+06:00",
+    "elapsed_seconds": 1.792,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/reinforcement-learning-evidence/B7-01.txt",
+    "counts": {
+      "tests": 221,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence_period": "initial implementation review; retained actual execution record"
+  },
+  "full-suite": {
+    "label": "outcome3-full-suite",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "--require-cpp",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "--require-cpp",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/outcome3-full-suite-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T18:50:06.960008+06:00",
+    "elapsed_seconds": 439.672,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/reinforcement-learning-evidence/outcome3-full-suite-01.txt",
+    "counts": {
+      "tests": 3841,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "evidence_period": "owner-approved Outcome3 finalization"
+  }
+}

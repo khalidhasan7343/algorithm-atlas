@@ -1,0 +1,67 @@
+{
+  "access_date": "2026-10-31 Asia/Dhaka",
+  "sources": [
+    {
+      "algorithm": "pagerank",
+      "title": "The PageRank Citation Ranking: Bringing Order to the Web",
+      "version": "January29,1998 draft",
+      "url": "https://cs.brown.edu/courses/csci2531/papers/pagerank.pdf",
+      "access": "Parsed17-page university-hosted original draft accessible; relevant ranking/random-surfer formulation inspected."
+    },
+    {
+      "algorithm": "node2vec",
+      "title": "node2vec: Scalable Feature Learning for Networks",
+      "authors": [
+        "Aditya Grover",
+        "Jure Leskovec"
+      ],
+      "year": 2016,
+      "url": "https://arxiv.org/abs/1607.00653",
+      "pdf": "https://arxiv.org/pdf/1607.00653",
+      "access": "Parsed10-page paper accessible; methods second-order bias and neighborhood objective inspected."
+    },
+    {
+      "algorithm": "node2vec SGNS",
+      "title": "Distributed Representations of Words and Phrases and their Compositionality",
+      "authors": [
+        "Tomas Mikolov",
+        "Ilya Sutskever",
+        "Kai Chen",
+        "Greg Corrado",
+        "Jeffrey Dean"
+      ],
+      "year": 2013,
+      "url": "https://arxiv.org/abs/1310.4546",
+      "pdf": "https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf",
+      "access": "Parsed9-page proceedings paper accessible; negative-sampling objective and unigram^0.75 method inspected."
+    },
+    {
+      "algorithm": "GCN",
+      "title": "Semi-Supervised Classification with Graph Convolutional Networks",
+      "authors": [
+        "Thomas N. Kipf",
+        "Max Welling"
+      ],
+      "year": "2017 ICLR;2016 preprint",
+      "url": "https://arxiv.org/abs/1609.02907",
+      "pdf": "https://arxiv.org/pdf/1609.02907",
+      "access": "Parsed14-page paper accessible; normalization,eq9 two-layer classifier and eq10 masked loss inspected."
+    },
+    {
+      "algorithm": "GCN",
+      "url": "https://tkipf.github.io/graph-convolutional-networks/",
+      "access": "Author explanation accessible; graph convolution and normalized propagation inspected."
+    }
+  ],
+  "inaccessible": [
+    {
+      "url": "https://ilpubs.stanford.edu:8090/422/",
+      "result": "Retrieval unavailable through web tool; no successful read claimed."
+    },
+    {
+      "url": "https://research.google/pubs/the-pagerank-citation-ranking-bringing-order-to-the-web/",
+      "result": "404; not used as a verified reference."
+    }
+  ],
+  "implementation_choices": "Dense bounded matrices; SGNS fixed-sample full-batch steps and tanh/bias masked-mean GCN are explicit educational variants. No published performance reproduction is claimed."
+}

@@ -1,0 +1,61 @@
+{
+  "topic": "glove",
+  "command": [
+    "python",
+    "machine-learning/natural-language-processing/glove/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"texts\": [\"red fox runs\", \"red fox jumps\", \"blue bird flies\", \"blue bird sings\"], \"configuration\": {\"dimension\": 4, \"window\": 2, \"symmetric\": true, \"x_max\": 10.0, \"alpha\": 0.75, \"epochs\": 80, \"random_state\": 21}, \"vocabulary\": [\"<UNK>\", \"bird\", \"blue\", \"flies\", \"fox\", \"jumps\", \"red\", \"runs\", \"sings\"], \"red_fox_count\": 2.0, \"red_blue_count\": 0.0, \"loss_initial\": 0.993339, \"loss_final\": 0.003003, \"status\": \"iteration-budget\", \"red_embedding\": [0.2754, 0.0681, -0.0472, 0.2165], \"fox_embedding\": [0.439, 0.0503, -0.0242, 0.1086], \"unknown_embedding\": [0.0, 0.0, 0.0, 0.0]}\n",
+  "parsed": {
+    "texts": [
+      "red fox runs",
+      "red fox jumps",
+      "blue bird flies",
+      "blue bird sings"
+    ],
+    "configuration": {
+      "dimension": 4,
+      "window": 2,
+      "symmetric": true,
+      "x_max": 10.0,
+      "alpha": 0.75,
+      "epochs": 80,
+      "random_state": 21
+    },
+    "vocabulary": [
+      "<UNK>",
+      "bird",
+      "blue",
+      "flies",
+      "fox",
+      "jumps",
+      "red",
+      "runs",
+      "sings"
+    ],
+    "red_fox_count": 2.0,
+    "red_blue_count": 0.0,
+    "loss_initial": 0.993339,
+    "loss_final": 0.003003,
+    "status": "iteration-budget",
+    "red_embedding": [
+      0.2754,
+      0.0681,
+      -0.0472,
+      0.2165
+    ],
+    "fox_embedding": [
+      0.439,
+      0.0503,
+      -0.0242,
+      0.1086
+    ],
+    "unknown_embedding": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "sections": 25
+}

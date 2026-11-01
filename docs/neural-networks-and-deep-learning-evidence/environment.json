@@ -1,0 +1,12 @@
+{
+  "python": "3.14.2 (v3.14.2:df793163d58, Dec  5 2025, 12:18:06) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "dependencies": {
+    "numpy": "2.5.4",
+    "pytest": "9.1.1",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.18.1",
+    "PyYAML": "6.0.3"
+  },
+  "dependency_setup": "Existing ML development interpreter reused; no installation/upgrade"
+}

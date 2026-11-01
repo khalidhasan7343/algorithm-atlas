@@ -1,0 +1,2520 @@
+{
+  "audit": "Phase26 independent B9-B12 canonical review",
+  "reviewed_count": 22,
+  "expected_count": 22,
+  "categories": {
+    "B9": 3,
+    "B10": 10,
+    "B11": 6,
+    "B12": 3
+  },
+  "review_status": "complete",
+  "canonical_reviews": [
+    {
+      "id": "pagerank",
+      "category": "B9",
+      "canonical_path": "machine-learning/graph-learning/pagerank",
+      "files": {
+        "source": {
+          "path": "machine-learning/graph-learning/pagerank/python/solution.py",
+          "sha256": "00014af36a54d083d7c6cd7a24d46052d1ccb8c61969a6e80fa229f6649c62be",
+          "bytes": 2962,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/graph-learning/pagerank/tests/test_python.py",
+          "sha256": "c5f2a66c36736c61162a5ab774fe8bcb1fac3152328abdc98438836b9f264532",
+          "bytes": 4619,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/graph-learning/pagerank/README.md",
+          "sha256": "9f1d75630966ba053f9970b7763f2a502e0a95e84179b8892e22a32b4cf46a83",
+          "bytes": 8690,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Row-stochastic weighted P has each dangling row equal to personalization v; column ranks iterate d*P.T*r+(1-d)*v from v. Probability mass is normalized for drift; a fresh L1 residual/(1-d) governs stopping. d<1 gives a unique exact-arithmetic fixed point; finite budget and near-unit damping do not supply interval-certified float error.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/graph-learning/pagerank/tests/test_python.py",
+        "test_names": [
+          "test_stationary_linear_oracle_mass_and_residual",
+          "test_two_node_hand_result_and_zero_damping",
+          "test_symmetric_star_cycle_and_node_permutation"
+        ],
+        "mechanism_and_independence": "Scalar construction plus stationary linear solve is independent of production power iteration; hand [.4,.6], weighted row scaling and node permutations check orientation/dangling behavior.",
+        "coverage_limitations": "No learned gradients; stationary fixed-point residual is the appropriate certificate.",
+        "tolerance_assertions": [
+          {
+            "test": "test_stationary_linear_oracle_mass_and_residual",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_stationary_linear_oracle_mass_and_residual",
+            "atol": "1e-12",
+            "rtol": "0"
+          },
+          {
+            "test": "test_stationary_linear_oracle_mass_and_residual",
+            "atol": "1e-12"
+          },
+          {
+            "test": "test_two_node_hand_result_and_zero_damping",
+            "atol": "1e-10"
+          },
+          {
+            "test": "test_seeded_random_directed_weighted_graphs_and_row_scaling",
+            "atol": "1e-12",
+            "rtol": "0"
+          },
+          {
+            "test": "test_seeded_random_directed_weighted_graphs_and_row_scaling",
+            "atol": "1e-12"
+          },
+          {
+            "test": "test_symmetric_star_cycle_and_node_permutation",
+            "atol": "1e-12"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_stationary_linear_oracle_mass_and_residual",
+        "test_two_node_hand_result_and_zero_damping",
+        "test_seeded_random_directed_weighted_graphs_and_row_scaling",
+        "test_symmetric_star_cycle_and_node_permutation",
+        "test_budget_nonconvergence_and_diagnostics",
+        "test_invalid_hyperparameters",
+        "test_invalid_graph",
+        "test_invalid_personalization",
+        "test_copying_reproducibility_and_atomic_failed_refit"
+      ],
+      "gradient_or_update_verification": "No learned gradients; stationary fixed-point residual is the appropriate certificate.",
+      "limitations": "Dense n1..32,weights<=1e6,d in[0,1),max_iter<=100000;tolerance1e-14..1. Near1 damping amplifies roundoff and slows convergence; dense O(Kn\u00b2),O(n\u00b2) storage.",
+      "documentation_findings": [],
+      "result": "passed-no-change",
+      "fresh_canonical_tests_passed": 43,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "node2vec",
+      "category": "B9",
+      "canonical_path": "machine-learning/graph-learning/node2vec",
+      "files": {
+        "source": {
+          "path": "machine-learning/graph-learning/node2vec/python/solution.py",
+          "sha256": "f59bed84881dbc90fd61907b4b14cba52b570d6a442763f2929b22207df2cdf6",
+          "bytes": 9174,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/graph-learning/node2vec/tests/test_python.py",
+          "sha256": "623a303d8b523e29875606f981fd89362e01495f6d59e9a34d5a13c50c27dc40",
+          "bytes": 8449,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/graph-learning/node2vec/README.md",
+          "sha256": "913ad1ff487de5c8103e252b6c462c65c3d9809fefaaa4881ff3f09638eb789b",
+          "bytes": 10944,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Weighted undirected zero-diagonal walks use first-step weights then return/adjacent/distance2 factors1/p,1,1/q. Ordered positional windows include revisits. Separate input/context vectors optimize mean positive softplus plus summed negative softplus using one declared fixed context-frequency^.75 negative sample per fit. Scatter accumulation handles repeated/positive-noise IDs. Fixed clipped epochs are not convergence.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/graph-learning/node2vec/tests/test_python.py",
+        "test_names": [
+          "test_exact_first_and_second_order_weighted_bias",
+          "test_seeded_random_transition_oracles",
+          "test_context_window_exact_order_boundaries_and_revisits",
+          "test_sgns_independent_loss_and_all_finite_difference_gradients_with_collisions",
+          "test_hand_sgns_loss_and_gradient"
+        ],
+        "mechanism_and_independence": "Independent BFS distances check biased transition probabilities; scalar-loop SGNS objective and hand 2log2 give independent values. Central differences perturb every input/context coordinate with fixed negatives and collisions; training loss is supplementary empirical evidence.",
+        "coverage_limitations": "All input/context coordinates in a3-by2 smooth example; h=1e-6,atol2e-9,rtol2e-6. No unsupported stochastic-objective/full-softmax gradient claim.",
+        "tolerance_assertions": [
+          {
+            "test": "test_sgns_independent_loss_and_all_finite_difference_gradients_with_collisions",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_sgns_independent_loss_and_all_finite_difference_gradients_with_collisions",
+            "atol": "2e-09",
+            "rtol": "2e-06"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_exact_first_and_second_order_weighted_bias",
+        "test_seeded_random_transition_oracles",
+        "test_walk_bounds_isolates_dead_ends_and_seed_reproducibility",
+        "test_context_window_exact_order_boundaries_and_revisits",
+        "test_sgns_independent_loss_and_all_finite_difference_gradients_with_collisions",
+        "test_hand_sgns_loss_and_gradient",
+        "test_extreme_logits_and_tiny_weight_scale_stay_finite",
+        "test_genuine_training_parameter_updates_and_fixed_noise",
+        "test_deterministic_fit_local_rng_ownership_and_failed_refit",
+        "test_invalid_settings",
+        "test_unsupported_graphs",
+        "test_budget_and_transition_index_validation",
+        "test_invalid_training_indices"
+      ],
+      "gradient_or_update_verification": "All input/context coordinates in a3-by2 smooth example; h=1e-6,atol2e-9,rtol2e-6. No unsupported stochastic-objective/full-softmax gradient claim.",
+      "limitations": "n<=32,d<=16,L<=64,walk passes<=20,window<=8,negative count<=8,epochs<=500;pair_bound<=20000 and pair_bound*epochs*(negatives+1)*d<=2e7. Transductive;isolates untrained;fixed negatives may overfit. Retained O(E) loss history now counted.",
+      "documentation_findings": [
+        "B9-B12-DOC-001",
+        "B9-B12-DOC-004"
+      ],
+      "result": "passed-after-documentation-correction",
+      "fresh_canonical_tests_passed": 42,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "graph-convolutional-networks",
+      "category": "B9",
+      "canonical_path": "machine-learning/graph-learning/graph-convolutional-networks",
+      "files": {
+        "source": {
+          "path": "machine-learning/graph-learning/graph-convolutional-networks/python/solution.py",
+          "sha256": "4c8788e70b55a089c7629704f07eca10229a4b84686c2efbe0b201ee28a223c8",
+          "bytes": 7681,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/graph-learning/graph-convolutional-networks/tests/test_python.py",
+          "sha256": "f6bcb7de26bb029ac74046757b909095f3618ec1dab4e24f5fb1e12bb42e04b7",
+          "bytes": 8775,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/graph-learning/graph-convolutional-networks/README.md",
+          "sha256": "a04929add68256a1b898a8b0fd9d90db4c37228c8d5abd4c066b14445514bd8a",
+          "bytes": 11253,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Symmetric degree normalization reuses unchanged B7 utility; genuine two-layer tanh classifier computes B=SX,H=tanh(BW1+b1),T=SH,Z=TW2+b2. Masked mean CE plus weight-only L2 backpropagates both S.T paths;unselected labels never enter objective. Local seeded initialization and clipped full-batch epochs expose nonconverged budget status.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/graph-learning/graph-convolutional-networks/tests/test_python.py",
+        "test_names": [
+          "test_independent_normalization_degrees_weights_and_isolate",
+          "test_hand_two_layer_forward_features_and_graph_dependence",
+          "test_masked_cross_entropy_and_all_finite_difference_gradients",
+          "test_unselected_labels_do_not_leak_into_training",
+          "test_seeded_random_node_permutation_equivariance",
+          "test_b7_normalization_and_existing_message_pass_compatibility"
+        ],
+        "mechanism_and_independence": "Independent scalar normalized degrees,explicit scalar forward/loss and all-coordinate finite differences for W1,b1,W2,b2 at l2=0/.13. Graph perturbations,permutation equivariance and masked-label interventions protect against graph-ignoring/label-leaking substitutes. B7 parity is additional compatibility,not sole oracle.",
+        "coverage_limitations": "All17 coordinates per regularization case,34 checks;central h1e-6,atol3e-9,rtol2e-5. No feature/adjacency-gradient capability is claimed.",
+        "tolerance_assertions": [
+          {
+            "test": "test_independent_normalization_degrees_weights_and_isolate",
+            "atol": "1e-15"
+          },
+          {
+            "test": "test_independent_normalization_degrees_weights_and_isolate",
+            "atol": "1e-15"
+          },
+          {
+            "test": "test_hand_two_layer_forward_features_and_graph_dependence",
+            "atol": "1e-15"
+          },
+          {
+            "test": "test_masked_cross_entropy_and_all_finite_difference_gradients",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_masked_cross_entropy_and_all_finite_difference_gradients",
+            "atol": "3e-09",
+            "rtol": "2e-05"
+          },
+          {
+            "test": "test_semi_supervised_training_predictions_and_fitted_shapes",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_seeded_random_node_permutation_equivariance",
+            "atol": "1e-13"
+          },
+          {
+            "test": "test_seeded_random_node_permutation_equivariance",
+            "atol": "1e-12"
+          },
+          {
+            "test": "test_seeded_random_node_permutation_equivariance",
+            "atol": "1e-13",
+            "rtol": "0"
+          },
+          {
+            "test": "test_b7_normalization_and_existing_message_pass_compatibility",
+            "atol": "1e-15"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_independent_normalization_degrees_weights_and_isolate",
+        "test_hand_two_layer_forward_features_and_graph_dependence",
+        "test_masked_cross_entropy_and_all_finite_difference_gradients",
+        "test_semi_supervised_training_predictions_and_fitted_shapes",
+        "test_unselected_labels_do_not_leak_into_training",
+        "test_seeded_random_node_permutation_equivariance",
+        "test_b7_normalization_and_existing_message_pass_compatibility",
+        "test_extreme_valid_logits_softmax_and_loss_are_finite",
+        "test_copying_seeded_fit_atomic_refit_and_fitted_loop_convention",
+        "test_invalid_settings",
+        "test_invalid_graphs",
+        "test_invalid_training_labels_and_masks",
+        "test_invalid_features"
+      ],
+      "gradient_or_update_verification": "All17 coordinates per regularization case,34 checks;central h1e-6,atol3e-9,rtol2e-5. No feature/adjacency-gradient capability is claimed.",
+      "limitations": "n<=32,F/H<=16,C2..8,epochs<=2000,weights/features<=1e6,gradient norm clipping;dense graph cost O(E[n\u00b2(F+H)+nFH+nHC]). Tanh saturation/homophily/model choices limit quality. Returned O(E) objective history now counted.",
+      "documentation_findings": [
+        "B9-B12-DOC-001"
+      ],
+      "result": "passed-after-documentation-correction",
+      "fresh_canonical_tests_passed": 43,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "batch-gradient-descent",
+      "category": "B10",
+      "canonical_path": "machine-learning/optimization/batch-gradient-descent",
+      "files": {
+        "source": {
+          "path": "machine-learning/optimization/batch-gradient-descent/python/solution.py",
+          "sha256": "c2da39b4e3ac3ae55fa1a09f9bd93bca8466fb2c641794f3383dbf4a44fb441a",
+          "bytes": 662,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/optimization/batch-gradient-descent/tests/test_python.py",
+          "sha256": "b7493ffba6556dbd855ad7a54bb075659aba62d19c220b9b0899bdbabb207189",
+          "bytes": 3330,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/optimization/batch-gradient-descent/README.md",
+          "sha256": "cfd28cddb739bf7187fcd235625d2f75cb9f1ae0a0adb0a3a9d6a310f5c78bf6",
+          "bytes": 8355,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Zero/fresh optimizer state and supplied full gradient give x-=eta*g. Driver checks full-gradient L2 initially and after each accepted update;large steps may increase loss. Parameter/gradient/callback shapes are strict,copied and no implicit bias regularization exists. Minimize commits state only after a successful complete run.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/optimization/batch-gradient-descent/tests/test_python.py",
+        "test_names": [
+          "test_exact_update_and_copying",
+          "test_diagonal_closed_form_trajectory_and_counts",
+          "test_seeded_spd_analytical_optimum"
+        ],
+        "mechanism_and_independence": "Exact hand step,independent diagonal-eigenmode trajectory and seeded SPD solve(A,b) provide independent step/optimum oracles;shared quadratic and Rosenbrock gradient/Hessian fixtures are centrally checked.",
+        "coverage_limitations": "Consumes user gradients rather than estimating arbitrary derivatives. Test fixtures independently verify gradient/Hessian formulas,not arbitrary callbacks.",
+        "tolerance_assertions": [
+          {
+            "test": "test_diagonal_closed_form_trajectory_and_counts",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_seeded_spd_analytical_optimum",
+            "atol": "1e-08",
+            "rtol": "0"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_exact_update_and_copying",
+        "test_diagonal_closed_form_trajectory_and_counts",
+        "test_seeded_spd_analytical_optimum",
+        "test_initial_stationarity_repeated_runs_and_state_reset",
+        "test_large_step_does_not_claim_objective_decrease_or_convergence",
+        "test_invalid_parameters",
+        "test_no_gradient_broadcasting",
+        "test_numerical_callback_failure_keeps_prior_state"
+      ],
+      "gradient_or_update_verification": "Consumes user gradients rather than estimating arbitrary derivatives. Test fixtures independently verify gradient/Hessian formulas,not arbitrary callbacks.",
+      "limitations": "D<=32,eta1e-8..10,updates<=10000,parameter<=1e6,gradient<=1e12,objective<=1e100. Fixed rates do not ensure arbitrary-objective descent/convergence. Returned trajectory O(TD). Trusted callback runtime is outside loop-bound control.",
+      "documentation_findings": [],
+      "result": "passed-no-change",
+      "fresh_canonical_tests_passed": 18,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "stochastic-gradient-descent",
+      "category": "B10",
+      "canonical_path": "machine-learning/optimization/stochastic-gradient-descent",
+      "files": {
+        "source": {
+          "path": "machine-learning/optimization/stochastic-gradient-descent/python/solution.py",
+          "sha256": "30561f05002a2e53837023b45366b170ac99971e21ed364f78cd1cc3081f3736",
+          "bytes": 924,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/optimization/stochastic-gradient-descent/tests/test_python.py",
+          "sha256": "43241527d929deb1ea0f6a9da2c8e7aa286d92c5ec3df3a724ad8b574d16c5a7",
+          "bytes": 3061,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/optimization/stochastic-gradient-descent/README.md",
+          "sha256": "7c9a333b9c4bd5b0477c1a6ef4d9634b0c88a60be4da758af3132db63e8bdac2",
+          "bytes": 9128,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Per-epoch private random permutation without replacement gives one sample-mean update per observation. Full mean gradient is checked initially/each epoch end;zero sample gradient never certifies convergence. Every minimize resets optimizer state and sampling stream.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/optimization/stochastic-gradient-descent/tests/test_python.py",
+        "test_names": [
+          "test_exact_reshuffled_single_observation_updates",
+          "test_zero_sample_gradient_does_not_replace_full_gradient_stop"
+        ],
+        "mechanism_and_independence": "Independent seeded index/per-update scalar recurrence,complete epoch coverage and zero-sample-gradient stopping trap verify random reshuffling and mean scaling;full-gradient analytic optimum tests supplement sampling checks.",
+        "coverage_limitations": "Callbacks supply selected mean gradients;no iid conditional-unbiasedness or arbitrary-callback derivative guarantee.",
+        "tolerance_assertions": [
+          {
+            "test": "test_exact_reshuffled_single_observation_updates",
+            "atol": "1e-15"
+          },
+          {
+            "test": "test_seeded_fit_and_local_rng_state",
+            "atol": "1e-08"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_exact_reshuffled_single_observation_updates",
+        "test_zero_sample_gradient_does_not_replace_full_gradient_stop",
+        "test_seeded_fit_and_local_rng_state",
+        "test_invalid_settings",
+        "test_sampling_budget_and_counts_validation",
+        "test_stationary_initialization_uses_full_gradient_only"
+      ],
+      "gradient_or_update_verification": "Callbacks supply selected mean gradients;no iid conditional-unbiasedness or arbitrary-callback derivative guarantee.",
+      "limitations": "N<=256,epochs<=1000,N*epochs<=20000,D<=32;constant-rate noise can cycle. Records every update trajectory/index batch,so storage O(UD+EN+E),not constant total memory.",
+      "documentation_findings": [],
+      "result": "passed-no-change",
+      "fresh_canonical_tests_passed": 13,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "mini-batch-gradient-descent",
+      "category": "B10",
+      "canonical_path": "machine-learning/optimization/mini-batch-gradient-descent",
+      "files": {
+        "source": {
+          "path": "machine-learning/optimization/mini-batch-gradient-descent/python/solution.py",
+          "sha256": "639f7d40f08fe1ed79c6e62d5f24aa28ce8d404613d3111e1d7bea93ccf2faeb",
+          "bytes": 1266,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/optimization/mini-batch-gradient-descent/tests/test_python.py",
+          "sha256": "260a640d2ac8b23c50bdca3e0c5a03242d2085111bdd35a0e3c81b91fa71ecad",
+          "bytes": 2928,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/optimization/mini-batch-gradient-descent/README.md",
+          "sha256": "5a10c8db533b4ac98c17035d11efec440ffccbc8e367585dafd3470ee9f58097",
+          "bytes": 8801,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "One private epoch permutation is partitioned into disjoint mean-gradient batches,including a smaller tail with its actual divisor. Batch size1 matches reshuffled SGD;batch sizeN matches full-gradient steps. Full mean-gradient stopping occurs at epoch boundaries.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/optimization/mini-batch-gradient-descent/tests/test_python.py",
+        "test_names": [
+          "test_mean_gradient_tail_batch_and_exact_update_order",
+          "test_batch_one_matches_sgd_and_full_batch_matches_batch_gd"
+        ],
+        "mechanism_and_independence": "Explicit scalar selected-residual gradient summation independently recreates all updates and tail length[2,2,1];batch1/full-batch equivalences verify declared endpoints.",
+        "coverage_limitations": "Supplied mean-gradient callback semantics checked through independent exact least-squares batch gradients;no automatic derivative claim.",
+        "tolerance_assertions": [
+          {
+            "test": "test_mean_gradient_tail_batch_and_exact_update_order",
+            "atol": "1e-15"
+          },
+          {
+            "test": "test_batch_one_matches_sgd_and_full_batch_matches_batch_gd",
+            "atol": "1e-15"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_mean_gradient_tail_batch_and_exact_update_order",
+        "test_batch_one_matches_sgd_and_full_batch_matches_batch_gd",
+        "test_repeated_runs_reset_sampling_and_do_not_mutate_inputs",
+        "test_invalid_batch_size",
+        "test_batch_size_may_not_exceed_sample_count"
+      ],
+      "gradient_or_update_verification": "Supplied mean-gradient callback semantics checked through independent exact least-squares batch gradients;no automatic derivative claim.",
+      "limitations": "Batch size1..N,N<=256,epochs<=1000,epochs*N<=20000,D<=32. Full checks and retained trajectories/index histories have explicit costs;fixed-rate convergence is conditional.",
+      "documentation_findings": [],
+      "result": "passed-no-change",
+      "fresh_canonical_tests_passed": 8,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "momentum",
+      "category": "B10",
+      "canonical_path": "machine-learning/optimization/momentum",
+      "files": {
+        "source": {
+          "path": "machine-learning/optimization/momentum/python/solution.py",
+          "sha256": "208340c4e462c70da28ca3ac62dc30dd798fe651f2e35c217833a5865a1d90bd",
+          "bytes": 1037,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/optimization/momentum/tests/test_python.py",
+          "sha256": "5b5c9b67407e6ae871b7cefc1ed8a66f8d68149b6e80e94c15b7cedf1b8f0ecb",
+          "bytes": 1244,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/optimization/momentum/README.md",
+          "sha256": "d1642c60abbe02d7c9b45afe94f1c09ca7a35a0487117a65eab10283461f2dc3",
+          "bytes": 8484,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Heavy-ball velocity starts0 and uses NEW v=beta*v+g,then x-=eta*v;there is no Nesterov lookahead or(1-beta) gradient scaling. A direct zero-gradient step can still move via inertia;the driver instead stops at a full-gradient stationary point.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/optimization/momentum/tests/test_python.py",
+        "test_names": [
+          "test_two_heavy_ball_steps_and_zero_gradient_inertia",
+          "test_beta_zero_matches_plain_gd"
+        ],
+        "mechanism_and_independence": "Two exact hand velocity/parameter steps plus zero-gradient inertia,independent SPD optimum and beta0/GD equivalence verify update/state order. Shared transactional tests cover state/reset/error paths.",
+        "coverage_limitations": "Caller-gradient method;quadratic/Rosenbrock fixture derivatives independently tested. No differentiable optimizer-meta-gradient capability claimed.",
+        "tolerance_assertions": [
+          {
+            "test": "test_spd_convergence_without_monotonicity_assumption",
+            "atol": "1e-08"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_two_heavy_ball_steps_and_zero_gradient_inertia",
+        "test_beta_zero_matches_plain_gd",
+        "test_spd_convergence_without_monotonicity_assumption",
+        "test_invalid_beta"
+      ],
+      "gradient_or_update_verification": "Caller-gradient method;quadratic/Rosenbrock fixture derivatives independently tested. No differentiable optimizer-meta-gradient capability claimed.",
+      "limitations": "D<=32,beta[0,1),eta1e-8..10,max_iter<=10000;may oscillate/increase loss. O(D) live velocity plus O(TD) returned trajectory and O(T) loss.",
+      "documentation_findings": [],
+      "result": "passed-no-change",
+      "fresh_canonical_tests_passed": 7,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "rmsprop",
+      "category": "B10",
+      "canonical_path": "machine-learning/optimization/rmsprop",
+      "files": {
+        "source": {
+          "path": "machine-learning/optimization/rmsprop/python/solution.py",
+          "sha256": "7f03c983b05a012e0d2a57fea4a64b0818d41948857a49ba2bc5d3a86d4497d1",
+          "bytes": 1190,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/optimization/rmsprop/tests/test_python.py",
+          "sha256": "deda15c730f1acc46f05705bed57981ccb2b847985ef57036ea992dcf2b39c36",
+          "bytes": 1432,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/optimization/rmsprop/README.md",
+          "sha256": "e4db153aae2da9b49f900ac7b5c43355b3aa1b67bf2bc2be2d7e5d902e7736cf",
+          "bytes": 8718,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Uncentered squared-gradient EMA v=beta*v+(1-beta)*g\u00b2 starts0,has no bias correction,and divides raw g by sqrt(v)+epsilon. Current gradient is numerator;no first moment or centered estimate.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/optimization/rmsprop/tests/test_python.py",
+        "test_names": [
+          "test_uncentered_uncorrected_ema_and_epsilon_placement",
+          "test_beta_zero_is_current_square_not_bias_corrected_average"
+        ],
+        "mechanism_and_independence": "Independent scalar EMA/update loops check both steps and epsilon placement;beta0 current-square identity and zero/tiny-gradient finite cases cover edge behavior.",
+        "coverage_limitations": "Caller gradients;objective fixture finite differences are separate. No unsupported first-moment,bias-corrected or centered RMSProp behavior claimed.",
+        "tolerance_assertions": [
+          {
+            "test": "test_uncentered_uncorrected_ema_and_epsilon_placement",
+            "atol": "1e-15"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_uncentered_uncorrected_ema_and_epsilon_placement",
+        "test_zero_and_tiny_gradients_are_finite",
+        "test_beta_zero_is_current_square_not_bias_corrected_average",
+        "test_invalid_settings"
+      ],
+      "gradient_or_update_verification": "Caller gradients;objective fixture finite differences are separate. No unsupported first-moment,bias-corrected or centered RMSProp behavior claimed.",
+      "limitations": "D<=32,beta[0,1),epsilon1e-12..1,max_iter<=10000. Tiny squared gradients can legitimately underflow;epsilon stabilizes declared formula. Fixed rates can cycle near optima.",
+      "documentation_findings": [],
+      "result": "passed-no-change",
+      "fresh_canonical_tests_passed": 8,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "adam",
+      "category": "B10",
+      "canonical_path": "machine-learning/optimization/adam",
+      "files": {
+        "source": {
+          "path": "machine-learning/optimization/adam/python/solution.py",
+          "sha256": "bbad146060c44770be6255dadde77ba73b9056d7f9e391c0d8f87d2595f5ad50",
+          "bytes": 1575,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/optimization/adam/tests/test_python.py",
+          "sha256": "a686e59e7702fabdd33d36d3036900d57258eba67adfdbad03dbe6a397f0cb62",
+          "bytes": 1922,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/optimization/adam/README.md",
+          "sha256": "34dab8e37a66b82b9f98bc32c6125ef34e04294dab4c27b0276fdd591a56c0b8",
+          "bytes": 8605,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Zero first/second moments use raw-gradient EMAs and step-t bias corrections,with epsilon OUTSIDE sqrt(vhat). Stable -expm1(t*log(beta)) handles near-unit beta;beta0 explicit. State step indexing starts1 and zero new gradient may move prior momentum.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/optimization/adam/tests/test_python.py",
+        "test_names": [
+          "test_two_bias_corrected_steps_and_exact_state",
+          "test_first_step_epsilon_outside_sqrt_and_no_uncorrected_moments"
+        ],
+        "mechanism_and_independence": "Independent two-step moment/parameter formulas,first-step epsilon witness and60-digit Decimal correction near beta1 verify equations and state separately.",
+        "coverage_limitations": "External objective derivatives are caller responsibility;fixture finite differences validate only supplied educational objectives.",
+        "tolerance_assertions": [
+          {
+            "test": "test_two_bias_corrected_steps_and_exact_state",
+            "atol": "1e-15"
+          },
+          {
+            "test": "test_first_step_epsilon_outside_sqrt_and_no_uncorrected_moments",
+            "atol": "1e-15"
+          },
+          {
+            "test": "test_near_one_beta_bias_correction_against_decimal",
+            "atol": "1e-15"
+          },
+          {
+            "test": "test_near_one_beta_bias_correction_against_decimal",
+            "rtol": "2e-15"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_two_bias_corrected_steps_and_exact_state",
+        "test_first_step_epsilon_outside_sqrt_and_no_uncorrected_moments",
+        "test_near_one_beta_bias_correction_against_decimal",
+        "test_zero_gradient_still_decays_existing_moment_state",
+        "test_invalid_settings"
+      ],
+      "gradient_or_update_verification": "External objective derivatives are caller responsibility;fixture finite differences validate only supplied educational objectives.",
+      "limitations": "D<=32,beta1/beta2[0,1),epsilon1e-12..1,max_iter<=10000. No AMSGrad,schedule,weight decay,second-order curvature or universal convergence guarantee.",
+      "documentation_findings": [],
+      "result": "passed-no-change",
+      "fresh_canonical_tests_passed": 9,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "adamw",
+      "category": "B10",
+      "canonical_path": "machine-learning/optimization/adamw",
+      "files": {
+        "source": {
+          "path": "machine-learning/optimization/adamw/python/solution.py",
+          "sha256": "8f46122e1504b93d42f148d6952236cd1dabde984021c34720679e376a548d9f",
+          "bytes": 2266,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/optimization/adamw/tests/test_python.py",
+          "sha256": "bd3c209d2535769a3ce15b6f2f9664c140935a7ccaad86fbf23186dd919440cb",
+          "bytes": 2933,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/optimization/adamw/README.md",
+          "sha256": "ad497fbe3f085cc475e1838deafa3c50a85fde7d37d7a9d2887fbcc477326076",
+          "bytes": 8992,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Reuses canonical Adam raw-gradient moments,then subtracts eta*decay*mask*x_OLD independently. Active decay disables raw-task-gradient convergence stopping;zero/inactive decay matches Adam. Audit repaired dimension validation before an initially stationary minimize could bypass _candidate.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/optimization/adamw/tests/test_python.py",
+        "test_names": [
+          "test_decoupled_old_parameter_decay_and_bias_mask",
+          "test_zero_task_gradient_decay_does_not_falsely_converge",
+          "test_zero_or_inactive_decay_matches_adam"
+        ],
+        "mechanism_and_independence": "Hand old-parameter decay,raw-moment equality to audited Adam,coupled-L2 inequality and analytic zero-gradient shrinkage check the unique decoupling. New four regressions prove shape rejection before callbacks and prior-state preservation.",
+        "coverage_limitations": "No coupled regularized-loss claim;the task-gradient is external. Adam base has its own independently reviewed moment/update oracles.",
+        "tolerance_assertions": [
+          {
+            "test": "test_decoupled_old_parameter_decay_and_bias_mask",
+            "atol": "1e-15"
+          },
+          {
+            "test": "test_zero_task_gradient_decay_does_not_falsely_converge",
+            "atol": "1e-15"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_decoupled_old_parameter_decay_and_bias_mask",
+        "test_zero_task_gradient_decay_does_not_falsely_converge",
+        "test_zero_or_inactive_decay_matches_adam",
+        "test_decay_mask_copy_shape_and_failed_update_are_transactional",
+        "test_invalid_settings",
+        "test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically"
+      ],
+      "gradient_or_update_verification": "No coupled regularized-loss claim;the task-gradient is external. Adam base has its own independently reviewed moment/update oracles.",
+      "limitations": "D<=32,decay[0,1],eta*decay<=1,Boolean mask lengthD. Active-decay minimize remains budget-limited even for zero raw gradient. Shape validation now also runs before any update/callback.",
+      "documentation_findings": [],
+      "result": "passed-after-minimal-contract-fix",
+      "fresh_canonical_tests_passed": 14,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "l-bfgs",
+      "category": "B10",
+      "canonical_path": "machine-learning/optimization/l-bfgs",
+      "files": {
+        "source": {
+          "path": "machine-learning/optimization/l-bfgs/python/solution.py",
+          "sha256": "9fecd1c8a8f4f65b5c3a0ec0c9a6c615ede9b66c29ac25f847b4e08d32ac8d62",
+          "bytes": 7526,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/optimization/l-bfgs/tests/test_python.py",
+          "sha256": "e4f3653c33811648ed81a1b8e29a85079ea4442c53dc2a24dab7caee988c6e0b",
+          "bytes": 5535,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/optimization/l-bfgs/README.md",
+          "sha256": "23eb11f02133b1561373e4475a1e4a97b94098f5dd16a1fe7d01db26c7398ea7",
+          "bytes": 9656,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Fresh solve uses limited positive-curvature(s,y) pairs and correct two-loop inverse-Hessian action;no exact inverse/Hessian is formed. Bounded bracket/zoom enforces Armijo and strong curvature. Non-descent resets memory,weak curvature skipped;unresolved line search returns last accepted point nonconverged.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/optimization/l-bfgs/tests/test_python.py",
+        "test_names": [
+          "test_two_loop_matches_independent_dense_inverse_bfgs",
+          "test_spd_optimum_wolfe_conditions_and_memory_bound",
+          "test_rosenbrock_independent_scipy_reference"
+        ],
+        "mechanism_and_independence": "Independently formed dense inverse-BFGS rank updates verify two-loop products;SPD solve(A,b),independently recomputed accepted Wolfe slopes and test-only SciPy BFGS/Rosenbrock compare optima. Hessian inverse is monkeypatched forbidden in core check.",
+        "coverage_limitations": "Supplied objective gradients separately finite-differenced on quadratic/Rosenbrock fixtures;algorithm curvature verified by matrix-action rather than exact-Hessian claim.",
+        "tolerance_assertions": [
+          {
+            "test": "test_two_loop_matches_independent_dense_inverse_bfgs",
+            "atol": "2e-13",
+            "rtol": "2e-12"
+          },
+          {
+            "test": "test_spd_optimum_wolfe_conditions_and_memory_bound",
+            "atol": "2e-08",
+            "rtol": "0"
+          },
+          {
+            "test": "test_spd_optimum_wolfe_conditions_and_memory_bound",
+            "atol": "1e-13"
+          },
+          {
+            "test": "test_spd_optimum_wolfe_conditions_and_memory_bound",
+            "atol": "1e-13"
+          },
+          {
+            "test": "test_spd_optimum_wolfe_conditions_and_memory_bound",
+            "atol": "1e-12",
+            "rtol": "2e-07"
+          },
+          {
+            "test": "test_spd_optimum_wolfe_conditions_and_memory_bound",
+            "atol": "1e-12",
+            "rtol": "2e-07"
+          },
+          {
+            "test": "test_spd_optimum_wolfe_conditions_and_memory_bound",
+            "atol": "1e-14",
+            "rtol": "1e-06"
+          },
+          {
+            "test": "test_rosenbrock_independent_scipy_reference",
+            "atol": "2e-07"
+          },
+          {
+            "test": "test_rosenbrock_independent_scipy_reference",
+            "atol": "2e-07"
+          },
+          {
+            "test": "test_singular_psd_quadratic_needs_no_hessian_inverse",
+            "atol": "1e-10"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_two_loop_matches_independent_dense_inverse_bfgs",
+        "test_spd_optimum_wolfe_conditions_and_memory_bound",
+        "test_rosenbrock_independent_scipy_reference",
+        "test_singular_psd_quadratic_needs_no_hessian_inverse",
+        "test_ill_conditioned_problem_is_bounded_and_status_honest",
+        "test_line_search_failure_does_not_accept_bad_step",
+        "test_initial_stationarity_and_repeated_calls_are_fresh",
+        "test_bad_curvature_pairs_rejected",
+        "test_invalid_settings",
+        "test_limits_callback_failures_and_mutation_guard"
+      ],
+      "gradient_or_update_verification": "Supplied objective gradients separately finite-differenced on quadratic/Rosenbrock fixtures;algorithm curvature verified by matrix-action rather than exact-Hessian claim.",
+      "limitations": "D<=32,memory1..20,iterations<=2000,line trials<=80,iteration*trials<=20000,max_step<=1e6. Unconstrained only;not L-BFGS-B. Returned O(TD) trajectory/Wolfe records coexist with O(memory*D) internal curvature.",
+      "documentation_findings": [],
+      "result": "passed-no-change",
+      "fresh_canonical_tests_passed": 26,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "genetic-algorithms",
+      "category": "B10",
+      "canonical_path": "machine-learning/optimization/genetic-algorithms",
+      "files": {
+        "source": {
+          "path": "machine-learning/optimization/genetic-algorithms/python/solution.py",
+          "sha256": "af62bdc0340868391f788292a119fd19ff7240dafd7ebfa985369d9e7f289b41",
+          "bytes": 6157,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/optimization/genetic-algorithms/tests/test_python.py",
+          "sha256": "1759e9beee8ff7bec122054a5564f7fb72b1659754d409af0f018785ba5207ba",
+          "bytes": 6218,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/optimization/genetic-algorithms/README.md",
+          "sha256": "880cddcd8f383866a73c901fc1e69ccb22dc1b57dcc743907e1a4f219b89c69b",
+          "bytes": 9431,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Binary deterministic fitness is minimized by distinct-index tournaments,tie-breaking population index,complementary uniform crossover,independent bit flips and stable elitism. Elite fitness is cached under pure deterministic callbacks. Best history monotonicity does not imply average fitness/global optimum;target versus budget/stagnation statuses explicit.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/optimization/genetic-algorithms/tests/test_python.py",
+        "test_names": [
+          "test_tournament_probabilities_by_exhaustive_subsets_and_ties",
+          "test_uniform_crossover_and_bit_mutation_exact_operators",
+          "test_one_generation_independent_selection_variation_and_evaluation_counts",
+          "test_exhaustive_tiny_domain_oracle_and_initial_target",
+          "test_zero_variation_cannot_invent_new_genotypes"
+        ],
+        "mechanism_and_independence": "Enumerate every size2 tournament for exact rank probabilities;hand masks for crossover/mutation;independently replay one complete generation/RNG draws;exhaustively enumerate tiny binary domain for a known target.",
+        "coverage_limitations": "Derivative-free;gradient/Hessian checks inapplicable. Fitness ordering/operator/transition laws are the independent mechanisms reviewed.",
+        "tolerance_assertions": [],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_tournament_probabilities_by_exhaustive_subsets_and_ties",
+        "test_uniform_crossover_and_bit_mutation_exact_operators",
+        "test_one_generation_independent_selection_variation_and_evaluation_counts",
+        "test_exhaustive_tiny_domain_oracle_and_initial_target",
+        "test_seeded_search_binary_population_elitism_and_repeated_calls",
+        "test_stagnation_is_not_a_global_convergence_claim",
+        "test_zero_variation_cannot_invent_new_genotypes",
+        "test_invalid_settings",
+        "test_invalid_initial_populations",
+        "test_resource_budget_rejects_before_fitness_evaluation",
+        "test_nonfinite_fitness_and_invalid_helpers"
+      ],
+      "gradient_or_update_verification": "Derivative-free;gradient/Hessian checks inapplicable. Fitness ordering/operator/transition laws are the independent mechanisms reviewed.",
+      "limitations": "Bits<=32,population2..64,elites1..P-1,generations<=1000,P+(P-elites)*generations<=20000. Binary-only representation;stagnation not convergence;trusted callback execution not sandboxed.",
+      "documentation_findings": [],
+      "result": "passed-no-change",
+      "fresh_canonical_tests_passed": 26,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "simulated-annealing",
+      "category": "B10",
+      "canonical_path": "machine-learning/optimization/simulated-annealing",
+      "files": {
+        "source": {
+          "path": "machine-learning/optimization/simulated-annealing/python/solution.py",
+          "sha256": "7e6344c5af62eeec7bf83fabab1ed5e721fd23f10e27429f140189451c2d827a",
+          "bytes": 3497,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/optimization/simulated-annealing/tests/test_python.py",
+          "sha256": "7e9171ad0beb604d402accc50c82937fda86ef08acd43a0118be2407e47958a2",
+          "bytes": 5580,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/optimization/simulated-annealing/README.md",
+          "sha256": "47ea026a0a85e6c75067303e96d001859b845f1ab1dbb7a7d62e4493def429c3",
+          "bytes": 9121,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Uniform one-bit symmetric proposals use Metropolis acceptance:improvements/equalities accepted without uniform draw,worsening log(U)<-delta/T. Geometric temperature checked in logs;current chain and retained best are distinct. Floor/budget exits do not assert global optimality.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/optimization/simulated-annealing/tests/test_python.py",
+        "test_names": [
+          "test_exact_metropolis_probability",
+          "test_finite_chain_transition_normalization_and_gibbs_detailed_balance",
+          "test_exact_seeded_metropolis_chain_current_and_best"
+        ],
+        "mechanism_and_independence": "Hand exp(-delta/T),independent full finite transition matrix with Gibbs detailed balance and separately replayed seeded chain verify both law and random-draw order. Tiny exhaustive domains bound best value.",
+        "coverage_limitations": "Derivative-free;no gradient/Hessian requirement. Transition law/detailed balance is verified at fixed temperature,not falsely claimed for the full cooling schedule.",
+        "tolerance_assertions": [
+          {
+            "test": "test_exact_metropolis_probability",
+            "atol": "1e-15"
+          },
+          {
+            "test": "test_finite_chain_transition_normalization_and_gibbs_detailed_balance",
+            "atol": "1e-15"
+          },
+          {
+            "test": "test_finite_chain_transition_normalization_and_gibbs_detailed_balance",
+            "atol": "1e-15"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_exact_metropolis_probability",
+        "test_finite_chain_transition_normalization_and_gibbs_detailed_balance",
+        "test_exact_seeded_metropolis_chain_current_and_best",
+        "test_temperature_floor_and_zero_step_target",
+        "test_extreme_worsening_move_uses_finite_log_acceptance",
+        "test_seeded_repeated_search_and_exhaustive_best_bound",
+        "test_invalid_settings",
+        "test_invalid_binary_initial_state",
+        "test_callback_failure_and_invalid_temperature_probability"
+      ],
+      "gradient_or_update_verification": "Derivative-free;no gradient/Hessian requirement. Transition law/detailed balance is verified at fixed temperature,not falsely claimed for the full cooling schedule.",
+      "limitations": "Bits<=32,iterations<=10000,T0[1e-8,1e6],floor>=1e-12,cooling[.001,1]. Fixed/geometric finite schedules have no universal asymptotic guarantee;PRNG finite probability resolution remains.",
+      "documentation_findings": [],
+      "result": "passed-no-change",
+      "fresh_canonical_tests_passed": 26,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "arima",
+      "category": "B11",
+      "canonical_path": "machine-learning/time-series/arima",
+      "files": {
+        "source": {
+          "path": "machine-learning/time-series/arima/python/solution.py",
+          "sha256": "f5e9db0b34653f0be8ac85c0d57fb94f5849b2ee6ef39d260f63f22df471ed73",
+          "bytes": 9619,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/time-series/arima/tests/test_python.py",
+          "sha256": "09a119af000c99fc711f97e37db028490a35e76e572c1716c8076f895d53199c",
+          "bytes": 4832,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/time-series/arima/README.md",
+          "sha256": "f71afb7b2a34019affb0d85a19c032acc89b8c39e4e29f0a4df01d67f79d51cf",
+          "bytes": 9637,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Training-only differencing and positive scale feed CSS0.5mean post-burn innovation\u00b2. AR polynomial has negative signs,MA positive;MA acts on past errors. Tanh component boxes guarantee sufficient stability/invertibility but omit admissible models. Analytic sensitivities propagate through innovations;unchanged B10 L-BFGS fits locally. Forecast keeps past errors,sets unknown future errors0,and reverses retained differences.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/time-series/arima/tests/test_python.py",
+        "test_names": [
+          "test_ar1_estimation_matches_independent_ols_and_analytic_forecast",
+          "test_white_noise_mean_random_walk_drift_and_second_differences",
+          "test_innovations_use_errors_and_zero_future_shocks",
+          "test_analytic_css_gradient_independent_finite_difference",
+          "test_ma1_css_estimation_independent_scalar_search"
+        ],
+        "mechanism_and_independence": "AR1 independent OLS/analytic recursion,MA1 independent scalar CSS search,explicit ARMA innovation loops and polynomial/second-difference signals verify objective/forecast. Central finite differences independently perturb all supported raw coefficient groups,while value recurrences have separate oracles.",
+        "coverage_limitations": "Raw intercept/AR/MA coordinates checked across6 orders,including d1/d2;h1e-6,atol2e-8,rtol2e-7. No exact Gaussian-ML or full admissible-region gradient claim.",
+        "tolerance_assertions": [
+          {
+            "test": "test_ar1_estimation_matches_independent_ols_and_analytic_forecast",
+            "atol": "2e-07"
+          },
+          {
+            "test": "test_ar1_estimation_matches_independent_ols_and_analytic_forecast",
+            "atol": "1e-07"
+          },
+          {
+            "test": "test_white_noise_mean_random_walk_drift_and_second_differences",
+            "atol": "1e-10"
+          },
+          {
+            "test": "test_innovations_use_errors_and_zero_future_shocks",
+            "atol": "2e-15"
+          },
+          {
+            "test": "test_innovations_use_errors_and_zero_future_shocks",
+            "atol": "2e-15"
+          },
+          {
+            "test": "test_analytic_css_gradient_independent_finite_difference",
+            "atol": "2e-08",
+            "rtol": "2e-07"
+          },
+          {
+            "test": "test_ma1_css_estimation_independent_scalar_search",
+            "atol": "1e-06"
+          },
+          {
+            "test": "test_ma1_css_estimation_independent_scalar_search",
+            "atol": "1e-12"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_ar1_estimation_matches_independent_ols_and_analytic_forecast",
+        "test_white_noise_mean_random_walk_drift_and_second_differences",
+        "test_innovations_use_errors_and_zero_future_shocks",
+        "test_analytic_css_gradient_independent_finite_difference",
+        "test_ma1_css_estimation_independent_scalar_search",
+        "test_invalid_orders",
+        "test_reject_unstable_or_malformed_parameters",
+        "test_minimum_history_constant_series_and_honest_budget"
+      ],
+      "gradient_or_update_verification": "Raw intercept/AR/MA coordinates checked across6 orders,including d1/d2;h1e-6,atol2e-8,rtol2e-7. No exact Gaussian-ML or full admissible-region gradient claim.",
+      "limitations": "n<=512,h<=128,p/q/d<=2,max_iter<=400;conditional zero pre-burn errors,local finite optimization/identifiability limits. Fixed-parameter filter has converged=None. Peak O(I*k) optimizer-returned trajectory is now documented.",
+      "documentation_findings": [
+        "B9-B12-DOC-002",
+        "B9-B12-DOC-003"
+      ],
+      "result": "passed-after-documentation-correction",
+      "fresh_canonical_tests_passed": 26,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "sarima",
+      "category": "B11",
+      "canonical_path": "machine-learning/time-series/sarima",
+      "files": {
+        "source": {
+          "path": "machine-learning/time-series/sarima/python/solution.py",
+          "sha256": "672797daaa4095367474c58d262fb0bf2809f3511d887204c8defd6c99048e0b",
+          "bytes": 2080,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/time-series/sarima/tests/test_python.py",
+          "sha256": "adcad9025c4c5a035dd68071a777a50b0ce572c2e0c3d82359b56caf20062d01",
+          "bytes": 3991,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/time-series/sarima/README.md",
+          "sha256": "866e3e6623c684e7cf5f2f0a3f751766766d4ad5c6b1b2b892c5decf14f16a31",
+          "bytes": 9236,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Reuses canonical ARIMA CSS/sensitivities/optimizer but forms genuine nonseasonal-times-seasonal polynomial convolution and product-rule Jacobians. AR recurrence cross term negative,MA positive. Seasonal differences precede ordinary differences;forecast inversion reverses both.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/time-series/sarima/tests/test_python.py",
+        "test_names": [
+          "test_exact_multiplicative_lag_polynomials",
+          "test_independent_seasonal_innovation_and_multistep_recursion",
+          "test_seasonal_difference_inversion_and_seasonal_ar_estimation",
+          "test_seasonal_css_polynomial_gradient_independent_finite_difference"
+        ],
+        "mechanism_and_independence": "Hand exact expanded coefficient arrays and separate lag-dictionary residual/forecast recurrences;seasonal lag OLS and synthetic integration inversion;zero-seasonal parity supplements these independent values. All seasonal coefficient gradients finite-differenced.",
+        "coverage_limitations": "Every raw nonseasonal/seasonal coordinate across3 seasonal cases with d1/D1,including P/Q;h1e-6,atol2e-8,rtol2e-7.",
+        "tolerance_assertions": [
+          {
+            "test": "test_exact_multiplicative_lag_polynomials",
+            "atol": "0",
+            "rtol": "0"
+          },
+          {
+            "test": "test_exact_multiplicative_lag_polynomials",
+            "atol": "1e-16"
+          },
+          {
+            "test": "test_independent_seasonal_innovation_and_multistep_recursion",
+            "atol": "2e-15"
+          },
+          {
+            "test": "test_independent_seasonal_innovation_and_multistep_recursion",
+            "atol": "2e-15"
+          },
+          {
+            "test": "test_zero_seasonal_orders_reduce_to_arima",
+            "atol": "1e-12"
+          },
+          {
+            "test": "test_zero_seasonal_orders_reduce_to_arima",
+            "atol": "1e-12"
+          },
+          {
+            "test": "test_seasonal_difference_inversion_and_seasonal_ar_estimation",
+            "atol": "1e-10"
+          },
+          {
+            "test": "test_seasonal_difference_inversion_and_seasonal_ar_estimation",
+            "atol": "1e-06"
+          },
+          {
+            "test": "test_seasonal_css_polynomial_gradient_independent_finite_difference",
+            "atol": "2e-08",
+            "rtol": "2e-07"
+          },
+          {
+            "test": "test_combined_seasonal_nonseasonal_inverse_and_insufficient_history",
+            "atol": "1e-09"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_exact_multiplicative_lag_polynomials",
+        "test_independent_seasonal_innovation_and_multistep_recursion",
+        "test_zero_seasonal_orders_reduce_to_arima",
+        "test_seasonal_difference_inversion_and_seasonal_ar_estimation",
+        "test_seasonal_css_polynomial_gradient_independent_finite_difference",
+        "test_invalid_seasonal_configuration",
+        "test_combined_seasonal_nonseasonal_inverse_and_insufficient_history"
+      ],
+      "gradient_or_update_verification": "Every raw nonseasonal/seasonal coordinate across3 seasonal cases with d1/D1,including P/Q;h1e-6,atol2e-8,rtol2e-7.",
+      "limitations": "ARIMA bounds plus P/Q<=1,D<=1,s2..12,k<=7. Seasonal burn/history explicit;not only differencing and not SARIMAX/automatic orders. Temporary optimizer trajectory peak space now counted.",
+      "documentation_findings": [
+        "B9-B12-DOC-002",
+        "B9-B12-DOC-003"
+      ],
+      "result": "passed-after-documentation-correction",
+      "fresh_canonical_tests_passed": 21,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "exponential-smoothing",
+      "category": "B11",
+      "canonical_path": "machine-learning/time-series/exponential-smoothing",
+      "files": {
+        "source": {
+          "path": "machine-learning/time-series/exponential-smoothing/python/solution.py",
+          "sha256": "6f4980c7333cbbca323b5c8c41a4e8b7011e49366008a1d4954bf1117b8dd2b8",
+          "bytes": 1593,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/time-series/exponential-smoothing/tests/test_python.py",
+          "sha256": "29ef2f16bd0628832a98d782709df2bffb43ab55a058a3d095dbcb19cd34829d",
+          "bytes": 1353,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/time-series/exponential-smoothing/README.md",
+          "sha256": "193983833723cd8212af214c99b58e3ad08dfc681515b4e641e2967bc6c85941",
+          "bytes": 7610,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Pre-observation level is supplied or y0;save fitted level then apply alpha*y+(1-alpha)*oldlevel. Fixed coefficients have status fixed-coefficient-recursion,converged=None. Future point forecasts repeat final level;first default residual0 is initialization,not held-out accuracy.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/time-series/exponential-smoothing/tests/test_python.py",
+        "test_names": [
+          "test_exact_recursion_and_multistep"
+        ],
+        "mechanism_and_independence": "Hand exact y[2,4,8],alpha.5,initial0 gives fitted[0,1,2.5],levels[1,2.5,5.25]. Constant/boundary alpha cases and independent flat horizon validate the recursion without production helpers.",
+        "coverage_limitations": "No learned gradient;fixed recursion is verified exactly.",
+        "tolerance_assertions": [
+          {
+            "test": "test_exact_recursion_and_multistep",
+            "rtol": "0",
+            "atol": "0"
+          },
+          {
+            "test": "test_exact_recursion_and_multistep",
+            "rtol": "0",
+            "atol": "0"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_exact_recursion_and_multistep",
+        "test_constant_and_boundary_coefficients",
+        "test_invalid_alpha",
+        "test_single_observation_and_trend_diagnostic"
+      ],
+      "gradient_or_update_verification": "No learned gradient;fixed recursion is verified exactly.",
+      "limitations": "n1..512,h1..128,alpha[0,1],observations/initial<=1e6. Level-only,no alpha estimation/trend/seasonality/interval claim;regular chronological samples required.",
+      "documentation_findings": [
+        "B9-B12-DOC-002"
+      ],
+      "result": "passed-after-documentation-correction",
+      "fresh_canonical_tests_passed": 12,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "holt-winters",
+      "category": "B11",
+      "canonical_path": "machine-learning/time-series/holt-winters",
+      "files": {
+        "source": {
+          "path": "machine-learning/time-series/holt-winters/python/solution.py",
+          "sha256": "98adf23e4923b224e4504f866e7b7d7fb7ba8b0d22e67344be9cf3b0cd4d7aa8",
+          "bytes": 3306,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/time-series/holt-winters/tests/test_python.py",
+          "sha256": "3f29146f69e6d4f37f12429f3c1c38d22638ab5d300fb74e16025a63c2d36f10",
+          "bytes": 2077,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/time-series/holt-winters/README.md",
+          "sha256": "76f5c82eeb9bc743da1364ae9fe76d5024f2e587b8271c4f3b6d5fee625a95cd",
+          "bytes": 8054,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Additive level/trend/phase states initialize at end first cycle using two training cycles;later initial observations are inside training,not online evaluation. Level uses old season,trend old level,season uses new level. Forecast uses absolute n+h-1 phase including partial cycles.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/time-series/holt-winters/tests/test_python.py",
+        "test_names": [
+          "test_hand_states_and_seasonal_offsets"
+        ],
+        "mechanism_and_independence": "Independent scalar hand state sequence plus exact known trend/centered-season generators for periods2/3/4/12 and full forecast-phase checks;not merely a production-helper reference.",
+        "coverage_limitations": "Fixed coefficients;no optimizer gradient/convergence claimed.",
+        "tolerance_assertions": [
+          {
+            "test": "test_hand_states_and_seasonal_offsets",
+            "rtol": "1e-14",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_constant_trend_and_additive_seasonality",
+            "atol": "1e-12"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_hand_states_and_seasonal_offsets",
+        "test_constant_trend_and_additive_seasonality",
+        "test_invalid_parameters",
+        "test_initialization_and_minimum_history"
+      ],
+      "gradient_or_update_verification": "Fixed coefficients;no optimizer gradient/convergence claimed.",
+      "limitations": "m2..12,n>=2m and<=512,alpha/beta/gamma[0,1],h<=128. Initial unavailable fitted prefix is deliberate NaN;additive only,no damping/multiplicative/estimated coefficients.",
+      "documentation_findings": [
+        "B9-B12-DOC-002"
+      ],
+      "result": "passed-after-documentation-correction",
+      "fresh_canonical_tests_passed": 15,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "prophet",
+      "category": "B11",
+      "canonical_path": "machine-learning/time-series/prophet",
+      "files": {
+        "source": {
+          "path": "machine-learning/time-series/prophet/python/solution.py",
+          "sha256": "6495877f07cbf364c8854594037ee0d82124f7129582b289bfc3d6cab0c737da",
+          "bytes": 5433,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/time-series/prophet/tests/test_python.py",
+          "sha256": "1e177ea2d608776ae6435b6c5602b0017285abf7abfdef4b60d05432bc613870",
+          "bytes": 4927,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/time-series/prophet/README.md",
+          "sha256": "406f8545373b3295fe623d5daf8b6667905c9ab07302483882cec26d4e54f6c1",
+          "bytes": 9690,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Explicit linear/Fourier educational subset fits continuous normalized trend hinges and declared periodic sin/cos columns by masked Gaussian ridge. Intercept/base slope unpenalized;augmented SVD avoids normal-equation core inversion. Gaussian ridge prior is explicitly different from official Laplace changepoints. Frozen training duration defines future basis.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/time-series/prophet/tests/test_python.py",
+        "test_names": [
+          "test_independent_design_normal_equations_components_and_objective",
+          "test_linear_piecewise_trend_and_future_extrapolation",
+          "test_fourier_forecast_components_and_training_only_time_scale",
+          "test_approved_b10_optimizer_matches_same_declared_ridge_objective"
+        ],
+        "mechanism_and_independence": "Independently construct every design column and solve masked normal equations;verify coefficient/components/objective;analytic piecewise-linear/Fourier extrapolation and B10 centered-equivalent quadratic compare minimizers. Rank-deficient minimum-norm case tests honest diagnostics.",
+        "coverage_limitations": "Direct convex solve;independent analytic gradient optimality/normal equations rather than a trainable neural gradient claim.",
+        "tolerance_assertions": [
+          {
+            "test": "test_independent_design_normal_equations_components_and_objective",
+            "atol": "1e-15"
+          },
+          {
+            "test": "test_independent_design_normal_equations_components_and_objective",
+            "atol": "1e-10",
+            "rtol": "1e-10"
+          },
+          {
+            "test": "test_independent_design_normal_equations_components_and_objective",
+            "atol": "1e-11"
+          },
+          {
+            "test": "test_independent_design_normal_equations_components_and_objective",
+            "atol": "1e-11"
+          },
+          {
+            "test": "test_independent_design_normal_equations_components_and_objective",
+            "atol": "1e-12"
+          },
+          {
+            "test": "test_linear_piecewise_trend_and_future_extrapolation",
+            "atol": "1e-11"
+          },
+          {
+            "test": "test_fourier_forecast_components_and_training_only_time_scale",
+            "atol": "1e-11"
+          },
+          {
+            "test": "test_fourier_forecast_components_and_training_only_time_scale",
+            "atol": "1e-12"
+          },
+          {
+            "test": "test_singular_design_has_honest_rank_and_finite_minimum_norm",
+            "atol": "1e-12"
+          },
+          {
+            "test": "test_approved_b10_optimizer_matches_same_declared_ridge_objective",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_approved_b10_optimizer_matches_same_declared_ridge_objective",
+            "atol": "2e-07"
+          },
+          {
+            "test": "test_approved_b10_optimizer_matches_same_declared_ridge_objective",
+            "atol": "1e-12"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_independent_design_normal_equations_components_and_objective",
+        "test_linear_piecewise_trend_and_future_extrapolation",
+        "test_fourier_forecast_components_and_training_only_time_scale",
+        "test_singular_design_has_honest_rank_and_finite_minimum_norm",
+        "test_approved_b10_optimizer_matches_same_declared_ridge_objective",
+        "test_invalid_specification",
+        "test_changepoints_must_be_training_interior_and_failed_fit_is_atomic"
+      ],
+      "gradient_or_update_verification": "Direct convex solve;independent analytic gradient optimality/normal equations rather than a trainable neural gradient claim.",
+      "limitations": "n2..512,<=8 interior changepoints,<=4seasonalities,period2..1e4,Fourierorder1..8,totalcolumns<=32,h<=128. No official library parity,holidays,automatic selection,MCMC or intervals.",
+      "documentation_findings": [
+        "B9-B12-DOC-002"
+      ],
+      "result": "passed-after-documentation-correction",
+      "fresh_canonical_tests_passed": 20,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "hidden-markov-models",
+      "category": "B11",
+      "canonical_path": "machine-learning/time-series/hidden-markov-models",
+      "files": {
+        "source": {
+          "path": "machine-learning/time-series/hidden-markov-models/python/solution.py",
+          "sha256": "48d3d234099594379735e85a1ae3d00c89704bfe785fbcebabdba474ff6e1aaf",
+          "bytes": 8678,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/time-series/hidden-markov-models/tests/test_python.py",
+          "sha256": "8ed4a7f09825d0aad30dde11396035a49ba210bdc817b8f7247556abfd923f2e",
+          "bytes": 7959,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/time-series/hidden-markov-models/README.md",
+          "sha256": "ab41eab33547103dca09682992bc96abf4d520081b9181f02868fefbf05d2f60",
+          "bytes": 10275,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Categorical pi/A/B validate normalized probabilities with structural zeros;private Dirichlet initialization otherwise. Log forward/backward,normalized gamma/xi,Viterbi and pure-ML multi-sequence EM implemented. Expected counts respect independent starts and retain old rows at zero occupancy. Likelihood stopping is local/finite;impossible sequences score-inf but reject conditional inference/training.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/time-series/hidden-markov-models/tests/test_python.py",
+        "test_names": [
+          "test_exact_enumeration_forward_backward_gamma_xi_and_viterbi",
+          "test_one_baum_welch_update_matches_exhaustive_expected_counts",
+          "test_singleton_sequences_never_create_boundary_transitions",
+          "test_unreachable_state_rows_are_retained_not_arbitrarily_replaced"
+        ],
+        "mechanism_and_independence": "Exhaustively multiply all hidden-path joints independent of production DP,derive gamma/xi and best joint path;entire one-step EM expected-count update enumerated separately. Singleton-boundary/no-occupancy and long1e-200 likelihood cases verify semantics/numerics.",
+        "coverage_limitations": "EM counts/update verified for pi/A/B through exact enumeration;gradient finite differences not required for this expected-count closed update.",
+        "tolerance_assertions": [
+          {
+            "test": "test_exact_enumeration_forward_backward_gamma_xi_and_viterbi",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_exact_enumeration_forward_backward_gamma_xi_and_viterbi",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_exact_enumeration_forward_backward_gamma_xi_and_viterbi",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_exact_enumeration_forward_backward_gamma_xi_and_viterbi",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_exact_enumeration_forward_backward_gamma_xi_and_viterbi",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_exact_enumeration_forward_backward_gamma_xi_and_viterbi",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_exact_enumeration_forward_backward_gamma_xi_and_viterbi",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_exact_enumeration_forward_backward_gamma_xi_and_viterbi",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_exact_enumeration_forward_backward_gamma_xi_and_viterbi",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_one_baum_welch_update_matches_exhaustive_expected_counts",
+            "atol": "2e-15"
+          },
+          {
+            "test": "test_one_baum_welch_update_matches_exhaustive_expected_counts",
+            "atol": "2e-15"
+          },
+          {
+            "test": "test_one_baum_welch_update_matches_exhaustive_expected_counts",
+            "atol": "2e-15"
+          },
+          {
+            "test": "test_one_baum_welch_update_matches_exhaustive_expected_counts",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_singleton_sequences_never_create_boundary_transitions",
+            "atol": "0",
+            "rtol": "0"
+          },
+          {
+            "test": "test_long_tiny_probability_sequence_remains_finite_in_log_space",
+            "rtol": "1e-12"
+          },
+          {
+            "test": "test_impossible_sequence_status_and_failed_training_atomicity",
+            "rtol": "0",
+            "atol": "0"
+          },
+          {
+            "test": "test_unreachable_state_rows_are_retained_not_arbitrarily_replaced",
+            "atol": "0",
+            "rtol": "0"
+          },
+          {
+            "test": "test_unreachable_state_rows_are_retained_not_arbitrarily_replaced",
+            "atol": "0",
+            "rtol": "0"
+          },
+          {
+            "test": "test_seeded_multisequence_em_monotonicity_reproducibility_and_budget",
+            "atol": "0",
+            "rtol": "0"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_exact_enumeration_forward_backward_gamma_xi_and_viterbi",
+        "test_one_baum_welch_update_matches_exhaustive_expected_counts",
+        "test_singleton_sequences_never_create_boundary_transitions",
+        "test_long_tiny_probability_sequence_remains_finite_in_log_space",
+        "test_impossible_sequence_status_and_failed_training_atomicity",
+        "test_unreachable_state_rows_are_retained_not_arbitrarily_replaced",
+        "test_seeded_multisequence_em_monotonicity_reproducibility_and_budget",
+        "test_one_state_one_symbol_exact_convergence_and_ties",
+        "test_invalid_model_sizes_seeds_partial_parameters",
+        "test_invalid_probability_models",
+        "test_invalid_observation_sequences",
+        "test_input_ownership_and_invalid_training_work_bounds"
+      ],
+      "gradient_or_update_verification": "EM counts/update verified for pi/A/B through exact enumeration;gradient finite differences not required for this expected-count closed update.",
+      "limitations": "K1..8,M1..16,T<=2048,<=16sequences,total<=4096,EM<=200,iterations*total*K\u00b2<=2e7. Local EM optima,label switching,structural zeros and local first-index Viterbi ties;no global lexicographic/global optimum claim.",
+      "documentation_findings": [
+        "B9-B12-DOC-002"
+      ],
+      "result": "passed-after-documentation-correction",
+      "fresh_canonical_tests_passed": 38,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "isolation-forest",
+      "category": "B12",
+      "canonical_path": "machine-learning/anomaly-detection/isolation-forest",
+      "files": {
+        "source": {
+          "path": "machine-learning/anomaly-detection/isolation-forest/python/solution.py",
+          "sha256": "9aa2e4b6e173bbd01abde327ba1c8cb1116184b0a8280c4fa4468463e89fe01a",
+          "bytes": 6081,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/anomaly-detection/isolation-forest/tests/test_python.py",
+          "sha256": "552e4ed8228b4f75d906d0e1fb4c9fcc44f82c9fd969bb80d346de74e1595589",
+          "bytes": 6409,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/anomaly-detection/isolation-forest/README.md",
+          "sha256": "14caf2a4c85c7a4e03928042b5dd533031f0341f3301f6769cce669ee37c25e0",
+          "bytes": 10507,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Private seeded no-replacement subsamples build random variable-feature binary isolation trees;split endpoint repair preserves two nonempty children. h=traversed edges+exact harmonic leaf correction and score2**(-mean(h)/c(psi));psi1 explicitly neutral.5. Training-only quantile thresholds retain boundary ties;constructed status has no optimizer-convergence claim.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/anomaly-detection/isolation-forest/tests/test_python.py",
+        "test_names": [
+          "test_harmonic_normalization_matches_exact_rational",
+          "test_manual_tree_leaf_correction_and_path_lengths",
+          "test_ensemble_average_normalized_scores_independent_walk",
+          "test_sklearn_independent_forest_ranking_orientation"
+        ],
+        "mechanism_and_independence": "Exact rational Fraction harmonic sums,hand frozen tree paths,independent fitted-tree traversal/ensemble exponent and child-count invariants check true isolation. sklearn used only aligned ranking evidence,not bitwise random-tree equivalence.",
+        "coverage_limitations": "No trainable gradient;random construction,path/normalization and explicit threshold oracles apply.",
+        "tolerance_assertions": [
+          {
+            "test": "test_harmonic_normalization_matches_exact_rational",
+            "atol": "2e-14",
+            "rtol": "1e-14"
+          },
+          {
+            "test": "test_manual_tree_leaf_correction_and_path_lengths",
+            "atol": "0",
+            "rtol": "0"
+          },
+          {
+            "test": "test_ensemble_average_normalized_scores_independent_walk",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_ensemble_average_normalized_scores_independent_walk",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_seeded_isolated_point_ranking_and_repeated_fit",
+            "atol": "0",
+            "rtol": "0"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_harmonic_normalization_matches_exact_rational",
+        "test_manual_tree_leaf_correction_and_path_lengths",
+        "test_ensemble_average_normalized_scores_independent_walk",
+        "test_tree_depth_nonempty_splits_leaf_counts_and_sampling",
+        "test_constant_duplicate_and_degenerate_normalization",
+        "test_float_endpoint_splits_keep_both_branches",
+        "test_seeded_isolated_point_ranking_and_repeated_fit",
+        "test_sklearn_independent_forest_ranking_orientation",
+        "test_invalid_hyperparameters",
+        "test_invalid_counts_features_unfitted_and_ownership"
+      ],
+      "gradient_or_update_verification": "No trainable gradient;random construction,path/normalization and explicit threshold oracles apply.",
+      "limitations": "n<=256,d<=32,trees<=128,psi<=256,depth<=32,query<=1024. Axis dependence/finite forests/no probability calibration;path scoring includes repeated feature copies and leaf harmonic sums,now explicitly counted.",
+      "documentation_findings": [
+        "B9-B12-DOC-002",
+        "B9-B12-DOC-003"
+      ],
+      "result": "passed-after-documentation-correction",
+      "fresh_canonical_tests_passed": 37,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "one-class-svm",
+      "category": "B12",
+      "canonical_path": "machine-learning/anomaly-detection/one-class-svm",
+      "files": {
+        "source": {
+          "path": "machine-learning/anomaly-detection/one-class-svm/python/solution.py",
+          "sha256": "931128bbd1042392b6fae32b197159a32fb2cafabcc3c6fb32cbf280619f0de9",
+          "bytes": 8864,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/anomaly-detection/one-class-svm/tests/test_python.py",
+          "sha256": "d204d6a37df87fc2dac9d29f7ad6877d4f6c7c6d781e884615f221808eee5053",
+          "bytes": 8177,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/anomaly-detection/one-class-svm/README.md",
+          "sha256": "8a5b3bc4530062fdb2d60bad8a1ec2137017f6f028727987bc67641d2f78c707",
+          "bytes": 10680,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "Normalized RBF dual min.5alphaKalpha under sum1 and cap1/(nu*n) uses real monotone-root capped-simplex projection and exact feasible pair-coordinate transfers. Fresh-gradient KKT certificate determines rho/free/no-free intervals;nu1 singleton uses max(g) valid endpoint. Feasibility,pair-gap,rho residual,primal-dual gap and budget/stagnation are exposed.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/anomaly-detection/one-class-svm/tests/test_python.py",
+        "test_names": [
+          "test_capped_simplex_projection_independent_face_oracle",
+          "test_hand_gram_symmetry_psd_and_kernel_underflow",
+          "test_analytic_symmetric_dual_and_feasibility",
+          "test_nu_one_no_free_support_uses_valid_finite_rho_endpoint",
+          "test_no_free_support_finite_kkt_interval",
+          "test_dual_objective_constraints_and_independent_kkt_certificate",
+          "test_independent_scipy_dual_and_scaled_sklearn_decision"
+        ],
+        "mechanism_and_independence": "Exhaustive independent projection-face minimization,analytic symmetric dual,KKT/primal formulas,fresh Gram eigenvalue checks,SciPy SLSQP and correctly nu*n-scaled sklearn margins provide distinct independent mechanisms. Nonunique supports/nu1 parity are not required.",
+        "coverage_limitations": "Pair-line derivative/curvature and independent KKT conditions verify constrained optimization;not an unconstrained callback gradient substitute.",
+        "tolerance_assertions": [
+          {
+            "test": "test_capped_simplex_projection_independent_face_oracle",
+            "atol": "2e-13"
+          },
+          {
+            "test": "test_capped_simplex_projection_independent_face_oracle",
+            "atol": "1e-12"
+          },
+          {
+            "test": "test_capped_simplex_projection_independent_face_oracle",
+            "atol": "2e-13"
+          },
+          {
+            "test": "test_hand_gram_symmetry_psd_and_kernel_underflow",
+            "atol": "1e-15"
+          },
+          {
+            "test": "test_hand_gram_symmetry_psd_and_kernel_underflow",
+            "atol": "0",
+            "rtol": "0"
+          },
+          {
+            "test": "test_analytic_symmetric_dual_and_feasibility",
+            "atol": "1e-12"
+          },
+          {
+            "test": "test_analytic_symmetric_dual_and_feasibility",
+            "atol": "1e-12"
+          },
+          {
+            "test": "test_analytic_symmetric_dual_and_feasibility",
+            "atol": "1e-12"
+          },
+          {
+            "test": "test_nu_one_no_free_support_uses_valid_finite_rho_endpoint",
+            "atol": "0",
+            "rtol": "0"
+          },
+          {
+            "test": "test_nu_one_no_free_support_uses_valid_finite_rho_endpoint",
+            "atol": "1e-15"
+          },
+          {
+            "test": "test_nu_one_no_free_support_uses_valid_finite_rho_endpoint",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_no_free_support_finite_kkt_interval",
+            "atol": "1e-12"
+          },
+          {
+            "test": "test_no_free_support_finite_kkt_interval",
+            "atol": "1e-15"
+          },
+          {
+            "test": "test_dual_objective_constraints_and_independent_kkt_certificate",
+            "atol": "2e-08"
+          },
+          {
+            "test": "test_dual_objective_constraints_and_independent_kkt_certificate",
+            "atol": "1e-12"
+          },
+          {
+            "test": "test_dual_objective_constraints_and_independent_kkt_certificate",
+            "atol": "1e-12"
+          },
+          {
+            "test": "test_dual_objective_constraints_and_independent_kkt_certificate",
+            "atol": "1e-13"
+          },
+          {
+            "test": "test_dual_objective_constraints_and_independent_kkt_certificate",
+            "atol": "0",
+            "rtol": "0"
+          },
+          {
+            "test": "test_dual_objective_constraints_and_independent_kkt_certificate",
+            "atol": "0",
+            "rtol": "0"
+          },
+          {
+            "test": "test_independent_scipy_dual_and_scaled_sklearn_decision",
+            "atol": "2e-09"
+          },
+          {
+            "test": "test_independent_scipy_dual_and_scaled_sklearn_decision",
+            "atol": "2e-06",
+            "rtol": "2e-05"
+          },
+          {
+            "test": "test_duplicates_identical_singletons_and_seedless_reproducibility",
+            "atol": "0",
+            "rtol": "0"
+          },
+          {
+            "test": "test_duplicates_identical_singletons_and_seedless_reproducibility",
+            "atol": "0",
+            "rtol": "0"
+          },
+          {
+            "test": "test_unfitted_ownership_atomicity_and_honest_nonconvergence",
+            "atol": "0",
+            "rtol": "0"
+          },
+          {
+            "test": "test_unfitted_ownership_atomicity_and_honest_nonconvergence",
+            "atol": "0",
+            "rtol": "0"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_capped_simplex_projection_independent_face_oracle",
+        "test_invalid_projection_inputs",
+        "test_hand_gram_symmetry_psd_and_kernel_underflow",
+        "test_analytic_symmetric_dual_and_feasibility",
+        "test_nu_one_no_free_support_uses_valid_finite_rho_endpoint",
+        "test_no_free_support_finite_kkt_interval",
+        "test_dual_objective_constraints_and_independent_kkt_certificate",
+        "test_independent_scipy_dual_and_scaled_sklearn_decision",
+        "test_duplicates_identical_singletons_and_seedless_reproducibility",
+        "test_invalid_parameters",
+        "test_unfitted_ownership_atomicity_and_honest_nonconvergence"
+      ],
+      "gradient_or_update_verification": "Pair-line derivative/curvature and independent KKT conditions verify constrained optimization;not an unconstrained callback gradient substitute.",
+      "limitations": "n<=256,d<=32,query<=1024,nu1e-4..1,gamma1e-12..1e12,iterations<=20000,n*budget<=3e6. Dense Gram,approximate tolerances,nu1 boundary degeneracy,legitimate RBF tail underflow. Tiny decisions snapped only at32eps scale.",
+      "documentation_findings": [
+        "B9-B12-DOC-002"
+      ],
+      "result": "passed-after-documentation-correction",
+      "fresh_canonical_tests_passed": 41,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    },
+    {
+      "id": "local-outlier-factor",
+      "category": "B12",
+      "canonical_path": "machine-learning/anomaly-detection/local-outlier-factor",
+      "files": {
+        "source": {
+          "path": "machine-learning/anomaly-detection/local-outlier-factor/python/solution.py",
+          "sha256": "b794a3ef5a2970cc8f497e8b4ee3a72ac60c50500af2a23aba98718a5928bf8d",
+          "bytes": 5248,
+          "read_in_full": true
+        },
+        "tests": {
+          "path": "machine-learning/anomaly-detection/local-outlier-factor/tests/test_python.py",
+          "sha256": "9eec5e30039c00c8f36c6f50d437154a5629a33206cef6625832731b43eafaea",
+          "bytes": 6591,
+          "read_in_full": true
+        },
+        "lesson": {
+          "path": "machine-learning/anomaly-detection/local-outlier-factor/README.md",
+          "sha256": "a8297aa4dff930f962c39fb7ddbf09d0fc8fa1d60d0ec8ae1cdcb76c42667f04",
+          "bytes": 10371,
+          "read_in_full": true
+        }
+      },
+      "mathematical_review": "True tie-inclusive other-row neighborhoods,neighbor k-distance reachability and mean density ratios compute training-only LOF. Stable scaled log means distinguish structural zeros from displayed density overflow. Declared common-epsilon limit gives duplicate pile1 and true positive/infinite neighbor ratio+inf;finite unrepresentable scores raise. Extended quantile ties avoid NaN/no forced quota.",
+      "reviewed_dimensions": [
+        "objective/variant",
+        "initialization",
+        "update/inference",
+        "termination/convergence honesty",
+        "numerical stability",
+        "invalid/edge inputs",
+        "resource/complexity bounds",
+        "owned state/failed-run atomicity",
+        "local RNG/reproducibility",
+        "security/runtime dependencies",
+        "public API/lesson consistency"
+      ],
+      "independent_oracles": {
+        "test_file": "machine-learning/anomaly-detection/local-outlier-factor/tests/test_python.py",
+        "test_names": [
+          "test_independent_distance_neighborhood_reachability_density_and_lof",
+          "test_all_identical_duplicate_limit_is_one",
+          "test_structural_infinite_lof_and_extended_quantile_ties",
+          "test_sklearn_lof_only_matching_nontied_regular_scale_semantics",
+          "test_permutation_translation_scale_and_feature_permutation"
+        ],
+        "mechanism_and_independence": "Independent scalar Euclidean distances,explicit sorted kth neighborhoods,reachability/density arithmetic and hand tie witness scores[1,1,5.5,1]. Duplicate/infinite/tiny-scale tests supplement direct normal-scale sklearn comparisons only where k-distance ties/stabilizer assumptions align.",
+        "coverage_limitations": "Nonparametric computation;no gradient requirement. Independent geometry/ratios and limiting conventions apply.",
+        "tolerance_assertions": [
+          {
+            "test": "test_independent_distance_neighborhood_reachability_density_and_lof",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_independent_distance_neighborhood_reachability_density_and_lof",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_independent_distance_neighborhood_reachability_density_and_lof",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_independent_distance_neighborhood_reachability_density_and_lof",
+            "atol": "2e-14"
+          },
+          {
+            "test": "test_independent_distance_neighborhood_reachability_density_and_lof",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_independent_distance_neighborhood_reachability_density_and_lof",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_independent_distance_neighborhood_reachability_density_and_lof",
+            "atol": "1e-14"
+          },
+          {
+            "test": "test_all_identical_duplicate_limit_is_one",
+            "atol": "0",
+            "rtol": "0"
+          },
+          {
+            "test": "test_tiny_scale_log_density_avoids_infinity_ratio_errors",
+            "rtol": "2e-12",
+            "atol": "2e-12"
+          },
+          {
+            "test": "test_unrepresentable_finite_lof_is_explicit_error_and_fit_atomic",
+            "atol": "0",
+            "rtol": "0"
+          },
+          {
+            "test": "test_sklearn_lof_only_matching_nontied_regular_scale_semantics",
+            "rtol": "2e-08",
+            "atol": "2e-08"
+          },
+          {
+            "test": "test_permutation_translation_scale_and_feature_permutation",
+            "atol": "1e-13"
+          },
+          {
+            "test": "test_permutation_translation_scale_and_feature_permutation",
+            "atol": "1e-13"
+          },
+          {
+            "test": "test_permutation_translation_scale_and_feature_permutation",
+            "atol": "1e-13"
+          }
+        ],
+        "unlisted_tolerance_policy": "Other asserts use exact integers/array equality,explicit numerical properties,or NumPy assert_allclose defaults rtol1e-7,atol0;no thresholds were relaxed during Phase26."
+      },
+      "all_test_function_names": [
+        "test_independent_distance_neighborhood_reachability_density_and_lof",
+        "test_all_identical_duplicate_limit_is_one",
+        "test_structural_infinite_lof_and_extended_quantile_ties",
+        "test_tiny_scale_log_density_avoids_infinity_ratio_errors",
+        "test_unrepresentable_finite_lof_is_explicit_error_and_fit_atomic",
+        "test_two_density_clusters_and_isolated_point",
+        "test_sklearn_lof_only_matching_nontied_regular_scale_semantics",
+        "test_invalid_parameters",
+        "test_small_data_invalid_neighborhood_and_unsupported_novelty",
+        "test_permutation_translation_scale_and_feature_permutation"
+      ],
+      "gradient_or_update_verification": "Nonparametric computation;no gradient requirement. Independent geometry/ratios and limiting conventions apply.",
+      "limitations": "n2..256,d<=32,k1..n-1;training scoring only,dense n\u00b2storage/work. Duplicate extension is declared,not attributed to original distinct-point paper. Dense anomaly clusters can mask each other;retained teaching study reports that limitation.",
+      "documentation_findings": [
+        "B9-B12-DOC-002"
+      ],
+      "result": "passed-after-documentation-correction",
+      "fresh_canonical_tests_passed": 28,
+      "mandatory_lesson_sections": 25,
+      "runtime_security": "Reviewed NumPy/stdlib and fixed local canonical imports;no network,model download,pickle/eval/exec or complete-estimator delegation. B10 callbacks are explicitly trusted/pure/prompt,not a code sandbox."
+    }
+  ],
+  "findings": [
+    {
+      "id": "B9-B12-SRC-001",
+      "severity": "medium",
+      "kind": "existing public-contract validation defect",
+      "canonical": "adamw",
+      "status": "fixed",
+      "reproduction": "AdamW(decay_mask=[False]).minimize(lambda x:0.,lambda x:zeros_like(x),[1.,2.])",
+      "expected": "ValueError before objective/gradient callbacks and prior committed state unchanged",
+      "actual_before": "gradient-tolerance,converged=True,n_iter0 despite mask length1 for2 parameters",
+      "cause": "Shape check existed only inside _candidate;initial full-gradient stopping bypassed every update.",
+      "fix": "Override same minimize signature;reuse support.vector and validate decay_mask shape before delegating unchanged base solver. No update equation,stopping rule,parameter domain or public signature changed.",
+      "files": [
+        "machine-learning/optimization/adamw/python/solution.py",
+        "machine-learning/optimization/adamw/tests/test_python.py"
+      ],
+      "evidence": [
+        "review-B10-adamw-before-01.json",
+        "review-B10-adamw-after-01.json",
+        "review-B9-B12-targets-01.json"
+      ],
+      "before_tests": "4 intentionally failing regression cases;10 deselected",
+      "after_tests": "122 passed AdamW+shared;839 passed allB9-B12",
+      "risk": "Low:early invalid-input rejection only;all valid recurrence/state oracles unchanged and retained."
+    },
+    {
+      "id": "B9-B12-DOC-001",
+      "severity": "low",
+      "status": "fixed",
+      "canonical_ids": [
+        "node2vec",
+        "graph-convolutional-networks"
+      ],
+      "reproduction": "Compare section12 space bounds with retained loss_history_ of epochs+1 values in both fit implementations.",
+      "expected": "Total/output memory includes O(E) objective history.",
+      "actual_before": "Declared space omitted E even though fitted models retain the full history.",
+      "cause": "Working-memory description omitted retained diagnostic output.",
+      "fix": "Add +E and explicit retained-history sentence in both sections12.",
+      "evidence": [
+        "review-B9-B12-targets-01.json",
+        "review-B9-B12-examples-01.json"
+      ],
+      "risk": "Documentation-only;no source/behavior change."
+    },
+    {
+      "id": "B9-B12-DOC-002",
+      "severity": "medium",
+      "status": "fixed",
+      "canonical_ids": [
+        "exponential-smoothing",
+        "holt-winters",
+        "arima",
+        "sarima",
+        "prophet",
+        "hidden-markov-models",
+        "isolation-forest",
+        "one-class-svm",
+        "local-outlier-factor"
+      ],
+      "reproduction": "Read full sections4/5/7 against exact required titles:output API appeared under Why Need,all equations under Real-World Applications,and workflow duplicated under Prerequisites.",
+      "expected": "Heading semantics match specific motivation,credible applications and real prerequisites;all original API/math remains available.",
+      "actual_before": "All9 B11/B12 lessons had the same content/heading mismatch despite passing structural heading-count validation.",
+      "cause": "Prior shared lesson renderer populated semantic slots incorrectly.",
+      "fix": "Move original4 outputs to3;move original5 math to6;write specific4 motivation,5 applications,7 prerequisites. Preserve original8 workflow and all pseudocode/dryruns/examples. Alsocorrect B12 contract link labels and stale HMM POS cross-reference.",
+      "evidence": [
+        "review-B9-B12-docs-01.json",
+        "review-B9-B12-examples-01.json"
+      ],
+      "preservation_proof": [
+        {
+          "id": "exponential-smoothing",
+          "path": "machine-learning/time-series/exponential-smoothing/README.md",
+          "previous_sha256": "1b3dfbe6e5ca9a3a0f6f9658c736d7faf9c77f58ae9de40fca1dd5e216ef4df0",
+          "new_sha256": "193983833723cd8212af214c99b58e3ad08dfc681515b4e641e2967bc6c85941",
+          "output_paragraph_preserved": true,
+          "mathematics_paragraph_preserved": true,
+          "workflow_preserved": true,
+          "examples_preserved": true,
+          "changed_sections": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "other_corrections": []
+        },
+        {
+          "id": "holt-winters",
+          "path": "machine-learning/time-series/holt-winters/README.md",
+          "previous_sha256": "f330071fc6cc453200fc7210aeeea92ee05114441409c0bd8e010230210f9237",
+          "new_sha256": "76f5c82eeb9bc743da1364ae9fe76d5024f2e587b8271c4f3b6d5fee625a95cd",
+          "output_paragraph_preserved": true,
+          "mathematics_paragraph_preserved": true,
+          "workflow_preserved": true,
+          "examples_preserved": true,
+          "changed_sections": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "other_corrections": []
+        },
+        {
+          "id": "arima",
+          "path": "machine-learning/time-series/arima/README.md",
+          "previous_sha256": "b6c73a5184b69076bbae065a8eb48d63483033b60a925428402aca8870d3b877",
+          "new_sha256": "f71afb7b2a34019affb0d85a19c032acc89b8c39e4e29f0a4df01d67f79d51cf",
+          "output_paragraph_preserved": true,
+          "mathematics_paragraph_preserved": true,
+          "workflow_preserved": true,
+          "examples_preserved": true,
+          "changed_sections": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "other_corrections": [
+            12
+          ]
+        },
+        {
+          "id": "sarima",
+          "path": "machine-learning/time-series/sarima/README.md",
+          "previous_sha256": "6dba2ff12cdf9a1430a4e384fe10933d39d11bf5b0b8e3c192aa246229ec5462",
+          "new_sha256": "866e3e6623c684e7cf5f2f0a3f751766766d4ad5c6b1b2b892c5decf14f16a31",
+          "output_paragraph_preserved": true,
+          "mathematics_paragraph_preserved": true,
+          "workflow_preserved": true,
+          "examples_preserved": true,
+          "changed_sections": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "other_corrections": [
+            12
+          ]
+        },
+        {
+          "id": "prophet",
+          "path": "machine-learning/time-series/prophet/README.md",
+          "previous_sha256": "142f2aeb03e55a7c65e3a95c20e2f24e88d82cf243667607fa128c298fbf3108",
+          "new_sha256": "406f8545373b3295fe623d5daf8b6667905c9ab07302483882cec26d4e54f6c1",
+          "output_paragraph_preserved": true,
+          "mathematics_paragraph_preserved": true,
+          "workflow_preserved": true,
+          "examples_preserved": true,
+          "changed_sections": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "other_corrections": []
+        },
+        {
+          "id": "hidden-markov-models",
+          "path": "machine-learning/time-series/hidden-markov-models/README.md",
+          "previous_sha256": "ee5a338818277afb39492e3393def55268086f4b546daf866749d289e87d3396",
+          "new_sha256": "ab41eab33547103dca09682992bc96abf4d520081b9181f02868fefbf05d2f60",
+          "output_paragraph_preserved": true,
+          "mathematics_paragraph_preserved": true,
+          "workflow_preserved": true,
+          "examples_preserved": true,
+          "changed_sections": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "other_corrections": [
+            21
+          ]
+        },
+        {
+          "id": "isolation-forest",
+          "path": "machine-learning/anomaly-detection/isolation-forest/README.md",
+          "previous_sha256": "ced91429e345ea118871bf0e471f766d711aea8ca75b9703fbbd9b568383f92a",
+          "new_sha256": "14caf2a4c85c7a4e03928042b5dd533031f0341f3301f6769cce669ee37c25e0",
+          "output_paragraph_preserved": true,
+          "mathematics_paragraph_preserved": true,
+          "workflow_preserved": true,
+          "examples_preserved": true,
+          "changed_sections": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "other_corrections": [
+            11,
+            13
+          ]
+        },
+        {
+          "id": "one-class-svm",
+          "path": "machine-learning/anomaly-detection/one-class-svm/README.md",
+          "previous_sha256": "6f5adb42cc0be0ecc62475f6644e946e336d5e89d1408b39fd07372f119428ca",
+          "new_sha256": "8a5b3bc4530062fdb2d60bad8a1ec2137017f6f028727987bc67641d2f78c707",
+          "output_paragraph_preserved": true,
+          "mathematics_paragraph_preserved": true,
+          "workflow_preserved": true,
+          "examples_preserved": true,
+          "changed_sections": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "other_corrections": [
+            13
+          ]
+        },
+        {
+          "id": "local-outlier-factor",
+          "path": "machine-learning/anomaly-detection/local-outlier-factor/README.md",
+          "previous_sha256": "bbb9ce3265ccb4a519d9d57d5170f0d2f5fc41d42368502f2356bd3268b9b949",
+          "new_sha256": "a8297aa4dff930f962c39fb7ddbf09d0fc8fa1d60d0ec8ae1cdcb76c42667f04",
+          "output_paragraph_preserved": true,
+          "mathematics_paragraph_preserved": true,
+          "workflow_preserved": true,
+          "examples_preserved": true,
+          "changed_sections": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "other_corrections": [
+            13
+          ]
+        }
+      ],
+      "risk": "Documentation-only;formulas/APIs/examples preserved verbatim. Historical reports/evidence/packages untouched."
+    },
+    {
+      "id": "B9-B12-DOC-003",
+      "severity": "low",
+      "status": "fixed",
+      "canonical_ids": [
+        "arima",
+        "sarima",
+        "isolation-forest"
+      ],
+      "reproduction": "Trace B10 returned trajectory while held in ARIMA/SARIMA fit;trace per-tree path_lengths feature copying and finite harmonic summation inIF.",
+      "expected": "Peak-space and scoring-time bounds include actual implementation work.",
+      "actual_before": "ARIMA/SARIMA omitted temporary O(I*k) returned optimizer trajectory;IF scoring simplified away repeated feature copies/leaf harmonic work.",
+      "cause": "Bounds described central arithmetic/internal state rather than all materialized work.",
+      "fix": "Document temporary O(I*k) trajectory/history;IF scoring O(t*m*(d+L+psi)) and matching training calibration term.",
+      "evidence": [
+        "review-B9-B12-targets-01.json",
+        "review-B9-B12-examples-01.json"
+      ],
+      "risk": "Documentation-only;conservative bounds,not a performance claim."
+    },
+    {
+      "id": "B9-B12-DOC-004",
+      "severity": "low",
+      "status": "fixed",
+      "canonical_ids": [
+        "node2vec"
+      ],
+      "reproduction": "Inspect section15 JSON closing fence:triple backticks were followed by non-whitespace explanatory text.",
+      "expected": "A valid standalone closing fence then explanatory prose.",
+      "actual_before": "CommonMark would keep subsequent text/sections inside the code block.",
+      "cause": "Missing newline after closing fence.",
+      "fix": "Separate closing fence and similarity caveat by a blank line.",
+      "evidence": [
+        "review-B9-B12-docs-01.json",
+        "review-B9-B12-examples-01.json"
+      ],
+      "risk": "Formatting-only;actual JSON/example preserved."
+    }
+  ],
+  "unresolved_findings": [],
+  "shared_support_reviewed": [
+    "machine-learning/graph-learning/support.py",
+    "machine-learning/optimization/support.py",
+    "machine-learning/time-series/support.py",
+    "machine-learning/anomaly-detection/support.py"
+  ],
+  "category_contracts_reviewed": [
+    "docs/graph-learning-conventions.md",
+    "docs/optimization-conventions.md",
+    "docs/time-series-conventions.md",
+    "docs/anomaly-detection-conventions.md"
+  ],
+  "historical_reports_reviewed": [
+    {
+      "path": "docs/reviews/graph-learning/GRAPH-LEARNING-REVIEW-REPORT.md",
+      "sha256": "8935a0868ce6ee71387cc7a9ea751c5ad3f5b378eb621e7527aaffbd8d8a9264",
+      "modified": false
+    },
+    {
+      "path": "docs/reviews/optimization/OPTIMIZATION-REVIEW-REPORT.md",
+      "sha256": "0128a627c8e4d28a46627ffa20a231a089e2963308695910a0c66b144be64f9e",
+      "modified": false
+    },
+    {
+      "path": "docs/reviews/time-series/TIME-SERIES-REVIEW-REPORT.md",
+      "sha256": "b23e2acaaffc4369505d8283666be5894a0dab1b467d318eaf86a3b1769c8d7e",
+      "modified": false
+    },
+    {
+      "path": "docs/reviews/anomaly-detection/ANOMALY-DETECTION-REVIEW-REPORT.md",
+      "sha256": "f149197502471df4ae1299e2e2e0ad0297a2974fe32e3218096d69435a716cde",
+      "modified": false
+    }
+  ],
+  "fresh_validation": {
+    "affected_group_suite": "review-B9-B12-targets-01.json",
+    "tests_passed": 839,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "categories": {
+      "B9": 146,
+      "B10": 263,
+      "B11": 250,
+      "B12": 180
+    },
+    "before_fix": "review-B10-adamw-before-01.json",
+    "after_fix": "review-B10-adamw-after-01.json",
+    "catalog_docs": "review-B9-B12-docs-01.json",
+    "examples": "review-B9-B12-examples-01.json",
+    "examples_count": 22,
+    "required_lesson_sections": 550
+  },
+  "scope_preserved": "No canonical/category/ID/path/membership/mathscope/publicsignature or blocker change. DPO untouched. No historical reports/evidence/packages modified,no staging/commit/push/release/delegation.",
+  "final_recommendation": "All22 reviewed and affectedchecks pass after one existing-contract source fix and documentation corrections. This component review does not mark Phase26 or final B Track owner-approved."
+}

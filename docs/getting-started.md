@@ -1,6 +1,6 @@
 # Getting Started
 
-**Current scope: Phase18 — B6 Association Rule Learning.** Latest Phase17 explicitly owner-approved; new Phase18 review pending. Exactly Apriori, Eclat and FP-Growth plus shared rule generation. See [scope](association-rule-learning-scope.md) and [checkpoints](association-rule-learning-checkpoints.md). DSA Python/C++17/C++20 remain required; ML C++ optional. No Phase19/B7, commit or publication.
+**Current scope: Phase26 final comprehensive ML audit, B1–B13.** Phase25 explicitly owner-approved;seven audit/stabilization workstreams. [Scope](ml-final-audit-scope.md),[checkpoints](ml-final-audit-checkpoints.md). Final track sign-off pending;no C1,nextphase or publication.
 
 Start with the [learning roadmap](learning-roadmap.md), browse the [complete algorithm index](algorithm-index.md), and consult the [progress tracker](progress.md) before choosing a topic. The [glossary](glossary.md) and [complexity cheat sheet](complexity-cheatsheet.md) explain terminology used throughout the project.
 

@@ -1,0 +1,44 @@
+{
+  "batch": 3,
+  "topics": [
+    "local-outlier-factor"
+  ],
+  "returncode": 0,
+  "tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "28",
+    "time": "0.663",
+    "timestamp": "2026-11-01T10:15:09.631976+06:00",
+    "hostname": "Khalids-MacBook-Air.local"
+  },
+  "evidence": {
+    "label": "batch3-audit",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/local-outlier-factor",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/local-outlier-factor",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/batch3-audit-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T10:15:09.488416+06:00",
+    "elapsed_seconds": 0.892,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/batch3-audit-01.txt"
+  },
+  "lessons": "exact25 sections and actual examples verified",
+  "owner_approval": "pending"
+}

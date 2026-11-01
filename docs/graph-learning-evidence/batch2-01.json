@@ -1,0 +1,25 @@
+{
+  "label": "batch2",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/graph-learning/node2vec",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/graph-learning/node2vec",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/graph-learning-evidence/batch2-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T20:05:02.124929+06:00",
+  "elapsed_seconds": 0.305,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/graph-learning-evidence/batch2-01.txt"
+}

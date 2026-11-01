@@ -1,0 +1,34 @@
+{
+  "topic": "simulated-annealing",
+  "command": [
+    "python",
+    "machine-learning/optimization/simulated-annealing/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"converged\": true, \"initial_best\": 6.0, \"iterations\": 48, \"known_target_value\": 0, \"objective\": 0.0, \"objective_evaluations\": 49, \"seed\": 22, \"status\": \"target-reached\", \"x\": [1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0]}\n",
+  "sections": 25,
+  "parsed": {
+    "converged": true,
+    "initial_best": 6.0,
+    "iterations": 48,
+    "known_target_value": 0,
+    "objective": 0.0,
+    "objective_evaluations": 49,
+    "seed": 22,
+    "status": "target-reached",
+    "x": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ]
+  }
+}

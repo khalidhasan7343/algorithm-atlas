@@ -1,0 +1,18 @@
+{
+  "label": "catalog",
+  "command": [
+    "python",
+    "scripts/validate_catalog.py"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "scripts/validate_catalog.py"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T20:30:42.181472+06:00",
+  "elapsed_seconds": 0.81,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/graph-learning-evidence/catalog-02.txt"
+}

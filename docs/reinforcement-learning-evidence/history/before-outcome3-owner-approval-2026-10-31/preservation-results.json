@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "counts": {
+    "categories": 35,
+    "memberships": 256,
+    "canonicals": 235
+  },
+  "implemented": 9,
+  "blocked": [
+    "dynamic-policy-optimization"
+  ],
+  "phase19_owner_approval": "approved",
+  "phase20_owner_approval": "pending",
+  "report_tracking": "tracked and unignored",
+  "protected_preexisting_files": 2695,
+  "historical_artifacts_omitted_from_export": [],
+  "changed_preexisting_files": [
+    "AGENTS.md",
+    "CONTRIBUTING.md",
+    "README.md",
+    "artifacts/review-packages/README.md",
+    "catalog.yaml",
+    "docs/algorithm-index.md",
+    "docs/development.md",
+    "docs/learning-roadmap.md",
+    "docs/ml-development.md",
+    "docs/progress.md",
+    "docs/reviews/README.md",
+    "machine-learning/deep-learning/README.md",
+    "machine-learning/reinforcement-learning/README.md",
+    "machine-learning/reinforcement-learning/advantage-actor-critic/README.md",
+    "machine-learning/reinforcement-learning/asynchronous-advantage-actor-critic/README.md",
+    "machine-learning/reinforcement-learning/deep-deterministic-policy-gradient/README.md",
+    "machine-learning/reinforcement-learning/deep-q-networks/README.md",
+    "machine-learning/reinforcement-learning/monte-carlo-tree-search/README.md",
+    "machine-learning/reinforcement-learning/proximal-policy-optimization/README.md",
+    "machine-learning/reinforcement-learning/q-learning/README.md",
+    "machine-learning/reinforcement-learning/reinforce-policy-gradient/README.md",
+    "machine-learning/reinforcement-learning/sarsa/README.md",
+    "machine-learning/unsupervised-learning/association-rule-learning/README.md",
+    "machine-learning/unsupervised-learning/clustering/README.md",
+    "machine-learning/unsupervised-learning/dimensionality-reduction/README.md",
+    "scripts/generate_catalog_docs.py",
+    "scripts/validate_catalog.py"
+  ],
+  "exact25_section_lessons": [
+    "advantage-actor-critic",
+    "asynchronous-advantage-actor-critic",
+    "deep-deterministic-policy-gradient",
+    "deep-q-networks",
+    "monte-carlo-tree-search",
+    "proximal-policy-optimization",
+    "q-learning",
+    "reinforce-policy-gradient",
+    "sarsa"
+  ],
+  "approved_B1_B7_DSA_sources_tests_lessons_and_historical_artifacts": "byte-identical",
+  "runtime_dependency_audit": "NumPy/stdlib/local source only; no downloads/framework/pickle/eval/exec"
+}

@@ -1,0 +1,107 @@
+{
+  "topic": "named-entity-recognition",
+  "command": [
+    "python",
+    "machine-learning/natural-language-processing/named-entity-recognition/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"training\": [[\"John\", \"visits\", \"Paris\"], [\"Mary\", \"visits\", \"Rome\"], [\"New\", \"York\", \"shines\"]], \"gold\": [[\"B-PER\", \"O\", \"B-LOC\"], [\"B-PER\", \"O\", \"B-LOC\"], [\"B-LOC\", \"I-LOC\", \"O\"]], \"baseline\": \"BIO feature CRF\", \"features\": 18, \"initial_loss\": 3.713572, \"final_loss\": 0.155776, \"query\": {\"tokens\": [\"John\", \"visits\", \"Paris\"], \"labels\": [\"B-PER\", \"O\", \"B-LOC\"], \"spans\": [[\"PER\", 0, 1], [\"LOC\", 2, 3]]}, \"unknown_query\": {\"tokens\": [\"Alice\", \"visits\", \"Rome\"], \"labels\": [\"B-PER\", \"O\", \"B-LOC\"], \"spans\": [[\"PER\", 0, 1], [\"LOC\", 2, 3]]}, \"training_metrics\": {\"true_positive\": 5, \"predicted\": 5, \"gold\": 5, \"precision\": 1.0, \"recall\": 1.0, \"f1\": 1.0, \"token_accuracy\": 1.0}}\n",
+  "parsed": {
+    "training": [
+      [
+        "John",
+        "visits",
+        "Paris"
+      ],
+      [
+        "Mary",
+        "visits",
+        "Rome"
+      ],
+      [
+        "New",
+        "York",
+        "shines"
+      ]
+    ],
+    "gold": [
+      [
+        "B-PER",
+        "O",
+        "B-LOC"
+      ],
+      [
+        "B-PER",
+        "O",
+        "B-LOC"
+      ],
+      [
+        "B-LOC",
+        "I-LOC",
+        "O"
+      ]
+    ],
+    "baseline": "BIO feature CRF",
+    "features": 18,
+    "initial_loss": 3.713572,
+    "final_loss": 0.155776,
+    "query": {
+      "tokens": [
+        "John",
+        "visits",
+        "Paris"
+      ],
+      "labels": [
+        "B-PER",
+        "O",
+        "B-LOC"
+      ],
+      "spans": [
+        [
+          "PER",
+          0,
+          1
+        ],
+        [
+          "LOC",
+          2,
+          3
+        ]
+      ]
+    },
+    "unknown_query": {
+      "tokens": [
+        "Alice",
+        "visits",
+        "Rome"
+      ],
+      "labels": [
+        "B-PER",
+        "O",
+        "B-LOC"
+      ],
+      "spans": [
+        [
+          "PER",
+          0,
+          1
+        ],
+        [
+          "LOC",
+          2,
+          3
+        ]
+      ]
+    },
+    "training_metrics": {
+      "true_positive": 5,
+      "predicted": 5,
+      "gold": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "token_accuracy": 1.0
+    }
+  },
+  "sections": 25
+}

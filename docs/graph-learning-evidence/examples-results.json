@@ -1,0 +1,32 @@
+[
+  {
+    "topic": "pagerank",
+    "command": [
+      "python",
+      "machine-learning/graph-learning/pagerank/python/example.py"
+    ],
+    "returncode": 0,
+    "output": "{\"adjacency\": [[0, 1, 1], [0, 0, 1], [0, 0, 0]], \"converged\": true, \"damping\": 0.85, \"scores\": [0.19757965, 0.281551, 0.52086935], \"sum\": 1.0, \"transition\": [[0.0, 0.5, 0.5], [0.0, 0.0, 1.0], [0.33333333, 0.33333333, 0.33333333]]}\n",
+    "sections": 25
+  },
+  {
+    "topic": "node2vec",
+    "command": [
+      "python",
+      "machine-learning/graph-learning/node2vec/python/example.py"
+    ],
+    "returncode": 0,
+    "output": "{\"cosine_0_1\": 0.99854875, \"cosine_0_4\": 0.1862712, \"loss_final\": 1.78973212, \"loss_initial\": 2.77789917, \"pairs\": [[0, 1], [0, 0], [1, 0], [1, 0], [1, 2], [0, 0]], \"shape\": [6, 4], \"updates\": 100, \"walks\": [[0, 1, 0, 2, 0, 1, 2, 1], [1, 0, 2, 3, 2, 3, 5, 3]]}\n",
+    "sections": 25
+  },
+  {
+    "topic": "graph-convolutional-networks",
+    "command": [
+      "python",
+      "machine-learning/graph-learning/graph-convolutional-networks/python/example.py"
+    ],
+    "returncode": 0,
+    "output": "{\"first_propagated_feature\": [0.928997, 0.099458], \"loss_final\": 0.00817123, \"loss_initial\": 0.63393832, \"normalized_adjacency\": [[0.333333, 0.333333, 0.327913, 0.0, 0.0, 0.0], [0.333333, 0.333333, 0.327913, 0.0, 0.0, 0.0], [0.327913, 0.327913, 0.322581, 0.032258, 0.0, 0.0], [0.0, 0.0, 0.032258, 0.322581, 0.327913, 0.327913], [0.0, 0.0, 0.0, 0.327913, 0.333333, 0.333333], [0.0, 0.0, 0.0, 0.327913, 0.333333, 0.333333]], \"predictions\": [0, 0, 0, 1, 1, 1], \"updates\": 200}\n",
+    "sections": 25
+  }
+]

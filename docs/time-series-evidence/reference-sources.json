@@ -1,0 +1,89 @@
+{
+  "access_date": "2026-11-01 Asia/Dhaka",
+  "sources": [
+    {
+      "methods": [
+        "SES",
+        "Holt-Winters"
+      ],
+      "title": "Forecasting:Principles and Practice,Chapter8:Exponential smoothing",
+      "authors": [
+        "Rob J.Hyndman",
+        "George Athanasopoulos"
+      ],
+      "url": "https://otexts.com/fpp3/exponential-smoothing.html",
+      "access": "Author-maintained full chapter accessible;old section URL redirects to current chapter. Project explicitly states the new-level seasonal-update convention and fixed initialization."
+    },
+    {
+      "methods": [
+        "ARIMA",
+        "SARIMA"
+      ],
+      "title": "Forecasting:Principles and Practice,Chapter9:ARIMA models",
+      "authors": [
+        "Rob J.Hyndman",
+        "George Athanasopoulos"
+      ],
+      "url": "https://otexts.com/fpp3/arima.html",
+      "access": "Author-maintained full chapter accessible;polynomial/differencing framework verified. Project CSS initialization and sufficient stability boxes are declared educational conventions,not exact-ML library parity."
+    },
+    {
+      "methods": [
+        "Prophet"
+      ],
+      "title": "Forecasting at Scale",
+      "authors": [
+        "Sean J.Taylor",
+        "Benjamin Letham"
+      ],
+      "year": 2018,
+      "doi": "10.1080/00031305.2017.1380080",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/00031305.2017.1380080",
+      "access": "Publisher metadata indexed and verified. Publisher full-text/PeerJ access403;official repository lists the author preprint,but raw PDF parser failed. No full PDF read is claimed."
+    },
+    {
+      "methods": [
+        "Prophet"
+      ],
+      "title": "Official Prophet trend changepoints documentation",
+      "url": "https://github.com/facebook/prophet/blob/main/docs/_docs/trend_changepoints.md",
+      "access": "Official source documentation accessible;explicit changepoints,piecewise trend and sparse Laplace/L1 priors verified. Our Gaussian ridge prior is explicitly different."
+    },
+    {
+      "methods": [
+        "Prophet"
+      ],
+      "title": "Official Prophet seasonality,holiday effects,and regressors documentation",
+      "url": "https://github.com/meta/prophet/blob/main/docs/_docs/seasonality,_holiday_effects,_and_regressors.md",
+      "access": "Official source documentation accessible;Fourier seasonal representation verified. Holidays/regressors are expressly unsupported in our subset."
+    },
+    {
+      "methods": [
+        "HMM"
+      ],
+      "title": "A Tutorial on Hidden Markov Models and Selected Applications in Speech Recognition",
+      "author": "Lawrence R.Rabiner",
+      "year": 1989,
+      "doi": "10.1109/5.18626",
+      "url": "https://web.mit.edu/6.435/www/Rabiner89.pdf",
+      "access": "Institution-hosted30-page original research tutorial accessible;forward/backward,Viterbi,scaling and multiple-sequence ML framework."
+    },
+    {
+      "methods": [
+        "ARIMA",
+        "SARIMA",
+        "B10 compatibility"
+      ],
+      "title": "Optimization Methods for Large-Scale Machine Learning",
+      "authors": [
+        "Leon Bottou",
+        "Frank E.Curtis",
+        "Jorge Nocedal"
+      ],
+      "url": "https://arxiv.org/abs/1606.04838",
+      "access": "Previously verified Phase22 reference retained;B11 consumes the unchanged approved B10 canonical,with new analytic CSS gradients and independent compatibility tests."
+    }
+  ],
+  "prophet_decision": "Adopt explicitly authorized educational linear/hinge/Fourier subset with Gaussian ridge objective;do not claim full library parity or official Laplace inference.",
+  "no_external_model_dependencies": true
+}

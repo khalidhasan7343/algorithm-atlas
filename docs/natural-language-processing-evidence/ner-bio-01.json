@@ -1,0 +1,29 @@
+{
+  "label": "ner-bio",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/natural-language-processing/named-entity-recognition",
+    "-k",
+    "bio or span or legal_masks",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/natural-language-processing/named-entity-recognition",
+    "-k",
+    "bio or span or legal_masks",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/ner-bio-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-01T19:05:24.036594+06:00",
+  "elapsed_seconds": 0.753,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/natural-language-processing-evidence/ner-bio-01.txt"
+}

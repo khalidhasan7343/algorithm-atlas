@@ -1,0 +1,164 @@
+{
+  "total": 4538,
+  "passed": 4538,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "groups": {
+    "infrastructure": 389,
+    "DSA": 1687,
+    "B7": 221,
+    "B3": 253,
+    "B9": 146,
+    "B10": 259,
+    "B8": 141,
+    "B2": 398,
+    "B1": 281,
+    "B11": 250,
+    "B6": 162,
+    "B4": 206,
+    "B5-folder": 145
+  },
+  "dsa": {
+    "cpp17": 269,
+    "cpp20": 269,
+    "python_shared": 1149
+  },
+  "B11": {
+    "arima": 26,
+    "exponential-smoothing": 12,
+    "hidden-markov-models": 38,
+    "holt-winters": 15,
+    "prophet": 20,
+    "sarima": 21,
+    "shared-contracts-and-oracles": 118
+  },
+  "infrastructure": {
+    "test_b10_language_and_scope_policy": 14,
+    "test_b11_language_and_scope_policy": 16,
+    "test_b5_shared_canonical_policy": 7,
+    "test_b7_language_policy": 7,
+    "test_b8_language_and_blocker_policy": 17,
+    "test_b9_language_and_scope_policy": 12,
+    "test_bit_oracles": 1,
+    "test_cpp_toolchain": 4,
+    "test_generate_catalog_docs": 26,
+    "test_number_window_oracles": 2,
+    "test_review_paths": 10,
+    "test_string_cross_algorithms": 1,
+    "test_track_policy": 14,
+    "test_validate_catalog": 258
+  },
+  "selected_overlapping_checks": {
+    "audit-B11": {
+      "total": 250,
+      "passed": 250,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "infrastructure-B11": {
+      "total": 16,
+      "passed": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "recursions": {
+      "total": 12,
+      "passed": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "estimation": {
+      "total": 11,
+      "passed": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "alignment": {
+      "total": 12,
+      "passed": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "inverse-differencing": {
+      "total": 21,
+      "passed": 21,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "seasonal": {
+      "total": 54,
+      "passed": 54,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "oracle": {
+      "total": 49,
+      "passed": 49,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "hmm-inference": {
+      "total": 9,
+      "passed": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "hmm-em": {
+      "total": 7,
+      "passed": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "numerical": {
+      "total": 14,
+      "passed": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "reproducibility": {
+      "total": 9,
+      "passed": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "invalid-input": {
+      "total": 156,
+      "passed": 156,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "leakage": {
+      "total": 10,
+      "passed": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "synthetic": {
+      "total": 28,
+      "passed": 28,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "pre_fix_full_run": {
+    "record": "full-suite-01.json",
+    "tests": 4536,
+    "reason": "Genuine pre-metrics-correction execution retained;not the final source regression."
+  }
+}

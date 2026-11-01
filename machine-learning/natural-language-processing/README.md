@@ -6,19 +6,52 @@ Representing, generating, labeling, and parsing language with bounded educationa
 
 This category preserves **11 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
+
+## Natural language and explicit text contracts
+
+NLP models text representations,conditional sequence probabilities,token labels and grammar structure. Unicode NFC,optional casefold,word runs and individual punctuation are explicit conventions,not universal linguistic segmentation. Training-only vocabulary reserves UNK,uses declared count pruning and deterministic lexical indices. Document/sentence boundaries remain separate;unknowns,padding,BOS/EOS and maximum lengths are model-specific and tested.
+
+## Statistical representations and language modeling
+
+BoW counts retained words;TF-IDF reuses BoW with raw TF and smoothed log IDF,optional L2 normalization. Add-k N-grams predict from n-1 previous tokens and score one EOS per sentence;perplexity counts the same events.
+
+## Neural embeddings and Transformer architectures
+
+Word2Vec trains local-context SGNS input/output vectors;GloVe fits weighted positive cooccurrences and biases. Their objectives and complete implemented gradients have independent oracles. BERT uses bidirectional attention and masked-token targets;GPT uses causal attention and shifted next-token prediction. Both are compact genuine attention/residual/layer-normalization/FFN stacks with frozen random backbones and trainable vocabulary heads only. No pretrained understanding,full end-to-end pretraining,production parity,NSP or downloaded weights is claimed.
+
+## Probabilistic sequence labels and parsing
+
+Supervised HMM POS estimates sentence-local counts and reuses unchanged B11 log-space inference. The globally normalized CRF trains emission/transition/start/end parameters;NER is a declared feature-based BIO CRF task baseline. NER exact typed spans use half-open token offsets and are evaluated separately from token accuracy. CNF CYK builds substring charts/backpointers;unsupported CFG/unit/epsilon rules fail explicitly.
+
+## Comparison, evaluation and numerical behavior
+
+| Family | Output | Main computational cost |
+|---|---|---|
+| BoW/TF-IDF | Document vectors | Dense N*V |
+| N-gram | Finite-context probabilities/perplexity | Count table and per-query V |
+| Word2Vec/GloVe | Trained static vectors | Context pairs or positive cooccurrences times dimension/epochs |
+| BERT/GPT | Contextual representations/logits | Dense attention quadratic in sequence length |
+| HMM/CRF/NER | Token-label paths/spans | T*K squared inference plus feature/training cost |
+| CYK | Grammar membership/one parse tree | Cubic sentence length times binary grammar size |
+
+Use stable softplus,log-sum-exp and masked softmax;validate all-masked rows and finite parameters. Bound corpora,vocabularies,sequences,heads,layers,epochs and generation;all mandatory execution is offline CPU-only. Verify hand counts/losses,finite-difference gradients,exhaustive tag paths and independent grammar derivations. Toy loss decrease does not prove semantic quality;never fit vocabulary,IDF,counts or features on evaluation data.
+
+## Learning roadmap and runnable examples
+
+Start with BoW/TF-IDF/N-grams,then embeddings,then B7-informed attention architectures,then HMM/CRF task labeling and CYK. Every canonical lesson links its source,independent tests and real python/example.py output. Read [scope](../../docs/natural-language-processing-scope.md), [contracts](../../docs/natural-language-processing-conventions.md) and [checkpoints](../../docs/natural-language-processing-checkpoints.md). Phase25 owner approval remains pending. DPO remains blocked;B Track readiness does not approve a final ML audit.
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Bag of Words | [bag-of-words](bag-of-words/README.md) | planned |
-| TF-IDF | [tf-idf](tf-idf/README.md) | planned |
-| Word2Vec | [word2vec](word2vec/README.md) | planned |
-| GloVe | [glove](glove/README.md) | planned |
-| BERT Architecture / Usage | [bert](bert/README.md) | planned |
-| GPT Architecture / Usage | [gpt](gpt/README.md) | planned |
-| Hidden Markov Models for POS Tagging | [hidden-markov-models-pos-tagging](hidden-markov-models-pos-tagging/README.md) | planned |
-| Named Entity Recognition | [named-entity-recognition](named-entity-recognition/README.md) | planned |
-| Conditional Random Fields (CRF) | [conditional-random-fields](conditional-random-fields/README.md) | planned |
-| N-Gram Language Models | [n-gram-language-models](n-gram-language-models/README.md) | planned |
-| CYK Parsing Algorithm | [cyk-parsing](cyk-parsing/README.md) | planned |
+| Bag of Words | [bag-of-words](bag-of-words/README.md) | complete |
+| TF-IDF | [tf-idf](tf-idf/README.md) | complete |
+| Word2Vec | [word2vec](word2vec/README.md) | complete |
+| GloVe | [glove](glove/README.md) | complete |
+| BERT Architecture / Usage | [bert](bert/README.md) | complete |
+| GPT Architecture / Usage | [gpt](gpt/README.md) | complete |
+| Hidden Markov Models for POS Tagging | [hidden-markov-models-pos-tagging](hidden-markov-models-pos-tagging/README.md) | complete |
+| Named Entity Recognition | [named-entity-recognition](named-entity-recognition/README.md) | complete |
+| Conditional Random Fields (CRF) | [conditional-random-fields](conditional-random-fields/README.md) | complete |
+| N-Gram Language Models | [n-gram-language-models](n-gram-language-models/README.md) | complete |
+| CYK Parsing Algorithm | [cyk-parsing](cyk-parsing/README.md) | complete |
 
 ## Learning and contribution scope
 

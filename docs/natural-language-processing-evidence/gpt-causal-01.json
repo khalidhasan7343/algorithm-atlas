@@ -1,0 +1,29 @@
+{
+  "label": "gpt-causal",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/natural-language-processing/gpt",
+    "-k",
+    "causal or future",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/natural-language-processing/gpt",
+    "-k",
+    "causal or future",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/gpt-causal-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-01T18:50:42.626865+06:00",
+  "elapsed_seconds": 0.534,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/natural-language-processing-evidence/gpt-causal-01.txt"
+}

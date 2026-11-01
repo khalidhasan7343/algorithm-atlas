@@ -1,0 +1,73 @@
+{
+  "batch": 3,
+  "topics": [
+    "l-bfgs"
+  ],
+  "returncode": 0,
+  "counts": {
+    "tests": 26,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "execution": {
+    "label": "batch3-audit",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/optimization/l-bfgs",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/optimization/l-bfgs",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/optimization-evidence/batch3-audit-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T21:27:11.667153+06:00",
+    "elapsed_seconds": 0.501,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/optimization-evidence/batch3-audit-01.txt"
+  },
+  "examples": [
+    {
+      "topic": "l-bfgs",
+      "command": [
+        "python",
+        "machine-learning/optimization/l-bfgs/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"analytical\": [1.0, 1.0], \"converged\": true, \"gradient_evaluations\": 66, \"gradient_norm\": 3.9e-09, \"history_size\": 5, \"initial\": [-1.2, 1.0], \"iterations\": 36, \"objective\": 0.0, \"objective_evaluations\": 66, \"status\": \"gradient-tolerance\", \"x\": [1.0, 1.0]}\n",
+      "sections": 25,
+      "parsed": {
+        "analytical": [
+          1.0,
+          1.0
+        ],
+        "converged": true,
+        "gradient_evaluations": 66,
+        "gradient_norm": 3.9e-09,
+        "history_size": 5,
+        "initial": [
+          -1.2,
+          1.0
+        ],
+        "iterations": 36,
+        "objective": 0.0,
+        "objective_evaluations": 66,
+        "status": "gradient-tolerance",
+        "x": [
+          1.0,
+          1.0
+        ]
+      }
+    }
+  ],
+  "lesson_sections": 25
+}

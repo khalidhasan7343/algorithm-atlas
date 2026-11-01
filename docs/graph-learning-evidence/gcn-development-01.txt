@@ -1,0 +1,46 @@
+..........F................................                              [100%]
+=================================== FAILURES ===================================
+_______ test_copying_seeded_fit_atomic_refit_and_fitted_loop_convention ________
+
+b9 = <module 'atlas_b9_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/graph-learning/support.py'>
+
+    def test_copying_seeded_fit_atomic_refit_and_fitted_loop_convention(b9):
+        A,X,y=dataset();copies=[a.copy() for a in (A,X,y)];m=b9.load('graph-convolutional-networks')
+        model=m.GCNClassifier(epochs=5,random_state=7).fit(A,X,y)
+        other=m.GCNClassifier(epochs=5,random_state=7).fit(A,X,y)
+        for key in model.parameters_:assert_array_equal(model.parameters_[key],other.parameters_[key])
+        old=model.predict_proba(A,X)
+        for a,b in zip((A,X,y),copies):assert_array_equal(a,b)
+        with pytest.raises(ValueError):model.fit(A,X,[-1]*6)
+        assert_array_equal(model.predict_proba(A,X),old)
+        model.self_loops=False
+        assert_array_equal(model.predict_proba(A,X),old)
+>       with pytest.raises(ValueError):m.GCNClassifier().predict(A,X)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+machine-learning/graph-learning/graph-convolutional-networks/tests/test_python.py:154: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <atlas_b9_graph_convolutional_networks.GCNClassifier object at 0x10b63b350>
+adjacency = array([[0. , 1. , 1. , 0. , 0. , 0. ],
+       [1. , 0. , 1. , 0. , 0. , 0. ],
+       [1. , 1. , 0. , 0.1, 0. , 0. ],
+       [0. , 0. , 0.1, 0. , 1. , 1. ],
+       [0. , 0. , 0. , 1. , 0. , 1. ],
+       [0. , 0. , 0. , 1. , 1. , 0. ]])
+features = array([[1. , 0. ],
+       [1. , 0.2],
+       [0.8, 0.1],
+       [0. , 1. ],
+       [0.1, 0.8],
+       [0.2, 1. ]])
+
+    def predict(self, adjacency, features):
+>       return self.classes_[np.argmax(self.predict_proba(adjacency, features), axis=1)]
+               ^^^^^^^^^^^^^
+E       AttributeError: 'GCNClassifier' object has no attribute 'classes_'
+
+machine-learning/graph-learning/graph-convolutional-networks/python/solution.py:158: AttributeError
+=========================== short test summary info ============================
+FAILED machine-learning/graph-learning/graph-convolutional-networks/tests/test_python.py::test_copying_seeded_fit_atomic_refit_and_fitted_loop_convention
+1 failed, 42 passed in 0.10s

@@ -1,0 +1,201 @@
+{
+  "B7": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/deep-learning",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/neural-networks-and-deep-learning-evidence/B7.xml"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T15:46:46.257813+06:00",
+    "elapsed_seconds": 1.345,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/neural-networks-and-deep-learning-evidence/B7-attempt4.txt",
+    "summary": "221 passed in 1.09s"
+  },
+  "numerical": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/deep-learning",
+      "-m",
+      "numerical",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T15:46:46.923834+06:00",
+    "elapsed_seconds": 0.665,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/neural-networks-and-deep-learning-evidence/numerical-attempt4.txt",
+    "summary": "58 passed, 163 deselected in 0.53s"
+  },
+  "oracle": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/deep-learning",
+      "-m",
+      "oracle",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T15:46:47.114766+06:00",
+    "elapsed_seconds": 0.19,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/neural-networks-and-deep-learning-evidence/oracle-attempt4.txt",
+    "summary": "20 passed, 201 deselected in 0.06s"
+  },
+  "reference": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/deep-learning",
+      "-m",
+      "reference",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T15:46:47.671540+06:00",
+    "elapsed_seconds": 0.556,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/neural-networks-and-deep-learning-evidence/reference-attempt4.txt",
+    "summary": "6 passed, 215 deselected in 0.39s"
+  },
+  "forward": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/deep-learning",
+      "-k",
+      "forward",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T15:46:47.854865+06:00",
+    "elapsed_seconds": 0.183,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/neural-networks-and-deep-learning-evidence/forward-attempt3.txt",
+    "summary": "14 passed, 207 deselected in 0.05s"
+  },
+  "backprop": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/deep-learning",
+      "-k",
+      "backprop or bptt",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T15:46:48.058188+06:00",
+    "elapsed_seconds": 0.203,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/neural-networks-and-deep-learning-evidence/backprop-attempt3.txt",
+    "summary": "12 passed, 209 deselected in 0.07s"
+  },
+  "gradient": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/deep-learning",
+      "-k",
+      "finite_difference",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T15:46:48.401299+06:00",
+    "elapsed_seconds": 0.342,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/neural-networks-and-deep-learning-evidence/gradient-attempt3.txt",
+    "summary": "23 passed, 198 deselected in 0.21s"
+  },
+  "reproducibility": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/deep-learning",
+      "-k",
+      "reproducibility",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T15:46:48.830664+06:00",
+    "elapsed_seconds": 0.429,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/neural-networks-and-deep-learning-evidence/reproducibility-attempt3.txt",
+    "summary": "26 passed, 195 deselected in 0.28s"
+  }
+}

@@ -1,25 +1,9 @@
 # Machine Learning development standard
 
 Maintainer: **MD.Khalid Hasan**. [MIT License](../LICENSE).
-The owner explicitly approved the latest Phase 17 Dimensionality Reduction
-report/package on client session date 2026-10-30 Asia/Dhaka and authorized
-**Phase 18 — B6 Association Rule Learning only**. Implement the three existing
-canonicals Apriori, Eclat and FP-Growth in that batch order, then the mandatory
-shared rule-generation audit; see [scope](association-rule-learning-scope.md)
-and [checkpoints](association-rule-learning-checkpoints.md). Rule generation
-is a category-local utility, not another catalog algorithm. Preserve accepted
-B1–B5/DSA source, tests, lessons, historical reports/evidence/packages and existing
-staged changes. Inventory stays35 categories /256 memberships /235 canonicals.
+The owner **MD.Khalid Hasan** explicitly approved the verified Phase25 B13 handoff on **2026-11-01 Asia/Dhaka** and authorized **Phase26 — Machine Learning B1–B13 Final Comprehensive Audit**. This is audit/stabilization only:seven workstreams;no new category or canonical. See [scope](../docs/ml-final-audit-scope.md) and [checkpoints](../docs/ml-final-audit-checkpoints.md). Preserve inventory35 categories/256 memberships/235 canonicals,all prior approvals,historical reports/evidence/packages,DSA source and existing staged work. Preserve DPO identity,path,four blocked statuses,research and owner-approved remain-blocked decision.
 
-Python and mathematical/oracle/reference tests and exact25-section lessons are
-mandatory. These combinatorial miners use standard-library sets/dicts and integer
-counts; NumPy is unnecessary in core. ML C++ remains optional; DSA requires both
-languages and actual C++17/C++20 checks. Keep the existing shared-autoencoder and
-other deferred B7/AI policy intact. Continue automatically through passing batches,
-then deliver the tracked report and verified ZIP/checksum/JSON and STOP for owner
-review. **New Phase 18 approval pending.** No Phase19/B7/other category, commit,
-push, tag, release or publication. Never set Git identity from public email.
-
+Independently inspect every implemented ML canonical,math,oracles/tests,exact25-section lessons,numerics,resources,security,dependencies,CI and shared ownership. Make only minimal confirmed in-scope fixes;record reproductions and rerun affected checks. Request owner input before altering canonical identity,approved mathematical scope,public API contracts or blocker decisions. ML Python/NumPy mandatory,C++ optional;DSA Python/C++17/C++20 mandatory. No downloads or pretrained frameworks. Deliver tracked36-part report and verified ZIP/checksum/JSON,then STOP. **Phase26 audit and final B Track owner approval pending.** No C1,nextphase,commit,push,tag,release or publication. Never set Git identity from public email.
 
 
 ## Track and language policy
@@ -28,11 +12,12 @@ push, tag, release or publication. Never set Git identity from public email.
 | --- | --- | --- |
 | DSA | Python, C++, Python tests, C++ tests | Both C++17 and C++20 remain mandatory |
 | Classical ML | Python, numerical tests, mathematical explanation, reproducible examples | Optional; source and executable C++ test must be provided together |
-| Shared B5/B7 vanilla autoencoder | Python/NumPy, tests; B5 scope only | Optional C++ |
-| Other future Deep Learning / AI | Not authorized here | Retains previous structural rules until a separate language/framework policy is authorized |
+| B7 Neural Networks and Deep Learning | Python/NumPy, explicit gradients, numerical tests | Optional C++ |
+| B8 Reinforcement Learning | Python/NumPy, Bellman/gradient oracles, real A3C concurrency | Optional C++ |
+| Future AI | Not authorized here | Retains previous structural rules |
 
 [The central policy](../scripts/track_policy.py) identifies tracks from canonical
-paths checked against their catalog owners. Phase 17 adds one exact-identity exception for the B5/B7 shared NumPy autoencoder; other deferred topics remain unchanged.
+paths checked against their catalog owners. Phase19 extends the same Python-first NumPy policy to all B7 canonical paths; existing catalog ownership/path and DSA/AI checks remain mandatory.
 The catalog schema and status vocabulary are unchanged. A Python-only ML record
 leaves `cpp_status: planned`, explicitly meaning optional and not implemented;
 this does not prevent Python-based completion. Optional C++ source/test files
@@ -151,3 +136,26 @@ appropriate; NumPy is used only where useful in independent references. Frequent
 itemsets and rule support/confidence/lift have distinct contracts. Each miner has
 its own mechanism; shared rules do not add a catalog canonical. Earlier B5 contracts
 and all language policies are preserved.
+
+## Reinforcement Learning extension — Phase20
+
+[RL contracts](reinforcement-learning-conventions.md) specify environment termination/
+truncation, sampled versus fixed targets, exploration, replay, actor/critic gradients,
+worker synchronization and bounded deterministic planning. Nine defined canonicals
+are completed; exact DPO identity remains intentionally blocked under the
+owner-approved Outcome3 decision. Phase20 implementation review is now owner-approved;
+its historical handoff artifacts retain their original generation-time status.
+The narrow Phase20 blocker-review checkpoint does not make DPO complete or weaken
+other implementation/language requirements. B1–B7 and DSA bytes remain preserved.
+
+## Time Series extension — Phase23
+
+[Time-series contracts](time-series-conventions.md) define regular chronological input,conditional innovation estimation,training-only differencing/scaling,recursive forecast indexing,additive Prophet subset priors and categorical HMM log-space inference/ML EM. Forecasting and latent sequence inference retain appropriate separate APIs. B10 is owner-approved and reused without source changes.
+
+## Anomaly Detection extension — Phase24
+
+[Anomaly contracts](anomaly-detection-conventions.md) define score orientation,training quantile/tie rules,random isolation,constrained one-class KKT certificates and exact tie-inclusive training LOF. Existing B4/B2 validation/distance and B1 kernel helpers are reused unchanged. No duplicate AI work or novelty LOF is claimed.
+
+## Natural Language Processing extension — Phase25
+
+[NLP contracts](natural-language-processing-conventions.md) define Unicode/tokenization/vocabulary boundaries, exact statistical and embedding objectives, frozen-backbone/head-only educational BERT/GPT, supervised POS, canonical CRF-backed BIO NER and CNF CYK. No pretrained equivalence or final track-audit approval is claimed.

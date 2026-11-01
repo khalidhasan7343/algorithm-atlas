@@ -1,0 +1,18 @@
+{
+  "label": "educational-training",
+  "command": [
+    "python",
+    "scripts/evaluate_optimization.py"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "scripts/evaluate_optimization.py"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T21:43:30.823294+06:00",
+  "elapsed_seconds": 0.261,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/optimization-evidence/educational-training-01.txt"
+}

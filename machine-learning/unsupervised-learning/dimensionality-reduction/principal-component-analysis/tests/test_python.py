@@ -40,3 +40,31 @@ def test_pca_dimension_validation(b5):
     with pytest.raises(ValueError):cls(2).fit([[1.,2.]])
     with pytest.raises(ValueError):cls(3).fit([[1.,2.],[2.,3.]])
     with pytest.raises(ValueError):cls(True)
+
+
+@pytest.mark.oracle
+@pytest.mark.numerical
+def test_valid_raw_boundary_centering_does_not_reapply_input_cap(b5):
+    X=np.array([[-1e12],[1e12],[1e12]])
+    m=b5.load('principal-component-analysis').PCA(1).fit(X)
+    assert_allclose(m.mean_,[1e12/3],rtol=1e-14)
+    assert_allclose(m.explained_variance_,[4e24/3],rtol=1e-13)
+    assert_allclose(m.singular_values_,[np.sqrt(8e24/3)],rtol=1e-13)
+    assert_allclose(m.explained_variance_ratio_,[1.])
+    assert_allclose(m.inverse_transform(m.transform(X)),X,atol=1e-3,rtol=1e-14)
+
+
+@pytest.mark.oracle
+@pytest.mark.reference
+@pytest.mark.parametrize('shift',[[0.,0.],[.05e12,-.1e12]])
+def test_centered_internal_scaling_translated_multidimensional_numpy_oracle(b5,shift):
+    X=np.array([[-.9,-.7],[.7,.4],[.8,.6],[.9,.8]])*1e12+shift
+    assert np.max(abs(X))<=1e12
+    assert np.max(abs(X-X.mean(0)))>1e12
+    m=b5.load('principal-component-analysis').PCA(2).fit(X)
+    centered=X-X.mean(0);_,singular,V=np.linalg.svd(centered,full_matrices=False)
+    assert_allclose(m.mean_,X.mean(0),rtol=1e-14,atol=1e-3)
+    assert_allclose(m.singular_values_,singular,rtol=1e-12,atol=1e-3)
+    assert_allclose(m.explained_variance_,singular**2/(len(X)-1),rtol=1e-12)
+    assert_allclose(m.components_.T@m.components_,V.T@V,atol=1e-12)
+    assert_allclose(m.inverse_transform(m.transform(X)),X,rtol=1e-13,atol=1e-3)

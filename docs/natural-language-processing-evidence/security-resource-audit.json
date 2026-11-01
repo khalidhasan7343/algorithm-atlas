@@ -1,0 +1,69 @@
+{
+  "status": "passed for all11 B13 core implementations;final snapshot/export scope verification retained separately",
+  "runtime_imports": "NumPy/stdlib;unchanged B7 sigmoid/step/layernorm and B11 HMM/logsumexp;canonical B13 BoW and CRF",
+  "network": false,
+  "framework_delegation": false,
+  "unsafe_serialization": false,
+  "global_rng_mutation": false,
+  "text_limits": {
+    "documents": 64,
+    "total_tokens": 2048,
+    "tokens_per_document": 128,
+    "codepoints_per_document": 4096,
+    "vocabulary": 128
+  },
+  "embedding_limits": {
+    "dimension": 16,
+    "window": 4,
+    "negative_samples": 8,
+    "epochs": 200,
+    "nominal_work": 20000000,
+    "backtracks": 30
+  },
+  "transformer_limits": {
+    "batch": 16,
+    "context": 32,
+    "vocabulary": 128,
+    "width": 16,
+    "heads": 4,
+    "ff_width": 32,
+    "layers": 3,
+    "head_epochs": 500,
+    "head_work": 20000000,
+    "attention_cells_per_layer": 65536,
+    "model_parameter_values": 11408,
+    "initial_head_copy_values": 2176
+  },
+  "fixed_findings": [
+    "B13-003",
+    "B13-004"
+  ],
+  "prior_sources_changed": false,
+  "sequence_limits": {
+    "sentences": 32,
+    "total_tokens": 1024,
+    "tokens_per_sentence": 64,
+    "POS_tags": 8,
+    "POS_symbols": 16,
+    "CRF_labels": 8,
+    "CRF_features": 128,
+    "CRF_iterations": 200,
+    "CRF_nominal_work": 20000000,
+    "CRF_backtracks": 32,
+    "NER_entity_types": 3
+  },
+  "CYK_limits": {
+    "tokens": 32,
+    "nonterminals": 32,
+    "rules": 128,
+    "backpointer_depth": 32,
+    "witness_nodes": 63
+  },
+  "source_scope_validation": "scope-01 passed:3631 protected prior files;no out-of-scope new source",
+  "independent_reviews": [
+    "statistical5/source/resource audit",
+    "Transformer masking/objectives/precopy/retention audit",
+    "HMM supervised counts/Unicode and CRF/NER leakage/span audit",
+    "CYK independentgrammar/leftmost BFS audit"
+  ]
+}

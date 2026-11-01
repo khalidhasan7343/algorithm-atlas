@@ -1,0 +1,25 @@
+{
+  "label": "B6",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/unsupervised-learning/association-rule-learning",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/unsupervised-learning/association-rule-learning",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/optimization-evidence/B6-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T21:41:27.199643+06:00",
+  "elapsed_seconds": 2.046,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/optimization-evidence/B6-01.txt"
+}

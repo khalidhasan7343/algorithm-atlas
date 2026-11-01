@@ -1,0 +1,32 @@
+{
+  "topic": "adam",
+  "command": [
+    "python",
+    "machine-learning/optimization/adam/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"converged\": true, \"gradient_norm\": 7.7e-09, \"initial\": [3.0, 1.0], \"iterations\": 387, \"learning_rate\": 0.05, \"objective\": -9.0, \"objective_evaluations\": 388, \"status\": \"gradient-tolerance\", \"task_optimum\": [1.0, -2.0], \"updates\": 387, \"x\": [1.0, -2.0]}\n",
+  "sections": 25,
+  "parsed": {
+    "converged": true,
+    "gradient_norm": 7.7e-09,
+    "initial": [
+      3.0,
+      1.0
+    ],
+    "iterations": 387,
+    "learning_rate": 0.05,
+    "objective": -9.0,
+    "objective_evaluations": 388,
+    "status": "gradient-tolerance",
+    "task_optimum": [
+      1.0,
+      -2.0
+    ],
+    "updates": 387,
+    "x": [
+      1.0,
+      -2.0
+    ]
+  }
+}

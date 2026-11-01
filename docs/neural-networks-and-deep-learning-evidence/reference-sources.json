@@ -1,0 +1,76 @@
+{
+  "sources": [
+    {
+      "topic": "MLP backprop",
+      "url": "https://www.cs.toronto.edu/~hinton/absps/naturebp.pdf",
+      "status": "author-hosted scanned PDF retrieved; publisher DOI redirect restricted"
+    },
+    {
+      "topic": "CNN",
+      "url": "https://leon.bottou.org/papers/lecun-98h",
+      "status": "author bibliography retrieved"
+    },
+    {
+      "topic": "RNN",
+      "url": "https://doi.org/10.1207/s15516709cog1402_1",
+      "status": "publisher page retrieved"
+    },
+    {
+      "topic": "LSTM",
+      "url": "https://doi.org/10.1162/neco.1997.9.8.1735",
+      "status": "primary publisher search metadata verified; direct403 and author PDF timeout"
+    },
+    {
+      "topic": "forget gates",
+      "url": "https://doi.org/10.1162/089976600300015015",
+      "status": "publisher metadata verified"
+    },
+    {
+      "topic": "GRU",
+      "url": "https://arxiv.org/abs/1406.1078",
+      "status": "primary arXiv record retrieved"
+    },
+    {
+      "topic": "ResNet",
+      "url": "https://arxiv.org/abs/1512.03385",
+      "status": "primary arXiv record retrieved"
+    },
+    {
+      "topic": "Transformer",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "status": "primary arXiv record retrieved"
+    },
+    {
+      "topic": "Denoising AE",
+      "url": "https://www.iro.umontreal.ca/~vincentp/Publications/vincent_icml_2008.pdf",
+      "status": "author-hosted search metadata verified; direct access blocked by Anubis"
+    },
+    {
+      "topic": "Sparse AE background",
+      "url": "https://web.stanford.edu/class/cs294a/tutorial",
+      "status": "official course page retrieved; older ufldl endpoint timeout; L1 variant explicitly distinguished from KL tutorial"
+    },
+    {
+      "topic": "VAE",
+      "url": "https://arxiv.org/abs/1312.6114",
+      "status": "primary arXiv record retrieved"
+    },
+    {
+      "topic": "GAN",
+      "url": "https://arxiv.org/abs/1406.2661",
+      "status": "primary arXiv record retrieved"
+    },
+    {
+      "topic": "DDPM",
+      "url": "https://arxiv.org/abs/2006.11239",
+      "status": "primary arXiv record retrieved"
+    },
+    {
+      "topic": "GCN",
+      "url": "https://arxiv.org/abs/1609.02907",
+      "status": "primary arXiv record retrieved"
+    }
+  ],
+  "testing": "Independent mathematical/NumPy/SciPy oracles and finite differences; Torch/TensorFlow not installed, no optional skipped tests or claim of framework parity.",
+  "reuse": "No external prose/code copied; approved vanilla AE reused locally without modification."
+}

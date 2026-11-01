@@ -1,0 +1,25 @@
+{
+  "label": "gcn-development",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/graph-learning/graph-convolutional-networks",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/graph-learning/graph-convolutional-networks",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/graph-learning-evidence/gcn-development-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T20:01:16.495811+06:00",
+  "elapsed_seconds": 0.322,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 1,
+  "output": "docs/graph-learning-evidence/gcn-development-01.txt"
+}

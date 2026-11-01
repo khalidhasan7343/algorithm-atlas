@@ -1,0 +1,2927 @@
+{
+  "scope": "Phase26 independent exhaustive B1\u2013B4 source/test/exact25-section lesson review",
+  "reviewer": "embeddings",
+  "canonical_count": 34,
+  "reviewed_count": 18,
+  "review_complete": false,
+  "rows": [
+    {
+      "id": "linear-regression",
+      "category": "B1",
+      "source_files": [
+        "machine-learning/supervised-learning/regression/linear-regression/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/supervised-learning/regression/linear-regression/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/supervised-learning/regression/linear-regression/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/supervised-learning/regression/linear-regression/python/solution.py": "94dbad567b15c75cd975b9e64d989d209a276652ab79b27b74732a215f72723a",
+        "machine-learning/supervised-learning/regression/linear-regression/tests/test_python.py": "d5446ee7da7c00c1cc17957fdc6db4432674ba9520253574d13362d52880bc5e",
+        "machine-learning/supervised-learning/regression/linear-regression/README.md": "b6afcf267cde56a40ef513cbe92d02bdab152b9b2f04b3d30b461717bf5cec31"
+      },
+      "mathematical_variant": "Centered minimum-norm dense OLS",
+      "objective": "||Xw+b-y||\u00b2/(2n)",
+      "update_notes": "Direct rank-revealing lstsq;unpenalized recovered intercept;rank/singular diagnostics;finite atomic commit.",
+      "oracle_test_names": [
+        {
+          "name": "test_analytical_fit_and_minimum_norm_singular_system",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Hand affine solution and duplicate-column minimum norm;residual orthogonality;central differences for loss gradients;sklearn predictions on independent query data. No unique coefficient comparison on deficient rank."
+        },
+        {
+          "name": "test_seeded_reference_predictions_and_parameters",
+          "types": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('intercept', [False, True])"
+          ],
+          "independence": "Hand affine solution and duplicate-column minimum norm;residual orthogonality;central differences for loss gradients;sklearn predictions on independent query data. No unique coefficient comparison on deficient rank."
+        },
+        {
+          "name": "test_finite_difference_gradient_and_residual_orthogonality",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Hand affine solution and duplicate-column minimum norm;residual orthogonality;central differences for loss gradients;sklearn predictions on independent query data. No unique coefficient comparison on deficient rank."
+        },
+        {
+          "name": "test_large_offset_constant_and_nearly_singular_features",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Hand affine solution and duplicate-column minimum norm;residual orthogonality;central differences for loss gradients;sklearn predictions on independent query data. No unique coefficient comparison on deficient rank."
+        }
+      ],
+      "test_inventory": [
+        {
+          "name": "test_analytical_fit_and_minimum_norm_singular_system",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_seeded_reference_predictions_and_parameters",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('intercept', [False, True])"
+          ]
+        },
+        {
+          "name": "test_finite_difference_gradient_and_residual_orthogonality",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_large_offset_constant_and_nearly_singular_features",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_input_ownership_shapes_and_failed_refit",
+          "markers": []
+        },
+        {
+          "name": "test_invalid_shapes_domains_and_types",
+          "markers": [
+            "pytest.mark.parametrize('X,y', [([], []), ([1, 2], [1, 2]), ([[1], [2]], [[1], [2]]), ([[1]], [1, 2]), ([[np.inf]], [1]), ([[1j]], [1]), ([[True]], [1]), ([[10000000000000.0]], [1]), ([[1]], [np.nan])])"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(model.predict(query), reference.predict(query), atol=1e-10, rtol=1e-10)",
+        "assert_allclose(gradient[j], numerical, atol=1e-8, rtol=1e-6)",
+        "assert_allclose(bias_gradient, numerical, atol=1e-8, rtol=1e-6)",
+        "assert_allclose(X.T @ residual, 0, atol=1e-12)",
+        "assert_allclose(model.predict(X), y, atol=1e-6)"
+      ],
+      "limits": "Shared B1:training n<=2048,query n<=10000,p<=512,cells<=262144,finite |X|/|y|<=1e12;iterative Lasso/EN max_iter<=100000,tol in(0,1],alpha<=1e12;no automatic scaling. Dense solve/coordinate time bounds verified against README11/12.",
+      "documentation_findings": [
+        "Stale Phase13 owner-pending clause in live section25;catalog says owner-approved. Minimal removal authorized by root;pending application."
+      ],
+      "review_result": "source/tests/full25-section lesson individually reviewed;math/oracle/complexity aligned;stale live approval text confirmed",
+      "finding_register_ids": [
+        "ML26-B1-B4-001"
+      ]
+    },
+    {
+      "id": "ridge-regression",
+      "category": "B1",
+      "source_files": [
+        "machine-learning/supervised-learning/regression/ridge-regression/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/supervised-learning/regression/ridge-regression/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/supervised-learning/regression/ridge-regression/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/supervised-learning/regression/ridge-regression/python/solution.py": "b0b1a752896ee9692456fa74d7ec309d9d4bf91415c582ae509a428f9cf0915a",
+        "machine-learning/supervised-learning/regression/ridge-regression/tests/test_python.py": "1a1a10a2b36aa35cdae24cd8acc2d629b74d8928d6aebb20ed01bc86edad591a",
+        "machine-learning/supervised-learning/regression/ridge-regression/README.md": "19d4cbc300319ec758d55f39b16abba9e5b455774e9c81fac4be08af58559c15"
+      },
+      "mathematical_variant": "Augmented least-squares ridge",
+      "objective": "RSS/2+alpha||w||\u00b2/2",
+      "update_notes": "Stack sqrt(alpha)I, solve without Gram inverse;unpenalized recovered intercept;direct solve and singular diagnostics.",
+      "oracle_test_names": [
+        {
+          "name": "test_closed_form_ridge_and_unpenalized_intercept",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Exact scalar shrinkage/objective and stationarity;central differences;sklearn SVD at positive alpha;explicit minimum-norm OLS oracle at alpha0 avoids a known library rank-cutoff mismatch."
+        },
+        {
+          "name": "test_seeded_ridge_reference",
+          "types": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('alpha', [0.0, 0.1, 1.0, 100.0])",
+            "pytest.mark.parametrize('intercept', [False, True])"
+          ],
+          "independence": "Exact scalar shrinkage/objective and stationarity;central differences;sklearn SVD at positive alpha;explicit minimum-norm OLS oracle at alpha0 avoids a known library rank-cutoff mismatch."
+        },
+        {
+          "name": "test_ridge_gradient_and_stationarity",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Exact scalar shrinkage/objective and stationarity;central differences;sklearn SVD at positive alpha;explicit minimum-norm OLS oracle at alpha0 avoids a known library rank-cutoff mismatch."
+        },
+        {
+          "name": "test_shrinkage_constant_features_and_single_sample",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Exact scalar shrinkage/objective and stationarity;central differences;sklearn SVD at positive alpha;explicit minimum-norm OLS oracle at alpha0 avoids a known library rank-cutoff mismatch."
+        }
+      ],
+      "test_inventory": [
+        {
+          "name": "test_closed_form_ridge_and_unpenalized_intercept",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_seeded_ridge_reference",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('alpha', [0.0, 0.1, 1.0, 100.0])",
+            "pytest.mark.parametrize('intercept', [False, True])"
+          ]
+        },
+        {
+          "name": "test_ridge_gradient_and_stationarity",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_shrinkage_constant_features_and_single_sample",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_invalid_penalty",
+          "markers": [
+            "pytest.mark.parametrize('alpha', [-1, np.nan, np.inf, True, '1'])"
+          ]
+        },
+        {
+          "name": "test_no_input_mutation_and_failed_refit",
+          "markers": []
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(model.predict(query), reference.predict(query), atol=2e-10, rtol=2e-10)",
+        "assert_allclose(gradient[j], numerical, rtol=1e-6, atol=1e-8)",
+        "assert_allclose(gb, (algorithm.loss_gradient(X, y, w, b+h, alpha)[0] - algorithm.loss_gradient(X, y, w, b-h, alpha)[0])/(2*h), rtol=1e-6)",
+        "assert_allclose(gradient, 0, atol=1e-12)"
+      ],
+      "limits": "Shared B1:training n<=2048,query n<=10000,p<=512,cells<=262144,finite |X|/|y|<=1e12;iterative Lasso/EN max_iter<=100000,tol in(0,1],alpha<=1e12;no automatic scaling. Dense solve/coordinate time bounds verified against README11/12.",
+      "documentation_findings": [
+        "Stale Phase13 owner-pending clause in live section25;catalog says owner-approved. Minimal removal authorized by root;pending application."
+      ],
+      "review_result": "source/tests/full25-section lesson individually reviewed;math/oracle/complexity aligned;stale live approval text confirmed",
+      "finding_register_ids": [
+        "ML26-B1-B4-001"
+      ]
+    },
+    {
+      "id": "lasso-regression",
+      "category": "B1",
+      "source_files": [
+        "machine-learning/supervised-learning/regression/lasso-regression/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/supervised-learning/regression/lasso-regression/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/supervised-learning/regression/lasso-regression/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/supervised-learning/regression/lasso-regression/python/solution.py": "66f6ce6a9b53596606a64ec8ccf86f52b7bb49cacdecd0a19cd2e0f032625bdb",
+        "machine-learning/supervised-learning/regression/lasso-regression/tests/test_python.py": "94f240a2f02fd96d7d3a201fda61a3369e3f75e69d24c816e3cd4e26f8a5fcbb",
+        "machine-learning/supervised-learning/regression/lasso-regression/README.md": "99b0a2e72338134bc40fa9db5e78a3eda1c2dabb5a70477c062795fa07f5da41"
+      },
+      "mathematical_variant": "Cyclic coordinate descent Lasso",
+      "objective": "RSS/(2n)+alpha||w||1",
+      "update_notes": "Zero init;exact scalar soft-threshold updates;residual refresh;active/inactive KKT stopping with tol*max(1,||A.T*y/n||inf);bounded nonconvergence preserves state.",
+      "oracle_test_names": [
+        {
+          "name": "test_analytical_soft_threshold_and_exact_sparsity",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Exact soft-threshold scalar witness;independent full L1 objective finite differences away from zeros plus explicit subgradient KKT checks at zero;aligned sklearn Lasso/OLS predictions;monotonic history and duplicate-column prediction conventions."
+        },
+        {
+          "name": "test_reference_objective_and_held_out_predictions",
+          "types": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('alpha', [0.0, 0.02, 0.2, 2.0])",
+            "pytest.mark.parametrize('intercept', [False, True])"
+          ],
+          "independence": "Exact soft-threshold scalar witness;independent full L1 objective finite differences away from zeros plus explicit subgradient KKT checks at zero;aligned sklearn Lasso/OLS predictions;monotonic history and duplicate-column prediction conventions."
+        },
+        {
+          "name": "test_loss_descent_independent_kkt_and_gradient_away_from_zero",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Exact soft-threshold scalar witness;independent full L1 objective finite differences away from zeros plus explicit subgradient KKT checks at zero;aligned sklearn Lasso/OLS predictions;monotonic history and duplicate-column prediction conventions."
+        },
+        {
+          "name": "test_zero_variance_nonuniqueness_and_determinism",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Exact soft-threshold scalar witness;independent full L1 objective finite differences away from zeros plus explicit subgradient KKT checks at zero;aligned sklearn Lasso/OLS predictions;monotonic history and duplicate-column prediction conventions."
+        }
+      ],
+      "test_inventory": [
+        {
+          "name": "test_analytical_soft_threshold_and_exact_sparsity",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_reference_objective_and_held_out_predictions",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('alpha', [0.0, 0.02, 0.2, 2.0])",
+            "pytest.mark.parametrize('intercept', [False, True])"
+          ]
+        },
+        {
+          "name": "test_loss_descent_independent_kkt_and_gradient_away_from_zero",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_zero_variance_nonuniqueness_and_determinism",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_nonconvergence_is_explicit_and_preserves_successful_state",
+          "markers": []
+        },
+        {
+          "name": "test_invalid_hyperparameters",
+          "markers": [
+            "pytest.mark.parametrize('kwargs', [{'alpha': -1}, {'alpha': np.inf}, {'tol': 0}, {'tol': np.nan}, {'max_iter': 0}, {'max_iter': True}, {'fit_intercept': 1}])"
+          ]
+        },
+        {
+          "name": "test_shapes_input_ownership_and_empty_queries",
+          "markers": []
+        }
+      ],
+      "actual_tolerances": [
+        "model = algorithm.LassoRegression(alpha, fit_intercept=intercept, tol=1e-10).fit(X, y)",
+        "Lasso(alpha=alpha, fit_intercept=intercept, tol=1e-12, max_iter=20000)).fit(X, y)",
+        "assert_allclose(model.predict(query), reference.predict(query), rtol=1e-7, atol=1e-8)",
+        "model = algorithm.LassoRegression(alpha, tol=1e-10).fit(X, y)",
+        "assert_allclose(algorithm._support.kkt_violation(X, y, w, alpha, 0), np.max(np.abs(finite_gradient)), rtol=1e-6, atol=1e-8)",
+        "assert_allclose(first.predict(X), second.predict(X), atol=0)",
+        "model = algorithm.LassoRegression(0.01, tol=1e-10).fit(X, y)"
+      ],
+      "limits": "Shared B1:training n<=2048,query n<=10000,p<=512,cells<=262144,finite |X|/|y|<=1e12;iterative Lasso/EN max_iter<=100000,tol in(0,1],alpha<=1e12;no automatic scaling. Dense solve/coordinate time bounds verified against README11/12.",
+      "documentation_findings": [
+        "Stale Phase13 owner-pending clause in live section25;catalog says owner-approved. Minimal removal authorized by root;pending application."
+      ],
+      "review_result": "source/tests/full25-section lesson individually reviewed;math/oracle/complexity aligned;stale live approval text confirmed",
+      "finding_register_ids": [
+        "ML26-B1-B4-001"
+      ]
+    },
+    {
+      "id": "elastic-net",
+      "category": "B1",
+      "source_files": [
+        "machine-learning/supervised-learning/regression/elastic-net/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/supervised-learning/regression/elastic-net/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/supervised-learning/regression/elastic-net/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/supervised-learning/regression/elastic-net/python/solution.py": "84119537855644bbfd2bd3f0b25b4a6f8958681274ac9494cac38202effd0e32",
+        "machine-learning/supervised-learning/regression/elastic-net/tests/test_python.py": "3554698b4994888e3f0da06a8c30407442a06d0785595e9499cb5e870fcea180",
+        "machine-learning/supervised-learning/regression/elastic-net/README.md": "25791e5ce4c3b97175399fce1f77cab0669e9569c0c317ae2e9e0ca33a4e5ecc"
+      },
+      "mathematical_variant": "Cyclic coordinate descent Elastic Net",
+      "objective": "RSS/(2n)+alpha*ratio||w||1+alpha*(1-ratio)||w||\u00b2/2",
+      "update_notes": "Zero init;soft threshold divided by data curvature+l2;residual refresh;explicit scaled KKT termination;iteration cap and failed-refit atomicity.",
+      "oracle_test_names": [
+        {
+          "name": "test_analytical_l1_l2_coordinate_minimum",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Analytic13/11 coefficient witness;independent objective finite differences;aligned sklearn ElasticNet/Ridge (Ridge alpha=n*alpha);Lasso and OLS endpoint comparisons supplement independent checks."
+        },
+        {
+          "name": "test_reference_predictions_with_matched_normalization",
+          "types": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('ratio', [0.0, 0.2, 0.7, 1.0])",
+            "pytest.mark.parametrize('intercept', [False, True])"
+          ],
+          "independence": "Analytic13/11 coefficient witness;independent objective finite differences;aligned sklearn ElasticNet/Ridge (Ridge alpha=n*alpha);Lasso and OLS endpoint comparisons supplement independent checks."
+        },
+        {
+          "name": "test_loss_monotonicity_stationarity_and_finite_difference",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Analytic13/11 coefficient witness;independent objective finite differences;aligned sklearn ElasticNet/Ridge (Ridge alpha=n*alpha);Lasso and OLS endpoint comparisons supplement independent checks."
+        },
+        {
+          "name": "test_penalty_endpoints_zero_alpha_and_constant_data",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Analytic13/11 coefficient witness;independent objective finite differences;aligned sklearn ElasticNet/Ridge (Ridge alpha=n*alpha);Lasso and OLS endpoint comparisons supplement independent checks."
+        }
+      ],
+      "test_inventory": [
+        {
+          "name": "test_analytical_l1_l2_coordinate_minimum",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_reference_predictions_with_matched_normalization",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('ratio', [0.0, 0.2, 0.7, 1.0])",
+            "pytest.mark.parametrize('intercept', [False, True])"
+          ]
+        },
+        {
+          "name": "test_loss_monotonicity_stationarity_and_finite_difference",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_penalty_endpoints_zero_alpha_and_constant_data",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_invalid_hyperparameters",
+          "markers": [
+            "pytest.mark.parametrize('kwargs', [{'alpha': -1}, {'l1_ratio': -0.1}, {'l1_ratio': 1.1}, {'l1_ratio': np.nan}, {'tol': 0}, {'max_iter': 0}, {'fit_intercept': None}])"
+          ]
+        },
+        {
+          "name": "test_failure_ownership_and_iteration_limit",
+          "markers": []
+        }
+      ],
+      "actual_tolerances": [
+        "model = algorithm.ElasticNetRegression(0.1, ratio, fit_intercept=intercept, tol=1e-10).fit(X, y)",
+        "ElasticNet(alpha=0.1, l1_ratio=ratio, fit_intercept=intercept, tol=1e-12, max_iter=20000)).fit(X, y)",
+        "assert_allclose(model.predict(query), reference.predict(query), atol=2e-8, rtol=2e-7)",
+        "model = algorithm.ElasticNetRegression(alpha, ratio, tol=1e-10).fit(X, y)",
+        "assert_allclose(algorithm._support.kkt_violation(X, y, w, l1, l2), max(abs(np.array(fd))), rtol=1e-6, atol=1e-8)",
+        "assert model.objective_ == pytest.approx(objective(model.coef_), abs=1e-12)",
+        "lasso = algorithm._support.load(\"lasso-regression\").LassoRegression(0.1, tol=1e-10).fit(X, y)",
+        "en = algorithm.ElasticNetRegression(0.1, 1, tol=1e-10).fit(X, y)",
+        "assert_allclose(en.predict(X), lasso.predict(X), atol=1e-12)",
+        "zero = algorithm.ElasticNetRegression(0, 0.5, tol=1e-10).fit(X, y)",
+        "assert_allclose(zero.predict(X), linear.predict(X), atol=1e-8)",
+        "model = algorithm.ElasticNetRegression(0.01, 0.5, tol=1e-10)"
+      ],
+      "limits": "Shared B1:training n<=2048,query n<=10000,p<=512,cells<=262144,finite |X|/|y|<=1e12;iterative Lasso/EN max_iter<=100000,tol in(0,1],alpha<=1e12;no automatic scaling. Dense solve/coordinate time bounds verified against README11/12.",
+      "documentation_findings": [
+        "Stale Phase13 owner-pending clause in live section25;catalog says owner-approved. Minimal removal authorized by root;pending application."
+      ],
+      "review_result": "source/tests/full25-section lesson individually reviewed;math/oracle/complexity aligned;stale live approval text confirmed",
+      "finding_register_ids": [
+        "ML26-B1-B4-001"
+      ]
+    },
+    {
+      "id": "polynomial-regression",
+      "category": "B1",
+      "source_files": [
+        "machine-learning/supervised-learning/regression/polynomial-regression/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/supervised-learning/regression/polynomial-regression/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/supervised-learning/regression/polynomial-regression/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/supervised-learning/regression/polynomial-regression/python/solution.py": "69469d359a96f76161e7cb177154794e7f51f1d0c0e4100fe8fff41b763614be",
+        "machine-learning/supervised-learning/regression/polynomial-regression/tests/test_python.py": "abf3d83bbf00415c7539babb0fe7ec29719c71026a923c64d9c98ed907f5ea52",
+        "machine-learning/supervised-learning/regression/polynomial-regression/README.md": "0ab2ac9fa1c187cdc4d4245c4c05495d7bbd7351a9dce8393f4ac8196c6609e3"
+      },
+      "mathematical_variant": "Graded multivariate monomial basis plus canonical OLS",
+      "objective": "RSS/(2n) in fixed degree1..d feature basis",
+      "update_notes": "Combination-based power enumeration after combinatorial allocation guard;reuses canonical OLS;stored training basis;finite expansion/rank diagnostics.",
+      "oracle_test_names": [
+        {
+          "name": "test_known_parabola_and_multivariate_interaction",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Known parabola and multivariate cross-term hand examples;independent sklearn PolynomialFeatures+LinearRegression with degree1..4;rank-deficient/single/empty and expansion-resource tests."
+        },
+        {
+          "name": "test_seeded_reference_pipeline_and_feature_order",
+          "types": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('degree', [1, 2, 3, 4])"
+          ],
+          "independence": "Known parabola and multivariate cross-term hand examples;independent sklearn PolynomialFeatures+LinearRegression with degree1..4;rank-deficient/single/empty and expansion-resource tests."
+        },
+        {
+          "name": "test_rank_deficient_and_training_only_expansion",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Known parabola and multivariate cross-term hand examples;independent sklearn PolynomialFeatures+LinearRegression with degree1..4;rank-deficient/single/empty and expansion-resource tests."
+        }
+      ],
+      "test_inventory": [
+        {
+          "name": "test_known_parabola_and_multivariate_interaction",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_seeded_reference_pipeline_and_feature_order",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('degree', [1, 2, 3, 4])"
+          ]
+        },
+        {
+          "name": "test_rank_deficient_and_training_only_expansion",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_invalid_degree",
+          "markers": [
+            "pytest.mark.parametrize('degree', [0, -1, 9, True, 2.5])"
+          ]
+        },
+        {
+          "name": "test_resource_numeric_limits_and_failed_refit",
+          "markers": []
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(model.coef_, [0, 1], atol=1e-12)",
+        "assert_allclose(model.predict([[2, 3]]), [20], atol=1e-10)",
+        "assert_allclose(model.transform(query), features.transform(query), atol=1e-12)",
+        "assert_allclose(model.predict(query), reference.predict(features.transform(query)), atol=1e-9, rtol=1e-9)"
+      ],
+      "limits": "Raw p<=32,d1..8;expandedq=comb(p+d,d)-1<=512;expandedcells<=262144;raw/expandedmagnitude<=1e12;B1query/samplelimits.",
+      "documentation_findings": [
+        "Stale Phase13 owner-pending clause;authorized minimal removal pending."
+      ],
+      "review_result": "source/tests/full25-section lesson individually reviewed;math/oracle/complexity aligned;stale liveapproval confirmed",
+      "finding_register_ids": [
+        "ML26-B1-B4-001"
+      ]
+    },
+    {
+      "id": "support-vector-regression",
+      "category": "B1",
+      "source_files": [
+        "machine-learning/supervised-learning/regression/support-vector-regression/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/supervised-learning/regression/support-vector-regression/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/supervised-learning/regression/support-vector-regression/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/supervised-learning/regression/support-vector-regression/python/solution.py": "2d0a914ee1e77db8f16e32aa53fd4cc8931a7eeb9bc09cddd6a7f44e5feb7380",
+        "machine-learning/supervised-learning/regression/support-vector-regression/tests/test_python.py": "2dcde59be96568fb699dc64b8bacea02644a51d15e4bf9d591201e7b1ed05908",
+        "machine-learning/supervised-learning/regression/support-vector-regression/README.md": "d2e6c08a3fbca344b8776d0b814effeb9c5625be983e5c16fd0f6a6fa2ba3fab"
+      },
+      "mathematical_variant": "Linear/RBF epsilon-SVR via bounded ADMM",
+      "objective": "Primal ||w||\u00b2/2+C sum epsilon-insensitive loss;dual y.T beta-beta.T K beta/2-epsilon||beta||1 withsum beta0,|beta|<=C",
+      "update_notes": "Zero ADMMsplit/multiplier;PSD eigensolve for equality-constrainedbeta;soft-threshold+box z;residualstopping thenbox/zero-sumprojection andprimal-dualgap;residual-breakpoint midpointintercept;atomiccommit.",
+      "oracle_test_names": [
+        {
+          "name": "test_analytic_epsilon_tube_and_primal_dual_optimum",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Analytic linear epsilon-tube primal=dual0.405;explicitRBFgram FD smoothdualgradient;LIBSVM querypredictionwithmatchedkernel,C,eps,gamma and2e-4 tolerance;feasibility/gap separatelyasserted."
+        },
+        {
+          "name": "test_seeded_libsvm_prediction_and_objective_reference",
+          "types": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('kernel', ['linear', 'rbf'])",
+            "pytest.mark.parametrize('n', [12, 25])"
+          ],
+          "independence": "Analytic linear epsilon-tube primal=dual0.405;explicitRBFgram FD smoothdualgradient;LIBSVM querypredictionwithmatchedkernel,C,eps,gamma and2e-4 tolerance;feasibility/gap separatelyasserted."
+        },
+        {
+          "name": "test_smooth_dual_gradient_finite_difference",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Analytic linear epsilon-tube primal=dual0.405;explicitRBFgram FD smoothdualgradient;LIBSVM querypredictionwithmatchedkernel,C,eps,gamma and2e-4 tolerance;feasibility/gap separatelyasserted."
+        },
+        {
+          "name": "test_constant_repeated_single_sample_and_large_epsilon",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Analytic linear epsilon-tube primal=dual0.405;explicitRBFgram FD smoothdualgradient;LIBSVM querypredictionwithmatchedkernel,C,eps,gamma and2e-4 tolerance;feasibility/gap separatelyasserted."
+        },
+        {
+          "name": "test_rbf_large_offset_translation_and_underflow",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Analytic linear epsilon-tube primal=dual0.405;explicitRBFgram FD smoothdualgradient;LIBSVM querypredictionwithmatchedkernel,C,eps,gamma and2e-4 tolerance;feasibility/gap separatelyasserted."
+        }
+      ],
+      "test_inventory": [
+        {
+          "name": "test_analytic_epsilon_tube_and_primal_dual_optimum",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_seeded_libsvm_prediction_and_objective_reference",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('kernel', ['linear', 'rbf'])",
+            "pytest.mark.parametrize('n', [12, 25])"
+          ]
+        },
+        {
+          "name": "test_smooth_dual_gradient_finite_difference",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_constant_repeated_single_sample_and_large_epsilon",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_rbf_large_offset_translation_and_underflow",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_invalid_hyperparameters",
+          "markers": [
+            "pytest.mark.parametrize('kwargs', [{'C': 0}, {'C': -1}, {'epsilon': -1}, {'kernel': 'poly'}, {'gamma': 0}, {'gamma': np.nan}, {'rho': 0}, {'tol': 0}, {'max_iter': 0}])"
+          ]
+        },
+        {
+          "name": "test_limits_ownership_nonconvergence_and_failed_refit",
+          "markers": []
+        }
+      ],
+      "actual_tolerances": [
+        "model = algorithm.SupportVectorRegression(C=10, epsilon=0.1, kernel=\"linear\", tol=1e-9).fit([[-1], [0], [1]], [-1, 0, 1])",
+        "assert_allclose(model.coef_, [0.9], atol=1e-7)",
+        "assert_allclose(model.intercept_, 0, atol=1e-8)",
+        "assert_allclose(model.predict([[2]]), [1.8], atol=1e-7)",
+        "assert_allclose(model.primal_objective_, 0.405, atol=1e-7)",
+        "assert_allclose(model.dual_objective_, 0.405, atol=1e-7)",
+        "model = algorithm.SupportVectorRegression(C=3, epsilon=0.05, kernel=kernel, gamma=0.7, tol=1e-8, max_iter=30000).fit(X, y)",
+        "reference = SVR(C=3, epsilon=0.05, kernel=kernel, gamma=0.7, tol=1e-10, shrinking=False).fit(X, y)",
+        "assert_allclose(model.predict(query), reference.predict(query), atol=2e-4, rtol=2e-4)",
+        "model = algorithm.SupportVectorRegression(C=2, epsilon=0.02, kernel=\"rbf\", gamma=0.8, tol=1e-8).fit(X, y)",
+        "assert_allclose(model.smooth_dual_gradient_, fd, atol=2e-8, rtol=1e-6)",
+        "assert_allclose(model.predict([[1], [2]]), [4, 4], atol=1e-10)",
+        "assert_allclose(model.dual_coef_, 0, atol=1e-10)",
+        "assert_allclose(model.dual_coef_, 0, atol=1e-10)",
+        "left = algorithm.SupportVectorRegression(C=3, gamma=0.7, tol=1e-8).fit(X, [0, 0.5, 0])",
+        "shifted = algorithm.SupportVectorRegression(C=3, gamma=0.7, tol=1e-8).fit(X+1e9, [0, 0.5, 0])",
+        "assert_allclose(left.predict(X), shifted.predict(X+1e9), atol=1e-10)",
+        "saved = (X.copy(), y.copy()); model = algorithm.SupportVectorRegression(tol=1e-7)"
+      ],
+      "limits": "Trainingn<=256,p<=128;C,rho<=1e6;epsilon,gamma<=1e12;tol in(0,.01],maxiter<=100000;80projectionbisections;queryblocks128;no semantic equality withB12nonnegative capped simplex.",
+      "documentation_findings": [
+        "Stale Phase13 owner-pending clause;authorized minimal removal pending."
+      ],
+      "review_result": "source/tests/full25-section lesson individually reviewed;math/oracle/complexity aligned;stale liveapproval confirmed",
+      "finding_register_ids": [
+        "ML26-B1-B4-001"
+      ]
+    },
+    {
+      "id": "decision-tree-regression",
+      "category": "B1",
+      "source_files": [
+        "machine-learning/supervised-learning/regression/decision-tree-regression/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/supervised-learning/regression/decision-tree-regression/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/supervised-learning/regression/decision-tree-regression/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/supervised-learning/regression/decision-tree-regression/python/solution.py": "8c35c541dc55880d9d72e8404016dad5188f42454c8084654a49f664ee029f50",
+        "machine-learning/supervised-learning/regression/decision-tree-regression/tests/test_python.py": "5c8e8ab10d3887a81653473e5801eaceb8e7ef6f72f6761a867a06bc16e4f01e",
+        "machine-learning/supervised-learning/regression/decision-tree-regression/README.md": "ea01ce47f86247e05b36f395c518993254223a29ed237a6148804923d7bb7ab2"
+      },
+      "mathematical_variant": "Deterministic bounded-depth squared-error CART",
+      "objective": "Greedy min child SSE with mean-leaf predictions and root-sample-normalized gain",
+      "update_notes": "Exact target purity;center/scale targetprefix SSE;stablefeature/boundary search;32eps relative tieband;adjacentfloatthresholdfallback;zero-gainsplits permitted;boundedrecursiveconstruction.",
+      "oracle_test_names": [
+        {
+          "name": "test_known_partition_mean_leaves_and_zero_gain_xor",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Independentbrute_force80random one-level split enumerations computegroup means/SSE ratherthanprefixsums;handgain/XOR/adjacentfloat cases;sklearn distinct usefulsplit reference."
+        },
+        {
+          "name": "test_exhaustive_one_level_oracle_and_invariants",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Independentbrute_force80random one-level split enumerations computegroup means/SSE ratherthanprefixsums;handgain/XOR/adjacentfloat cases;sklearn distinct usefulsplit reference."
+        },
+        {
+          "name": "test_reference_on_unambiguous_continuous_splits",
+          "types": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('depth', [1, 2, 4])",
+            "pytest.mark.parametrize('minimum_leaf', [1, 3])"
+          ],
+          "independence": "Independentbrute_force80random one-level split enumerations computegroup means/SSE ratherthanprefixsums;handgain/XOR/adjacentfloat cases;sklearn distinct usefulsplit reference."
+        },
+        {
+          "name": "test_ties_constant_features_large_target_offset_and_adjacent_float",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Independentbrute_force80random one-level split enumerations computegroup means/SSE ratherthanprefixsums;handgain/XOR/adjacentfloat cases;sklearn distinct usefulsplit reference."
+        },
+        {
+          "name": "test_min_impurity_decrease_uses_root_sample_normalization",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Independentbrute_force80random one-level split enumerations computegroup means/SSE ratherthanprefixsums;handgain/XOR/adjacentfloat cases;sklearn distinct usefulsplit reference."
+        }
+      ],
+      "test_inventory": [
+        {
+          "name": "test_known_partition_mean_leaves_and_zero_gain_xor",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_exhaustive_one_level_oracle_and_invariants",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_reference_on_unambiguous_continuous_splits",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('depth', [1, 2, 4])",
+            "pytest.mark.parametrize('minimum_leaf', [1, 3])"
+          ]
+        },
+        {
+          "name": "test_ties_constant_features_large_target_offset_and_adjacent_float",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_min_impurity_decrease_uses_root_sample_normalization",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_invalid_hyperparameters",
+          "markers": [
+            "pytest.mark.parametrize('kwargs', [{'max_depth': 0}, {'max_depth': 33}, {'max_depth': True}, {'min_samples_leaf': 0}, {'min_impurity_decrease': -1}, {'min_impurity_decrease': np.nan}])"
+          ]
+        },
+        {
+          "name": "test_input_ownership_failed_refit_and_shapes",
+          "markers": []
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(model.training_mse_, expected[0]/len(y), atol=1e-12)",
+        "assert_allclose(model.predict(query), reference.predict(query), atol=1e-10)"
+      ],
+      "limits": "n<=2048,p<=32,maxdepth1..32,minleaf1..1024,|inputs|<=1e12;nodes<=2n-1;queryn<=10000,cells<=262144.",
+      "documentation_findings": [
+        "Stale Phase13 owner-pending clause;authorized minimal removal pending."
+      ],
+      "review_result": "source/tests/full25-section lesson individually reviewed;math/oracle/complexity aligned;stale liveapproval confirmed",
+      "finding_register_ids": [
+        "ML26-B1-B4-001"
+      ]
+    },
+    {
+      "id": "logistic-regression",
+      "category": "B2",
+      "source_files": [
+        "machine-learning/supervised-learning/classification/logistic-regression/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/supervised-learning/classification/logistic-regression/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/supervised-learning/classification/logistic-regression/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/supervised-learning/classification/logistic-regression/python/solution.py": "43e4810c51aecf21764ccac84bcaa31c22070392da162284f8894fd0e142945d",
+        "machine-learning/supervised-learning/classification/logistic-regression/tests/test_python.py": "a00d5a0acfc12137fc0240eaa8f5d069a1678714ab10db9b5704f3292593f8d4",
+        "machine-learning/supervised-learning/classification/logistic-regression/README.md": "200b16445e2ff86184ba4c8b6d9f4b6070a1b557e3ee424e09fa5255c6ea6dc9"
+      },
+      "mathematical_variant": "Binary L2 logistic with centered Newton/Armijo",
+      "objective": "Mean binary crossentropy+alpha||w||\u00b2/2;bias unpenalized",
+      "update_notes": "Zeroinit;stable signed-logloss/sigmoid residual;Hessian lstsq andfallbackgradient;60step Armijobacktracking;infinitygradienttol;atomicfailure.",
+      "oracle_test_names": [
+        {
+          "name": "test_constant_features_analytical_intercept_imbalance_and_threshold",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Exact classimbalance/intercept+threshold;FD allcoefandbias;sklearn C=1/(nalpha),binaryonly;translation/scalepenaltyequiv;monotoneobjectives."
+        },
+        {
+          "name": "test_finite_difference_log_loss_gradient_and_stable_extremes",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Exact classimbalance/intercept+threshold;FD allcoefandbias;sklearn C=1/(nalpha),binaryonly;translation/scalepenaltyequiv;monotoneobjectives."
+        },
+        {
+          "name": "test_seeded_independent_objective_matched_reference",
+          "types": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('alpha', [0.0, 0.05, 1.0])",
+            "pytest.mark.parametrize('bias', [False, True])"
+          ],
+          "independence": "Exact classimbalance/intercept+threshold;FD allcoefandbias;sklearn C=1/(nalpha),binaryonly;translation/scalepenaltyequiv;monotoneobjectives."
+        },
+        {
+          "name": "test_separable_data_large_offset_and_feature_scale",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Exact classimbalance/intercept+threshold;FD allcoefandbias;sklearn C=1/(nalpha),binaryonly;translation/scalepenaltyequiv;monotoneobjectives."
+        }
+      ],
+      "test_inventory": [
+        {
+          "name": "test_constant_features_analytical_intercept_imbalance_and_threshold",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_finite_difference_log_loss_gradient_and_stable_extremes",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_seeded_independent_objective_matched_reference",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('alpha', [0.0, 0.05, 1.0])",
+            "pytest.mark.parametrize('bias', [False, True])"
+          ]
+        },
+        {
+          "name": "test_separable_data_large_offset_and_feature_scale",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_state_shapes_nonconvergence_and_failed_refit",
+          "markers": []
+        },
+        {
+          "name": "test_invalid_label_domains",
+          "markers": [
+            "pytest.mark.parametrize('y', [[0, 0], [0, 1, 2], [True, False], [1.0, 2.0], [1, '1'], [[0], [1]], [np.nan, 1]])"
+          ]
+        },
+        {
+          "name": "test_invalid_parameters",
+          "markers": [
+            "pytest.mark.parametrize('parameters', [{'alpha': -1}, {'alpha': np.inf}, {'tol': 0}, {'max_iter': True}, {'fit_intercept': 1}])"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(model.coef_, 0, atol=1e-14)",
+        "assert_allclose(model.intercept_, np.log(1/3), atol=1e-7)",
+        "assert_allclose(model.predict_proba([[1, 1]]), [[0.75, 0.25]], atol=1e-9)",
+        "assert_allclose(gradient[j], finite, atol=1e-8, rtol=1e-6)",
+        "assert_allclose(bias, finite, atol=1e-8, rtol=1e-6)",
+        "model = algorithm.LogisticRegression(alpha, fit_intercept=bias, tol=1e-10).fit(X, y)",
+        "reference = Reference(C=np.inf if alpha == 0 else 1/(len(X)*alpha), fit_intercept=bias, solver=\"lbfgs\", tol=1e-12, max_iter=1000)",
+        "assert_allclose(model.predict_proba(query), reference.predict_proba(query), atol=2e-7, rtol=2e-7)",
+        "assert_allclose(model.predict_proba(X), shifted.predict_proba(X+1e9), atol=1e-7)",
+        "assert_allclose(scaled.predict_proba(10*X), model.predict_proba(X), atol=1e-8)"
+      ],
+      "limits": "B2n2048,p128,cells262144,|X|1e12;alpha<=1e6,tol<=.01,maxiter<=10000.",
+      "documentation_findings": [
+        "Stale Phase14 owner-pending/NoB3 clause in live section25;catalog owner-approved;authorized removal pending."
+      ],
+      "review_result": "source/tests/full25-section lesson individually reviewed;documentandidentifiednumericalfixes tracked",
+      "finding_register_ids": [
+        "ML26-B1-B4-001"
+      ]
+    },
+    {
+      "id": "k-nearest-neighbors",
+      "category": "B2",
+      "source_files": [
+        "machine-learning/supervised-learning/classification/k-nearest-neighbors/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/supervised-learning/classification/k-nearest-neighbors/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/supervised-learning/classification/k-nearest-neighbors/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/supervised-learning/classification/k-nearest-neighbors/python/solution.py": "e66399ef8f1158c240e0862e449a27a4bdae0d006673884580138ee6ae39120a",
+        "machine-learning/supervised-learning/classification/k-nearest-neighbors/tests/test_python.py": "8eb268bf86733bcc7c9e6283fe0c58d8adde097bab86238d0ce49214d4d87d57",
+        "machine-learning/supervised-learning/classification/k-nearest-neighbors/README.md": "57a8cf5eb67fca7f0c554c6ca9009ba6982f893c0296b66b9b6bc214667a25ec"
+      },
+      "mathematical_variant": "Stored uniform Euclidean KNN",
+      "objective": "No fittingobjective;uniform votes of exactk nearest rows",
+      "update_notes": "Owns trainingdata;directdifferenceblockedtensor;stable distance/rowindex ordering;classvotes sortedlabeltie.",
+      "oracle_test_names": [
+        {
+          "name": "test_known_votes_distance_ties_duplicates_and_k_bounds",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Independent Python scalar distance+sort+Counter vote over24seededdatasets;hand conflictingduplicates/ties;sklearn onno-boundarytiecases."
+        },
+        {
+          "name": "test_seeded_exhaustive_distance_and_vote_oracle",
+          "types": [
+            "pytest.mark.numerical",
+            "pytest.mark.parametrize('k', [1, 5, 17])"
+          ],
+          "independence": "Independent Python scalar distance+sort+Counter vote over24seededdatasets;hand conflictingduplicates/ties;sklearn onno-boundarytiecases."
+        },
+        {
+          "name": "test_reference_without_boundary_distance_ties",
+          "types": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('k', [1, 3, 12])"
+          ],
+          "independence": "Independent Python scalar distance+sort+Counter vote over24seededdatasets;hand conflictingduplicates/ties;sklearn onno-boundarytiecases."
+        },
+        {
+          "name": "test_large_offsets_and_scaling_changes_neighbor_geometry",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Independent Python scalar distance+sort+Counter vote over24seededdatasets;hand conflictingduplicates/ties;sklearn onno-boundarytiecases."
+        }
+      ],
+      "test_inventory": [
+        {
+          "name": "test_known_votes_distance_ties_duplicates_and_k_bounds",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_seeded_exhaustive_distance_and_vote_oracle",
+          "markers": [
+            "pytest.mark.numerical",
+            "pytest.mark.parametrize('k', [1, 5, 17])"
+          ]
+        },
+        {
+          "name": "test_reference_without_boundary_distance_ties",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('k', [1, 3, 12])"
+          ]
+        },
+        {
+          "name": "test_large_offsets_and_scaling_changes_neighbor_geometry",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_owned_training_state_failed_refit_and_prediction_contract",
+          "markers": []
+        },
+        {
+          "name": "test_invalid_k",
+          "markers": [
+            "pytest.mark.parametrize('k', [0, -1, 2.0, True, 2049])"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(distances[i], [sum((q-X[j])**2)**.5 for j in order], atol=1e-12)",
+        "assert_allclose(model.predict_proba(query),reference.predict_proba(query),atol=1e-14)"
+      ],
+      "limits": "n2048,p128,k1..n,m10000,m*k<=262144,differenceblocks<=262144cells,classes<=32.",
+      "documentation_findings": [
+        "Stale Phase14 owner-pending/NoB3 clause in live section25;catalog owner-approved;authorized removal pending."
+      ],
+      "review_result": "source/tests/full25-section lesson individually reviewed;documentandidentifiednumericalfixes tracked",
+      "finding_register_ids": [
+        "ML26-B1-B4-001"
+      ]
+    },
+    {
+      "id": "gaussian-naive-bayes",
+      "category": "B2",
+      "source_files": [
+        "machine-learning/supervised-learning/classification/gaussian-naive-bayes/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/supervised-learning/classification/gaussian-naive-bayes/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/supervised-learning/classification/gaussian-naive-bayes/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/supervised-learning/classification/gaussian-naive-bayes/python/solution.py": "08ee26db3e412c65f64ede5f1d0d26947e41fd5d5a594b73e2aca9abde3ea9d9",
+        "machine-learning/supervised-learning/classification/gaussian-naive-bayes/tests/test_python.py": "41439223a5a27285194ce832280dd40b2ce99caa7d27786ad3f3b39031f95576",
+        "machine-learning/supervised-learning/classification/gaussian-naive-bayes/README.md": "8f77b235a23e41e9b22aa5e3f66934bc2b3cf0c2316dd726a49ea3f8a097d513"
+      },
+      "mathematical_variant": "Independent class Gaussian population moments with explicit floor",
+      "objective": "Jointlogpi-half sum(log(2pi*variance)+residual\u00b2/variance)",
+      "update_notes": "Closedformmeans/populationvariances;epsilon=smoothing*max(1,maxglobalpopulationvariance);logpriors;stablecomparativeinferenceaddedforconfirmedfarquerypriorloss.",
+      "oracle_test_names": [
+        {
+          "name": "test_hand_gaussian_likelihood_posterior_and_priors",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Hand means/likelihood;matched sklearn epsilon reference;new independent identical-densityprior andequalvariance tinymeandifference farqueryoracles;exactindependentglobalfloor."
+        },
+        {
+          "name": "test_seeded_reference_with_matched_variance_floor",
+          "types": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('seed', [14211, 14212, 14213])"
+          ],
+          "independence": "Hand means/likelihood;matched sklearn epsilon reference;new independent identical-densityprior andequalvariance tinymeandifference farqueryoracles;exactindependentglobalfloor."
+        },
+        {
+          "name": "test_zero_variance_tiny_classes_imbalance_and_high_dimensional_offsets",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Hand means/likelihood;matched sklearn epsilon reference;new independent identical-densityprior andequalvariance tinymeandifference farqueryoracles;exactindependentglobalfloor."
+        }
+      ],
+      "test_inventory": [
+        {
+          "name": "test_hand_gaussian_likelihood_posterior_and_priors",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_seeded_reference_with_matched_variance_floor",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('seed', [14211, 14212, 14213])"
+          ]
+        },
+        {
+          "name": "test_zero_variance_tiny_classes_imbalance_and_high_dimensional_offsets",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_transactional_state_empty_outputs_and_invalid_data",
+          "markers": []
+        },
+        {
+          "name": "test_invalid_smoothing",
+          "markers": [
+            "pytest.mark.parametrize('value', [0, -1, 1e-13, 2, np.inf, True])"
+          ]
+        },
+        {
+          "name": "test_invalid_class_priors",
+          "markers": [
+            "pytest.mark.parametrize('prior', [[1], [-1, 2], [0, 1], [0.2, 0.2], [np.nan, 1]])"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(model.decision_function(query),expected,atol=1e-12)",
+        "assert_allclose(model.predict_proba(query),weights,atol=1e-12)",
+        "assert_allclose(model.theta_,reference.theta_,atol=1e-12)",
+        "assert_allclose(model.var_,reference.var_,atol=1e-12)",
+        "assert_allclose(model.predict_proba(query),reference.predict_proba(query),atol=1e-12,rtol=1e-10)",
+        "assert_allclose(model.predict_proba(X),np.tile([.25,.75],(4,1)),atol=1e-11)"
+      ],
+      "limits": "n2048,p128,m10000,c32;cells262144;|X|1e12;smoothing[1e-12,1].",
+      "documentation_findings": [
+        "Stale Phase14 owner-pending/NoB3 clause in live section25;catalog owner-approved;authorized removal pending."
+      ],
+      "review_result": "source/tests/full25-section lesson individually reviewed;documentandidentifiednumericalfixes tracked",
+      "finding_register_ids": [
+        "ML26-B1-B4-001",
+        "ML26-B1-B4-002"
+      ]
+    },
+    {
+      "id": "multinomial-naive-bayes",
+      "category": "B2",
+      "source_files": [
+        "machine-learning/supervised-learning/classification/multinomial-naive-bayes/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/supervised-learning/classification/multinomial-naive-bayes/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/supervised-learning/classification/multinomial-naive-bayes/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/supervised-learning/classification/multinomial-naive-bayes/python/solution.py": "7732ba9879739d5e641d68e0b549070473531ffe822102fd7ad4aab8ba9fc8f3",
+        "machine-learning/supervised-learning/classification/multinomial-naive-bayes/tests/test_python.py": "66e77e684097ff48f77ab6526cf773dd0158a5023173715597281740bed0ab86",
+        "machine-learning/supervised-learning/classification/multinomial-naive-bayes/README.md": "742ad63e54c51e90f5fde1f2d2b138aeb8e6ce03321cbbaa339d4e677b7269ba"
+      },
+      "mathematical_variant": "Smoothed nonnegative event-count NB",
+      "objective": "logprior+sum Xj*log((class_feature_count+alpha)/(class_event_total+palpha))",
+      "update_notes": "Closedformclassfeatureaggregates;positive smoothing;integercount interpretation/fractionalextension;zeroquery equalspriors.",
+      "oracle_test_names": [
+        {
+          "name": "test_hand_count_likelihood_additive_smoothing_and_zero_row",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Hand featuretotals,eventproducts+posteriors;matchedsklearn count/fractionalcountrefs;newcommon-eventscore priorlossfindingdelegatedforstablecomparativefix."
+        },
+        {
+          "name": "test_seeded_count_and_fractional_count_reference",
+          "types": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('alpha', [1e-09, 0.3, 5])"
+          ],
+          "independence": "Hand featuretotals,eventproducts+posteriors;matchedsklearn count/fractionalcountrefs;newcommon-eventscore priorlossfindingdelegatedforstablecomparativefix."
+        },
+        {
+          "name": "test_all_zero_data_imbalance_large_counts_and_underflow_avoidance",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Hand featuretotals,eventproducts+posteriors;matchedsklearn count/fractionalcountrefs;newcommon-eventscore priorlossfindingdelegatedforstablecomparativefix."
+        }
+      ],
+      "test_inventory": [
+        {
+          "name": "test_hand_count_likelihood_additive_smoothing_and_zero_row",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_seeded_count_and_fractional_count_reference",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('alpha', [1e-09, 0.3, 5])"
+          ]
+        },
+        {
+          "name": "test_all_zero_data_imbalance_large_counts_and_underflow_avoidance",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_owned_state_and_failed_refit",
+          "markers": []
+        },
+        {
+          "name": "test_invalid_smoothing",
+          "markers": [
+            "pytest.mark.parametrize('alpha', [0, -1, 1e-10, True, np.inf])"
+          ]
+        },
+        {
+          "name": "test_invalid_feature_domain",
+          "markers": [
+            "pytest.mark.parametrize('X', [[[-1]], [[np.inf]], [[np.nan]], [[True]], [[1j]], [1, 2]])"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(model.predict_proba(query),raw/raw.sum(axis=1,keepdims=True),atol=1e-14)",
+        "assert_allclose(model.feature_log_prob_,reference.feature_log_prob_,atol=1e-13)",
+        "assert_allclose(model.predict_proba(query),reference.predict_proba(query),atol=1e-12,rtol=1e-10)"
+      ],
+      "limits": "B2dense bounds n2048,p128,m10000,c32,|X|1e12;nonnegative;alpha[1e-9,1e6].",
+      "documentation_findings": [
+        "Stale Phase14 owner-pending/NoB3 clause in live section25;catalog owner-approved;authorized removal pending."
+      ],
+      "review_result": "source/tests/full25-section lesson individually reviewed;documentandidentifiednumericalfixes tracked",
+      "finding_register_ids": [
+        "ML26-B1-B4-001",
+        "delegated numerical prior-loss correction;root merges canonical finding IDs"
+      ]
+    },
+    {
+      "id": "bernoulli-naive-bayes",
+      "category": "B2",
+      "source_files": [
+        "machine-learning/supervised-learning/classification/bernoulli-naive-bayes/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/supervised-learning/classification/bernoulli-naive-bayes/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/supervised-learning/classification/bernoulli-naive-bayes/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/supervised-learning/classification/bernoulli-naive-bayes/python/solution.py": "1144aaee1791a08895821e9dbca14951dca20f62e4dee8cb48568e2e4f4bd18c",
+        "machine-learning/supervised-learning/classification/bernoulli-naive-bayes/tests/test_python.py": "c2d577d9f53d5fcc56f84bab01eff36ce59e240b2db8aaa7c8a09c18220c8083",
+        "machine-learning/supervised-learning/classification/bernoulli-naive-bayes/README.md": "f00cf467e1b7a82686514ca6fba253a6453bb0452188d336a413be592a1a2e30"
+      },
+      "mathematical_variant": "Smoothed binary presence/absence NB",
+      "objective": "logprior+sum B logtheta+(1-B)log(1-theta)",
+      "update_notes": "Exactbinaryorstrict X>fittedthreshold;theta=(presence+alpha)/(nk+2alpha);log1pabsence;closedformsufficientstats.",
+      "oracle_test_names": [
+        {
+          "name": "test_hand_likelihood_presence_absence_and_all_zero_one_queries",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Independent presenceANDabsenceproducts;explicitabsence-changesdecisionwitness;thresholdnextfloat;sklearnthresholdandalphaaligned."
+        },
+        {
+          "name": "test_seeded_binary_and_threshold_reference",
+          "types": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('threshold', [None, 0.0, 0.5])",
+            "pytest.mark.parametrize('alpha', [1e-09, 1.0])"
+          ],
+          "independence": "Independent presenceANDabsenceproducts;explicitabsence-changesdecisionwitness;thresholdnextfloat;sklearnthresholdandalphaaligned."
+        },
+        {
+          "name": "test_exact_threshold_single_class_constant_features_and_tiny_smoothing",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Independent presenceANDabsenceproducts;explicitabsence-changesdecisionwitness;thresholdnextfloat;sklearnthresholdandalphaaligned."
+        }
+      ],
+      "test_inventory": [
+        {
+          "name": "test_hand_likelihood_presence_absence_and_all_zero_one_queries",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_seeded_binary_and_threshold_reference",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('threshold', [None, 0.0, 0.5])",
+            "pytest.mark.parametrize('alpha', [1e-09, 1.0])"
+          ]
+        },
+        {
+          "name": "test_exact_threshold_single_class_constant_features_and_tiny_smoothing",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_transactional_owned_fit_and_empty_prediction",
+          "markers": []
+        },
+        {
+          "name": "test_invalid_parameters",
+          "markers": [
+            "pytest.mark.parametrize('parameters', [{'alpha': 0}, {'alpha': True}, {'alpha': np.nan}, {'binarize': np.inf}, {'binarize': True}])"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(model.predict_proba(query),raw/raw.sum(axis=1,keepdims=True),atol=1e-14)",
+        "assert_allclose(model.feature_log_prob_,reference.feature_log_prob_,atol=1e-12)",
+        "assert_allclose(model.predict_proba(query),reference.predict_proba(query),atol=1e-11,rtol=1e-9)"
+      ],
+      "limits": "B2densebounds;p128,c32;alpha[1e-9,1e6] keepslogprobfinite withn<=2048;binarizethreshold<=1e12orNone.",
+      "documentation_findings": [
+        "Stale Phase14 owner-pending/NoB3 clause in live section25;catalog owner-approved;authorized removal pending."
+      ],
+      "review_result": "source/tests/full25-section lesson individually reviewed;documentandidentifiednumericalfixes tracked",
+      "finding_register_ids": [
+        "ML26-B1-B4-001"
+      ]
+    },
+    {
+      "id": "support-vector-machines",
+      "category": "B2",
+      "source_files": [
+        "machine-learning/supervised-learning/classification/support-vector-machines/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/supervised-learning/classification/support-vector-machines/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/supervised-learning/classification/support-vector-machines/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/supervised-learning/classification/support-vector-machines/python/solution.py": "4438d9486fcf0b0692f672057f772e08035b255c0a79ff72dacdd310dda0ed1d",
+        "machine-learning/supervised-learning/classification/support-vector-machines/tests/test_python.py": "9d94fb7b7749c07ab9613bd1881fe6a26f556bd2c3a63468ab9bde34b69e1146",
+        "machine-learning/supervised-learning/classification/support-vector-machines/README.md": "c9510939a433c1f7f32c09711604e96a07752a04841d87783b06a1504cf78289"
+      },
+      "mathematical_variant": "Binary linear soft-margin C-SVM by ADMM",
+      "objective": "||w||\u00b2/2+Csumhinge;dual sumalpha-alpha.T Q alpha/2,0<=alpha<=C,s.T alpha0",
+      "update_notes": "CenteredGramPSDsolve;zeroinit;ADMM equalitythenclip;80bisectionprojection;hingebreakpointintercept;residualandprimaldualgapstopping.",
+      "oracle_test_names": [
+        {
+          "name": "test_analytical_margin_primal_dual_and_support_conditions",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Exacthardmarginw1alpha[0,.5,.5,0]P=D.5;LIBSVMlinearquerieswithbox/equality/free,boundKKT independentlychecked;nonseparable,imbalance,translation."
+        },
+        {
+          "name": "test_seeded_nonseparable_linear_reference_and_kkt",
+          "types": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('C', [0.2, 1.0, 4.0])",
+            "pytest.mark.parametrize('seed', [14311, 14312])"
+          ],
+          "independence": "Exacthardmarginw1alpha[0,.5,.5,0]P=D.5;LIBSVMlinearquerieswithbox/equality/free,boundKKT independentlychecked;nonseparable,imbalance,translation."
+        },
+        {
+          "name": "test_constant_features_imbalance_duplicates_and_translation",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Exacthardmarginw1alpha[0,.5,.5,0]P=D.5;LIBSVMlinearquerieswithbox/equality/free,boundKKT independentlychecked;nonseparable,imbalance,translation."
+        }
+      ],
+      "test_inventory": [
+        {
+          "name": "test_analytical_margin_primal_dual_and_support_conditions",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_seeded_nonseparable_linear_reference_and_kkt",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('C', [0.2, 1.0, 4.0])",
+            "pytest.mark.parametrize('seed', [14311, 14312])"
+          ]
+        },
+        {
+          "name": "test_constant_features_imbalance_duplicates_and_translation",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_nonconvergence_failed_refit_owned_state_and_shapes",
+          "markers": []
+        },
+        {
+          "name": "test_invalid_parameters",
+          "markers": [
+            "pytest.mark.parametrize('parameters', [{'C': 0}, {'C': -1}, {'rho': 0}, {'tol': 0}, {'max_iter': False}, {'C': np.nan}])"
+          ]
+        },
+        {
+          "name": "test_binary_label_restrictions",
+          "markers": [
+            "pytest.mark.parametrize('labels', [[0, 0], [0, 1, 2], [True, False], [1.0, 2.0], [1, '1']])"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "model=algorithm.SupportVectorMachine(tol=1e-9).fit(X,y)",
+        "assert_allclose(model.coef_,[1],atol=1e-8);assert_allclose(model.intercept_,0,atol=1e-8)",
+        "assert_allclose(model.primal_objective_,.5,atol=1e-8);assert_allclose(model.dual_objective_,.5,atol=1e-8)",
+        "assert_array_equal(model.support_,[1,2]);assert_allclose(model.alpha_,[0,.5,.5,0],atol=1e-8)",
+        "assert_allclose(y*model.decision_function(X),[2,1,1,2],atol=1e-8)",
+        "model=algorithm.SupportVectorMachine(C,tol=1e-8,max_iter=40000).fit(X,y)",
+        "reference=SVC(C=C,kernel='linear',tol=1e-10,shrinking=False).fit(X,y)",
+        "assert_allclose(model.decision_function(query),reference.decision_function(query),atol=2e-4,rtol=2e-4)",
+        "assert_allclose(margin[free],1,atol=2e-5)",
+        "model=algorithm.SupportVectorMachine(tol=1e-9).fit(np.ones((4,2)),['a','a','a','b'])",
+        "assert_array_equal(model.predict([[1,1]]),['a']);assert_allclose(model.coef_,0,atol=1e-12)",
+        "assert_allclose(base.decision_function(X),shifted.decision_function(X+1e9),atol=1e-6)",
+        "before=model.decision_function(X);model.max_iter=1;model.tol=1e-14"
+      ],
+      "limits": "n256,p64,C/rho<=1e6,tol<=.01,maxiter<=100000;queryB2caps;binaryonly/no probabilities.",
+      "documentation_findings": [
+        "Stale Phase14 owner-pending/NoB3 clause in live section25;catalog owner-approved;authorized removal pending."
+      ],
+      "review_result": "source/tests/full25-section lesson individually reviewed;documentandidentifiednumericalfixes tracked",
+      "finding_register_ids": [
+        "ML26-B1-B4-001"
+      ]
+    },
+    {
+      "id": "cart-decision-trees",
+      "category": "B2",
+      "source_files": [
+        "machine-learning/supervised-learning/classification/cart-decision-trees/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/supervised-learning/classification/cart-decision-trees/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/supervised-learning/classification/cart-decision-trees/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/supervised-learning/classification/cart-decision-trees/python/solution.py": "e3f99a696fc914323cef3f5773af7c29e9e91d39ffc0881c49192f59851df13c",
+        "machine-learning/supervised-learning/classification/cart-decision-trees/tests/test_python.py": "ba43f89c3b4dd3cd2d26d9ee42e3458ec56076235502d7fa8ce1f215b8d9ea76",
+        "machine-learning/supervised-learning/classification/cart-decision-trees/README.md": "a9194641cec2f9d3b9916e18760b8659a2e5859d458c450b78dd518621832d3e"
+      },
+      "mathematical_variant": "Gini binary numeric CART classifier",
+      "objective": "Greedy minimize size-weightedchild Gini;rootnormalizedminimumgain",
+      "update_notes": "Stablefeature/cutorder;adjacentfloatfallback;depth/leaf/puritystop;zero-gaindefaultsupportsXOR;empiricalleafdistributions.",
+      "oracle_test_names": [
+        {
+          "name": "test_gini_analytical_threshold_probabilities_and_zero_gain_xor",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Independent Counter/scalar brute splits70datasets;hand Gini/XOR/rootgain;sklearncontrolledonefeature reference."
+        },
+        {
+          "name": "test_seeded_exhaustive_multiclass_stump_oracle",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Independent Counter/scalar brute splits70datasets;hand Gini/XOR/rootgain;sklearncontrolledonefeature reference."
+        },
+        {
+          "name": "test_reference_on_ordered_unique_feature_partitions",
+          "types": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('depth', [1, 2, 4])"
+          ],
+          "independence": "Independent Counter/scalar brute splits70datasets;hand Gini/XOR/rootgain;sklearncontrolledonefeature reference."
+        }
+      ],
+      "test_inventory": [
+        {
+          "name": "test_gini_analytical_threshold_probabilities_and_zero_gain_xor",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_seeded_exhaustive_multiclass_stump_oracle",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_reference_on_ordered_unique_feature_partitions",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('depth', [1, 2, 4])"
+          ]
+        },
+        {
+          "name": "test_constant_duplicate_conflicts_ownership_failure_and_adjacent_values",
+          "markers": []
+        },
+        {
+          "name": "test_invalid_parameters",
+          "markers": [
+            "pytest.mark.parametrize('parameters', [{'max_depth': 0}, {'max_depth': 17}, {'min_samples_leaf': 0}, {'min_impurity_decrease': -1}, {'max_depth': True}])"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(actual,expected[0],atol=1e-14)",
+        "assert_array_equal(model.predict(query),reference.predict(query));assert_allclose(model.predict_proba(query),reference.predict_proba(query),atol=1e-14)"
+      ],
+      "limits": "n2048,p32,c32,depth<=16,minleaf<=1024;nodes<=2n-1;B2querycaps.",
+      "documentation_findings": [
+        "Stale Phase14 owner-pending/NoB3 clause in live section25;catalog owner-approved;authorized removal pending."
+      ],
+      "review_result": "source/tests/full25-section lesson individually reviewed;documentandidentifiednumericalfixes tracked",
+      "finding_register_ids": [
+        "ML26-B1-B4-001"
+      ]
+    },
+    {
+      "id": "id3-decision-trees",
+      "category": "B2",
+      "source_files": [
+        "machine-learning/supervised-learning/classification/id3-decision-trees/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/supervised-learning/classification/id3-decision-trees/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/supervised-learning/classification/id3-decision-trees/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/supervised-learning/classification/id3-decision-trees/python/solution.py": "531b86f3ecd4652e8f5ecf7efcc0cb1775e23ce9968d105e17ab63d151079e6a",
+        "machine-learning/supervised-learning/classification/id3-decision-trees/tests/test_python.py": "c1c4b19948e42520a6bd100d7510ff261c5bfdc0bea7e0012b7edc30f773ea20",
+        "machine-learning/supervised-learning/classification/id3-decision-trees/README.md": "190fb0dddbf5a0742f83c16e0293a7ec1a58f77ecce0da943f9c50027104c8e6"
+      },
+      "mathematical_variant": "Multiway nominal ID3",
+      "objective": "Greedy Shannoninformationgain;categoricalexact-equalitypartitions",
+      "update_notes": "Feature removed perpath;sortedcategories;1e-14 tie;zero-gainallowed;unseenvaluefallbackcurrentnode.",
+      "oracle_test_names": [
+        {
+          "name": "test_known_play_tennis_entropy_gain_and_unseen_fallback",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Independent Counter+math.log2 grouping60datasets;knownPlayTennisrootgain;XOR/exhaustion/unknownfallback;no falselyclaimed sklearnID3oracle."
+        },
+        {
+          "name": "test_exhaustive_seeded_categorical_information_gain_oracle",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Independent Counter+math.log2 grouping60datasets;knownPlayTennisrootgain;XOR/exhaustion/unknownfallback;no falselyclaimed sklearnID3oracle."
+        }
+      ],
+      "test_inventory": [
+        {
+          "name": "test_known_play_tennis_entropy_gain_and_unseen_fallback",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_exhaustive_seeded_categorical_information_gain_oracle",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_feature_exhaustion_conflicts_zero_gain_and_leaf_constraints",
+          "markers": []
+        },
+        {
+          "name": "test_invalid_categorical_domains",
+          "markers": [
+            "pytest.mark.parametrize('X', [np.arange(65)[:, None], [[0.5]], [[np.nan]], [[True]]])"
+          ]
+        },
+        {
+          "name": "test_invalid_parameters",
+          "markers": [
+            "pytest.mark.parametrize('parameters', [{'max_depth': 0}, {'min_samples_leaf': 0}, {'min_gain': -1}, {'max_depth': True}])"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "assert model.tree_.feature==0;assert_allclose(model.tree_.gain,.2467498197744391,atol=1e-14)",
+        "assert_allclose(model.predict_proba([[3,0,0,0]]),[[5/14,9/14]],atol=1e-14)",
+        "assert model.tree_.feature==best[1];assert_allclose(model.tree_.gain,best[0],atol=1e-14)"
+      ],
+      "limits": "n512,p32,c32,categories<=64,depth<=16,minleaf<=256,mingain<=5;integercodesrequired.",
+      "documentation_findings": [
+        "Stale Phase14 owner-pending/NoB3 clause in live section25;catalog owner-approved;authorized removal pending."
+      ],
+      "review_result": "source/tests/full25-section lesson individually reviewed;documentandidentifiednumericalfixes tracked",
+      "finding_register_ids": [
+        "ML26-B1-B4-001"
+      ]
+    },
+    {
+      "id": "c4-5-decision-trees",
+      "category": "B2",
+      "source_files": [
+        "machine-learning/supervised-learning/classification/c4-5-decision-trees/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/supervised-learning/classification/c4-5-decision-trees/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/supervised-learning/classification/c4-5-decision-trees/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/supervised-learning/classification/c4-5-decision-trees/python/solution.py": "f87b068ad8c2edd7f8040dd11075bb7aaf8f6fe249b3ba363460e1feb7a946ab",
+        "machine-learning/supervised-learning/classification/c4-5-decision-trees/tests/test_python.py": "c3db45ac180c6bbb47e181eac81f8ba04a8b66aa6cbe33eeaa2ef32b5959f698",
+        "machine-learning/supervised-learning/classification/c4-5-decision-trees/README.md": "1868878da1031f78b094ed3f32b3cd68a9d62ef3e67a62373188ac71191f69ba"
+      },
+      "mathematical_variant": "Explicit C4.5-style mixed gain-ratio subset",
+      "objective": "Per-feature maxrawgaincontinuouscut;optional log2(q-1)/nMDLcharge;positive-averageadjustedgainfilter thenmaxratio",
+      "update_notes": "Categoricalfeaturesremoved;continuousreused;explicitunseenfallback;no pruning/missingrouting;boundeddepthandminleaf.",
+      "oracle_test_names": [
+        {
+          "name": "test_hand_gain_ratio_continuous_mdl_and_categorical_high_cardinality",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Independent Counter/scalar mixedcandidateenumeration100datasets inclMDLon/off;exact4rowadjustedgain andidentifier-vs-binaryratio witnesses."
+        },
+        {
+          "name": "test_exhaustive_seeded_mixed_feature_split_oracle",
+          "types": [
+            "pytest.mark.numerical",
+            "pytest.mark.parametrize('mdl', [False, True])"
+          ],
+          "independence": "Independent Counter/scalar mixedcandidateenumeration100datasets inclMDLon/off;exact4rowadjustedgain andidentifier-vs-binaryratio witnesses."
+        }
+      ],
+      "test_inventory": [
+        {
+          "name": "test_hand_gain_ratio_continuous_mdl_and_categorical_high_cardinality",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_exhaustive_seeded_mixed_feature_split_oracle",
+          "markers": [
+            "pytest.mark.numerical",
+            "pytest.mark.parametrize('mdl', [False, True])"
+          ]
+        },
+        {
+          "name": "test_mixed_domains_unseen_fallback_zero_information_missing_and_ownership",
+          "markers": []
+        },
+        {
+          "name": "test_invalid_parameters",
+          "markers": [
+            "pytest.mark.parametrize('parameters', [{'categorical_features': [0, 0]}, {'categorical_features': [True]}, {'categorical_features': [32]}, {'mdl_correction': 1}, {'max_depth': 17}, {'min_gain': -1}])"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose([node.adjusted_gain,node.gain_ratio,node.gain,node.split_information],[expected[0],expected[1],expected[4],expected[5]],atol=1e-13)"
+      ],
+      "limits": "n512,p32,c32,categories64,depth16,minleaf256;1e-14selectionties;fullhistoricalC45notclaimed.",
+      "documentation_findings": [
+        "Stale Phase14 owner-pending/NoB3 clause in live section25;catalog owner-approved;authorized removal pending."
+      ],
+      "review_result": "source/tests/full25-section lesson individually reviewed;documentandidentifiednumericalfixes tracked",
+      "finding_register_ids": [
+        "ML26-B1-B4-001"
+      ]
+    },
+    {
+      "id": "linear-discriminant-analysis",
+      "category": "B2",
+      "source_files": [
+        "machine-learning/supervised-learning/classification/linear-discriminant-analysis/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/supervised-learning/classification/linear-discriminant-analysis/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/supervised-learning/classification/linear-discriminant-analysis/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/supervised-learning/classification/linear-discriminant-analysis/python/solution.py": "f346d868c50d4275ce62f87cda83b223e57b2fb707a4418955b848d8a2db984f",
+        "machine-learning/supervised-learning/classification/linear-discriminant-analysis/tests/test_python.py": "4e5685c9a4e4bd65a2c7140f2b1e56af197a581a5470e8a4bd152b6e980fa616",
+        "machine-learning/supervised-learning/classification/linear-discriminant-analysis/README.md": "8d3b520fd5c9fdf6636334d0e1683738af14e75cd1d500c7f8ca0d4daff7b830"
+      },
+      "mathematical_variant": "Multiclass pooled population-covariance LDA",
+      "objective": "ClassGaussian sharedSigma=sumprior*populationclassCov+regI;centeredlineardiscriminants",
+      "update_notes": "Trainingorigincentering;Choleskysolveaftereigenvalueresolutioncheck;classprior in covariance weightingandscores;no transformAPI.",
+      "oracle_test_names": [
+        {
+          "name": "test_known_shared_covariance_linear_scores_and_priors",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Analyticmeans/covariance/linearboundary;sklearnlsqr prior-weightedpopulationcov comparisons3seedsx2priors;singularityandtranslationchecks."
+        },
+        {
+          "name": "test_seeded_multiclass_shared_covariance_reference",
+          "types": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('seed', [14411, 14412, 14413])",
+            "pytest.mark.parametrize('priors', [None, [0.1, 0.3, 0.6]])"
+          ],
+          "independence": "Analyticmeans/covariance/linearboundary;sklearnlsqr prior-weightedpopulationcov comparisons3seedsx2priors;singularityandtranslationchecks."
+        },
+        {
+          "name": "test_singular_covariance_regularization_small_classes_and_translation",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Analyticmeans/covariance/linearboundary;sklearnlsqr prior-weightedpopulationcov comparisons3seedsx2priors;singularityandtranslationchecks."
+        }
+      ],
+      "test_inventory": [
+        {
+          "name": "test_known_shared_covariance_linear_scores_and_priors",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_seeded_multiclass_shared_covariance_reference",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('seed', [14411, 14412, 14413])",
+            "pytest.mark.parametrize('priors', [None, [0.1, 0.3, 0.6]])"
+          ]
+        },
+        {
+          "name": "test_singular_covariance_regularization_small_classes_and_translation",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_transactional_state_and_shape_contract",
+          "markers": []
+        },
+        {
+          "name": "test_invalid_parameters_and_priors",
+          "markers": [
+            "pytest.mark.parametrize('parameters', [{'reg': -1}, {'reg': True}, {'reg': np.nan}, {'priors': [0, 1]}, {'priors': [0.2, 0.2]}])"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(model.decision_function(query),expected,atol=1e-13)",
+        "assert_allclose(prior.predict_proba([[0]]),[[.9,.1]],atol=1e-13)",
+        "assert_allclose(model.covariance_,reference.covariance_,atol=1e-13)",
+        "assert_allclose(model.predict_proba(query),reference.predict_proba(query),atol=1e-12,rtol=1e-10)",
+        "assert_allclose(model.predict_proba(X),shifted.predict_proba(X+1e9),atol=1e-11)"
+      ],
+      "limits": "n2048,p64,c2..32,reg[0,1e6];finite|X|1e12;unresolvedcovrejected;B2querycaps.",
+      "documentation_findings": [
+        "Stale Phase14 owner-pending/NoB3 clause in live section25;catalog owner-approved;authorized removal pending."
+      ],
+      "review_result": "source/tests/full25-section lesson individually reviewed;documentandidentifiednumericalfixes tracked",
+      "finding_register_ids": [
+        "ML26-B1-B4-001"
+      ]
+    },
+    {
+      "id": "quadratic-discriminant-analysis",
+      "category": "B2",
+      "source_files": [
+        "machine-learning/supervised-learning/classification/quadratic-discriminant-analysis/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/supervised-learning/classification/quadratic-discriminant-analysis/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/supervised-learning/classification/quadratic-discriminant-analysis/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/supervised-learning/classification/quadratic-discriminant-analysis/python/solution.py": "9704f247f86acc0362436eee12232634a27fe411d479ccf896b06c97b2bf5ca9",
+        "machine-learning/supervised-learning/classification/quadratic-discriminant-analysis/tests/test_python.py": "2279b143a71bb18aec3863338408a8eebc4de28bd03e3da821b37d8c01df2ba5",
+        "machine-learning/supervised-learning/classification/quadratic-discriminant-analysis/README.md": "64497c21d8e545b29f990694f673de4b04205fc3a812a623a869976cef51b5c9"
+      },
+      "mathematical_variant": "Multiclass class-specific sample-covariance QDA",
+      "objective": "logprior-.5logdetSigma-.5 residual.T invSigma residual;Sigma=(1-reg)sampleCov+regI",
+      "update_notes": "Trainingoffset;nk-1covariances;Cholesky/logdet aftereigenvaluecheck;rawquadraticinference;faridenticaldensitypriorlossconfirmedfixdelegated.",
+      "oracle_test_names": [
+        {
+          "name": "test_hand_unequal_gaussian_variances_quadratic_boundary",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Exactequalmeanunequalvariancequadraticboundaries;independent np.cov/slogdet/solveGaussian scores;sklearnmatched samplecov/shrinkage8cases;newrelativequeryfixwillhaveseparateledger."
+        },
+        {
+          "name": "test_seeded_multiclass_covariance_regularization_reference",
+          "types": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('reg', [0, 0.1, 0.7, 1.0])",
+            "pytest.mark.parametrize('seed', [14421, 14422])"
+          ],
+          "independence": "Exactequalmeanunequalvariancequadraticboundaries;independent np.cov/slogdet/solveGaussian scores;sklearnmatched samplecov/shrinkage8cases;newrelativequeryfixwillhaveseparateledger."
+        },
+        {
+          "name": "test_independent_full_gaussian_scores_via_slogdet_and_solve",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Exactequalmeanunequalvariancequadraticboundaries;independent np.cov/slogdet/solveGaussian scores;sklearnmatched samplecov/shrinkage8cases;newrelativequeryfixwillhaveseparateledger."
+        },
+        {
+          "name": "test_singular_near_singular_regularization_and_large_offset",
+          "types": [
+            "pytest.mark.numerical"
+          ],
+          "independence": "Exactequalmeanunequalvariancequadraticboundaries;independent np.cov/slogdet/solveGaussian scores;sklearnmatched samplecov/shrinkage8cases;newrelativequeryfixwillhaveseparateledger."
+        }
+      ],
+      "test_inventory": [
+        {
+          "name": "test_hand_unequal_gaussian_variances_quadratic_boundary",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_seeded_multiclass_covariance_regularization_reference",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('reg', [0, 0.1, 0.7, 1.0])",
+            "pytest.mark.parametrize('seed', [14421, 14422])"
+          ]
+        },
+        {
+          "name": "test_independent_full_gaussian_scores_via_slogdet_and_solve",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_singular_near_singular_regularization_and_large_offset",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_owned_state_failed_fit_and_empty_prediction",
+          "markers": []
+        },
+        {
+          "name": "test_invalid_regularization",
+          "markers": [
+            "pytest.mark.parametrize('value', [-1, 1.1, True, np.inf])"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(model.covariance_[:,0,0],[1,4],atol=1e-14)",
+        "assert_allclose(model.decision_function(query),expected,atol=1e-13)",
+        "assert_allclose(scores[:,0],scores[:,1],atol=1e-13)",
+        "assert_allclose(model.covariance_,reference.covariance_,atol=1e-12)",
+        "assert_allclose(model.predict_proba(query),reference.predict_proba(query),atol=1e-12,rtol=1e-10)",
+        "assert_allclose(model.decision_function(query),expected,atol=1e-12)",
+        "assert_allclose(model.predict_proba(X),shifted.predict_proba(X+1e9),atol=1e-11)"
+      ],
+      "limits": "n2048,p64,c2..32,nk>=2,reg[0,1];|X|1e12;singular/unresolvedcovreject;B2querycaps.",
+      "documentation_findings": [
+        "Stale Phase14 owner-pending/NoB3 clause in live section25;catalog owner-approved;authorized removal pending."
+      ],
+      "review_result": "source/tests/full25-section lesson individually reviewed;documentandidentifiednumericalfixes tracked",
+      "finding_register_ids": [
+        "ML26-B1-B4-001",
+        "delegated numerical prior-loss correction;root merges canonical finding IDs"
+      ]
+    },
+    {
+      "id": "random-forest",
+      "category": "B3",
+      "source_files": [
+        "machine-learning/ensemble-methods/random-forest/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/ensemble-methods/random-forest/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/ensemble-methods/random-forest/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/ensemble-methods/random-forest/python/solution.py": "7318d1e483387db8bd95e1feb87e6fe28a34223b7ed56667853358c970b116d2",
+        "machine-learning/ensemble-methods/random-forest/tests/test_python.py": "826935b7f5675413c4d32960cef59d26d8d0e67c271225e1a49baf31fed06d1d",
+        "machine-learning/ensemble-methods/random-forest/README.md": "11b00aca2449d385bada340e8f3f8ef0b7adf046917dc5e3eb8261c5f923f04a"
+      },
+      "mathematical_variant": null,
+      "objective": null,
+      "update_notes": null,
+      "oracle_test_names": [],
+      "test_inventory": [
+        {
+          "name": "test_feature_subsets_and_aggregation",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.parametrize('task', ['Classifier', 'Regressor'])"
+          ]
+        },
+        {
+          "name": "test_single_tree_aligned_reference",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('task', ['Classifier', 'Regressor'])"
+          ]
+        },
+        {
+          "name": "test_constant_features_duplicate_pure_targets",
+          "markers": [
+            "pytest.mark.numerical",
+            "pytest.mark.parametrize('task', ['Classifier', 'Regressor'])"
+          ]
+        },
+        {
+          "name": "test_bad_features",
+          "markers": [
+            "pytest.mark.parametrize('features', [0, 4, True, 'log2', 0.5])"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "else:assert_allclose(model.predict([[1,1]]),[1e-200],atol=0)"
+      ],
+      "limits": null,
+      "documentation_findings": [],
+      "review_result": "not yet reviewed",
+      "finding_register_ids": []
+    },
+    {
+      "id": "gradient-boosting-machine",
+      "category": "B3",
+      "source_files": [
+        "machine-learning/ensemble-methods/gradient-boosting-machine/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/ensemble-methods/gradient-boosting-machine/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/ensemble-methods/gradient-boosting-machine/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/ensemble-methods/gradient-boosting-machine/python/solution.py": "e5f972ddde91ad47af8e2ae360ddb2da5380b572562ca92879f5c2143c07bc36",
+        "machine-learning/ensemble-methods/gradient-boosting-machine/tests/test_python.py": "4644e9de09759eb54c11b07e2fa4a24699009e049b8c21f2978359d99567b1b3",
+        "machine-learning/ensemble-methods/gradient-boosting-machine/README.md": "c3566ec345c88e908ff40492d683b31c954015f4907185f0de14405ac1f66cae"
+      },
+      "mathematical_variant": null,
+      "objective": null,
+      "update_notes": null,
+      "oracle_test_names": [],
+      "test_inventory": [
+        {
+          "name": "test_analytical_stages_shrinkage_and_gradients",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_compatible_sklearn_squared_error",
+          "markers": [
+            "pytest.mark.reference"
+          ]
+        },
+        {
+          "name": "test_constant_exact_initialization",
+          "markers": [
+            "pytest.mark.numerical",
+            "pytest.mark.parametrize('target', [0.1, 0.0, 1e-200, 1000000000000.0])"
+          ]
+        },
+        {
+          "name": "test_bad_learning_rate",
+          "markers": [
+            "pytest.mark.parametrize('rate', [0, -1, 2, np.nan, np.inf, True])"
+          ]
+        },
+        {
+          "name": "test_valid_boundary_targets_can_have_larger_internal_residuals",
+          "markers": [
+            "pytest.mark.numerical",
+            "pytest.mark.oracle"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(numeric,f-y,atol=1e-9)",
+        "assert_allclose(ours.predict(X),ref.predict(X),atol=1e-12)",
+        "assert_allclose(model.predict(X),mean+.75*(y-mean),rtol=1e-14,atol=1e-3)"
+      ],
+      "limits": null,
+      "documentation_findings": [],
+      "review_result": "not yet reviewed",
+      "finding_register_ids": []
+    },
+    {
+      "id": "xgboost",
+      "category": "B3",
+      "source_files": [
+        "machine-learning/ensemble-methods/xgboost/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/ensemble-methods/xgboost/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/ensemble-methods/xgboost/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/ensemble-methods/xgboost/python/solution.py": "9a28d917d6b2d9089633057c055fa172f5bc0da6c46d99238bb6139f0471b164",
+        "machine-learning/ensemble-methods/xgboost/tests/test_python.py": "7ba915c7409605dc78f9e0ef59daa1123dcf31a10f9936e8b19239e40fa6c2ff",
+        "machine-learning/ensemble-methods/xgboost/README.md": "ae599400f14ae12236dea4395ab529d3fa12af3b16eb8781a36fcb18cecbdd47"
+      },
+      "mathematical_variant": null,
+      "objective": null,
+      "update_notes": null,
+      "oracle_test_names": [],
+      "test_inventory": [
+        {
+          "name": "test_newton_leaf_and_regularized_gain_hand_calculation",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_second_derivative_and_all_split_objectives",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_sampling_stage_and_lambda_zero_agree_with_gbm",
+          "markers": [
+            "pytest.mark.oracle"
+          ]
+        },
+        {
+          "name": "test_large_finite_data_constant_and_regularization",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_invalid_hyperparameters",
+          "markers": [
+            "pytest.mark.parametrize('kwargs', [{'gamma': -1}, {'reg_lambda': -1}, {'min_child_weight': -1}, {'subsample': 0}, {'colsample_bytree': 2}, {'learning_rate': 0}, {'max_depth': 7}])"
+          ]
+        },
+        {
+          "name": "test_zero_regularization_against_external_gradient_boosting",
+          "markers": [
+            "pytest.mark.reference"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose((L(f+step)-L(f-step))/(2*eps),f[i]-target[i],atol=1e-9)",
+        "assert_allclose((L(f+step)-2*L(f)+L(f-step))/eps**2,1,atol=1e-8)",
+        "assert_allclose(plain.predict(X),reference.predict(X),atol=1e-12)",
+        "assert_allclose(ours.predict(X),ref.predict(X),atol=1e-12)"
+      ],
+      "limits": null,
+      "documentation_findings": [],
+      "review_result": "not yet reviewed",
+      "finding_register_ids": []
+    },
+    {
+      "id": "catboost",
+      "category": "B3",
+      "source_files": [
+        "machine-learning/ensemble-methods/catboost/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/ensemble-methods/catboost/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/ensemble-methods/catboost/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/ensemble-methods/catboost/python/solution.py": "7cb871c33b48595469dc901a6b998848ae4c1224f5777dc715ed2bb571b711fb",
+        "machine-learning/ensemble-methods/catboost/tests/test_python.py": "c959eb80b49aabb84e5462c97403398523137b9ec8e2b10743095bed4d5fedd3",
+        "machine-learning/ensemble-methods/catboost/README.md": "dcd90c735883df15343999bb755c84614a618fe5c4b4bbb801b8fafa3173ff60"
+      },
+      "mathematical_variant": null,
+      "objective": null,
+      "update_notes": null,
+      "oracle_test_names": [],
+      "test_inventory": [
+        {
+          "name": "test_ordered_statistics_exclude_own_and_future_targets",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_prefix_rounds_by_independent_constant_models",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_symmetric_tree_enumeration_and_empty_cells",
+          "markers": [
+            "pytest.mark.oracle"
+          ]
+        },
+        {
+          "name": "test_categories_families_limits_and_numeric_extremes",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_invalid_parameters",
+          "markers": [
+            "pytest.mark.parametrize('kwargs', [{'n_estimators': 17}, {'max_depth': 4}, {'learning_rate': 0}, {'prior_weight': 0}, {'prior': np.inf}, {'random_state': -1}])"
+          ]
+        }
+      ],
+      "actual_tolerances": [],
+      "limits": null,
+      "documentation_findings": [],
+      "review_result": "not yet reviewed",
+      "finding_register_ids": []
+    },
+    {
+      "id": "adaboost",
+      "category": "B3",
+      "source_files": [
+        "machine-learning/ensemble-methods/adaboost/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/ensemble-methods/adaboost/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/ensemble-methods/adaboost/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/ensemble-methods/adaboost/python/solution.py": "b5a57bf79d9f5d6d93120fccaea3bbadc7d63e5127deaaae57e755e39f8e145f",
+        "machine-learning/ensemble-methods/adaboost/tests/test_python.py": "c87144cdbebe9f0b5011797c9f540c9dece2db3926d8f7e8008d1730fdd35749",
+        "machine-learning/ensemble-methods/adaboost/README.md": "1bfb7a1abb383b56f53353e9747a35951e78338b81682d3b3115043d0c386451"
+      },
+      "mathematical_variant": null,
+      "objective": null,
+      "update_notes": null,
+      "oracle_test_names": [],
+      "test_inventory": [
+        {
+          "name": "test_hand_computed_weight_rounds",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_samme_matches_aligned_sklearn",
+          "markers": [
+            "pytest.mark.reference"
+          ]
+        },
+        {
+          "name": "test_invalid_weights",
+          "markers": [
+            "pytest.mark.parametrize('weights', [[0, 0], [1, -1], [np.nan, 1], [np.inf, 1], [1], [True, False]])"
+          ]
+        },
+        {
+          "name": "test_perfect_chance_zero_and_extreme_weights",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_worse_than_chance_guard_is_explicit",
+          "markers": []
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(ours.estimator_weights_,ref.estimator_weights_[:len(ours.estimators_)],atol=1e-13)"
+      ],
+      "limits": null,
+      "documentation_findings": [],
+      "review_result": "not yet reviewed",
+      "finding_register_ids": []
+    },
+    {
+      "id": "bagging",
+      "category": "B3",
+      "source_files": [
+        "machine-learning/ensemble-methods/bagging/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/ensemble-methods/bagging/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/ensemble-methods/bagging/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/ensemble-methods/bagging/python/solution.py": "b5662fa39769c471ff4b2735111ab7d18ca02b7a5c4087e87227f6c297e61c62",
+        "machine-learning/ensemble-methods/bagging/tests/test_python.py": "dc80be2375cd155750737b593f1dc30ea44384b73aec93a155a85d2fae206e52",
+        "machine-learning/ensemble-methods/bagging/README.md": "7a9d99ae39b43f09637a8a442ad3618456cce617d12384ec87dd7197a9ba3a79"
+      },
+      "mathematical_variant": null,
+      "objective": null,
+      "update_notes": null,
+      "oracle_test_names": [],
+      "test_inventory": [
+        {
+          "name": "test_exact_bootstrap_seed_aggregation_and_oob",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.parametrize('task', ['Classifier', 'Regressor'])"
+          ]
+        },
+        {
+          "name": "test_invalid_counts",
+          "markers": [
+            "pytest.mark.parametrize('count', [0, -1, 1.5, True, 65])"
+          ]
+        },
+        {
+          "name": "test_invalid_sample_sizes",
+          "markers": [
+            "pytest.mark.parametrize('size', [0, -1, 513, 0.0, 1.5, True, np.nan])"
+          ]
+        },
+        {
+          "name": "test_single_estimator_and_uncovered_oob",
+          "markers": []
+        },
+        {
+          "name": "test_custom_factories_and_lexical_tie",
+          "markers": [
+            "pytest.mark.oracle"
+          ]
+        },
+        {
+          "name": "test_independent_sklearn_bases_on_actual_bootstrap_cohorts",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('task', ['Classifier', 'Regressor'])"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "if task=='Regressor':assert_allclose(model.predict(X),np.mean(predictions,axis=0),atol=1e-13)"
+      ],
+      "limits": null,
+      "documentation_findings": [],
+      "review_result": "not yet reviewed",
+      "finding_register_ids": []
+    },
+    {
+      "id": "stacking",
+      "category": "B3",
+      "source_files": [
+        "machine-learning/ensemble-methods/stacking/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/ensemble-methods/stacking/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/ensemble-methods/stacking/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/ensemble-methods/stacking/python/solution.py": "5ffe2f46358941f1b9490acaa647e90d6837233fb60096514c8fe5f31f748cb0",
+        "machine-learning/ensemble-methods/stacking/tests/test_python.py": "89ad476831340a52451d933da898a4c9a72a80869312571e6cb173f86a4f8c62",
+        "machine-learning/ensemble-methods/stacking/README.md": "a0e6a6336e817304b3d538e51b93015bf5bcf1fd87cb93c06c27312f2fec8395"
+      },
+      "mathematical_variant": null,
+      "objective": null,
+      "update_notes": null,
+      "oracle_test_names": [],
+      "test_inventory": [
+        {
+          "name": "test_out_of_fold_exclusion_and_full_refits",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.parametrize('task', ['Classifier', 'Regressor'])"
+          ]
+        },
+        {
+          "name": "test_regression_against_identical_explicit_folds",
+          "markers": [
+            "pytest.mark.reference"
+          ]
+        },
+        {
+          "name": "test_stratified_minority_boundaries_and_default_models",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_invalid_parameters",
+          "markers": [
+            "pytest.mark.parametrize('kwargs', [{'n_splits': 1}, {'n_splits': 9}, {'n_splits': True}, {'random_state': -1}])"
+          ]
+        },
+        {
+          "name": "test_factory_reuse_is_rejected",
+          "markers": []
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(model.predict(X),ref.predict(X),atol=1e-10)"
+      ],
+      "limits": null,
+      "documentation_findings": [],
+      "review_result": "not yet reviewed",
+      "finding_register_ids": []
+    },
+    {
+      "id": "voting-classifiers",
+      "category": "B3",
+      "source_files": [
+        "machine-learning/ensemble-methods/voting-classifiers/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/ensemble-methods/voting-classifiers/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/ensemble-methods/voting-classifiers/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/ensemble-methods/voting-classifiers/python/solution.py": "000ceb3209bb7d7f39eadb0f872ad5ad198fd63df3d3bc2b68dc58b8413e1f2b",
+        "machine-learning/ensemble-methods/voting-classifiers/tests/test_python.py": "8f578bd12eb00a8e029bd228b282214fb4bc762d78424f341d3c79db073b84aa",
+        "machine-learning/ensemble-methods/voting-classifiers/README.md": "e36fe81c18a2e95c8122e377ecb076b294d8d339afa7edad8bfe671de90bf339"
+      },
+      "mathematical_variant": null,
+      "objective": null,
+      "update_notes": null,
+      "oracle_test_names": [],
+      "test_inventory": [
+        {
+          "name": "test_reordered_classes_weighting_and_ties",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.parametrize('voting', ['hard', 'soft'])"
+          ]
+        },
+        {
+          "name": "test_sklearn_aligned_trees",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('voting', ['hard', 'soft'])"
+          ]
+        },
+        {
+          "name": "test_invalid_weights",
+          "markers": [
+            "pytest.mark.parametrize('weights', [[0, 0], [-1, 2], [np.inf, 1], [1], [True, False]])"
+          ]
+        },
+        {
+          "name": "test_missing_probability_contract_and_bad_probabilities",
+          "markers": []
+        },
+        {
+          "name": "test_invalid_factories_and_zero_weight_does_not_skip_contract",
+          "markers": []
+        }
+      ],
+      "actual_tolerances": [],
+      "limits": null,
+      "documentation_findings": [],
+      "review_result": "not yet reviewed",
+      "finding_register_ids": []
+    },
+    {
+      "id": "k-means",
+      "category": "B4",
+      "source_files": [
+        "machine-learning/unsupervised-learning/clustering/k-means/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/unsupervised-learning/clustering/k-means/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/unsupervised-learning/clustering/k-means/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/unsupervised-learning/clustering/k-means/python/solution.py": "39e03015cc6fe352644fa1f4530d047f49797c20ab9c8112fc9c83fe98f8edcf",
+        "machine-learning/unsupervised-learning/clustering/k-means/tests/test_python.py": "2e3d9e85c5c94a5e0d91aa9ed9fbedd4bd0d73a46bf03ef6a8c0056939dce6aa",
+        "machine-learning/unsupervised-learning/clustering/k-means/README.md": "968fc106f135a850d24573f705b5bafc69896542fbab543c4bd2ccbb1d31d2a7"
+      },
+      "mathematical_variant": null,
+      "objective": null,
+      "update_notes": null,
+      "oracle_test_names": [],
+      "test_inventory": [
+        {
+          "name": "test_exact_centers_inertia_transform_and_stationarity",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_aligned_lloyd_reference",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('seed', [16011, 16012, 16013])"
+          ]
+        },
+        {
+          "name": "test_empty_repair_tiny_targets_and_duplicate_contract",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_nonconvergence_and_failed_refit_preserve_state",
+          "markers": []
+        },
+        {
+          "name": "test_invalid_hyperparameters",
+          "markers": [
+            "pytest.mark.parametrize('kwargs', [{'n_clusters': 0}, {'n_clusters': True}, {'n_init': 0}, {'max_iter': 0}, {'random_state': -1}])"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(np.sum(X[model.labels_ == j]-model.cluster_centers_[j], axis=0), 0, atol=1e-13)",
+        "ref = KMeans(2, init=centers, n_init=1, algorithm='lloyd', tol=0, random_state=0).fit(X)",
+        "assert_allclose(ours.inertia_, ref.inertia_, rtol=1e-11)",
+        "assert_allclose(np.sort(ours.cluster_centers_, axis=0), np.sort(ref.cluster_centers_, axis=0), atol=1e-12)",
+        "assert_allclose(tiny.cluster_centers_/1e-200, [[1.], [11.]], atol=1e-13)"
+      ],
+      "limits": null,
+      "documentation_findings": [],
+      "review_result": "not yet reviewed",
+      "finding_register_ids": []
+    },
+    {
+      "id": "agglomerative-hierarchical-clustering",
+      "category": "B4",
+      "source_files": [
+        "machine-learning/unsupervised-learning/clustering/agglomerative-hierarchical-clustering/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/unsupervised-learning/clustering/agglomerative-hierarchical-clustering/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/unsupervised-learning/clustering/agglomerative-hierarchical-clustering/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/unsupervised-learning/clustering/agglomerative-hierarchical-clustering/python/solution.py": "3df98650d21228b7b5d2b230ad8d06b7a9a9aba466bc9650a3ff0867c968dcad",
+        "machine-learning/unsupervised-learning/clustering/agglomerative-hierarchical-clustering/tests/test_python.py": "b07a6029333f493c55e13cea45cf907afb5fb93cebf40aafbb4335a8b90aae5f",
+        "machine-learning/unsupervised-learning/clustering/agglomerative-hierarchical-clustering/README.md": "4c5efaad8602b919076b454660d84b7d641e8e0874727db0e64cd9bcc0339418"
+      },
+      "mathematical_variant": null,
+      "objective": null,
+      "update_notes": null,
+      "oracle_test_names": [],
+      "test_inventory": [
+        {
+          "name": "test_linkage_heights_against_scipy",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('linkage', ['single', 'complete', 'average', 'ward'])"
+          ]
+        },
+        {
+          "name": "test_ward_sse_identity_and_tiny_scale",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_singleton_duplicate_ties_and_cuts",
+          "markers": [
+            "pytest.mark.parametrize('linkage', ['single', 'complete', 'average', 'ward'])"
+          ]
+        },
+        {
+          "name": "test_invalid_hyperparameters",
+          "markers": [
+            "pytest.mark.parametrize('kwargs', [{'n_clusters': 0}, {'n_clusters': True}, {'linkage': 'centroid'}])"
+          ]
+        },
+        {
+          "name": "test_tied_single_linkage_has_valid_full_hierarchy",
+          "markers": [
+            "pytest.mark.oracle"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(model.distances_, ref[:, 2], atol=1e-12)",
+        "assert_allclose(tiny.distances_/1e-200, model.distances_, atol=1e-12)"
+      ],
+      "limits": null,
+      "documentation_findings": [],
+      "review_result": "not yet reviewed",
+      "finding_register_ids": []
+    },
+    {
+      "id": "divisive-hierarchical-clustering",
+      "category": "B4",
+      "source_files": [
+        "machine-learning/unsupervised-learning/clustering/divisive-hierarchical-clustering/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/unsupervised-learning/clustering/divisive-hierarchical-clustering/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/unsupervised-learning/clustering/divisive-hierarchical-clustering/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/unsupervised-learning/clustering/divisive-hierarchical-clustering/python/solution.py": "175c6592b8157545b762706fe077c60368b667e4b76de2fd513224e9983ef40a",
+        "machine-learning/unsupervised-learning/clustering/divisive-hierarchical-clustering/tests/test_python.py": "1d818f1ed30175862bd2c316ae0acc5799a6f6b54698ffcfdfdfe3ce865e65f7",
+        "machine-learning/unsupervised-learning/clustering/divisive-hierarchical-clustering/README.md": "352bb2e81f6f2f74660bd7dd99444dc0759bdab54fb2c4641c087411e7778479"
+      },
+      "mathematical_variant": null,
+      "objective": null,
+      "update_notes": null,
+      "oracle_test_names": [],
+      "test_inventory": [
+        {
+          "name": "test_hand_calculated_splinter_seed_moves_and_cut",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_every_splinter_choice_against_independent_dissimilarity_sums",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.parametrize('seed', [16021, 16022, 16023])"
+          ]
+        },
+        {
+          "name": "test_duplicates_singleton_and_uniform_scaling",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_bad_cluster_count",
+          "markers": [
+            "pytest.mark.parametrize('value', [0, -1, True, 129])"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(gain, gains[chosen], atol=1e-13)",
+        "assert_allclose(b.distances_/1e-200, a.distances_, atol=1e-12)"
+      ],
+      "limits": null,
+      "documentation_findings": [],
+      "review_result": "not yet reviewed",
+      "finding_register_ids": []
+    },
+    {
+      "id": "dbscan",
+      "category": "B4",
+      "source_files": [
+        "machine-learning/unsupervised-learning/clustering/dbscan/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/unsupervised-learning/clustering/dbscan/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/unsupervised-learning/clustering/dbscan/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/unsupervised-learning/clustering/dbscan/python/solution.py": "a54bb87076b22858bfbb04d3499aeaa0abea86bbef7c2bdbbe9886109fad7819",
+        "machine-learning/unsupervised-learning/clustering/dbscan/tests/test_python.py": "c64c33e81c3a335c551b35c604162af129ee516acb3d8f6d5178b8c294b68dfb",
+        "machine-learning/unsupervised-learning/clustering/dbscan/README.md": "632736685b5932e05ea2efb908a83ee2e6b74c67b7ea0a3da777d38012d2b5da"
+      },
+      "mathematical_variant": null,
+      "objective": null,
+      "update_notes": null,
+      "oracle_test_names": [],
+      "test_inventory": [
+        {
+          "name": "test_self_neighbors_core_border_and_noise",
+          "markers": [
+            "pytest.mark.oracle"
+          ]
+        },
+        {
+          "name": "test_reference_partition_and_core_indices",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('seed', [16024, 16025, 16026])"
+          ]
+        },
+        {
+          "name": "test_previously_visited_noise_becomes_border_and_ambiguous_border_is_first_reached",
+          "markers": [
+            "pytest.mark.oracle"
+          ]
+        },
+        {
+          "name": "test_tiny_scale_boundary_duplicates_and_all_noise",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_invalid_parameters",
+          "markers": [
+            "pytest.mark.parametrize('kwargs', [{'eps': 0}, {'eps': np.nan}, {'eps': True}, {'min_samples': 0}, {'min_samples': True}, {'min_samples': 513}])"
+          ]
+        }
+      ],
+      "actual_tolerances": [],
+      "limits": null,
+      "documentation_findings": [],
+      "review_result": "not yet reviewed",
+      "finding_register_ids": []
+    },
+    {
+      "id": "hdbscan",
+      "category": "B4",
+      "source_files": [
+        "machine-learning/unsupervised-learning/clustering/hdbscan/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/unsupervised-learning/clustering/hdbscan/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/unsupervised-learning/clustering/hdbscan/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/unsupervised-learning/clustering/hdbscan/python/solution.py": "ce9d77d759e5efb34b8ba49c17cb8fe8f6e51222c677ddfb130ea5fb3db61a33",
+        "machine-learning/unsupervised-learning/clustering/hdbscan/tests/test_python.py": "9ee98f7a839215cbc5dfcbb8d9f72784c8ebbb1990a60714cc7fcda4f667472b",
+        "machine-learning/unsupervised-learning/clustering/hdbscan/README.md": "666d300f05d10f8405df00eae4d3a1d36541caf947a5b44c4d13ab6e5fff2615"
+      },
+      "mathematical_variant": null,
+      "objective": null,
+      "update_notes": null,
+      "oracle_test_names": [],
+      "test_inventory": [
+        {
+          "name": "test_hand_computed_condensation_density_and_membership",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_reference_core_distances_mst_partition_and_probabilities",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('seed', [16031, 16032, 16033])"
+          ]
+        },
+        {
+          "name": "test_eom_against_exhaustive_disjoint_cluster_subsets",
+          "markers": [
+            "pytest.mark.oracle"
+          ]
+        },
+        {
+          "name": "test_duplicate_infinite_density_root_exclusion_and_tiny_scale",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_invalid_constructor_parameters",
+          "markers": [
+            "pytest.mark.parametrize('kwargs', [{'min_cluster_size': 1}, {'min_cluster_size': True}, {'min_cluster_size': 257}])"
+          ]
+        },
+        {
+          "name": "test_invalid_support_relative_to_data",
+          "markers": [
+            "pytest.mark.parametrize('minimum', [0, True, 4])"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(model.probabilities_, [1, 1, 1, 1, 1, 1, 0], atol=1e-13)",
+        "assert_allclose(model.core_distances_, [.1, .1, .1, .1, .1, .1, 6.8], atol=1e-13)",
+        "assert_allclose(model.cluster_births_[cluster], 12/4.8, atol=1e-12)",
+        "assert_allclose(model.cluster_stabilities_[cluster], 3*(12/.1-12/4.8), atol=1e-9)",
+        "assert_allclose(model.cluster_stabilities_[cluster], expected, atol=1e-10)",
+        "assert_allclose(ours.core_distances_, core, atol=1e-12)",
+        "assert_allclose(ours.mutual_reachability_, reach, atol=1e-12)",
+        "assert_allclose(ours.minimum_spanning_tree_[:, 2].sum(), minimum_spanning_tree(reach).sum(), atol=1e-11)",
+        "assert_allclose(ours.probabilities_, ref.probabilities_, atol=1e-10, rtol=1e-8)",
+        "assert_allclose(a.probabilities_, b.probabilities_, atol=1e-12)",
+        "assert_allclose(a.minimum_spanning_tree_[:, 2], b.minimum_spanning_tree_[:, 2]/1e-200, atol=1e-12)"
+      ],
+      "limits": null,
+      "documentation_findings": [],
+      "review_result": "not yet reviewed",
+      "finding_register_ids": []
+    },
+    {
+      "id": "mean-shift",
+      "category": "B4",
+      "source_files": [
+        "machine-learning/unsupervised-learning/clustering/mean-shift/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/unsupervised-learning/clustering/mean-shift/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/unsupervised-learning/clustering/mean-shift/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/unsupervised-learning/clustering/mean-shift/python/solution.py": "5a772d1d8db460f384731b41f3a5f244747e15910fb4f1e9a99a57e86cf9b49b",
+        "machine-learning/unsupervised-learning/clustering/mean-shift/tests/test_python.py": "ba07ad5846c9ae7da3a239c92096e8dde3dc95f4a592efc90c7d905b7503dbf1",
+        "machine-learning/unsupervised-learning/clustering/mean-shift/README.md": "d658bffb2915e1f3f2222ef0ef77d24ee5eb27638f3b3c3d36f0acc64043bffd"
+      },
+      "mathematical_variant": null,
+      "objective": null,
+      "update_notes": null,
+      "oracle_test_names": [],
+      "test_inventory": [
+        {
+          "name": "test_modes_fixed_point_merge_and_query_noise",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_aligned_flat_kernel_reference",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('seed', [16035, 16036])"
+          ]
+        },
+        {
+          "name": "test_constant_tiny_and_offset_scales",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_nonconvergence_and_failed_refit",
+          "markers": []
+        },
+        {
+          "name": "test_invalid_hyperparameters",
+          "markers": [
+            "pytest.mark.parametrize('kwargs', [{'bandwidth': 0}, {'bandwidth': np.inf}, {'tol': 0}, {'tol': 2}, {'max_iter': 0}, {'cluster_all': 1}])"
+          ]
+        },
+        {
+          "name": "test_one_shift_matches_epanechnikov_density_gradient",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.numerical"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "model = clustering_support.load('mean-shift').MeanShift(bandwidth=.3, tol=1e-8, cluster_all=False).fit(X)",
+        "assert_allclose(model.cluster_centers_, [[5.05], [.05]], atol=1e-13)",
+        "assert_allclose(center, X[distance <= .3].mean(axis=0), atol=1e-13)",
+        "assert_allclose(np.sort(ours.cluster_centers_, axis=0), np.sort(ref.cluster_centers_, axis=0), atol=1e-12)",
+        "assert_allclose(np.sort(tiny.cluster_centers_[:, 0])/1e-200, [.05, 5], atol=1e-12)",
+        "model = clustering_support.load('mean-shift').MeanShift(bandwidth=1, tol=1, max_iter=1).fit(X)",
+        "assert_allclose(numerical_gradient, 2*len(X)*observed_shift, atol=1e-9)"
+      ],
+      "limits": null,
+      "documentation_findings": [],
+      "review_result": "not yet reviewed",
+      "finding_register_ids": []
+    },
+    {
+      "id": "gaussian-mixture-models",
+      "category": "B4",
+      "source_files": [
+        "machine-learning/unsupervised-learning/clustering/gaussian-mixture-models/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/unsupervised-learning/clustering/gaussian-mixture-models/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/unsupervised-learning/clustering/gaussian-mixture-models/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/unsupervised-learning/clustering/gaussian-mixture-models/python/solution.py": "5eb5d8980092647e11e361d27050b00fabeac85acb8b23085fdf1de56ee55364",
+        "machine-learning/unsupervised-learning/clustering/gaussian-mixture-models/tests/test_python.py": "b265074fc14f9cd4e9d451e8d567baacbbd1cb53f2d20e32720a2ac4edd2ffd1",
+        "machine-learning/unsupervised-learning/clustering/gaussian-mixture-models/README.md": "632c2eb17b11070c40ed0be0cdda8845cbf34931115cd4eeb49302b0cdee3c25"
+      },
+      "mathematical_variant": null,
+      "objective": null,
+      "update_notes": null,
+      "oracle_test_names": [],
+      "test_inventory": [
+        {
+          "name": "test_one_component_m_step_likelihood_and_information_criteria",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_full_covariance_em_aligned_reference",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.parametrize('seed', [16041, 16042, 16043])"
+          ]
+        },
+        {
+          "name": "test_responsibilities_against_independent_scipy_density",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_duplicates_high_dimension_tiny_and_large_finite_data",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_nonconvergence_collapse_and_transactional_refit",
+          "markers": []
+        },
+        {
+          "name": "test_invalid_hyperparameters",
+          "markers": [
+            "pytest.mark.parametrize('kwargs', [{'n_components': 0}, {'n_components': True}, {'reg_covar': 0}, {'tol': 0}, {'max_iter': 0}, {'n_init': 0}, {'random_state': -1}])"
+          ]
+        },
+        {
+          "name": "test_uniform_feature_scale_maps_covariance_floor_and_density_units",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_huge_negative_equal_log_scores_still_normalize_responsibilities",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.numerical"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(model.means_, [mean], atol=1e-13)",
+        "assert_allclose(model.covariances_, [covariance], atol=1e-13)",
+        "assert_allclose(model.score_samples(X), expected, atol=1e-12)",
+        "ours = clustering_support.load('gaussian-mixture-models').GaussianMixture(2, means_init=means, reg_covar=regularization, tol=1e-8).fit(X)",
+        "reg_covar=regularization, tol=1e-8, max_iter=300, n_init=1, random_state=0).fit(X)",
+        "assert_allclose(ours.means_, ref.means_, atol=1e-7)",
+        "assert_allclose(ours.covariances_, ref.covariances_, atol=1e-7)",
+        "assert_allclose(ours.score_samples(X), ref.score_samples(X), atol=1e-6)",
+        "assert_allclose(ours.predict_proba(X), ref.predict_proba(X), atol=1e-7)",
+        "assert_allclose(model.predict_proba(query), joint/joint.sum(axis=1, keepdims=True), atol=1e-12)",
+        "assert_allclose(model.score_samples(query), np.log(joint.sum(axis=1)), atol=1e-12)",
+        "cls(2, means_init=[[-.5], [.5]], max_iter=1, tol=1e-15).fit([[-1.], [-.2], [.4], [1.3]])",
+        "assert_allclose(b.means_, 10*a.means_, atol=1e-10)",
+        "assert_allclose(b.covariances_, 100*a.covariances_, atol=1e-10)",
+        "assert_allclose(b.predict_proba(10*X), a.predict_proba(X), atol=1e-12)",
+        "assert_allclose(b.score_samples(10*X), a.score_samples(X)-np.log(10), atol=1e-10)",
+        "assert_allclose(model.predict_proba([[1e12]]), [[.5, .5]], atol=0, rtol=0)"
+      ],
+      "limits": null,
+      "documentation_findings": [],
+      "review_result": "not yet reviewed",
+      "finding_register_ids": []
+    },
+    {
+      "id": "spectral-clustering",
+      "category": "B4",
+      "source_files": [
+        "machine-learning/unsupervised-learning/clustering/spectral-clustering/python/solution.py"
+      ],
+      "test_files": [
+        "machine-learning/unsupervised-learning/clustering/spectral-clustering/tests/test_python.py"
+      ],
+      "documentation_files": [
+        "machine-learning/unsupervised-learning/clustering/spectral-clustering/README.md"
+      ],
+      "file_sha256": {
+        "machine-learning/unsupervised-learning/clustering/spectral-clustering/python/solution.py": "e36ee0886c552776a21c6eb6dc4c60afbab89e66937ff344f8219474fa716c75",
+        "machine-learning/unsupervised-learning/clustering/spectral-clustering/tests/test_python.py": "0e45e08408ff43771de1658ce5c7fb6f09be95523cd50742c3d08341b924155d",
+        "machine-learning/unsupervised-learning/clustering/spectral-clustering/README.md": "5177fac0088e627548ba7838c6fbfe9e1abff28f2af25456d3a4da27b48df23b"
+      },
+      "mathematical_variant": null,
+      "objective": null,
+      "update_notes": null,
+      "oracle_test_names": [],
+      "test_inventory": [
+        {
+          "name": "test_normalized_eigenproblem_projector_and_cut",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_strong_precomputed_partition_against_sklearn",
+          "markers": [
+            "pytest.mark.reference"
+          ]
+        },
+        {
+          "name": "test_rbf_affinity_and_subspace_against_scipy",
+          "markers": [
+            "pytest.mark.reference",
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_tiny_uniform_affinity_scaling_and_isolated_nodes",
+          "markers": [
+            "pytest.mark.numerical"
+          ]
+        },
+        {
+          "name": "test_invalid_affinities",
+          "markers": [
+            "pytest.mark.parametrize('matrix', [[[1, 1], [1, 0]], [[0, 1], [0, 0]], [[0, -1], [-1, 0]], [[0, np.nan], [np.nan, 0]], [[0, 1, 1], [1, 0, 1]], [[False, True], [True, False]]])"
+          ]
+        },
+        {
+          "name": "test_bad_hyperparameters",
+          "markers": [
+            "pytest.mark.parametrize('kwargs', [{'n_clusters': 0}, {'affinity': 'nearest_neighbors'}, {'gamma': 0}, {'n_init': 0}, {'random_state': -1}])"
+          ]
+        },
+        {
+          "name": "test_rbf_scale_requires_inverse_squared_gamma_mapping",
+          "markers": [
+            "pytest.mark.oracle",
+            "pytest.mark.numerical"
+          ]
+        }
+      ],
+      "actual_tolerances": [
+        "assert_allclose(model.eigenvalues_, [1, 1], atol=1e-12)",
+        "assert_allclose(model.eigenvectors_.T @ model.eigenvectors_, np.eye(2), atol=1e-12)",
+        "assert_allclose(model.eigenvectors_ @ model.eigenvectors_.T, expected_projector, atol=1e-12)",
+        "assert_allclose(model.normalized_affinity_ @ model.eigenvectors_, model.eigenvectors_*model.eigenvalues_, atol=1e-12)",
+        "assert_allclose(np.sum(model.embedding_**2, axis=1), 1, atol=1e-12)",
+        "assert_allclose(model.affinity_matrix_, W, atol=1e-14)",
+        "assert_allclose(model.eigenvectors_ @ model.eigenvectors_.T, U @ U.T, atol=1e-11)",
+        "assert_allclose(a.normalized_affinity_, b.normalized_affinity_, atol=1e-12)",
+        "assert_allclose(a.affinity_matrix_, b.affinity_matrix_, atol=1e-14)",
+        "assert_allclose(a.normalized_cut_, b.normalized_cut_, atol=1e-12)"
+      ],
+      "limits": null,
+      "documentation_findings": [],
+      "review_result": "not yet reviewed",
+      "finding_register_ids": []
+    }
+  ],
+  "findings": [],
+  "shared_files_reviewed": [],
+  "category_contracts_reports_reviewed": [],
+  "executed_validation": []
+}

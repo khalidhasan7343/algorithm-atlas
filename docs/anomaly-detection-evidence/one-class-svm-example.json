@@ -1,0 +1,80 @@
+{
+  "topic": "one-class-svm",
+  "command": [
+    "python",
+    "machine-learning/anomaly-detection/one-class-svm/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"training\": [[-1.0], [-0.7], [-0.3], [0.0], [0.2], [0.6], [1.0]], \"kernel\": \"rbf\", \"nu\": 0.3, \"gamma\": 0.8, \"status\": \"kkt-tolerance\", \"converged\": true, \"iterations\": 36, \"support\": [0, 3, 6], \"alpha\": [0.4428587, 0.0, 0.0, 0.1142826, 0.0, 0.0, 0.4428587], \"rho\": 0.51226108, \"objective\": 0.25613054, \"kkt_residual\": 8.84e-10, \"feasibility\": 0.0, \"query\": [[0.0], [0.5], [4.0]], \"decisions\": [0.0, 0.01709169, -0.51193013], \"labels\": [1, 1, -1]}\n",
+  "parsed": {
+    "training": [
+      [
+        -1.0
+      ],
+      [
+        -0.7
+      ],
+      [
+        -0.3
+      ],
+      [
+        0.0
+      ],
+      [
+        0.2
+      ],
+      [
+        0.6
+      ],
+      [
+        1.0
+      ]
+    ],
+    "kernel": "rbf",
+    "nu": 0.3,
+    "gamma": 0.8,
+    "status": "kkt-tolerance",
+    "converged": true,
+    "iterations": 36,
+    "support": [
+      0,
+      3,
+      6
+    ],
+    "alpha": [
+      0.4428587,
+      0.0,
+      0.0,
+      0.1142826,
+      0.0,
+      0.0,
+      0.4428587
+    ],
+    "rho": 0.51226108,
+    "objective": 0.25613054,
+    "kkt_residual": 8.84e-10,
+    "feasibility": 0.0,
+    "query": [
+      [
+        0.0
+      ],
+      [
+        0.5
+      ],
+      [
+        4.0
+      ]
+    ],
+    "decisions": [
+      0.0,
+      0.01709169,
+      -0.51193013
+    ],
+    "labels": [
+      1,
+      1,
+      -1
+    ]
+  },
+  "sections": 25
+}

@@ -8,7 +8,7 @@ This category preserves **8 original syllabus entries**. Each link points to the
 
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Convolutional Neural Networks (CNN) | [convolutional-neural-networks](../../machine-learning/deep-learning/convolutional-neural-networks/README.md) | planned |
+| Convolutional Neural Networks (CNN) | [convolutional-neural-networks](../../machine-learning/deep-learning/convolutional-neural-networks/README.md) | complete |
 | Canny Edge Detection | [canny-edge-detection](canny-edge-detection/README.md) | planned |
 | Sobel Edge Detection | [sobel-edge-detection](sobel-edge-detection/README.md) | planned |
 | SIFT | [sift](sift/README.md) | planned |

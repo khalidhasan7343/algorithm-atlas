@@ -6,28 +6,26 @@ Studying compact neural architectures, training objectives, and representation l
 
 This category preserves **14 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
-
-The shared vanilla autoencoder is complete and owner-approved under Phase 17 B5. Its one canonical implementation serves B5/B7; every other B7 topic remains deferred.
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Multilayer Perceptron (MLP) | [multilayer-perceptron](multilayer-perceptron/README.md) | planned |
-| Convolutional Neural Networks (CNN) | [convolutional-neural-networks](convolutional-neural-networks/README.md) | planned |
-| Recurrent Neural Networks (RNN) | [recurrent-neural-networks](recurrent-neural-networks/README.md) | planned |
-| Long Short-Term Memory (LSTM) | [long-short-term-memory](long-short-term-memory/README.md) | planned |
-| Gated Recurrent Units (GRU) | [gated-recurrent-units](gated-recurrent-units/README.md) | planned |
-| Transformers | [transformers](transformers/README.md) | planned |
-| Generative Adversarial Networks (GAN) | [generative-adversarial-networks](generative-adversarial-networks/README.md) | planned |
-| Variational Autoencoders (VAE) | [variational-autoencoders](variational-autoencoders/README.md) | planned |
-| Diffusion Models | [diffusion-models](diffusion-models/README.md) | planned |
-| Graph Neural Networks (GNN) | [graph-neural-networks](graph-neural-networks/README.md) | planned |
-| Residual Networks (ResNet) | [residual-networks](residual-networks/README.md) | planned |
+| Multilayer Perceptron (MLP) | [multilayer-perceptron](multilayer-perceptron/README.md) | complete |
+| Convolutional Neural Networks (CNN) | [convolutional-neural-networks](convolutional-neural-networks/README.md) | complete |
+| Recurrent Neural Networks (RNN) | [recurrent-neural-networks](recurrent-neural-networks/README.md) | complete |
+| Long Short-Term Memory (LSTM) | [long-short-term-memory](long-short-term-memory/README.md) | complete |
+| Gated Recurrent Units (GRU) | [gated-recurrent-units](gated-recurrent-units/README.md) | complete |
+| Transformers | [transformers](transformers/README.md) | complete |
+| Generative Adversarial Networks (GAN) | [generative-adversarial-networks](generative-adversarial-networks/README.md) | complete |
+| Variational Autoencoders (VAE) | [variational-autoencoders](variational-autoencoders/README.md) | complete |
+| Diffusion Models | [diffusion-models](diffusion-models/README.md) | complete |
+| Graph Neural Networks (GNN) | [graph-neural-networks](graph-neural-networks/README.md) | complete |
+| Residual Networks (ResNet) | [residual-networks](residual-networks/README.md) | complete |
 | Vanilla Autoencoders | [vanilla-autoencoders](vanilla-autoencoders/README.md) | complete |
-| Denoising Autoencoders | [denoising-autoencoders](denoising-autoencoders/README.md) | planned |
-| Sparse Autoencoders | [sparse-autoencoders](sparse-autoencoders/README.md) | planned |
+| Denoising Autoencoders | [denoising-autoencoders](denoising-autoencoders/README.md) | complete |
+| Sparse Autoencoders | [sparse-autoencoders](sparse-autoencoders/README.md) | complete |
 
 ## Learning and contribution scope
 
-Choose prerequisites through the [learning roadmap](../../docs/learning-roadmap.md). Each future completed topic must include the full 25-part educational article, working Python and C++ programs, executable examples, accurate complexity analysis, and relevant tests described in [the contribution standards](../../CONTRIBUTING.md).
+Choose prerequisites through the [learning roadmap](../../docs/learning-roadmap.md). Each future completed topic must include the full 25-part educational article, working Python with numerical tests and optional C++, executable examples, accurate complexity analysis, and relevant tests described in [the contribution standards](../../CONTRIBUTING.md).
 
 Completion is shown by the catalog status and topic artifacts. The current implementation authorization is recorded in the progress tracker; other categories require explicit user approval.
 

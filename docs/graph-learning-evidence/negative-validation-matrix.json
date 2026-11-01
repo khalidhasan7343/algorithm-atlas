@@ -1,0 +1,29 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/test_b9_language_and_scope_policy.py",
+    "-q"
+  ],
+  "execution_record": "infrastructure-B9-02.json",
+  "counts": {
+    "tests": 12,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    "B9 Python-only valid with retained B8 DPO blocked",
+    "missing Python source/tests rejected",
+    "partial optional C++ rejected",
+    "DSA missing C++ rejected",
+    "duplicate IDs rejected",
+    "unsafe paths rejected",
+    "missing25 sections rejected",
+    "DPO cannot enter B9 batch",
+    "Phase20 blocker acknowledgement cannot complete blocked B9",
+    "generated drift detected",
+    "actual B9 tests discovered under unchanged CI roots"
+  ]
+}

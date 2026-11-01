@@ -1,0 +1,25 @@
+{
+  "label": "infrastructure-B9",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/test_b9_language_and_scope_policy.py",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "tests/test_b9_language_and_scope_policy.py",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/graph-learning-evidence/infrastructure-B9-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T20:15:43.064946+06:00",
+  "elapsed_seconds": 0.548,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 1,
+  "output": "docs/graph-learning-evidence/infrastructure-B9-01.txt"
+}

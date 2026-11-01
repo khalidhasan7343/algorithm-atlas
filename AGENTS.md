@@ -6,25 +6,9 @@ Read `README.md`, `CONTRIBUTING.md`, `docs/progress.md`, and the relevant record
 
 ## Mandatory phase checkpoint
 
-The owner explicitly approved the latest Phase 17 Dimensionality Reduction
-report/package on client session date 2026-10-30 Asia/Dhaka and authorized
-**Phase 18 — B6 Association Rule Learning only**. Implement the three existing
-canonicals Apriori, Eclat and FP-Growth in that batch order, then the mandatory
-shared rule-generation audit; see [scope](docs/association-rule-learning-scope.md)
-and [checkpoints](docs/association-rule-learning-checkpoints.md). Rule generation
-is a category-local utility, not another catalog algorithm. Preserve accepted
-B1–B5/DSA source, tests, lessons, historical reports/evidence/packages and existing
-staged changes. Inventory stays35 categories /256 memberships /235 canonicals.
+The owner **MD.Khalid Hasan** explicitly approved the verified Phase25 B13 handoff on **2026-11-01 Asia/Dhaka** and authorized **Phase26 — Machine Learning B1–B13 Final Comprehensive Audit**. This is audit/stabilization only:seven workstreams;no new category or canonical. See [scope](docs/ml-final-audit-scope.md) and [checkpoints](docs/ml-final-audit-checkpoints.md). Preserve inventory35 categories/256 memberships/235 canonicals,all prior approvals,historical reports/evidence/packages,DSA source and existing staged work. Preserve DPO identity,path,four blocked statuses,research and owner-approved remain-blocked decision.
 
-Python and mathematical/oracle/reference tests and exact25-section lessons are
-mandatory. These combinatorial miners use standard-library sets/dicts and integer
-counts; NumPy is unnecessary in core. ML C++ remains optional; DSA requires both
-languages and actual C++17/C++20 checks. Keep the existing shared-autoencoder and
-other deferred B7/AI policy intact. Continue automatically through passing batches,
-then deliver the tracked report and verified ZIP/checksum/JSON and STOP for owner
-review. **New Phase 18 approval pending.** No Phase19/B7/other category, commit,
-push, tag, release or publication. Never set Git identity from public email.
-
+Independently inspect every implemented ML canonical,math,oracles/tests,exact25-section lessons,numerics,resources,security,dependencies,CI and shared ownership. Make only minimal confirmed in-scope fixes;record reproductions and rerun affected checks. Request owner input before altering canonical identity,approved mathematical scope,public API contracts or blocker decisions. ML Python/NumPy mandatory,C++ optional;DSA Python/C++17/C++20 mandatory. No downloads or pretrained frameworks. Deliver tracked36-part report and verified ZIP/checksum/JSON,then STOP. **Phase26 audit and final B Track owner approval pending.** No C1,nextphase,commit,push,tag,release or publication. Never set Git identity from public email.
 
 
 ## Work and validation

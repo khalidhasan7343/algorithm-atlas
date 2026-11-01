@@ -1,0 +1,19 @@
+[
+  {
+    "id": "B10-001",
+    "status": "fixed",
+    "kind": "new test harness",
+    "problem": "Preserved B1 compatibility test initially resolved the path one parent too high.",
+    "evidence": "batch1-audit-01:1 failed,45 passed; corrected batch1-audit-02:46 passed.",
+    "fix": "Correct the test-only path to machine-learning; no B1 source or mathematical assertion changed."
+  },
+  {
+    "id": "B10-002",
+    "status": "fixed",
+    "kind": "L-BFGS line-search domain",
+    "problem": "Default max_step64 prevented a valid strong-Wolfe step on the Rosenbrock valley after3 accepted iterations.",
+    "diagnosis": "At the failure point,alpha64 and128 satisfy Armijo but not strong curvature;alpha256 satisfies both;alpha512 violates Armijo.",
+    "fix": "Widen configurable/default ceiling to1e6 while retaining40-trial,parameter and total-evaluation bounds. Preserve the original convergence assertion; additionally recompute Wolfe metadata from actual iterates.",
+    "evidence": "batch3-development-01:1 failed,25 passed; corrected development02 and batch3-audit01:26 passed."
+  }
+]

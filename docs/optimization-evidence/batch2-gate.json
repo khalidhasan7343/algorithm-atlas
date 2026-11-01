@@ -1,0 +1,180 @@
+{
+  "batch": 2,
+  "topics": [
+    "momentum",
+    "rmsprop",
+    "adam",
+    "adamw"
+  ],
+  "returncode": 0,
+  "counts": {
+    "tests": 125,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "execution": {
+    "label": "batch2-audit",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/optimization/momentum",
+      "machine-learning/optimization/rmsprop",
+      "machine-learning/optimization/adam",
+      "machine-learning/optimization/adamw",
+      "machine-learning/optimization/tests/test_first_order_contracts.py",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/optimization/momentum",
+      "machine-learning/optimization/rmsprop",
+      "machine-learning/optimization/adam",
+      "machine-learning/optimization/adamw",
+      "machine-learning/optimization/tests/test_first_order_contracts.py",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/optimization-evidence/batch2-audit-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T21:16:53.588057+06:00",
+    "elapsed_seconds": 0.307,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/optimization-evidence/batch2-audit-01.txt"
+  },
+  "examples": [
+    {
+      "topic": "momentum",
+      "command": [
+        "python",
+        "machine-learning/optimization/momentum/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"converged\": true, \"gradient_norm\": 4.3e-09, \"initial\": [3.0, 1.0], \"iterations\": 180, \"learning_rate\": 0.1, \"objective\": -9.0, \"objective_evaluations\": 181, \"status\": \"gradient-tolerance\", \"task_optimum\": [1.0, -2.0], \"updates\": 180, \"x\": [1.0, -2.0]}\n",
+      "sections": 25,
+      "parsed": {
+        "converged": true,
+        "gradient_norm": 4.3e-09,
+        "initial": [
+          3.0,
+          1.0
+        ],
+        "iterations": 180,
+        "learning_rate": 0.1,
+        "objective": -9.0,
+        "objective_evaluations": 181,
+        "status": "gradient-tolerance",
+        "task_optimum": [
+          1.0,
+          -2.0
+        ],
+        "updates": 180,
+        "x": [
+          1.0,
+          -2.0
+        ]
+      }
+    },
+    {
+      "topic": "rmsprop",
+      "command": [
+        "python",
+        "machine-learning/optimization/rmsprop/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"converged\": true, \"gradient_norm\": 2.7e-09, \"initial\": [3.0, 1.0], \"iterations\": 362, \"learning_rate\": 0.01, \"objective\": -9.0, \"objective_evaluations\": 363, \"status\": \"gradient-tolerance\", \"task_optimum\": [1.0, -2.0], \"updates\": 362, \"x\": [1.0, -2.0]}\n",
+      "sections": 25,
+      "parsed": {
+        "converged": true,
+        "gradient_norm": 2.7e-09,
+        "initial": [
+          3.0,
+          1.0
+        ],
+        "iterations": 362,
+        "learning_rate": 0.01,
+        "objective": -9.0,
+        "objective_evaluations": 363,
+        "status": "gradient-tolerance",
+        "task_optimum": [
+          1.0,
+          -2.0
+        ],
+        "updates": 362,
+        "x": [
+          1.0,
+          -2.0
+        ]
+      }
+    },
+    {
+      "topic": "adam",
+      "command": [
+        "python",
+        "machine-learning/optimization/adam/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"converged\": true, \"gradient_norm\": 7.7e-09, \"initial\": [3.0, 1.0], \"iterations\": 387, \"learning_rate\": 0.05, \"objective\": -9.0, \"objective_evaluations\": 388, \"status\": \"gradient-tolerance\", \"task_optimum\": [1.0, -2.0], \"updates\": 387, \"x\": [1.0, -2.0]}\n",
+      "sections": 25,
+      "parsed": {
+        "converged": true,
+        "gradient_norm": 7.7e-09,
+        "initial": [
+          3.0,
+          1.0
+        ],
+        "iterations": 387,
+        "learning_rate": 0.05,
+        "objective": -9.0,
+        "objective_evaluations": 388,
+        "status": "gradient-tolerance",
+        "task_optimum": [
+          1.0,
+          -2.0
+        ],
+        "updates": 387,
+        "x": [
+          1.0,
+          -2.0
+        ]
+      }
+    },
+    {
+      "topic": "adamw",
+      "command": [
+        "python",
+        "machine-learning/optimization/adamw/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"converged\": false, \"gradient_norm\": 0.0072123206, \"initial\": [3.0, 1.0], \"iterations\": 1000, \"learning_rate\": 0.05, \"objective\": -8.999986995608, \"objective_evaluations\": 1001, \"status\": \"iteration-budget\", \"task_optimum\": [1.0, -2.0], \"updates\": 1000, \"x\": [0.99639384, -2.0]}\n",
+      "sections": 25,
+      "parsed": {
+        "converged": false,
+        "gradient_norm": 0.0072123206,
+        "initial": [
+          3.0,
+          1.0
+        ],
+        "iterations": 1000,
+        "learning_rate": 0.05,
+        "objective": -8.999986995608,
+        "objective_evaluations": 1001,
+        "status": "iteration-budget",
+        "task_optimum": [
+          1.0,
+          -2.0
+        ],
+        "updates": 1000,
+        "x": [
+          0.99639384,
+          -2.0
+        ]
+      }
+    }
+  ],
+  "lesson_sections": 25
+}

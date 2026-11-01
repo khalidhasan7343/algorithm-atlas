@@ -1,0 +1,29 @@
+{
+  "label": "oracle",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/reinforcement-learning",
+    "-m",
+    "oracle",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/reinforcement-learning",
+    "-m",
+    "oracle",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/oracle-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T10:10:20.072803+06:00",
+  "elapsed_seconds": 0.566,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/reinforcement-learning-evidence/oracle-01.txt"
+}

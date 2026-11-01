@@ -1,0 +1,145 @@
+{
+  "batch": 1,
+  "topics": [
+    "batch-gradient-descent",
+    "stochastic-gradient-descent",
+    "mini-batch-gradient-descent"
+  ],
+  "returncode": 0,
+  "counts": {
+    "tests": 46,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "execution": {
+    "label": "batch1-audit",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/optimization/batch-gradient-descent",
+      "machine-learning/optimization/stochastic-gradient-descent",
+      "machine-learning/optimization/mini-batch-gradient-descent",
+      "machine-learning/optimization/tests/test_objective_oracles.py",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/optimization/batch-gradient-descent",
+      "machine-learning/optimization/stochastic-gradient-descent",
+      "machine-learning/optimization/mini-batch-gradient-descent",
+      "machine-learning/optimization/tests/test_objective_oracles.py",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/optimization-evidence/batch1-audit-02.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T21:09:40.066042+06:00",
+    "elapsed_seconds": 0.271,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/optimization-evidence/batch1-audit-02.txt"
+  },
+  "examples": [
+    {
+      "topic": "batch-gradient-descent",
+      "command": [
+        "python",
+        "machine-learning/optimization/batch-gradient-descent/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"analytical\": [1.0, -2.0], \"converged\": true, \"gradient_evaluations\": 141, \"initial\": [3.0, 1.0], \"iterations\": 140, \"learning_rate\": 0.1, \"objective\": 0.0, \"objective_evaluations\": 141, \"status\": \"gradient-tolerance\", \"updates\": 140, \"x\": [1.0, -1.99999999]}\n",
+      "sections": 25,
+      "parsed": {
+        "analytical": [
+          1.0,
+          -2.0
+        ],
+        "converged": true,
+        "gradient_evaluations": 141,
+        "initial": [
+          3.0,
+          1.0
+        ],
+        "iterations": 140,
+        "learning_rate": 0.1,
+        "objective": 0.0,
+        "objective_evaluations": 141,
+        "status": "gradient-tolerance",
+        "updates": 140,
+        "x": [
+          1.0,
+          -1.99999999
+        ]
+      }
+    },
+    {
+      "topic": "stochastic-gradient-descent",
+      "command": [
+        "python",
+        "machine-learning/optimization/stochastic-gradient-descent/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"analytical\": [1.0, -2.0], \"converged\": true, \"gradient_evaluations\": 141, \"initial\": [3.0, 1.0], \"iterations\": 20, \"learning_rate\": 0.1, \"objective\": 0.0, \"objective_evaluations\": 21, \"status\": \"gradient-tolerance\", \"updates\": 120, \"x\": [1.0, -2.0]}\n",
+      "sections": 25,
+      "parsed": {
+        "analytical": [
+          1.0,
+          -2.0
+        ],
+        "converged": true,
+        "gradient_evaluations": 141,
+        "initial": [
+          3.0,
+          1.0
+        ],
+        "iterations": 20,
+        "learning_rate": 0.1,
+        "objective": 0.0,
+        "objective_evaluations": 21,
+        "status": "gradient-tolerance",
+        "updates": 120,
+        "x": [
+          1.0,
+          -2.0
+        ]
+      }
+    },
+    {
+      "topic": "mini-batch-gradient-descent",
+      "command": [
+        "python",
+        "machine-learning/optimization/mini-batch-gradient-descent/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"analytical\": [1.0, -2.0], \"converged\": true, \"gradient_evaluations\": 177, \"initial\": [3.0, 1.0], \"iterations\": 44, \"learning_rate\": 0.1, \"objective\": 0.0, \"objective_evaluations\": 45, \"status\": \"gradient-tolerance\", \"updates\": 132, \"x\": [1.0, -1.99999999]}\n",
+      "sections": 25,
+      "parsed": {
+        "analytical": [
+          1.0,
+          -2.0
+        ],
+        "converged": true,
+        "gradient_evaluations": 177,
+        "initial": [
+          3.0,
+          1.0
+        ],
+        "iterations": 44,
+        "learning_rate": 0.1,
+        "objective": 0.0,
+        "objective_evaluations": 45,
+        "status": "gradient-tolerance",
+        "updates": 132,
+        "x": [
+          1.0,
+          -1.99999999
+        ]
+      }
+    }
+  ],
+  "lesson_sections": 25
+}

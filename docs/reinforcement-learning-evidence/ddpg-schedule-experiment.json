@@ -1,0 +1,38 @@
+[
+  {
+    "seed": 85,
+    "episodes": 2400,
+    "before": {
+      "mean_return": -0.06808964898565431,
+      "mean_length": 1.0
+    },
+    "after": {
+      "mean_return": -0.002821996251315352,
+      "mean_length": 1.0
+    }
+  },
+  {
+    "seed": 86,
+    "episodes": 2400,
+    "before": {
+      "mean_return": -0.15266743440184827,
+      "mean_length": 1.0
+    },
+    "after": {
+      "mean_return": -0.0009202026667794654,
+      "mean_length": 1.0
+    }
+  },
+  {
+    "seed": 87,
+    "episodes": 2400,
+    "before": {
+      "mean_return": -0.1674670020317674,
+      "mean_length": 1.0
+    },
+    "after": {
+      "mean_return": -0.0009637242908189823,
+      "mean_length": 1.0
+    }
+  }
+]

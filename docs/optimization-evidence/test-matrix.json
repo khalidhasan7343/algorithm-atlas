@@ -1,0 +1,196 @@
+{
+  "total": 4272,
+  "passed": 4272,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "groups": {
+    "infrastructure": 373,
+    "DSA": 1687,
+    "B7": 221,
+    "B3": 253,
+    "B9": 146,
+    "B10": 259,
+    "B8": 141,
+    "B2": 398,
+    "B1": 281,
+    "B6": 162,
+    "B4": 206,
+    "B5-folder": 145
+  },
+  "dsa": {
+    "cpp17": 269,
+    "cpp20": 269,
+    "python_shared": 1149
+  },
+  "B10": {
+    "adam": 9,
+    "adamw": 10,
+    "batch-gradient-descent": 18,
+    "genetic-algorithms": 26,
+    "l-bfgs": 26,
+    "mini-batch-gradient-descent": 8,
+    "momentum": 7,
+    "rmsprop": 8,
+    "simulated-annealing": 26,
+    "stochastic-gradient-descent": 13,
+    "shared-contracts-and-oracles": 108
+  },
+  "infrastructure": {
+    "test_b10_language_and_scope_policy": 14,
+    "test_b5_shared_canonical_policy": 7,
+    "test_b7_language_policy": 7,
+    "test_b8_language_and_blocker_policy": 17,
+    "test_b9_language_and_scope_policy": 12,
+    "test_bit_oracles": 1,
+    "test_cpp_toolchain": 4,
+    "test_generate_catalog_docs": 26,
+    "test_number_window_oracles": 2,
+    "test_review_paths": 10,
+    "test_string_cross_algorithms": 1,
+    "test_track_policy": 14,
+    "test_validate_catalog": 258
+  },
+  "selected_overlapping_checks": {
+    "audit-B10": {
+      "total": 259,
+      "passed": 259,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "infrastructure-B10": {
+      "total": 14,
+      "passed": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "exact-updates": {
+      "total": 19,
+      "passed": 19,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "oracle": {
+      "total": 41,
+      "passed": 41,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "gradient": {
+      "total": 6,
+      "passed": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "curvature": {
+      "total": 12,
+      "passed": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "numerical": {
+      "total": 11,
+      "passed": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "reproducibility": {
+      "total": 31,
+      "passed": 31,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "stopping": {
+      "total": 17,
+      "passed": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "edge-cases": {
+      "total": 141,
+      "passed": 141,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "compatibility": {
+      "total": 1,
+      "passed": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "B1": {
+      "total": 281,
+      "passed": 281,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "B2": {
+      "total": 398,
+      "passed": 398,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "B3": {
+      "total": 253,
+      "passed": 253,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "B4": {
+      "total": 206,
+      "passed": 206,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "B5": {
+      "total": 162,
+      "passed": 162,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "B6": {
+      "total": 162,
+      "passed": 162,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "B7": {
+      "total": 221,
+      "passed": 221,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "B8": {
+      "total": 141,
+      "passed": 141,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "B9": {
+      "total": 146,
+      "passed": 146,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  }
+}

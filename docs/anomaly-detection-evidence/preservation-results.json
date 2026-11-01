@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "counts": {
+    "categories": 35,
+    "memberships": 256,
+    "canonicals": 235
+  },
+  "implemented": 3,
+  "completed_batches": [
+    1,
+    2,
+    3
+  ],
+  "phase23_owner_approval": "approved:6 completed",
+  "phase24_owner_approval": "pending",
+  "dpo": "canonical ID/path/four blocked statuses/research/decision unchanged",
+  "protected_preexisting_files": 3465,
+  "changed_preexisting_files": [
+    "AGENTS.md",
+    "CONTRIBUTING.md",
+    "README.md",
+    "artifacts/review-packages/README.md",
+    "catalog.yaml",
+    "docs/algorithm-index.md",
+    "docs/development.md",
+    "docs/learning-roadmap.md",
+    "docs/ml-development.md",
+    "docs/progress.md",
+    "docs/reviews/README.md",
+    "machine-learning/anomaly-detection/README.md",
+    "machine-learning/anomaly-detection/isolation-forest/README.md",
+    "machine-learning/anomaly-detection/local-outlier-factor/README.md",
+    "machine-learning/anomaly-detection/one-class-svm/README.md",
+    "machine-learning/deep-learning/README.md",
+    "machine-learning/ensemble-methods/README.md",
+    "machine-learning/graph-learning/README.md",
+    "machine-learning/optimization/README.md",
+    "machine-learning/reinforcement-learning/README.md",
+    "machine-learning/supervised-learning/classification/README.md",
+    "machine-learning/time-series/README.md",
+    "machine-learning/unsupervised-learning/clustering/README.md",
+    "machine-learning/unsupervised-learning/dimensionality-reduction/README.md",
+    "scripts/generate_catalog_docs.py"
+  ],
+  "historical_artifacts_omitted_from_export": [],
+  "report_tracking": "tracked and unignored",
+  "prior_B1_B11_DSA_sources_tests_lessons_reports_and_archives": "byte-identical",
+  "canonical_reuse": "Unchanged B4/B2 validation and distances; unchanged B1 SVR RBF helper; all new detector mechanisms genuine",
+  "runtime_dependencies": "NumPy/stdlib/local approved source only; no downloads or heavyweight frameworks"
+}

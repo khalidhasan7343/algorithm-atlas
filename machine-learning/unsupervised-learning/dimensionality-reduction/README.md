@@ -6,8 +6,6 @@ Constructing lower-dimensional representations with explicit information and sup
 
 This category preserves **7 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
-
-All seven Phase 17 B5 members and its latest verified package are owner-approved. The one shared autoencoder remains at its B7 canonical path. Prior implementations, tests, lessons and review artifacts are preserved.
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
 | Principal Component Analysis (PCA) | [principal-component-analysis](principal-component-analysis/README.md) | complete |

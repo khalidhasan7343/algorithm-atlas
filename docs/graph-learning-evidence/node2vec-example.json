@@ -1,0 +1,9 @@
+{
+  "command": [
+    "python",
+    "machine-learning/graph-learning/node2vec/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"cosine_0_1\": 0.99854875, \"cosine_0_4\": 0.1862712, \"loss_final\": 1.78973212, \"loss_initial\": 2.77789917, \"pairs\": [[0, 1], [0, 0], [1, 0], [1, 0], [1, 2], [0, 0]], \"shape\": [6, 4], \"updates\": 100, \"walks\": [[0, 1, 0, 2, 0, 1, 2, 1], [1, 0, 2, 3, 2, 3, 5, 3]]}\n",
+  "sections": 25
+}

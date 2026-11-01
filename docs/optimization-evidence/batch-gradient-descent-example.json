@@ -1,0 +1,32 @@
+{
+  "topic": "batch-gradient-descent",
+  "command": [
+    "python",
+    "machine-learning/optimization/batch-gradient-descent/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"analytical\": [1.0, -2.0], \"converged\": true, \"gradient_evaluations\": 141, \"initial\": [3.0, 1.0], \"iterations\": 140, \"learning_rate\": 0.1, \"objective\": 0.0, \"objective_evaluations\": 141, \"status\": \"gradient-tolerance\", \"updates\": 140, \"x\": [1.0, -1.99999999]}\n",
+  "sections": 25,
+  "parsed": {
+    "analytical": [
+      1.0,
+      -2.0
+    ],
+    "converged": true,
+    "gradient_evaluations": 141,
+    "initial": [
+      3.0,
+      1.0
+    ],
+    "iterations": 140,
+    "learning_rate": 0.1,
+    "objective": 0.0,
+    "objective_evaluations": 141,
+    "status": "gradient-tolerance",
+    "updates": 140,
+    "x": [
+      1.0,
+      -1.99999999
+    ]
+  }
+}

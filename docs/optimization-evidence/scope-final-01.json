@@ -1,0 +1,18 @@
+{
+  "label": "scope-final",
+  "command": [
+    "python",
+    "scripts/verify_optimization_scope.py"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "scripts/verify_optimization_scope.py"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T21:51:47.062134+06:00",
+  "elapsed_seconds": 0.913,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/optimization-evidence/scope-final-01.txt"
+}

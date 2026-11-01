@@ -1,0 +1,29 @@
+{
+  "label": "seasonal",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/time-series",
+    "-k",
+    "seasonal or holt",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/time-series",
+    "-k",
+    "seasonal or holt",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/seasonal-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-01T00:36:21.469171+06:00",
+  "elapsed_seconds": 0.881,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/time-series-evidence/seasonal-01.txt"
+}

@@ -1,0 +1,69 @@
+{
+  "topic": "bert",
+  "command": [
+    "python",
+    "machine-learning/natural-language-processing/bert/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"training\": [\"cat runs\", \"cat sleeps\"], \"ordinary_ids\": {\"cat\": 5, \"runs\": 6, \"sleeps\": 7}, \"input_ids\": [[2, 5, 6, 3], [2, 5, 7, 3]], \"inference_ids\": [[2, 4, 6, 3], [2, 4, 7, 3]], \"loss_start\": 2.10093735745106, \"loss_final\": 0.0201852292713438, \"predicted_ids\": [5, 5], \"predicted_tokens\": [\"cat\", \"cat\"], \"context_shape\": [2, 4, 4], \"trained_parameters\": [\"head_weight\", \"head_bias\"], \"backbone\": \"frozen random initialization\"}\n",
+  "parsed": {
+    "training": [
+      "cat runs",
+      "cat sleeps"
+    ],
+    "ordinary_ids": {
+      "cat": 5,
+      "runs": 6,
+      "sleeps": 7
+    },
+    "input_ids": [
+      [
+        2,
+        5,
+        6,
+        3
+      ],
+      [
+        2,
+        5,
+        7,
+        3
+      ]
+    ],
+    "inference_ids": [
+      [
+        2,
+        4,
+        6,
+        3
+      ],
+      [
+        2,
+        4,
+        7,
+        3
+      ]
+    ],
+    "loss_start": 2.10093735745106,
+    "loss_final": 0.0201852292713438,
+    "predicted_ids": [
+      5,
+      5
+    ],
+    "predicted_tokens": [
+      "cat",
+      "cat"
+    ],
+    "context_shape": [
+      2,
+      4,
+      4
+    ],
+    "trained_parameters": [
+      "head_weight",
+      "head_bias"
+    ],
+    "backbone": "frozen random initialization"
+  },
+  "sections": 25
+}

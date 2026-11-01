@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "counts": {
+    "categories": 35,
+    "memberships": 256,
+    "canonicals": 235
+  },
+  "implemented": 3,
+  "completed_batches": [
+    1,
+    2,
+    3
+  ],
+  "phase20_owner_approval": "approved:9 completed+1 intentionally blocked",
+  "phase21_owner_approval": "pending",
+  "dpo": "canonical ID/path/four blocked statuses/research/decision unchanged",
+  "protected_preexisting_files": 2897,
+  "changed_preexisting_files": [
+    "AGENTS.md",
+    "CONTRIBUTING.md",
+    "README.md",
+    "artifacts/review-packages/README.md",
+    "catalog.yaml",
+    "docs/algorithm-index.md",
+    "docs/development.md",
+    "docs/learning-roadmap.md",
+    "docs/ml-development.md",
+    "docs/progress.md",
+    "docs/reviews/README.md",
+    "machine-learning/deep-learning/README.md",
+    "machine-learning/graph-learning/README.md",
+    "machine-learning/graph-learning/graph-convolutional-networks/README.md",
+    "machine-learning/graph-learning/node2vec/README.md",
+    "machine-learning/graph-learning/pagerank/README.md",
+    "machine-learning/reinforcement-learning/README.md",
+    "machine-learning/unsupervised-learning/association-rule-learning/README.md",
+    "machine-learning/unsupervised-learning/clustering/README.md",
+    "machine-learning/unsupervised-learning/dimensionality-reduction/README.md",
+    "scripts/generate_catalog_docs.py"
+  ],
+  "historical_artifacts_omitted_from_export": [],
+  "report_tracking": "tracked and unignored",
+  "prior_B1_B8_DSA_sources_tests_lessons_reports_and_archives": "byte-identical",
+  "B7_GNN": "normalization reused; all original source/tests/lesson bytes preserved",
+  "runtime_dependencies": "NumPy/stdlib/local approved source only; no downloads or heavyweight frameworks"
+}

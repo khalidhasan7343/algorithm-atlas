@@ -1,0 +1,30 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/test_b8_language_and_blocker_policy.py",
+    "-q"
+  ],
+  "counts": {
+    "tests": 17,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "cases": [
+    "Python-only ML valid",
+    "missing Python source rejected",
+    "missing Python tests rejected",
+    "exact blocked DPO review valid and incomplete",
+    "partial optional ML C++ rejected",
+    "duplicate IDs rejected",
+    "unsafe paths rejected",
+    "missing25 sections rejected",
+    "unacknowledged/partial/wrong-phase/wrong-category/other/empty-reason/malformed blocker bypass rejected",
+    "DSA missing C++ rejected",
+    "generated documentation drift detected",
+    "B8 tests collected from unchanged CI roots"
+  ],
+  "execution_record": "docs/reinforcement-learning-evidence/outcome3-infrastructure-01.json"
+}

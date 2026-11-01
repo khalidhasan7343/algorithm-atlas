@@ -1,0 +1,21 @@
+[
+  {
+    "id": "B8-001",
+    "finding": "Initial DDPG control diagnostic failed for all3 seeds despite passing analytic/finite-difference gradients.",
+    "evidence": "batch4-01.json",
+    "fix": "Break odd tanh critic basis with hidden bias initialization;128 uniform exploration/critic-only warmup steps; separate critic.02 and actor.001 timescales; use a documented2400-episode bounded diagnostic. Original-.04 evaluation threshold unchanged.",
+    "verification": "batch4-02.json; ddpg-schedule-experiment.json; finite differences retained"
+  },
+  {
+    "id": "B8-002",
+    "finding": "Inspection found REINFORCE per-trajectory averaging would scale variable-length episodic gradient estimates inconsistently with the stated sum objective.",
+    "fix": "Retain gamma^t and multiply the shared mean-loss weights by trajectory length; update independent sum oracle, lesson and explicit variable-length test.",
+    "verification": "audit-b8-01.json; gradient-01.json"
+  },
+  {
+    "id": "B8-003",
+    "finding": "Existing ML completed-batch validation correctly rejected an unimplemented record, but lacked a legitimate blocker-review gate required by Phase20.",
+    "fix": "Narrow Phase20/B8 exception for exact existing DPO ID/path, explicit verified-blocked acknowledgement, all4 blocked statuses and nonempty missing-specification note. is_complete remains false; other ML/DSA requirements unchanged.",
+    "verification": "infrastructure-b8-01.json:17 passed including7 blocker-bypass negatives"
+  }
+]

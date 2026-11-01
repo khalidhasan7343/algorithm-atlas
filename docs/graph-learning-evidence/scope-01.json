@@ -1,0 +1,18 @@
+{
+  "label": "scope",
+  "command": [
+    "python",
+    "scripts/verify_graph_learning_scope.py"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "scripts/verify_graph_learning_scope.py"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T20:20:46.036067+06:00",
+  "elapsed_seconds": 1.077,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/graph-learning-evidence/scope-01.txt"
+}

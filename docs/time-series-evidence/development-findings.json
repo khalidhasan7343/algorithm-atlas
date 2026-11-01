@@ -1,0 +1,39 @@
+[
+  {
+    "id": "B11-001",
+    "status": "fixed",
+    "kind": "numerical comparison fixture",
+    "problem": "B10 compatibility at1e-9 gradient tolerance hit bounded Wolfe failure near a positive residual-energy objective floor.",
+    "failed_evidence": "batch3-development-01:1 failed,19 passed",
+    "fix": "Use an independently derived centered quadratic algebraically equal up to an additive constant. Retain the same1e-9 gradient tolerance,convergence assertion,2e-7 coefficient check and1e-12 original-objective check. Verify gradient equivalence. No B10 change.",
+    "corrected_evidence": "batch3-development-02 and batch3-audit-01:20 passed"
+  },
+  {
+    "id": "B11-002",
+    "status": "fixed",
+    "kind": "lesson Markdown",
+    "problem": "Adjacent mathematical brackets in the Holt-Winters dry run were parsed as an undefined reference link.",
+    "failed_evidence": "catalog-01:one undefined-reference error",
+    "fix": "Mark the expression as inline code,without weakening the Markdown validator.",
+    "corrected_evidence": "catalog-02:passed"
+  },
+  {
+    "id": "B11-003",
+    "status": "fixed",
+    "kind": "negative fixture and factory contract",
+    "problem": "A negative backtest fixture used horizon30 with46 remaining observations;that horizon was valid. The deliberately invalid None-producing factory exposed an AttributeError.",
+    "failed_evidence": "audit-B11-02:1 failed,246 passed",
+    "fix": "Use horizon60 for the actual empty-fold boundary,and explicitly validate returned fit/forecast methods. Add invalid-factory/reused-model tests rather than suppressing the protocol error.",
+    "corrected_evidence": "audit-B11-03:248 passed"
+  },
+  {
+    "id": "B11-004",
+    "status": "fixed",
+    "kind": "real numerical metrics defect",
+    "problem": "Tiny nonzero denominators could overflow MAPE/MASE to infinity;manual MAPE probe also emitted overflow warning.",
+    "failed_evidence": "metrics-development-01:2 failed regression cases",
+    "fix": "Use strict floating-point ratio evaluation,raise NumericalError for nonrepresentable/excessive metrics,retain exact-zero MAPE=None and zero-scale MASE errors. Keep both regression assertions and assert no warnings.",
+    "corrected_evidence": "metrics-development-02:2 passed;audit-B11-04:250 passed;numerical-02:14 passed",
+    "regression_policy": "Retain genuine pre-fix full-suite-01(4536 passed),then rerun final full-suite-02 after the two added tests and core correction."
+  }
+]

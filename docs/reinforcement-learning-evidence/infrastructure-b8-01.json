@@ -1,0 +1,25 @@
+{
+  "label": "infrastructure-b8",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/test_b8_language_and_blocker_policy.py",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "tests/test_b8_language_and_blocker_policy.py",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/infrastructure-b8-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T10:08:10.157265+06:00",
+  "elapsed_seconds": 0.895,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/reinforcement-learning-evidence/infrastructure-b8-01.txt"
+}

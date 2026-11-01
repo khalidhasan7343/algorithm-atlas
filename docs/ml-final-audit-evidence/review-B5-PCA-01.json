@@ -1,0 +1,27 @@
+{
+  "label": "review-B5-PCA",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/unsupervised-learning/dimensionality-reduction/principal-component-analysis",
+    "machine-learning/unsupervised-learning/dimensionality-reduction/singular-value-decomposition",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/unsupervised-learning/dimensionality-reduction/principal-component-analysis",
+    "machine-learning/unsupervised-learning/dimensionality-reduction/singular-value-decomposition",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/ml-final-audit-evidence/review-B5-PCA-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-01T19:37:21.436248+06:00",
+  "elapsed_seconds": 0.942,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/ml-final-audit-evidence/review-B5-PCA-01.txt"
+}

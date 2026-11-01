@@ -1,0 +1,124 @@
+..........F.                                                             [100%]
+=================================== FAILURES ===================================
+____________________ test_b9_generated_documentation_drift _____________________
+
+b9_repo = (PosixPath('/private/var/folders/rm/vtkzfb0x69ldzxp3n4drjxqh0000gn/T/pytest-of-khalidhasan/pytest-317/test_b9_generate... 'path': 'machine-learning/graph-learning', 'items': [{'name': 'fixture-agent', 'algorithm': 'fixture-agent'}]}], ...})
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x1076cc8a0>
+
+    def test_b9_generated_documentation_drift(b9_repo,monkeypatch):
+        root,c=b9_repo;monkeypatch.setattr(generator,'ROOT',root);monkeypatch.setattr(sys,'argv',['generator'])
+>       assert generator.main()==0
+               ^^^^^^^^^^^^^^^^
+
+tests/test_b9_language_and_scope_policy.py:83: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/generate_catalog_docs.py:855: in main
+    pages = expected_pages(catalog)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+scripts/generate_catalog_docs.py:835: in expected_pages
+    pages[ROOT / 'docs/progress.md'] = progress_page(catalog, algorithms)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+catalog = {'algorithms': [{'canonical_location': 'machine-learning/graph-learning/fixture-agent', 'category': 'B9', 'cpp_status'...nt']], 'blocker_reviews': {'dynamic-policy-optimization': 'verified-blocked'}, ...}, 'project': 'Algorithm Atlas', ...}
+algorithms = {'fixture-agent': {'canonical_location': 'machine-learning/graph-learning/fixture-agent', 'category': 'B9', 'cpp_statu...ement-learning/dynamic-policy-optimization', 'category': 'B8', 'cpp_status': 'blocked', 'difficulty': 'advanced', ...}}
+
+    def progress_page(catalog: dict, algorithms: dict) -> str:
+        """Render catalog evidence and the explicitly authorized development scope."""
+        path = ROOT / 'docs/progress.md'
+        state = catalog.get('development', {})
+        total = sum(len(category['items']) for category in catalog['categories'])
+        completed = [a for a in algorithms.values() if is_complete(a)]
+        blocked = [a for a in algorithms.values() if overall_status(a) == 'blocked']
+        statuses = Counter(overall_status(a) for a in algorithms.values())
+        phase = state.get('phase', 'Phase 0 — Foundation')
+        scope = state.get('scope', 'Foundation only; awaiting explicit approval')
+        status = state.get('status', 'awaiting-review')
+        lines = [
+            '# Project Progress', '', GENERATED_MARKER, '',
+            f'**Current development phase: {phase}.**', '',
+            f'**Authorized scope:** {scope}. **Checkpoint status:** {status}.', '',
+            '| Measure | Count |', '| --- | ---: |',
+            f'| Original syllabus/catalog entries | {total} |',
+            f'| Syllabus categories | {len(catalog["categories"])} |',
+            f'| Unique canonical algorithms/topics | {len(algorithms)} |',
+            f'| Reused syllabus memberships | {total - len(algorithms)} |',
+            f'| Completed algorithms | {len(completed)} |',
+            f'| Remaining algorithms, including blocked topics | {len(algorithms) - len(completed)} |',
+            f'| Planned canonical topics | {statuses["planned"]} |',
+            f'| In-progress canonical topics | {statuses["in-progress"]} |',
+            f'| Blocked canonical topics | {statuses["blocked"]} |', '',
+            'Completion requires full educational documentation, track-required '
+            'implementations (Python/C++ for DSA; Python for ML), runnable examples, and genuinely passed algorithm '
+            'tests. A planning README alone does not satisfy those requirements. '
+            'Completed does not imply human review or approval for another category.', '',
+            '## Completed algorithms', '',
+        ]
+        lines += [
+            '- ' + link(path, ROOT / a['canonical_location'] / 'README.md', a['name'])
+            for a in completed
+        ] or ['None recorded yet.']
+        lines += ['', '## Current authorized work and resume checkpoint', '']
+        if state:
+            searching = state.get('scope') == 'Searching category only'
+            backtracking = state.get('scope') == 'Recursion & Backtracking category only'
+            divide = state.get('scope') == 'Divide & Conquer category only'
+            dynamic = state.get('scope') == 'Dynamic Programming: eleven listed canonical topics only'
+            tree = state.get('scope') == 'Tree Algorithms category only'
+            strings = state.get('scope') == 'String Algorithms category only'
+            bits = state.get('scope') == 'Bit Manipulation category only'
+            number_window = state.get('scope') == 'Number Theory and Two Pointers & Sliding Window categories only'
+            graph = state.get('scope') == 'Graph Algorithms category only'
+            greedy = state.get('scope') == 'Greedy: four canonical topics only'
+            ml = state.get('track') == 'machine-learning' and not any((
+                searching, backtracking, divide, dynamic, tree, strings, bits,
+                number_window, graph, greedy, state.get('scope') == 'Sorting category only',
+            ))
+            ml_category = next((c for c in catalog['categories'] if c['id'] == state.get('category')), None)
+            ml_slug = Path(ml_category['path']).name if ml_category else 'regression'
+            label = f'ML {ml_slug}' if ml else 'number theory/window' if number_window else 'bit manipulation' if bits else 'string algorithms' if strings else 'tree algorithms' if tree else 'graph algorithms' if graph else 'greedy' if greedy else 'dynamic programming' if dynamic else 'divide/conquer' if divide else 'recursion/backtracking' if backtracking else ('searching' if searching else 'sorting')
+            batches = state.get('completed_batches', [])
+            lines.append(f'Validated {label} batches: ' +
+                         (', '.join(str(batch) for batch in batches) if batches else 'none yet') + '.')
+            active = state.get('active_batch')
+            lines += ['', f'Active batch: {active if active is not None else "none; awaiting user review"}.']
+            if state.get('checkpoint'):
+                lines += ['', 'Actual commands, results, and resume instructions are saved in '
+                          + link(path, ROOT / state['checkpoint'], f'{label} checkpoints') + '.']
+            if state.get('completion_report'):
+                lines += ['', 'See the '
+                          + link(path, ROOT / state['completion_report'], f'{label} completion report') + '.']
+            decision = state.get('dpo_specification_decision', {})
+            if state.get('category') == 'B8' and decision.get('owner_approval') == 'approved':
+                owned = [a for a in algorithms.values() if a['category'] == 'B8']
+                ready = sum(is_complete(a) for a in owned)
+                blocked_count = sum(overall_status(a) == 'blocked' for a in owned)
+                lines += ['', '### Phase 20 completion and separate approvals', '',
+                          '| Measure | Result |', '| --- | --- |',
+                          f'| Defined algorithms completed | {ready} / {len(owned) - blocked_count} |',
+                          f'| Full B8 catalog completed | {ready} / {len(owned)}; {blocked_count} intentionally blocked |',
+                          '| DPO specification decision | Owner-approved: remain blocked (Outcome 3) |',
+                          '| Phase 20 implementation review | Pending owner review of the final package |', '',
+                          'The canonical ID/path and every DPO artifact status remain unchanged. '
+                          'No substitute algorithm is authorized. See '
+                          + link(path, ROOT / decision['report'], 'the preserved specification decision report')
+                          + '. The blocker decision does not approve the implementation review or make the full catalog complete.']
+            if state.get('category') == 'B9':
+                b8 = [a for a in algorithms.values() if a['category'] == 'B8']
+                b8_done = sum(is_complete(a) for a in b8)
+                lines += ['', '### Approved Phase 20 checkpoint and retained DPO blocker', '',
+                          f'Phase20 implementation review is owner-approved: {b8_done} completed algorithms '
+                          f'plus {len(b8) - b8_done} intentionally blocked entry. Full B8 catalog completion '
+                          f'is {b8_done}/{len(b8)},not10/10. DPO specification decision remains '
+                          'owner-approved: remain blocked (Outcome3). Its canonical ID,path and four '
+                          'blocked statuses are preserved; no substitution is authorized. See '
+>                         + link(path, ROOT / decision['report'], 'the preserved DPO decision report')
+                                              ^^^^^^^^^^^^^^^^^^
+                          + '. Historical handoff reports/packages retain their generation-time status. '
+                          'The new Phase21 B9 implementation review remains pending.']
+E               KeyError: 'report'
+
+scripts/generate_catalog_docs.py:245: KeyError
+=========================== short test summary info ============================
+FAILED tests/test_b9_language_and_scope_policy.py::test_b9_generated_documentation_drift
+1 failed, 11 passed in 0.37s

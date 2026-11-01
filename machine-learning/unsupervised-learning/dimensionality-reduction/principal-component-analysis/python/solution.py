@@ -24,16 +24,20 @@ class PCA(support.Projection):
         if len(X) < 2 or self.n_components > min(X.shape):
             raise ValueError('PCA needs n>=2 and components<=min(n,p)')
         A, mean = support.centered(X)
-        decomposition = support.load('singular-value-decomposition').SVD().fit(A)
+        # Centering can exceed the validated raw-feature magnitude bound.
+        # Scale internally before reusing the public SVD, then restore units.
+        centered_scale = support.uniform_scale(A)
+        decomposition = support.load('singular-value-decomposition').SVD().fit(A/centered_scale)
+        physical_scale = centered_scale*decomposition.scale_
         squares = decomposition.scaled_singular_values_**2
         total = squares.sum()
         ratios = squares/total if total else np.zeros_like(squares)
         k = self.n_components
         self.__dict__.update(n_features_in_=X.shape[1], mean_=mean,
             components_=decomposition.components_[:k].copy(),
-            singular_values_=decomposition.singular_values_[:k].copy(),
-            explained_variance_=squares[:k]*decomposition.scale_**2/(len(X)-1),
-            explained_variance_ratio_=ratios[:k], total_variance_=total*decomposition.scale_**2/(len(X)-1))
+            singular_values_=decomposition.singular_values_[:k]*centered_scale,
+            explained_variance_=squares[:k]*physical_scale**2/(len(X)-1),
+            explained_variance_ratio_=ratios[:k], total_variance_=total*physical_scale**2/(len(X)-1))
         return self
 
     @support.numerical

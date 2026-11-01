@@ -1,0 +1,29 @@
+{
+  "label": "projection",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/anomaly-detection/one-class-svm",
+    "-k",
+    "projection",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/anomaly-detection/one-class-svm",
+    "-k",
+    "projection",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/projection-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-01T17:59:12.591536+06:00",
+  "elapsed_seconds": 0.784,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/anomaly-detection-evidence/projection-01.txt"
+}

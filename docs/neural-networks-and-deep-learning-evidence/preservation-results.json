@@ -1,0 +1,106 @@
+{
+  "status": "passed",
+  "inventory": {
+    "categories": 35,
+    "memberships": 256,
+    "canonicals": 235
+  },
+  "B7_canonicals": 14,
+  "implemented": 14,
+  "new_implementations": 13,
+  "preserved_vanilla": 1,
+  "protected_preexisting_files": 2447,
+  "historical_artifacts_omitted_from_export": [],
+  "lessons": [
+    {
+      "id": "vanilla-autoencoders",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "multilayer-perceptron",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "convolutional-neural-networks",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "recurrent-neural-networks",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "long-short-term-memory",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "gated-recurrent-units",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "transformers",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "generative-adversarial-networks",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "variational-autoencoders",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "diffusion-models",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "graph-neural-networks",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "residual-networks",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "denoising-autoencoders",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    },
+    {
+      "id": "sparse-autoencoders",
+      "sections": 25,
+      "python": "from scratch",
+      "cpp": "optional, absent"
+    }
+  ],
+  "B1_B2_B3_B4_B5_B6_DSA_preservation": "all approved implementations/tests/lessons/reports/evidence/packages byte-identical",
+  "phase18_owner_approval": "approved",
+  "phase19_owner_approval": "pending",
+  "report_tracking": "tracked and unignored",
+  "core_external_estimator_imports": "none",
+  "language_policy": "DSA Python/C++ mandatory; ML Python mandatory, C++ optional"
+}

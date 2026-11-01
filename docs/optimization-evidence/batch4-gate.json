@@ -1,0 +1,114 @@
+{
+  "batch": 4,
+  "topics": [
+    "genetic-algorithms",
+    "simulated-annealing"
+  ],
+  "returncode": 0,
+  "counts": {
+    "tests": 62,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "execution": {
+    "label": "batch4-audit",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/optimization/genetic-algorithms",
+      "machine-learning/optimization/simulated-annealing",
+      "machine-learning/optimization/tests/test_search_contracts.py",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/optimization/genetic-algorithms",
+      "machine-learning/optimization/simulated-annealing",
+      "machine-learning/optimization/tests/test_search_contracts.py",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/optimization-evidence/batch4-audit-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T21:34:19.245345+06:00",
+    "elapsed_seconds": 0.275,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/optimization-evidence/batch4-audit-01.txt"
+  },
+  "examples": [
+    {
+      "topic": "genetic-algorithms",
+      "command": [
+        "python",
+        "machine-learning/optimization/genetic-algorithms/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"converged\": true, \"initial_best\": 4.0, \"iterations\": 9, \"known_target_value\": 0, \"objective\": 0.0, \"objective_evaluations\": 111, \"seed\": 22, \"status\": \"target-reached\", \"x\": [1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0]}\n",
+      "sections": 25,
+      "parsed": {
+        "converged": true,
+        "initial_best": 4.0,
+        "iterations": 9,
+        "known_target_value": 0,
+        "objective": 0.0,
+        "objective_evaluations": 111,
+        "seed": 22,
+        "status": "target-reached",
+        "x": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "topic": "simulated-annealing",
+      "command": [
+        "python",
+        "machine-learning/optimization/simulated-annealing/python/example.py"
+      ],
+      "returncode": 0,
+      "output": "{\"converged\": true, \"initial_best\": 6.0, \"iterations\": 48, \"known_target_value\": 0, \"objective\": 0.0, \"objective_evaluations\": 49, \"seed\": 22, \"status\": \"target-reached\", \"x\": [1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0]}\n",
+      "sections": 25,
+      "parsed": {
+        "converged": true,
+        "initial_best": 6.0,
+        "iterations": 48,
+        "known_target_value": 0,
+        "objective": 0.0,
+        "objective_evaluations": 49,
+        "seed": 22,
+        "status": "target-reached",
+        "x": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      }
+    }
+  ],
+  "lesson_sections": 25
+}

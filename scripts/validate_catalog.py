@@ -233,6 +233,35 @@ def _validate_development(
     if status == "awaiting-review" and active is not None:
         report.errors.append("development.awaiting-review requires active_batch=null")
 
+    if state.get("mode") == "final-ml-audit":
+        # A track audit is not an implementation batch or a new category.
+        expected_categories = [f"B{i}" for i in range(1, 14)]
+        if (state.get("phase_number") != 26 or state.get("track") != "machine-learning"
+                or state.get("category") is not None or state.get("audit_categories") != expected_categories):
+            report.errors.append("development final ML audit must be Phase26 over exactly B1–B13")
+        streams = state.get("audit_workstreams")
+        if not isinstance(streams, list) or len(streams) != 7 or any(not _nonempty(x) for x in streams) or len(set(streams)) != 7:
+            report.errors.append("development final ML audit requires seven distinct workstreams")
+        if valid_completed and (len(completed) > 7 or (status == "awaiting-review" and completed != list(range(1, 8)))):
+            report.errors.append("development final ML audit completion must cover all seven workstreams")
+        owned = {aid: a for aid, a in algorithms.items() if a.get("category") in expected_categories}
+        if {a.get("category") for a in owned.values()} != set(expected_categories):
+            report.errors.append("development final ML audit must cover every B category")
+        for aid, record in owned.items():
+            if aid == "dynamic-policy-optimization":
+                decision = state.get("dpo_specification_decision", {})
+                if (record.get("category") != "B8" or record.get("canonical_location") != "machine-learning/reinforcement-learning/dynamic-policy-optimization"
+                        or not all(record.get(k) == "blocked" for k in STATUS_FIELDS)
+                        or not isinstance(decision, dict) or decision.get("owner_approval") != "approved"
+                        or decision.get("decision") != "remain-blocked" or decision.get("substitution_authorized") is not False):
+                    report.errors.append("development final ML audit must preserve exact approved DPO blocker")
+            elif not is_complete(record):
+                report.errors.append(f"development final ML audit requires implemented/tested {aid}")
+        final = state.get("phase_records", {}).get("26", {})
+        if final.get("owner_approval") != "pending" or state.get("current_review", {}).get("owner_approval") != "pending":
+            report.errors.append("development final ML audit owner approval must remain pending")
+        return
+
     if state.get("track") == "machine-learning":
         category = state.get("category")
         # B5 includes the one existing NumPy autoencoder owned by B7.
@@ -259,6 +288,19 @@ def _validate_development(
                 report.errors.append("development ML completed batches must match its batch_plan")
             for batch in plan[:len(completed)]:
                 for aid in batch:
+                    # Phase20 explicitly requires a blocker REVIEW, not an invented
+                    # implementation, for this unresolved original syllabus label.
+                    # This exception accepts only that exact identity and all four
+                    # blocked fields; is_complete() and every other ML gate stay strict.
+                    record = algorithms.get(aid, {})
+                    if (state.get('phase_number') == 20 and category == 'B8'
+                            and aid == 'dynamic-policy-optimization'
+                            and isinstance(state.get('blocker_reviews'), dict)
+                            and state['blocker_reviews'].get(aid) == 'verified-blocked'
+                            and record.get('canonical_location') == 'machine-learning/reinforcement-learning/dynamic-policy-optimization'
+                            and all(record.get(field) == 'blocked' for field in STATUS_FIELDS)
+                            and _nonempty(record.get('notes'))):
+                        continue
                     if not is_complete(algorithms.get(aid, {})):
                         report.errors.append(f"development: completed ML batch requires {aid} with required tested deliverables")
         return

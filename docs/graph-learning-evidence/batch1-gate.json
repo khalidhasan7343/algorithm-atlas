@@ -1,0 +1,53 @@
+{
+  "batch": 1,
+  "topic": "pagerank",
+  "returncode": 0,
+  "counts": {
+    "tests": 43,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/graph-learning/pagerank",
+    "-q"
+  ],
+  "execution": {
+    "label": "batch1",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/graph-learning/pagerank",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/graph-learning/pagerank",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/graph-learning-evidence/batch1-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-10-31T19:21:40.731713+06:00",
+    "elapsed_seconds": 0.236,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/graph-learning-evidence/batch1-01.txt"
+  },
+  "lesson_sections": 25,
+  "example": {
+    "command": [
+      "python",
+      "machine-learning/graph-learning/pagerank/python/example.py"
+    ],
+    "returncode": 0,
+    "output": "{\"adjacency\": [[0, 1, 1], [0, 0, 1], [0, 0, 0]], \"converged\": true, \"damping\": 0.85, \"scores\": [0.19757965, 0.281551, 0.52086935], \"sum\": 1.0, \"transition\": [[0.0, 0.5, 0.5], [0.0, 0.0, 1.0], [0.33333333, 0.33333333, 0.33333333]]}\n",
+    "sections": 25
+  }
+}

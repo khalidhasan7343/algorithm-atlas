@@ -1,0 +1,31 @@
+{
+  "topic": "holt-winters",
+  "command": [
+    "python",
+    "machine-learning/time-series/holt-winters/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"level\": 14.75, \"trend\": 0.25, \"seasonal\": [-1.0, 1.0], \"forecast\": [14.0, 16.25, 14.5, 16.75], \"index\": [20.0, 21.0, 22.0, 23.0], \"status\": \"fixed-coefficient-recursion\"}\n",
+  "parsed": {
+    "level": 14.75,
+    "trend": 0.25,
+    "seasonal": [
+      -1.0,
+      1.0
+    ],
+    "forecast": [
+      14.0,
+      16.25,
+      14.5,
+      16.75
+    ],
+    "index": [
+      20.0,
+      21.0,
+      22.0,
+      23.0
+    ],
+    "status": "fixed-coefficient-recursion"
+  },
+  "sections": 25
+}

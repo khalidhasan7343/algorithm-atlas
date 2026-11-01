@@ -1,0 +1,29 @@
+{
+  "label": "review-B2-GNB-before",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/supervised-learning/classification/gaussian-naive-bayes",
+    "-k",
+    "far_identical or far_nearly",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/supervised-learning/classification/gaussian-naive-bayes",
+    "-k",
+    "far_identical or far_nearly",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/ml-final-audit-evidence/review-B2-GNB-before-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-01T19:44:28.759708+06:00",
+  "elapsed_seconds": 0.865,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 1,
+  "output": "docs/ml-final-audit-evidence/review-B2-GNB-before-01.txt"
+}

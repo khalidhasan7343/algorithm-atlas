@@ -10,12 +10,12 @@ from scripts.validate_catalog import SECTIONS,validate_repository
 AUTO=dict(id='vanilla-autoencoders',category='B7',canonical_location='machine-learning/deep-learning/vanilla-autoencoders')
 
 
-def test_shared_numpy_autoencoder_only_exception():
-    assert track(AUTO)=='machine-learning' and not cpp_required(AUTO)
-    for field,value in [('id','other-autoencoder'),('category','B5'),('canonical_location','machine-learning/deep-learning/other-topic')]:
-        record=dict(AUTO,**{field:value})
-        assert track(record)=='deferred' and cpp_required(record)
-    for location in ['dsa/sorting/bubble-sort','artificial-intelligence/local-search/hill-climbing','machine-learning/deep-learning/denoising-autoencoders']:
+def test_phase19_ml_policy_preserves_dsa_ai_requirements():
+    # Phase19 explicitly authorizes B7 NumPy, replacing its former deferred rule.
+    for location in [AUTO['canonical_location'],'machine-learning/deep-learning/denoising-autoencoders','machine-learning/supervised-learning/regression/sample']:
+        assert track(dict(canonical_location=location))=='machine-learning'
+        assert not cpp_required(dict(canonical_location=location))
+    for location in ['dsa/sorting/bubble-sort','artificial-intelligence/local-search/hill-climbing']:
         assert cpp_required(dict(canonical_location=location))
 
 

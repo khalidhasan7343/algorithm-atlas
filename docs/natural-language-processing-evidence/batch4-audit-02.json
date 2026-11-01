@@ -1,0 +1,29 @@
+{
+  "label": "batch4-audit",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/natural-language-processing/hidden-markov-models-pos-tagging",
+    "machine-learning/natural-language-processing/conditional-random-fields",
+    "machine-learning/natural-language-processing/named-entity-recognition",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/natural-language-processing/hidden-markov-models-pos-tagging",
+    "machine-learning/natural-language-processing/conditional-random-fields",
+    "machine-learning/natural-language-processing/named-entity-recognition",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/batch4-audit-02.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-01T18:58:34.730334+06:00",
+  "elapsed_seconds": 0.418,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/natural-language-processing-evidence/batch4-audit-02.txt"
+}

@@ -8,9 +8,9 @@ This category preserves **3 original syllabus entries**. Each link points to the
 
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| PageRank | [pagerank](pagerank/README.md) | planned |
-| Node2Vec | [node2vec](node2vec/README.md) | planned |
-| Graph Convolutional Networks (GCN) | [graph-convolutional-networks](graph-convolutional-networks/README.md) | planned |
+| PageRank | [pagerank](pagerank/README.md) | complete |
+| Node2Vec | [node2vec](node2vec/README.md) | complete |
+| Graph Convolutional Networks (GCN) | [graph-convolutional-networks](graph-convolutional-networks/README.md) | complete |
 
 ## Learning and contribution scope
 

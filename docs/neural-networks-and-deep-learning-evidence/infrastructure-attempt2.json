@@ -1,0 +1,24 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests",
+    "--require-cpp",
+    "-q"
+  ],
+  "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+  "timestamp": "2026-10-30T15:53:20.921065+06:00",
+  "elapsed_seconds": 3.824,
+  "returncode": 0,
+  "timed_out": false,
+  "timeout_seconds": 1200,
+  "environment": {
+    "CXX": null,
+    "PYTHONHASHSEED": "0",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "log": "docs/neural-networks-and-deep-learning-evidence/infrastructure-attempt2.txt",
+  "summary": "330 passed in 3.67s"
+}

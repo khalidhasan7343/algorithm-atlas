@@ -1,0 +1,29 @@
+{
+  "label": "vocabulary",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/natural-language-processing/tests/test_text_contracts.py",
+    "-k",
+    "vocabulary or pretokenized",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/natural-language-processing/tests/test_text_contracts.py",
+    "-k",
+    "vocabulary or pretokenized",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/vocabulary-02.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-01T19:05:24.029476+06:00",
+  "elapsed_seconds": 0.726,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/natural-language-processing-evidence/vocabulary-02.txt"
+}

@@ -1,5 +1,7 @@
 # Phase review packages
 
+**Current checkpoint:** Phase23 B11 is owner-approved; Phase24 B12 owner review is pending. B8 remains9 completed+1 intentionally blocked. Older chronological paragraphs retain their handoff-time statuses; current approvals are recorded in catalog.yaml.
+
 Six existing ZIPs and twelve checksum/verification sidecars were relocated without changing their bytes (6,919,849 ZIP bytes total). Five package sets were already tracked. The Graph set was local and untracked; cleanup preserves that status. None was ignored. Availability below describes the working checkout at maintenance time, not a guarantee that local untracked files exist in a fresh clone.
 
 | Phase | Availability at cleanup | ZIP bytes |
@@ -63,3 +65,19 @@ Dimensionality Reduction](dimensionality-reduction/README.md). Its new review is
 pending; previous package/evidence bytes remain historical and unchanged.
 
 The owner approved latest Phase17 and authorized [Phase18 Association Rule Learning](association-rule-learning/README.md). New review pending; all older package/report/evidence bytes and generation-time statuses remain preserved.
+
+After explicit Phase18 acceptance, [Phase19 Neural Networks and Deep Learning](neural-networks-and-deep-learning/README.md) covers14 B7 canonicals only. New review pending; all historical package bytes preserved.
+
+- Phase20 B8 — Reinforcement Learning: [review package](reinforcement-learning/README.md); nine completed algorithms plus one intentionally blocked DPO; Outcome3 owner-approved: remain blocked; Phase20 implementation review owner-approved on2026-10-31 Asia/Dhaka; original handoff artifacts remain historical.
+
+- Phase21 B9: [Graph-learning package](graph-learning/README.md); three canonicals,owner-approved on2026-10-31 Asia/Dhaka. The accepted Phase20 package and DPO research/decision remain preserved.
+
+- Phase22 B10: [Optimization review](optimization/README.md);10 existing canonicals in4 batches,new owner review pending. Prior artifacts remain historical and unchanged.
+
+Phase23 [Time Series package](time-series/README.md) is the current owner-review checkpoint. Phase22 Optimization is subsequently approved;historical bytes remain unchanged.
+
+Current Phase24 [Anomaly Detection package](anomaly-detection/README.md);owner review pending. Phase23 Time Series is subsequently approved;historical bytes are preserved.
+
+Current [Phase25 NLP package](natural-language-processing/README.md); owner review pending. Phase24 B12 is subsequently approved; historical bytes preserved.
+
+Current [Phase26 final ML audit package](machine-learning/README.md);final owner sign-off pending. Phase25 is approved;historical package bytes preserved.

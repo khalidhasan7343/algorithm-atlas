@@ -6,8 +6,6 @@ Discovering groups through geometric, density, probabilistic, and graph-based st
 
 This category preserves **8 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
-
-Phase 16 Clustering and its latest verified package are owner-approved. All eight canonical implementations, tests, lessons and historical artifacts are preserved.
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
 | K-Means | [k-means](k-means/README.md) | complete |

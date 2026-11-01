@@ -1,0 +1,27 @@
+{
+  "batch3": {
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/deep-learning/recurrent-neural-networks",
+      "machine-learning/deep-learning/long-short-term-memory",
+      "machine-learning/deep-learning/gated-recurrent-units",
+      "-q"
+    ],
+    "interpreter": "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "timestamp": "2026-10-30T15:40:31.338071+06:00",
+    "elapsed_seconds": 0.272,
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_seconds": 1200,
+    "environment": {
+      "CXX": null,
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "log": "docs/neural-networks-and-deep-learning-evidence/batch3-attempt2.txt",
+    "summary": "12 passed in 0.14s"
+  }
+}

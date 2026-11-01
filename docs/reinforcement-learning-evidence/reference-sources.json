@@ -1,0 +1,66 @@
+{
+  "client_date": "2026-10-31 Asia/Dhaka",
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/1312.5602",
+      "status": "abstract/bibliographic page retrieved",
+      "role": "DQN replay and neural action-value motivation; later hard-target variant documented separately"
+    },
+    {
+      "url": "https://www.nature.com/articles/nature14236",
+      "status": "tool could not access identity-provider redirect",
+      "role": "later hard-target DQN formulation; no claim of full-paper retrieval"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v48/mniha16.html",
+      "status": "primary proceedings page retrieved",
+      "role": "asynchronous n-step actor-critic; lock-protected deviation disclosed"
+    },
+    {
+      "url": "https://arxiv.org/abs/1707.06347",
+      "status": "primary abstract/bibliographic page retrieved",
+      "role": "PPO clipped surrogate"
+    },
+    {
+      "url": "https://arxiv.org/abs/1509.02971",
+      "status": "primary abstract/bibliographic page retrieved",
+      "role": "DDPG continuous actor-critic"
+    },
+    {
+      "url": "https://www.incompleteideas.net/book/bookdraft2018mar21.pdf",
+      "status": "502 from retrieval tool",
+      "role": "author-hosted textbook reference, chapter6 tabular TD/chapter13 policy gradient; no full-paper retrieval claimed"
+    },
+    {
+      "url": "http://incompleteideas.net/book/RLbook2020.pdf",
+      "status": "502 from retrieval tool",
+      "role": "alternate author-hosted textbook endpoint"
+    },
+    {
+      "url": "https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf",
+      "status": "retrieval tool timeout",
+      "role": "alternate textbook mirror"
+    },
+    {
+      "url": "https://www.cs.utexas.edu/~shivaram/readings/b2hd-KocsisSzepesvari2006.html",
+      "status": "bibliographic record retrieved; original paper link present",
+      "role": "original UCT planning paper identity"
+    },
+    {
+      "url": "https://sites.ualberta.ca/~szepesva/papers/uct.pdf",
+      "status": "retrieval tool inaccessible",
+      "role": "attempted author-hosted original UCT paper"
+    },
+    {
+      "url": "https://aima.cs.berkeley.edu/~russell/classes/cs294/s11/readings/Kocsis%2BSzepesvari:2006.pdf",
+      "status": "Original UCT paper retrieved from university course mirror; selection and rollout sections inspected",
+      "role": "primary UCT formula and planning mechanism"
+    },
+    {
+      "url": "https://www.cmap.polytechnique.fr/~lepennec/files/RL/Sutton.pdf",
+      "status": "retrieval tool rejected22.8MB content length",
+      "role": "alternate textbook mirror"
+    }
+  ],
+  "method": "No external code/prose copied; objectives and analytic derivatives independently expressed and numerically checked; access failures are not algorithm test failures."
+}

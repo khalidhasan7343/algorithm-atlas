@@ -1,0 +1,105 @@
+{
+  "access_date": "2026-10-31 Asia/Dhaka",
+  "sources": [
+    {
+      "method": "Batch/SGD/mini-batch",
+      "url": "https://leon.bottou.org/publications/pdf/compstat-2010.pdf",
+      "title": "Large-Scale Machine Learning with Stochastic Gradient Descent",
+      "author": "Leon Bottou",
+      "year": 2010,
+      "access": "Parsed author-hosted10-page paper accessible; finite-sum gradient methods inspected. Random reshuffling is explicitly distinguished from iid sampling."
+    },
+    {
+      "method": "Momentum",
+      "url": "https://www.mathnet.ru/php/archive.phtml?jrnid=zvmmf&option_lang=eng&paperid=7713&wshow=paper",
+      "title": "Some methods of speeding up the convergence of iteration methods",
+      "author": "B.T.Polyak",
+      "year": 1964,
+      "access": "Journal metadata accessible; no unavailable full-text read claimed. Exact heavy-ball recurrence is stated and independently tested."
+    },
+    {
+      "method": "RMSProp/mini-batch",
+      "url": "https://www.cs.toronto.edu/~hinton/coursera/lecture6/lec6.pdf",
+      "title": "Neural Networks for Machine Learning,lecture6",
+      "year": 2012,
+      "access": "Original31-page lecture PDF accessible. Uncentered/no-bias-correction/outside-sqrt stabilizer is the explicit project variant."
+    },
+    {
+      "method": "Adam",
+      "url": "https://arxiv.org/abs/1412.6980",
+      "pdf": "https://arxiv.org/pdf/1412.6980",
+      "authors": [
+        "Diederik P.Kingma",
+        "Jimmy Lei Ba"
+      ],
+      "year": "2015 ICLR;2014 preprint",
+      "access": "Parsed15-page paper accessible; moment/bias-correction method inspected.",
+      "title": "Adam: A Method for Stochastic Optimization"
+    },
+    {
+      "method": "AdamW",
+      "url": "https://arxiv.org/abs/1711.05101",
+      "pdf": "https://arxiv.org/pdf/1711.05101",
+      "authors": [
+        "Ilya Loshchilov",
+        "Frank Hutter"
+      ],
+      "year": "2019 ICLR;2017 preprint",
+      "access": "Parsed19-page paper accessible; decoupled versus coupled regularization inspected.",
+      "title": "Decoupled Weight Decay Regularization"
+    },
+    {
+      "method": "L-BFGS",
+      "url": "https://doi.org/10.1007/BF01589116",
+      "title": "On the limited memory BFGS method for large scale optimization",
+      "authors": [
+        "Dong C.Liu",
+        "Jorge Nocedal"
+      ],
+      "year": 1989,
+      "access": "Metadata verified. University-hosted original scan is accessible but extracted fonts are garbled; no full readable extraction is claimed."
+    },
+    {
+      "method": "L-BFGS/gradient methods",
+      "url": "https://arxiv.org/abs/1606.04838",
+      "pdf": "https://arxiv.org/pdf/1606.04838",
+      "title": "Optimization Methods for Large-Scale Machine Learning",
+      "authors": [
+        "Leon Bottou",
+        "Frank E.Curtis",
+        "Jorge Nocedal"
+      ],
+      "year": 2018,
+      "access": "Clear author research review accessible; limited-memory/gradient method framework inspected."
+    },
+    {
+      "method": "Genetic algorithms",
+      "url": "https://mitpress.mit.edu/9780262631853/an-introduction-to-genetic-algorithms/",
+      "title": "An Introduction to Genetic Algorithms",
+      "author": "Melanie Mitchell",
+      "access": "Publisher metadata/description accessible; no full book read or copied implementation claimed. Tournament/uniform/bit-flip variant is a declared project specification."
+    },
+    {
+      "method": "Simulated annealing",
+      "url": "https://hedibert.org/wp-content/uploads/2013/12/1983KirkpatrickGelattVecchi.pdf",
+      "title": "Optimization by Simulated Annealing",
+      "authors": [
+        "S.Kirkpatrick",
+        "C.D.Gelatt",
+        "M.P.Vecchi"
+      ],
+      "year": 1983,
+      "access": "Parsed12-page archived Science paper accessible; Metropolis/cooling framework inspected."
+    }
+  ],
+  "unavailable": [
+    {
+      "url": "https://doi.org/10.7551/MITPRESS/1090.001.0001",
+      "result": "403; no full book read claimed."
+    },
+    {
+      "url": "https://personal.utdallas.edu/~zhoud/EE%207v88/lect%207/KirkpatrickGelattVecchi83.pdf",
+      "result": "Redirected to unrelated institutional webpage; not used as paper evidence."
+    }
+  ]
+}

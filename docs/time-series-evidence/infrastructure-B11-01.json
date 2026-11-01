@@ -1,0 +1,25 @@
+{
+  "label": "infrastructure-B11",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "tests/test_b11_language_and_scope_policy.py",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "tests/test_b11_language_and_scope_policy.py",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/infrastructure-B11-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-01T00:32:01.892865+06:00",
+  "elapsed_seconds": 0.441,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/time-series-evidence/infrastructure-B11-01.txt"
+}

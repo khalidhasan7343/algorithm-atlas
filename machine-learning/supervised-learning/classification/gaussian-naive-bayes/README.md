@@ -34,7 +34,7 @@ Know Gaussian mean/variance, log densities, Bayes' rule and conditional independ
 2. Use empirical priors or validate supplied positive priors summing to one in sorted class order.
 3. Compute the global population variances and epsilon using the explicit max(1,variance) scale. For each class calculate feature means and population variances, then add epsilon.
 4. On query, compute each class's joint log density one class at a time; this avoids allocating an m×c×p tensor.
-5. Predict the first maximum in sorted class order. For probabilities subtract the row maximum from log scores before exponentiating and divide by the shifted sum.
+5. For prediction/probabilities evaluate equivalent comparative scores against class0 before adding log priors. With r=x−μ0,d=μ0−μk, the quadratic difference is r²(v0−vk)/(vk·v0)+d(2r+d)/vk, summed with log(vk/v0). This cancels common large density terms before they can erase priors or small mean differences. Predict the first maximum; subtract the comparative row maximum before posterior normalization. `decision_function` retains the original raw joint-log-density definition.
 6. Fit commits statistics only after successful validation/numerical work; a failed refit preserves prior state.
 
 There is no iterative optimizer, gradient stopping criterion or convergence budget. Estimated moments maximize the separate Gaussian likelihoods before smoothing; smoothing deliberately modifies that statistical estimate.
@@ -109,7 +109,7 @@ Fast, small-state, multiclass and transparent. Every class score decomposes into
 
 ## 18. Disadvantages and Limitations
 
-Conditional independence and within-class Gaussian assumptions can be poor. Correlated features can count related evidence more than once and distort probabilities. The unit-scale floor means smoothing depends on feature units; match it explicitly in external comparisons. A positive variance floor ensures numerical denominators, not accurate density estimation or calibration. No full covariance, missing-value policy, sparse arrays or sample weights are implemented.
+Conditional independence and within-class Gaussian assumptions can be poor. Correlated features can count related evidence more than once and distort probabilities. The unit-scale floor means smoothing depends on feature units; match it explicitly in external comparisons. A positive variance floor ensures numerical denominators, not accurate density estimation or calibration. Absolute raw float64 joint scores can lose small differences when a class-common negative density term is enormous; `predict` and `predict_proba` use algebraically equivalent comparative scores to preserve these differences. A genuinely ill-resolved relative expression still has floating-point limits. No full covariance, missing-value policy, sparse arrays or sample weights are implemented.
 
 ## 19. When to Use It
 

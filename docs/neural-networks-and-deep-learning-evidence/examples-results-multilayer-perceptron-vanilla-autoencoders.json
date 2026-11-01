@@ -1,0 +1,39 @@
+[
+  {
+    "id": "multilayer-perceptron",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "loss_initial": 0.7064654793541177,
+      "loss_final": 0.0032179842591330116,
+      "optimization_status": "fixed-budget-completed",
+      "prediction": [
+        0,
+        1,
+        1,
+        0
+      ]
+    }
+  },
+  {
+    "id": "vanilla-autoencoders",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "embedding": [
+        [
+          0.9204819714528826
+        ],
+        [
+          0.0
+        ],
+        [
+          -0.9204819714528826
+        ]
+      ],
+      "optimization_status": "gradient-tolerance"
+    }
+  }
+]

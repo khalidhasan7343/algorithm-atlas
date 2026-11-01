@@ -1,0 +1,18 @@
+{
+  "label": "scope",
+  "command": [
+    "python",
+    "scripts/verify_natural_language_processing_scope.py"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "scripts/verify_natural_language_processing_scope.py"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-01T19:04:47.494290+06:00",
+  "elapsed_seconds": 1.279,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/natural-language-processing-evidence/scope-01.txt"
+}

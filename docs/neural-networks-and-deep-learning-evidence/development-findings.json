@@ -1,0 +1,33 @@
+[
+  {
+    "id": "B7-001",
+    "kind": "validation runner selection defect",
+    "evidence": "targeted-results.json first attempt / randomized-attempt1.json",
+    "finding": "Inherited B6 -k randomized matched zero neural test names; pytest returned5 after92 algorithm tests passed.",
+    "fix": "Replace with actual B7 forward/backprop/finite_difference/reproducibility selections. No test skipped or disabled."
+  },
+  {
+    "id": "B7-002",
+    "kind": "runner edit syntax defect",
+    "finding": "During selector update, py_compile reported an unclosed job-list bracket at line68.",
+    "fix": "Close the nested list; subsequent compile and targeted run passed."
+  },
+  {
+    "id": "B7-003",
+    "kind": "new diffusion API defect found by inspection",
+    "finding": "Raw NumPy indexing would accept negative timesteps and broadcast a mismatched noise array.",
+    "fix": "Validate timestep vector/range/noise shape and reverse-step index; add explicit rejection test. No prior approved implementation changed."
+  },
+  {
+    "id": "B7-004",
+    "kind": "new-model numerical/API audit",
+    "finding": "Nonfinite tampered parameter state could propagate NaN silently; VAE latent coordinates use different units from raw input; mixed bool binary labels could coerce to integers.",
+    "fix": "Check numerical outputs for finiteness, give VAE a finite latent-coordinate validator, and validate binary labels before coercion. Cross-model tests verify these contracts."
+  },
+  {
+    "id": "B7-005",
+    "kind": "intermediate status reconciliation",
+    "finding": "Catalog check during editing returned1 with26 planned-status/artifact mismatches for13 newly implemented topics.",
+    "fix": "Promote only after actual passing batches, complete lessons and executed examples; keep validator unchanged. No final status mismatch remains."
+  }
+]

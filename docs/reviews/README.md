@@ -1,10 +1,13 @@
 # Phase review reports
 
+**Current checkpoint:** Phase23 B11 is owner-approved; Phase24 B12 owner review is pending. B8 remains9 completed+1 intentionally blocked. Older chronological paragraphs retain their handoff-time statuses; current approvals are recorded in catalog.yaml.
+
 Review and audit reports are organized by canonical phase name. Their filenames and historical findings are preserved; relative links and live artifact paths were adjusted during the [root cleanup](../maintenance/root-cleanup/REPORT.md). The owner officially approved completed Phase 10 on 2026-10-24 (Asia/Dhaka), authorizing combined Phase 11 Number Theory and Phase 12 Two Pointers & Sliding Window in normal roadmap order. Phases 8 and 9 remain approved. The two new owner approvals remain independently pending; see [Number Theory checkpoints](../number-theory-checkpoints.md) and [window checkpoints](../two-pointers-sliding-window-checkpoints.md). Historical reports preserve their handoff-time statements.
 
 | Phase | Report |
 | --- | --- |
-| association-rule-learning (Phase18 B6; review pending) | [ASSOCIATION-RULE-LEARNING-REVIEW-REPORT.md](association-rule-learning/ASSOCIATION-RULE-LEARNING-REVIEW-REPORT.md) |
+| neural-networks-and-deep-learning (Phase19 B7; review pending) | [NEURAL-NETWORKS-AND-DEEP-LEARNING-REVIEW-REPORT.md](neural-networks-and-deep-learning/NEURAL-NETWORKS-AND-DEEP-LEARNING-REVIEW-REPORT.md) |
+| association-rule-learning (Phase18 B6; subsequently approved) | [ASSOCIATION-RULE-LEARNING-REVIEW-REPORT.md](association-rule-learning/ASSOCIATION-RULE-LEARNING-REVIEW-REPORT.md) |
 | dimensionality-reduction (Phase 17 B5; subsequently approved) | [DIMENSIONALITY-REDUCTION-REVIEW-REPORT.md](dimensionality-reduction/DIMENSIONALITY-REDUCTION-REVIEW-REPORT.md) |
 | clustering (Phase 16 ML; subsequently approved) | [CLUSTERING-REVIEW-REPORT.md](clustering/CLUSTERING-REVIEW-REPORT.md) |
 | ensemble-methods (Phase 15 ML; subsequently approved) | [ENSEMBLE-METHODS-REVIEW-REPORT.md](ensemble-methods/ENSEMBLE-METHODS-REVIEW-REPORT.md) |
@@ -62,3 +65,19 @@ Only its shared NumPy autoencoder uses an existing B7 canonical; other B7 work i
 deferred. New Phase 17 review pending; historical statuses remain unchanged.
 
 The owner accepted the latest Phase17 package and authorized [Phase18 B6](association-rule-learning/ASSOCIATION-RULE-LEARNING-REVIEW-REPORT.md). Three canonicals plus a shared rule utility only; new owner review pending. Historical handoff statuses remain unchanged.
+
+Owner accepted latest Phase18 and authorized only [Phase19 B7](neural-networks-and-deep-learning/NEURAL-NETWORKS-AND-DEEP-LEARNING-REVIEW-REPORT.md):14 canonicals,7 batches,shared vanilla AE preserved. New review pending; historical artifacts unchanged.
+
+- Phase20 B8 — Reinforcement Learning: [review report](reinforcement-learning/REINFORCEMENT-LEARNING-REVIEW-REPORT.md); nine completed algorithms plus one intentionally blocked DPO; Outcome3 owner-approved: remain blocked; Phase20 implementation review owner-approved on2026-10-31 Asia/Dhaka; original handoff artifacts remain historical.
+
+- Phase21 B9: [Graph-learning review](graph-learning/GRAPH-LEARNING-REVIEW-REPORT.md),three existing canonicals; owner-approved on2026-10-31 Asia/Dhaka. Phase20 handoff is now owner-approved as9 completed+1 intentionally blocked; its historical artifacts remain unchanged.
+
+- Phase22 B10: [Optimization review](optimization/OPTIMIZATION-REVIEW-REPORT.md);10 existing canonicals in4 batches,new owner review pending. Prior artifacts remain historical and unchanged.
+
+Current Phase23 [Time Series report](time-series/TIME-SERIES-REVIEW-REPORT.md);owner approval pending. The [Phase22 Optimization report](optimization/OPTIMIZATION-REVIEW-REPORT.md) is subsequently owner-approved;its historical bytes retain the handoff state.
+
+Current Phase24 [Anomaly Detection report](anomaly-detection/ANOMALY-DETECTION-REVIEW-REPORT.md);owner review pending. Phase23 Time Series is subsequently owner-approved;historical report bytes retain their handoff state.
+
+Current [Phase25 B13 NLP review](natural-language-processing/NATURAL-LANGUAGE-PROCESSING-REVIEW-REPORT.md) awaits owner review. Phase24 B12 is subsequently approved;historical reports/evidence/package bytes remain unchanged.
+
+Current [Phase26 final ML audit](machine-learning/ML-FINAL-COMPREHENSIVE-AUDIT-REPORT.md) awaits final owner approval. Phase25 NLP is subsequently approved;historical bytes preserved.

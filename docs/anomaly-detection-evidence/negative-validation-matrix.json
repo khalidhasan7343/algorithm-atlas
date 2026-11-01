@@ -1,0 +1,75 @@
+{
+  "total": 16,
+  "passed": 16,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "cases": [
+    {
+      "name": "test_b12_python_only_valid_and_dpo_remains_blocked",
+      "status": "passed"
+    },
+    {
+      "name": "test_missing_required_python_artifact_rejected[python/solution.py]",
+      "status": "passed"
+    },
+    {
+      "name": "test_missing_required_python_artifact_rejected[tests/test_python.py]",
+      "status": "passed"
+    },
+    {
+      "name": "test_b12_artifact_identity_and_documentation_failures[partial-cpp]",
+      "status": "passed"
+    },
+    {
+      "name": "test_b12_artifact_identity_and_documentation_failures[duplicate]",
+      "status": "passed"
+    },
+    {
+      "name": "test_b12_artifact_identity_and_documentation_failures[unsafe-path]",
+      "status": "passed"
+    },
+    {
+      "name": "test_b12_artifact_identity_and_documentation_failures[sections]",
+      "status": "passed"
+    },
+    {
+      "name": "test_phase20_blocker_acknowledgement_cannot_complete_b12[dpo-in-b12-plan]",
+      "status": "passed"
+    },
+    {
+      "name": "test_phase20_blocker_acknowledgement_cannot_complete_b12[blocked-b12-bypass]",
+      "status": "passed"
+    },
+    {
+      "name": "test_dsa_and_unrelated_ai_cpp_requirements_are_preserved[dsa]",
+      "status": "passed"
+    },
+    {
+      "name": "test_dsa_and_unrelated_ai_cpp_requirements_are_preserved[ai]",
+      "status": "passed"
+    },
+    {
+      "name": "test_b12_generated_documentation_drift",
+      "status": "passed"
+    },
+    {
+      "name": "test_b12_tests_are_in_ci_discovery",
+      "status": "passed"
+    },
+    {
+      "name": "test_shared_ml_canonical_membership_does_not_require_duplicate_ai_code",
+      "status": "passed"
+    },
+    {
+      "name": "test_b12_canonical_identity_and_path_uniqueness[invalid-id]",
+      "status": "passed"
+    },
+    {
+      "name": "test_b12_canonical_identity_and_path_uniqueness[duplicate-path]",
+      "status": "passed"
+    }
+  ],
+  "validators_weakened": false,
+  "prior_tests_unchanged": true
+}

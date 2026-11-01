@@ -38,5 +38,31 @@ class GaussianNaiveBayes(_support.ProbabilisticClassifier):
             residual = X - self.theta_[k]
             result[:, k] = self.class_log_prior_[k] - 0.5 * np.sum(np.log(2 * np.pi * self.var_[k]) + residual * residual / self.var_[k], axis=1)
         return _support.finite(result, 'Gaussian joint log likelihood')
+
+    @_support.numerical
+    def _comparative_scores(self, X):
+        """Cancel class-common quadratic terms before adding small log priors."""
+        X = self._check_X(X)
+        reference_mean, reference_variance = self.theta_[0], self.var_[0]
+        residual = X - reference_mean
+        result = np.empty((len(X), len(self.classes_)))
+        for k in range(len(self.classes_)):
+            variance = self.var_[k]
+            difference = reference_mean - self.theta_[k]
+            # q_k-q_0 = r²(1/v_k-1/v_0) + d(2r+d)/v_k.
+            # These factorizations preserve equal/near-equal density differences
+            # without subtracting already rounded enormous quadratic scores.
+            inverse_difference = (reference_variance-variance)/(variance*reference_variance)
+            quadratic_difference = residual*residual*inverse_difference + difference*(2*residual+difference)/variance
+            log_ratio = np.log(variance/reference_variance)
+            result[:, k] = self.class_log_prior_[k] - .5*np.sum(log_ratio+quadratic_difference, axis=1)
+        return _support.finite(result, 'Gaussian comparative scores')
+
+    def predict_proba(self, X):
+        return _support.normalize_log_scores(self._comparative_scores(X))
+
+    def predict(self, X):
+        scores = self._comparative_scores(X)
+        return self.classes_[np.argmax(scores, axis=1)]
 if __name__ == '__main__':
     _support.main(GaussianNaiveBayes)

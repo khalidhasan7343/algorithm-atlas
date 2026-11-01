@@ -1,0 +1,18 @@
+{
+  "label": "review-B9-B12-examples",
+  "command": [
+    "python",
+    "/private/tmp/atlas_audit_b9_b12_examples.py"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "/private/tmp/atlas_audit_b9_b12_examples.py"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-01T19:47:54.635784+06:00",
+  "elapsed_seconds": 1.483,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/ml-final-audit-evidence/review-B9-B12-examples-01.txt"
+}

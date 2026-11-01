@@ -1,0 +1,25 @@
+{
+  "label": "B7",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/deep-learning",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/deep-learning",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/B7-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T10:09:30.494205+06:00",
+  "elapsed_seconds": 1.792,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/reinforcement-learning-evidence/B7-01.txt"
+}

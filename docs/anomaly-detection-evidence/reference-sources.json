@@ -1,0 +1,64 @@
+{
+  "access_date": "2026-11-01 Asia/Dhaka",
+  "sources": [
+    {
+      "method": "Isolation Forest",
+      "title": "Isolation Forest",
+      "authors": [
+        "Fei Tony Liu",
+        "Kai Ming Ting",
+        "Zhi-Hua Zhou"
+      ],
+      "year": 2008,
+      "url": "https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/icdm08b.pdf",
+      "access": "Author-hosted original10-page paper accessible. Random subsampling/splits,depth limit,leaf correction and score equations verified. Exact harmonic sums and nonconstant-feature selection are explicit implementation conventions."
+    },
+    {
+      "method": "One-Class SVM",
+      "title": "Estimating the Support of a High-Dimensional Distribution",
+      "authors": [
+        "Bernhard Scholkopf",
+        "John C.Platt",
+        "John Shawe-Taylor",
+        "Alex J.Smola",
+        "Robert C.Williamson"
+      ],
+      "year": "1999 technical report;revised2000",
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-99-87.pdf",
+      "access": "Original31-page author report accessible. Normalized dual,equality/box constraints,pairwise optimization,rho and nu1 feasible-set behavior verified."
+    },
+    {
+      "method": "LOF",
+      "title": "LOF:Identifying Density-Based Local Outliers",
+      "authors": [
+        "Markus M.Breunig",
+        "Hans-Peter Kriegel",
+        "Raymond T.Ng",
+        "Jorg Sander"
+      ],
+      "year": 2000,
+      "url": "https://sigmodrecord.org/2000/06/07/lof-identifying-density-based-local-outliers/",
+      "access": "Primary publisher listing/author metadata accessible. Indexed original-paper text verifies tie-inclusive neighborhoods,self exclusion and distinct-point density assumption. LinkedPDF fetch returned500;no full PDF parse is claimed. Our duplicate epsilon-limit and extended quantiles are declared extensions,not attributed to the original paper."
+    },
+    {
+      "method": "Independent IF reference",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+      "access": "Official API/reference accessed;installedreference version1.8.0. Independently randomized ranking only,no bitwise tree or harmonic-approximation parity."
+    },
+    {
+      "method": "Independent SVM reference",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.svm.OneClassSVM.html",
+      "access": "Installedreference1.8.0 used at nu.1/.4/.8;normalize LIBSVM coefficients/offsets/decisions by nu*n. Endpoint nu1 is tested analytically rather than claiming library parity."
+    },
+    {
+      "method": "Independent LOF reference",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.LocalOutlierFactor.html",
+      "access": "Installedreference1.8.0 compared only at unique kth distances and ordinary scales;fixed-k/+1e-10 stabilizer differs from our tie-inclusive/duplicate-limit semantics."
+    },
+    {
+      "method": "Independent numerical references",
+      "access": "SciPy1.18.1 SLSQP convex QP oracle and sklearn1.8.0 metrics;not runtime implementation dependencies."
+    }
+  ],
+  "implementation_dependencies": "NumPy/stdlib/local approved helpers only;no model delegates"
+}

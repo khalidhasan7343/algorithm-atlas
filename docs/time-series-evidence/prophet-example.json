@@ -1,0 +1,40 @@
+{
+  "topic": "prophet",
+  "command": [
+    "python",
+    "machine-learning/time-series/prophet/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"status\": \"svd-solved\", \"converged\": true, \"design_rank\": 5, \"objective\": 0.21062965, \"forecast\": [14.19055167, 15.20034129, 15.62430304, 15.32863865], \"trend\": [14.17609088, 14.4223705, 14.66865012, 14.91492975], \"seasonal\": [0.0144608, 0.77797079, 0.95565292, 0.4137089], \"index\": [56.0, 57.0, 58.0, 59.0]}\n",
+  "parsed": {
+    "status": "svd-solved",
+    "converged": true,
+    "design_rank": 5,
+    "objective": 0.21062965,
+    "forecast": [
+      14.19055167,
+      15.20034129,
+      15.62430304,
+      15.32863865
+    ],
+    "trend": [
+      14.17609088,
+      14.4223705,
+      14.66865012,
+      14.91492975
+    ],
+    "seasonal": [
+      0.0144608,
+      0.77797079,
+      0.95565292,
+      0.4137089
+    ],
+    "index": [
+      56.0,
+      57.0,
+      58.0,
+      59.0
+    ]
+  },
+  "sections": 25
+}

@@ -6,7 +6,7 @@ From Fundamental Algorithms to Advanced Artificial Intelligence — Learn, Imple
 
 Algorithm Atlas is an educational, open-source project maintained by **MD.Khalid Hasan**. Its goal is to explain algorithms from first principles through clear documentation, Python and modern C++ implementations, meaningful tests, complexity analysis, and practical applications.
 
-**Current scope: Phase18 — B6 Association Rule Learning.** Latest Phase17 explicitly owner-approved; new Phase18 review pending. Exactly Apriori, Eclat and FP-Growth plus shared rule generation. See [scope](docs/association-rule-learning-scope.md) and [checkpoints](docs/association-rule-learning-checkpoints.md). DSA Python/C++17/C++20 remain required; ML C++ optional. No Phase19/B7, commit or publication.
+**Current scope: Phase24 B12 Anomaly Detection.** Phase23 B11 is explicitly owner-approved on2026-11-01 Asia/Dhaka. Three existing canonicals in three batches;[scope](docs/anomaly-detection-scope.md),[contracts](docs/anomaly-detection-conventions.md),[checkpoints](docs/anomaly-detection-checkpoints.md). Preserve B1-B11/DSA source and blocked DPO. New Phase24 review pending;no Phase25 or publication.
 
 The [DSA final audit](docs/reviews/dsa-final-audit/DSA-FINAL-AUDIT-REPORT.md) retains its conditional recommendation and original evidence. ML authorization does not retroactively approve historical milestones.
 
@@ -167,7 +167,7 @@ Use the [complexity cheat sheet](docs/complexity-cheatsheet.md) for asymptotic n
 
 [Progress tracking](docs/progress.md) records catalog totals, completed and remaining algorithms, blockers, and the next proposed batch. The [Phase 0 review report](docs/phase-0-review.md) and [complete file inventory](docs/phase-0-files.md) document the foundation handoff. Phase 0 supplies the foundation only. The term **Dynamic Policy Optimization (DPO)** is retained from the syllabus and blocked pending clarification; it has not been replaced by Direct Preference Optimization.
 
-Previous B1–B5 and DSA work is owner-approved. [Phase18 B6](docs/association-rule-learning-checkpoints.md) is current; new review approval pending. No next category, commit, push, tag or release.
+Previous B1–B11 and DSA work is owner-approved. B8 is9 completed+1 intentionally blocked; no10/10 claim. New Phase24 B12 owner review pending. DPO decision remains owner-approved: remain blocked.
 
 ## Contribution Guidelines
 

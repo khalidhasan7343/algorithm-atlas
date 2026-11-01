@@ -1,0 +1,46 @@
+{
+  "total": 3999,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "groups": {
+    "infrastructure": 359,
+    "DSA": 1687,
+    "B7": 221,
+    "B3": 253,
+    "B9": 146,
+    "B8": 141,
+    "B2": 398,
+    "B1": 281,
+    "B6": 162,
+    "B4": 206,
+    "B5-folder": 145
+  },
+  "dsa": {
+    "cpp17": 269,
+    "cpp20": 269,
+    "python_shared": 1149
+  },
+  "B9": {
+    "graph-convolutional-networks": 43,
+    "node2vec": 42,
+    "pagerank": 43,
+    "shared-contracts": 18
+  },
+  "infrastructure": {
+    "test_b5_shared_canonical_policy": 7,
+    "test_b7_language_policy": 7,
+    "test_b8_language_and_blocker_policy": 17,
+    "test_b9_language_and_scope_policy": 12,
+    "test_bit_oracles": 1,
+    "test_cpp_toolchain": 4,
+    "test_generate_catalog_docs": 26,
+    "test_number_window_oracles": 2,
+    "test_review_paths": 10,
+    "test_string_cross_algorithms": 1,
+    "test_track_policy": 14,
+    "test_validate_catalog": 258
+  },
+  "B5_shared_vanilla_cases": 17,
+  "source_junit": "docs/graph-learning-evidence/full-suite-01.xml"
+}

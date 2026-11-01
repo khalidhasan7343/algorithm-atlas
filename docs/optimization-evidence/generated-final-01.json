@@ -1,0 +1,20 @@
+{
+  "label": "generated-final",
+  "command": [
+    "python",
+    "scripts/generate_catalog_docs.py",
+    "--check"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "scripts/generate_catalog_docs.py",
+    "--check"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T21:51:46.188874+06:00",
+  "elapsed_seconds": 0.162,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/optimization-evidence/generated-final-01.txt"
+}

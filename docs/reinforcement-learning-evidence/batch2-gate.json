@@ -1,0 +1,30 @@
+{
+  "batch": 2,
+  "test_record": "docs/reinforcement-learning-evidence/batch2-01.json",
+  "returncode": 0,
+  "examples": [
+    {
+      "topic": "deep-q-networks",
+      "command": [
+        "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+        "/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/deep-q-networks/python/example.py"
+      ],
+      "returncode": 0,
+      "sections": 25,
+      "output": "{\"loss\": 0.5, \"bias_gradient\": [0.0, -1.0]}",
+      "elapsed_seconds": 0.0635
+    },
+    {
+      "topic": "reinforce-policy-gradient",
+      "command": [
+        "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+        "/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/reinforce-policy-gradient/python/example.py"
+      ],
+      "returncode": 0,
+      "sections": 25,
+      "output": "{\"loss\": 0.6931471805599453, \"bias_gradient\": [0.5, -0.5]}",
+      "elapsed_seconds": 0.0574
+    }
+  ],
+  "dpo": "unchanged"
+}

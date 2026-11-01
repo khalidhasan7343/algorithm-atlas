@@ -1,0 +1,20 @@
+{
+  "reason": "Preserve the genuine pre-Outcome3 Phase20 package byte-for-byte; internal snapshot paths/statuses remain historical",
+  "moves": [
+    {
+      "old": "artifacts/review-packages/reinforcement-learning/algorithm-atlas-reinforcement-learning-review.zip",
+      "new": "artifacts/review-packages/reinforcement-learning/history/before-outcome3-owner-approval-2026-10-31/algorithm-atlas-reinforcement-learning-review.zip",
+      "sha256": "64f093f51fc0cb3bfa424d78548847f82c5eac97d5a83aef21abbcc94823e7a3"
+    },
+    {
+      "old": "artifacts/review-packages/reinforcement-learning/algorithm-atlas-reinforcement-learning-review.zip.sha256",
+      "new": "artifacts/review-packages/reinforcement-learning/history/before-outcome3-owner-approval-2026-10-31/algorithm-atlas-reinforcement-learning-review.zip.sha256",
+      "sha256": "77b77b3078f87fe1c0dfcd9e272c1f0e0fef1f6be3236096cb09e4bea0fadf09"
+    },
+    {
+      "old": "artifacts/review-packages/reinforcement-learning/algorithm-atlas-reinforcement-learning-review.json",
+      "new": "artifacts/review-packages/reinforcement-learning/history/before-outcome3-owner-approval-2026-10-31/algorithm-atlas-reinforcement-learning-review.json",
+      "sha256": "017025e9a16beddad1c5113176e08e96df05df1836bf248b711cb1f29dd77f88"
+    }
+  ]
+}

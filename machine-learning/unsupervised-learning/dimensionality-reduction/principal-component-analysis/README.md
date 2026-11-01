@@ -32,14 +32,15 @@ Vectors, inner products, matrix multiplication, derivatives where optimization i
 
 ## 8. Step-by-Step Working Process
 
-Compute an anchor-centered training mean, subtract it, call the single canonical Jacobi SVD, retain k rows of V and singular values, and compute variance/ratios. Queries use the retained mean. There is no automatic standardization, whitening, label use or test-set fitting.
+Compute an anchor-centered training mean, subtract it, uniformly scale the centered matrix before calling the single canonical Jacobi SVD, restore physical singular-value/variance units, retain k rows of V and singular values, and compute variance/ratios. Queries use the retained mean. There is no automatic standardization, whitening, label use or test-set fitting.
 
 ## 9. Pseudocode
 
 ```text
 mean = training feature mean
 A = X-mean
-U,s,V = canonical reduced Jacobi SVD(A)
+scale = max(abs(A)) or 1
+U,s,V = canonical reduced Jacobi SVD(A/scale); s = s*scale
 components = V[:k]; variance=s[:k]²/(n-1)
 ratio = scaled_s[:k]² / sum(scaled_s²), or zero
 transform query: (query-mean) components.T

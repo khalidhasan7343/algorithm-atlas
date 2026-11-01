@@ -1,0 +1,2014 @@
+{
+  "review_scope": "Phase26 independent B5\u2013B8 mathematical/test/documentation/resource review",
+  "canonical_count": 32,
+  "owner_counts": {
+    "B5": 6,
+    "B6": 3,
+    "B7": 14,
+    "B8": 9
+  },
+  "shared_ownership": "VanillaAEisoneB7canonicalservingB5;reviewedandcountedonce. CNNsharedC10identitypreserved.",
+  "DPO": "Acceptedblockedidentity/path/fourstatuses/research/decisionnotedited;notcountedimplementedornumericallyreviewed.",
+  "rows": [
+    {
+      "id": "principal-component-analysis",
+      "canonical_owner": "B5",
+      "canonical_path": "machine-learning/unsupervised-learning/dimensionality-reduction/principal-component-analysis",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Centered Jacobi-SVD PCA;sample covariance variances and optimal retained linear subspace.",
+      "mathematical_objective_updates_and_inference": "Centered A=U diag(s)V;Z=(X-mean)V_k^T;variance=s\u00b2/(n-1),ratios over all singular squares.",
+      "files": [
+        {
+          "path": "machine-learning/unsupervised-learning/dimensionality-reduction/principal-component-analysis/python/solution.py",
+          "sha256": "6ad3be5fc4da274c156618b7b6f769660f6f76fac234e68d0151c73723901ab9",
+          "lines": 53
+        },
+        {
+          "path": "machine-learning/unsupervised-learning/dimensionality-reduction/principal-component-analysis/tests/test_python.py",
+          "sha256": "225a690c6ae8d5f0a67d87ab61e41008e195590d462097809531f68a7902f949",
+          "lines": 70
+        },
+        {
+          "path": "machine-learning/unsupervised-learning/dimensionality-reduction/principal-component-analysis/README.md",
+          "sha256": "7cb89a843696cb719ed088f74c2a5737b48c3b4d412fc95b7e95922d06c28b03",
+          "lines": 121
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_known_covariance_projection_reconstruction",
+        "test_sklearn_and_numpy_subspaces",
+        "test_constant_rank_deficient_and_tiny",
+        "test_pca_dimension_validation",
+        "test_valid_raw_boundary_centering_does_not_reapply_input_cap",
+        "test_centered_internal_scaling_translated_multidimensional_numpy_oracle"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_known_covariance_projection_reconstruction",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand diag(8/3,2/3) covariance;NumPy/sklearn projectors and variances;new extreme valid-input and translated full reconstruction oracles."
+        },
+        {
+          "test_name": "test_sklearn_and_numpy_subspaces",
+          "type": "independent installed-library reference under aligned variant/scale invariants",
+          "reason": "Hand diag(8/3,2/3) covariance;NumPy/sklearn projectors and variances;new extreme valid-input and translated full reconstruction oracles."
+        },
+        {
+          "test_name": "test_valid_raw_boundary_centering_does_not_reapply_input_cap",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand diag(8/3,2/3) covariance;NumPy/sklearn projectors and variances;new extreme valid-input and translated full reconstruction oracles."
+        },
+        {
+          "test_name": "test_centered_internal_scaling_translated_multidimensional_numpy_oracle",
+          "type": "independent installed-library reference under aligned variant/scale invariants",
+          "reason": "Hand diag(8/3,2/3) covariance;NumPy/sklearn projectors and variances;new extreme valid-input and translated full reconstruction oracles."
+        }
+      ],
+      "oracle_independence_assessment": "Hand diag(8/3,2/3) covariance;NumPy/sklearn projectors and variances;new extreme valid-input and translated full reconstruction oracles.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Orthogonality/projectors/reconstructiontypicallyatol1e-10..1e-12;gradientsstep1e-6,t-SNE/UMA Patol3e-9rtol1e-6;vanillaatol1e-10rtol1e-6. ICAknown-source>.97 andalignedreference>.999 arediagnosticcorrelations;sklearn tSNEprobabilitiesexplicitfloat32-awareatol4e-7,rtol2e-4. Per-testliteral tolerances retainedbelow.",
+      "literal_test_tolerances": [
+        "atol=1e-10",
+        "atol=1e-11",
+        "atol=1e-12",
+        "atol=1e-3",
+        "atol=max(np.max(abs(X",
+        "rtol=1e-10",
+        "rtol=1e-12",
+        "rtol=1e-13",
+        "rtol=1e-14"
+      ],
+      "resource_numerical_and_reproducibility_limits": "Densefinitefloat64X<=1e12;n<=512,p<=32;inductivequery<=4096;manifoldn<=128,k<=3. Relative-rank rejection/backtracking/iteration bounds are explicit;nonconvex budget completion is not convergence.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [
+        "ML-AUDIT-B5-001"
+      ],
+      "result": "review completed;confirmed minimal defect fixed and affected checks passed"
+    },
+    {
+      "id": "t-sne",
+      "canonical_owner": "B5",
+      "canonical_path": "machine-learning/unsupervised-learning/dimensionality-reduction/t-sne",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Exact dense transductive t-SNE,no exaggeration/momentum.",
+      "mathematical_objective_updates_and_inference": "Per-row entropy log(perplexity),symmetric normalized P;ordered-pair Student-t KL and4*(P-Q)*t weighted difference gradient;Armijo descent.",
+      "files": [
+        {
+          "path": "machine-learning/unsupervised-learning/dimensionality-reduction/t-sne/python/solution.py",
+          "sha256": "5b7183154f2354bd96c81074d24d0ad32ae2c7b3dfcd443b8d05a76395e27da3",
+          "lines": 83
+        },
+        {
+          "path": "machine-learning/unsupervised-learning/dimensionality-reduction/t-sne/tests/test_python.py",
+          "sha256": "c72e59edbf0cb244673485158e7d858ccb4c83660d9374ffd79567f359181e4a",
+          "lines": 71
+        },
+        {
+          "path": "machine-learning/unsupervised-learning/dimensionality-reduction/t-sne/README.md",
+          "sha256": "860cecd272b03bbdceb4d808beb3cc30f446d5e0b44f88e5b47dfec565d42772",
+          "lines": 120
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_probability_normalization_perplexity_and_kl",
+        "test_finite_difference_gradient_translation_rotation",
+        "test_sklearn_joint_probability_reference",
+        "test_determinism_objective_descent_bounded_budget",
+        "test_duplicate_constant_and_impossible_perplexities",
+        "test_invalid_parameters"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_probability_normalization_perplexity_and_kl",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Separate probability/entropy and KL expressions;every embedding coordinate central differences;translation/rotation invariance;aligned sklearn probability reference."
+        },
+        {
+          "test_name": "test_finite_difference_gradient_translation_rotation",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Separate probability/entropy and KL expressions;every embedding coordinate central differences;translation/rotation invariance;aligned sklearn probability reference."
+        },
+        {
+          "test_name": "test_sklearn_joint_probability_reference",
+          "type": "independent installed-library reference under aligned variant/scale invariants",
+          "reason": "Separate probability/entropy and KL expressions;every embedding coordinate central differences;translation/rotation invariance;aligned sklearn probability reference."
+        }
+      ],
+      "oracle_independence_assessment": "Separate probability/entropy and KL expressions;every embedding coordinate central differences;translation/rotation invariance;aligned sklearn probability reference.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Orthogonality/projectors/reconstructiontypicallyatol1e-10..1e-12;gradientsstep1e-6,t-SNE/UMA Patol3e-9rtol1e-6;vanillaatol1e-10rtol1e-6. ICAknown-source>.97 andalignedreference>.999 arediagnosticcorrelations;sklearn tSNEprobabilitiesexplicitfloat32-awareatol4e-7,rtol2e-4. Per-testliteral tolerances retainedbelow.",
+      "literal_test_tolerances": [
+        "atol=1e-13",
+        "atol=1e-14",
+        "atol=3e-9",
+        "atol=4e-7",
+        "rtol=1e-6",
+        "rtol=2e-4",
+        "rtol=2e-7"
+      ],
+      "resource_numerical_and_reproducibility_limits": "Densefinitefloat64X<=1e12;n<=512,p<=32;inductivequery<=4096;manifoldn<=128,k<=3. Relative-rank rejection/backtracking/iteration bounds are explicit;nonconvex budget completion is not convergence.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "umap",
+      "canonical_owner": "B5",
+      "canonical_path": "machine-learning/unsupervised-learning/dimensionality-reduction/umap",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Exact fuzzy Euclidean-neighbor educational UMAP;fixed b=1 and epsilon-smoothed full pair divergence.",
+      "mathematical_objective_updates_and_inference": "Self-excluding kNN,rho first positive neighbor,sigma targetlog2(k)or declared saturation;fuzzy union;pairs q=1/(1+a*(r\u00b2+1e-6));gradient2*(w-q)*(yi-yj)/(r\u00b2+epsilon).",
+      "files": [
+        {
+          "path": "machine-learning/unsupervised-learning/dimensionality-reduction/umap/python/solution.py",
+          "sha256": "164167b58a73636f0502f0038253012fbb92adc728b4730f8a8c851a2800f914",
+          "lines": 88
+        },
+        {
+          "path": "machine-learning/unsupervised-learning/dimensionality-reduction/umap/tests/test_python.py",
+          "sha256": "bd09731466047ea1534d9cd5d154b4f9cf76601162c91a53aace1bf4beedaa84",
+          "lines": 75
+        },
+        {
+          "path": "machine-learning/unsupervised-learning/dimensionality-reduction/umap/README.md",
+          "sha256": "e67b0c5df8c185717b30e47750ce10c35b7633527997a3a71a1356ad4e160488",
+          "lines": 121
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_exact_knn_local_connectivity_union_and_tiny_graph",
+        "test_independent_sklearn_knn_scipy_local_scale_oracle",
+        "test_dense_cross_entropy_gradient_and_attraction_repulsion",
+        "test_duplicates_disconnected_finite_and_deterministic",
+        "test_invalid_parameters",
+        "test_neighbor_sample_bound_and_finite_budget_status"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_exact_knn_local_connectivity_union_and_tiny_graph",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand k2 path graph,fuzzy union,sklearn exact neighbors and SciPy root solve;independent Bernoulli divergence and all-coordinate finite differences."
+        },
+        {
+          "test_name": "test_independent_sklearn_knn_scipy_local_scale_oracle",
+          "type": "independent installed-library reference under aligned variant/scale invariants",
+          "reason": "Hand k2 path graph,fuzzy union,sklearn exact neighbors and SciPy root solve;independent Bernoulli divergence and all-coordinate finite differences."
+        },
+        {
+          "test_name": "test_dense_cross_entropy_gradient_and_attraction_repulsion",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand k2 path graph,fuzzy union,sklearn exact neighbors and SciPy root solve;independent Bernoulli divergence and all-coordinate finite differences."
+        }
+      ],
+      "oracle_independence_assessment": "Hand k2 path graph,fuzzy union,sklearn exact neighbors and SciPy root solve;independent Bernoulli divergence and all-coordinate finite differences.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Orthogonality/projectors/reconstructiontypicallyatol1e-10..1e-12;gradientsstep1e-6,t-SNE/UMA Patol3e-9rtol1e-6;vanillaatol1e-10rtol1e-6. ICAknown-source>.97 andalignedreference>.999 arediagnosticcorrelations;sklearn tSNEprobabilitiesexplicitfloat32-awareatol4e-7,rtol2e-4. Per-testliteral tolerances retainedbelow.",
+      "literal_test_tolerances": [
+        "atol=1e-12",
+        "atol=1e-13",
+        "atol=1e-14",
+        "atol=3e-8",
+        "atol=3e-9",
+        "rtol=1e-6",
+        "tol=1e-12",
+        "tol=1e-14"
+      ],
+      "resource_numerical_and_reproducibility_limits": "Densefinitefloat64X<=1e12;n<=512,p<=32;inductivequery<=4096;manifoldn<=128,k<=3. Relative-rank rejection/backtracking/iteration bounds are explicit;nonconvex budget completion is not convergence.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "linear-discriminant-analysis-projection",
+      "canonical_owner": "B5",
+      "canonical_path": "machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Supervised regularized Fisher projection,distinct from B2 LDA classifier.",
+      "mathematical_objective_updates_and_inference": "Whiten normalized Sw+reg*I,diagonalize H Sb H;Sb v=lambda(Sw+regI)v;dimension<=classes-1.",
+      "files": [
+        {
+          "path": "machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/python/solution.py",
+          "sha256": "ee6425946dbcac26e44acb67d09165e6b6e75a4c425904e1f296c2f35aff4f64",
+          "lines": 64
+        },
+        {
+          "path": "machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/tests/test_python.py",
+          "sha256": "b9bce1dfa35c5e964f9682fb283789428b912b7d41dfb697ae7db2acd0e951f9",
+          "lines": 44
+        },
+        {
+          "path": "machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection/README.md",
+          "sha256": "0eeaa3bff19f94c6786cf596afbe9ca241f7b2a9476b4ed61733700e0a5c44bd",
+          "lines": 121
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_analytical_scatter_and_direction",
+        "test_multiclass_scipy_and_sklearn_subspaces",
+        "test_invalid_labels",
+        "test_singular_regularization_and_dimension_bounds"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_analytical_scatter_and_direction",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Independently accumulated scatter;hand direction;SciPy generalized eigh and sklearn eigenspace projectors."
+        },
+        {
+          "test_name": "test_multiclass_scipy_and_sklearn_subspaces",
+          "type": "independent installed-library reference under aligned variant/scale invariants",
+          "reason": "Independently accumulated scatter;hand direction;SciPy generalized eigh and sklearn eigenspace projectors."
+        }
+      ],
+      "oracle_independence_assessment": "Independently accumulated scatter;hand direction;SciPy generalized eigh and sklearn eigenspace projectors.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Orthogonality/projectors/reconstructiontypicallyatol1e-10..1e-12;gradientsstep1e-6,t-SNE/UMA Patol3e-9rtol1e-6;vanillaatol1e-10rtol1e-6. ICAknown-source>.97 andalignedreference>.999 arediagnosticcorrelations;sklearn tSNEprobabilitiesexplicitfloat32-awareatol4e-7,rtol2e-4. Per-testliteral tolerances retainedbelow.",
+      "literal_test_tolerances": [
+        "atol=1e-10",
+        "atol=1e-12"
+      ],
+      "resource_numerical_and_reproducibility_limits": "Densefinitefloat64X<=1e12;n<=512,p<=32;inductivequery<=4096;manifoldn<=128,k<=3. Relative-rank rejection/backtracking/iteration bounds are explicit;nonconvex budget completion is not convergence.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "vanilla-autoencoders",
+      "canonical_owner": "B7",
+      "canonical_path": "machine-learning/deep-learning/vanilla-autoencoders",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Single B7-owned B5-shared tanh/linear bottleneck,linear decoder,MSE.",
+      "mathematical_objective_updates_and_inference": "Mean/scale training preprocessing;mean over all n*p cells reconstruction;four analytic parameter groups;Armijo full-batch updates.",
+      "files": [
+        {
+          "path": "machine-learning/deep-learning/vanilla-autoencoders/python/solution.py",
+          "sha256": "cd0f398b63e079ba9212b51b673c6fd22e01fdf3e67110b74e045585efc27922",
+          "lines": 90
+        },
+        {
+          "path": "machine-learning/deep-learning/vanilla-autoencoders/tests/test_python.py",
+          "sha256": "e2f194ce96b2dcc2083461e7ad7554483a005821aa76b85f3291cf9449b326f8",
+          "lines": 80
+        },
+        {
+          "path": "machine-learning/deep-learning/vanilla-autoencoders/README.md",
+          "sha256": "5d7963b964f5e4f219365b496d657b3b322887c8f56ba1f2a43975489130c3a9",
+          "lines": 121
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_forward_manual_backprop_and_finite_differences",
+        "test_scipy_independent_gradient_oracle",
+        "test_single_parameter_update_exact_and_budget_status",
+        "test_controlled_training_loss_shapes_and_reconstruction",
+        "test_constant_features_duplicate_training_and_scale",
+        "test_invalid_parameters",
+        "test_strict_bottleneck_and_atomic_refit"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_forward_manual_backprop_and_finite_differences",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Independent hand forward/MSE/backprop;all-coordinate central differences for both activations;SciPy check_grad with separately written objective;exact one-step update."
+        },
+        {
+          "test_name": "test_scipy_independent_gradient_oracle",
+          "type": "independent installed-library reference under aligned variant/scale invariants",
+          "reason": "Independent hand forward/MSE/backprop;all-coordinate central differences for both activations;SciPy check_grad with separately written objective;exact one-step update."
+        },
+        {
+          "test_name": "test_single_parameter_update_exact_and_budget_status",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Independent hand forward/MSE/backprop;all-coordinate central differences for both activations;SciPy check_grad with separately written objective;exact one-step update."
+        }
+      ],
+      "oracle_independence_assessment": "Independent hand forward/MSE/backprop;all-coordinate central differences for both activations;SciPy check_grad with separately written objective;exact one-step update.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Orthogonality/projectors/reconstructiontypicallyatol1e-10..1e-12;gradientsstep1e-6,t-SNE/UMA Patol3e-9rtol1e-6;vanillaatol1e-10rtol1e-6. ICAknown-source>.97 andalignedreference>.999 arediagnosticcorrelations;sklearn tSNEprobabilitiesexplicitfloat32-awareatol4e-7,rtol2e-4. Per-testliteral tolerances retainedbelow.",
+      "literal_test_tolerances": [
+        "atol=0",
+        "atol=1e-10",
+        "atol=1e-14",
+        "rtol=1e-14",
+        "rtol=1e-6",
+        "tol=1e-12"
+      ],
+      "resource_numerical_and_reproducibility_limits": "VanillaAE retains B5contract. OtherB7fit2..128rows,query<=256,features<=16,cellcap262144;sequenceT<=16;imagesC<=2,H/W<=8;GNN<=32nodes. Fixed epochs<=2000,updates<=10000,parameters<=20000;no convergence/production/sample-fidelity guarantee.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "independent-component-analysis",
+      "canonical_owner": "B5",
+      "canonical_path": "machine-learning/unsupervised-learning/dimensionality-reduction/independent-component-analysis",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Parallel tanh FastICA with population whitening.",
+      "mathematical_objective_updates_and_inference": "Wnew=decorrelate(E[tanh(ZW^T)^T Z]-diag(E[1-tanh\u00b2])W);stop sign-invariant row alignment;reject unresolved covariance.",
+      "files": [
+        {
+          "path": "machine-learning/unsupervised-learning/dimensionality-reduction/independent-component-analysis/python/solution.py",
+          "sha256": "d20efd1235cb458729f31d7abdcdace62fece747835b154f289d3084646137a6",
+          "lines": 76
+        },
+        {
+          "path": "machine-learning/unsupervised-learning/dimensionality-reduction/independent-component-analysis/tests/test_python.py",
+          "sha256": "7fe62f7352200d390ddd3008fa40800112f39772e8a2fa2d3b914b3e8b300057",
+          "lines": 49
+        },
+        {
+          "path": "machine-learning/unsupervised-learning/dimensionality-reduction/independent-component-analysis/README.md",
+          "sha256": "b48f89c42d3994916896ad3f613f518343d788ab20caed9c515014eb5e25c8e0",
+          "lines": 120
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_source_recovery_whitening_and_reconstruction",
+        "test_sklearn_permutation_sign_scale_invariant",
+        "test_rank_deficiency_constant_and_near_degenerate",
+        "test_seed_nonconvergence_and_atomic_refit",
+        "test_invalid_parameters"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_source_recovery_whitening_and_reconstruction",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Known independent uniform/Laplace sources;identity whitened covariance;inverse reconstruction;best-assignment absolute correlations and aligned sklearn."
+        },
+        {
+          "test_name": "test_sklearn_permutation_sign_scale_invariant",
+          "type": "independent installed-library reference under aligned variant/scale invariants",
+          "reason": "Known independent uniform/Laplace sources;identity whitened covariance;inverse reconstruction;best-assignment absolute correlations and aligned sklearn."
+        }
+      ],
+      "oracle_independence_assessment": "Known independent uniform/Laplace sources;identity whitened covariance;inverse reconstruction;best-assignment absolute correlations and aligned sklearn.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Orthogonality/projectors/reconstructiontypicallyatol1e-10..1e-12;gradientsstep1e-6,t-SNE/UMA Patol3e-9rtol1e-6;vanillaatol1e-10rtol1e-6. ICAknown-source>.97 andalignedreference>.999 arediagnosticcorrelations;sklearn tSNEprobabilitiesexplicitfloat32-awareatol4e-7,rtol2e-4. Per-testliteral tolerances retainedbelow.",
+      "literal_test_tolerances": [
+        "atol=1e-11",
+        "atol=1e-12",
+        "tol=1e-12",
+        "tol=1e-8"
+      ],
+      "resource_numerical_and_reproducibility_limits": "Densefinitefloat64X<=1e12;n<=512,p<=32;inductivequery<=4096;manifoldn<=128,k<=3. Relative-rank rejection/backtracking/iteration bounds are explicit;nonconvex budget completion is not convergence.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "singular-value-decomposition",
+      "canonical_owner": "B5",
+      "canonical_path": "machine-learning/unsupervised-learning/dimensionality-reduction/singular-value-decomposition",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Reduced one-sided Jacobi SVD with deterministic null completion.",
+      "mathematical_objective_updates_and_inference": "Rotate column pairs and V identically so B=(X/scale)V;sorted column norms;wide-input transpose;relative numerical-rank truncation.",
+      "files": [
+        {
+          "path": "machine-learning/unsupervised-learning/dimensionality-reduction/singular-value-decomposition/python/solution.py",
+          "sha256": "14ecb08c635ef0160db757993327ee551a92444125912446f74d8c6e3d213b37",
+          "lines": 109
+        },
+        {
+          "path": "machine-learning/unsupervised-learning/dimensionality-reduction/singular-value-decomposition/tests/test_python.py",
+          "sha256": "503251c624fd2c81389c97e4153021a00fb200b7c2af1bdd91b25abb88d4d673",
+          "lines": 45
+        },
+        {
+          "path": "machine-learning/unsupervised-learning/dimensionality-reduction/singular-value-decomposition/README.md",
+          "sha256": "5f84c6a2b81699f8afe4efcfcffd53e06bfc377acc7b710edc214c5b0a4fb6f7",
+          "lines": 119
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_factorization_rank_and_orthogonality",
+        "test_numpy_reference_random_and_truncation",
+        "test_scale_stability",
+        "test_invalid_parameters",
+        "test_nonconvergence_atomic_state_and_repeated_subspace"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_factorization_rank_and_orthogonality",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Independent NumPy SVD values/projectors,orthogonality,reconstruction and discarded-energy identity;random low-rank matrices."
+        },
+        {
+          "test_name": "test_numpy_reference_random_and_truncation",
+          "type": "independent installed-library reference under aligned variant/scale invariants",
+          "reason": "Independent NumPy SVD values/projectors,orthogonality,reconstruction and discarded-energy identity;random low-rank matrices."
+        }
+      ],
+      "oracle_independence_assessment": "Independent NumPy SVD values/projectors,orthogonality,reconstruction and discarded-energy identity;random low-rank matrices.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Orthogonality/projectors/reconstructiontypicallyatol1e-10..1e-12;gradientsstep1e-6,t-SNE/UMA Patol3e-9rtol1e-6;vanillaatol1e-10rtol1e-6. ICAknown-source>.97 andalignedreference>.999 arediagnosticcorrelations;sklearn tSNEprobabilitiesexplicitfloat32-awareatol4e-7,rtol2e-4. Per-testliteral tolerances retainedbelow.",
+      "literal_test_tolerances": [
+        "atol=1e-10",
+        "atol=1e-11",
+        "atol=1e-12",
+        "atol=2e-11",
+        "rtol=1e-10"
+      ],
+      "resource_numerical_and_reproducibility_limits": "Densefinitefloat64X<=1e12;n<=512,p<=32;inductivequery<=4096;manifoldn<=128,k<=3. Relative-rank rejection/backtracking/iteration bounds are explicit;nonconvex budget completion is not convergence.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "apriori",
+      "canonical_owner": "B6",
+      "canonical_path": "machine-learning/unsupervised-learning/association-rule-learning/apriori",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Breadth-first Apriori prefix joins,subset pruning,horizontal support counting.",
+      "mathematical_objective_updates_and_inference": "Support anti-monotonicity;unique common-prefix parent join and all immediate subset checks;exact decimal rational ceil(s*N).",
+      "files": [
+        {
+          "path": "machine-learning/unsupervised-learning/association-rule-learning/apriori/python/solution.py",
+          "sha256": "6d66d53326081881357958fc48e8df5b219887a91e5ba2c5de423cd5245e74a1",
+          "lines": 69
+        },
+        {
+          "path": "machine-learning/unsupervised-learning/association-rule-learning/apriori/tests/test_python.py",
+          "sha256": "5f382037df265662bd5555a1f00d8f51ea529178c26544acb9fa0696e2602a52",
+          "lines": 76
+        },
+        {
+          "path": "machine-learning/unsupervised-learning/association-rule-learning/apriori/README.md",
+          "sha256": "0969403aaa87a8f1cdff2d99c51282412b527045dbb4710c33cb42bc427239d1",
+          "lines": 120
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_known_pairs_triple_and_levels",
+        "test_prefix_candidate_join_and_subset_pruning",
+        "test_boundary_databases",
+        "test_decimal_threshold_and_empty_denominator",
+        "test_randomized_oracle_downward_closure",
+        "test_independent_sparse_incidence_reference",
+        "test_limits_and_failed_refit_are_atomic"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_known_pairs_triple_and_levels",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand levels/counts;direct raw-row powerset oracle;495 exhaustive multiset databases at3thresholds;independent sparse incidence."
+        },
+        {
+          "test_name": "test_prefix_candidate_join_and_subset_pruning",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand levels/counts;direct raw-row powerset oracle;495 exhaustive multiset databases at3thresholds;independent sparse incidence."
+        },
+        {
+          "test_name": "test_boundary_databases",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand levels/counts;direct raw-row powerset oracle;495 exhaustive multiset databases at3thresholds;independent sparse incidence."
+        },
+        {
+          "test_name": "test_randomized_oracle_downward_closure",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand levels/counts;direct raw-row powerset oracle;495 exhaustive multiset databases at3thresholds;independent sparse incidence."
+        },
+        {
+          "test_name": "test_independent_sparse_incidence_reference",
+          "type": "independent installed-library reference under aligned variant/scale invariants",
+          "reason": "Hand levels/counts;direct raw-row powerset oracle;495 exhaustive multiset databases at3thresholds;independent sparse incidence."
+        }
+      ],
+      "oracle_independence_assessment": "Hand levels/counts;direct raw-row powerset oracle;495 exhaustive multiset databases at3thresholds;independent sparse incidence.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Count maps,TIDs,threshold inclusion and rule membership use exact equality/Fraction arithmetic;reference lift comparisonrel1e-14. No epsilon changes threshold semantics.",
+      "literal_test_tolerances": [],
+      "resource_numerical_and_reproducibility_limits": "N<=4096,U<=32,rawrow<=128,totalraw<=65536;native homogeneous IDs;exact decimal float thresholds. max_patterns<=50000,max_work<=5e6;explicit errors retain prior complete state;exponential output remains possible.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "fp-growth",
+      "canonical_owner": "B6",
+      "canonical_path": "machine-learning/unsupervised-learning/association-rule-learning/fp-growth",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Weighted FP-tree conditional pattern growth with header links and explicit stack.",
+      "mathematical_objective_updates_and_inference": "Node/header weighted counts;conditional prefix bases retain multiplicities and original count threshold;unique suffix order.",
+      "files": [
+        {
+          "path": "machine-learning/unsupervised-learning/association-rule-learning/fp-growth/python/solution.py",
+          "sha256": "206724765310dc1ca109719d6dcfe06c40960a98775da4123c50d566beace9c3",
+          "lines": 128
+        },
+        {
+          "path": "machine-learning/unsupervised-learning/association-rule-learning/fp-growth/tests/test_python.py",
+          "sha256": "181d853a8b24f5a8c96b93a11de8e26b0bd53363ea387bdc752502a0c35f7220",
+          "lines": 97
+        },
+        {
+          "path": "machine-learning/unsupervised-learning/association-rule-learning/fp-growth/README.md",
+          "sha256": "d5d1c9aeaf45fc8caf96da6e9d87eab26da409e5a68ffd4f978c04ad8fb6602d",
+          "lines": 122
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_shared_prefix_counts_parent_child_and_header_links",
+        "test_weighted_conditional_base_and_tree_support",
+        "test_compressed_repeated_paths_keep_full_weight",
+        "test_empty_single_disjoint_dense_and_duplicates",
+        "test_randomized_conditional_patterns_against_raw_counts",
+        "test_independent_sparse_reference",
+        "test_frequency_ties_filtering_and_threshold_boundary",
+        "test_no_other_miner_delegation_and_atomic_limits"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_shared_prefix_counts_parent_child_and_header_links",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand parent/child/header structure;weighted c-prefix(AB,2),(A,1),(B,1);direct powerset/exhaustive and sparse incidence comparisons."
+        },
+        {
+          "test_name": "test_weighted_conditional_base_and_tree_support",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand parent/child/header structure;weighted c-prefix(AB,2),(A,1),(B,1);direct powerset/exhaustive and sparse incidence comparisons."
+        },
+        {
+          "test_name": "test_compressed_repeated_paths_keep_full_weight",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand parent/child/header structure;weighted c-prefix(AB,2),(A,1),(B,1);direct powerset/exhaustive and sparse incidence comparisons."
+        },
+        {
+          "test_name": "test_empty_single_disjoint_dense_and_duplicates",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand parent/child/header structure;weighted c-prefix(AB,2),(A,1),(B,1);direct powerset/exhaustive and sparse incidence comparisons."
+        },
+        {
+          "test_name": "test_randomized_conditional_patterns_against_raw_counts",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand parent/child/header structure;weighted c-prefix(AB,2),(A,1),(B,1);direct powerset/exhaustive and sparse incidence comparisons."
+        },
+        {
+          "test_name": "test_independent_sparse_reference",
+          "type": "independent installed-library reference under aligned variant/scale invariants",
+          "reason": "Hand parent/child/header structure;weighted c-prefix(AB,2),(A,1),(B,1);direct powerset/exhaustive and sparse incidence comparisons."
+        }
+      ],
+      "oracle_independence_assessment": "Hand parent/child/header structure;weighted c-prefix(AB,2),(A,1),(B,1);direct powerset/exhaustive and sparse incidence comparisons.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Count maps,TIDs,threshold inclusion and rule membership use exact equality/Fraction arithmetic;reference lift comparisonrel1e-14. No epsilon changes threshold semantics.",
+      "literal_test_tolerances": [],
+      "resource_numerical_and_reproducibility_limits": "N<=4096,U<=32,rawrow<=128,totalraw<=65536;native homogeneous IDs;exact decimal float thresholds. max_patterns<=50000,max_work<=5e6;explicit errors retain prior complete state;exponential output remains possible.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "eclat",
+      "canonical_owner": "B6",
+      "canonical_path": "machine-learning/unsupervised-learning/association-rule-learning/eclat",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Vertical TID-set Eclat with explicit DFS frames.",
+      "mathematical_objective_updates_and_inference": "TID(A union B)=TID(A) intersect TID(B);only later extensions,exact intersection counts;anti-monotonic pruning.",
+      "files": [
+        {
+          "path": "machine-learning/unsupervised-learning/association-rule-learning/eclat/python/solution.py",
+          "sha256": "cc4eb90ef49dcc2509ed5d9b1926153385d783458bfa9511fca1b6e55d435455",
+          "lines": 56
+        },
+        {
+          "path": "machine-learning/unsupervised-learning/association-rule-learning/eclat/tests/test_python.py",
+          "sha256": "b660c739a5c159ad1b300744d46ac04c31dfb5abce18ed4cd29ae55da7bc5743",
+          "lines": 64
+        },
+        {
+          "path": "machine-learning/unsupervised-learning/association-rule-learning/eclat/README.md",
+          "sha256": "1548e0760f240295b91df288daceaf1d395685931d7c6522f375221e4dde252c",
+          "lines": 121
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_stable_tid_index_pair_triple_and_empty_rows",
+        "test_sparse_dense_empty_duplicates",
+        "test_randomized_tid_union_identity_and_direct_counts",
+        "test_independent_sparse_incidence_reference",
+        "test_threshold_boundary_and_repeated_observations",
+        "test_no_apriori_dependency_and_atomic_limits"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_stable_tid_index_pair_triple_and_empty_rows",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Exact stable TID sets;raw-row intersection identity;direct powerset/exhaustive databases and sparse incidence without another miner as sole oracle."
+        },
+        {
+          "test_name": "test_sparse_dense_empty_duplicates",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Exact stable TID sets;raw-row intersection identity;direct powerset/exhaustive databases and sparse incidence without another miner as sole oracle."
+        },
+        {
+          "test_name": "test_randomized_tid_union_identity_and_direct_counts",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Exact stable TID sets;raw-row intersection identity;direct powerset/exhaustive databases and sparse incidence without another miner as sole oracle."
+        },
+        {
+          "test_name": "test_independent_sparse_incidence_reference",
+          "type": "independent installed-library reference under aligned variant/scale invariants",
+          "reason": "Exact stable TID sets;raw-row intersection identity;direct powerset/exhaustive databases and sparse incidence without another miner as sole oracle."
+        }
+      ],
+      "oracle_independence_assessment": "Exact stable TID sets;raw-row intersection identity;direct powerset/exhaustive databases and sparse incidence without another miner as sole oracle.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Count maps,TIDs,threshold inclusion and rule membership use exact equality/Fraction arithmetic;reference lift comparisonrel1e-14. No epsilon changes threshold semantics.",
+      "literal_test_tolerances": [],
+      "resource_numerical_and_reproducibility_limits": "N<=4096,U<=32,rawrow<=128,totalraw<=65536;native homogeneous IDs;exact decimal float thresholds. max_patterns<=50000,max_work<=5e6;explicit errors retain prior complete state;exponential output remains possible.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "multilayer-perceptron",
+      "canonical_owner": "B7",
+      "canonical_path": "machine-learning/deep-learning/multilayer-perceptron",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "One tanh hidden-layer binary MLP;stable logit BCE.",
+      "mathematical_objective_updates_and_inference": "H=tanh(XW1+b1),z=HW2+b2;mean softplus(z)-y*z;all four weight/bias gradients,SGD with global clipping.",
+      "files": [
+        {
+          "path": "machine-learning/deep-learning/multilayer-perceptron/python/solution.py",
+          "sha256": "8d9e17dfb33fb8678feea62e129357333094ed5549d008cb21fe2ae6930bb010",
+          "lines": 45
+        },
+        {
+          "path": "machine-learning/deep-learning/multilayer-perceptron/tests/test_python.py",
+          "sha256": "b89b86bc9f01118045aadc1e5925f8563761d4a02d44d8b2759eac70e187488e",
+          "lines": 51
+        },
+        {
+          "path": "machine-learning/deep-learning/multilayer-perceptron/README.md",
+          "sha256": "e64acce1caa25cd5c3779e4f2624eaf6827b196c8012ee10d321c6c183de217e",
+          "lines": 132
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_forward_bce_and_backprop_manual",
+        "test_finite_difference_all_weights_biases",
+        "test_scipy_sigmoid_reference_and_extreme_logits",
+        "test_reproducibility_xor_training_and_atomic_refit",
+        "test_separable_and_before_fit_shapes",
+        "test_invalid_architecture_training_parameters",
+        "test_invalid_binary_targets"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_forward_bce_and_backprop_manual",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Independent affine/tanh/logistic loss and expanded gradient blocks;all-parameter central differences;SciPy expit extremes."
+        },
+        {
+          "test_name": "test_finite_difference_all_weights_biases",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Independent affine/tanh/logistic loss and expanded gradient blocks;all-parameter central differences;SciPy expit extremes."
+        },
+        {
+          "test_name": "test_scipy_sigmoid_reference_and_extreme_logits",
+          "type": "independent installed-library reference under aligned variant/scale invariants",
+          "reason": "Independent affine/tanh/logistic loss and expanded gradient blocks;all-parameter central differences;SciPy expit extremes."
+        },
+        {
+          "test_name": "test_invalid_binary_targets",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Independent affine/tanh/logistic loss and expanded gradient blocks;all-parameter central differences;SciPy expit extremes."
+        }
+      ],
+      "oracle_independence_assessment": "Independent affine/tanh/logistic loss and expanded gradient blocks;all-parameter central differences;SciPy expit extremes.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6;sharedcheckerdefaultatol2e-6,rtol3e-4;Transformeratol4e-6. Manualstructural/referenceinvariantstypicallyatol1e-12..1e-13. Stochasticdrawsfixed;L1kinksavoided;no arbitrary coordinate/generative-quality equality.",
+      "literal_test_tolerances": [
+        "atol=1e-16"
+      ],
+      "resource_numerical_and_reproducibility_limits": "VanillaAE retains B5contract. OtherB7fit2..128rows,query<=256,features<=16,cellcap262144;sequenceT<=16;imagesC<=2,H/W<=8;GNN<=32nodes. Fixed epochs<=2000,updates<=10000,parameters<=20000;no convergence/production/sample-fidelity guarantee.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "convolutional-neural-networks",
+      "canonical_owner": "B7",
+      "canonical_path": "machine-learning/deep-learning/convolutional-neural-networks",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "One NCHW cross-correlation/tanh/scalar dense-head CNN,no pooling.",
+      "mathematical_objective_updates_and_inference": "Shared square kernels with stride/padding;kernel and input adjoints accumulate overlapping patches;mean scalar-output MSE.",
+      "files": [
+        {
+          "path": "machine-learning/deep-learning/convolutional-neural-networks/python/solution.py",
+          "sha256": "475f84d44cd00993be588e2f01c0470156835eb307579de2f92d1a32fbb43703",
+          "lines": 79
+        },
+        {
+          "path": "machine-learning/deep-learning/convolutional-neural-networks/tests/test_python.py",
+          "sha256": "1b65e27848b6c234f4e50389728850564ed698847566b07b7e202fabd35e45f3",
+          "lines": 47
+        },
+        {
+          "path": "machine-learning/deep-learning/convolutional-neural-networks/README.md",
+          "sha256": "b3842b3d715fd54a5051969a7ba04022e4f61c3eb424333cf120c1e2f35259d1",
+          "lines": 141
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_forward_hand_convolution_shapes_and_bias",
+        "test_scipy_multichannel_stride_padding_reference",
+        "test_finite_difference_network_all_parameters",
+        "test_convolution_input_backprop_finite_difference",
+        "test_reproducibility_tiny_image_regression_and_shape_errors",
+        "test_invalid_convolution_architecture"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_forward_hand_convolution_shapes_and_bias",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand kernel/output/dK/db;SciPy correlate2d multichannel/stride/padding;all parameters and operator-input finite differences."
+        },
+        {
+          "test_name": "test_scipy_multichannel_stride_padding_reference",
+          "type": "independent installed-library reference under aligned variant/scale invariants",
+          "reason": "Hand kernel/output/dK/db;SciPy correlate2d multichannel/stride/padding;all parameters and operator-input finite differences."
+        },
+        {
+          "test_name": "test_finite_difference_network_all_parameters",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Hand kernel/output/dK/db;SciPy correlate2d multichannel/stride/padding;all parameters and operator-input finite differences."
+        },
+        {
+          "test_name": "test_convolution_input_backprop_finite_difference",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Hand kernel/output/dK/db;SciPy correlate2d multichannel/stride/padding;all parameters and operator-input finite differences."
+        }
+      ],
+      "oracle_independence_assessment": "Hand kernel/output/dK/db;SciPy correlate2d multichannel/stride/padding;all parameters and operator-input finite differences.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6;sharedcheckerdefaultatol2e-6,rtol3e-4;Transformeratol4e-6. Manualstructural/referenceinvariantstypicallyatol1e-12..1e-13. Stochasticdrawsfixed;L1kinksavoided;no arbitrary coordinate/generative-quality equality.",
+      "literal_test_tolerances": [
+        "atol=1e-12"
+      ],
+      "resource_numerical_and_reproducibility_limits": "VanillaAE retains B5contract. OtherB7fit2..128rows,query<=256,features<=16,cellcap262144;sequenceT<=16;imagesC<=2,H/W<=8;GNN<=32nodes. Fixed epochs<=2000,updates<=10000,parameters<=20000;no convergence/production/sample-fidelity guarantee.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "recurrent-neural-networks",
+      "canonical_owner": "B7",
+      "canonical_path": "machine-learning/deep-learning/recurrent-neural-networks",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Vanilla tanh RNN,zero initial state,full BPTT,last-state scalar MSE.",
+      "mathematical_objective_updates_and_inference": "h_t=tanh(x_t Wx+hprev Wh+b);sum shared-parameter gradients across every timestep;carry hidden adjoint backwards.",
+      "files": [
+        {
+          "path": "machine-learning/deep-learning/recurrent-neural-networks/python/solution.py",
+          "sha256": "01d5e0b028e99d56a4c38616ba40fa096f3c89804d918a63c3683f98519befc0",
+          "lines": 49
+        },
+        {
+          "path": "machine-learning/deep-learning/recurrent-neural-networks/tests/test_python.py",
+          "sha256": "1faebb87c14d7a0f5a46166a1284cf3cb9984a19f694d52086c4249e06f0725b",
+          "lines": 32
+        },
+        {
+          "path": "machine-learning/deep-learning/recurrent-neural-networks/README.md",
+          "sha256": "07c978cfecf78b160df04842ee44eaa6c33e4fac9be1a445cf5e1661a0b251eb",
+          "lines": 144
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_finite_difference_bptt_all_parameters",
+        "test_reproducibility_short_sequence_training",
+        "test_forward_hand_one_and_multi_step_recurrence"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_finite_difference_bptt_all_parameters",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Hand two-step scalar recurrence;all parameters and input coordinates central differences at lengths1and3."
+        },
+        {
+          "test_name": "test_forward_hand_one_and_multi_step_recurrence",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand two-step scalar recurrence;all parameters and input coordinates central differences at lengths1and3."
+        }
+      ],
+      "oracle_independence_assessment": "Hand two-step scalar recurrence;all parameters and input coordinates central differences at lengths1and3.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6;sharedcheckerdefaultatol2e-6,rtol3e-4;Transformeratol4e-6. Manualstructural/referenceinvariantstypicallyatol1e-12..1e-13. Stochasticdrawsfixed;L1kinksavoided;no arbitrary coordinate/generative-quality equality.",
+      "literal_test_tolerances": [],
+      "resource_numerical_and_reproducibility_limits": "VanillaAE retains B5contract. OtherB7fit2..128rows,query<=256,features<=16,cellcap262144;sequenceT<=16;imagesC<=2,H/W<=8;GNN<=32nodes. Fixed epochs<=2000,updates<=10000,parameters<=20000;no convergence/production/sample-fidelity guarantee.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "long-short-term-memory",
+      "canonical_owner": "B7",
+      "canonical_path": "machine-learning/deep-learning/long-short-term-memory",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Modern forget-gated LSTM,full hidden/cell BPTT,last-state scalar MSE.",
+      "mathematical_objective_updates_and_inference": "Fused i/f/o/g gates;c=f*cprev+i*g;h=o*tanh(c);carry both dc and dh;forget bias starts1.",
+      "files": [
+        {
+          "path": "machine-learning/deep-learning/long-short-term-memory/python/solution.py",
+          "sha256": "39a177793958eef68c956d9f5a3c4d085339500e4ddc68a3619d66227c21ea76",
+          "lines": 56
+        },
+        {
+          "path": "machine-learning/deep-learning/long-short-term-memory/tests/test_python.py",
+          "sha256": "8052bb3ac8d8e16aa91bf9e8233135967d6bf29238b1b2b20734129273d8a3dc",
+          "lines": 35
+        },
+        {
+          "path": "machine-learning/deep-learning/long-short-term-memory/README.md",
+          "sha256": "ed95e3c9ae3cdd2ae26b0fdc56b135e0b43fb38158dd74540eac32f54cf6e4ce",
+          "lines": 147
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_finite_difference_bptt_all_parameters",
+        "test_reproducibility_short_sequence_training",
+        "test_forward_one_step_gates_cell_hidden"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_finite_difference_bptt_all_parameters",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Hand zero-logit gate/cell fixture;all fused gates/head parameters and input derivatives at lengths1and3."
+        },
+        {
+          "test_name": "test_forward_one_step_gates_cell_hidden",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand zero-logit gate/cell fixture;all fused gates/head parameters and input derivatives at lengths1and3."
+        }
+      ],
+      "oracle_independence_assessment": "Hand zero-logit gate/cell fixture;all fused gates/head parameters and input derivatives at lengths1and3.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6;sharedcheckerdefaultatol2e-6,rtol3e-4;Transformeratol4e-6. Manualstructural/referenceinvariantstypicallyatol1e-12..1e-13. Stochasticdrawsfixed;L1kinksavoided;no arbitrary coordinate/generative-quality equality.",
+      "literal_test_tolerances": [],
+      "resource_numerical_and_reproducibility_limits": "VanillaAE retains B5contract. OtherB7fit2..128rows,query<=256,features<=16,cellcap262144;sequenceT<=16;imagesC<=2,H/W<=8;GNN<=32nodes. Fixed epochs<=2000,updates<=10000,parameters<=20000;no convergence/production/sample-fidelity guarantee.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "gated-recurrent-units",
+      "canonical_owner": "B7",
+      "canonical_path": "machine-learning/deep-learning/gated-recurrent-units",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Reset-before-matrix GRU;h=z*hprev+(1-z)*candidate.",
+      "mathematical_objective_updates_and_inference": "candidate=tanh(xWg+(r*hprev)Ug+bg);BPTT retains direct interpolation,reset product and gate paths.",
+      "files": [
+        {
+          "path": "machine-learning/deep-learning/gated-recurrent-units/python/solution.py",
+          "sha256": "a7b7d0803039bdec2bf003bc318f61f400d166437bb759a47445160cbc37ebd1",
+          "lines": 61
+        },
+        {
+          "path": "machine-learning/deep-learning/gated-recurrent-units/tests/test_python.py",
+          "sha256": "576606dac3ad084a5f20ee1d8211c131dd3ebc559cd6e5d7b56e455448edf234",
+          "lines": 35
+        },
+        {
+          "path": "machine-learning/deep-learning/gated-recurrent-units/README.md",
+          "sha256": "da187b63d8b972d806ab63bdb5bccf0dc092622a03d1b0fdc2f38e52696f806b",
+          "lines": 145
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_finite_difference_bptt_all_parameters",
+        "test_reproducibility_short_sequence_training",
+        "test_forward_reset_before_matrix_gate_equations"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_finite_difference_bptt_all_parameters",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Hand two-step reset placement;full input and every reset/update/candidate/head parameter finite differences."
+        },
+        {
+          "test_name": "test_forward_reset_before_matrix_gate_equations",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand two-step reset placement;full input and every reset/update/candidate/head parameter finite differences."
+        }
+      ],
+      "oracle_independence_assessment": "Hand two-step reset placement;full input and every reset/update/candidate/head parameter finite differences.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6;sharedcheckerdefaultatol2e-6,rtol3e-4;Transformeratol4e-6. Manualstructural/referenceinvariantstypicallyatol1e-12..1e-13. Stochasticdrawsfixed;L1kinksavoided;no arbitrary coordinate/generative-quality equality.",
+      "literal_test_tolerances": [],
+      "resource_numerical_and_reproducibility_limits": "VanillaAE retains B5contract. OtherB7fit2..128rows,query<=256,features<=16,cellcap262144;sequenceT<=16;imagesC<=2,H/W<=8;GNN<=32nodes. Fixed epochs<=2000,updates<=10000,parameters<=20000;no convergence/production/sample-fidelity guarantee.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "transformers",
+      "canonical_owner": "B7",
+      "canonical_path": "machine-learning/deep-learning/transformers",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "One numerical-input post-norm attention encoder with scalar final-token head.",
+      "mathematical_objective_updates_and_inference": "Sinusoidal positions;multi-head scaled QK softmax(optional causal);attention projection,residual/LN,tanh FFN,residual/LN;explicit all-parameter adjoints.",
+      "files": [
+        {
+          "path": "machine-learning/deep-learning/transformers/python/solution.py",
+          "sha256": "4fd03dd09c5d911c4a021b4cf18b8225890757af1a7fa7c9185ddd9e6d500655",
+          "lines": 104
+        },
+        {
+          "path": "machine-learning/deep-learning/transformers/tests/test_python.py",
+          "sha256": "77fda2c40c139ca58807b1addc325eb5530dcc517fd2cfe56d0d7b6855a90224",
+          "lines": 44
+        },
+        {
+          "path": "machine-learning/deep-learning/transformers/README.md",
+          "sha256": "1467071dc52dbb89f6df381ff998f956fc99fea2842525ed3047ff9f94d7a084",
+          "lines": 143
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_forward_attention_scaling_masks_heads_and_positions",
+        "test_layer_norm_forward_and_all_adjoints",
+        "test_finite_difference_full_transformer",
+        "test_reproducibility_training_and_invalid_heads"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_forward_attention_scaling_masks_heads_and_positions",
+          "type": "independent installed-library reference under aligned variant/scale invariants",
+          "reason": "Independent per-head scalar attention/mask calculations,manual LayerNorm;full-model central differences for1/3tokens,1/2heads,full/causal."
+        },
+        {
+          "test_name": "test_layer_norm_forward_and_all_adjoints",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Independent per-head scalar attention/mask calculations,manual LayerNorm;full-model central differences for1/3tokens,1/2heads,full/causal."
+        },
+        {
+          "test_name": "test_finite_difference_full_transformer",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Independent per-head scalar attention/mask calculations,manual LayerNorm;full-model central differences for1/3tokens,1/2heads,full/causal."
+        }
+      ],
+      "oracle_independence_assessment": "Independent per-head scalar attention/mask calculations,manual LayerNorm;full-model central differences for1/3tokens,1/2heads,full/causal.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6;sharedcheckerdefaultatol2e-6,rtol3e-4;Transformeratol4e-6. Manualstructural/referenceinvariantstypicallyatol1e-12..1e-13. Stochasticdrawsfixed;L1kinksavoided;no arbitrary coordinate/generative-quality equality.",
+      "literal_test_tolerances": [
+        "atol=1e-13",
+        "atol=4e-6"
+      ],
+      "resource_numerical_and_reproducibility_limits": "VanillaAE retains B5contract. OtherB7fit2..128rows,query<=256,features<=16,cellcap262144;sequenceT<=16;imagesC<=2,H/W<=8;GNN<=32nodes. Fixed epochs<=2000,updates<=10000,parameters<=20000;no convergence/production/sample-fidelity guarantee.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "generative-adversarial-networks",
+      "canonical_owner": "B7",
+      "canonical_path": "machine-learning/deep-learning/generative-adversarial-networks",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Non-saturating logistic dense GAN,one D then one G step.",
+      "mathematical_objective_updates_and_inference": "D minimizes mean softplus(-D(real))+mean softplus(D(fake));G mean softplus(-D(fake));opposite parameters frozen;both steps charged.",
+      "files": [
+        {
+          "path": "machine-learning/deep-learning/generative-adversarial-networks/python/solution.py",
+          "sha256": "9d9fc550ea4a6928061f21782ab5659f0c20583983fdbeaae8b91be860be2294",
+          "lines": 75
+        },
+        {
+          "path": "machine-learning/deep-learning/generative-adversarial-networks/tests/test_python.py",
+          "sha256": "4d99fd26731dae6a76422a542f5ac4cce2329059d75cec4840064ddc2be75c14",
+          "lines": 37
+        },
+        {
+          "path": "machine-learning/deep-learning/generative-adversarial-networks/README.md",
+          "sha256": "a2d9adfa3b30f9693a9ccc9bb476b17bc1884d800fcaec8487e145d69e2c11b0",
+          "lines": 142
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_forward_losses_and_update_ownership",
+        "test_finite_difference_generator_discriminator_fixed_noise",
+        "test_reproducibility_low_dimensional_training_and_sampling"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_forward_losses_and_update_ownership",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Separately calculated logistic losses;owned-gradient exact update checks;all D and G parameters finite-differenced with fixed latent draws."
+        },
+        {
+          "test_name": "test_finite_difference_generator_discriminator_fixed_noise",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Separately calculated logistic losses;owned-gradient exact update checks;all D and G parameters finite-differenced with fixed latent draws."
+        }
+      ],
+      "oracle_independence_assessment": "Separately calculated logistic losses;owned-gradient exact update checks;all D and G parameters finite-differenced with fixed latent draws.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6;sharedcheckerdefaultatol2e-6,rtol3e-4;Transformeratol4e-6. Manualstructural/referenceinvariantstypicallyatol1e-12..1e-13. Stochasticdrawsfixed;L1kinksavoided;no arbitrary coordinate/generative-quality equality.",
+      "literal_test_tolerances": [],
+      "resource_numerical_and_reproducibility_limits": "VanillaAE retains B5contract. OtherB7fit2..128rows,query<=256,features<=16,cellcap262144;sequenceT<=16;imagesC<=2,H/W<=8;GNN<=32nodes. Fixed epochs<=2000,updates<=10000,parameters<=20000;no convergence/production/sample-fidelity guarantee.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "variational-autoencoders",
+      "canonical_owner": "B7",
+      "canonical_path": "machine-learning/deep-learning/variational-autoencoders",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Linear Gaussian VAE with smooth bounded posterior logvariance and unit observation noise.",
+      "mathematical_objective_updates_and_inference": "mu=XWmu+bmu;lv=5*tanh(raw);z=mu+exp(lv/2)*eps;negative ELBO=.5*sum residual\u00b2/N+.5*sum(mu\u00b2+exp(lv)-1-lv)/N.",
+      "files": [
+        {
+          "path": "machine-learning/deep-learning/variational-autoencoders/python/solution.py",
+          "sha256": "b4a8f839eb26384f121428352a861796381c9169847c6d38f9d784c39f234fcc",
+          "lines": 70
+        },
+        {
+          "path": "machine-learning/deep-learning/variational-autoencoders/tests/test_python.py",
+          "sha256": "a9f61e9bf4bbdc4159e90e48c3ebefc25ff7bb15228717a8ecae66b00135f539",
+          "lines": 28
+        },
+        {
+          "path": "machine-learning/deep-learning/variational-autoencoders/README.md",
+          "sha256": "35be9bcce739260ef84e9e97a1dc2fe893dcb603be8c743ddc20b8afae5302c1",
+          "lines": 142
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_forward_reparameterization_kl_and_negative_elbo",
+        "test_finite_difference_reparameterized_all_parameters_fixed_noise",
+        "test_reproducibility_sampling_and_bounded_log_variance"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_forward_reparameterization_kl_and_negative_elbo",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Independent reparameterization/KL/zero-posterior formulas;every mean/variance/decoder parameter finite-differenced with the same epsilon."
+        },
+        {
+          "test_name": "test_finite_difference_reparameterized_all_parameters_fixed_noise",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Independent reparameterization/KL/zero-posterior formulas;every mean/variance/decoder parameter finite-differenced with the same epsilon."
+        }
+      ],
+      "oracle_independence_assessment": "Independent reparameterization/KL/zero-posterior formulas;every mean/variance/decoder parameter finite-differenced with the same epsilon.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6;sharedcheckerdefaultatol2e-6,rtol3e-4;Transformeratol4e-6. Manualstructural/referenceinvariantstypicallyatol1e-12..1e-13. Stochasticdrawsfixed;L1kinksavoided;no arbitrary coordinate/generative-quality equality.",
+      "literal_test_tolerances": [],
+      "resource_numerical_and_reproducibility_limits": "VanillaAE retains B5contract. OtherB7fit2..128rows,query<=256,features<=16,cellcap262144;sequenceT<=16;imagesC<=2,H/W<=8;GNN<=32nodes. Fixed epochs<=2000,updates<=10000,parameters<=20000;no convergence/production/sample-fidelity guarantee.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "diffusion-models",
+      "canonical_owner": "B7",
+      "canonical_path": "machine-learning/deep-learning/diffusion-models",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Tiny DDPM epsilon MLP,linear beta schedule,fixed posterior variance.",
+      "mathematical_objective_updates_and_inference": "q(x_t|x0)=sqrt(baralpha)*x0+sqrt(1-baralpha)*eps;mean noise MSE;learned reverse mean and posterior variance;no noise at final t0.",
+      "files": [
+        {
+          "path": "machine-learning/deep-learning/diffusion-models/python/solution.py",
+          "sha256": "4186f8820f419429617843bd407e47cb9e15d0a9123af523a444d2d0f3376e6f",
+          "lines": 76
+        },
+        {
+          "path": "machine-learning/deep-learning/diffusion-models/tests/test_python.py",
+          "sha256": "2b1ab0c9e32dd7a29b52a0c6b201ea6477c0bb86e4e84c7af81986e6ed5c5bbb",
+          "lines": 35
+        },
+        {
+          "path": "machine-learning/deep-learning/diffusion-models/README.md",
+          "sha256": "dedbd6f882d31dec16394ec8efcbc5b657e689d96707c9fd5610c748a24a347f",
+          "lines": 144
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_forward_schedule_noising_moments_and_reverse_step",
+        "test_finite_difference_denoiser_fixed_timesteps_noise",
+        "test_reproducibility_sampling_finite_and_schedule_errors",
+        "test_timestep_indexing_rejects_wraparound_and_broadcasting"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_forward_schedule_noising_moments_and_reverse_step",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Independent beta/baralpha/noising/reverse-step formulas;fixed-time/noise full denoiser finite differences;timestep/broadcasting rejection."
+        },
+        {
+          "test_name": "test_finite_difference_denoiser_fixed_timesteps_noise",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Independent beta/baralpha/noising/reverse-step formulas;fixed-time/noise full denoiser finite differences;timestep/broadcasting rejection."
+        }
+      ],
+      "oracle_independence_assessment": "Independent beta/baralpha/noising/reverse-step formulas;fixed-time/noise full denoiser finite differences;timestep/broadcasting rejection.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6;sharedcheckerdefaultatol2e-6,rtol3e-4;Transformeratol4e-6. Manualstructural/referenceinvariantstypicallyatol1e-12..1e-13. Stochasticdrawsfixed;L1kinksavoided;no arbitrary coordinate/generative-quality equality.",
+      "literal_test_tolerances": [],
+      "resource_numerical_and_reproducibility_limits": "VanillaAE retains B5contract. OtherB7fit2..128rows,query<=256,features<=16,cellcap262144;sequenceT<=16;imagesC<=2,H/W<=8;GNN<=32nodes. Fixed epochs<=2000,updates<=10000,parameters<=20000;no convergence/production/sample-fidelity guarantee.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "graph-neural-networks",
+      "canonical_owner": "B7",
+      "canonical_path": "machine-learning/deep-learning/graph-neural-networks",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Two-layer symmetric normalized GCN scalar node regressor,full graph.",
+      "mathematical_objective_updates_and_inference": "S=D^-1/2(A+I)D^-1/2 with zero inverse degree for isolates;H=tanh(SXW1+b1),R=SHW2+b2;do not shuffle node rows.",
+      "files": [
+        {
+          "path": "machine-learning/deep-learning/graph-neural-networks/python/solution.py",
+          "sha256": "c8376701f8db7b3c4662341e316e6bcbfe51e5017dd379a442d72cc48b2281c4",
+          "lines": 63
+        },
+        {
+          "path": "machine-learning/deep-learning/graph-neural-networks/tests/test_python.py",
+          "sha256": "cb3000c18d866cab29370289d0401fc3345c25e4ab620d721e2e59cc8b788cae",
+          "lines": 31
+        },
+        {
+          "path": "machine-learning/deep-learning/graph-neural-networks/README.md",
+          "sha256": "d0da2e2d2c72df84bdf97fc45238fc302f7a6e5deac0b91f145efe752ac6dd7a",
+          "lines": 143
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_forward_normalized_aggregation_self_loops_isolates",
+        "test_finite_difference_all_message_passing_parameters",
+        "test_node_permutation_equivariance_and_training_reproducibility",
+        "test_invalid_adjacency"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_forward_normalized_aggregation_self_loops_isolates",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand normalized adjacency/isolate output;all four trainable groups central differences;node permutation equivariance."
+        },
+        {
+          "test_name": "test_finite_difference_all_message_passing_parameters",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Hand normalized adjacency/isolate output;all four trainable groups central differences;node permutation equivariance."
+        },
+        {
+          "test_name": "test_node_permutation_equivariance_and_training_reproducibility",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand normalized adjacency/isolate output;all four trainable groups central differences;node permutation equivariance."
+        }
+      ],
+      "oracle_independence_assessment": "Hand normalized adjacency/isolate output;all four trainable groups central differences;node permutation equivariance.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6;sharedcheckerdefaultatol2e-6,rtol3e-4;Transformeratol4e-6. Manualstructural/referenceinvariantstypicallyatol1e-12..1e-13. Stochasticdrawsfixed;L1kinksavoided;no arbitrary coordinate/generative-quality equality.",
+      "literal_test_tolerances": [
+        "atol=1e-12"
+      ],
+      "resource_numerical_and_reproducibility_limits": "VanillaAE retains B5contract. OtherB7fit2..128rows,query<=256,features<=16,cellcap262144;sequenceT<=16;imagesC<=2,H/W<=8;GNN<=32nodes. Fixed epochs<=2000,updates<=10000,parameters<=20000;no convergence/production/sample-fidelity guarantee.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "residual-networks",
+      "canonical_owner": "B7",
+      "canonical_path": "machine-learning/deep-learning/residual-networks",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "One identity tanh residual block and scalar regression head.",
+      "mathematical_objective_updates_and_inference": "Z=X+tanh(XW1+b1)W2+b2;input adjoint adds identity and residual terms;exact shape equality.",
+      "files": [
+        {
+          "path": "machine-learning/deep-learning/residual-networks/python/solution.py",
+          "sha256": "8e0f7616668f5118df9f9b69bcbeba682b7a6031e8078852da3048ea418f233e",
+          "lines": 50
+        },
+        {
+          "path": "machine-learning/deep-learning/residual-networks/tests/test_python.py",
+          "sha256": "ea7a0a0586e54114e4f7ab019019f992feda23c6837e381859809ce4c3162d3f",
+          "lines": 26
+        },
+        {
+          "path": "machine-learning/deep-learning/residual-networks/README.md",
+          "sha256": "5bae437ed909b1d9f629d2b87aae224ba43e5d19c084fd3e1fb08631e8906b16",
+          "lines": 140
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_forward_identity_shortcut_and_backprop_both_paths",
+        "test_finite_difference_residual_weights_and_input",
+        "test_reproducibility_training_and_inference"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_forward_identity_shortcut_and_backprop_both_paths",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Zero residual hand identity;all weights/biases and input central differences through separate branches."
+        },
+        {
+          "test_name": "test_finite_difference_residual_weights_and_input",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Zero residual hand identity;all weights/biases and input central differences through separate branches."
+        }
+      ],
+      "oracle_independence_assessment": "Zero residual hand identity;all weights/biases and input central differences through separate branches.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6;sharedcheckerdefaultatol2e-6,rtol3e-4;Transformeratol4e-6. Manualstructural/referenceinvariantstypicallyatol1e-12..1e-13. Stochasticdrawsfixed;L1kinksavoided;no arbitrary coordinate/generative-quality equality.",
+      "literal_test_tolerances": [],
+      "resource_numerical_and_reproducibility_limits": "VanillaAE retains B5contract. OtherB7fit2..128rows,query<=256,features<=16,cellcap262144;sequenceT<=16;imagesC<=2,H/W<=8;GNN<=32nodes. Fixed epochs<=2000,updates<=10000,parameters<=20000;no convergence/production/sample-fidelity guarantee.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "denoising-autoencoders",
+      "canonical_owner": "B7",
+      "canonical_path": "machine-learning/deep-learning/denoising-autoencoders",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Gaussian-corrupted input to clean-target tanh/linear bottleneck AE.",
+      "mathematical_objective_updates_and_inference": "Reuse vanilla core;MSE compares reconstruction of corrupted normalized input to clean normalized target;fixed corruption during derivatives.",
+      "files": [
+        {
+          "path": "machine-learning/deep-learning/denoising-autoencoders/python/solution.py",
+          "sha256": "bcc28e7741c0ff41e6e6ed37fc575d0e619784ddb404c3fbfa796ac858fb3d31",
+          "lines": 64
+        },
+        {
+          "path": "machine-learning/deep-learning/denoising-autoencoders/tests/test_python.py",
+          "sha256": "8e4e9ea893d4899895d4aa8dcc7a46021380e19d8b16c8450f82beeea08df7cd",
+          "lines": 37
+        },
+        {
+          "path": "machine-learning/deep-learning/denoising-autoencoders/README.md",
+          "sha256": "9cf0f7856524c5b53b260535c8c0a68192a7018de5d7fb2f4c940250a90b23a5",
+          "lines": 141
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_finite_difference_modified_reconstruction_objective",
+        "test_reproducibility_training_shapes_and_invalid_variant",
+        "test_corruption_uses_clean_targets_not_noisy_inputs",
+        "test_controlled_denoising_improves_noisy_clean_error"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_finite_difference_modified_reconstruction_objective",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Explicit clean-versus-noisy target objective comparison;all packed-parameter finite differences with corruption fixed;controlled held-noise denoising diagnostic."
+        },
+        {
+          "test_name": "test_corruption_uses_clean_targets_not_noisy_inputs",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Explicit clean-versus-noisy target objective comparison;all packed-parameter finite differences with corruption fixed;controlled held-noise denoising diagnostic."
+        }
+      ],
+      "oracle_independence_assessment": "Explicit clean-versus-noisy target objective comparison;all packed-parameter finite differences with corruption fixed;controlled held-noise denoising diagnostic.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6;sharedcheckerdefaultatol2e-6,rtol3e-4;Transformeratol4e-6. Manualstructural/referenceinvariantstypicallyatol1e-12..1e-13. Stochasticdrawsfixed;L1kinksavoided;no arbitrary coordinate/generative-quality equality.",
+      "literal_test_tolerances": [],
+      "resource_numerical_and_reproducibility_limits": "VanillaAE retains B5contract. OtherB7fit2..128rows,query<=256,features<=16,cellcap262144;sequenceT<=16;imagesC<=2,H/W<=8;GNN<=32nodes. Fixed epochs<=2000,updates<=10000,parameters<=20000;no convergence/production/sample-fidelity guarantee.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "sparse-autoencoders",
+      "canonical_owner": "B7",
+      "canonical_path": "machine-learning/deep-learning/sparse-autoencoders",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Tanh/linear AE plus L1 latent activation penalty,not KL target-rate sparsity.",
+      "mathematical_objective_updates_and_inference": "L=MSE+sparsity*mean(abs(Z));add sparsity*sign(Z)/(N*k) before tanh derivative;zero subgradient declared.",
+      "files": [
+        {
+          "path": "machine-learning/deep-learning/sparse-autoencoders/python/solution.py",
+          "sha256": "b497a447d8a8b7cfefed642aa48893c24b412d9952bd3bb5ae7ed82c5356a0d8",
+          "lines": 61
+        },
+        {
+          "path": "machine-learning/deep-learning/sparse-autoencoders/tests/test_python.py",
+          "sha256": "084640ad7ec92a8713a5a57ce957b6580a055ac004281498ade5b185ced25733",
+          "lines": 37
+        },
+        {
+          "path": "machine-learning/deep-learning/sparse-autoencoders/README.md",
+          "sha256": "faa8700d7a656e565a9999e495c7c4046a591db2bc97470b212e1e2a5aca8563",
+          "lines": 142
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_finite_difference_modified_reconstruction_objective",
+        "test_reproducibility_training_shapes_and_invalid_variant",
+        "test_explicit_l1_penalty_and_gradient_strength",
+        "test_controlled_sparsity_strength_reduces_activation"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_finite_difference_modified_reconstruction_objective",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Exact penalty increment and decoder-gradient ownership;all parameters central differences away from zero kinks;separate activation-strength teaching diagnostic."
+        },
+        {
+          "test_name": "test_explicit_l1_penalty_and_gradient_strength",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Exact penalty increment and decoder-gradient ownership;all parameters central differences away from zero kinks;separate activation-strength teaching diagnostic."
+        }
+      ],
+      "oracle_independence_assessment": "Exact penalty increment and decoder-gradient ownership;all parameters central differences away from zero kinks;separate activation-strength teaching diagnostic.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6;sharedcheckerdefaultatol2e-6,rtol3e-4;Transformeratol4e-6. Manualstructural/referenceinvariantstypicallyatol1e-12..1e-13. Stochasticdrawsfixed;L1kinksavoided;no arbitrary coordinate/generative-quality equality.",
+      "literal_test_tolerances": [],
+      "resource_numerical_and_reproducibility_limits": "VanillaAE retains B5contract. OtherB7fit2..128rows,query<=256,features<=16,cellcap262144;sequenceT<=16;imagesC<=2,H/W<=8;GNN<=32nodes. Fixed epochs<=2000,updates<=10000,parameters<=20000;no convergence/production/sample-fidelity guarantee.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "q-learning",
+      "canonical_owner": "B8",
+      "canonical_path": "machine-learning/reinforcement-learning/q-learning",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Off-policy tabular Bellman-max TD control.",
+      "mathematical_objective_updates_and_inference": "Qsa+=alpha*(r+gamma*(not terminated)*max Qnext-Qsa);epsilon behavior;first-index ties;truncation bootstraps.",
+      "files": [
+        {
+          "path": "machine-learning/reinforcement-learning/q-learning/python/solution.py",
+          "sha256": "b4ad333eb86014fd4ce245ae74c0a8494826eaa609137c8bb03cae65ed06eaa0",
+          "lines": 44
+        },
+        {
+          "path": "machine-learning/reinforcement-learning/q-learning/tests/test_python.py",
+          "sha256": "298adea07423187551b3c8e068519424a392aea1ce7023136f64525da981cad1",
+          "lines": 62
+        },
+        {
+          "path": "machine-learning/reinforcement-learning/q-learning/README.md",
+          "sha256": "9bd05375cfa744f1a7df0f5895f67d5217731d3275b0f3620d974fe63fb2bcd5",
+          "lines": 143
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_bellman_update",
+        "test_exact_mdp_bellman_oracle_and_seeded_training",
+        "test_epsilon_exploration_and_ties",
+        "test_invalid_transition",
+        "test_truncation_bootstrap_not_terminal",
+        "test_randomized_analytical_bellman"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_exact_mdp_bellman_oracle_and_seeded_training",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Four exact hand variants,50 randomized independent scalar updates,independent finite-MDP value iteration and Bellman residual checks."
+        },
+        {
+          "test_name": "test_epsilon_exploration_and_ties",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Four exact hand variants,50 randomized independent scalar updates,independent finite-MDP value iteration and Bellman residual checks."
+        },
+        {
+          "test_name": "test_randomized_analytical_bellman",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Four exact hand variants,50 randomized independent scalar updates,independent finite-MDP value iteration and Bellman residual checks."
+        }
+      ],
+      "oracle_independence_assessment": "Four exact hand variants,50 randomized independent scalar updates,independent finite-MDP value iteration and Bellman residual checks.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6,atol3e-6,rtol3e-4 for all implemented neural parameter groups. Bellmanhand/randomizedupdatesatol1e-14;learnedQ/Bellmanresidual2e-4 on statedtoychain. PPOgradientchecksavoidinexactclipkinks;A3Cmultiworkertestsuseinvariantsnotordering.",
+      "literal_test_tolerances": [
+        "atol=1e-14",
+        "atol=2e-4"
+      ],
+      "resource_numerical_and_reproducibility_limits": "Dense arrays<=65536cells,rawmagnitudes<=1e6,dimensions/hidden/actions<=32;intermediate ill-scaling may fail explicitly. Episodes/iterations<=5000,steps<=256,interactions<=100000,updates<=10000;replay<=4096;threads<=8;MCTSdepth<=64,iterations<=10000,actions<=32. Prompt pure callbacks required;multiworker order nondeterministic.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "deep-q-networks",
+      "canonical_owner": "B8",
+      "canonical_path": "machine-learning/reinforcement-learning/deep-q-networks",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Tanh neural DQN with FIFO uniform replay and hard target snapshots.",
+      "mathematical_objective_updates_and_inference": "Fixed target r+gamma*(not terminal)*max Qtarget(next);half-MSE selected-action residual;online-only SGD and periodic owned hard copies.",
+      "files": [
+        {
+          "path": "machine-learning/reinforcement-learning/deep-q-networks/python/solution.py",
+          "sha256": "bc0384475c14da2705cd541231992245f90ccd24f1b2fd6e3df6febf860a7cda",
+          "lines": 94
+        },
+        {
+          "path": "machine-learning/reinforcement-learning/deep-q-networks/tests/test_python.py",
+          "sha256": "a8bcede5829f89c8065435aad2788f3783f221bc8b2f589474128161d3599614",
+          "lines": 78
+        },
+        {
+          "path": "machine-learning/reinforcement-learning/deep-q-networks/README.md",
+          "sha256": "cc06a67e5414944604a6429c36dcced1d3e375286f0a31ab53145e0d6df72c96",
+          "lines": 132
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_neural_forward_selected_q_td_targets_and_terminal_mask",
+        "test_finite_difference_fixed_td_targets_all_parameters",
+        "test_replay_fifo_sampling_ownership_and_underflow",
+        "test_target_snapshot_and_synchronization_gradient_application",
+        "test_seeded_training_separate_greedy_evaluation",
+        "test_nonterminal_truncation_td_target_is_fixed",
+        "test_invalid_neural_action"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_neural_forward_selected_q_td_targets_and_terminal_mask",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand neural/TD formulas;independent forward half-MSE for every parameter derivative;replay and sync state oracles;multistep vector-chain diagnostic."
+        },
+        {
+          "test_name": "test_finite_difference_fixed_td_targets_all_parameters",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Hand neural/TD formulas;independent forward half-MSE for every parameter derivative;replay and sync state oracles;multistep vector-chain diagnostic."
+        },
+        {
+          "test_name": "test_target_snapshot_and_synchronization_gradient_application",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand neural/TD formulas;independent forward half-MSE for every parameter derivative;replay and sync state oracles;multistep vector-chain diagnostic."
+        },
+        {
+          "test_name": "test_nonterminal_truncation_td_target_is_fixed",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand neural/TD formulas;independent forward half-MSE for every parameter derivative;replay and sync state oracles;multistep vector-chain diagnostic."
+        }
+      ],
+      "oracle_independence_assessment": "Hand neural/TD formulas;independent forward half-MSE for every parameter derivative;replay and sync state oracles;multistep vector-chain diagnostic.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6,atol3e-6,rtol3e-4 for all implemented neural parameter groups. Bellmanhand/randomizedupdatesatol1e-14;learnedQ/Bellmanresidual2e-4 on statedtoychain. PPOgradientchecksavoidinexactclipkinks;A3Cmultiworkertestsuseinvariantsnotordering.",
+      "literal_test_tolerances": [
+        "atol=.04"
+      ],
+      "resource_numerical_and_reproducibility_limits": "Dense arrays<=65536cells,rawmagnitudes<=1e6,dimensions/hidden/actions<=32;intermediate ill-scaling may fail explicitly. Episodes/iterations<=5000,steps<=256,interactions<=100000,updates<=10000;replay<=4096;threads<=8;MCTSdepth<=64,iterations<=10000,actions<=32. Prompt pure callbacks required;multiworker order nondeterministic.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "sarsa",
+      "canonical_owner": "B8",
+      "canonical_path": "machine-learning/reinforcement-learning/sarsa",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "On-policy tabular SARSA using and reusing the sampled next action.",
+      "mathematical_objective_updates_and_inference": "Qsa+=alpha*(r+gamma*(not terminated)*Q(next_s,next_a)-Qsa);terminal need no next action;truncation retains it.",
+      "files": [
+        {
+          "path": "machine-learning/reinforcement-learning/sarsa/python/solution.py",
+          "sha256": "3312e657ec3f0b54569e31e3c3cbd4dcdcea2951eae9bd4445ae34fe57416198",
+          "lines": 49
+        },
+        {
+          "path": "machine-learning/reinforcement-learning/sarsa/tests/test_python.py",
+          "sha256": "59c709afc76d41625096bc1ee5e7240963938af4e22beac8d8c5e1d7e2a88a26",
+          "lines": 60
+        },
+        {
+          "path": "machine-learning/reinforcement-learning/sarsa/README.md",
+          "sha256": "5124c1a9c7e9cfbe69c76da16f7ad9808088485e7f4562c7f2100e85073661bc",
+          "lines": 143
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_on_policy_target_differs_from_q_learning",
+        "test_seeded_on_policy_learning",
+        "test_next_action_validation_and_zero_parameters",
+        "test_actual_sampled_next_action_is_reused",
+        "test_truncation_uses_next_action",
+        "test_randomized_sarsa_oracle"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_on_policy_target_differs_from_q_learning",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand Q-learning contrast;50 random scalar target checks;recorded actual sampled-next-action reuse and truncation bootstrap."
+        },
+        {
+          "test_name": "test_randomized_sarsa_oracle",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand Q-learning contrast;50 random scalar target checks;recorded actual sampled-next-action reuse and truncation bootstrap."
+        }
+      ],
+      "oracle_independence_assessment": "Hand Q-learning contrast;50 random scalar target checks;recorded actual sampled-next-action reuse and truncation bootstrap.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6,atol3e-6,rtol3e-4 for all implemented neural parameter groups. Bellmanhand/randomizedupdatesatol1e-14;learnedQ/Bellmanresidual2e-4 on statedtoychain. PPOgradientchecksavoidinexactclipkinks;A3Cmultiworkertestsuseinvariantsnotordering.",
+      "literal_test_tolerances": [
+        "atol=1e-14"
+      ],
+      "resource_numerical_and_reproducibility_limits": "Dense arrays<=65536cells,rawmagnitudes<=1e6,dimensions/hidden/actions<=32;intermediate ill-scaling may fail explicitly. Episodes/iterations<=5000,steps<=256,interactions<=100000,updates<=10000;replay<=4096;threads<=8;MCTSdepth<=64,iterations<=10000,actions<=32. Prompt pure callbacks required;multiworker order nondeterministic.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "reinforce-policy-gradient",
+      "canonical_owner": "B8",
+      "canonical_path": "machine-learning/reinforcement-learning/reinforce-policy-gradient",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Complete-episode Monte Carlo REINFORCE,no baseline/critic.",
+      "mathematical_objective_updates_and_inference": "Episodic discounted sum objective;weights gamma^t*reward-to-go;compensate shared mean reduction by trajectory length;reject partial episodes.",
+      "files": [
+        {
+          "path": "machine-learning/reinforcement-learning/reinforce-policy-gradient/python/solution.py",
+          "sha256": "048b32ca50f017e7eb5592ee0ae82d5299fed57d82f702032a6a07901b3cb207",
+          "lines": 36
+        },
+        {
+          "path": "machine-learning/reinforcement-learning/reinforce-policy-gradient/tests/test_python.py",
+          "sha256": "7534d7958a8c5270b0f190776161f798f3edb5669c34f5fd77772d4431194c66",
+          "lines": 57
+        },
+        {
+          "path": "machine-learning/reinforcement-learning/reinforce-policy-gradient/README.md",
+          "sha256": "5992f41de04cbca6f9812bddf2b49dadc426ea984564ac3e0ee95ce30a445ce0",
+          "lines": 129
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_returns_logsoftmax_and_analytic_logit_gradient",
+        "test_finite_difference_discounted_episodic_policy_gradient",
+        "test_seeded_training_sampling_and_separate_evaluation",
+        "test_requires_complete_terminal_trajectories",
+        "test_sampling_uniform_and_global_rng_unchanged"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_returns_logsoftmax_and_analytic_logit_gradient",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Exact returns/logit derivative;independently expressed discounted episodic objective for all parameters;variable-length sum regression;uniform sampling."
+        },
+        {
+          "test_name": "test_finite_difference_discounted_episodic_policy_gradient",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Exact returns/logit derivative;independently expressed discounted episodic objective for all parameters;variable-length sum regression;uniform sampling."
+        }
+      ],
+      "oracle_independence_assessment": "Exact returns/logit derivative;independently expressed discounted episodic objective for all parameters;variable-length sum regression;uniform sampling.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6,atol3e-6,rtol3e-4 for all implemented neural parameter groups. Bellmanhand/randomizedupdatesatol1e-14;learnedQ/Bellmanresidual2e-4 on statedtoychain. PPOgradientchecksavoidinexactclipkinks;A3Cmultiworkertestsuseinvariantsnotordering.",
+      "literal_test_tolerances": [],
+      "resource_numerical_and_reproducibility_limits": "Dense arrays<=65536cells,rawmagnitudes<=1e6,dimensions/hidden/actions<=32;intermediate ill-scaling may fail explicitly. Episodes/iterations<=5000,steps<=256,interactions<=100000,updates<=10000;replay<=4096;threads<=8;MCTSdepth<=64,iterations<=10000,actions<=32. Prompt pure callbacks required;multiworker order nondeterministic.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "advantage-actor-critic",
+      "canonical_owner": "B8",
+      "canonical_path": "machine-learning/reinforcement-learning/advantage-actor-critic",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Synchronous categorical n-step A2C,separate actor/value MLPs.",
+      "mathematical_objective_updates_and_inference": "Freeze both networks during complete synchronous rollout batch;stopped A=R-V;mean negative logpolicy*A and half-MSE critic;bootstrap only cuts.",
+      "files": [
+        {
+          "path": "machine-learning/reinforcement-learning/advantage-actor-critic/python/solution.py",
+          "sha256": "2f289e8b63f21a1603f0ab15277a067039aadf5702da97933860f985fa4d3a75",
+          "lines": 58
+        },
+        {
+          "path": "machine-learning/reinforcement-learning/advantage-actor-critic/tests/test_python.py",
+          "sha256": "db214a26d567129689ddb50f97e015ceab3eee36a37791540423bc506816c4f5",
+          "lines": 54
+        },
+        {
+          "path": "machine-learning/reinforcement-learning/advantage-actor-critic/README.md",
+          "sha256": "4a5b86b5aedf38794f6b2844349fd1e4ff3ca2d8044a35114ff1592906bc5b28",
+          "lines": 130
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_independent_advantage_actor_and_critic_updates",
+        "test_finite_difference_actor_frozen_advantage_and_critic",
+        "test_synchronous_training_and_reproducibility",
+        "test_n_step_return_truncation_bootstrap"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_independent_advantage_actor_and_critic_updates",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand advantage/logit/value updates;independent actor objective with frozen advantage and separate critic full-coordinate finite differences;tail target2.8."
+        },
+        {
+          "test_name": "test_finite_difference_actor_frozen_advantage_and_critic",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Hand advantage/logit/value updates;independent actor objective with frozen advantage and separate critic full-coordinate finite differences;tail target2.8."
+        },
+        {
+          "test_name": "test_n_step_return_truncation_bootstrap",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand advantage/logit/value updates;independent actor objective with frozen advantage and separate critic full-coordinate finite differences;tail target2.8."
+        }
+      ],
+      "oracle_independence_assessment": "Hand advantage/logit/value updates;independent actor objective with frozen advantage and separate critic full-coordinate finite differences;tail target2.8.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6,atol3e-6,rtol3e-4 for all implemented neural parameter groups. Bellmanhand/randomizedupdatesatol1e-14;learnedQ/Bellmanresidual2e-4 on statedtoychain. PPOgradientchecksavoidinexactclipkinks;A3Cmultiworkertestsuseinvariantsnotordering.",
+      "literal_test_tolerances": [],
+      "resource_numerical_and_reproducibility_limits": "Dense arrays<=65536cells,rawmagnitudes<=1e6,dimensions/hidden/actions<=32;intermediate ill-scaling may fail explicitly. Episodes/iterations<=5000,steps<=256,interactions<=100000,updates<=10000;replay<=4096;threads<=8;MCTSdepth<=64,iterations<=10000,actions<=32. Prompt pure callbacks required;multiworker order nondeterministic.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "asynchronous-advantage-actor-critic",
+      "canonical_owner": "B8",
+      "canonical_path": "machine-learning/reinforcement-learning/asynchronous-advantage-actor-critic",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Actual threaded n-step A3C with lock-protected snapshots/applications.",
+      "mathematical_objective_updates_and_inference": "Workers collect and differentiate local snapshots outside lock;apply stale gradients to CURRENT globals atomically;no update rendezvous.",
+      "files": [
+        {
+          "path": "machine-learning/reinforcement-learning/asynchronous-advantage-actor-critic/python/solution.py",
+          "sha256": "df423b9ca6d417e094875f345b84fc174020fbaf64cf3a61908ae55ea960f880",
+          "lines": 101
+        },
+        {
+          "path": "machine-learning/reinforcement-learning/asynchronous-advantage-actor-critic/tests/test_python.py",
+          "sha256": "8046612805b1c3a14bcaefa5a681381f28e11b51c23da1673f17a392788674b0",
+          "lines": 92
+        },
+        {
+          "path": "machine-learning/reinforcement-learning/asynchronous-advantage-actor-critic/README.md",
+          "sha256": "61d31ff811218780d6a2e648d4e72b79b4b351dd7ace3292fc03a09c5a175984",
+          "lines": 134
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_actual_concurrency_local_environments_snapshots_and_global_updates",
+        "test_finite_difference_worker_gradients_independent_losses",
+        "test_single_worker_deterministic_diagnostic_exact_global_application",
+        "test_one_worker_exact_gradient_step_oracle",
+        "test_worker_exception_propagation_and_clean_shutdown",
+        "test_bounded_multiworker_learning_invariants"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_finite_difference_worker_gradients_independent_losses",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Independent actor/critic full-coordinate derivatives;exact one-worker SGD;two-worker overlap barrier and snapshot/applied version checks;errors close/join workers."
+        },
+        {
+          "test_name": "test_single_worker_deterministic_diagnostic_exact_global_application",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Independent actor/critic full-coordinate derivatives;exact one-worker SGD;two-worker overlap barrier and snapshot/applied version checks;errors close/join workers."
+        },
+        {
+          "test_name": "test_one_worker_exact_gradient_step_oracle",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Independent actor/critic full-coordinate derivatives;exact one-worker SGD;two-worker overlap barrier and snapshot/applied version checks;errors close/join workers."
+        }
+      ],
+      "oracle_independence_assessment": "Independent actor/critic full-coordinate derivatives;exact one-worker SGD;two-worker overlap barrier and snapshot/applied version checks;errors close/join workers.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6,atol3e-6,rtol3e-4 for all implemented neural parameter groups. Bellmanhand/randomizedupdatesatol1e-14;learnedQ/Bellmanresidual2e-4 on statedtoychain. PPOgradientchecksavoidinexactclipkinks;A3Cmultiworkertestsuseinvariantsnotordering.",
+      "literal_test_tolerances": [],
+      "resource_numerical_and_reproducibility_limits": "Dense arrays<=65536cells,rawmagnitudes<=1e6,dimensions/hidden/actions<=32;intermediate ill-scaling may fail explicitly. Episodes/iterations<=5000,steps<=256,interactions<=100000,updates<=10000;replay<=4096;threads<=8;MCTSdepth<=64,iterations<=10000,actions<=32. Prompt pure callbacks required;multiworker order nondeterministic.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "proximal-policy-optimization",
+      "canonical_owner": "B8",
+      "canonical_path": "machine-learning/reinforcement-learning/proximal-policy-optimization",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Categorical clipped-surrogate PPO,frozen n-step advantages and old selected-action logprobs.",
+      "mathematical_objective_updates_and_inference": "r=exp(newlog-oldlog);negative mean min(r*A,clip(r)*A);repeated shuffled minibatches keep denominator/advantage/return frozen;critic half-MSE.",
+      "files": [
+        {
+          "path": "machine-learning/reinforcement-learning/proximal-policy-optimization/python/solution.py",
+          "sha256": "93619232c4138da5192975ef4c056fa18a3b4122c54342ae12b8825a5a3350f2",
+          "lines": 89
+        },
+        {
+          "path": "machine-learning/reinforcement-learning/proximal-policy-optimization/tests/test_python.py",
+          "sha256": "fa2388fd665740ce5e7719858a0b0c0472ebb210120d1a0b46240c135cb62da5",
+          "lines": 66
+        },
+        {
+          "path": "machine-learning/reinforcement-learning/proximal-policy-optimization/README.md",
+          "sha256": "7e7d86d698f5aea066330a3502d48e5f6c727c1a69d9149eb7d7bb85a09b44c4",
+          "lines": 133
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_ratio_clipping_both_advantage_signs_and_logp_derivative",
+        "test_finite_difference_clipped_actor_away_from_boundaries",
+        "test_critic_finite_difference",
+        "test_old_policy_snapshot_persists_across_epochs_minibatches",
+        "test_seeded_bounded_ppo_training",
+        "test_invalid_surrogate_inputs"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_ratio_clipping_both_advantage_signs_and_logp_derivative",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Independent positive/negative-advantage clipping cases;all actor gradients in three smooth ratio regimes and critic differences;six-update old-policy snapshot oracle."
+        },
+        {
+          "test_name": "test_finite_difference_clipped_actor_away_from_boundaries",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Independent positive/negative-advantage clipping cases;all actor gradients in three smooth ratio regimes and critic differences;six-update old-policy snapshot oracle."
+        },
+        {
+          "test_name": "test_critic_finite_difference",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Independent positive/negative-advantage clipping cases;all actor gradients in three smooth ratio regimes and critic differences;six-update old-policy snapshot oracle."
+        }
+      ],
+      "oracle_independence_assessment": "Independent positive/negative-advantage clipping cases;all actor gradients in three smooth ratio regimes and critic differences;six-update old-policy snapshot oracle.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6,atol3e-6,rtol3e-4 for all implemented neural parameter groups. Bellmanhand/randomizedupdatesatol1e-14;learnedQ/Bellmanresidual2e-4 on statedtoychain. PPOgradientchecksavoidinexactclipkinks;A3Cmultiworkertestsuseinvariantsnotordering.",
+      "literal_test_tolerances": [],
+      "resource_numerical_and_reproducibility_limits": "Dense arrays<=65536cells,rawmagnitudes<=1e6,dimensions/hidden/actions<=32;intermediate ill-scaling may fail explicitly. Episodes/iterations<=5000,steps<=256,interactions<=100000,updates<=10000;replay<=4096;threads<=8;MCTSdepth<=64,iterations<=10000,actions<=32. Prompt pure callbacks required;multiworker order nondeterministic.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "deep-deterministic-policy-gradient",
+      "canonical_owner": "B8",
+      "canonical_path": "machine-learning/reinforcement-learning/deep-deterministic-policy-gradient",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "Continuous tanh-bounded DDPG,neural Q,replay,soft targets,documented critic-only warmup.",
+      "mathematical_objective_updates_and_inference": "Actor minimizes -mean Q(s,mu(s)) through fixed critic;critic half-MSE fixed target;terminal-only mask;Polyak interpolation;separate actor/critic rates.",
+      "files": [
+        {
+          "path": "machine-learning/reinforcement-learning/deep-deterministic-policy-gradient/python/solution.py",
+          "sha256": "8ede0eb90329450b81fe318a08c0b4e7db3061991e03fa37168493c4124002e2",
+          "lines": 152
+        },
+        {
+          "path": "machine-learning/reinforcement-learning/deep-deterministic-policy-gradient/tests/test_python.py",
+          "sha256": "3bc9b9a739ed97052e093c0dcb8080d297b8a67249d5cbe2c5945c575bdcb110",
+          "lines": 90
+        },
+        {
+          "path": "machine-learning/reinforcement-learning/deep-deterministic-policy-gradient/README.md",
+          "sha256": "48a74bc58a6aaa7e9c804da852305344603a005888c5fe336ae01f7658220bbe",
+          "lines": 132
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_continuous_actor_bounds_and_critic_forward",
+        "test_finite_difference_deterministic_actor_through_fixed_critic",
+        "test_critic_finite_difference_fixed_td_target",
+        "test_td_terminal_mask_truncation_and_soft_target_interpolation",
+        "test_noise_seed_action_clipping_replay_and_parameter_updates",
+        "test_tiny_continuous_control_training_and_reproducibility",
+        "test_invalid_action_bounds",
+        "test_critic_warmup_preserves_actor_while_learning_from_uniform_actions"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_continuous_actor_bounds_and_critic_forward",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Independent bounded actor/critic forward;every actor derivative through fixed critic and separate critic derivative;exact targets/tau0,.2,1;warmup actor preservation."
+        },
+        {
+          "test_name": "test_finite_difference_deterministic_actor_through_fixed_critic",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Independent bounded actor/critic forward;every actor derivative through fixed critic and separate critic derivative;exact targets/tau0,.2,1;warmup actor preservation."
+        },
+        {
+          "test_name": "test_critic_finite_difference_fixed_td_target",
+          "type": "central finite differences of complete implemented parameter groups;fixed stochastic inputs/stopped quantities",
+          "reason": "Independent bounded actor/critic forward;every actor derivative through fixed critic and separate critic derivative;exact targets/tau0,.2,1;warmup actor preservation."
+        },
+        {
+          "test_name": "test_td_terminal_mask_truncation_and_soft_target_interpolation",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Independent bounded actor/critic forward;every actor derivative through fixed critic and separate critic derivative;exact targets/tau0,.2,1;warmup actor preservation."
+        },
+        {
+          "test_name": "test_noise_seed_action_clipping_replay_and_parameter_updates",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Independent bounded actor/critic forward;every actor derivative through fixed critic and separate critic derivative;exact targets/tau0,.2,1;warmup actor preservation."
+        }
+      ],
+      "oracle_independence_assessment": "Independent bounded actor/critic forward;every actor derivative through fixed critic and separate critic derivative;exact targets/tau0,.2,1;warmup actor preservation.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6,atol3e-6,rtol3e-4 for all implemented neural parameter groups. Bellmanhand/randomizedupdatesatol1e-14;learnedQ/Bellmanresidual2e-4 on statedtoychain. PPOgradientchecksavoidinexactclipkinks;A3Cmultiworkertestsuseinvariantsnotordering.",
+      "literal_test_tolerances": [],
+      "resource_numerical_and_reproducibility_limits": "Dense arrays<=65536cells,rawmagnitudes<=1e6,dimensions/hidden/actions<=32;intermediate ill-scaling may fail explicitly. Episodes/iterations<=5000,steps<=256,interactions<=100000,updates<=10000;replay<=4096;threads<=8;MCTSdepth<=64,iterations<=10000,actions<=32. Prompt pure callbacks required;multiworker order nondeterministic.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [],
+      "result": "review completed;no additional confirmed in-scope defect"
+    },
+    {
+      "id": "monte-carlo-tree-search",
+      "canonical_owner": "B8",
+      "canonical_path": "machine-learning/reinforcement-learning/monte-carlo-tree-search",
+      "reviewed_all_source_test_lesson": true,
+      "variant": "UCT deterministic single-agent terminal-payoff search;no adversarial/chance/intermediate reward semantics.",
+      "mathematical_objective_updates_and_inference": "UCT=mean+c*sqrt(log(parentVisits)/childVisits);one expansion per iteration;rollout terminal payoff;unchanged perspective backup;robust child visits/mean/action ties.",
+      "files": [
+        {
+          "path": "machine-learning/reinforcement-learning/monte-carlo-tree-search/python/solution.py",
+          "sha256": "af8b89f2e9fbf8a323d44d8a90c752260de50dd0eed5fb0c28a7b896c417eb86",
+          "lines": 133
+        },
+        {
+          "path": "machine-learning/reinforcement-learning/monte-carlo-tree-search/tests/test_python.py",
+          "sha256": "e3f060224937734f726f54e7a60d65344e9149cc0b4391b648dea1d37350c81b",
+          "lines": 94
+        },
+        {
+          "path": "machine-learning/reinforcement-learning/monte-carlo-tree-search/README.md",
+          "sha256": "9d5fb83ffeefa05255c72e75daa250977a9be3ff3c2744e07b9e391205e491bc",
+          "lines": 142
+        }
+      ],
+      "all_canonical_test_function_names": [
+        "test_tree_initialization_terminal_and_uct_hand_value",
+        "test_visit_counts_backpropagation_single_agent_perspective",
+        "test_seeded_planning_tree_invariants_and_legal_expansion",
+        "test_rollout_reward_and_budget_exhaustion",
+        "test_unvisited_children_and_small_search_budget",
+        "test_invalid_legal_actions_and_nonfinite_outcomes",
+        "test_oversized_action_iterator_stops_before_materializing_unbounded_output",
+        "test_invalid_action_type_rejected_before_uniqueness_hashing"
+      ],
+      "independent_oracle_tests": [
+        {
+          "test_name": "test_tree_initialization_terminal_and_uct_hand_value",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand UCT and backprop arithmetic;visit/legal-state/tree-node invariants;three seeded replanning trials;new bounded action-iterator and malformed-type regressions."
+        },
+        {
+          "test_name": "test_visit_counts_backpropagation_single_agent_perspective",
+          "type": "independent hand expression,structural invariant,or known synthetic data-generating construction",
+          "reason": "Hand UCT and backprop arithmetic;visit/legal-state/tree-node invariants;three seeded replanning trials;new bounded action-iterator and malformed-type regressions."
+        }
+      ],
+      "oracle_independence_assessment": "Hand UCT and backprop arithmetic;visit/legal-state/tree-node invariants;three seeded replanning trials;new bounded action-iterator and malformed-type regressions.",
+      "gradient_coverage": "All implemented trainable weights/biases are checked where differentiable;no training gradient claim for the discrete miners/tabularupdates/MCTS;B5projection fixedpoint/eigensolverproperties verified independently.",
+      "tolerance_assessment": "Centralstep1e-6,atol3e-6,rtol3e-4 for all implemented neural parameter groups. Bellmanhand/randomizedupdatesatol1e-14;learnedQ/Bellmanresidual2e-4 on statedtoychain. PPOgradientchecksavoidinexactclipkinks;A3Cmultiworkertestsuseinvariantsnotordering.",
+      "literal_test_tolerances": [],
+      "resource_numerical_and_reproducibility_limits": "Dense arrays<=65536cells,rawmagnitudes<=1e6,dimensions/hidden/actions<=32;intermediate ill-scaling may fail explicitly. Episodes/iterations<=5000,steps<=256,interactions<=100000,updates<=10000;replay<=4096;threads<=8;MCTSdepth<=64,iterations<=10000,actions<=32. Prompt pure callbacks required;multiworker order nondeterministic.",
+      "documentation_assessment": "Exact25sections read for mechanism,objective,shape,examples,complexities,numerics,limitations and attribution;no material1\u20135heading misalignment found in this owned set. Historical handoff approval statements are provenance,not current audit approval.",
+      "security_assessment": "Core importsNumPy/stdlib/localapprovedhelpers only;no external service,frameworkdelegate,pickle/eval/exec,weights or datasets. Inputshape/budget/finite checks and localRNG reviewed;MCTSboundediterableguard corrected as recorded.",
+      "findings": [
+        "ML-AUDIT-B8-001"
+      ],
+      "result": "review completed;confirmed minimal defect fixed and affected checks passed"
+    }
+  ],
+  "finding_register": [
+    {
+      "id": "ML-AUDIT-B5-001",
+      "severity": "medium",
+      "status": "fixed",
+      "algorithm": "principal-component-analysis",
+      "reproduction": "PCA(1).fit([[-1e12],[1e12],[1e12]])",
+      "expected": "Accept validrawfeatures;finitephysicalmean/singularvalues/samplevariancesandfullrankroundtrip.",
+      "actual_before": "ValueError: X must be finite with magnitude <= 10^12",
+      "root_cause": "Centeredresiduals may exceedrawinputcap and werepassed topublicSVDwithoutinternalrescaling.",
+      "minimal_fix": "UniformlynormalizecenteredA beforecanonicalSVD;restorephysicalsingularvalues/varianceswithcombinedscale. Publiccaps/API/objectiveunchanged.",
+      "evidence": [
+        "review-B5-PCA-before.json",
+        "review-B5-PCA-01.json",
+        "review-B5-regression-01.json"
+      ],
+      "verification": "27PCA/SVDpassed;165fullB5membershipincludingonesharedvanillapassed;3newindependentboundary/translatedNumPytests.",
+      "regression_risk": "low;retainedSVDrelative-ranklogic,components,varianceratioformulasandalloldassertions/tolerances."
+    },
+    {
+      "id": "ML-AUDIT-B8-001",
+      "severity": "medium",
+      "status": "fixed",
+      "algorithm": "monte-carlo-tree-search",
+      "reproduction": "legal_actionscallbackyields1000finiteactions;malformedcallbackreturns[[0]].",
+      "expected": "Inspectatmost33actionsbeforebranchingerror;invalidnativeactionfamiliesraiseValueErrorbeforehashing.",
+      "actual_before": "Consumesall1000entriesbeforelimitcheck;unhashablelistactionraisesTypeError. Aninfiniteiteratorwouldneverreachcheckandwasnotrunagainstoldsource.",
+      "root_cause": "list(materializesentirecallbackiterable)andset(actions)precededbranch/typevalidation.",
+      "minimal_fix": "islice(...,33)beforelistallocation;lenlimitthenper-actionnativeintegerchecks,thenuniquenesshash. Valid<=32math/APIunchanged.",
+      "evidence": [
+        "review-B8-MCTS-before.json",
+        "review-B8-MCTS-01.json"
+      ],
+      "verification": "13MCTSpassed;newinfinitegeneratorconsumedexactly33;4invalidtypecases;alloldseededplanning/UCT/backuptestsunchanged.",
+      "regression_risk": "low;validboundedactionorder,UCT,treeexpansion,backupsandseededoutputsunchanged."
+    },
+    {
+      "id": "ML-AUDIT-DOC-B6-001",
+      "severity": "low",
+      "status": "coordinated with root",
+      "scope": "generatedcategoryoverviews",
+      "reproduction": "B6categoryREADMEcurrentlycontainsinventory/navigationonly;historicalPhase18reportdescribessupport/confidence/lift/mechanismoverview.",
+      "expected": "Currentcategoryoverviewretainsteachingcontextandcorrectformula/mechanismcomparisons.",
+      "actual_before": "Generatorfuturephasesretainedonlygenericcategorynavigation.",
+      "root_cause": "Activephase-specificeducationalblocksnotemittedforthecompletedcategories.",
+      "minimal_fix": "Rootownsrestoringall13educationalcategoryoverviewsunderauditmode;thisagentdoesnoteditgenerator/categoryREADME.",
+      "verification": "Rootconfiguration/generatedchecksafteritsrestoration.",
+      "regression_risk": "low;documentationonly,noalgorithmchange."
+    }
+  ],
+  "shared_files_reviewed": [
+    "machine-learning/unsupervised-learning/dimensionality-reduction/support.py",
+    "machine-learning/unsupervised-learning/dimensionality-reduction/tests/test_contracts.py",
+    "machine-learning/unsupervised-learning/association-rule-learning/support.py",
+    "machine-learning/unsupervised-learning/association-rule-learning/rules.py",
+    "machine-learning/unsupervised-learning/association-rule-learning/tests/oracles.py",
+    "machine-learning/unsupervised-learning/association-rule-learning/tests/test_contracts.py",
+    "machine-learning/unsupervised-learning/association-rule-learning/tests/test_cross_algorithms.py",
+    "machine-learning/unsupervised-learning/association-rule-learning/tests/test_rules.py",
+    "machine-learning/deep-learning/support.py",
+    "machine-learning/deep-learning/conftest.py",
+    "machine-learning/deep-learning/tests/test_primitives.py",
+    "machine-learning/deep-learning/tests/test_contracts.py",
+    "machine-learning/reinforcement-learning/support.py",
+    "machine-learning/reinforcement-learning/conftest.py",
+    "machine-learning/reinforcement-learning/tests/oracles.py",
+    "machine-learning/reinforcement-learning/tests/test_contracts.py"
+  ],
+  "contracts_category_overviews_and_reports_reviewed": [
+    "docs/dimensionality-reduction-conventions.md",
+    "docs/association-rule-learning-conventions.md",
+    "docs/neural-networks-and-deep-learning-conventions.md",
+    "docs/reinforcement-learning-conventions.md",
+    "machine-learning/unsupervised-learning/dimensionality-reduction/README.md",
+    "machine-learning/unsupervised-learning/association-rule-learning/README.md",
+    "machine-learning/deep-learning/README.md",
+    "machine-learning/reinforcement-learning/README.md",
+    "docs/reviews/dimensionality-reduction/DIMENSIONALITY-REDUCTION-REVIEW-REPORT.md",
+    "docs/reviews/association-rule-learning/ASSOCIATION-RULE-LEARNING-REVIEW-REPORT.md",
+    "docs/reviews/neural-networks-and-deep-learning/NEURAL-NETWORKS-AND-DEEP-LEARNING-REVIEW-REPORT.md",
+    "docs/reviews/reinforcement-learning/REINFORCEMENT-LEARNING-REVIEW-REPORT.md"
+  ],
+  "execution_boundary": "Thisledgerrecordsactualaffectedchecksabove;rootfreshcategoryJUnit/fullregressionprovidesfinalcounts. Historicalnumbersarenotusedasevidenceofcurrentexecution.",
+  "approval_boundary": "Independenttechnicalreviewonly;Phase26audit/finalBTrackownerapprovalpending.NoC1/commit/push/tag/release/publication."
+}

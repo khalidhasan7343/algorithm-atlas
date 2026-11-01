@@ -1,0 +1,32 @@
+{
+  "topic": "adamw",
+  "command": [
+    "python",
+    "machine-learning/optimization/adamw/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"converged\": false, \"gradient_norm\": 0.0072123206, \"initial\": [3.0, 1.0], \"iterations\": 1000, \"learning_rate\": 0.05, \"objective\": -8.999986995608, \"objective_evaluations\": 1001, \"status\": \"iteration-budget\", \"task_optimum\": [1.0, -2.0], \"updates\": 1000, \"x\": [0.99639384, -2.0]}\n",
+  "sections": 25,
+  "parsed": {
+    "converged": false,
+    "gradient_norm": 0.0072123206,
+    "initial": [
+      3.0,
+      1.0
+    ],
+    "iterations": 1000,
+    "learning_rate": 0.05,
+    "objective": -8.999986995608,
+    "objective_evaluations": 1001,
+    "status": "iteration-budget",
+    "task_optimum": [
+      1.0,
+      -2.0
+    ],
+    "updates": 1000,
+    "x": [
+      0.99639384,
+      -2.0
+    ]
+  }
+}

@@ -1,0 +1,807 @@
+{
+  "audit-B12": {
+    "label": "audit-B12",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/audit-B12-02.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T10:16:38.382373+06:00",
+    "elapsed_seconds": 1.268,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/audit-B12-02.txt"
+  },
+  "infrastructure-B12": {
+    "label": "infrastructure-B12",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "tests/test_b12_language_and_scope_policy.py",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/test_b12_language_and_scope_policy.py",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/infrastructure-B12-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T10:18:27.818693+06:00",
+    "elapsed_seconds": 1.098,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/infrastructure-B12-01.txt"
+  },
+  "isolation-trees": {
+    "label": "isolation-trees",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/isolation-forest",
+      "-k",
+      "tree or split or sampling",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/isolation-forest",
+      "-k",
+      "tree or split or sampling",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/isolation-trees-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:59:12.571605+06:00",
+    "elapsed_seconds": 0.726,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/isolation-trees-01.txt"
+  },
+  "path-oracles": {
+    "label": "path-oracles",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/isolation-forest",
+      "-k",
+      "manual_tree or ensemble_average",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/isolation-forest",
+      "-k",
+      "manual_tree or ensemble_average",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/path-oracles-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:59:12.569565+06:00",
+    "elapsed_seconds": 0.759,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/path-oracles-01.txt"
+  },
+  "harmonic": {
+    "label": "harmonic",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/isolation-forest",
+      "-k",
+      "harmonic",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/isolation-forest",
+      "-k",
+      "harmonic",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/harmonic-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:59:12.567700+06:00",
+    "elapsed_seconds": 0.717,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/harmonic-01.txt"
+  },
+  "kernel": {
+    "label": "kernel",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/one-class-svm",
+      "-k",
+      "gram or kernel",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/one-class-svm",
+      "-k",
+      "gram or kernel",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/kernel-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:59:12.579411+06:00",
+    "elapsed_seconds": 0.77,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/kernel-01.txt"
+  },
+  "dual": {
+    "label": "dual",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/one-class-svm",
+      "-k",
+      "dual or feasibility",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/one-class-svm",
+      "-k",
+      "dual or feasibility",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/dual-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:59:12.593793+06:00",
+    "elapsed_seconds": 1.344,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/dual-01.txt"
+  },
+  "projection": {
+    "label": "projection",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/one-class-svm",
+      "-k",
+      "projection",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/one-class-svm",
+      "-k",
+      "projection",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/projection-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:59:12.591536+06:00",
+    "elapsed_seconds": 0.784,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/projection-01.txt"
+  },
+  "kkt": {
+    "label": "kkt",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/one-class-svm",
+      "-k",
+      "kkt or rho or nu_one",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/one-class-svm",
+      "-k",
+      "kkt or rho or nu_one",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/kkt-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:59:12.588699+06:00",
+    "elapsed_seconds": 0.773,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/kkt-01.txt"
+  },
+  "lof-neighbors": {
+    "label": "lof-neighbors",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/local-outlier-factor",
+      "-k",
+      "neighborhood or neighbor",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/local-outlier-factor",
+      "-k",
+      "neighborhood or neighbor",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/lof-neighbors-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:59:12.621123+06:00",
+    "elapsed_seconds": 0.737,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/lof-neighbors-01.txt"
+  },
+  "density": {
+    "label": "density",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/local-outlier-factor",
+      "-k",
+      "density or reachability or structural",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/local-outlier-factor",
+      "-k",
+      "density or reachability or structural",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/density-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:59:12.610323+06:00",
+    "elapsed_seconds": 0.796,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/density-01.txt"
+  },
+  "scores": {
+    "label": "scores",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/",
+      "-k",
+      "score or orientation or quantile or boundary or contamination",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/",
+      "-k",
+      "score or orientation or quantile or boundary or contamination",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/scores-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:59:12.620700+06:00",
+    "elapsed_seconds": 1.473,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/scores-01.txt"
+  },
+  "numerical": {
+    "label": "numerical",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/",
+      "-m",
+      "numerical",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/",
+      "-m",
+      "numerical",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/numerical-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:59:12.654490+06:00",
+    "elapsed_seconds": 0.738,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/numerical-01.txt"
+  },
+  "reproducibility": {
+    "label": "reproducibility",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/",
+      "-k",
+      "seeded or reproducibility or repeated or permutation",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/",
+      "-k",
+      "seeded or reproducibility or repeated or permutation",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/reproducibility-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:59:12.674490+06:00",
+    "elapsed_seconds": 0.856,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/reproducibility-01.txt"
+  },
+  "edge-cases": {
+    "label": "edge-cases",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/",
+      "-k",
+      "invalid or identical or duplicate or singleton or tiny or unrepresentable or unfitted",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/",
+      "-k",
+      "invalid or identical or duplicate or singleton or tiny or unrepresentable or unfitted",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/edge-cases-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:59:12.755428+06:00",
+    "elapsed_seconds": 0.729,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/edge-cases-01.txt"
+  },
+  "synthetic": {
+    "label": "synthetic",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/",
+      "-k",
+      "isolated or two_density or high_dimensional or sklearn",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/",
+      "-k",
+      "isolated or two_density or high_dimensional or sklearn",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/synthetic-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:59:12.738007+06:00",
+    "elapsed_seconds": 1.534,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/synthetic-01.txt"
+  },
+  "oracle": {
+    "label": "oracle",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/",
+      "-m",
+      "oracle",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection/",
+      "-m",
+      "oracle",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/oracle-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:59:12.760026+06:00",
+    "elapsed_seconds": 0.674,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/oracle-01.txt"
+  },
+  "B1": {
+    "label": "B1",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/regression",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/regression",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/B1-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:57:39.647579+06:00",
+    "elapsed_seconds": 2.129,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/B1-01.txt"
+  },
+  "B2": {
+    "label": "B2",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/classification",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/classification",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/B2-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:57:39.646572+06:00",
+    "elapsed_seconds": 2.436,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/B2-01.txt"
+  },
+  "B3": {
+    "label": "B3",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/ensemble-methods",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/ensemble-methods",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/B3-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:57:39.645755+06:00",
+    "elapsed_seconds": 2.308,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/B3-01.txt"
+  },
+  "B4": {
+    "label": "B4",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/clustering",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/clustering",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/B4-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:57:39.646568+06:00",
+    "elapsed_seconds": 2.187,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/B4-01.txt"
+  },
+  "B5": {
+    "label": "B5",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/dimensionality-reduction",
+      "machine-learning/deep-learning/vanilla-autoencoders",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/dimensionality-reduction",
+      "machine-learning/deep-learning/vanilla-autoencoders",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/B5-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:57:39.647381+06:00",
+    "elapsed_seconds": 2.14,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/B5-01.txt"
+  },
+  "B6": {
+    "label": "B6",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/association-rule-learning",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/association-rule-learning",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/B6-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:57:39.646389+06:00",
+    "elapsed_seconds": 2.334,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/B6-01.txt"
+  },
+  "B7": {
+    "label": "B7",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/deep-learning",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/deep-learning",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/B7-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:57:39.645747+06:00",
+    "elapsed_seconds": 2.522,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/B7-01.txt"
+  },
+  "B8": {
+    "label": "B8",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/B8-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:57:39.645741+06:00",
+    "elapsed_seconds": 8.184,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/B8-01.txt"
+  },
+  "B9": {
+    "label": "B9",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/graph-learning",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/graph-learning",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/B9-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:57:39.646563+06:00",
+    "elapsed_seconds": 1.107,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/B9-01.txt"
+  },
+  "B10": {
+    "label": "B10",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/optimization",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/optimization",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/B10-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:57:39.645751+06:00",
+    "elapsed_seconds": 1.441,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/B10-01.txt"
+  },
+  "B11": {
+    "label": "B11",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/B11-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:57:39.647021+06:00",
+    "elapsed_seconds": 2.381,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/B11-01.txt"
+  },
+  "full-suite": {
+    "label": "full-suite",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "--require-cpp",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "--require-cpp",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/anomaly-detection-evidence/full-suite-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T17:57:39.646350+06:00",
+    "elapsed_seconds": 452.09,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/full-suite-01.txt"
+  },
+  "educational-training": {
+    "label": "educational-training",
+    "command": [
+      "python",
+      "scripts/evaluate_anomaly_detection.py"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "scripts/evaluate_anomaly_detection.py"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:01:13.963470+06:00",
+    "elapsed_seconds": 0.238,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/anomaly-detection-evidence/educational-training-01.txt"
+  }
+}

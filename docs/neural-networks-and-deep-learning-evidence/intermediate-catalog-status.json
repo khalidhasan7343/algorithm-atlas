@@ -1,0 +1,8 @@
+{
+  "command": "python scripts/validate_catalog.py",
+  "returncode": 1,
+  "observed_errors": 26,
+  "kind": "Direct tool-call result transcribed during editing, not a numbered runner transcript",
+  "reason": "Thirteen new source/test pairs still had planned catalog flags; promotion waited for complete lessons and executed gates/examples.",
+  "resolution": "Promoted13 records truthfully after passing gates; validator unchanged."
+}

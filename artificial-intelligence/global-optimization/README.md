@@ -8,11 +8,11 @@ This category preserves **7 original syllabus entries**. Each link points to the
 
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Genetic Algorithms | [genetic-algorithms](../../machine-learning/optimization/genetic-algorithms/README.md) | planned |
+| Genetic Algorithms | [genetic-algorithms](../../machine-learning/optimization/genetic-algorithms/README.md) | complete |
 | Particle Swarm Optimization (PSO) | [particle-swarm-optimization](particle-swarm-optimization/README.md) | planned |
 | Ant Colony Optimization (ACO) | [ant-colony-optimization](ant-colony-optimization/README.md) | planned |
 | Branch and Bound | [branch-and-bound](branch-and-bound/README.md) | planned |
-| Simulated Annealing | [simulated-annealing](../../machine-learning/optimization/simulated-annealing/README.md) | planned |
+| Simulated Annealing | [simulated-annealing](../../machine-learning/optimization/simulated-annealing/README.md) | complete |
 | Exhaustive Search | [exhaustive-search](exhaustive-search/README.md) | planned |
 | Brute Force Search | [exhaustive-search](exhaustive-search/README.md) | planned |
 

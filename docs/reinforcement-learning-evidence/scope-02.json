@@ -1,0 +1,22 @@
+{
+  "label": "scope",
+  "command": [
+    "python",
+    "scripts/verify_reinforcement_learning_scope.py",
+    "--require-tracked",
+    "--check-only"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "scripts/verify_reinforcement_learning_scope.py",
+    "--require-tracked",
+    "--check-only"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T10:42:02.438201+06:00",
+  "elapsed_seconds": 0.971,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/reinforcement-learning-evidence/scope-02.txt"
+}

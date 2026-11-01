@@ -1,0 +1,76 @@
+FFFF                                                                     [100%]
+=================================== FAILURES ===================================
+_ test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically[mask0-0.1] _
+
+b10 = <module 'atlas_b10_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/optimization/support.py'>
+mask = [False], decay = 0.1
+
+    @pytest.mark.parametrize('mask,decay',[([False],.1),([False],0.),([True],0.),([False,False,False],.1)])
+    def test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically(b10,mask,decay):
+        model=b10.load('adamw').AdamW(decay_mask=mask,weight_decay=decay)
+        model.step(np.ones(len(mask)),np.ones(len(mask)))
+        state=model.get_state();calls=[]
+        def objective(x):calls.append('objective');return 0.
+        def gradient(x):calls.append('gradient');return np.zeros_like(x)
+>       with pytest.raises(ValueError):model.minimize(objective,gradient,[1.,2.])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+machine-learning/optimization/adamw/tests/test_python.py:56: Failed
+_ test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically[mask1-0.0] _
+
+b10 = <module 'atlas_b10_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/optimization/support.py'>
+mask = [False], decay = 0.0
+
+    @pytest.mark.parametrize('mask,decay',[([False],.1),([False],0.),([True],0.),([False,False,False],.1)])
+    def test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically(b10,mask,decay):
+        model=b10.load('adamw').AdamW(decay_mask=mask,weight_decay=decay)
+        model.step(np.ones(len(mask)),np.ones(len(mask)))
+        state=model.get_state();calls=[]
+        def objective(x):calls.append('objective');return 0.
+        def gradient(x):calls.append('gradient');return np.zeros_like(x)
+>       with pytest.raises(ValueError):model.minimize(objective,gradient,[1.,2.])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+machine-learning/optimization/adamw/tests/test_python.py:56: Failed
+_ test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically[mask2-0.0] _
+
+b10 = <module 'atlas_b10_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/optimization/support.py'>
+mask = [True], decay = 0.0
+
+    @pytest.mark.parametrize('mask,decay',[([False],.1),([False],0.),([True],0.),([False,False,False],.1)])
+    def test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically(b10,mask,decay):
+        model=b10.load('adamw').AdamW(decay_mask=mask,weight_decay=decay)
+        model.step(np.ones(len(mask)),np.ones(len(mask)))
+        state=model.get_state();calls=[]
+        def objective(x):calls.append('objective');return 0.
+        def gradient(x):calls.append('gradient');return np.zeros_like(x)
+>       with pytest.raises(ValueError):model.minimize(objective,gradient,[1.,2.])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+machine-learning/optimization/adamw/tests/test_python.py:56: Failed
+_ test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically[mask3-0.1] _
+
+b10 = <module 'atlas_b10_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/optimization/support.py'>
+mask = [False, False, False], decay = 0.1
+
+    @pytest.mark.parametrize('mask,decay',[([False],.1),([False],0.),([True],0.),([False,False,False],.1)])
+    def test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically(b10,mask,decay):
+        model=b10.load('adamw').AdamW(decay_mask=mask,weight_decay=decay)
+        model.step(np.ones(len(mask)),np.ones(len(mask)))
+        state=model.get_state();calls=[]
+        def objective(x):calls.append('objective');return 0.
+        def gradient(x):calls.append('gradient');return np.zeros_like(x)
+>       with pytest.raises(ValueError):model.minimize(objective,gradient,[1.,2.])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+machine-learning/optimization/adamw/tests/test_python.py:56: Failed
+=========================== short test summary info ============================
+FAILED machine-learning/optimization/adamw/tests/test_python.py::test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically[mask0-0.1]
+FAILED machine-learning/optimization/adamw/tests/test_python.py::test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically[mask1-0.0]
+FAILED machine-learning/optimization/adamw/tests/test_python.py::test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically[mask2-0.0]
+FAILED machine-learning/optimization/adamw/tests/test_python.py::test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically[mask3-0.1]
+4 failed, 10 deselected in 0.04s

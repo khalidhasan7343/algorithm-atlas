@@ -1,0 +1,15 @@
+{
+  "resource_reproduction": {
+    "actual_consumed_actions": 1000,
+    "actual_exception": "ValueError",
+    "actual_message": "at most32 unique integer legal actions required",
+    "expected_consumed_at_most": 33,
+    "expected_exception": "ValueError"
+  },
+  "malformed_action_reproduction": {
+    "actual_exception": "TypeError",
+    "actual_message": "cannot use 'list' as a set element (unhashable type: 'list')",
+    "expected_exception": "ValueError"
+  },
+  "safe_reproduction": "finite1000-action iterator only;unbounded iterator not executed against old implementation"
+}

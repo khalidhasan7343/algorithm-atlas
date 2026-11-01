@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="4" time="0.041" timestamp="2026-11-01T19:37:35.955079+06:00" hostname="Khalids-MacBook-Air.local"><testcase classname="machine-learning.optimization.adamw.tests.test_python" name="test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically[mask0-0.1]" time="0.010"><failure message="Failed: DID NOT RAISE ValueError">b10 = &lt;module 'atlas_b10_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/optimization/support.py'&gt;
+mask = [False], decay = 0.1
+
+    @pytest.mark.parametrize('mask,decay',[([False],.1),([False],0.),([True],0.),([False,False,False],.1)])
+    def test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically(b10,mask,decay):
+        model=b10.load('adamw').AdamW(decay_mask=mask,weight_decay=decay)
+        model.step(np.ones(len(mask)),np.ones(len(mask)))
+        state=model.get_state();calls=[]
+        def objective(x):calls.append('objective');return 0.
+        def gradient(x):calls.append('gradient');return np.zeros_like(x)
+&gt;       with pytest.raises(ValueError):model.minimize(objective,gradient,[1.,2.])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+machine-learning/optimization/adamw/tests/test_python.py:56: Failed</failure></testcase><testcase classname="machine-learning.optimization.adamw.tests.test_python" name="test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically[mask1-0.0]" time="0.000"><failure message="Failed: DID NOT RAISE ValueError">b10 = &lt;module 'atlas_b10_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/optimization/support.py'&gt;
+mask = [False], decay = 0.0
+
+    @pytest.mark.parametrize('mask,decay',[([False],.1),([False],0.),([True],0.),([False,False,False],.1)])
+    def test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically(b10,mask,decay):
+        model=b10.load('adamw').AdamW(decay_mask=mask,weight_decay=decay)
+        model.step(np.ones(len(mask)),np.ones(len(mask)))
+        state=model.get_state();calls=[]
+        def objective(x):calls.append('objective');return 0.
+        def gradient(x):calls.append('gradient');return np.zeros_like(x)
+&gt;       with pytest.raises(ValueError):model.minimize(objective,gradient,[1.,2.])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+machine-learning/optimization/adamw/tests/test_python.py:56: Failed</failure></testcase><testcase classname="machine-learning.optimization.adamw.tests.test_python" name="test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically[mask2-0.0]" time="0.000"><failure message="Failed: DID NOT RAISE ValueError">b10 = &lt;module 'atlas_b10_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/optimization/support.py'&gt;
+mask = [True], decay = 0.0
+
+    @pytest.mark.parametrize('mask,decay',[([False],.1),([False],0.),([True],0.),([False,False,False],.1)])
+    def test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically(b10,mask,decay):
+        model=b10.load('adamw').AdamW(decay_mask=mask,weight_decay=decay)
+        model.step(np.ones(len(mask)),np.ones(len(mask)))
+        state=model.get_state();calls=[]
+        def objective(x):calls.append('objective');return 0.
+        def gradient(x):calls.append('gradient');return np.zeros_like(x)
+&gt;       with pytest.raises(ValueError):model.minimize(objective,gradient,[1.,2.])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+machine-learning/optimization/adamw/tests/test_python.py:56: Failed</failure></testcase><testcase classname="machine-learning.optimization.adamw.tests.test_python" name="test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically[mask3-0.1]" time="0.000"><failure message="Failed: DID NOT RAISE ValueError">b10 = &lt;module 'atlas_b10_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/optimization/support.py'&gt;
+mask = [False, False, False], decay = 0.1
+
+    @pytest.mark.parametrize('mask,decay',[([False],.1),([False],0.),([True],0.),([False,False,False],.1)])
+    def test_stationary_minimize_rejects_wrong_mask_before_callbacks_atomically(b10,mask,decay):
+        model=b10.load('adamw').AdamW(decay_mask=mask,weight_decay=decay)
+        model.step(np.ones(len(mask)),np.ones(len(mask)))
+        state=model.get_state();calls=[]
+        def objective(x):calls.append('objective');return 0.
+        def gradient(x):calls.append('gradient');return np.zeros_like(x)
+&gt;       with pytest.raises(ValueError):model.minimize(objective,gradient,[1.,2.])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+machine-learning/optimization/adamw/tests/test_python.py:56: Failed</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,72 @@
+{
+  "topic": "hidden-markov-models-pos-tagging",
+  "command": [
+    "python",
+    "machine-learning/natural-language-processing/hidden-markov-models-pos-tagging/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"training\": [[\"dogs\", \"run\"], [\"cats\", \"sleep\"], [\"dogs\", \"sleep\"]], \"tags\": [\"N\", \"V\"], \"vocabulary\": [\"<UNK>\", \"cats\", \"dogs\", \"run\", \"sleep\"], \"initial\": [0.8, 0.2], \"transition\": [[0.2, 0.8], [0.5, 0.5]], \"query\": [\"unknown\", \"sleep\"], \"predicted\": [\"N\", \"V\"], \"best_joint_log_probability\": -3.506558, \"observation_log_likelihood\": -3.250625, \"posterior\": [[0.83871, 0.16129], [0.104839, 0.895161]], \"training_accuracy\": 1.0}\n",
+  "parsed": {
+    "training": [
+      [
+        "dogs",
+        "run"
+      ],
+      [
+        "cats",
+        "sleep"
+      ],
+      [
+        "dogs",
+        "sleep"
+      ]
+    ],
+    "tags": [
+      "N",
+      "V"
+    ],
+    "vocabulary": [
+      "<UNK>",
+      "cats",
+      "dogs",
+      "run",
+      "sleep"
+    ],
+    "initial": [
+      0.8,
+      0.2
+    ],
+    "transition": [
+      [
+        0.2,
+        0.8
+      ],
+      [
+        0.5,
+        0.5
+      ]
+    ],
+    "query": [
+      "unknown",
+      "sleep"
+    ],
+    "predicted": [
+      "N",
+      "V"
+    ],
+    "best_joint_log_probability": -3.506558,
+    "observation_log_likelihood": -3.250625,
+    "posterior": [
+      [
+        0.83871,
+        0.16129
+      ],
+      [
+        0.104839,
+        0.895161
+      ]
+    ],
+    "training_accuracy": 1.0
+  },
+  "sections": 25
+}

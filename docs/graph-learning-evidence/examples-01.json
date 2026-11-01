@@ -1,0 +1,18 @@
+{
+  "label": "examples",
+  "command": [
+    "python",
+    "scripts/verify_graph_learning_examples.py"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "scripts/verify_graph_learning_examples.py"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T20:20:47.147406+06:00",
+  "elapsed_seconds": 0.332,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/graph-learning-evidence/examples-01.txt"
+}

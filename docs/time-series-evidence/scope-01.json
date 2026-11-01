@@ -1,0 +1,18 @@
+{
+  "label": "scope",
+  "command": [
+    "python",
+    "scripts/verify_time_series_scope.py"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "scripts/verify_time_series_scope.py"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-01T00:35:08.818412+06:00",
+  "elapsed_seconds": 1.164,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/time-series-evidence/scope-01.txt"
+}

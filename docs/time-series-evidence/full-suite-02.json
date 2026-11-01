@@ -1,0 +1,25 @@
+{
+  "label": "full-suite",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "--require-cpp",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "--require-cpp",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/full-suite-02.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-01T00:42:28.321923+06:00",
+  "elapsed_seconds": 620.361,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/time-series-evidence/full-suite-02.txt"
+}

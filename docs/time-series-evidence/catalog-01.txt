@@ -1,0 +1,3 @@
+Checked 35 categories, 256 syllabus entries, 235 canonical algorithms, 420 Markdown files, and 4872 local links.
+ERROR: machine-learning/time-series/holt-winters/README.md: undefined reference link [t mod2]
+Validation failed with 1 error(s).

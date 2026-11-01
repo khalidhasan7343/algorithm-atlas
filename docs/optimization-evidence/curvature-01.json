@@ -1,0 +1,29 @@
+{
+  "label": "curvature",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/optimization/l-bfgs",
+    "-k",
+    "two_loop or spd_optimum or bad_curvature",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/optimization/l-bfgs",
+    "-k",
+    "two_loop or spd_optimum or bad_curvature",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/optimization-evidence/curvature-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T21:42:02.300309+06:00",
+  "elapsed_seconds": 0.191,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/optimization-evidence/curvature-01.txt"
+}

@@ -1,0 +1,50 @@
+........................................................................ [ 29%]
+........................................................................ [ 58%]
+........................................................................ [ 87%]
+.............................F.                                          [100%]
+=================================== FAILURES ===================================
+___ test_backtest_rejects_invalid_or_excessive_work_before_fitting[kwargs4] ____
+
+b11 = <module 'atlas_b11_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/time-series/support.py'>
+kwargs = {'initial': 4, 'horizon_size': 30}
+
+    @pytest.mark.parametrize('kwargs',[dict(initial=0),dict(initial=4,horizon_size=0),dict(initial=4,step=0),dict(initial=4,window=5),dict(initial=4,horizon_size=30),dict(initial=1)])
+    def test_backtest_rejects_invalid_or_excessive_work_before_fitting(b11,kwargs):
+>       with pytest.raises(ValueError):b11.backtest(lambda:None,np.arange(50.),**kwargs)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+machine-learning/time-series/tests/test_time_contracts.py:106: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+factory = <function test_backtest_rejects_invalid_or_excessive_work_before_fitting.<locals>.<lambda> at 0x10a00c7d0>
+y = array([ 0.,  1.,  2.,  3.,  4.,  5.,  6.,  7.,  8.,  9., 10., 11., 12.,
+       13., 14., 15., 16., 17., 18., 19., 20.,..., 28., 29., 30., 31., 32., 33., 34., 35., 36., 37., 38.,
+       39., 40., 41., 42., 43., 44., 45., 46., 47., 48., 49.])
+initial = 4, horizon_size = 30, step = 1, window = None
+
+    def backtest(factory, y, *, initial, horizon_size=1, step=1, window=None):
+        """Fresh fits on chronological prefixes/windows; fixed-origin recursive forecasts."""
+        y = vector(y)
+        initial = integer(initial, 'initial', 1, len(y)-1)
+        h = horizon(horizon_size)
+        step = integer(step, 'step', 1, 512)
+        if window is not None:
+            window = integer(window, 'window', 1, initial)
+        origins = list(range(initial, len(y)-h+1, step))
+        if not origins or len(origins) > 32 or not callable(factory):
+            raise ValueError('1..32 evaluation origins and a model factory required')
+        models, records = [], []
+        for origin in origins:
+            start = 0 if window is None else origin-window
+            model = factory()
+            if any(model is previous for previous in models):
+                raise ValueError('factory must return a fresh model per origin')
+            models.append(model)
+>           model.fit(y[start:origin].copy())
+            ^^^^^^^^^
+E           AttributeError: 'NoneType' object has no attribute 'fit'
+
+machine-learning/time-series/support.py:186: AttributeError
+=========================== short test summary info ============================
+FAILED machine-learning/time-series/tests/test_time_contracts.py::test_backtest_rejects_invalid_or_excessive_work_before_fitting[kwargs4]
+1 failed, 246 passed in 0.83s

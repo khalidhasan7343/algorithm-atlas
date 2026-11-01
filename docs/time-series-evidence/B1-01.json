@@ -1,0 +1,25 @@
+{
+  "label": "B1",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/supervised-learning/regression",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/supervised-learning/regression",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/B1-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-01T00:33:06.577166+06:00",
+  "elapsed_seconds": 2.187,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/time-series-evidence/B1-01.txt"
+}

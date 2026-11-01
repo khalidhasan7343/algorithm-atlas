@@ -1,0 +1,47 @@
+{
+  "batch": 2,
+  "topics": [
+    "arima",
+    "sarima"
+  ],
+  "returncode": 0,
+  "tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "47",
+    "time": "0.202",
+    "timestamp": "2026-11-01T00:16:20.305305+06:00",
+    "hostname": "Khalids-MacBook-Air.local"
+  },
+  "evidence": {
+    "label": "batch2-audit",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series/arima",
+      "machine-learning/time-series/sarima",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series/arima",
+      "machine-learning/time-series/sarima",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/batch2-audit-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:16:20.157847+06:00",
+    "elapsed_seconds": 0.379,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/batch2-audit-01.txt"
+  },
+  "lessons": "exact25 sections and actual examples verified",
+  "owner_approval": "pending"
+}

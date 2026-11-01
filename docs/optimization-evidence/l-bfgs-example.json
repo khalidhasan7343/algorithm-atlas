@@ -1,0 +1,32 @@
+{
+  "topic": "l-bfgs",
+  "command": [
+    "python",
+    "machine-learning/optimization/l-bfgs/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"analytical\": [1.0, 1.0], \"converged\": true, \"gradient_evaluations\": 66, \"gradient_norm\": 3.9e-09, \"history_size\": 5, \"initial\": [-1.2, 1.0], \"iterations\": 36, \"objective\": 0.0, \"objective_evaluations\": 66, \"status\": \"gradient-tolerance\", \"x\": [1.0, 1.0]}\n",
+  "sections": 25,
+  "parsed": {
+    "analytical": [
+      1.0,
+      1.0
+    ],
+    "converged": true,
+    "gradient_evaluations": 66,
+    "gradient_norm": 3.9e-09,
+    "history_size": 5,
+    "initial": [
+      -1.2,
+      1.0
+    ],
+    "iterations": 36,
+    "objective": 0.0,
+    "objective_evaluations": 66,
+    "status": "gradient-tolerance",
+    "x": [
+      1.0,
+      1.0
+    ]
+  }
+}

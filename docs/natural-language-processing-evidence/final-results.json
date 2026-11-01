@@ -1,0 +1,1191 @@
+{
+  "audit-B13": {
+    "label": "audit-B13",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/audit-B13-02.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T19:08:45.390405+06:00",
+    "elapsed_seconds": 1.283,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/audit-B13-02.txt"
+  },
+  "infrastructure-B13": {
+    "label": "infrastructure-B13",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "tests/test_b13_language_and_scope_policy.py",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/test_b13_language_and_scope_policy.py",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/infrastructure-B13-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T19:04:47.488547+06:00",
+    "elapsed_seconds": 0.747,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/infrastructure-B13-01.txt"
+  },
+  "tokenization": {
+    "label": "tokenization",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/tests/test_text_contracts.py",
+      "-k",
+      "tokenization",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/tests/test_text_contracts.py",
+      "-k",
+      "tokenization",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/tokenization-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:50:42.616143+06:00",
+    "elapsed_seconds": 0.545,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/tokenization-01.txt"
+  },
+  "vocabulary": {
+    "label": "vocabulary",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/tests/test_text_contracts.py",
+      "-k",
+      "vocabulary or pretokenized",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/tests/test_text_contracts.py",
+      "-k",
+      "vocabulary or pretokenized",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/vocabulary-02.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T19:05:24.029476+06:00",
+    "elapsed_seconds": 0.726,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/vocabulary-02.txt"
+  },
+  "bow": {
+    "label": "bow",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/bag-of-words",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/bag-of-words",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/bow-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:50:42.615349+06:00",
+    "elapsed_seconds": 0.509,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/bow-01.txt"
+  },
+  "tf-idf": {
+    "label": "tf-idf",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/tf-idf",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/tf-idf",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/tf-idf-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:50:42.617458+06:00",
+    "elapsed_seconds": 1.087,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/tf-idf-01.txt"
+  },
+  "ngram-probability": {
+    "label": "ngram-probability",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/n-gram-language-models",
+      "-k",
+      "counts or normalization",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/n-gram-language-models",
+      "-k",
+      "counts or normalization",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/ngram-probability-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:50:42.619622+06:00",
+    "elapsed_seconds": 0.54,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/ngram-probability-01.txt"
+  },
+  "ngram-perplexity": {
+    "label": "ngram-perplexity",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/n-gram-language-models",
+      "-k",
+      "counts or normalization or empty",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/n-gram-language-models",
+      "-k",
+      "counts or normalization or empty",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/ngram-perplexity-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:50:42.626179+06:00",
+    "elapsed_seconds": 0.554,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/ngram-perplexity-01.txt"
+  },
+  "word2vec-gradient": {
+    "label": "word2vec-gradient",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/word2vec",
+      "-k",
+      "gradient",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/word2vec",
+      "-k",
+      "gradient",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/word2vec-gradient-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:50:42.625520+06:00",
+    "elapsed_seconds": 0.501,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/word2vec-gradient-01.txt"
+  },
+  "glove-gradient": {
+    "label": "glove-gradient",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/glove",
+      "-k",
+      "gradient or parameter_update",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/glove",
+      "-k",
+      "gradient or parameter_update",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/glove-gradient-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:50:42.634856+06:00",
+    "elapsed_seconds": 0.523,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/glove-gradient-01.txt"
+  },
+  "bert-attention": {
+    "label": "bert-attention",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/tests/test_transformer_contracts.py",
+      "-k",
+      "attention or block",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/tests/test_transformer_contracts.py",
+      "-k",
+      "attention or block",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/bert-attention-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:50:42.642521+06:00",
+    "elapsed_seconds": 0.514,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/bert-attention-01.txt"
+  },
+  "bert-mlm": {
+    "label": "bert-mlm",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/bert",
+      "-k",
+      "mlm or mask or finite_difference or gradient",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/bert",
+      "-k",
+      "mlm or mask or finite_difference or gradient",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/bert-mlm-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:50:42.639457+06:00",
+    "elapsed_seconds": 0.6,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/bert-mlm-01.txt"
+  },
+  "gpt-causal": {
+    "label": "gpt-causal",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/gpt",
+      "-k",
+      "causal or future",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/gpt",
+      "-k",
+      "causal or future",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/gpt-causal-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:50:42.626865+06:00",
+    "elapsed_seconds": 0.534,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/gpt-causal-01.txt"
+  },
+  "gpt-objective": {
+    "label": "gpt-objective",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/gpt",
+      "-k",
+      "alignment or cross_entropy or finite_difference or gradient",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/gpt",
+      "-k",
+      "alignment or cross_entropy or finite_difference or gradient",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/gpt-objective-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:50:42.643299+06:00",
+    "elapsed_seconds": 0.583,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/gpt-objective-01.txt"
+  },
+  "hmm-pos": {
+    "label": "hmm-pos",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/hidden-markov-models-pos-tagging",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/hidden-markov-models-pos-tagging",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/hmm-pos-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T19:05:24.039308+06:00",
+    "elapsed_seconds": 0.751,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/hmm-pos-01.txt"
+  },
+  "crf-partition": {
+    "label": "crf-partition",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/conditional-random-fields",
+      "-k",
+      "partition or forward or backward",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/conditional-random-fields",
+      "-k",
+      "partition or forward or backward",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/crf-partition-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T19:05:24.038039+06:00",
+    "elapsed_seconds": 0.763,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/crf-partition-01.txt"
+  },
+  "crf-viterbi": {
+    "label": "crf-viterbi",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/conditional-random-fields",
+      "-k",
+      "viterbi",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/conditional-random-fields",
+      "-k",
+      "viterbi",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/crf-viterbi-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T19:05:24.042119+06:00",
+    "elapsed_seconds": 0.771,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/crf-viterbi-01.txt"
+  },
+  "crf-gradient": {
+    "label": "crf-gradient",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/conditional-random-fields",
+      "-k",
+      "gradient",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/conditional-random-fields",
+      "-k",
+      "gradient",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/crf-gradient-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T19:05:24.045515+06:00",
+    "elapsed_seconds": 0.638,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/crf-gradient-01.txt"
+  },
+  "ner-bio": {
+    "label": "ner-bio",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/named-entity-recognition",
+      "-k",
+      "bio or span or legal_masks",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/named-entity-recognition",
+      "-k",
+      "bio or span or legal_masks",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/ner-bio-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T19:05:24.036594+06:00",
+    "elapsed_seconds": 0.753,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/ner-bio-01.txt"
+  },
+  "ner-metrics": {
+    "label": "ner-metrics",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/named-entity-recognition",
+      "-k",
+      "metrics",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/named-entity-recognition",
+      "-k",
+      "metrics",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/ner-metrics-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T19:05:24.036052+06:00",
+    "elapsed_seconds": 0.665,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/ner-metrics-01.txt"
+  },
+  "cyk-grammar": {
+    "label": "cyk-grammar",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/cyk-parsing",
+      "-k",
+      "grammar or invalid or start",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/cyk-parsing",
+      "-k",
+      "grammar or invalid or start",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/cyk-grammar-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T19:05:24.062013+06:00",
+    "elapsed_seconds": 0.7,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/cyk-grammar-01.txt"
+  },
+  "cyk-oracle": {
+    "label": "cyk-oracle",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/cyk-parsing",
+      "-m",
+      "oracle",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/cyk-parsing",
+      "-m",
+      "oracle",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/cyk-oracle-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T19:05:24.059416+06:00",
+    "elapsed_seconds": 0.718,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/cyk-oracle-01.txt"
+  },
+  "numerical": {
+    "label": "numerical",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/",
+      "-m",
+      "numerical",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/",
+      "-m",
+      "numerical",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/numerical-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T19:05:24.074870+06:00",
+    "elapsed_seconds": 0.959,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/numerical-01.txt"
+  },
+  "reproducibility": {
+    "label": "reproducibility",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/",
+      "-k",
+      "reproducib or seed or deterministic or repeated",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/",
+      "-k",
+      "reproducib or seed or deterministic or repeated",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/reproducibility-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T19:05:24.078223+06:00",
+    "elapsed_seconds": 0.979,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/reproducibility-01.txt"
+  },
+  "data-leakage": {
+    "label": "data-leakage",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/",
+      "-k",
+      "leak or training_only or boundaries or unknown or future or masking or no_gold or consistency",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/",
+      "-k",
+      "leak or training_only or boundaries or unknown or future or masking or no_gold or consistency",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/data-leakage-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T19:05:24.146649+06:00",
+    "elapsed_seconds": 0.888,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/data-leakage-01.txt"
+  },
+  "edge-cases": {
+    "label": "edge-cases",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/",
+      "-k",
+      "invalid or empty or unknown or bound or atomic or padding",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/",
+      "-k",
+      "invalid or empty or unknown or bound or atomic or padding",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/edge-cases-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T19:05:24.090083+06:00",
+    "elapsed_seconds": 1.017,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/edge-cases-01.txt"
+  },
+  "oracle": {
+    "label": "oracle",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/",
+      "-m",
+      "oracle",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/",
+      "-m",
+      "oracle",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/oracle-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T19:05:24.171184+06:00",
+    "elapsed_seconds": 1.28,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/oracle-01.txt"
+  },
+  "B1": {
+    "label": "B1",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/regression",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/regression",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/B1-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:30:38.749131+06:00",
+    "elapsed_seconds": 1.938,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/B1-01.txt"
+  },
+  "B2": {
+    "label": "B2",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/classification",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/classification",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/B2-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:30:38.741045+06:00",
+    "elapsed_seconds": 2.301,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/B2-01.txt"
+  },
+  "B3": {
+    "label": "B3",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/ensemble-methods",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/ensemble-methods",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/B3-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:30:38.741046+06:00",
+    "elapsed_seconds": 2.11,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/B3-01.txt"
+  },
+  "B4": {
+    "label": "B4",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/clustering",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/clustering",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/B4-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:30:38.746386+06:00",
+    "elapsed_seconds": 2.053,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/B4-01.txt"
+  },
+  "B5": {
+    "label": "B5",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/dimensionality-reduction",
+      "machine-learning/deep-learning/vanilla-autoencoders",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/dimensionality-reduction",
+      "machine-learning/deep-learning/vanilla-autoencoders",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/B5-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:30:38.748454+06:00",
+    "elapsed_seconds": 1.966,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/B5-01.txt"
+  },
+  "B6": {
+    "label": "B6",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/association-rule-learning",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/association-rule-learning",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/B6-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:30:38.749795+06:00",
+    "elapsed_seconds": 2.303,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/B6-01.txt"
+  },
+  "B7": {
+    "label": "B7",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/deep-learning",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/deep-learning",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/B7-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:30:38.779615+06:00",
+    "elapsed_seconds": 2.306,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/B7-01.txt"
+  },
+  "B8": {
+    "label": "B8",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/B8-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:30:38.754812+06:00",
+    "elapsed_seconds": 7.796,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/B8-01.txt"
+  },
+  "B9": {
+    "label": "B9",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/graph-learning",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/graph-learning",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/B9-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:30:38.769873+06:00",
+    "elapsed_seconds": 1.026,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/B9-01.txt"
+  },
+  "B10": {
+    "label": "B10",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/optimization",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/optimization",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/B10-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:30:38.797780+06:00",
+    "elapsed_seconds": 1.315,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/B10-01.txt"
+  },
+  "B11": {
+    "label": "B11",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/B11-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:30:38.798915+06:00",
+    "elapsed_seconds": 2.177,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/B11-01.txt"
+  },
+  "B12": {
+    "label": "B12",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/anomaly-detection",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/B12-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:30:38.815630+06:00",
+    "elapsed_seconds": 2.176,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/B12-01.txt"
+  },
+  "full-suite": {
+    "label": "full-suite",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "--require-cpp",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "--require-cpp",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/full-suite-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T19:04:55.790781+06:00",
+    "elapsed_seconds": 443.836,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/full-suite-01.txt"
+  },
+  "educational-training": {
+    "label": "educational-training",
+    "command": [
+      "python",
+      "scripts/evaluate_natural_language_processing.py"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "scripts/evaluate_natural_language_processing.py"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T19:06:08.810735+06:00",
+    "elapsed_seconds": 0.773,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/educational-training-01.txt"
+  },
+  "statistical-refinement": {
+    "label": "statistical-refinement",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/bag-of-words",
+      "machine-learning/natural-language-processing/tf-idf",
+      "machine-learning/natural-language-processing/n-gram-language-models",
+      "machine-learning/natural-language-processing/tests/test_text_contracts.py",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/bag-of-words",
+      "machine-learning/natural-language-processing/tf-idf",
+      "machine-learning/natural-language-processing/n-gram-language-models",
+      "machine-learning/natural-language-processing/tests/test_text_contracts.py",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/statistical-refinement-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:39:20.034716+06:00",
+    "elapsed_seconds": 0.876,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/statistical-refinement-01.txt"
+  },
+  "text-contract-refinement": {
+    "label": "text-contract-refinement",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/tests/test_text_contracts.py",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/tests/test_text_contracts.py",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/text-contract-refinement-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T18:59:00.357270+06:00",
+    "elapsed_seconds": 0.258,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/text-contract-refinement-01.txt"
+  },
+  "ngram-query-refinement": {
+    "label": "ngram-query-refinement",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/n-gram-language-models",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/natural-language-processing/n-gram-language-models",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/ngram-query-refinement-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T19:08:26.373593+06:00",
+    "elapsed_seconds": 0.246,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/natural-language-processing-evidence/ngram-query-refinement-01.txt"
+  }
+}

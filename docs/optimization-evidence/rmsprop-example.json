@@ -1,0 +1,32 @@
+{
+  "topic": "rmsprop",
+  "command": [
+    "python",
+    "machine-learning/optimization/rmsprop/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"converged\": true, \"gradient_norm\": 2.7e-09, \"initial\": [3.0, 1.0], \"iterations\": 362, \"learning_rate\": 0.01, \"objective\": -9.0, \"objective_evaluations\": 363, \"status\": \"gradient-tolerance\", \"task_optimum\": [1.0, -2.0], \"updates\": 362, \"x\": [1.0, -2.0]}\n",
+  "sections": 25,
+  "parsed": {
+    "converged": true,
+    "gradient_norm": 2.7e-09,
+    "initial": [
+      3.0,
+      1.0
+    ],
+    "iterations": 362,
+    "learning_rate": 0.01,
+    "objective": -9.0,
+    "objective_evaluations": 363,
+    "status": "gradient-tolerance",
+    "task_optimum": [
+      1.0,
+      -2.0
+    ],
+    "updates": 362,
+    "x": [
+      1.0,
+      -2.0
+    ]
+  }
+}

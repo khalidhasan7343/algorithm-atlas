@@ -1,0 +1,141 @@
+{
+  "access_date": "2026-11-01 Asia/Dhaka",
+  "sources": [
+    {
+      "topic": "BoW and TF-IDF",
+      "title": "Introduction to Information Retrieval",
+      "authors": [
+        "Christopher D. Manning",
+        "Prabhakar Raghavan",
+        "Hinrich Sch\u00fctze"
+      ],
+      "year": 2008,
+      "urls": [
+        "https://nlp.stanford.edu/IR-book/html/htmledition/term-frequency-and-weighting-1.html",
+        "https://nlp.stanford.edu/IR-book/html/htmledition/inverse-document-frequency-1.html"
+      ],
+      "verification": "Author-hosted textbook pages accessed;raw term count and document-frequency principles. +1 smoothing and exact tokenizer are explicit local conventions."
+    },
+    {
+      "topic": "N-Gram",
+      "title": "Speech and Language Processing,3rd edition draft",
+      "authors": [
+        "Daniel Jurafsky",
+        "James H. Martin"
+      ],
+      "url": "https://web.stanford.edu/~jurafsky/slp3/",
+      "verification": "Author-hosted current draft/chapter index accessed;bounded local implementation declares add-k,UNK and EOS perplexity conventions."
+    },
+    {
+      "topic": "Word2Vec",
+      "title": "Distributed Representations of Words and Phrases and their Compositionality",
+      "authors": [
+        "Tomas Mikolov",
+        "Ilya Sutskever",
+        "Kai Chen",
+        "Greg S. Corrado",
+        "Jeffrey Dean"
+      ],
+      "year": 2013,
+      "url": "https://arxiv.org/abs/1310.4546",
+      "verification": "Primary paper verified by independent embedding agent;SGNS and unigram^.75 noise. Fixed empirical negatives are declared variant."
+    },
+    {
+      "topic": "GloVe",
+      "title": "GloVe:Global Vectors for Word Representation",
+      "authors": [
+        "Jeffrey Pennington",
+        "Richard Socher",
+        "Christopher D. Manning"
+      ],
+      "year": 2014,
+      "doi": "10.3115/v1/D14-1162",
+      "url": "https://aclanthology.org/D14-1162/",
+      "verification": "Primary ACL paper verified;positive-cell weighted least squares and vector/bias families."
+    },
+    {
+      "topic": "Transformer",
+      "title": "Attention Is All You Need",
+      "authors": [
+        "Ashish Vaswani",
+        "Noam Shazeer",
+        "Niki Parmar",
+        "Jakob Uszkoreit",
+        "Llion Jones",
+        "Aidan N. Gomez",
+        "\u0141ukasz Kaiser",
+        "Illia Polosukhin"
+      ],
+      "year": 2017,
+      "url": "https://arxiv.org/abs/1706.03762",
+      "verification": "Primary verified by Transformer agent;attention/residual/normalization/FFN. Token models here use declared compact frozen backbones."
+    },
+    {
+      "topic": "BERT",
+      "title": "BERT:Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "authors": [
+        "Jacob Devlin",
+        "Ming-Wei Chang",
+        "Kenton Lee",
+        "Kristina Toutanova"
+      ],
+      "year": "2018 preprint/2019 publication",
+      "url": "https://arxiv.org/abs/1810.04805",
+      "verification": "Primary verified;bidirectional MLM semantics. Local always-MASK policy,no NSP/segment embeddings and head-only training explicitly differ."
+    },
+    {
+      "topic": "GPT",
+      "title": "Improving Language Understanding by Generative Pre-Training",
+      "authors": [
+        "Alec Radford",
+        "Karthik Narasimhan",
+        "Tim Salimans",
+        "Ilya Sutskever"
+      ],
+      "year": 2018,
+      "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf",
+      "verification": "Primary OpenAI report verified;autoregressive causal architecture. No pretrained weights or production equivalence."
+    },
+    {
+      "topic": "HMM",
+      "title": "A Tutorial on Hidden Markov Models and Selected Applications in Speech Recognition",
+      "authors": [
+        "Lawrence R. Rabiner"
+      ],
+      "year": 1989,
+      "doi": "10.1109/5.18626",
+      "url": "https://web.ece.ucsb.edu/Faculty/Rabiner/ece259/Reprints/tutorial%20on%20hmm%20and%20applications.pdf",
+      "verification": "Author-hosted original tutorial accessible,no readable text parse claimed;existing approved B11 inference reused and independently enumerated."
+    },
+    {
+      "topic": "CRF",
+      "title": "Conditional Random Fields:Probabilistic Models for Segmenting and Labeling Sequence Data",
+      "authors": [
+        "John Lafferty",
+        "Andrew McCallum",
+        "Fernando Pereira"
+      ],
+      "year": 2001,
+      "url": "https://www.cs.columbia.edu/~jebara/6772/papers/crf.pdf",
+      "verification": "Original8-page paper verified by sequence agent;global conditional normalization/features/forward-backward. Dense linear feature baseline declared."
+    },
+    {
+      "topic": "BIO/NER",
+      "title": "Representing Text Chunks",
+      "authors": [
+        "Erik F. Tjong Kim Sang",
+        "Jorn Veenstra"
+      ],
+      "year": 1999,
+      "url": "https://arxiv.org/abs/cs/9907006",
+      "verification": "Primary representation paper verified. Strict BIO feature-based CRF is one chosen NER task baseline."
+    },
+    {
+      "topic": "CYK",
+      "title": "The CYK Algorithm",
+      "url": "https://web.cs.unlv.edu/larmore/Courses/CSC456/cyk.html",
+      "verification": "University-hosted teaching source accessed;CNF substring recurrence. Local grammar bounds,deterministic tree and epsilon policy declared."
+    }
+  ],
+  "implementation_dependencies": "NumPy/stdlib/unchanged local canonical helpers only"
+}

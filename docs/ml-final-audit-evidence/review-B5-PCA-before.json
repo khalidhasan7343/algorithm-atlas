@@ -1,0 +1,9 @@
+{
+  "observed_before_fix": true,
+  "reproduction": "PCA(1).fit([[-1e12],[1e12],[1e12]])",
+  "actual_exception": "ValueError",
+  "actual_message": "X must be finite with magnitude <= 10^12",
+  "expected": "Valid original input;finite mean1e12/3,singular_value sqrt(8e24/3),sample variance4e24/3,and exact full-rank reconstruction within float64 rounding.",
+  "cause": "PCA centered original valid input then passed expanded residuals to public SVD raw-feature validator.",
+  "source_correction": "Uniformly scale centered residuals before canonical SVD and restore physical singular/variance units. Public input limits unchanged."
+}

@@ -1,0 +1,9 @@
+{
+  "command": [
+    "python",
+    "machine-learning/graph-learning/pagerank/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"adjacency\": [[0, 1, 1], [0, 0, 1], [0, 0, 0]], \"converged\": true, \"damping\": 0.85, \"scores\": [0.19757965, 0.281551, 0.52086935], \"sum\": 1.0, \"transition\": [[0.0, 0.5, 0.5], [0.0, 0.0, 1.0], [0.33333333, 0.33333333, 0.33333333]]}\n",
+  "sections": 25
+}

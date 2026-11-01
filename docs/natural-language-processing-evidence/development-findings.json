@@ -1,0 +1,58 @@
+[
+  {
+    "id": "B13-001",
+    "status": "fixed",
+    "kind": "N-gram constructor default/domain mismatch",
+    "failed_evidence": "batch1-development-01:20 failed,65 passed",
+    "fix": "Set max_size default127 consistent with bound;reserve EOS within128 predicted symbols. No assertion weakened.",
+    "corrected_evidence": "batch1-development-02 and batch1-audit-01:85 passed"
+  },
+  {
+    "id": "B13-002",
+    "status": "fixed",
+    "kind": "TF-IDF option type validation",
+    "discovered": "Independent read-only source review:one-element ndarray membership coerced truth despite scalar norm contract",
+    "fix": "Require norm None or actual string l2;add ndarray rejection case.",
+    "corrected_evidence": "statistical-refinement-01:86 passed"
+  },
+  {
+    "id": "B13-003",
+    "status": "fixed",
+    "kind": "Transformer public helper type/shape/allocation policy",
+    "discovered": "Independent reviews found mixed Boolean IDs could coerce to integers;public head batch/length bounds and pre-copy numeric size checks needed.",
+    "fix": "Reject mixed Boolean IDs;bound public helper batch/length and reject numeric arrays>8192cells before float-copy;keep model totalwork cap.",
+    "verification": "batch3-development-03 and batch3-audit-02:114passed;regression traps oversized-copy attempts."
+  },
+  {
+    "id": "B13-004",
+    "status": "fixed",
+    "kind": "Transformer diagnostic retention versus documented complexity",
+    "discovered": "Independent source review found encode retained every layer attention matrix even when diagnostics were not requested.",
+    "fix": "Append per-layer attention only when return_attention=True;normal inference keeps current layer temporary only.",
+    "verification": "batch3-audit-03:114passed;returned diagnostics and actualexamples unchanged."
+  },
+  {
+    "id": "B13-005",
+    "status": "fixed",
+    "kind": "POS Unicode casefold boundary mismatch",
+    "discovered": "Independent reproducer \u0130/runs:raw joined vocabulary casefold tokenized \u0130 as i+combiningdot,but pretokenized emission encoding treated it as one unit and mapped toUNK.",
+    "fix": "Shared Vocabulary.fit_tokens preserves supplied units under NFC/casefold;POS uses it for supervised counts and matching inference. Rawtext mode remains explicitly separate.",
+    "verification": "text-contract-refinement-01:35passed;batch4-audit-02:120passed;HMMUnicode case verifies realknownID,word/emission count alignment and query parity;audit-B13-01:455passed."
+  },
+  {
+    "id": "B13-006",
+    "status": "fixed",
+    "kind": "Floating-point oracle equality assumption",
+    "failed_evidence": "batch4-development-01:116 passed,1 failed;independently computed log5 differed by2.22e-16",
+    "fix": "Use explicit abs tolerance1e-14,rtol0 for the independent floating scalar;all path/count/gradient assertions retained.",
+    "verification": "batch4-development-02 and later audits passed;no production mathematical defect or oracle formula change."
+  },
+  {
+    "id": "B13-007",
+    "status": "fixed",
+    "kind": "N-gram reserved-token query type ordering",
+    "discovered": "Final API inspection found reserved-marker equality preceded the explicit string check,allowing a one-element ndarray to coerce a marker comparison.",
+    "fix": "Check string type before BOS/UNK/EOS marker comparisons;extend existing invalid-query test with array/None/Boolean tokens.",
+    "verification": "ngram-query-refinement-01:28passed;final integrated B13 and extracted fullsuite verify updated source."
+  }
+]

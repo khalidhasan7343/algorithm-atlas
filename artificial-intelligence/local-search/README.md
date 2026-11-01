@@ -11,9 +11,9 @@ This category preserves **8 original syllabus entries**. Each link points to the
 | Simple Hill Climbing | [simple-hill-climbing](simple-hill-climbing/README.md) | planned |
 | Steepest-Ascent Hill Climbing | [steepest-ascent-hill-climbing](steepest-ascent-hill-climbing/README.md) | planned |
 | Stochastic Hill Climbing | [stochastic-hill-climbing](stochastic-hill-climbing/README.md) | planned |
-| Simulated Annealing | [simulated-annealing](../../machine-learning/optimization/simulated-annealing/README.md) | planned |
+| Simulated Annealing | [simulated-annealing](../../machine-learning/optimization/simulated-annealing/README.md) | complete |
 | Local Beam Search | [local-beam-search](local-beam-search/README.md) | planned |
-| Genetic Algorithms | [genetic-algorithms](../../machine-learning/optimization/genetic-algorithms/README.md) | planned |
+| Genetic Algorithms | [genetic-algorithms](../../machine-learning/optimization/genetic-algorithms/README.md) | complete |
 | Tabu Search | [tabu-search](tabu-search/README.md) | planned |
 | Random Restart Hill Climbing | [random-restart-hill-climbing](random-restart-hill-climbing/README.md) | planned |
 

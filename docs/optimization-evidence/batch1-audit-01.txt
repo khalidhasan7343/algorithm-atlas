@@ -1,0 +1,32 @@
+.............................................F                           [100%]
+=================================== FAILURES ===================================
+_________ test_approved_b1_gradient_and_unpenalized_bias_compatibility _________
+
+b10 = <module 'atlas_b10_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/optimization/support.py'>
+
+    @pytest.mark.oracle
+    def test_approved_b1_gradient_and_unpenalized_bias_compatibility(b10):
+        root=Path(__file__).resolve().parents[3]
+        path=root/'supervised-learning/regression/linear-regression/python/solution.py'
+        spec=importlib.util.spec_from_file_location('atlas_b10_preserved_b1_linear',path)
+>       module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+machine-learning/optimization/tests/test_objective_oracles.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+<frozen importlib._bootstrap_external>:755: in exec_module
+    ???
+<frozen importlib._bootstrap_external>:892: in get_code
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_frozen_importlib_external.SourceFileLoader object at 0x10986cfb0>
+path = '/Users/khalidhasan/Desktop/algorithm-atlas/supervised-learning/regression/linear-regression/python/solution.py'
+
+>   ???
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/khalidhasan/Desktop/algorithm-atlas/supervised-learning/regression/linear-regression/python/solution.py'
+
+<frozen importlib._bootstrap_external>:950: FileNotFoundError
+=========================== short test summary info ============================
+FAILED machine-learning/optimization/tests/test_objective_oracles.py::test_approved_b1_gradient_and_unpenalized_bias_compatibility
+1 failed, 45 passed in 0.08s

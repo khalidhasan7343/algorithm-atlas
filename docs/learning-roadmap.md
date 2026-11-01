@@ -2,7 +2,7 @@
 
 Progress from foundational problem solving to specialized AI topics. These levels describe a study order, not repository development phases: learning a later level does not authorize implementation outside the approved development phase.
 
-**Current scope: Phase18 — B6 Association Rule Learning.** Latest Phase17 explicitly owner-approved; new Phase18 review pending. Exactly Apriori, Eclat and FP-Growth plus shared rule generation. See [scope](association-rule-learning-scope.md) and [checkpoints](association-rule-learning-checkpoints.md). DSA Python/C++17/C++20 remain required; ML C++ optional. No Phase19/B7, commit or publication.
+**Current scope: Phase26 final comprehensive ML audit, B1–B13.** Phase25 explicitly owner-approved;seven audit/stabilization workstreams. [Scope](ml-final-audit-scope.md),[checkpoints](ml-final-audit-checkpoints.md). Final track sign-off pending;no C1,nextphase or publication.
 
 ## Level 1 — DSA Foundations
 
@@ -115,7 +115,7 @@ Choose branches according to the structure of the problem:
 
 Follow the prerequisites rather than treating levels as a fixed schedule. For each available completed topic, read its intuition and contract, predict a small example's output, inspect the implementation, run its documented tests, and explain its complexity in your own words. For unimplemented topics, use the linked planning notes to understand scope and prerequisites; runnable material follows only within an approved category.
 
-Contributors should consult the [development guide](development.md) and [progress tracker](progress.md). Implement only the three B6 canonicals and shared rule utility; pass all four internal gates and stop after the verified Phase18 package for owner review.
+Contributors should consult the [development guide](development.md) and [progress tracker](progress.md). Complete only the three B12 canonicals in three batches,preserve all previous learners and blocked DPO,and stop after verified Phase24 review delivery.
 
 
 ## Graph Algorithms learning sequence
@@ -140,9 +140,49 @@ Phase 7 is owner-approved. Study these fourteen canonical lessons in the same fi
 
 [Tree conventions](tree-conventions.md) state each API's ownership, numeric bounds and mutation contract. These topics reuse their catalog paths. Do not start another category before explicit owner approval.
 
-## Current Phase18 authorization
+## Phase19 approval and Phase20 authorization
 
-The owner approved the latest Phase17 package and authorized only B6 Association
-Rule Learning. See [scope](association-rule-learning-scope.md). Three canonical
-mining batches and one shared-rule gate precede the new pending owner review.
-The B5/B7 autoencoder stays one approved canonical; no new B7/AI work is authorized.
+Phase19 is now owner-approved; its original handoff evidence remains historical.
+Phase20 authorized B8 only:9 defined algorithms and1 blocked DPO in5 batches.
+The owner approved Outcome3: DPO remains intentionally blocked. Phase20
+implementation review is owner-approved; Phase21 B9 was separately authorized and is now approved. No Phase23,
+other category or publication. Preserve all prior B1–B7/DSA code and artifacts.
+
+## Phase20 RL study order
+
+Start with Q-Learning/SARSA and an exact finite-MDP oracle; then DQN replay/targets
+and REINFORCE reward-to-go. Compare synchronous A2C and actual asynchronous A3C;
+verify frozen old-policy clipping in PPO and continuous deterministic gradients in
+DDPG. Finish with bounded deterministic single-agent MCTS. Evaluate in separately
+reset greedy/no-noise episodes; finite-difference checks and training returns answer
+different questions. DPO intentionally remains blocked under the owner-approved Outcome3 decision.
+Any future specification or substitute requires separate explicit approval.
+
+## Phase21 B9 graph-learning sequence
+
+Phase20 implementation review is owner-approved; its historical handoff files remain
+unchanged. Study stationary PageRank first,then biased walks/SGNS Node2Vec,then
+normalized GCN feature propagation and masked node classification. Their outputs
+solve different tasks. Verify PageRank mass/stationarity,Node2Vec exact walk
+probabilities and gradients,and GCN normalization/backpropagation/equivariance.
+B7 GNN remains a separate approved canonical. B8 DPO remains intentionally blocked.
+Read the [B9 lessons](../machine-learning/graph-learning/README.md); Phase21
+owner review is now approved. Current Phase24 remains pending. No Phase25,commit,push or publication.
+
+## Phase22 optimization sequence
+
+Study full/observation/mini-batch gradient updates,then velocity and adaptive state,
+then limited-memory curvature and strong-Wolfe search,then binary population and
+Metropolis mechanisms. Check exact updates before empirical progress. A small
+step or exhausted budget is not convergence. AdamW decay differs from coupled L2.
+GA/SA reuse B10 canonicals across C3/C4; no other AI category is implemented.
+[Optimization lessons](../machine-learning/optimization/README.md). Phase22 owner
+review is explicitly approved;current Phase24 review remains pending;no Phase25,commit,push or release.
+
+## Phase23 time-series sequence
+
+Study SES and additive Holt-Winters,then ARIMA/SARIMA innovations and inverse differencing,then the explicitly scoped Prophet trend/Fourier model,and categorical HMM inference/EM. Evaluate chronological holdout,expanding and rolling windows without future preprocessing. Verify independent recursions,polynomials,gradients and exhaustive path probabilities before forecasting demonstrations. [B11 lessons](../machine-learning/time-series/README.md). Phase23 owner review is now approved;Phase24 owner review remains pending.
+
+## Phase24 anomaly-detection sequence
+
+Study random isolation paths and harmonic corrections,then the constrained one-class kernel dual and KKT conditions,then tie-inclusive local reachability-density ratios. Define score orientation,training cutoff/tie rules and outlier-versus-novelty APIs before evaluation. [B12 lessons](../machine-learning/anomaly-detection/README.md). Phase24 owner approval pending;no Phase25 or publication.

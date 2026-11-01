@@ -8,12 +8,12 @@ This category preserves **6 original syllabus entries**. Each link points to the
 
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| ARIMA | [arima](arima/README.md) | planned |
-| SARIMA | [sarima](sarima/README.md) | planned |
-| Exponential Smoothing | [exponential-smoothing](exponential-smoothing/README.md) | planned |
-| Holt-Winters | [holt-winters](holt-winters/README.md) | planned |
-| Prophet | [prophet](prophet/README.md) | planned |
-| Hidden Markov Models (HMM) | [hidden-markov-models](hidden-markov-models/README.md) | planned |
+| ARIMA | [arima](arima/README.md) | complete |
+| SARIMA | [sarima](sarima/README.md) | complete |
+| Exponential Smoothing | [exponential-smoothing](exponential-smoothing/README.md) | complete |
+| Holt-Winters | [holt-winters](holt-winters/README.md) | complete |
+| Prophet | [prophet](prophet/README.md) | complete |
+| Hidden Markov Models (HMM) | [hidden-markov-models](hidden-markov-models/README.md) | complete |
 
 ## Learning and contribution scope
 

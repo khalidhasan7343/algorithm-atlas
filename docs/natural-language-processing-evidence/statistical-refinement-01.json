@@ -1,0 +1,31 @@
+{
+  "label": "statistical-refinement",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/natural-language-processing/bag-of-words",
+    "machine-learning/natural-language-processing/tf-idf",
+    "machine-learning/natural-language-processing/n-gram-language-models",
+    "machine-learning/natural-language-processing/tests/test_text_contracts.py",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/natural-language-processing/bag-of-words",
+    "machine-learning/natural-language-processing/tf-idf",
+    "machine-learning/natural-language-processing/n-gram-language-models",
+    "machine-learning/natural-language-processing/tests/test_text_contracts.py",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/natural-language-processing-evidence/statistical-refinement-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-01T18:39:20.034716+06:00",
+  "elapsed_seconds": 0.876,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/natural-language-processing-evidence/statistical-refinement-01.txt"
+}

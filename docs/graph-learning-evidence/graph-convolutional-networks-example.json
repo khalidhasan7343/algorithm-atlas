@@ -1,0 +1,9 @@
+{
+  "command": [
+    "python",
+    "machine-learning/graph-learning/graph-convolutional-networks/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"first_propagated_feature\": [0.928997, 0.099458], \"loss_final\": 0.00817123, \"loss_initial\": 0.63393832, \"normalized_adjacency\": [[0.333333, 0.333333, 0.327913, 0.0, 0.0, 0.0], [0.333333, 0.333333, 0.327913, 0.0, 0.0, 0.0], [0.327913, 0.327913, 0.322581, 0.032258, 0.0, 0.0], [0.0, 0.0, 0.032258, 0.322581, 0.327913, 0.327913], [0.0, 0.0, 0.0, 0.327913, 0.333333, 0.333333], [0.0, 0.0, 0.0, 0.327913, 0.333333, 0.333333]], \"predictions\": [0, 0, 0, 1, 1, 1], \"updates\": 200}\n",
+  "sections": 25
+}

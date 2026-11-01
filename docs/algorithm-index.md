@@ -253,93 +253,93 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Multilayer Perceptron (MLP) | [multilayer-perceptron](../machine-learning/deep-learning/multilayer-perceptron/README.md) | planned |
-| Convolutional Neural Networks (CNN) | [convolutional-neural-networks](../machine-learning/deep-learning/convolutional-neural-networks/README.md) | planned |
-| Recurrent Neural Networks (RNN) | [recurrent-neural-networks](../machine-learning/deep-learning/recurrent-neural-networks/README.md) | planned |
-| Long Short-Term Memory (LSTM) | [long-short-term-memory](../machine-learning/deep-learning/long-short-term-memory/README.md) | planned |
-| Gated Recurrent Units (GRU) | [gated-recurrent-units](../machine-learning/deep-learning/gated-recurrent-units/README.md) | planned |
-| Transformers | [transformers](../machine-learning/deep-learning/transformers/README.md) | planned |
-| Generative Adversarial Networks (GAN) | [generative-adversarial-networks](../machine-learning/deep-learning/generative-adversarial-networks/README.md) | planned |
-| Variational Autoencoders (VAE) | [variational-autoencoders](../machine-learning/deep-learning/variational-autoencoders/README.md) | planned |
-| Diffusion Models | [diffusion-models](../machine-learning/deep-learning/diffusion-models/README.md) | planned |
-| Graph Neural Networks (GNN) | [graph-neural-networks](../machine-learning/deep-learning/graph-neural-networks/README.md) | planned |
-| Residual Networks (ResNet) | [residual-networks](../machine-learning/deep-learning/residual-networks/README.md) | planned |
+| Multilayer Perceptron (MLP) | [multilayer-perceptron](../machine-learning/deep-learning/multilayer-perceptron/README.md) | complete |
+| Convolutional Neural Networks (CNN) | [convolutional-neural-networks](../machine-learning/deep-learning/convolutional-neural-networks/README.md) | complete |
+| Recurrent Neural Networks (RNN) | [recurrent-neural-networks](../machine-learning/deep-learning/recurrent-neural-networks/README.md) | complete |
+| Long Short-Term Memory (LSTM) | [long-short-term-memory](../machine-learning/deep-learning/long-short-term-memory/README.md) | complete |
+| Gated Recurrent Units (GRU) | [gated-recurrent-units](../machine-learning/deep-learning/gated-recurrent-units/README.md) | complete |
+| Transformers | [transformers](../machine-learning/deep-learning/transformers/README.md) | complete |
+| Generative Adversarial Networks (GAN) | [generative-adversarial-networks](../machine-learning/deep-learning/generative-adversarial-networks/README.md) | complete |
+| Variational Autoencoders (VAE) | [variational-autoencoders](../machine-learning/deep-learning/variational-autoencoders/README.md) | complete |
+| Diffusion Models | [diffusion-models](../machine-learning/deep-learning/diffusion-models/README.md) | complete |
+| Graph Neural Networks (GNN) | [graph-neural-networks](../machine-learning/deep-learning/graph-neural-networks/README.md) | complete |
+| Residual Networks (ResNet) | [residual-networks](../machine-learning/deep-learning/residual-networks/README.md) | complete |
 | Vanilla Autoencoders | [vanilla-autoencoders](../machine-learning/deep-learning/vanilla-autoencoders/README.md) | complete |
-| Denoising Autoencoders | [denoising-autoencoders](../machine-learning/deep-learning/denoising-autoencoders/README.md) | planned |
-| Sparse Autoencoders | [sparse-autoencoders](../machine-learning/deep-learning/sparse-autoencoders/README.md) | planned |
+| Denoising Autoencoders | [denoising-autoencoders](../machine-learning/deep-learning/denoising-autoencoders/README.md) | complete |
+| Sparse Autoencoders | [sparse-autoencoders](../machine-learning/deep-learning/sparse-autoencoders/README.md) | complete |
 
 ## B8. [Reinforcement Learning](../machine-learning/reinforcement-learning/README.md)
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Q-Learning | [q-learning](../machine-learning/reinforcement-learning/q-learning/README.md) | planned |
-| Deep Q-Networks (DQN) | [deep-q-networks](../machine-learning/reinforcement-learning/deep-q-networks/README.md) | planned |
-| SARSA | [sarsa](../machine-learning/reinforcement-learning/sarsa/README.md) | planned |
-| REINFORCE Policy Gradient | [reinforce-policy-gradient](../machine-learning/reinforcement-learning/reinforce-policy-gradient/README.md) | planned |
-| Advantage Actor-Critic (A2C) | [advantage-actor-critic](../machine-learning/reinforcement-learning/advantage-actor-critic/README.md) | planned |
-| Asynchronous Advantage Actor-Critic (A3C) | [asynchronous-advantage-actor-critic](../machine-learning/reinforcement-learning/asynchronous-advantage-actor-critic/README.md) | planned |
-| Proximal Policy Optimization (PPO) | [proximal-policy-optimization](../machine-learning/reinforcement-learning/proximal-policy-optimization/README.md) | planned |
-| Deep Deterministic Policy Gradient (DDPG) | [deep-deterministic-policy-gradient](../machine-learning/reinforcement-learning/deep-deterministic-policy-gradient/README.md) | planned |
-| Monte Carlo Tree Search (MCTS) | [monte-carlo-tree-search](../machine-learning/reinforcement-learning/monte-carlo-tree-search/README.md) | planned |
+| Q-Learning | [q-learning](../machine-learning/reinforcement-learning/q-learning/README.md) | complete |
+| Deep Q-Networks (DQN) | [deep-q-networks](../machine-learning/reinforcement-learning/deep-q-networks/README.md) | complete |
+| SARSA | [sarsa](../machine-learning/reinforcement-learning/sarsa/README.md) | complete |
+| REINFORCE Policy Gradient | [reinforce-policy-gradient](../machine-learning/reinforcement-learning/reinforce-policy-gradient/README.md) | complete |
+| Advantage Actor-Critic (A2C) | [advantage-actor-critic](../machine-learning/reinforcement-learning/advantage-actor-critic/README.md) | complete |
+| Asynchronous Advantage Actor-Critic (A3C) | [asynchronous-advantage-actor-critic](../machine-learning/reinforcement-learning/asynchronous-advantage-actor-critic/README.md) | complete |
+| Proximal Policy Optimization (PPO) | [proximal-policy-optimization](../machine-learning/reinforcement-learning/proximal-policy-optimization/README.md) | complete |
+| Deep Deterministic Policy Gradient (DDPG) | [deep-deterministic-policy-gradient](../machine-learning/reinforcement-learning/deep-deterministic-policy-gradient/README.md) | complete |
+| Monte Carlo Tree Search (MCTS) | [monte-carlo-tree-search](../machine-learning/reinforcement-learning/monte-carlo-tree-search/README.md) | complete |
 | Dynamic Policy Optimization (DPO, terminology as written in original notes) | [dynamic-policy-optimization](../machine-learning/reinforcement-learning/dynamic-policy-optimization/README.md) | blocked |
 
 ## B9. [Graph-Based Learning](../machine-learning/graph-learning/README.md)
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| PageRank | [pagerank](../machine-learning/graph-learning/pagerank/README.md) | planned |
-| Node2Vec | [node2vec](../machine-learning/graph-learning/node2vec/README.md) | planned |
-| Graph Convolutional Networks (GCN) | [graph-convolutional-networks](../machine-learning/graph-learning/graph-convolutional-networks/README.md) | planned |
+| PageRank | [pagerank](../machine-learning/graph-learning/pagerank/README.md) | complete |
+| Node2Vec | [node2vec](../machine-learning/graph-learning/node2vec/README.md) | complete |
+| Graph Convolutional Networks (GCN) | [graph-convolutional-networks](../machine-learning/graph-learning/graph-convolutional-networks/README.md) | complete |
 
 ## B10. [Optimization](../machine-learning/optimization/README.md)
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Batch Gradient Descent | [batch-gradient-descent](../machine-learning/optimization/batch-gradient-descent/README.md) | planned |
-| Stochastic Gradient Descent | [stochastic-gradient-descent](../machine-learning/optimization/stochastic-gradient-descent/README.md) | planned |
-| Mini-Batch Gradient Descent | [mini-batch-gradient-descent](../machine-learning/optimization/mini-batch-gradient-descent/README.md) | planned |
-| Momentum | [momentum](../machine-learning/optimization/momentum/README.md) | planned |
-| RMSProp | [rmsprop](../machine-learning/optimization/rmsprop/README.md) | planned |
-| Adam | [adam](../machine-learning/optimization/adam/README.md) | planned |
-| AdamW | [adamw](../machine-learning/optimization/adamw/README.md) | planned |
-| L-BFGS | [l-bfgs](../machine-learning/optimization/l-bfgs/README.md) | planned |
-| Genetic Algorithms | [genetic-algorithms](../machine-learning/optimization/genetic-algorithms/README.md) | planned |
-| Simulated Annealing | [simulated-annealing](../machine-learning/optimization/simulated-annealing/README.md) | planned |
+| Batch Gradient Descent | [batch-gradient-descent](../machine-learning/optimization/batch-gradient-descent/README.md) | complete |
+| Stochastic Gradient Descent | [stochastic-gradient-descent](../machine-learning/optimization/stochastic-gradient-descent/README.md) | complete |
+| Mini-Batch Gradient Descent | [mini-batch-gradient-descent](../machine-learning/optimization/mini-batch-gradient-descent/README.md) | complete |
+| Momentum | [momentum](../machine-learning/optimization/momentum/README.md) | complete |
+| RMSProp | [rmsprop](../machine-learning/optimization/rmsprop/README.md) | complete |
+| Adam | [adam](../machine-learning/optimization/adam/README.md) | complete |
+| AdamW | [adamw](../machine-learning/optimization/adamw/README.md) | complete |
+| L-BFGS | [l-bfgs](../machine-learning/optimization/l-bfgs/README.md) | complete |
+| Genetic Algorithms | [genetic-algorithms](../machine-learning/optimization/genetic-algorithms/README.md) | complete |
+| Simulated Annealing | [simulated-annealing](../machine-learning/optimization/simulated-annealing/README.md) | complete |
 
 ## B11. [Time Series](../machine-learning/time-series/README.md)
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| ARIMA | [arima](../machine-learning/time-series/arima/README.md) | planned |
-| SARIMA | [sarima](../machine-learning/time-series/sarima/README.md) | planned |
-| Exponential Smoothing | [exponential-smoothing](../machine-learning/time-series/exponential-smoothing/README.md) | planned |
-| Holt-Winters | [holt-winters](../machine-learning/time-series/holt-winters/README.md) | planned |
-| Prophet | [prophet](../machine-learning/time-series/prophet/README.md) | planned |
-| Hidden Markov Models (HMM) | [hidden-markov-models](../machine-learning/time-series/hidden-markov-models/README.md) | planned |
+| ARIMA | [arima](../machine-learning/time-series/arima/README.md) | complete |
+| SARIMA | [sarima](../machine-learning/time-series/sarima/README.md) | complete |
+| Exponential Smoothing | [exponential-smoothing](../machine-learning/time-series/exponential-smoothing/README.md) | complete |
+| Holt-Winters | [holt-winters](../machine-learning/time-series/holt-winters/README.md) | complete |
+| Prophet | [prophet](../machine-learning/time-series/prophet/README.md) | complete |
+| Hidden Markov Models (HMM) | [hidden-markov-models](../machine-learning/time-series/hidden-markov-models/README.md) | complete |
 
 ## B12. [Anomaly Detection](../machine-learning/anomaly-detection/README.md)
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Isolation Forest | [isolation-forest](../machine-learning/anomaly-detection/isolation-forest/README.md) | planned |
-| One-Class SVM | [one-class-svm](../machine-learning/anomaly-detection/one-class-svm/README.md) | planned |
-| Local Outlier Factor (LOF) | [local-outlier-factor](../machine-learning/anomaly-detection/local-outlier-factor/README.md) | planned |
+| Isolation Forest | [isolation-forest](../machine-learning/anomaly-detection/isolation-forest/README.md) | complete |
+| One-Class SVM | [one-class-svm](../machine-learning/anomaly-detection/one-class-svm/README.md) | complete |
+| Local Outlier Factor (LOF) | [local-outlier-factor](../machine-learning/anomaly-detection/local-outlier-factor/README.md) | complete |
 
 ## B13. [Natural Language Processing](../machine-learning/natural-language-processing/README.md)
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Bag of Words | [bag-of-words](../machine-learning/natural-language-processing/bag-of-words/README.md) | planned |
-| TF-IDF | [tf-idf](../machine-learning/natural-language-processing/tf-idf/README.md) | planned |
-| Word2Vec | [word2vec](../machine-learning/natural-language-processing/word2vec/README.md) | planned |
-| GloVe | [glove](../machine-learning/natural-language-processing/glove/README.md) | planned |
-| BERT Architecture / Usage | [bert](../machine-learning/natural-language-processing/bert/README.md) | planned |
-| GPT Architecture / Usage | [gpt](../machine-learning/natural-language-processing/gpt/README.md) | planned |
-| Hidden Markov Models for POS Tagging | [hidden-markov-models-pos-tagging](../machine-learning/natural-language-processing/hidden-markov-models-pos-tagging/README.md) | planned |
-| Named Entity Recognition | [named-entity-recognition](../machine-learning/natural-language-processing/named-entity-recognition/README.md) | planned |
-| Conditional Random Fields (CRF) | [conditional-random-fields](../machine-learning/natural-language-processing/conditional-random-fields/README.md) | planned |
-| N-Gram Language Models | [n-gram-language-models](../machine-learning/natural-language-processing/n-gram-language-models/README.md) | planned |
-| CYK Parsing Algorithm | [cyk-parsing](../machine-learning/natural-language-processing/cyk-parsing/README.md) | planned |
+| Bag of Words | [bag-of-words](../machine-learning/natural-language-processing/bag-of-words/README.md) | complete |
+| TF-IDF | [tf-idf](../machine-learning/natural-language-processing/tf-idf/README.md) | complete |
+| Word2Vec | [word2vec](../machine-learning/natural-language-processing/word2vec/README.md) | complete |
+| GloVe | [glove](../machine-learning/natural-language-processing/glove/README.md) | complete |
+| BERT Architecture / Usage | [bert](../machine-learning/natural-language-processing/bert/README.md) | complete |
+| GPT Architecture / Usage | [gpt](../machine-learning/natural-language-processing/gpt/README.md) | complete |
+| Hidden Markov Models for POS Tagging | [hidden-markov-models-pos-tagging](../machine-learning/natural-language-processing/hidden-markov-models-pos-tagging/README.md) | complete |
+| Named Entity Recognition | [named-entity-recognition](../machine-learning/natural-language-processing/named-entity-recognition/README.md) | complete |
+| Conditional Random Fields (CRF) | [conditional-random-fields](../machine-learning/natural-language-processing/conditional-random-fields/README.md) | complete |
+| N-Gram Language Models | [n-gram-language-models](../machine-learning/natural-language-processing/n-gram-language-models/README.md) | complete |
+| CYK Parsing Algorithm | [cyk-parsing](../machine-learning/natural-language-processing/cyk-parsing/README.md) | complete |
 
 ## C1. [Uninformed Search](../artificial-intelligence/uninformed-search/README.md)
 
@@ -370,9 +370,9 @@ Foundation checks validate repository structure; they are separate from tests of
 | Simple Hill Climbing | [simple-hill-climbing](../artificial-intelligence/local-search/simple-hill-climbing/README.md) | planned |
 | Steepest-Ascent Hill Climbing | [steepest-ascent-hill-climbing](../artificial-intelligence/local-search/steepest-ascent-hill-climbing/README.md) | planned |
 | Stochastic Hill Climbing | [stochastic-hill-climbing](../artificial-intelligence/local-search/stochastic-hill-climbing/README.md) | planned |
-| Simulated Annealing | [simulated-annealing](../machine-learning/optimization/simulated-annealing/README.md) | planned |
+| Simulated Annealing | [simulated-annealing](../machine-learning/optimization/simulated-annealing/README.md) | complete |
 | Local Beam Search | [local-beam-search](../artificial-intelligence/local-search/local-beam-search/README.md) | planned |
-| Genetic Algorithms | [genetic-algorithms](../machine-learning/optimization/genetic-algorithms/README.md) | planned |
+| Genetic Algorithms | [genetic-algorithms](../machine-learning/optimization/genetic-algorithms/README.md) | complete |
 | Tabu Search | [tabu-search](../artificial-intelligence/local-search/tabu-search/README.md) | planned |
 | Random Restart Hill Climbing | [random-restart-hill-climbing](../artificial-intelligence/local-search/random-restart-hill-climbing/README.md) | planned |
 
@@ -380,11 +380,11 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Genetic Algorithms | [genetic-algorithms](../machine-learning/optimization/genetic-algorithms/README.md) | planned |
+| Genetic Algorithms | [genetic-algorithms](../machine-learning/optimization/genetic-algorithms/README.md) | complete |
 | Particle Swarm Optimization (PSO) | [particle-swarm-optimization](../artificial-intelligence/global-optimization/particle-swarm-optimization/README.md) | planned |
 | Ant Colony Optimization (ACO) | [ant-colony-optimization](../artificial-intelligence/global-optimization/ant-colony-optimization/README.md) | planned |
 | Branch and Bound | [branch-and-bound](../artificial-intelligence/global-optimization/branch-and-bound/README.md) | planned |
-| Simulated Annealing | [simulated-annealing](../machine-learning/optimization/simulated-annealing/README.md) | planned |
+| Simulated Annealing | [simulated-annealing](../machine-learning/optimization/simulated-annealing/README.md) | complete |
 | Exhaustive Search | [exhaustive-search](../artificial-intelligence/global-optimization/exhaustive-search/README.md) | planned |
 | Brute Force Search | [exhaustive-search](../artificial-intelligence/global-optimization/exhaustive-search/README.md) | planned |
 
@@ -432,7 +432,7 @@ Foundation checks validate repository structure; they are separate from tests of
 
 | Original syllabus entry | Canonical topic | Status |
 | --- | --- | --- |
-| Convolutional Neural Networks (CNN) | [convolutional-neural-networks](../machine-learning/deep-learning/convolutional-neural-networks/README.md) | planned |
+| Convolutional Neural Networks (CNN) | [convolutional-neural-networks](../machine-learning/deep-learning/convolutional-neural-networks/README.md) | complete |
 | Canny Edge Detection | [canny-edge-detection](../artificial-intelligence/computer-vision/canny-edge-detection/README.md) | planned |
 | Sobel Edge Detection | [sobel-edge-detection](../artificial-intelligence/computer-vision/sobel-edge-detection/README.md) | planned |
 | SIFT | [sift](../artificial-intelligence/computer-vision/sift/README.md) | planned |

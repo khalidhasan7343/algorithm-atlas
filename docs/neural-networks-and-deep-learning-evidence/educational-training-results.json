@@ -1,0 +1,243 @@
+[
+  {
+    "id": "multilayer-perceptron",
+    "loss_initial": 0.7064654793541177,
+    "loss_final": 0.0032179842591330116,
+    "optimization_status": "fixed-budget-completed",
+    "elapsed_seconds": {
+      "example": 0.09131,
+      "equivalent_cli": 0.073068
+    },
+    "output_keys": [
+      "loss_initial",
+      "loss_final",
+      "optimization_status",
+      "prediction"
+    ],
+    "interpretation": "Actual fixed-budget training example; no held-out/generalization/generative-quality claim. Legacy vanilla uses unchanged B5 optimization/status."
+  },
+  {
+    "id": "vanilla-autoencoders",
+    "loss_initial": 0.5027611637537701,
+    "loss_final": 2.748733333184062e-13,
+    "optimization_status": "gradient-tolerance",
+    "elapsed_seconds": {
+      "example": 0.057921,
+      "equivalent_cli": 0.055527
+    },
+    "output_keys": [
+      "embedding",
+      "optimization_status"
+    ],
+    "interpretation": "Actual fixed-budget training example; no held-out/generalization/generative-quality claim. Legacy vanilla uses unchanged B5 optimization/status.",
+    "metric_source": "Additional read-only fit of preserved canonical on unchanged worked input; no source modification"
+  },
+  {
+    "id": "convolutional-neural-networks",
+    "loss_initial": 1.0616779973194008,
+    "loss_final": 0.02093795823310415,
+    "optimization_status": "fixed-budget-completed",
+    "elapsed_seconds": {
+      "example": 0.057722,
+      "equivalent_cli": 0.057648
+    },
+    "output_keys": [
+      "loss_initial",
+      "loss_final",
+      "optimization_status",
+      "prediction"
+    ],
+    "interpretation": "Actual fixed-budget training example; no held-out/generalization/generative-quality claim. Legacy vanilla uses unchanged B5 optimization/status."
+  },
+  {
+    "id": "residual-networks",
+    "loss_initial": 6.725661119716871,
+    "loss_final": 0.009262194597573329,
+    "optimization_status": "fixed-budget-completed",
+    "elapsed_seconds": {
+      "example": 0.059454,
+      "equivalent_cli": 0.058448
+    },
+    "output_keys": [
+      "loss_initial",
+      "loss_final",
+      "optimization_status",
+      "prediction"
+    ],
+    "interpretation": "Actual fixed-budget training example; no held-out/generalization/generative-quality claim. Legacy vanilla uses unchanged B5 optimization/status."
+  },
+  {
+    "id": "recurrent-neural-networks",
+    "loss_initial": 0.1678538357949367,
+    "loss_final": 0.00046930482258646013,
+    "optimization_status": "fixed-budget-completed",
+    "elapsed_seconds": {
+      "example": 0.061822,
+      "equivalent_cli": 0.063304
+    },
+    "output_keys": [
+      "loss_initial",
+      "loss_final",
+      "optimization_status",
+      "prediction"
+    ],
+    "interpretation": "Actual fixed-budget training example; no held-out/generalization/generative-quality claim. Legacy vanilla uses unchanged B5 optimization/status."
+  },
+  {
+    "id": "long-short-term-memory",
+    "loss_initial": 0.3157256722622744,
+    "loss_final": 0.0029670930640217945,
+    "optimization_status": "fixed-budget-completed",
+    "elapsed_seconds": {
+      "example": 0.062954,
+      "equivalent_cli": 0.066481
+    },
+    "output_keys": [
+      "loss_initial",
+      "loss_final",
+      "optimization_status",
+      "prediction"
+    ],
+    "interpretation": "Actual fixed-budget training example; no held-out/generalization/generative-quality claim. Legacy vanilla uses unchanged B5 optimization/status."
+  },
+  {
+    "id": "gated-recurrent-units",
+    "loss_initial": 0.31359343879124046,
+    "loss_final": 0.08837074825451544,
+    "optimization_status": "fixed-budget-completed",
+    "elapsed_seconds": {
+      "example": 0.070182,
+      "equivalent_cli": 0.069162
+    },
+    "output_keys": [
+      "loss_initial",
+      "loss_final",
+      "optimization_status",
+      "prediction"
+    ],
+    "interpretation": "Actual fixed-budget training example; no held-out/generalization/generative-quality claim. Legacy vanilla uses unchanged B5 optimization/status."
+  },
+  {
+    "id": "transformers",
+    "loss_initial": 0.7553779662224055,
+    "loss_final": 0.044712721898246405,
+    "optimization_status": "fixed-budget-completed",
+    "elapsed_seconds": {
+      "example": 0.06756,
+      "equivalent_cli": 0.069521
+    },
+    "output_keys": [
+      "loss_initial",
+      "loss_final",
+      "optimization_status",
+      "prediction"
+    ],
+    "interpretation": "Actual fixed-budget training example; no held-out/generalization/generative-quality claim. Legacy vanilla uses unchanged B5 optimization/status."
+  },
+  {
+    "id": "denoising-autoencoders",
+    "loss_initial": 0.4725115064980791,
+    "loss_final": 0.006216973351496903,
+    "optimization_status": "fixed-budget-completed",
+    "elapsed_seconds": {
+      "example": 0.060841,
+      "equivalent_cli": 0.058445
+    },
+    "output_keys": [
+      "loss_initial",
+      "loss_final",
+      "optimization_status",
+      "embedding",
+      "reconstruction"
+    ],
+    "interpretation": "Actual fixed-budget training example; no held-out/generalization/generative-quality claim. Legacy vanilla uses unchanged B5 optimization/status."
+  },
+  {
+    "id": "sparse-autoencoders",
+    "loss_initial": 0.4130213202577581,
+    "loss_final": 0.017961998546944653,
+    "optimization_status": "fixed-budget-completed",
+    "elapsed_seconds": {
+      "example": 0.058023,
+      "equivalent_cli": 0.060414
+    },
+    "output_keys": [
+      "loss_initial",
+      "loss_final",
+      "optimization_status",
+      "embedding",
+      "reconstruction"
+    ],
+    "interpretation": "Actual fixed-budget training example; no held-out/generalization/generative-quality claim. Legacy vanilla uses unchanged B5 optimization/status."
+  },
+  {
+    "id": "variational-autoencoders",
+    "loss_initial": 0.4755841637547126,
+    "loss_final": 0.35546400959531405,
+    "optimization_status": "fixed-budget-completed",
+    "elapsed_seconds": {
+      "example": 0.057982,
+      "equivalent_cli": 0.060504
+    },
+    "output_keys": [
+      "loss_initial",
+      "loss_final",
+      "optimization_status",
+      "embedding",
+      "reconstruction",
+      "sample"
+    ],
+    "interpretation": "Actual fixed-budget training example; no held-out/generalization/generative-quality claim. Legacy vanilla uses unchanged B5 optimization/status."
+  },
+  {
+    "id": "generative-adversarial-networks",
+    "loss_initial": 0.6799243053554787,
+    "loss_final": 0.7855473241228657,
+    "optimization_status": "fixed-budget-completed",
+    "elapsed_seconds": {
+      "example": 0.061758,
+      "equivalent_cli": 0.060139
+    },
+    "output_keys": [
+      "loss_initial",
+      "loss_final",
+      "optimization_status",
+      "sample"
+    ],
+    "interpretation": "Actual fixed-budget training example; no held-out/generalization/generative-quality claim. Legacy vanilla uses unchanged B5 optimization/status."
+  },
+  {
+    "id": "diffusion-models",
+    "loss_initial": 0.3065141686746708,
+    "loss_final": 0.7113475967687499,
+    "optimization_status": "fixed-budget-completed",
+    "elapsed_seconds": {
+      "example": 0.057919,
+      "equivalent_cli": 0.057469
+    },
+    "output_keys": [
+      "loss_initial",
+      "loss_final",
+      "optimization_status",
+      "sample"
+    ],
+    "interpretation": "Actual fixed-budget training example; no held-out/generalization/generative-quality claim. Legacy vanilla uses unchanged B5 optimization/status."
+  },
+  {
+    "id": "graph-neural-networks",
+    "loss_initial": 2.321356563571144,
+    "loss_final": 0.12605095314837006,
+    "optimization_status": "fixed-budget-completed",
+    "elapsed_seconds": {
+      "example": 0.059952,
+      "equivalent_cli": 0.059555
+    },
+    "output_keys": [
+      "loss_initial",
+      "loss_final",
+      "optimization_status",
+      "prediction"
+    ],
+    "interpretation": "Actual fixed-budget training example; no held-out/generalization/generative-quality claim. Legacy vanilla uses unchanged B5 optimization/status."
+  }
+]

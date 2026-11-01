@@ -1,0 +1,31 @@
+{
+  "label": "batch1-audit",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/optimization/batch-gradient-descent",
+    "machine-learning/optimization/stochastic-gradient-descent",
+    "machine-learning/optimization/mini-batch-gradient-descent",
+    "machine-learning/optimization/tests/test_objective_oracles.py",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/optimization/batch-gradient-descent",
+    "machine-learning/optimization/stochastic-gradient-descent",
+    "machine-learning/optimization/mini-batch-gradient-descent",
+    "machine-learning/optimization/tests/test_objective_oracles.py",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/optimization-evidence/batch1-audit-02.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T21:09:40.066042+06:00",
+  "elapsed_seconds": 0.271,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/optimization-evidence/batch1-audit-02.txt"
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "B12-001",
+    "status": "fixed",
+    "kind": "external-reference harness RNG isolation",
+    "problem": "sklearn OneClassSVM/LIBSVM wrapper consumed the legacy global NumPy seed during three reference calls,triggering the strict fixture teardown guard.",
+    "failed_evidence": "batch2-development-01:41 test bodies passed;3 teardown errors",
+    "fix": "Save/restore global RNG only around the external sklearn reference call. Keep production invocation outside that scope and preserve the strict guard unchanged. No production algorithm or mathematical assertion weakened.",
+    "corrected_evidence": "batch2-development-02 and batch2-audit-01:41 passed,zero errors/skips",
+    "previous_algorithms_changed": false
+  }
+]

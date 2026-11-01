@@ -1,0 +1,58 @@
+.........................E.E.E..............                             [100%]
+==================================== ERRORS ====================================
+_ ERROR at teardown of test_independent_scipy_dual_and_scaled_sklearn_decision[0.1] _
+
+    @pytest.fixture(autouse=True)
+    def global_rng_guard():
+        before = np.random.get_state()
+        yield
+        after = np.random.get_state()
+>       assert before[0] == after[0] and np.array_equal(before[1], after[1]) and before[2:] == after[2:]
+E       AssertionError: assert ('MT19937' == 'MT19937'
+E         
+E           MT19937 and True and (623, 0, 0.0) == (624, 0, 0.0)
+E        +  where True = <function array_equal at 0x10741b170>(array([2147483648, 1463165579, 1970614347, 3670628426,  972114376,\n        203345923, 1277048144,  678409964,  5053718..., 4076240143, 2440824001, 3415284879, 4238566880,\n       3544586367, 2380260162, 1041098531, 2456647470], dtype=uint32), array([2147483648, 1463165579, 1970614347, 3670628426,  972114376,\n        203345923, 1277048144,  678409964,  5053718..., 4076240143, 2440824001, 3415284879, 4238566880,\n       3544586367, 2380260162, 1041098531, 2456647470], dtype=uint32))
+E        +    where <function array_equal at 0x10741b170> = np.array_equal
+E         
+E         At index 0 diff: 623 != 624
+E         Use -v to get more diff)
+
+machine-learning/anomaly-detection/conftest.py:24: AssertionError
+_ ERROR at teardown of test_independent_scipy_dual_and_scaled_sklearn_decision[0.4] _
+
+    @pytest.fixture(autouse=True)
+    def global_rng_guard():
+        before = np.random.get_state()
+        yield
+        after = np.random.get_state()
+>       assert before[0] == after[0] and np.array_equal(before[1], after[1]) and before[2:] == after[2:]
+E       AssertionError: assert ('MT19937' == 'MT19937'
+E         
+E           MT19937 and False)
+E        +  where False = <function array_equal at 0x10741b170>(array([2147483648, 1463165579, 1970614347, 3670628426,  972114376,\n        203345923, 1277048144,  678409964,  5053718..., 4076240143, 2440824001, 3415284879, 4238566880,\n       3544586367, 2380260162, 1041098531, 2456647470], dtype=uint32), array([ 396960317, 1345137099, 3844540709, 1802696599, 4184682121,\n       2735436370, 3367750009, 2851001131, 35855257..., 1605660879, 1706556107, 2661255025, 2957794327,\n        338775794, 3018440602, 2023104360,  704208171], dtype=uint32))
+E        +    where <function array_equal at 0x10741b170> = np.array_equal
+
+machine-learning/anomaly-detection/conftest.py:24: AssertionError
+_ ERROR at teardown of test_independent_scipy_dual_and_scaled_sklearn_decision[0.8] _
+
+    @pytest.fixture(autouse=True)
+    def global_rng_guard():
+        before = np.random.get_state()
+        yield
+        after = np.random.get_state()
+>       assert before[0] == after[0] and np.array_equal(before[1], after[1]) and before[2:] == after[2:]
+E       AssertionError: assert ('MT19937' == 'MT19937'
+E         
+E           MT19937 and True and (1, 0, 0.0) == (2, 0, 0.0)
+E        +  where True = <function array_equal at 0x10741b170>(array([ 396960317, 1345137099, 3844540709, 1802696599, 4184682121,\n       2735436370, 3367750009, 2851001131, 35855257..., 1605660879, 1706556107, 2661255025, 2957794327,\n        338775794, 3018440602, 2023104360,  704208171], dtype=uint32), array([ 396960317, 1345137099, 3844540709, 1802696599, 4184682121,\n       2735436370, 3367750009, 2851001131, 35855257..., 1605660879, 1706556107, 2661255025, 2957794327,\n        338775794, 3018440602, 2023104360,  704208171], dtype=uint32))
+E        +    where <function array_equal at 0x10741b170> = np.array_equal
+E         
+E         At index 0 diff: 1 != 2
+E         Use -v to get more diff)
+
+machine-learning/anomaly-detection/conftest.py:24: AssertionError
+=========================== short test summary info ============================
+ERROR machine-learning/anomaly-detection/one-class-svm/tests/test_python.py::test_independent_scipy_dual_and_scaled_sklearn_decision[0.1]
+ERROR machine-learning/anomaly-detection/one-class-svm/tests/test_python.py::test_independent_scipy_dual_and_scaled_sklearn_decision[0.4]
+ERROR machine-learning/anomaly-detection/one-class-svm/tests/test_python.py::test_independent_scipy_dual_and_scaled_sklearn_decision[0.8]
+41 passed, 3 errors in 0.76s

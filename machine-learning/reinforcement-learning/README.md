@@ -8,15 +8,15 @@ This category preserves **10 original syllabus entries**. Each link points to th
 
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Q-Learning | [q-learning](q-learning/README.md) | planned |
-| Deep Q-Networks (DQN) | [deep-q-networks](deep-q-networks/README.md) | planned |
-| SARSA | [sarsa](sarsa/README.md) | planned |
-| REINFORCE Policy Gradient | [reinforce-policy-gradient](reinforce-policy-gradient/README.md) | planned |
-| Advantage Actor-Critic (A2C) | [advantage-actor-critic](advantage-actor-critic/README.md) | planned |
-| Asynchronous Advantage Actor-Critic (A3C) | [asynchronous-advantage-actor-critic](asynchronous-advantage-actor-critic/README.md) | planned |
-| Proximal Policy Optimization (PPO) | [proximal-policy-optimization](proximal-policy-optimization/README.md) | planned |
-| Deep Deterministic Policy Gradient (DDPG) | [deep-deterministic-policy-gradient](deep-deterministic-policy-gradient/README.md) | planned |
-| Monte Carlo Tree Search (MCTS) | [monte-carlo-tree-search](monte-carlo-tree-search/README.md) | planned |
+| Q-Learning | [q-learning](q-learning/README.md) | complete |
+| Deep Q-Networks (DQN) | [deep-q-networks](deep-q-networks/README.md) | complete |
+| SARSA | [sarsa](sarsa/README.md) | complete |
+| REINFORCE Policy Gradient | [reinforce-policy-gradient](reinforce-policy-gradient/README.md) | complete |
+| Advantage Actor-Critic (A2C) | [advantage-actor-critic](advantage-actor-critic/README.md) | complete |
+| Asynchronous Advantage Actor-Critic (A3C) | [asynchronous-advantage-actor-critic](asynchronous-advantage-actor-critic/README.md) | complete |
+| Proximal Policy Optimization (PPO) | [proximal-policy-optimization](proximal-policy-optimization/README.md) | complete |
+| Deep Deterministic Policy Gradient (DDPG) | [deep-deterministic-policy-gradient](deep-deterministic-policy-gradient/README.md) | complete |
+| Monte Carlo Tree Search (MCTS) | [monte-carlo-tree-search](monte-carlo-tree-search/README.md) | complete |
 | Dynamic Policy Optimization (DPO, terminology as written in original notes) | [dynamic-policy-optimization](dynamic-policy-optimization/README.md) | blocked |
 
 ## Learning and contribution scope

@@ -1,25 +1,17 @@
 schema_version: 1
 project: Algorithm Atlas
 development:
-  phase: Phase 18 — Association Rule Learning
-  phase_number: 18
+  phase: Phase 26 — Machine Learning Final Comprehensive Audit
+  phase_number: 26
   track: machine-learning
-  category: B6
-  scope: 'B6 Association Rule Learning only: Apriori, Eclat, FP-Growth and shared rule generation'
-  status: awaiting-review
-  active_batch: null
-  completed_batches:
-  - 1
-  - 2
-  - 3
-  batch_plan:
-  - - apriori
-  - - eclat
-  - - fp-growth
-  checkpoint: docs/association-rule-learning-checkpoints.md
-  approval: Owner explicitly approved latest Phase 17 review and authorized Phase 18 B6 only.
-    Three mining batches followed by mandatory category-local rule audit; new review pending.
-    No Phase 19/B7, commit, push, tag, release or publication.
+  category: null
+  scope: Audit and stabilization of B1–B13 only;no new canonical,scope or public API changes
+  status: in-progress
+  active_batch: 1
+  completed_batches: []
+  batch_plan: []
+  checkpoint: docs/ml-final-audit-checkpoints.md
+  approval: Owner explicitly approved Phase25 and authorized Phase26 final ML audit on2026-11-01 Asia/Dhaka. Final B Track/Phase26 owner approval pending. No C1,nextphase,commit,push,tag,release or publication.
   phase_records:
     '11':
       phase_number: 11
@@ -32,8 +24,7 @@ development:
       completion_report: docs/reviews/number-theory/NUMBER-THEORY-REVIEW-REPORT.md
       owner_approval: approved
       approved_on: 2026-10-28 Asia/Dhaka
-      approval_evidence: Owner explicitly confirmed all previously completed work owner-approved
-        in the B1 Regression completion-audit request.
+      approval_evidence: Owner explicitly confirmed all previously completed work owner-approved in the B1 Regression completion-audit request.
     '12':
       phase_number: 12
       category: A10
@@ -45,8 +36,7 @@ development:
       completion_report: docs/reviews/two-pointers-sliding-window/TWO-POINTERS-SLIDING-WINDOW-REVIEW-REPORT.md
       owner_approval: approved
       approved_on: 2026-10-28 Asia/Dhaka
-      approval_evidence: Owner explicitly confirmed all previously completed work owner-approved
-        in the B1 Regression completion-audit request.
+      approval_evidence: Owner explicitly confirmed all previously completed work owner-approved in the B1 Regression completion-audit request.
     '13':
       phase_number: 13
       category: B1
@@ -64,8 +54,7 @@ development:
         id: regression-completion-audit-2026-10-28
         owner_approval: approved
         approved_on: '2026-10-28T23:13:15.794542+06:00'
-        evidence: Owner explicitly approved previous work immediately after final B1 audit
-          package handoff.
+        evidence: Owner explicitly approved previous work immediately after final B1 audit package handoff.
         package_sha256: 5af6635b2dc87522993f193ff18e3c320e3d3218245e82b747cd4f903ff60588
     '14':
       phase_number: 14
@@ -80,8 +69,7 @@ development:
       - 4
       completion_report: docs/reviews/classification/CLASSIFICATION-REVIEW-REPORT.md
       approved_on: 2026-10-28 Asia/Dhaka
-      approval_evidence: Owner explicitly confirmed all previously completed work owner-approved
-        in the B1 Regression completion-audit request.
+      approval_evidence: Owner explicitly confirmed all previously completed work owner-approved in the B1 Regression completion-audit request.
     '15':
       phase_number: 15
       category: B3
@@ -95,8 +83,7 @@ development:
       - 4
       completion_report: docs/reviews/ensemble-methods/ENSEMBLE-METHODS-REVIEW-REPORT.md
       approved_on: 2026-10-30 Asia/Dhaka
-      approval_evidence: Explicit owner approval of previous work immediately after the verified
-        Phase 15 review handoff.
+      approval_evidence: Explicit owner approval of previous work immediately after the verified Phase 15 review handoff.
       approved_package_sha256: b5d6897ab609a425acdb403b169cd811eed1114f3a61d4670ac5e8fdb74d73e9
     '16':
       phase_number: 16
@@ -111,8 +98,7 @@ development:
       - 4
       completion_report: docs/reviews/clustering/CLUSTERING-REVIEW-REPORT.md
       approved_on: 2026-10-30 Asia/Dhaka
-      approval_evidence: 'Explicit owner statement after latest verified Phase 16 handoff:
-        Approved pervious work and review done.now follow this properly'
+      approval_evidence: 'Explicit owner statement after latest verified Phase 16 handoff: Approved pervious work and review done.now follow this properly'
       approved_package_sha256: df8bb7c03e463aed7ff6d342a3ffa77a5214b2dc1d1d25f06e632de985974e3a
     '17':
       phase_number: 17
@@ -127,29 +113,189 @@ development:
       - 3
       - 4
       approved_on: 2026-10-30 Asia/Dhaka
-      approval_evidence: 'Explicit owner statement after verified Phase 17 handoff: Approved
-        pervious work and review done.now follow this properly'
+      approval_evidence: 'Explicit owner statement after verified Phase 17 handoff: Approved pervious work and review done.now follow this properly'
       approved_package_sha256: 05cd7419f8e8fc938cf050996186125736df60acc84e6a3effe8f405d761b7b4
     '18':
       phase_number: 18
       category: B6
-      status: awaiting-review
+      status: owner-approved
       checkpoint: docs/association-rule-learning-checkpoints.md
       completion_report: docs/reviews/association-rule-learning/ASSOCIATION-RULE-LEARNING-REVIEW-REPORT.md
-      owner_approval: pending
+      owner_approval: approved
       completed_batches:
       - 1
       - 2
       - 3
       rule_generation_status: tested
+      approved_on: 2026-10-30 Asia/Dhaka
+      approval_evidence: 'Explicit owner statement after verified Phase18 handoff: Approved pervious work and review done.now follow this properly'
+      approved_package_sha256: 790b88f332662961f6d859e9a9ea72358d0472f5dc44fbb41b15025cec41d3d5
+    '19':
+      phase_number: 19
+      category: B7
+      status: owner-approved
+      checkpoint: docs/neural-networks-and-deep-learning-checkpoints.md
+      completion_report: docs/reviews/neural-networks-and-deep-learning/NEURAL-NETWORKS-AND-DEEP-LEARNING-REVIEW-REPORT.md
+      owner_approval: approved
+      completed_batches:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      approved_on: 2026-10-31 Asia/Dhaka
+      approval_evidence: 'Explicit owner statement after verified Phase19 handoff: Approved pervious work and review done.now follow this properly'
+      approved_package_sha256: 4f1aefda60f2f7ee229647a280e1d3ba2022a603ab4aba8329a475e96a5a4a77
+    '20':
+      phase_number: 20
+      category: B8
+      status: owner-approved
+      checkpoint: docs/reinforcement-learning-checkpoints.md
+      completion_report: docs/reviews/reinforcement-learning/REINFORCEMENT-LEARNING-REVIEW-REPORT.md
+      owner_approval: approved
+      completed_batches:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      blocked:
+      - dynamic-policy-optimization
+      dpo_specification_owner_approval: 'approved: remain blocked'
+      implementation_completion: 9 completed algorithms + 1 intentionally blocked algorithm
+      full_catalog_completion: false
+      approved_on: 2026-10-31 Asia/Dhaka
+      approval_evidence: 'Explicit owner statement after verified Phase20 handoff: Approved pervious work and review done.now follow this properly.'
+      approved_package_sha256: af35bca67293acb1d4ddf243397638175fc23289661fcbf789faddb995e0bf82
+    '21':
+      phase_number: 21
+      category: B9
+      status: owner-approved
+      checkpoint: docs/graph-learning-checkpoints.md
+      completion_report: docs/reviews/graph-learning/GRAPH-LEARNING-REVIEW-REPORT.md
+      owner_approval: approved
+      completed_batches:
+      - 1
+      - 2
+      - 3
+      approved_on: 2026-10-31 Asia/Dhaka
+      approval_evidence: 'Explicit owner statement after verified Phase21 handoff: Approved pervious work and review done.now follow this properly.'
+      approved_package_sha256: 5d09cb609c059c19f100bd2e2a487312377d4b37a9367282709eafd56e67b522
+    '22':
+      phase_number: 22
+      category: B10
+      status: owner-approved
+      checkpoint: docs/optimization-checkpoints.md
+      completion_report: docs/reviews/optimization/OPTIMIZATION-REVIEW-REPORT.md
+      owner_approval: approved
+      completed_batches:
+      - 1
+      - 2
+      - 3
+      - 4
+      approved_on: 2026-11-01 Asia/Dhaka
+      approval_evidence: Approved pervious work and review done.now follow this properly.
+      approved_package_sha256: 3ff26a60c6d30584522d5c902946a96fb8e66d01f00fd3bc90a57f42c7cec39d
+    '23':
+      phase_number: 23
+      category: B11
+      status: owner-approved
+      checkpoint: docs/time-series-checkpoints.md
+      completion_report: docs/reviews/time-series/TIME-SERIES-REVIEW-REPORT.md
+      owner_approval: approved
+      completed_batches:
+      - 1
+      - 2
+      - 3
+      - 4
+      approved_on: 2026-11-01 Asia/Dhaka
+      approval_evidence: Approved pervious work and review done.now follow this properly.
+      approved_package_sha256: a58f53ab107411876db7827d43ca034ae31598d6846991757286a495d8c6122e
+    '24':
+      phase_number: 24
+      category: B12
+      status: owner-approved
+      checkpoint: docs/anomaly-detection-checkpoints.md
+      completion_report: docs/reviews/anomaly-detection/ANOMALY-DETECTION-REVIEW-REPORT.md
+      owner_approval: approved
+      completed_batches:
+      - 1
+      - 2
+      - 3
+      approved_on: 2026-11-01 Asia/Dhaka
+      approval_evidence: Approved pervious work and review done.now follow this properly.
+      approved_package_sha256: 2f50fc57639736f2544f056a45fe1b94859ac5cc4aaae01dd488969b741754a6
+    '25':
+      phase_number: 25
+      category: B13
+      status: owner-approved
+      checkpoint: docs/natural-language-processing-checkpoints.md
+      completion_report: docs/reviews/natural-language-processing/NATURAL-LANGUAGE-PROCESSING-REVIEW-REPORT.md
+      owner_approval: approved
+      completed_batches:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      approved_on: 2026-11-01 Asia/Dhaka
+      approval_evidence: Approved pervious work and review done.now follow this properly.
+      approved_package_sha256: 8e13da6b2e4e318b248fcf17900d96527070c5678e725f3009ca71f5334b7270
+    '26':
+      phase_number: 26
+      track: machine-learning
+      mode: final-ml-audit
+      categories: &id001
+      - B1
+      - B2
+      - B3
+      - B4
+      - B5
+      - B6
+      - B7
+      - B8
+      - B9
+      - B10
+      - B11
+      - B12
+      - B13
+      status: in-progress
+      checkpoint: docs/ml-final-audit-checkpoints.md
+      completion_report: docs/reviews/machine-learning/ML-FINAL-COMPREHENSIVE-AUDIT-REPORT.md
+      owner_approval: pending
+      completed_workstreams: []
   current_review:
-    id: association-rule-learning-phase18
-    phase_number: 18
-    category: B6
-    status: awaiting-review
+    id: ml-final-comprehensive-audit-phase26
+    phase_number: 26
+    track: machine-learning
+    status: in-progress
     owner_approval: pending
-    completion_report: docs/reviews/association-rule-learning/ASSOCIATION-RULE-LEARNING-REVIEW-REPORT.md
-  completion_report: docs/reviews/association-rule-learning/ASSOCIATION-RULE-LEARNING-REVIEW-REPORT.md
+    completion_report: docs/reviews/machine-learning/ML-FINAL-COMPREHENSIVE-AUDIT-REPORT.md
+  completion_report: docs/reviews/machine-learning/ML-FINAL-COMPREHENSIVE-AUDIT-REPORT.md
+  blocker_reviews:
+    dynamic-policy-optimization: verified-blocked
+  dpo_specification_decision:
+    outcome: 3
+    decision: remain-blocked
+    owner_approval: approved
+    approved_on: 2026-10-31 Asia/Dhaka
+    report: docs/reviews/reinforcement-learning/DPO-SPECIFICATION-DECISION-REPORT.md
+    evidence: docs/reinforcement-learning-evidence/dpo-owner-approval-2026-10-31.json
+    canonical_id: dynamic-policy-optimization
+    canonical_path: machine-learning/reinforcement-learning/dynamic-policy-optimization
+    substitution_authorized: false
+  mode: final-ml-audit
+  audit_categories: *id001
+  audit_workstreams:
+  - Catalog and repository integrity
+  - Mathematical correctness
+  - Tests and independent oracles
+  - Documentation and learning quality
+  - CI,dependencies and infrastructure
+  - Security,performance and reproducibility
+  - Final regression and packaging
 categories:
   - id: "A1"
     name: "Sorting"
@@ -2689,292 +2835,318 @@ algorithms:
       initial canonical gate13 tests, final shared rule/brute-force/cross-miner audit passed.
       Exact integer support, decimal relative thresholds and bounded complete search. C++
       optional/absent; owner review pending.'
-  - id: "multilayer-perceptron"
-    name: "Multilayer Perceptron (MLP)"
-    category: "B7"
-    canonical_location: "machine-learning/deep-learning/multilayer-perceptron"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+  - id: multilayer-perceptron
+    name: Multilayer Perceptron (MLP)
+    category: B7
+    canonical_location: machine-learning/deep-learning/multilayer-perceptron
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "convolutional-neural-networks"
-      - "recurrent-neural-networks"
-    notes: "Study feedforward neural networks for small supervised learning tasks. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "convolutional-neural-networks"
-    name: "Convolutional Neural Networks (CNN)"
-    category: "B7"
-    canonical_location: "machine-learning/deep-learning/convolutional-neural-networks"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - convolutional-neural-networks
+    - recurrent-neural-networks
+    notes: 'Phase19 B7: genuine bounded NumPy architecture with explicit analytic gradients,
+      finite-difference/forward/oracle tests, full25-section lesson and executed example/CLI.
+      C++ optional/absent; new owner review pending. Shared canonical identities retained.'
+  - id: convolutional-neural-networks
+    name: Convolutional Neural Networks (CNN)
+    category: B7
+    canonical_location: machine-learning/deep-learning/convolutional-neural-networks
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "residual-networks"
-      - "yolo-object-detection"
-    notes: "Study learned spatial filters and feature hierarchies for image-like inputs. Shared canonical CNN topic for deep learning and computer vision. Future scope is a compact educational network with explicit architecture, training cost, dataset, and compute limits, rather than an unqualified production model. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "recurrent-neural-networks"
-    name: "Recurrent Neural Networks (RNN)"
-    category: "B7"
-    canonical_location: "machine-learning/deep-learning/recurrent-neural-networks"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - residual-networks
+    - yolo-object-detection
+    notes: 'Phase19 B7: genuine bounded NumPy architecture with explicit analytic gradients,
+      finite-difference/forward/oracle tests, full25-section lesson and executed example/CLI.
+      C++ optional/absent; new owner review pending. Shared canonical identities retained.'
+  - id: recurrent-neural-networks
+    name: Recurrent Neural Networks (RNN)
+    category: B7
+    canonical_location: machine-learning/deep-learning/recurrent-neural-networks
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "multilayer-perceptron"
-      - "convolutional-neural-networks"
-    notes: "Model sequential inputs through recurrent hidden states. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "long-short-term-memory"
-    name: "Long Short-Term Memory (LSTM)"
-    category: "B7"
-    canonical_location: "machine-learning/deep-learning/long-short-term-memory"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - multilayer-perceptron
+    - convolutional-neural-networks
+    notes: 'Phase19 B7: genuine bounded NumPy architecture with explicit analytic gradients,
+      finite-difference/forward/oracle tests, full25-section lesson and executed example/CLI.
+      C++ optional/absent; new owner review pending. Shared canonical identities retained.'
+  - id: long-short-term-memory
+    name: Long Short-Term Memory (LSTM)
+    category: B7
+    canonical_location: machine-learning/deep-learning/long-short-term-memory
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "multilayer-perceptron"
-      - "convolutional-neural-networks"
-    notes: "Study gated recurrent memory for sequential learning. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "gated-recurrent-units"
-    name: "Gated Recurrent Units (GRU)"
-    category: "B7"
-    canonical_location: "machine-learning/deep-learning/gated-recurrent-units"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - multilayer-perceptron
+    - convolutional-neural-networks
+    notes: 'Phase19 B7: genuine bounded NumPy architecture with explicit analytic gradients,
+      finite-difference/forward/oracle tests, full25-section lesson and executed example/CLI.
+      C++ optional/absent; new owner review pending. Shared canonical identities retained.'
+  - id: gated-recurrent-units
+    name: Gated Recurrent Units (GRU)
+    category: B7
+    canonical_location: machine-learning/deep-learning/gated-recurrent-units
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "multilayer-perceptron"
-      - "convolutional-neural-networks"
-    notes: "Study recurrent modeling with update and reset gates. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "transformers"
-    name: "Transformers"
-    category: "B7"
-    canonical_location: "machine-learning/deep-learning/transformers"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - multilayer-perceptron
+    - convolutional-neural-networks
+    notes: 'Phase19 B7: genuine bounded NumPy architecture with explicit analytic gradients,
+      finite-difference/forward/oracle tests, full25-section lesson and executed example/CLI.
+      C++ optional/absent; new owner review pending. Shared canonical identities retained.'
+  - id: transformers
+    name: Transformers
+    category: B7
+    canonical_location: machine-learning/deep-learning/transformers
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "multilayer-perceptron"
-      - "convolutional-neural-networks"
-    notes: "Study attention-based sequence modeling with a compact educational architecture. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "generative-adversarial-networks"
-    name: "Generative Adversarial Networks (GAN)"
-    category: "B7"
-    canonical_location: "machine-learning/deep-learning/generative-adversarial-networks"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - multilayer-perceptron
+    - convolutional-neural-networks
+    notes: 'Phase19 B7: genuine bounded NumPy architecture with explicit analytic gradients,
+      finite-difference/forward/oracle tests, full25-section lesson and executed example/CLI.
+      C++ optional/absent; new owner review pending. Shared canonical identities retained.'
+  - id: generative-adversarial-networks
+    name: Generative Adversarial Networks (GAN)
+    category: B7
+    canonical_location: machine-learning/deep-learning/generative-adversarial-networks
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "multilayer-perceptron"
-      - "convolutional-neural-networks"
-    notes: "Study joint generator and discriminator training on a small reproducible task. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "variational-autoencoders"
-    name: "Variational Autoencoders (VAE)"
-    category: "B7"
-    canonical_location: "machine-learning/deep-learning/variational-autoencoders"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - multilayer-perceptron
+    - convolutional-neural-networks
+    notes: 'Phase19 B7: genuine bounded NumPy architecture with explicit analytic gradients,
+      finite-difference/forward/oracle tests, full25-section lesson and executed example/CLI.
+      C++ optional/absent; new owner review pending. Shared canonical identities retained.'
+  - id: variational-autoencoders
+    name: Variational Autoencoders (VAE)
+    category: B7
+    canonical_location: machine-learning/deep-learning/variational-autoencoders
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "multilayer-perceptron"
-      - "convolutional-neural-networks"
-    notes: "Study latent-variable reconstruction with a variational objective. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "diffusion-models"
-    name: "Diffusion Models"
-    category: "B7"
-    canonical_location: "machine-learning/deep-learning/diffusion-models"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - multilayer-perceptron
+    - convolutional-neural-networks
+    notes: 'Phase19 B7: genuine bounded NumPy architecture with explicit analytic gradients,
+      finite-difference/forward/oracle tests, full25-section lesson and executed example/CLI.
+      C++ optional/absent; new owner review pending. Shared canonical identities retained.'
+  - id: diffusion-models
+    name: Diffusion Models
+    category: B7
+    canonical_location: machine-learning/deep-learning/diffusion-models
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "multilayer-perceptron"
-      - "convolutional-neural-networks"
-    notes: "Study noise-based generative modeling with a compact educational training setup. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "graph-neural-networks"
-    name: "Graph Neural Networks (GNN)"
-    category: "B7"
-    canonical_location: "machine-learning/deep-learning/graph-neural-networks"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - multilayer-perceptron
+    - convolutional-neural-networks
+    notes: 'Phase19 B7: genuine bounded NumPy architecture with explicit analytic gradients,
+      finite-difference/forward/oracle tests, full25-section lesson and executed example/CLI.
+      C++ optional/absent; new owner review pending. Shared canonical identities retained.'
+  - id: graph-neural-networks
+    name: Graph Neural Networks (GNN)
+    category: B7
+    canonical_location: machine-learning/deep-learning/graph-neural-networks
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "graph-convolutional-networks"
-      - "node2vec"
-    notes: "Study message-passing representations on graph-structured inputs. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "residual-networks"
-    name: "Residual Networks (ResNet)"
-    category: "B7"
-    canonical_location: "machine-learning/deep-learning/residual-networks"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - graph-convolutional-networks
+    - node2vec
+    notes: 'Phase19 B7: genuine bounded NumPy architecture with explicit analytic gradients,
+      finite-difference/forward/oracle tests, full25-section lesson and executed example/CLI.
+      C++ optional/absent; new owner review pending. Shared canonical identities retained.'
+  - id: residual-networks
+    name: Residual Networks (ResNet)
+    category: B7
+    canonical_location: machine-learning/deep-learning/residual-networks
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "multilayer-perceptron"
-      - "convolutional-neural-networks"
-    notes: "Study skip connections for training layered neural networks. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "denoising-autoencoders"
-    name: "Denoising Autoencoders"
-    category: "B7"
-    canonical_location: "machine-learning/deep-learning/denoising-autoencoders"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - multilayer-perceptron
+    - convolutional-neural-networks
+    notes: 'Phase19 B7: genuine bounded NumPy architecture with explicit analytic gradients,
+      finite-difference/forward/oracle tests, full25-section lesson and executed example/CLI.
+      C++ optional/absent; new owner review pending. Shared canonical identities retained.'
+  - id: denoising-autoencoders
+    name: Denoising Autoencoders
+    category: B7
+    canonical_location: machine-learning/deep-learning/denoising-autoencoders
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "multilayer-perceptron"
-      - "convolutional-neural-networks"
-    notes: "Learn reconstruction of clean inputs from corrupted observations. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "sparse-autoencoders"
-    name: "Sparse Autoencoders"
-    category: "B7"
-    canonical_location: "machine-learning/deep-learning/sparse-autoencoders"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - multilayer-perceptron
+    - convolutional-neural-networks
+    notes: 'Phase19 B7: genuine bounded NumPy architecture with explicit analytic gradients,
+      finite-difference/forward/oracle tests, full25-section lesson and executed example/CLI.
+      C++ optional/absent; new owner review pending. Shared canonical identities retained.'
+  - id: sparse-autoencoders
+    name: Sparse Autoencoders
+    category: B7
+    canonical_location: machine-learning/deep-learning/sparse-autoencoders
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "multilayer-perceptron"
-      - "convolutional-neural-networks"
-    notes: "Learn latent representations under an explicit sparsity constraint. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    - multilayer-perceptron
+    - convolutional-neural-networks
+    notes: 'Phase19 B7: genuine bounded NumPy architecture with explicit analytic gradients,
+      finite-difference/forward/oracle tests, full25-section lesson and executed example/CLI.
+      C++ optional/absent; new owner review pending. Shared canonical identities retained.'
   - id: "q-learning"
     name: "Q-Learning"
     category: "B8"
     canonical_location: "machine-learning/reinforcement-learning/q-learning"
     difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: implemented
+    python_status: tested
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: tested
     related_algorithms:
       - "deep-q-networks"
       - "sarsa"
-    notes: "Learn action values through off-policy temporal-difference updates. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase20 B8: bounded genuine NumPy/stdlib implementation, independent mathematical and numerical tests, executed example and exact25-section lesson; owner review pending."
   - id: "deep-q-networks"
     name: "Deep Q-Networks (DQN)"
     category: "B8"
     canonical_location: "machine-learning/reinforcement-learning/deep-q-networks"
     difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: implemented
+    python_status: tested
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: tested
     related_algorithms:
       - "q-learning"
       - "sarsa"
-    notes: "Approximate action values with a neural network on a small environment. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase20 B8: bounded genuine NumPy/stdlib implementation, independent mathematical and numerical tests, executed example and exact25-section lesson; owner review pending."
   - id: "sarsa"
     name: "SARSA"
     category: "B8"
     canonical_location: "machine-learning/reinforcement-learning/sarsa"
     difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: implemented
+    python_status: tested
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: tested
     related_algorithms:
       - "q-learning"
       - "deep-q-networks"
-    notes: "Learn action values through on-policy temporal-difference updates. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase20 B8: bounded genuine NumPy/stdlib implementation, independent mathematical and numerical tests, executed example and exact25-section lesson; owner review pending."
   - id: "reinforce-policy-gradient"
     name: "REINFORCE Policy Gradient"
     category: "B8"
     canonical_location: "machine-learning/reinforcement-learning/reinforce-policy-gradient"
     difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: implemented
+    python_status: tested
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: tested
     related_algorithms:
       - "q-learning"
       - "deep-q-networks"
-    notes: "Estimate policy gradients from sampled episode returns. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase20 B8: bounded genuine NumPy/stdlib implementation, independent mathematical and numerical tests, executed example and exact25-section lesson; owner review pending."
   - id: "advantage-actor-critic"
     name: "Advantage Actor-Critic (A2C)"
     category: "B8"
     canonical_location: "machine-learning/reinforcement-learning/advantage-actor-critic"
     difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: implemented
+    python_status: tested
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: tested
     related_algorithms:
       - "q-learning"
       - "deep-q-networks"
-    notes: "Combine a policy with a value estimate and advantage-based updates. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase20 B8: bounded genuine NumPy/stdlib implementation, independent mathematical and numerical tests, executed example and exact25-section lesson; owner review pending."
   - id: "asynchronous-advantage-actor-critic"
     name: "Asynchronous Advantage Actor-Critic (A3C)"
     category: "B8"
     canonical_location: "machine-learning/reinforcement-learning/asynchronous-advantage-actor-critic"
     difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: implemented
+    python_status: tested
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: tested
     related_algorithms:
       - "q-learning"
       - "deep-q-networks"
-    notes: "Study asynchronous actor-critic training and its reproducibility limits. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase20 B8: bounded genuine NumPy/stdlib implementation, independent mathematical and numerical tests, executed example and exact25-section lesson; owner review pending."
   - id: "proximal-policy-optimization"
     name: "Proximal Policy Optimization (PPO)"
     category: "B8"
     canonical_location: "machine-learning/reinforcement-learning/proximal-policy-optimization"
     difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: implemented
+    python_status: tested
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: tested
     related_algorithms:
       - "q-learning"
       - "deep-q-networks"
-    notes: "Study constrained policy updates through a documented surrogate objective. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase20 B8: bounded genuine NumPy/stdlib implementation, independent mathematical and numerical tests, executed example and exact25-section lesson; owner review pending."
   - id: "deep-deterministic-policy-gradient"
     name: "Deep Deterministic Policy Gradient (DDPG)"
     category: "B8"
     canonical_location: "machine-learning/reinforcement-learning/deep-deterministic-policy-gradient"
     difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: implemented
+    python_status: tested
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: tested
     related_algorithms:
       - "q-learning"
       - "deep-q-networks"
-    notes: "Study deterministic actor-critic learning for continuous actions. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase20 B8: bounded genuine NumPy/stdlib implementation, independent mathematical and numerical tests, executed example and exact25-section lesson; owner review pending."
   - id: "monte-carlo-tree-search"
     name: "Monte Carlo Tree Search (MCTS)"
     category: "B8"
     canonical_location: "machine-learning/reinforcement-learning/monte-carlo-tree-search"
     difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: implemented
+    python_status: tested
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: tested
     related_algorithms:
       - "q-learning"
       - "deep-q-networks"
-    notes: "Plan through sampled search-tree trajectories and outcome estimates. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase20 B8: bounded genuine NumPy/stdlib implementation, independent mathematical and numerical tests, executed example and exact25-section lesson; owner review pending."
   - id: "dynamic-policy-optimization"
     name: "Dynamic Policy Optimization (DPO; terminology unresolved)"
     category: "B8"
@@ -2988,435 +3160,479 @@ algorithms:
       - "proximal-policy-optimization"
       - "reinforce-policy-gradient"
     notes: "Reserve the exact requested topic until its intended reference and meaning are clarified. Blocked: the original syllabus says \"Dynamic Policy Optimization (DPO)\" but provides no defining paper, mathematical objective, or intended variant. The maintainer must supply the intended reference or corrected term before documentation, code, or tests can be specified. Do not substitute Direct Preference Optimization. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "pagerank"
-    name: "PageRank"
-    category: "B9"
-    canonical_location: "machine-learning/graph-learning/pagerank"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+  - id: pagerank
+    name: PageRank
+    category: B9
+    canonical_location: machine-learning/graph-learning/pagerank
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "node2vec"
-      - "graph-convolutional-networks"
-    notes: "Estimate graph-node importance from a random-walk model. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "node2vec"
-    name: "Node2Vec"
-    category: "B9"
-    canonical_location: "machine-learning/graph-learning/node2vec"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - node2vec
+    - graph-convolutional-networks
+    notes: Estimate graph-node importance from a random-walk model. Phase21 NumPy implementation,
+      independent mathematical tests and exact25-section executed lesson; optional C++
+      absent. Personalized weighted random-surfer ranking with dangling-row mass and
+      residual diagnostics.
+  - id: node2vec
+    name: Node2Vec
+    category: B9
+    canonical_location: machine-learning/graph-learning/node2vec
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "pagerank"
-      - "graph-convolutional-networks"
-    notes: "Learn node representations from biased graph random walks. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "graph-convolutional-networks"
-    name: "Graph Convolutional Networks (GCN)"
-    category: "B9"
-    canonical_location: "machine-learning/graph-learning/graph-convolutional-networks"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - pagerank
+    - graph-convolutional-networks
+    notes: Learn node representations from biased graph random walks. Phase21 NumPy
+      implementation, independent mathematical tests and exact25-section executed lesson;
+      optional C++ absent. Weighted undirected second-order walks and fixed-sample full-batch
+      SGNS; no production-parity claim.
+  - id: graph-convolutional-networks
+    name: Graph Convolutional Networks (GCN)
+    category: B9
+    canonical_location: machine-learning/graph-learning/graph-convolutional-networks
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "graph-neural-networks"
-      - "convolutional-neural-networks"
-    notes: "Study neighborhood aggregation through a graph-convolution architecture. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "batch-gradient-descent"
-    name: "Batch Gradient Descent"
-    category: "B10"
-    canonical_location: "machine-learning/optimization/batch-gradient-descent"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - graph-neural-networks
+    - convolutional-neural-networks
+    notes: Study neighborhood aggregation through a graph-convolution architecture.
+      Phase21 NumPy implementation, independent mathematical tests and exact25-section
+      executed lesson; optional C++ absent. Masked multiclass tanh GCN; shared B7 normalization
+      preserved, classifier/backprop local.
+  - id: batch-gradient-descent
+    name: Batch Gradient Descent
+    category: B10
+    canonical_location: machine-learning/optimization/batch-gradient-descent
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "stochastic-gradient-descent"
-      - "mini-batch-gradient-descent"
-    notes: "Optimize a differentiable objective using gradients over the full dataset. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "stochastic-gradient-descent"
-    name: "Stochastic Gradient Descent"
-    category: "B10"
-    canonical_location: "machine-learning/optimization/stochastic-gradient-descent"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - stochastic-gradient-descent
+    - mini-batch-gradient-descent
+    notes: Optimize a differentiable objective using gradients over the full dataset.
+      Phase22 from-scratch NumPy implementation,exact update and independent mathematical
+      tests,executed example and25-section lesson; optional C++ absent. Exact educational
+      variant and limits are documented.
+  - id: stochastic-gradient-descent
+    name: Stochastic Gradient Descent
+    category: B10
+    canonical_location: machine-learning/optimization/stochastic-gradient-descent
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "batch-gradient-descent"
-      - "mini-batch-gradient-descent"
-    notes: "Optimize an objective through individual sampled observations. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "mini-batch-gradient-descent"
-    name: "Mini-Batch Gradient Descent"
-    category: "B10"
-    canonical_location: "machine-learning/optimization/mini-batch-gradient-descent"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - batch-gradient-descent
+    - mini-batch-gradient-descent
+    notes: Optimize an objective through individual sampled observations. Phase22 from-scratch
+      NumPy implementation,exact update and independent mathematical tests,executed
+      example and25-section lesson; optional C++ absent. Exact educational variant and
+      limits are documented.
+  - id: mini-batch-gradient-descent
+    name: Mini-Batch Gradient Descent
+    category: B10
+    canonical_location: machine-learning/optimization/mini-batch-gradient-descent
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "batch-gradient-descent"
-      - "stochastic-gradient-descent"
-    notes: "Optimize an objective through sampled groups of observations. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "momentum"
-    name: "Momentum"
-    category: "B10"
-    canonical_location: "machine-learning/optimization/momentum"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - batch-gradient-descent
+    - stochastic-gradient-descent
+    notes: Optimize an objective through sampled groups of observations. Phase22 from-scratch
+      NumPy implementation,exact update and independent mathematical tests,executed
+      example and25-section lesson; optional C++ absent. Exact educational variant and
+      limits are documented.
+  - id: momentum
+    name: Momentum
+    category: B10
+    canonical_location: machine-learning/optimization/momentum
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "batch-gradient-descent"
-      - "stochastic-gradient-descent"
-    notes: "Smooth optimization updates with a velocity state. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "rmsprop"
-    name: "RMSProp"
-    category: "B10"
-    canonical_location: "machine-learning/optimization/rmsprop"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - batch-gradient-descent
+    - stochastic-gradient-descent
+    notes: Smooth optimization updates with a velocity state. Phase22 from-scratch NumPy
+      implementation,exact update and independent mathematical tests,executed example
+      and25-section lesson; optional C++ absent. Exact educational variant and limits
+      are documented.
+  - id: rmsprop
+    name: RMSProp
+    category: B10
+    canonical_location: machine-learning/optimization/rmsprop
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "batch-gradient-descent"
-      - "stochastic-gradient-descent"
-    notes: "Adapt learning scales using running squared-gradient estimates. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "adam"
-    name: "Adam"
-    category: "B10"
-    canonical_location: "machine-learning/optimization/adam"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - batch-gradient-descent
+    - stochastic-gradient-descent
+    notes: Adapt learning scales using running squared-gradient estimates. Phase22 from-scratch
+      NumPy implementation,exact update and independent mathematical tests,executed
+      example and25-section lesson; optional C++ absent. Exact educational variant and
+      limits are documented.
+  - id: adam
+    name: Adam
+    category: B10
+    canonical_location: machine-learning/optimization/adam
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "batch-gradient-descent"
-      - "stochastic-gradient-descent"
-    notes: "Combine first and second gradient-moment estimates with bias correction. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "adamw"
-    name: "AdamW"
-    category: "B10"
-    canonical_location: "machine-learning/optimization/adamw"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - batch-gradient-descent
+    - stochastic-gradient-descent
+    notes: Combine first and second gradient-moment estimates with bias correction.
+      Phase22 from-scratch NumPy implementation,exact update and independent mathematical
+      tests,executed example and25-section lesson; optional C++ absent. Exact educational
+      variant and limits are documented.
+  - id: adamw
+    name: AdamW
+    category: B10
+    canonical_location: machine-learning/optimization/adamw
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "batch-gradient-descent"
-      - "stochastic-gradient-descent"
-    notes: "Study adaptive optimization with decoupled weight decay. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "l-bfgs"
-    name: "L-BFGS"
-    category: "B10"
-    canonical_location: "machine-learning/optimization/l-bfgs"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - batch-gradient-descent
+    - stochastic-gradient-descent
+    notes: Study adaptive optimization with decoupled weight decay. Phase22 from-scratch
+      NumPy implementation,exact update and independent mathematical tests,executed
+      example and25-section lesson; optional C++ absent. Exact educational variant and
+      limits are documented.
+  - id: l-bfgs
+    name: L-BFGS
+    category: B10
+    canonical_location: machine-learning/optimization/l-bfgs
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "batch-gradient-descent"
-      - "stochastic-gradient-descent"
-    notes: "Approximate curvature with a limited-memory quasi-Newton method. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "genetic-algorithms"
-    name: "Genetic Algorithms"
-    category: "B10"
-    canonical_location: "machine-learning/optimization/genetic-algorithms"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - batch-gradient-descent
+    - stochastic-gradient-descent
+    notes: Approximate curvature with a limited-memory quasi-Newton method. Phase22
+      from-scratch NumPy implementation,exact update and independent mathematical tests,executed
+      example and25-section lesson; optional C++ absent. Exact educational variant and
+      limits are documented.
+  - id: genetic-algorithms
+    name: Genetic Algorithms
+    category: B10
+    canonical_location: machine-learning/optimization/genetic-algorithms
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "simulated-annealing"
-      - "particle-swarm-optimization"
-    notes: "Search candidate populations through selection, variation, and an explicit fitness objective. One canonical population-search foundation serves optimization, local search, and global optimization. Future examples must make representation, fitness, stopping rules, and random seed explicit. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
-  - id: "simulated-annealing"
-    name: "Simulated Annealing"
-    category: "B10"
-    canonical_location: "machine-learning/optimization/simulated-annealing"
-    difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    - simulated-annealing
+    - particle-swarm-optimization
+    notes: Search candidate populations through selection, variation, and an explicit
+      fitness objective. One canonical population-search foundation serves optimization,
+      local search, and global optimization. Future examples must make representation,
+      fitness, stopping rules, and random seed explicit. Phase22 from-scratch NumPy
+      implementation,exact update and independent mathematical tests,executed example
+      and25-section lesson; optional C++ absent. Exact educational variant and limits
+      are documented.
+  - id: simulated-annealing
+    name: Simulated Annealing
+    category: B10
+    canonical_location: machine-learning/optimization/simulated-annealing
+    difficulty: advanced
+    documentation_status: implemented
+    python_status: tested
+    cpp_status: planned
+    test_status: tested
     related_algorithms:
-      - "genetic-algorithms"
-      - "stochastic-hill-climbing"
-    notes: "Explore candidate states with temperature-controlled acceptance of worsening moves. One canonical temperature-based local optimization foundation serves optimization, local search, and global optimization. Specify neighborhood, schedule, termination, and reproducible randomness. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    - genetic-algorithms
+    - stochastic-hill-climbing
+    notes: Explore candidate states with temperature-controlled acceptance of worsening
+      moves. One canonical temperature-based local optimization foundation serves optimization,
+      local search, and global optimization. Specify neighborhood, schedule, termination,
+      and reproducible randomness. Phase22 from-scratch NumPy implementation,exact update
+      and independent mathematical tests,executed example and25-section lesson; optional
+      C++ absent. Exact educational variant and limits are documented.
   - id: "arima"
     name: "ARIMA"
     category: "B11"
     canonical_location: "machine-learning/time-series/arima"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: implemented
+    python_status: tested
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: tested
     related_algorithms:
       - "sarima"
       - "exponential-smoothing"
-    notes: "Model a time series through differencing, autoregression, and moving-average components. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase23 genuine conditional-innovation CSS with analytic gradients and unchanged B10 L-BFGS;bounded sufficient stability boxes;Python/NumPy tested;ML C++ optional."
   - id: "sarima"
     name: "SARIMA"
     category: "B11"
     canonical_location: "machine-learning/time-series/sarima"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: implemented
+    python_status: tested
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: tested
     related_algorithms:
       - "arima"
       - "exponential-smoothing"
-    notes: "Extend an ARIMA model with explicit seasonal structure. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase23 full multiplicative seasonal/nonseasonal AR and MA polynomials,conditional innovations and inverse differences;canonical ARIMA/B10 reuse;Python/NumPy tested;ML C++ optional."
   - id: "exponential-smoothing"
     name: "Exponential Smoothing"
     category: "B11"
     canonical_location: "machine-learning/time-series/exponential-smoothing"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: implemented
+    python_status: tested
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: tested
     related_algorithms:
       - "arima"
       - "sarima"
-    notes: "Forecast a series with recursively weighted historical estimates. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase23 fixed-alpha SES with owned level recursion and chronological forecasts;Python/NumPy tested;ML C++ optional."
   - id: "holt-winters"
     name: "Holt-Winters"
     category: "B11"
     canonical_location: "machine-learning/time-series/holt-winters"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: implemented
+    python_status: tested
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: tested
     related_algorithms:
       - "arima"
       - "sarima"
-    notes: "Forecast level, trend, and seasonality with an exponential-smoothing variant. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase23 genuine additive level/trend/seasonal recursions with explicit training-only two-cycle initialization;Python/NumPy tested;ML C++ optional."
   - id: "prophet"
     name: "Prophet"
     category: "B11"
     canonical_location: "machine-learning/time-series/prophet"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: implemented
+    python_status: tested
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: tested
     related_algorithms:
       - "arima"
       - "sarima"
-    notes: "Study an additive forecasting framework with documented trend and seasonal assumptions. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase23 declared piecewise-linear/Fourier educational subset with Gaussian ridge priors and SVD;not full Prophet parity or official Laplace prior inference;Python/NumPy tested;ML C++ optional."
   - id: "hidden-markov-models"
     name: "Hidden Markov Models (HMM)"
     category: "B11"
     canonical_location: "machine-learning/time-series/hidden-markov-models"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: implemented
+    python_status: tested
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: tested
     related_algorithms:
       - "hidden-markov-models-pos-tagging"
       - "arima"
-    notes: "Model latent state sequences and observed emissions with explicit transition assumptions. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase23 categorical HMM with log forward/backward,posterior,Viterbi and independent-sequence ML Baum-Welch;Python/NumPy tested;ML C++ optional."
   - id: "isolation-forest"
     name: "Isolation Forest"
     category: "B12"
     canonical_location: "machine-learning/anomaly-detection/isolation-forest"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: implemented
+    python_status: tested
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: tested
     related_algorithms:
       - "one-class-svm"
       - "local-outlier-factor"
-    notes: "Detect unusual observations through randomized isolation depths. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase24 genuine randomized isolation trees with exact harmonic leaf correction,training quantile calibration and independent oracles;Python/NumPy tested;ML C++ optional."
   - id: "one-class-svm"
     name: "One-Class SVM"
     category: "B12"
     canonical_location: "machine-learning/anomaly-detection/one-class-svm"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: implemented
+    python_status: tested
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: tested
     related_algorithms:
       - "isolation-forest"
       - "local-outlier-factor"
-    notes: "Estimate a boundary around reference observations for novelty detection. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase24 RBF constrained one-class dual with capped-simplex projection,feasible pair optimization,KKT/rho/primal-dual certificates and independent references;Python/NumPy tested;ML C++ optional."
   - id: "local-outlier-factor"
     name: "Local Outlier Factor (LOF)"
     category: "B12"
     canonical_location: "machine-learning/anomaly-detection/local-outlier-factor"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: implemented
+    python_status: tested
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: tested
     related_algorithms:
       - "isolation-forest"
       - "one-class-svm"
-    notes: "Compare local neighborhood densities to identify unusual observations. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase24 true tie-inclusive Euclidean training LOF with log density ratios and declared duplicate/infinite-density extension;no novelty API;Python/NumPy tested;ML C++ optional."
   - id: "bag-of-words"
     name: "Bag of Words"
     category: "B13"
     canonical_location: "machine-learning/natural-language-processing/bag-of-words"
     difficulty: "beginner"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "tf-idf"
       - "word2vec"
-    notes: "Represent documents through vocabulary-based token counts. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase25 deterministic Unicode training vocabulary and raw/binary document-term counts;unknowns ignored,empty rows/columns explicit;Python/NumPy tested;ML C++ optional."
   - id: "tf-idf"
     name: "TF-IDF"
     category: "B13"
     canonical_location: "machine-learning/natural-language-processing/tf-idf"
     difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "bag-of-words"
       - "word2vec"
-    notes: "Weight document terms using within-document frequency and corpus rarity. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase25 canonical BoW reuse,raw TF,smoothed log IDF and optional L2;training-only corpus statistics and independent hand/reference oracles;Python/NumPy tested;ML C++ optional."
   - id: "word2vec"
     name: "Word2Vec"
     category: "B13"
     canonical_location: "machine-learning/natural-language-processing/word2vec"
     difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "bag-of-words"
       - "tf-idf"
-    notes: "Learn word representations from local context prediction. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase25 genuine sentence-local SGNS with fixed count^.75 empirical negative samples,trained input/output vectors and complete implemented gradients;bounded toy training;ML C++ optional."
   - id: "glove"
     name: "GloVe"
     category: "B13"
     canonical_location: "machine-learning/natural-language-processing/glove"
     difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "bag-of-words"
       - "tf-idf"
-    notes: "Learn word representations from corpus co-occurrence statistics. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase25 genuine inverse-distance positive cooccurrences and weighted log-bilinear squared loss;both embedding/bias families trained and finite-difference verified;ML C++ optional."
   - id: "bert"
     name: "BERT Architecture / Usage"
     category: "B13"
     canonical_location: "machine-learning/natural-language-processing/bert"
     difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "bag-of-words"
       - "tf-idf"
-    notes: "Study encoder-only Transformer representations and compact masked-language-model examples. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase25 compact bidirectional padding-aware BERT-style MLM encoder;embedding/attention/FFN backbone frozen at initialization,only vocabulary head trained;no pretrained/full end-to-end claim;ML C++ optional."
   - id: "gpt"
     name: "GPT Architecture / Usage"
     category: "B13"
     canonical_location: "machine-learning/natural-language-processing/gpt"
     difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "bag-of-words"
       - "tf-idf"
-    notes: "Study decoder-only autoregressive Transformer architecture and compact usage examples. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase25 compact causal decoder-only Transformer,shifted next-token loss and bounded seeded generation;backbone frozen,only vocabulary head trained;no pretrained/full end-to-end claim;ML C++ optional."
   - id: "hidden-markov-models-pos-tagging"
     name: "Hidden Markov Models for POS Tagging"
     category: "B13"
     canonical_location: "machine-learning/natural-language-processing/hidden-markov-models-pos-tagging"
     difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "hidden-markov-models"
       - "conditional-random-fields"
-    notes: "Apply hidden Markov sequence modeling to part-of-speech tagging with explicit tag and emission models. Meaningful application-specific variant of Hidden Markov Models: the future treatment must specify text preprocessing, tag vocabulary, sequence decoding, unknown words, and evaluation. Share mathematical prerequisites with the general HMM topic without copying its implementation. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase25 supervised smoothed POS counts and training-only word/tag vocabularies;unchanged B11 categorical HMM inference reused;exhaustive path oracle;ML C++ optional."
   - id: "named-entity-recognition"
     name: "Named Entity Recognition"
     category: "B13"
     canonical_location: "machine-learning/natural-language-processing/named-entity-recognition"
     difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "bag-of-words"
       - "tf-idf"
-    notes: "Study a clearly specified sequence-labeling approach for identifying named entities. This syllabus item is a task rather than a single uniquely defined algorithm. Future documentation must choose and clearly label a compact sequence-labeling baseline, dataset, entity scheme, and evaluation; do not present a model family as one universal algorithm. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase25 explicitly selected BIO feature-based NER baseline reusing canonical CRF;strict legal paths,training-only features,typed half-open spans and exact-span metrics;not a universal NER algorithm;ML C++ optional."
   - id: "conditional-random-fields"
     name: "Conditional Random Fields (CRF)"
     category: "B13"
     canonical_location: "machine-learning/natural-language-processing/conditional-random-fields"
     difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "bag-of-words"
       - "tf-idf"
-    notes: "Model structured label dependencies with a conditional sequence objective. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase25 genuine globally normalized dense-feature linear-chain CRF;forward/backward,partition,marginals,Viterbi,all four parameter gradients and bounded optimization verified;ML C++ optional."
   - id: "n-gram-language-models"
     name: "N-Gram Language Models"
     category: "B13"
     canonical_location: "machine-learning/natural-language-processing/n-gram-language-models"
     difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "bag-of-words"
       - "tf-idf"
-    notes: "Estimate token probabilities from bounded-length context counts. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase25 fixed-order add-k language model with training-only vocabulary,explicit UNK/BOS/EOS,normalized conditionals,EOS-consistent log likelihood/perplexity and bounded seeded generation;ML C++ optional."
   - id: "cyk-parsing"
     name: "CYK Parsing Algorithm"
     category: "B13"
     canonical_location: "machine-learning/natural-language-processing/cyk-parsing"
     difficulty: "advanced"
-    documentation_status: "planned"
-    python_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
     cpp_status: "planned"
-    test_status: "planned"
+    test_status: "tested"
     related_algorithms:
       - "bag-of-words"
       - "tf-idf"
-    notes: "Parse sequences with a context-free grammar in Chomsky normal form. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Phase25 genuine CNF substring CYK with deterministic tree backpointers,start-only epsilon policy and independent bounded leftmost derivation oracle;no arbitrary CFG conversion;ML C++ optional."
   - id: "depth-limited-search"
     name: "Depth-Limited Search"
     category: "C1"

@@ -1,0 +1,401 @@
+[
+  {
+    "id": "multilayer-perceptron",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "loss_initial": 0.7064654793541177,
+      "loss_final": 0.0032179842591330116,
+      "optimization_status": "fixed-budget-completed",
+      "prediction": [
+        0,
+        1,
+        1,
+        0
+      ]
+    }
+  },
+  {
+    "id": "vanilla-autoencoders",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "embedding": [
+        [
+          0.9204819714528826
+        ],
+        [
+          0.0
+        ],
+        [
+          -0.9204819714528826
+        ]
+      ],
+      "optimization_status": "gradient-tolerance"
+    }
+  },
+  {
+    "id": "convolutional-neural-networks",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "loss_initial": 1.0616779973194008,
+      "loss_final": 0.02093795823310415,
+      "optimization_status": "fixed-budget-completed",
+      "prediction": [
+        [
+          -0.09299128285455932
+        ],
+        [
+          0.1342094758318846
+        ],
+        [
+          0.3599010619671436
+        ],
+        [
+          0.653681340670251
+        ]
+      ]
+    }
+  },
+  {
+    "id": "residual-networks",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "loss_initial": 6.725661119716871,
+      "loss_final": 0.009262194597573329,
+      "optimization_status": "fixed-budget-completed",
+      "prediction": [
+        [
+          -1.4579416894060766
+        ],
+        [
+          -0.42460268529151485
+        ],
+        [
+          0.5309087109466318
+        ],
+        [
+          1.4517787867708603
+        ]
+      ]
+    }
+  },
+  {
+    "id": "recurrent-neural-networks",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "loss_initial": 0.1678538357949367,
+      "loss_final": 0.00046930482258646013,
+      "optimization_status": "fixed-budget-completed",
+      "prediction": [
+        [
+          -0.5794483724893962
+        ],
+        [
+          -0.11950665829112889
+        ],
+        [
+          0.37921207189341777
+        ],
+        [
+          0.624150923573983
+        ]
+      ]
+    }
+  },
+  {
+    "id": "long-short-term-memory",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "loss_initial": 0.3157256722622744,
+      "loss_final": 0.0029670930640217945,
+      "optimization_status": "fixed-budget-completed",
+      "prediction": [
+        [
+          -0.5248324521205328
+        ],
+        [
+          -0.08865467167693221
+        ],
+        [
+          0.3836609581402263
+        ],
+        [
+          0.5316748669535045
+        ]
+      ]
+    }
+  },
+  {
+    "id": "gated-recurrent-units",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "loss_initial": 0.31359343879124046,
+      "loss_final": 0.08837074825451544,
+      "optimization_status": "fixed-budget-completed",
+      "prediction": [
+        [
+          -0.17121830182030673
+        ],
+        [
+          0.02985364249025943
+        ],
+        [
+          0.23396585433124947
+        ],
+        [
+          0.26801670860826876
+        ]
+      ]
+    }
+  },
+  {
+    "id": "transformers",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "loss_initial": 0.7553779662224055,
+      "loss_final": 0.044712721898246405,
+      "optimization_status": "fixed-budget-completed",
+      "prediction": [
+        [
+          0.142759138584077
+        ],
+        [
+          0.10052750523364981
+        ],
+        [
+          0.07388194297737347
+        ],
+        [
+          0.10492421339161787
+        ]
+      ]
+    }
+  },
+  {
+    "id": "denoising-autoencoders",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "loss_initial": 0.4725115064980791,
+      "loss_final": 0.006216973351496903,
+      "optimization_status": "fixed-budget-completed",
+      "embedding": [
+        [
+          0.609887156596086
+        ],
+        [
+          0.21387235939421964
+        ],
+        [
+          -0.2012869255062744
+        ],
+        [
+          -0.6015606655721628
+        ]
+      ],
+      "reconstruction": [
+        [
+          -0.9965489582461585,
+          -0.5205428085211561
+        ],
+        [
+          -0.35469850828095695,
+          -0.18529007174773862
+        ],
+        [
+          0.31818082780299684,
+          0.16616974097445528
+        ],
+        [
+          0.9669340612322597,
+          0.5050279547679579
+        ]
+      ]
+    }
+  },
+  {
+    "id": "sparse-autoencoders",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "loss_initial": 0.4130213202577581,
+      "loss_final": 0.017961998546944653,
+      "optimization_status": "fixed-budget-completed",
+      "embedding": [
+        [
+          0.5176666696381395
+        ],
+        [
+          0.17026939375635897
+        ],
+        [
+          -0.17026939375635897
+        ],
+        [
+          -0.5176666696381395
+        ]
+      ],
+      "reconstruction": [
+        [
+          -0.9512861666835312,
+          -0.5091760131927574
+        ],
+        [
+          -0.3128942394596113,
+          -0.1674766720874918
+        ],
+        [
+          0.3128942394596113,
+          0.1674766720874918
+        ],
+        [
+          0.9512861666835312,
+          0.5091760131927574
+        ]
+      ]
+    }
+  },
+  {
+    "id": "variational-autoencoders",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "loss_initial": 0.4755841637547126,
+      "loss_final": 0.35546400959531405,
+      "optimization_status": "fixed-budget-completed",
+      "embedding": [
+        [
+          0.057987481369833276
+        ],
+        [
+          0.017550200523888202
+        ],
+        [
+          -0.01711032591549329
+        ],
+        [
+          -0.057547606761438365
+        ]
+      ],
+      "reconstruction": [
+        [
+          -0.005105388607796911,
+          0.009687400602052908
+        ],
+        [
+          -0.0017215549325915913,
+          0.004080655232817205
+        ],
+        [
+          0.001178873931870111,
+          -0.0007251265122419702
+        ],
+        [
+          0.00456270760707543,
+          -0.006331871881477673
+        ]
+      ],
+      "sample": [
+        [
+          0.09412594570100173,
+          -0.5165892467303504
+        ],
+        [
+          0.37239679120738206,
+          1.2873305950523342
+        ],
+        [
+          0.893236794427821,
+          -0.613291522743588
+        ]
+      ]
+    }
+  },
+  {
+    "id": "generative-adversarial-networks",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "loss_initial": 0.6799243053554787,
+      "loss_final": 0.7855473241228657,
+      "optimization_status": "fixed-budget-completed",
+      "sample": [
+        [
+          0.5002384775176781
+        ],
+        [
+          0.4180263415294194
+        ],
+        [
+          0.6523557900887701
+        ]
+      ]
+    }
+  },
+  {
+    "id": "diffusion-models",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "loss_initial": 0.3065141686746708,
+      "loss_final": 0.7113475967687499,
+      "optimization_status": "fixed-budget-completed",
+      "sample": [
+        [
+          0.6227453794698389
+        ],
+        [
+          0.3079733897502591
+        ],
+        [
+          0.7937977005874642
+        ]
+      ]
+    }
+  },
+  {
+    "id": "graph-neural-networks",
+    "example": "passed",
+    "equivalent_cli": "passed",
+    "invalid_cli": "passed",
+    "output": {
+      "loss_initial": 2.321356563571144,
+      "loss_final": 0.12605095314837006,
+      "optimization_status": "fixed-budget-completed",
+      "prediction": [
+        [
+          1.120533558235357
+        ],
+        [
+          1.397483985016623
+        ],
+        [
+          1.426129052922147
+        ],
+        [
+          0.6838637467975222
+        ]
+      ]
+    }
+  }
+]

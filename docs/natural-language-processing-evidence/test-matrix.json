@@ -1,0 +1,252 @@
+{
+  "total": 5205,
+  "passed": 5205,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "groups": {
+    "infrastructure": 421,
+    "DSA": 1687,
+    "B12": 180,
+    "B7": 221,
+    "B3": 253,
+    "B9": 146,
+    "B13": 455,
+    "B10": 259,
+    "B8": 141,
+    "B2": 398,
+    "B1": 281,
+    "B11": 250,
+    "B6": 162,
+    "B4": 206,
+    "B5-folder": 145
+  },
+  "dsa": {
+    "cpp17": 269,
+    "cpp20": 269,
+    "python_shared": 1149
+  },
+  "B13": {
+    "bag-of-words": 16,
+    "bert": 33,
+    "conditional-random-fields": 50,
+    "cyk-parsing": 38,
+    "glove": 48,
+    "gpt": 33,
+    "hidden-markov-models-pos-tagging": 32,
+    "n-gram-language-models": 28,
+    "named-entity-recognition": 38,
+    "shared-text-and-transformer-contracts": 83,
+    "tf-idf": 14,
+    "word2vec": 42
+  },
+  "infrastructure": {
+    "test_b10_language_and_scope_policy": 14,
+    "test_b11_language_and_scope_policy": 16,
+    "test_b12_language_and_scope_policy": 16,
+    "test_b13_language_and_scope_policy": 16,
+    "test_b5_shared_canonical_policy": 7,
+    "test_b7_language_policy": 7,
+    "test_b8_language_and_blocker_policy": 17,
+    "test_b9_language_and_scope_policy": 12,
+    "test_bit_oracles": 1,
+    "test_cpp_toolchain": 4,
+    "test_generate_catalog_docs": 26,
+    "test_number_window_oracles": 2,
+    "test_review_paths": 10,
+    "test_string_cross_algorithms": 1,
+    "test_track_policy": 14,
+    "test_validate_catalog": 258
+  },
+  "selected_overlapping_checks": {
+    "audit-B13": {
+      "total": 455,
+      "passed": 455,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "infrastructure-B13": {
+      "total": 16,
+      "passed": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "tokenization": {
+      "total": 8,
+      "passed": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "vocabulary": {
+      "total": 12,
+      "passed": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "bow": {
+      "total": 16,
+      "passed": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "tf-idf": {
+      "total": 14,
+      "passed": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "ngram-probability": {
+      "total": 11,
+      "passed": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "ngram-perplexity": {
+      "total": 12,
+      "passed": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "word2vec-gradient": {
+      "total": 2,
+      "passed": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "glove-gradient": {
+      "total": 2,
+      "passed": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "bert-attention": {
+      "total": 13,
+      "passed": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "bert-mlm": {
+      "total": 14,
+      "passed": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "gpt-causal": {
+      "total": 2,
+      "passed": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "gpt-objective": {
+      "total": 4,
+      "passed": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "hmm-pos": {
+      "total": 32,
+      "passed": 32,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "crf-partition": {
+      "total": 9,
+      "passed": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "crf-viterbi": {
+      "total": 8,
+      "passed": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "crf-gradient": {
+      "total": 9,
+      "passed": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "ner-bio": {
+      "total": 17,
+      "passed": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "ner-metrics": {
+      "total": 2,
+      "passed": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "cyk-grammar": {
+      "total": 28,
+      "passed": 28,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "cyk-oracle": {
+      "total": 7,
+      "passed": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "numerical": {
+      "total": 33,
+      "passed": 33,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "reproducibility": {
+      "total": 27,
+      "passed": 27,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "data-leakage": {
+      "total": 36,
+      "passed": 36,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "edge-cases": {
+      "total": 329,
+      "passed": 329,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "oracle": {
+      "total": 73,
+      "passed": 73,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  }
+}

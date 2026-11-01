@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="22" time="1.501" timestamp="2026-10-31T10:00:56.022332+06:00" hostname="Khalids-MacBook-Air.local"><testcase classname="machine-learning.reinforcement-learning.proximal-policy-optimization.tests.test_python" name="test_ratio_clipping_both_advantage_signs_and_logp_derivative" time="0.003" /><testcase classname="machine-learning.reinforcement-learning.proximal-policy-optimization.tests.test_python" name="test_finite_difference_clipped_actor_away_from_boundaries[ratios0]" time="0.017" /><testcase classname="machine-learning.reinforcement-learning.proximal-policy-optimization.tests.test_python" name="test_finite_difference_clipped_actor_away_from_boundaries[ratios1]" time="0.001" /><testcase classname="machine-learning.reinforcement-learning.proximal-policy-optimization.tests.test_python" name="test_finite_difference_clipped_actor_away_from_boundaries[ratios2]" time="0.001" /><testcase classname="machine-learning.reinforcement-learning.proximal-policy-optimization.tests.test_python" name="test_critic_finite_difference" time="0.000" /><testcase classname="machine-learning.reinforcement-learning.proximal-policy-optimization.tests.test_python" name="test_old_policy_snapshot_persists_across_epochs_minibatches" time="0.002" /><testcase classname="machine-learning.reinforcement-learning.proximal-policy-optimization.tests.test_python" name="test_seeded_bounded_ppo_training[73]" time="0.069" /><testcase classname="machine-learning.reinforcement-learning.proximal-policy-optimization.tests.test_python" name="test_seeded_bounded_ppo_training[74]" time="0.070" /><testcase classname="machine-learning.reinforcement-learning.proximal-policy-optimization.tests.test_python" name="test_seeded_bounded_ppo_training[75]" time="0.069" /><testcase classname="machine-learning.reinforcement-learning.proximal-policy-optimization.tests.test_python" name="test_invalid_surrogate_inputs" time="0.000" /><testcase classname="machine-learning.reinforcement-learning.deep-deterministic-policy-gradient.tests.test_python" name="test_continuous_actor_bounds_and_critic_forward" time="0.002" /><testcase classname="machine-learning.reinforcement-learning.deep-deterministic-policy-gradient.tests.test_python" name="test_finite_difference_deterministic_actor_through_fixed_critic" time="0.001" /><testcase classname="machine-learning.reinforcement-learning.deep-deterministic-policy-gradient.tests.test_python" name="test_critic_finite_difference_fixed_td_target" time="0.001" /><testcase classname="machine-learning.reinforcement-learning.deep-deterministic-policy-gradient.tests.test_python" name="test_td_terminal_mask_truncation_and_soft_target_interpolation" time="0.001" /><testcase classname="machine-learning.reinforcement-learning.deep-deterministic-policy-gradient.tests.test_python" name="test_noise_seed_action_clipping_replay_and_parameter_updates" time="0.003" /><testcase classname="machine-learning.reinforcement-learning.deep-deterministic-policy-gradient.tests.test_python" name="test_tiny_continuous_control_training_and_reproducibility[85]" time="0.398"><failure message="assert (-0.7377227175465813 &gt; -0.04)">rl = &lt;module 'atlas_b8_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/support.py'&gt;
+seed = 85
+
+    @pytest.mark.parametrize('seed',[85,86,87])
+    def test_tiny_continuous_control_training_and_reproducibility(rl,seed):
+        cls=rl.load('deep-deterministic-policy-gradient').DDPG
+        m=cls(seed=seed);before=rl.evaluate(m,rl.Continuous,episodes=100,seed=990)
+        m.train(rl.Continuous(),episodes=1200,max_steps=1)
+        after=rl.evaluate(m,rl.Continuous,episodes=100,seed=990)
+&gt;       assert after['mean_return']&gt;-.04 and after['mean_return']&gt;before['mean_return']
+E       assert (-0.7377227175465813 &gt; -0.04)
+
+machine-learning/reinforcement-learning/deep-deterministic-policy-gradient/tests/test_python.py:74: AssertionError</failure></testcase><testcase classname="machine-learning.reinforcement-learning.deep-deterministic-policy-gradient.tests.test_python" name="test_tiny_continuous_control_training_and_reproducibility[86]" time="0.414"><failure message="assert (-0.44572902941973525 &gt; -0.04)">rl = &lt;module 'atlas_b8_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/support.py'&gt;
+seed = 86
+
+    @pytest.mark.parametrize('seed',[85,86,87])
+    def test_tiny_continuous_control_training_and_reproducibility(rl,seed):
+        cls=rl.load('deep-deterministic-policy-gradient').DDPG
+        m=cls(seed=seed);before=rl.evaluate(m,rl.Continuous,episodes=100,seed=990)
+        m.train(rl.Continuous(),episodes=1200,max_steps=1)
+        after=rl.evaluate(m,rl.Continuous,episodes=100,seed=990)
+&gt;       assert after['mean_return']&gt;-.04 and after['mean_return']&gt;before['mean_return']
+E       assert (-0.44572902941973525 &gt; -0.04)
+
+machine-learning/reinforcement-learning/deep-deterministic-policy-gradient/tests/test_python.py:74: AssertionError</failure></testcase><testcase classname="machine-learning.reinforcement-learning.deep-deterministic-policy-gradient.tests.test_python" name="test_tiny_continuous_control_training_and_reproducibility[87]" time="0.405"><failure message="assert (-0.5588474754530295 &gt; -0.04)">rl = &lt;module 'atlas_b8_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/support.py'&gt;
+seed = 87
+
+    @pytest.mark.parametrize('seed',[85,86,87])
+    def test_tiny_continuous_control_training_and_reproducibility(rl,seed):
+        cls=rl.load('deep-deterministic-policy-gradient').DDPG
+        m=cls(seed=seed);before=rl.evaluate(m,rl.Continuous,episodes=100,seed=990)
+        m.train(rl.Continuous(),episodes=1200,max_steps=1)
+        after=rl.evaluate(m,rl.Continuous,episodes=100,seed=990)
+&gt;       assert after['mean_return']&gt;-.04 and after['mean_return']&gt;before['mean_return']
+E       assert (-0.5588474754530295 &gt; -0.04)
+
+machine-learning/reinforcement-learning/deep-deterministic-policy-gradient/tests/test_python.py:74: AssertionError</failure></testcase><testcase classname="machine-learning.reinforcement-learning.deep-deterministic-policy-gradient.tests.test_python" name="test_invalid_action_bounds[low0-high0]" time="0.000" /><testcase classname="machine-learning.reinforcement-learning.deep-deterministic-policy-gradient.tests.test_python" name="test_invalid_action_bounds[low1-high1]" time="0.000" /><testcase classname="machine-learning.reinforcement-learning.deep-deterministic-policy-gradient.tests.test_python" name="test_invalid_action_bounds[low2-high2]" time="0.000" /><testcase classname="machine-learning.reinforcement-learning.deep-deterministic-policy-gradient.tests.test_python" name="test_invalid_action_bounds[low3-high3]" time="0.000" /></testsuite></testsuites>

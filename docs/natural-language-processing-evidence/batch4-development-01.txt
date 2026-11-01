@@ -1,0 +1,22 @@
+................................................F....................... [ 61%]
+.............................................                            [100%]
+=================================== FAILURES ===================================
+___________ test_crf_bio_legal_partition_impossible_and_constraints ____________
+
+b13 = <module 'atlas_b13_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/natural-language-processing/support.py'>
+
+    @pytest.mark.oracle
+    def test_crf_bio_legal_partition_impossible_and_constraints(b13):
+        cls=b13.load('conditional-random-fields').LinearChainCRF
+        m=cls(['O','B-X','I-X'],1,allowed_start=[True,True,False],allowed_transitions=[[True,True,False],[True,True,True],[True,True,True]])
+>       assert m.log_partition([[1],[1]])==math.log(5)
+E       assert 1.6094379124341005 == 1.6094379124341003
+E        +  where 1.6094379124341005 = log_partition([[1], [1]])
+E        +    where log_partition = <atlas_b13_conditional_random_fields.LinearChainCRF object at 0x109649010>.log_partition
+E        +  and   1.6094379124341003 = <built-in function log>(5)
+E        +    where <built-in function log> = math.log
+
+machine-learning/natural-language-processing/conditional-random-fields/tests/test_python.py:80: AssertionError
+=========================== short test summary info ============================
+FAILED machine-learning/natural-language-processing/conditional-random-fields/tests/test_python.py::test_crf_bio_legal_partition_impossible_and_constraints
+1 failed, 116 passed in 0.24s

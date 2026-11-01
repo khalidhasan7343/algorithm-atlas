@@ -1,0 +1,29 @@
+{
+  "label": "stopping",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/optimization",
+    "-k",
+    "convergence or stationarity or stationary or stagnation or target or tiny_step or line_search_failure or temperature_floor or zero_sample_gradient",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/optimization",
+    "-k",
+    "convergence or stationarity or stationary or stagnation or target or tiny_step or line_search_failure or temperature_floor or zero_sample_gradient",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/optimization-evidence/stopping-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T21:42:01.692660+06:00",
+  "elapsed_seconds": 0.356,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/optimization-evidence/stopping-01.txt"
+}

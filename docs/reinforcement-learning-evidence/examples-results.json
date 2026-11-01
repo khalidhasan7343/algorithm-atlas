@@ -1,0 +1,101 @@
+[
+  {
+    "topic": "q-learning",
+    "command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/q-learning/python/example.py"
+    ],
+    "returncode": 0,
+    "sections": 25,
+    "output": "{\"update\": 5.0}",
+    "elapsed_seconds": 0.0827
+  },
+  {
+    "topic": "sarsa",
+    "command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/sarsa/python/example.py"
+    ],
+    "returncode": 0,
+    "sections": 25,
+    "output": "{\"update\": 1.85}",
+    "elapsed_seconds": 0.0594
+  },
+  {
+    "topic": "deep-q-networks",
+    "command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/deep-q-networks/python/example.py"
+    ],
+    "returncode": 0,
+    "sections": 25,
+    "output": "{\"loss\": 0.5, \"bias_gradient\": [0.0, -1.0]}",
+    "elapsed_seconds": 0.0597
+  },
+  {
+    "topic": "reinforce-policy-gradient",
+    "command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/reinforce-policy-gradient/python/example.py"
+    ],
+    "returncode": 0,
+    "sections": 25,
+    "output": "{\"loss\": 0.6931471805599453, \"bias_gradient\": [0.5, -0.5]}",
+    "elapsed_seconds": 0.0587
+  },
+  {
+    "topic": "advantage-actor-critic",
+    "command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/advantage-actor-critic/python/example.py"
+    ],
+    "returncode": 0,
+    "sections": 25,
+    "output": "{\"actor_loss\": 0.5198603854199589, \"critic_loss\": 0.28125}",
+    "elapsed_seconds": 0.0595
+  },
+  {
+    "topic": "asynchronous-advantage-actor-critic",
+    "command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/asynchronous-advantage-actor-critic/python/example.py"
+    ],
+    "returncode": 0,
+    "sections": 25,
+    "output": "{\"updates\": 2, \"workers_alive\": 0}",
+    "elapsed_seconds": 0.0602
+  },
+  {
+    "topic": "proximal-policy-optimization",
+    "command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/proximal-policy-optimization/python/example.py"
+    ],
+    "returncode": 0,
+    "sections": 25,
+    "output": "{\"loss\": 0.10000000000000009}",
+    "elapsed_seconds": 0.0515
+  },
+  {
+    "topic": "deep-deterministic-policy-gradient",
+    "command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/deep-deterministic-policy-gradient/python/example.py"
+    ],
+    "returncode": 0,
+    "sections": 25,
+    "output": "{\"action\": 1.0, \"target_bias\": 0.5}",
+    "elapsed_seconds": 0.0622
+  },
+  {
+    "topic": "monte-carlo-tree-search",
+    "command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/monte-carlo-tree-search/python/example.py"
+    ],
+    "returncode": 0,
+    "sections": 25,
+    "output": "{\"action\": 1, \"root_visits\": 200}",
+    "elapsed_seconds": 0.0664
+  }
+]

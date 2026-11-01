@@ -1,0 +1,20 @@
+.......F..................                                               [100%]
+=================================== FAILURES ===================================
+_________________ test_rosenbrock_independent_scipy_reference __________________
+
+b10 = <module 'atlas_b10_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/optimization/support.py'>
+objectives = <module 'atlas_b10_test_objectives' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/optimization/tests/objectives.py'>
+
+    @pytest.mark.reference
+    def test_rosenbrock_independent_scipy_reference(b10,objectives):
+        from scipy.optimize import minimize
+        r=b10.load('l-bfgs').LBFGS(history_size=5).minimize(objectives.rosenbrock,objectives.rosenbrock_gradient,[-1.2,1.],max_iter=400)
+        oracle=minimize(objectives.rosenbrock,[-1.2,1.],jac=objectives.rosenbrock_gradient,method='BFGS',options={'gtol':1e-9})
+>       assert r.converged and r.fun<1e-14
+E       AssertionError: assert (False)
+E        +  where False = OptimizationResult(x=array([-1.02787127,  1.06355721]), fun=4.117215036645227, n_iter=3, nfev=21, status='line-search-... 'slope_after': 9.083428484037495e-05}), 'skipped_curvature_updates': 0, 'memory_resets': 0, 'line_search_trials': 20}).converged
+
+machine-learning/optimization/l-bfgs/tests/test_python.py:46: AssertionError
+=========================== short test summary info ============================
+FAILED machine-learning/optimization/l-bfgs/tests/test_python.py::test_rosenbrock_independent_scipy_reference
+1 failed, 25 passed in 0.34s

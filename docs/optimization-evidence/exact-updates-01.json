@@ -1,0 +1,29 @@
+{
+  "label": "exact-updates",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/optimization",
+    "-k",
+    "exact_update or closed_form or exact_reshuffled or mean_gradient_tail or two_heavy_ball or uncentered_uncorrected or two_bias_corrected or first_step_epsilon or decoupled_old_parameter or two_loop_matches or one_generation_independent or exact_metropolis or exact_seeded_metropolis",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/optimization",
+    "-k",
+    "exact_update or closed_form or exact_reshuffled or mean_gradient_tail or two_heavy_ball or uncentered_uncorrected or two_bias_corrected or first_step_epsilon or decoupled_old_parameter or two_loop_matches or one_generation_independent or exact_metropolis or exact_seeded_metropolis",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/optimization-evidence/exact-updates-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T21:42:01.692685+06:00",
+  "elapsed_seconds": 0.354,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/optimization-evidence/exact-updates-01.txt"
+}

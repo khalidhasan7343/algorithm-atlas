@@ -1,0 +1,29 @@
+{
+  "label": "concurrency",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/reinforcement-learning",
+    "-k",
+    "worker or concurrency",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/reinforcement-learning",
+    "-k",
+    "worker or concurrency",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/concurrency-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T10:14:00.781063+06:00",
+  "elapsed_seconds": 0.429,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/reinforcement-learning-evidence/concurrency-01.txt"
+}

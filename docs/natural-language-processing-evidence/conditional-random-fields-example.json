@@ -1,0 +1,52 @@
+{
+  "topic": "conditional-random-fields",
+  "command": [
+    "python",
+    "machine-learning/natural-language-processing/conditional-random-fields/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"features\": [[1.0, 0.0], [0.0, 1.0]], \"gold\": [\"A\", \"B\"], \"initial_log_partition\": 1.386294, \"initial_loss\": 1.386294, \"final_regularized_loss\": 0.050036, \"status\": \"iteration-budget\", \"updates\": 80, \"predicted\": [\"A\", \"B\"], \"conditional_probability\": 0.984514, \"token_marginals\": [[0.991964, 0.008036], [0.008036, 0.991964]], \"trainable_groups\": [\"emission\", \"transition\", \"start\", \"end\"]}\n",
+  "parsed": {
+    "features": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "gold": [
+      "A",
+      "B"
+    ],
+    "initial_log_partition": 1.386294,
+    "initial_loss": 1.386294,
+    "final_regularized_loss": 0.050036,
+    "status": "iteration-budget",
+    "updates": 80,
+    "predicted": [
+      "A",
+      "B"
+    ],
+    "conditional_probability": 0.984514,
+    "token_marginals": [
+      [
+        0.991964,
+        0.008036
+      ],
+      [
+        0.008036,
+        0.991964
+      ]
+    ],
+    "trainable_groups": [
+      "emission",
+      "transition",
+      "start",
+      "end"
+    ]
+  },
+  "sections": 25
+}

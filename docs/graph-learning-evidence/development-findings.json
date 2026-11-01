@@ -1,0 +1,39 @@
+[
+  {
+    "id": "B9-001",
+    "status": "fixed",
+    "kind": "implementation lifecycle",
+    "evidence": "gcn-development-01.json/xml/txt:1 failed,42 passed; gcn-development-02:43 passed.",
+    "problem": "Unfitted predict accessed classes_ before predict_proba could validate fit.",
+    "fix": "Evaluate validated probabilities before indexing classes_; original failing test retained unchanged."
+  },
+  {
+    "id": "B9-002",
+    "status": "fixed",
+    "kind": "documentation infrastructure",
+    "evidence": "infrastructure-B9-01:1 failed,11 passed; infrastructure-B9-02:12 passed.",
+    "problem": "B9 progress generator assumed optional DPO decision report metadata existed in minimal valid catalogs.",
+    "fix": "Require actual approved Phase20/DPO metadata and report before rendering that approval block; drift test unchanged."
+  },
+  {
+    "id": "B9-003",
+    "status": "fixed before formal audit",
+    "kind": "input audit",
+    "problem": "Huge native integer conversion to float could raise OverflowError.",
+    "fix": "Translate unrepresentable scalar conversion to documented ValueError; shared invalid-real cases cover it."
+  },
+  {
+    "id": "B9-004",
+    "status": "fixed",
+    "kind": "evidence protocol",
+    "problem": "Initial direct PageRank bootstrap JUnit name was subsequently reused by first structured runner.",
+    "fix": "Runner now checks all .json/.txt/.xml prefix paths before choosing a new sequence. Bootstrap summary was43 passed in0.07s; first retained structured batch143 passed in0.05s. No failed run was lost."
+  },
+  {
+    "id": "B9-005",
+    "status": "fixed before metadata write",
+    "kind": "temporary authoring helper",
+    "problem": "Batch checkpoint helper initially assumed unquoted/unindented YAML list IDs.",
+    "fix": "Match the existing two-space quoted record style and preserve all unrelated records. Failed assertion occurred before any repository metadata write."
+  }
+]

@@ -1,0 +1,52 @@
+...............FFF....                                                   [100%]
+=================================== FAILURES ===================================
+________ test_tiny_continuous_control_training_and_reproducibility[85] _________
+
+rl = <module 'atlas_b8_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/support.py'>
+seed = 85
+
+    @pytest.mark.parametrize('seed',[85,86,87])
+    def test_tiny_continuous_control_training_and_reproducibility(rl,seed):
+        cls=rl.load('deep-deterministic-policy-gradient').DDPG
+        m=cls(seed=seed);before=rl.evaluate(m,rl.Continuous,episodes=100,seed=990)
+        m.train(rl.Continuous(),episodes=1200,max_steps=1)
+        after=rl.evaluate(m,rl.Continuous,episodes=100,seed=990)
+>       assert after['mean_return']>-.04 and after['mean_return']>before['mean_return']
+E       assert (-0.7377227175465813 > -0.04)
+
+machine-learning/reinforcement-learning/deep-deterministic-policy-gradient/tests/test_python.py:74: AssertionError
+________ test_tiny_continuous_control_training_and_reproducibility[86] _________
+
+rl = <module 'atlas_b8_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/support.py'>
+seed = 86
+
+    @pytest.mark.parametrize('seed',[85,86,87])
+    def test_tiny_continuous_control_training_and_reproducibility(rl,seed):
+        cls=rl.load('deep-deterministic-policy-gradient').DDPG
+        m=cls(seed=seed);before=rl.evaluate(m,rl.Continuous,episodes=100,seed=990)
+        m.train(rl.Continuous(),episodes=1200,max_steps=1)
+        after=rl.evaluate(m,rl.Continuous,episodes=100,seed=990)
+>       assert after['mean_return']>-.04 and after['mean_return']>before['mean_return']
+E       assert (-0.44572902941973525 > -0.04)
+
+machine-learning/reinforcement-learning/deep-deterministic-policy-gradient/tests/test_python.py:74: AssertionError
+________ test_tiny_continuous_control_training_and_reproducibility[87] _________
+
+rl = <module 'atlas_b8_support' from '/Users/khalidhasan/Desktop/algorithm-atlas/machine-learning/reinforcement-learning/support.py'>
+seed = 87
+
+    @pytest.mark.parametrize('seed',[85,86,87])
+    def test_tiny_continuous_control_training_and_reproducibility(rl,seed):
+        cls=rl.load('deep-deterministic-policy-gradient').DDPG
+        m=cls(seed=seed);before=rl.evaluate(m,rl.Continuous,episodes=100,seed=990)
+        m.train(rl.Continuous(),episodes=1200,max_steps=1)
+        after=rl.evaluate(m,rl.Continuous,episodes=100,seed=990)
+>       assert after['mean_return']>-.04 and after['mean_return']>before['mean_return']
+E       assert (-0.5588474754530295 > -0.04)
+
+machine-learning/reinforcement-learning/deep-deterministic-policy-gradient/tests/test_python.py:74: AssertionError
+=========================== short test summary info ============================
+FAILED machine-learning/reinforcement-learning/deep-deterministic-policy-gradient/tests/test_python.py::test_tiny_continuous_control_training_and_reproducibility[85]
+FAILED machine-learning/reinforcement-learning/deep-deterministic-policy-gradient/tests/test_python.py::test_tiny_continuous_control_training_and_reproducibility[86]
+FAILED machine-learning/reinforcement-learning/deep-deterministic-policy-gradient/tests/test_python.py::test_tiny_continuous_control_training_and_reproducibility[87]
+3 failed, 19 passed in 1.50s

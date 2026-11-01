@@ -1,0 +1,172 @@
+{
+  "total": 4734,
+  "passed": 4734,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "groups": {
+    "infrastructure": 405,
+    "DSA": 1687,
+    "B12": 180,
+    "B7": 221,
+    "B3": 253,
+    "B9": 146,
+    "B10": 259,
+    "B8": 141,
+    "B2": 398,
+    "B1": 281,
+    "B11": 250,
+    "B6": 162,
+    "B4": 206,
+    "B5-folder": 145
+  },
+  "dsa": {
+    "cpp17": 269,
+    "cpp20": 269,
+    "python_shared": 1149
+  },
+  "B12": {
+    "isolation-forest": 37,
+    "local-outlier-factor": 28,
+    "one-class-svm": 41,
+    "shared-contracts-and-metrics": 74
+  },
+  "infrastructure": {
+    "test_b10_language_and_scope_policy": 14,
+    "test_b11_language_and_scope_policy": 16,
+    "test_b12_language_and_scope_policy": 16,
+    "test_b5_shared_canonical_policy": 7,
+    "test_b7_language_policy": 7,
+    "test_b8_language_and_blocker_policy": 17,
+    "test_b9_language_and_scope_policy": 12,
+    "test_bit_oracles": 1,
+    "test_cpp_toolchain": 4,
+    "test_generate_catalog_docs": 26,
+    "test_number_window_oracles": 2,
+    "test_review_paths": 10,
+    "test_string_cross_algorithms": 1,
+    "test_track_policy": 14,
+    "test_validate_catalog": 258
+  },
+  "selected_overlapping_checks": {
+    "audit-B12": {
+      "total": 180,
+      "passed": 180,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "infrastructure-B12": {
+      "total": 16,
+      "passed": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "isolation-trees": {
+      "total": 8,
+      "passed": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "path-oracles": {
+      "total": 2,
+      "passed": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "harmonic": {
+      "total": 7,
+      "passed": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "kernel": {
+      "total": 3,
+      "passed": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "dual": {
+      "total": 10,
+      "passed": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "projection": {
+      "total": 12,
+      "passed": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "kkt": {
+      "total": 5,
+      "passed": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "lof-neighbors": {
+      "total": 6,
+      "passed": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "density": {
+      "total": 13,
+      "passed": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "scores": {
+      "total": 31,
+      "passed": 31,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "numerical": {
+      "total": 13,
+      "passed": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "reproducibility": {
+      "total": 7,
+      "passed": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "edge-cases": {
+      "total": 92,
+      "passed": 92,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "synthetic": {
+      "total": 25,
+      "passed": 25,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "oracle": {
+      "total": 45,
+      "passed": 45,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  }
+}

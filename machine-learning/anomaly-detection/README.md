@@ -8,9 +8,9 @@ This category preserves **3 original syllabus entries**. Each link points to the
 
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Isolation Forest | [isolation-forest](isolation-forest/README.md) | planned |
-| One-Class SVM | [one-class-svm](one-class-svm/README.md) | planned |
-| Local Outlier Factor (LOF) | [local-outlier-factor](local-outlier-factor/README.md) | planned |
+| Isolation Forest | [isolation-forest](isolation-forest/README.md) | complete |
+| One-Class SVM | [one-class-svm](one-class-svm/README.md) | complete |
+| Local Outlier Factor (LOF) | [local-outlier-factor](local-outlier-factor/README.md) | complete |
 
 ## Learning and contribution scope
 

@@ -1,0 +1,20 @@
+{
+  "label": "examples-final",
+  "command": [
+    "python",
+    "scripts/verify_optimization_examples.py",
+    "--check-only"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "scripts/verify_optimization_examples.py",
+    "--check-only"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T21:51:46.374843+06:00",
+  "elapsed_seconds": 0.663,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/optimization-evidence/examples-final-01.txt"
+}

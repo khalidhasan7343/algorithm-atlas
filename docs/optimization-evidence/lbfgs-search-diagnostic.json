@@ -1,0 +1,49 @@
+{
+  "problem": "Rosenbrock; analytic objective/gradient; x0[-1.2,1]",
+  "former_ceiling": 64,
+  "old_status": "line-search-failed",
+  "old_accepted_updates": 3,
+  "failure_point": [
+    -1.0278712676209047,
+    1.0635572108036389
+  ],
+  "direction": [
+    0.0008007708885592625,
+    -0.0016106201290792188
+  ],
+  "slope_before": -0.0031976691401971753,
+  "trials": [
+    {
+      "alpha": 64,
+      "objective": 3.911506023771401,
+      "slope": -0.003227858701016415,
+      "armijo": true,
+      "strong_curvature": false
+    },
+    {
+      "alpha": 128,
+      "objective": 3.7071770001402546,
+      "slope": -0.0031114290169077124,
+      "armijo": true,
+      "strong_curvature": false
+    },
+    {
+      "alpha": 256,
+      "objective": 3.3898624566004973,
+      "slope": -0.0014039408869703195,
+      "armijo": true,
+      "strong_curvature": true
+    },
+    {
+      "alpha": 512,
+      "objective": 4.658186976507345,
+      "slope": 0.015152947608337616,
+      "armijo": false,
+      "strong_curvature": false
+    }
+  ],
+  "current_ceiling": 1000000.0,
+  "corrected_status": "gradient-tolerance",
+  "corrected_objective": 9.828428362205535e-20,
+  "corrected_accepted_updates": 36
+}

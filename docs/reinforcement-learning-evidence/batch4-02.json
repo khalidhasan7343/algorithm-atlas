@@ -1,0 +1,27 @@
+{
+  "label": "batch4",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "machine-learning/reinforcement-learning/proximal-policy-optimization",
+    "machine-learning/reinforcement-learning/deep-deterministic-policy-gradient",
+    "-q"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "machine-learning/reinforcement-learning/proximal-policy-optimization",
+    "machine-learning/reinforcement-learning/deep-deterministic-policy-gradient",
+    "-q",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/reinforcement-learning-evidence/batch4-02.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T10:03:43.184079+06:00",
+  "elapsed_seconds": 5.387,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/reinforcement-learning-evidence/batch4-02.txt"
+}

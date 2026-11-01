@@ -1,0 +1,66 @@
+{
+  "topic": "gpt",
+  "command": [
+    "python",
+    "machine-learning/natural-language-processing/gpt/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"training\": [\"red blue red blue\", \"red blue red blue\"], \"ordinary_ids\": {\"blue\": 5, \"red\": 6}, \"training_ids\": [[2, 6, 5, 6, 5, 3], [2, 6, 5, 6, 5, 3]], \"scored_next_tokens\": 10, \"loss_start\": 1.9766715114039162, \"loss_final\": 0.07152056668446725, \"prefix\": [2, 6], \"generated_ids\": [2, 6, 5, 6, 5, 3], \"generated_tokens\": [\"<BOS>\", \"red\", \"blue\", \"red\", \"blue\", \"<EOS>\"], \"trained_parameters\": [\"head_weight\", \"head_bias\"], \"backbone\": \"frozen random initialization\"}\n",
+  "parsed": {
+    "training": [
+      "red blue red blue",
+      "red blue red blue"
+    ],
+    "ordinary_ids": {
+      "blue": 5,
+      "red": 6
+    },
+    "training_ids": [
+      [
+        2,
+        6,
+        5,
+        6,
+        5,
+        3
+      ],
+      [
+        2,
+        6,
+        5,
+        6,
+        5,
+        3
+      ]
+    ],
+    "scored_next_tokens": 10,
+    "loss_start": 1.9766715114039162,
+    "loss_final": 0.07152056668446725,
+    "prefix": [
+      2,
+      6
+    ],
+    "generated_ids": [
+      2,
+      6,
+      5,
+      6,
+      5,
+      3
+    ],
+    "generated_tokens": [
+      "<BOS>",
+      "red",
+      "blue",
+      "red",
+      "blue",
+      "<EOS>"
+    ],
+    "trained_parameters": [
+      "head_weight",
+      "head_bias"
+    ],
+    "backbone": "frozen random initialization"
+  },
+  "sections": 25
+}

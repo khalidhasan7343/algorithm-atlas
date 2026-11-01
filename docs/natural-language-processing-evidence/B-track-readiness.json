@@ -1,0 +1,180 @@
+{
+  "categories": [
+    {
+      "category": "B1",
+      "name": "Supervised Learning \u2014 Regression",
+      "catalog_entries": 7,
+      "implemented": 7,
+      "blocked": 0,
+      "missing_implementations": [],
+      "missing_documentation": [],
+      "tests": "passed",
+      "documentation": "implemented",
+      "owner_approval": "approved"
+    },
+    {
+      "category": "B2",
+      "name": "Supervised Learning \u2014 Classification",
+      "catalog_entries": 11,
+      "implemented": 11,
+      "blocked": 0,
+      "missing_implementations": [],
+      "missing_documentation": [],
+      "tests": "passed",
+      "documentation": "implemented",
+      "owner_approval": "approved"
+    },
+    {
+      "category": "B3",
+      "name": "Ensemble Methods",
+      "catalog_entries": 8,
+      "implemented": 8,
+      "blocked": 0,
+      "missing_implementations": [],
+      "missing_documentation": [],
+      "tests": "passed",
+      "documentation": "implemented",
+      "owner_approval": "approved"
+    },
+    {
+      "category": "B4",
+      "name": "Unsupervised Learning \u2014 Clustering",
+      "catalog_entries": 8,
+      "implemented": 8,
+      "blocked": 0,
+      "missing_implementations": [],
+      "missing_documentation": [],
+      "tests": "passed",
+      "documentation": "implemented",
+      "owner_approval": "approved"
+    },
+    {
+      "category": "B5",
+      "name": "Dimensionality Reduction",
+      "catalog_entries": 7,
+      "implemented": 7,
+      "blocked": 0,
+      "missing_implementations": [],
+      "missing_documentation": [],
+      "tests": "passed",
+      "documentation": "implemented",
+      "owner_approval": "approved"
+    },
+    {
+      "category": "B6",
+      "name": "Association Rule Learning",
+      "catalog_entries": 3,
+      "implemented": 3,
+      "blocked": 0,
+      "missing_implementations": [],
+      "missing_documentation": [],
+      "tests": "passed",
+      "documentation": "implemented",
+      "owner_approval": "approved"
+    },
+    {
+      "category": "B7",
+      "name": "Neural Networks and Deep Learning",
+      "catalog_entries": 14,
+      "implemented": 14,
+      "blocked": 0,
+      "missing_implementations": [],
+      "missing_documentation": [],
+      "tests": "passed",
+      "documentation": "implemented",
+      "owner_approval": "approved"
+    },
+    {
+      "category": "B8",
+      "name": "Reinforcement Learning",
+      "catalog_entries": 10,
+      "implemented": 9,
+      "blocked": 1,
+      "missing_implementations": [],
+      "missing_documentation": [],
+      "tests": "passed",
+      "documentation": "implemented except explicitly blocked DPO",
+      "owner_approval": "approved"
+    },
+    {
+      "category": "B9",
+      "name": "Graph-Based Learning",
+      "catalog_entries": 3,
+      "implemented": 3,
+      "blocked": 0,
+      "missing_implementations": [],
+      "missing_documentation": [],
+      "tests": "passed",
+      "documentation": "implemented",
+      "owner_approval": "approved"
+    },
+    {
+      "category": "B10",
+      "name": "Optimization",
+      "catalog_entries": 10,
+      "implemented": 10,
+      "blocked": 0,
+      "missing_implementations": [],
+      "missing_documentation": [],
+      "tests": "passed",
+      "documentation": "implemented",
+      "owner_approval": "approved"
+    },
+    {
+      "category": "B11",
+      "name": "Time Series",
+      "catalog_entries": 6,
+      "implemented": 6,
+      "blocked": 0,
+      "missing_implementations": [],
+      "missing_documentation": [],
+      "tests": "passed",
+      "documentation": "implemented",
+      "owner_approval": "approved"
+    },
+    {
+      "category": "B12",
+      "name": "Anomaly Detection",
+      "catalog_entries": 3,
+      "implemented": 3,
+      "blocked": 0,
+      "missing_implementations": [],
+      "missing_documentation": [],
+      "tests": "passed",
+      "documentation": "implemented",
+      "owner_approval": "approved"
+    },
+    {
+      "category": "B13",
+      "name": "Natural Language Processing",
+      "catalog_entries": 11,
+      "implemented": 11,
+      "blocked": 0,
+      "missing_implementations": [],
+      "missing_documentation": [],
+      "tests": "passed",
+      "documentation": "implemented",
+      "owner_approval": "pending"
+    }
+  ],
+  "catalog_memberships": 101,
+  "implemented_memberships": 100,
+  "unique_canonicals": 100,
+  "implemented_unique": 99,
+  "blocked_unique": [
+    "dynamic-policy-optimization"
+  ],
+  "shared_memberships": 1,
+  "missing_implementations": [],
+  "missing_documentation": [],
+  "failed_tests": 0,
+  "skipped_tests": 0,
+  "pending_owner_approvals": [
+    "Phase25 B13"
+  ],
+  "ready_for_owner_review": true,
+  "final_comprehensive_ML_audit": "recommended as separately authorized work;not executed or approved",
+  "full_B_track_implemented": false,
+  "global_implemented": 196,
+  "global_canonicals": 235
+}

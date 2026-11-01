@@ -1,0 +1,702 @@
+{
+  "protocol": "Actual11 toy examples:fit/training objectives and inference outputs,not held-out semantic accuracy or production pretraining",
+  "records": [
+    {
+      "topic": "bag-of-words",
+      "command": [
+        "python",
+        "machine-learning/natural-language-processing/bag-of-words/python/example.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.067553,
+      "output": {
+        "texts": [
+          "Cat cat dog",
+          "DOG!",
+          ""
+        ],
+        "features": [
+          "!",
+          "cat",
+          "dog"
+        ],
+        "counts": [
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "query": [
+          [
+            0,
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "topic": "tf-idf",
+      "command": [
+        "python",
+        "machine-learning/natural-language-processing/tf-idf/python/example.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.050124,
+      "output": {
+        "texts": [
+          "a a b",
+          "b c",
+          ""
+        ],
+        "features": [
+          "a",
+          "b",
+          "c"
+        ],
+        "df": [
+          1,
+          2,
+          1
+        ],
+        "idf": [
+          1.6931471805599454,
+          1.2876820724517808,
+          1.6931471805599454
+        ],
+        "weights": [
+          [
+            3.386294361119891,
+            1.2876820724517808,
+            0.0
+          ],
+          [
+            0.0,
+            1.2876820724517808,
+            1.6931471805599454
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "query": [
+          [
+            0.0,
+            0.0,
+            1.6931471805599454
+          ]
+        ]
+      }
+    },
+    {
+      "topic": "word2vec",
+      "command": [
+        "python",
+        "machine-learning/natural-language-processing/word2vec/python/example.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.081732,
+      "output": {
+        "texts": [
+          "red fox runs",
+          "red fox jumps",
+          "blue bird flies",
+          "blue bird sings"
+        ],
+        "configuration": {
+          "dimension": 4,
+          "window": 2,
+          "negative_samples": 3,
+          "epochs": 80,
+          "random_state": 21
+        },
+        "vocabulary": [
+          "<UNK>",
+          "bird",
+          "blue",
+          "flies",
+          "fox",
+          "jumps",
+          "red",
+          "runs",
+          "sings"
+        ],
+        "pairs": 24,
+        "loss_initial": 2.769128,
+        "loss_final": 2.144723,
+        "status": "iteration-budget",
+        "red_embedding": [
+          0.1941,
+          0.3151,
+          0.5679,
+          0.9533
+        ],
+        "fox_embedding": [
+          0.7267,
+          0.9511,
+          -0.0381,
+          0.918
+        ],
+        "unknown_embedding": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "topic": "glove",
+      "command": [
+        "python",
+        "machine-learning/natural-language-processing/glove/python/example.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.068548,
+      "output": {
+        "texts": [
+          "red fox runs",
+          "red fox jumps",
+          "blue bird flies",
+          "blue bird sings"
+        ],
+        "configuration": {
+          "dimension": 4,
+          "window": 2,
+          "symmetric": true,
+          "x_max": 10.0,
+          "alpha": 0.75,
+          "epochs": 80,
+          "random_state": 21
+        },
+        "vocabulary": [
+          "<UNK>",
+          "bird",
+          "blue",
+          "flies",
+          "fox",
+          "jumps",
+          "red",
+          "runs",
+          "sings"
+        ],
+        "red_fox_count": 2.0,
+        "red_blue_count": 0.0,
+        "loss_initial": 0.993339,
+        "loss_final": 0.003003,
+        "status": "iteration-budget",
+        "red_embedding": [
+          0.2754,
+          0.0681,
+          -0.0472,
+          0.2165
+        ],
+        "fox_embedding": [
+          0.439,
+          0.0503,
+          -0.0242,
+          0.1086
+        ],
+        "unknown_embedding": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "topic": "bert",
+      "command": [
+        "python",
+        "machine-learning/natural-language-processing/bert/python/example.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.069559,
+      "output": {
+        "training": [
+          "cat runs",
+          "cat sleeps"
+        ],
+        "ordinary_ids": {
+          "cat": 5,
+          "runs": 6,
+          "sleeps": 7
+        },
+        "input_ids": [
+          [
+            2,
+            5,
+            6,
+            3
+          ],
+          [
+            2,
+            5,
+            7,
+            3
+          ]
+        ],
+        "inference_ids": [
+          [
+            2,
+            4,
+            6,
+            3
+          ],
+          [
+            2,
+            4,
+            7,
+            3
+          ]
+        ],
+        "loss_start": 2.10093735745106,
+        "loss_final": 0.0201852292713438,
+        "predicted_ids": [
+          5,
+          5
+        ],
+        "predicted_tokens": [
+          "cat",
+          "cat"
+        ],
+        "context_shape": [
+          2,
+          4,
+          4
+        ],
+        "trained_parameters": [
+          "head_weight",
+          "head_bias"
+        ],
+        "backbone": "frozen random initialization"
+      }
+    },
+    {
+      "topic": "gpt",
+      "command": [
+        "python",
+        "machine-learning/natural-language-processing/gpt/python/example.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.071949,
+      "output": {
+        "training": [
+          "red blue red blue",
+          "red blue red blue"
+        ],
+        "ordinary_ids": {
+          "blue": 5,
+          "red": 6
+        },
+        "training_ids": [
+          [
+            2,
+            6,
+            5,
+            6,
+            5,
+            3
+          ],
+          [
+            2,
+            6,
+            5,
+            6,
+            5,
+            3
+          ]
+        ],
+        "scored_next_tokens": 10,
+        "loss_start": 1.9766715114039162,
+        "loss_final": 0.07152056668446725,
+        "prefix": [
+          2,
+          6
+        ],
+        "generated_ids": [
+          2,
+          6,
+          5,
+          6,
+          5,
+          3
+        ],
+        "generated_tokens": [
+          "<BOS>",
+          "red",
+          "blue",
+          "red",
+          "blue",
+          "<EOS>"
+        ],
+        "trained_parameters": [
+          "head_weight",
+          "head_bias"
+        ],
+        "backbone": "frozen random initialization"
+      }
+    },
+    {
+      "topic": "hidden-markov-models-pos-tagging",
+      "command": [
+        "python",
+        "machine-learning/natural-language-processing/hidden-markov-models-pos-tagging/python/example.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.054877,
+      "output": {
+        "training": [
+          [
+            "dogs",
+            "run"
+          ],
+          [
+            "cats",
+            "sleep"
+          ],
+          [
+            "dogs",
+            "sleep"
+          ]
+        ],
+        "tags": [
+          "N",
+          "V"
+        ],
+        "vocabulary": [
+          "<UNK>",
+          "cats",
+          "dogs",
+          "run",
+          "sleep"
+        ],
+        "initial": [
+          0.8,
+          0.2
+        ],
+        "transition": [
+          [
+            0.2,
+            0.8
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "query": [
+          "unknown",
+          "sleep"
+        ],
+        "predicted": [
+          "N",
+          "V"
+        ],
+        "best_joint_log_probability": -3.506558,
+        "observation_log_likelihood": -3.250625,
+        "posterior": [
+          [
+            0.83871,
+            0.16129
+          ],
+          [
+            0.104839,
+            0.895161
+          ]
+        ],
+        "training_accuracy": 1.0
+      }
+    },
+    {
+      "topic": "named-entity-recognition",
+      "command": [
+        "python",
+        "machine-learning/natural-language-processing/named-entity-recognition/python/example.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.073116,
+      "output": {
+        "training": [
+          [
+            "John",
+            "visits",
+            "Paris"
+          ],
+          [
+            "Mary",
+            "visits",
+            "Rome"
+          ],
+          [
+            "New",
+            "York",
+            "shines"
+          ]
+        ],
+        "gold": [
+          [
+            "B-PER",
+            "O",
+            "B-LOC"
+          ],
+          [
+            "B-PER",
+            "O",
+            "B-LOC"
+          ],
+          [
+            "B-LOC",
+            "I-LOC",
+            "O"
+          ]
+        ],
+        "baseline": "BIO feature CRF",
+        "features": 18,
+        "initial_loss": 3.713572,
+        "final_loss": 0.155776,
+        "query": {
+          "tokens": [
+            "John",
+            "visits",
+            "Paris"
+          ],
+          "labels": [
+            "B-PER",
+            "O",
+            "B-LOC"
+          ],
+          "spans": [
+            [
+              "PER",
+              0,
+              1
+            ],
+            [
+              "LOC",
+              2,
+              3
+            ]
+          ]
+        },
+        "unknown_query": {
+          "tokens": [
+            "Alice",
+            "visits",
+            "Rome"
+          ],
+          "labels": [
+            "B-PER",
+            "O",
+            "B-LOC"
+          ],
+          "spans": [
+            [
+              "PER",
+              0,
+              1
+            ],
+            [
+              "LOC",
+              2,
+              3
+            ]
+          ]
+        },
+        "training_metrics": {
+          "true_positive": 5,
+          "predicted": 5,
+          "gold": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "token_accuracy": 1.0
+        }
+      }
+    },
+    {
+      "topic": "conditional-random-fields",
+      "command": [
+        "python",
+        "machine-learning/natural-language-processing/conditional-random-fields/python/example.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.06079,
+      "output": {
+        "features": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "gold": [
+          "A",
+          "B"
+        ],
+        "initial_log_partition": 1.386294,
+        "initial_loss": 1.386294,
+        "final_regularized_loss": 0.050036,
+        "status": "iteration-budget",
+        "updates": 80,
+        "predicted": [
+          "A",
+          "B"
+        ],
+        "conditional_probability": 0.984514,
+        "token_marginals": [
+          [
+            0.991964,
+            0.008036
+          ],
+          [
+            0.008036,
+            0.991964
+          ]
+        ],
+        "trainable_groups": [
+          "emission",
+          "transition",
+          "start",
+          "end"
+        ]
+      }
+    },
+    {
+      "topic": "n-gram-language-models",
+      "command": [
+        "python",
+        "machine-learning/natural-language-processing/n-gram-language-models/python/example.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.065219,
+      "output": {
+        "training": [
+          "a b",
+          "a a"
+        ],
+        "tokens": [
+          "<UNK>",
+          "a",
+          "b",
+          "<EOS>"
+        ],
+        "start_probabilities": [
+          0.16666666666666666,
+          0.5,
+          0.16666666666666666,
+          0.16666666666666666
+        ],
+        "query": "a b",
+        "log_probability": -2.8622008809294686,
+        "perplexity": 2.596247050925552,
+        "generated": [
+          "a"
+        ]
+      }
+    },
+    {
+      "topic": "cyk-parsing",
+      "command": [
+        "python",
+        "machine-learning/natural-language-processing/cyk-parsing/python/example.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.051525,
+      "output": {
+        "start": "S",
+        "rules": [
+          [
+            "S",
+            [
+              "A",
+              "C"
+            ]
+          ],
+          [
+            "C",
+            [
+              "A",
+              "B"
+            ]
+          ],
+          [
+            "A",
+            [
+              "a"
+            ]
+          ],
+          [
+            "B",
+            [
+              "b"
+            ]
+          ]
+        ],
+        "tokens": [
+          "a",
+          "a",
+          "b"
+        ],
+        "recognized": true,
+        "tree": [
+          "S",
+          [
+            "A",
+            "a"
+          ],
+          [
+            "C",
+            [
+              "A",
+              "a"
+            ],
+            [
+              "B",
+              "b"
+            ]
+          ]
+        ],
+        "chart": {
+          "(0, 1)": [
+            "A"
+          ],
+          "(0, 2)": [],
+          "(0, 3)": [
+            "S"
+          ],
+          "(1, 2)": [
+            "A"
+          ],
+          "(1, 3)": [
+            "C"
+          ],
+          "(2, 3)": [
+            "B"
+          ]
+        },
+        "unknown": false
+      }
+    }
+  ],
+  "network": false,
+  "pretrained_weights": false,
+  "bert_gpt_training": "head only;backbone frozen"
+}

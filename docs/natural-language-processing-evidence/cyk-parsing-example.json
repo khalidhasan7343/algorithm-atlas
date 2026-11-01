@@ -1,0 +1,84 @@
+{
+  "topic": "cyk-parsing",
+  "command": [
+    "python",
+    "machine-learning/natural-language-processing/cyk-parsing/python/example.py"
+  ],
+  "returncode": 0,
+  "output": "{\"start\": \"S\", \"rules\": [[\"S\", [\"A\", \"C\"]], [\"C\", [\"A\", \"B\"]], [\"A\", [\"a\"]], [\"B\", [\"b\"]]], \"tokens\": [\"a\", \"a\", \"b\"], \"recognized\": true, \"tree\": [\"S\", [\"A\", \"a\"], [\"C\", [\"A\", \"a\"], [\"B\", \"b\"]]], \"chart\": {\"(0, 1)\": [\"A\"], \"(0, 2)\": [], \"(0, 3)\": [\"S\"], \"(1, 2)\": [\"A\"], \"(1, 3)\": [\"C\"], \"(2, 3)\": [\"B\"]}, \"unknown\": false}\n",
+  "parsed": {
+    "start": "S",
+    "rules": [
+      [
+        "S",
+        [
+          "A",
+          "C"
+        ]
+      ],
+      [
+        "C",
+        [
+          "A",
+          "B"
+        ]
+      ],
+      [
+        "A",
+        [
+          "a"
+        ]
+      ],
+      [
+        "B",
+        [
+          "b"
+        ]
+      ]
+    ],
+    "tokens": [
+      "a",
+      "a",
+      "b"
+    ],
+    "recognized": true,
+    "tree": [
+      "S",
+      [
+        "A",
+        "a"
+      ],
+      [
+        "C",
+        [
+          "A",
+          "a"
+        ],
+        [
+          "B",
+          "b"
+        ]
+      ]
+    ],
+    "chart": {
+      "(0, 1)": [
+        "A"
+      ],
+      "(0, 2)": [],
+      "(0, 3)": [
+        "S"
+      ],
+      "(1, 2)": [
+        "A"
+      ],
+      "(1, 3)": [
+        "C"
+      ],
+      "(2, 3)": [
+        "B"
+      ]
+    },
+    "unknown": false
+  },
+  "sections": 25
+}

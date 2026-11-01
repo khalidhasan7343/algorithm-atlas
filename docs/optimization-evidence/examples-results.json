@@ -1,0 +1,102 @@
+[
+  {
+    "topic": "batch-gradient-descent",
+    "command": [
+      "python",
+      "machine-learning/optimization/batch-gradient-descent/python/example.py"
+    ],
+    "returncode": 0,
+    "output": "{\"analytical\": [1.0, -2.0], \"converged\": true, \"gradient_evaluations\": 141, \"initial\": [3.0, 1.0], \"iterations\": 140, \"learning_rate\": 0.1, \"objective\": 0.0, \"objective_evaluations\": 141, \"status\": \"gradient-tolerance\", \"updates\": 140, \"x\": [1.0, -1.99999999]}\n",
+    "sections": 25
+  },
+  {
+    "topic": "stochastic-gradient-descent",
+    "command": [
+      "python",
+      "machine-learning/optimization/stochastic-gradient-descent/python/example.py"
+    ],
+    "returncode": 0,
+    "output": "{\"analytical\": [1.0, -2.0], \"converged\": true, \"gradient_evaluations\": 141, \"initial\": [3.0, 1.0], \"iterations\": 20, \"learning_rate\": 0.1, \"objective\": 0.0, \"objective_evaluations\": 21, \"status\": \"gradient-tolerance\", \"updates\": 120, \"x\": [1.0, -2.0]}\n",
+    "sections": 25
+  },
+  {
+    "topic": "mini-batch-gradient-descent",
+    "command": [
+      "python",
+      "machine-learning/optimization/mini-batch-gradient-descent/python/example.py"
+    ],
+    "returncode": 0,
+    "output": "{\"analytical\": [1.0, -2.0], \"converged\": true, \"gradient_evaluations\": 177, \"initial\": [3.0, 1.0], \"iterations\": 44, \"learning_rate\": 0.1, \"objective\": 0.0, \"objective_evaluations\": 45, \"status\": \"gradient-tolerance\", \"updates\": 132, \"x\": [1.0, -1.99999999]}\n",
+    "sections": 25
+  },
+  {
+    "topic": "momentum",
+    "command": [
+      "python",
+      "machine-learning/optimization/momentum/python/example.py"
+    ],
+    "returncode": 0,
+    "output": "{\"converged\": true, \"gradient_norm\": 4.3e-09, \"initial\": [3.0, 1.0], \"iterations\": 180, \"learning_rate\": 0.1, \"objective\": -9.0, \"objective_evaluations\": 181, \"status\": \"gradient-tolerance\", \"task_optimum\": [1.0, -2.0], \"updates\": 180, \"x\": [1.0, -2.0]}\n",
+    "sections": 25
+  },
+  {
+    "topic": "rmsprop",
+    "command": [
+      "python",
+      "machine-learning/optimization/rmsprop/python/example.py"
+    ],
+    "returncode": 0,
+    "output": "{\"converged\": true, \"gradient_norm\": 2.7e-09, \"initial\": [3.0, 1.0], \"iterations\": 362, \"learning_rate\": 0.01, \"objective\": -9.0, \"objective_evaluations\": 363, \"status\": \"gradient-tolerance\", \"task_optimum\": [1.0, -2.0], \"updates\": 362, \"x\": [1.0, -2.0]}\n",
+    "sections": 25
+  },
+  {
+    "topic": "adam",
+    "command": [
+      "python",
+      "machine-learning/optimization/adam/python/example.py"
+    ],
+    "returncode": 0,
+    "output": "{\"converged\": true, \"gradient_norm\": 7.7e-09, \"initial\": [3.0, 1.0], \"iterations\": 387, \"learning_rate\": 0.05, \"objective\": -9.0, \"objective_evaluations\": 388, \"status\": \"gradient-tolerance\", \"task_optimum\": [1.0, -2.0], \"updates\": 387, \"x\": [1.0, -2.0]}\n",
+    "sections": 25
+  },
+  {
+    "topic": "adamw",
+    "command": [
+      "python",
+      "machine-learning/optimization/adamw/python/example.py"
+    ],
+    "returncode": 0,
+    "output": "{\"converged\": false, \"gradient_norm\": 0.0072123206, \"initial\": [3.0, 1.0], \"iterations\": 1000, \"learning_rate\": 0.05, \"objective\": -8.999986995608, \"objective_evaluations\": 1001, \"status\": \"iteration-budget\", \"task_optimum\": [1.0, -2.0], \"updates\": 1000, \"x\": [0.99639384, -2.0]}\n",
+    "sections": 25
+  },
+  {
+    "topic": "l-bfgs",
+    "command": [
+      "python",
+      "machine-learning/optimization/l-bfgs/python/example.py"
+    ],
+    "returncode": 0,
+    "output": "{\"analytical\": [1.0, 1.0], \"converged\": true, \"gradient_evaluations\": 66, \"gradient_norm\": 3.9e-09, \"history_size\": 5, \"initial\": [-1.2, 1.0], \"iterations\": 36, \"objective\": 0.0, \"objective_evaluations\": 66, \"status\": \"gradient-tolerance\", \"x\": [1.0, 1.0]}\n",
+    "sections": 25
+  },
+  {
+    "topic": "genetic-algorithms",
+    "command": [
+      "python",
+      "machine-learning/optimization/genetic-algorithms/python/example.py"
+    ],
+    "returncode": 0,
+    "output": "{\"converged\": true, \"initial_best\": 4.0, \"iterations\": 9, \"known_target_value\": 0, \"objective\": 0.0, \"objective_evaluations\": 111, \"seed\": 22, \"status\": \"target-reached\", \"x\": [1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0]}\n",
+    "sections": 25
+  },
+  {
+    "topic": "simulated-annealing",
+    "command": [
+      "python",
+      "machine-learning/optimization/simulated-annealing/python/example.py"
+    ],
+    "returncode": 0,
+    "output": "{\"converged\": true, \"initial_best\": 6.0, \"iterations\": 48, \"known_target_value\": 0, \"objective\": 0.0, \"objective_evaluations\": 49, \"seed\": 22, \"status\": \"target-reached\", \"x\": [1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0]}\n",
+    "sections": 25
+  }
+]

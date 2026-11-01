@@ -1,0 +1,20 @@
+{
+  "label": "examples-final",
+  "command": [
+    "python",
+    "scripts/verify_time_series_examples.py",
+    "--check-only"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "scripts/verify_time_series_examples.py",
+    "--check-only"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-01T01:13:24.104747+06:00",
+  "elapsed_seconds": 0.94,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/time-series-evidence/examples-final-02.txt"
+}

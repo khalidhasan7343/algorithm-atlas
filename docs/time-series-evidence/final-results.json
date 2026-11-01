@@ -1,0 +1,778 @@
+{
+  "audit-B11": {
+    "label": "audit-B11",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/audit-B11-04.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:42:27.043945+06:00",
+    "elapsed_seconds": 0.966,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/audit-B11-04.txt"
+  },
+  "infrastructure-B11": {
+    "label": "infrastructure-B11",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "tests/test_b11_language_and_scope_policy.py",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/test_b11_language_and_scope_policy.py",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/infrastructure-B11-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:32:01.892865+06:00",
+    "elapsed_seconds": 0.441,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/infrastructure-B11-01.txt"
+  },
+  "recursions": {
+    "label": "recursions",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-k",
+      "exact_recursion or hand_states or innovations_use or independent_seasonal_innovation or exact_multiplicative or independent_design",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-k",
+      "exact_recursion or hand_states or innovations_use or independent_seasonal_innovation or exact_multiplicative or independent_design",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/recursions-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:36:21.464909+06:00",
+    "elapsed_seconds": 0.624,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/recursions-01.txt"
+  },
+  "estimation": {
+    "label": "estimation",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-k",
+      "estimation or normal_equations or approved_b10_optimizer or one_baum",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-k",
+      "estimation or normal_equations or approved_b10_optimizer or one_baum",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/estimation-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:36:21.452454+06:00",
+    "elapsed_seconds": 0.824,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/estimation-01.txt"
+  },
+  "alignment": {
+    "label": "alignment",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-k",
+      "forecast or alignment",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-k",
+      "forecast or alignment",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/alignment-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:36:21.465912+06:00",
+    "elapsed_seconds": 0.696,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/alignment-01.txt"
+  },
+  "inverse-differencing": {
+    "label": "inverse-differencing",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-k",
+      "difference or differencing",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-k",
+      "difference or differencing",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/inverse-differencing-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:36:21.460202+06:00",
+    "elapsed_seconds": 0.724,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/inverse-differencing-01.txt"
+  },
+  "seasonal": {
+    "label": "seasonal",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-k",
+      "seasonal or holt",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-k",
+      "seasonal or holt",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/seasonal-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:36:21.469171+06:00",
+    "elapsed_seconds": 0.881,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/seasonal-01.txt"
+  },
+  "oracle": {
+    "label": "oracle",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-m",
+      "oracle",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-m",
+      "oracle",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/oracle-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:36:21.468302+06:00",
+    "elapsed_seconds": 0.894,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/oracle-01.txt"
+  },
+  "hmm-inference": {
+    "label": "hmm-inference",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series/hidden-markov-models",
+      "-k",
+      "enumeration or one_state or impossible or long_tiny",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series/hidden-markov-models",
+      "-k",
+      "enumeration or one_state or impossible or long_tiny",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/hmm-inference-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:36:21.475882+06:00",
+    "elapsed_seconds": 0.654,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/hmm-inference-01.txt"
+  },
+  "hmm-em": {
+    "label": "hmm-em",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series/hidden-markov-models",
+      "-k",
+      "baum or em_monotonicity or singleton or unreachable or one_state",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series/hidden-markov-models",
+      "-k",
+      "baum or em_monotonicity or singleton or unreachable or one_state",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/hmm-em-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:36:21.481268+06:00",
+    "elapsed_seconds": 0.872,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/hmm-em-01.txt"
+  },
+  "numerical": {
+    "label": "numerical",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-m",
+      "numerical",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-m",
+      "numerical",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/numerical-02.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:42:28.036577+06:00",
+    "elapsed_seconds": 0.241,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/numerical-02.txt"
+  },
+  "reproducibility": {
+    "label": "reproducibility",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-k",
+      "seeded or repeated or ownership",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-k",
+      "seeded or repeated or ownership",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/reproducibility-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:36:21.502012+06:00",
+    "elapsed_seconds": 0.875,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/reproducibility-01.txt"
+  },
+  "invalid-input": {
+    "label": "invalid-input",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-k",
+      "invalid or reject or insufficient or impossible",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-k",
+      "invalid or reject or insufficient or impossible",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/invalid-input-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:36:21.484611+06:00",
+    "elapsed_seconds": 0.779,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/invalid-input-01.txt"
+  },
+  "leakage": {
+    "label": "leakage",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-k",
+      "leakage or chronological or training_only",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-k",
+      "leakage or chronological or training_only",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/leakage-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:36:21.563313+06:00",
+    "elapsed_seconds": 0.992,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/leakage-01.txt"
+  },
+  "synthetic": {
+    "label": "synthetic",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-k",
+      "constant or trend or seasonal_ar_estimation or random_walk or ma1_css or ar1_estimation or seeded_multisequence",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series",
+      "-k",
+      "constant or trend or seasonal_ar_estimation or random_walk or ma1_css or ar1_estimation or seeded_multisequence",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/synthetic-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:36:21.615162+06:00",
+    "elapsed_seconds": 0.84,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/synthetic-01.txt"
+  },
+  "B1": {
+    "label": "B1",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/regression",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/regression",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/B1-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:33:06.577166+06:00",
+    "elapsed_seconds": 2.187,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/B1-01.txt"
+  },
+  "B2": {
+    "label": "B2",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/classification",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/supervised-learning/classification",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/B2-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:33:06.578399+06:00",
+    "elapsed_seconds": 2.351,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/B2-01.txt"
+  },
+  "B3": {
+    "label": "B3",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/ensemble-methods",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/ensemble-methods",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/B3-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:33:06.584458+06:00",
+    "elapsed_seconds": 2.237,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/B3-01.txt"
+  },
+  "B4": {
+    "label": "B4",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/clustering",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/clustering",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/B4-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:33:06.589503+06:00",
+    "elapsed_seconds": 2.098,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/B4-01.txt"
+  },
+  "B5": {
+    "label": "B5",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/dimensionality-reduction",
+      "machine-learning/deep-learning/vanilla-autoencoders",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/dimensionality-reduction",
+      "machine-learning/deep-learning/vanilla-autoencoders",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/B5-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:33:06.585288+06:00",
+    "elapsed_seconds": 2.011,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/B5-01.txt"
+  },
+  "B6": {
+    "label": "B6",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/association-rule-learning",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/unsupervised-learning/association-rule-learning",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/B6-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:33:06.591555+06:00",
+    "elapsed_seconds": 2.286,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/B6-01.txt"
+  },
+  "B7": {
+    "label": "B7",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/deep-learning",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/deep-learning",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/B7-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:33:06.592711+06:00",
+    "elapsed_seconds": 2.36,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/B7-01.txt"
+  },
+  "B8": {
+    "label": "B8",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/reinforcement-learning",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/B8-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:33:06.599415+06:00",
+    "elapsed_seconds": 7.901,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/B8-01.txt"
+  },
+  "B9": {
+    "label": "B9",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/graph-learning",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/graph-learning",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/B9-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:33:06.597382+06:00",
+    "elapsed_seconds": 0.889,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/B9-01.txt"
+  },
+  "B10": {
+    "label": "B10",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/optimization",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/optimization",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/B10-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:33:06.607234+06:00",
+    "elapsed_seconds": 1.271,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/B10-01.txt"
+  },
+  "full-suite": {
+    "label": "full-suite",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "--require-cpp",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "--require-cpp",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/full-suite-02.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:42:28.321923+06:00",
+    "elapsed_seconds": 620.361,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/full-suite-02.txt"
+  },
+  "metrics-development": {
+    "label": "metrics-development",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series/tests/test_time_contracts.py",
+      "-k",
+      "nonrepresentable",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "machine-learning/time-series/tests/test_time_contracts.py",
+      "-k",
+      "nonrepresentable",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/metrics-development-02.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:42:26.704448+06:00",
+    "elapsed_seconds": 0.312,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/metrics-development-02.txt"
+  },
+  "educational-training": {
+    "label": "educational-training",
+    "command": [
+      "python",
+      "scripts/evaluate_time_series.py"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "scripts/evaluate_time_series.py"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T00:37:47.324426+06:00",
+    "elapsed_seconds": 0.333,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/educational-training-01.txt"
+  },
+  "documentation-infrastructure": {
+    "label": "documentation-infrastructure",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "tests",
+      "-q"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "tests",
+      "-q",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/time-series-evidence/documentation-infrastructure-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-01T01:13:25.099896+06:00",
+    "elapsed_seconds": 9.505,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/time-series-evidence/documentation-infrastructure-01.txt"
+  }
+}

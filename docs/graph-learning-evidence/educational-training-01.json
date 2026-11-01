@@ -1,0 +1,18 @@
+{
+  "label": "educational-training",
+  "command": [
+    "python",
+    "scripts/evaluate_graph_learning.py"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "scripts/evaluate_graph_learning.py"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-10-31T20:23:45.227755+06:00",
+  "elapsed_seconds": 0.209,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/graph-learning-evidence/educational-training-01.txt"
+}

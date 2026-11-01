@@ -8,16 +8,16 @@ This category preserves **10 original syllabus entries**. Each link points to th
 
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
-| Batch Gradient Descent | [batch-gradient-descent](batch-gradient-descent/README.md) | planned |
-| Stochastic Gradient Descent | [stochastic-gradient-descent](stochastic-gradient-descent/README.md) | planned |
-| Mini-Batch Gradient Descent | [mini-batch-gradient-descent](mini-batch-gradient-descent/README.md) | planned |
-| Momentum | [momentum](momentum/README.md) | planned |
-| RMSProp | [rmsprop](rmsprop/README.md) | planned |
-| Adam | [adam](adam/README.md) | planned |
-| AdamW | [adamw](adamw/README.md) | planned |
-| L-BFGS | [l-bfgs](l-bfgs/README.md) | planned |
-| Genetic Algorithms | [genetic-algorithms](genetic-algorithms/README.md) | planned |
-| Simulated Annealing | [simulated-annealing](simulated-annealing/README.md) | planned |
+| Batch Gradient Descent | [batch-gradient-descent](batch-gradient-descent/README.md) | complete |
+| Stochastic Gradient Descent | [stochastic-gradient-descent](stochastic-gradient-descent/README.md) | complete |
+| Mini-Batch Gradient Descent | [mini-batch-gradient-descent](mini-batch-gradient-descent/README.md) | complete |
+| Momentum | [momentum](momentum/README.md) | complete |
+| RMSProp | [rmsprop](rmsprop/README.md) | complete |
+| Adam | [adam](adam/README.md) | complete |
+| AdamW | [adamw](adamw/README.md) | complete |
+| L-BFGS | [l-bfgs](l-bfgs/README.md) | complete |
+| Genetic Algorithms | [genetic-algorithms](genetic-algorithms/README.md) | complete |
+| Simulated Annealing | [simulated-annealing](simulated-annealing/README.md) | complete |
 
 ## Learning and contribution scope
 

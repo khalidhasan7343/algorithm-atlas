@@ -1,0 +1,4 @@
+27 seeded training/planning records saved to docs/reinforcement-learning-evidence/educational-training-results.json
+DDPG 201 {'mean_return': -0.0048382881638611, 'mean_length': 1.0} {'mean_return': -0.022486716494599848, 'mean_length': 1.0}
+DDPG 202 {'mean_return': -0.13825358095508172, 'mean_length': 1.0} {'mean_return': -0.010614183228502362, 'mean_length': 1.0}
+DDPG 203 {'mean_return': -0.046833011794159676, 'mean_length': 1.0} {'mean_return': -0.007393678860195248, 'mean_length': 1.0}
