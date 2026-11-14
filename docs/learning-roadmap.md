@@ -115,7 +115,7 @@ Choose branches according to the structure of the problem:
 
 Follow the prerequisites rather than treating levels as a fixed schedule. For each available completed topic, read its intuition and contract, predict a small example's output, inspect the implementation, run its documented tests, and explain its complexity in your own words. For unimplemented topics, use the linked planning notes to understand scope and prerequisites; runnable material follows only within an approved category.
 
-Contributors should consult the [development guide](development.md) and [progress tracker](progress.md). Complete only the three B12 canonicals in three batches,preserve all previous learners and blocked DPO,and stop after verified Phase24 review delivery.
+Contributors should consult the [development guide](development.md) and [progress tracker](progress.md). Phase26 is audit/stabilization of B1–B13 only:preserve all previous learners and blocked DPO,make only minimal confirmed fixes,and stop after verified final-audit delivery for owner approval.
 
 
 ## Graph Algorithms learning sequence

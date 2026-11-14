@@ -68,7 +68,7 @@ Fit retains O(np) checked input, O(nd) conservative recursive-index workspace an
 
 ## 13. Python Implementation
 
-`CARTClassifier(max_depth=5, min_samples_leaf=1, min_impurity_decrease=0.0)` supports multiclass fit/predict/predict_proba/accuracy score. Depth is a native integer 1..16, leaf size 1..1024 and minimum root-normalized reduction in [0,1]. Fit n≤2048,p≤32; shared cell/magnitude/query caps apply. Labels are homogeneous int64-compatible integers or nonempty strings, at most 32 classes; one class is permitted. Inspect tree_, depth_, n_leaves_ and n_features_in_. Frozen nodes store distribution tuples, sample count, impurity, feature/threshold and children. Probability outputs(m,c) are empirical leaf frequencies; predictions(m,) retain original labels. No pruning, sample weights or categorical/missing-value inference.
+[`python/solution.py`](python/solution.py) is the implementation and [`tests/test_python.py`](tests/test_python.py) holds its tests. `CARTClassifier(max_depth=5, min_samples_leaf=1, min_impurity_decrease=0.0)` supports multiclass fit/predict/predict_proba/accuracy score. Depth is a native integer 1..16, leaf size 1..1024 and minimum root-normalized reduction in [0,1]. Fit n≤2048,p≤32; shared cell/magnitude/query caps apply. Labels are homogeneous int64-compatible integers or nonempty strings, at most 32 classes; one class is permitted. Inspect tree_, depth_, n_leaves_ and n_features_in_. Frozen nodes store distribution tuples, sample count, impurity, feature/threshold and children. Probability outputs(m,c) are empirical leaf frequencies; predictions(m,) retain original labels. No pruning, sample weights or categorical/missing-value inference.
 
 ## 14. C++ Implementation
 

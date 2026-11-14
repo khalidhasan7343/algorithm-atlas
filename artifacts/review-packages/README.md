@@ -1,6 +1,6 @@
 # Phase review packages
 
-**Current checkpoint:** Phase23 B11 is owner-approved; Phase24 B12 owner review is pending. B8 remains9 completed+1 intentionally blocked. Older chronological paragraphs retain their handoff-time statuses; current approvals are recorded in catalog.yaml.
+**Current checkpoint:** Phase25 B13 is owner-approved; the Phase26 final B1–B13 ML audit awaits owner approval. B8 remains9 completed+1 intentionally blocked. Older chronological paragraphs retain their handoff-time statuses; current approvals are recorded in catalog.yaml.
 
 Six existing ZIPs and twelve checksum/verification sidecars were relocated without changing their bytes (6,919,849 ZIP bytes total). Five package sets were already tracked. The Graph set was local and untracked; cleanup preserves that status. None was ignored. Availability below describes the working checkout at maintenance time, not a guarantee that local untracked files exist in a fresh clone.
 

@@ -6,6 +6,50 @@ Identifying unusual observations under explicit reference-distribution assumptio
 
 This category preserves **3 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
+
+## Unsupervised anomaly detection
+
+Fit unlabeled reference features to identify unusual observations. Isolation Forest uses random partitions, One-Class SVM optimizes kernel support, and LOF compares local reachability densities. Supervised evaluation labels never enter fitting.
+
+## Outlier versus novelty detection
+
+Isolation Forest and One-Class SVM support new query observations. This LOF canonical scores only its training set; supplying query X raises an explicit error. Adding queries to the reference set changes neighborhoods and is not the same model.
+
+## Mathematical comparison and canonical lessons
+
+| Method | Mechanism | High anomaly raw score | Decision/threshold |
+| --- | --- | --- | --- |
+| Isolation Forest | Random isolation trees, corrected expected path | Positive paper score | threshold minus raw; auto .5 |
+| One-Class SVM | PSD RBF dual, capped simplex, feasible pair updates | Negative kernel normality | g minus KKT rho; nu is not contamination |
+| LOF | All tied k-neighbors, reachability density ratios | LOF including controlled positive infinity | training cutoff minus raw with extended tie rules; auto 1.5 |
+
+- [Isolation Forest](isolation-forest/README.md)
+- [One-Class SVM](one-class-svm/README.md)
+- [Local Outlier Factor (LOF)](local-outlier-factor/README.md)
+
+## Score interpretation, thresholds and contamination
+
+Prediction +1 means inlier and -1 means outlier. Nonnegative decisions include the boundary as inlier. Scores are not calibrated anomaly probabilities. Numeric IF/LOF contamination in (0,.5] selects the linear training-score quantile at1-f. Ties remain inliers; do not force an exact anomaly count. Positive weight on an infinite quantile endpoint gives an infinite threshold; infinite-score boundary ties have decision0, avoiding undefined infinity-infinity. Nu defines the SVM dual cap and its own KKT boundary, not a separate label quota.
+
+## Numerical stability and degeneracies
+
+Isolation trees keep nonempty splits, bounded depth and exact harmonic corrections; a one-sample normalization is neutral .5. SVM preserves equality/box feasibility, tracks actual objective/KKT gaps and derives rho from free vectors or justified bounds. At nu1 the dual is fixed and rho uses a valid finite interval endpoint. LOF excludes self and includes all k-distance ties. Its duplicate extension uses a common-epsilon limit,log means and density ratios; true structural infinity is distinguished from display overflow. No arbitrary finite density epsilon is used.
+
+## Computational complexity and resource limits
+
+IF construction is bounded by tree count,subsample size,features and depth;scoring traverses each tree. SVM stores a dense n-by-n Gram matrix and performs bounded feasible pair-coordinate steps. LOF uses brute-force n-squared distances and tie-inclusive neighborhoods,not an indexed-neighbor scaling claim. Training n<=256, features<=32;query rows<=1024 for supported novelty methods. No GPU or download.
+
+## Evaluation methodology and reproducible examples
+
+Use declared deterministic synthetic generators and unseen evaluation sets for IF/SVM;label LOF evaluation explicitly as training-set detection. Evaluate high anomaly scores with tie-aware ROC-AUC and grouped-step average precision,plus precision/recall/F1 and confusion counts with -1 as the positive class. Single-class or zero-denominator metrics have explicit unavailable/zero semantics. Independent reference comparisons align randomness,scales,kernel/nu or neighbor definitions; fixed-k stabilized sklearn LOF is not identical on ties/duplicate degeneracies.
+
+- [Isolation Forest](isolation-forest/python/example.py)
+- [One-Class SVM](one-class-svm/python/example.py)
+- [Local Outlier Factor (LOF)](local-outlier-factor/python/example.py)
+
+Study isolation paths,then constrained kernel support,then local reachability ratios. [Locked scope](../../docs/anomaly-detection-scope.md); [exact contracts](../../docs/anomaly-detection-conventions.md); [batch evidence](../../docs/anomaly-detection-checkpoints.md).
+
+Phase23 B11 is owner-approved;new Phase24 B12 owner review remains pending. Preserve B1-B11/DSA and blocked DPO. No Phase25,other category,commit,push,tag,release or publication.
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
 | Isolation Forest | [isolation-forest](isolation-forest/README.md) | complete |
@@ -19,3 +63,8 @@ Choose prerequisites through the [learning roadmap](../../docs/learning-roadmap.
 Completion is shown by the catalog status and topic artifacts. The current implementation authorization is recorded in the progress tracker; other categories require explicit user approval.
 
 [Project home](../../README.md) · [Complete index](../../docs/algorithm-index.md) · [Progress](../../docs/progress.md)
+
+
+## Current final-audit checkpoint
+
+This category implementation review is owner-approved in the current catalog. Historical handoff reports retain generation-time states. Phase26 audits all B1–B13; final B Track owner approval remains pending. DPO remains blocked;no C1 or publication.

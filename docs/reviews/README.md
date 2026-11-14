@@ -1,6 +1,6 @@
 # Phase review reports
 
-**Current checkpoint:** Phase23 B11 is owner-approved; Phase24 B12 owner review is pending. B8 remains9 completed+1 intentionally blocked. Older chronological paragraphs retain their handoff-time statuses; current approvals are recorded in catalog.yaml.
+**Current checkpoint:** Phase25 B13 is owner-approved; the Phase26 final B1–B13 ML audit awaits owner approval. B8 remains9 completed+1 intentionally blocked. Older chronological paragraphs retain their handoff-time statuses; current approvals are recorded in catalog.yaml.
 
 Review and audit reports are organized by canonical phase name. Their filenames and historical findings are preserved; relative links and live artifact paths were adjusted during the [root cleanup](../maintenance/root-cleanup/REPORT.md). The owner officially approved completed Phase 10 on 2026-10-24 (Asia/Dhaka), authorizing combined Phase 11 Number Theory and Phase 12 Two Pointers & Sliding Window in normal roadmap order. Phases 8 and 9 remain approved. The two new owner approvals remain independently pending; see [Number Theory checkpoints](../number-theory-checkpoints.md) and [window checkpoints](../two-pointers-sliding-window-checkpoints.md). Historical reports preserve their handoff-time statements.
 

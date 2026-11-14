@@ -1,0 +1,1143 @@
+{
+  "executed_at": "2026-11-14T15:47:35.252973+06:00",
+  "python": "3.14.2",
+  "total_checks": 251,
+  "passed_checks": 251,
+  "all_passed": true,
+  "scripts": {
+    "oracle_b1": {
+      "script": "scripts/ml_final_audit_oracles/oracle_b1.py",
+      "returncode": 0,
+      "elapsed_seconds": 0.81,
+      "passed": 22,
+      "total": 22,
+      "checks": [
+        {
+          "status": "PASS",
+          "check": "OLS normal-equation agreement "
+        },
+        {
+          "status": "PASS",
+          "check": "OLS residual orthogonality "
+        },
+        {
+          "status": "PASS",
+          "check": "Ridge closed form alpha=0.3 "
+        },
+        {
+          "status": "PASS",
+          "check": "Ridge closed form alpha=5.0 "
+        },
+        {
+          "status": "PASS",
+          "check": "Lasso objective <= sklearn+1e-10 alpha=0.05 0.202409514885 vs 0.202409514885"
+        },
+        {
+          "status": "PASS",
+          "check": "Lasso independent subgradient optimality alpha=0.05 "
+        },
+        {
+          "status": "PASS",
+          "check": "ENet objective <= sklearn+1e-10 alpha=0.05 "
+        },
+        {
+          "status": "PASS",
+          "check": "Lasso objective <= sklearn+1e-10 alpha=0.5 1.609751607306 vs 1.609751607306"
+        },
+        {
+          "status": "PASS",
+          "check": "Lasso independent subgradient optimality alpha=0.5 "
+        },
+        {
+          "status": "PASS",
+          "check": "ENet objective <= sklearn+1e-10 alpha=0.5 "
+        },
+        {
+          "status": "PASS",
+          "check": "Polynomial expansion matches sklearn column set "
+        },
+        {
+          "status": "PASS",
+          "check": "Polynomial exact cubic recovery "
+        },
+        {
+          "status": "PASS",
+          "check": "Tree depth-1 brute-force split (1, -0.10030713126470092) vs (1, np.float64(-0.10030713126470092))"
+        },
+        {
+          "status": "PASS",
+          "check": "Tree depth-4 sklearn prediction agreement "
+        },
+        {
+          "status": "PASS",
+          "check": "SVR linear vs libsvm predictions max diff 4.73e-07; gap=2.79e-09"
+        },
+        {
+          "status": "PASS",
+          "check": "SVR linear KKT: free SVs lie on tube boundary [0.05 0.05 0.05]"
+        },
+        {
+          "status": "PASS",
+          "check": "SVR linear KKT: inside-tube points have beta=0 "
+        },
+        {
+          "status": "PASS",
+          "check": "SVR linear sum beta = 0 "
+        },
+        {
+          "status": "PASS",
+          "check": "SVR rbf vs libsvm predictions max diff 2.33e-08; gap=3.98e-09"
+        },
+        {
+          "status": "PASS",
+          "check": "SVR rbf KKT: free SVs lie on tube boundary [0.05 0.05 0.05 0.05 0.05]"
+        },
+        {
+          "status": "PASS",
+          "check": "SVR rbf KKT: inside-tube points have beta=0 "
+        },
+        {
+          "status": "PASS",
+          "check": "SVR rbf sum beta = 0 "
+        }
+      ],
+      "stderr_tail": ""
+    },
+    "oracle_b2": {
+      "script": "scripts/ml_final_audit_oracles/oracle_b2.py",
+      "returncode": 0,
+      "elapsed_seconds": 0.64,
+      "passed": 19,
+      "total": 19,
+      "checks": [
+        {
+          "status": "PASS",
+          "check": "Logistic coef vs sklearn (C=1/(n*alpha)) [ 0.65266527 -1.00313062  0.47478597] [ 0.65266527 -1.00313062  0.47478597]"
+        },
+        {
+          "status": "PASS",
+          "check": "Logistic independent gradient ~0 "
+        },
+        {
+          "status": "PASS",
+          "check": "Logistic finite-difference gradient "
+        },
+        {
+          "status": "PASS",
+          "check": "GaussianNB predict_proba vs sklearn "
+        },
+        {
+          "status": "PASS",
+          "check": "GaussianNB hand joint log-likelihood "
+        },
+        {
+          "status": "PASS",
+          "check": "MultinomialNB log probs vs sklearn "
+        },
+        {
+          "status": "PASS",
+          "check": "BernoulliNB vs sklearn "
+        },
+        {
+          "status": "PASS",
+          "check": "KNN neighbors & distances vs sklearn "
+        },
+        {
+          "status": "PASS",
+          "check": "LDA predict_proba vs sklearn(lsqr) "
+        },
+        {
+          "status": "PASS",
+          "check": "LDA pooled covariance matches hand formula "
+        },
+        {
+          "status": "PASS",
+          "check": "QDA predict_proba vs sklearn "
+        },
+        {
+          "status": "PASS",
+          "check": "SVM linear coef/intercept vs libsvm [ 1.02411965 -1.82806306  0.55570175] [ 1.02411949 -1.82806275  0.55570167] gap=8.8e-09"
+        },
+        {
+          "status": "PASS",
+          "check": "SVM primal objective <= libsvm primal + 1e-6 9.544560223 vs 9.544560548"
+        },
+        {
+          "status": "PASS",
+          "check": "CART depth-3 proba vs sklearn "
+        },
+        {
+          "status": "PASS",
+          "check": "ID3 weather root=Outlook gain 0.2467 0 0.24675"
+        },
+        {
+          "status": "PASS",
+          "check": "ID3 weather training accuracy 1 "
+        },
+        {
+          "status": "PASS",
+          "check": "C4.5 weather categorical root=Outlook ratio 0.156 0 0.1564"
+        },
+        {
+          "status": "PASS",
+          "check": "classification_report vs sklearn "
+        },
+        {
+          "status": "PASS",
+          "check": "log_loss vs sklearn "
+        }
+      ],
+      "stderr_tail": ""
+    },
+    "oracle_b3": {
+      "script": "scripts/ml_final_audit_oracles/oracle_b3.py",
+      "returncode": 0,
+      "elapsed_seconds": 0.73,
+      "passed": 17,
+      "total": 17,
+      "checks": [
+        {
+          "status": "PASS",
+          "check": "GBM predictions vs sklearn 4.4e-16"
+        },
+        {
+          "status": "PASS",
+          "check": "GBM train loss monotone nonincreasing "
+        },
+        {
+          "status": "PASS",
+          "check": "XGBoost lambda=0 stump == GBM stump "
+        },
+        {
+          "status": "PASS",
+          "check": "XGBoost leaf values = sum(residual)/(n+lambda) "
+        },
+        {
+          "status": "PASS",
+          "check": "XGBoost gain formula "
+        },
+        {
+          "status": "PASS",
+          "check": "XGBoost split is global max gain "
+        },
+        {
+          "status": "PASS",
+          "check": "AdaBoost estimator weights & errors vs sklearn SAMME [1.55059741 1.84582669 1.60044235] [1.55059741 1.84582669 1.60044235]"
+        },
+        {
+          "status": "PASS",
+          "check": "AdaBoost predictions vs sklearn "
+        },
+        {
+          "status": "PASS",
+          "check": "AdaBoost alpha_1 hand formula "
+        },
+        {
+          "status": "PASS",
+          "check": "AdaBoost weight update hand formula "
+        },
+        {
+          "status": "PASS",
+          "check": "Bagging base trees reach the same optimal training SSE as sklearn trees on recorded bootstrap cohorts "
+        },
+        {
+          "status": "PASS",
+          "check": "Bagging prediction == mean of base predictions "
+        },
+        {
+          "status": "PASS",
+          "check": "Bagging OOB prediction hand computation "
+        },
+        {
+          "status": "PASS",
+          "check": "RF every split uses feature from its sampled candidate subset of size sqrt(p) "
+        },
+        {
+          "status": "PASS",
+          "check": "Stacking OOF predictions reproduce fold-wise sklearn fits (no leakage) "
+        },
+        {
+          "status": "PASS",
+          "check": "Voting hard == normalized vote counts "
+        },
+        {
+          "status": "PASS",
+          "check": "CatBoost ordered TS excludes own/future targets "
+        }
+      ],
+      "stderr_tail": ""
+    },
+    "oracle_b4": {
+      "script": "scripts/ml_final_audit_oracles/oracle_b4.py",
+      "returncode": 0,
+      "elapsed_seconds": 0.72,
+      "passed": 21,
+      "total": 21,
+      "checks": [
+        {
+          "status": "PASS",
+          "check": "KMeans explicit-init centers vs sklearn Lloyd "
+        },
+        {
+          "status": "PASS",
+          "check": "KMeans inertia equals hand SSE and sklearn "
+        },
+        {
+          "status": "PASS",
+          "check": "KMeans fixed point: labels are nearest centers; centers are means "
+        },
+        {
+          "status": "PASS",
+          "check": "Agglomerative single merge heights == scipy max h diff 8.9e-16"
+        },
+        {
+          "status": "PASS",
+          "check": "Agglomerative complete merge heights == scipy max h diff 1.8e-15"
+        },
+        {
+          "status": "PASS",
+          "check": "Agglomerative average merge heights == scipy max h diff 2.2e-16"
+        },
+        {
+          "status": "PASS",
+          "check": "Agglomerative ward merge heights == scipy max h diff 8.9e-16"
+        },
+        {
+          "status": "PASS",
+          "check": "DBSCAN labels == sklearn (ARI 1, same noise set) noise 1/1"
+        },
+        {
+          "status": "PASS",
+          "check": "HDBSCAN labels vs sklearn HDBSCAN (ARI) ARI 1.0000 noise 0/0 probs maxdiff 4.44e-16"
+        },
+        {
+          "status": "PASS",
+          "check": "HDBSCAN MST weight == scipy single-linkage on mutual reachability "
+        },
+        {
+          "status": "PASS",
+          "check": "GMM means/covariances/weights vs sklearn (same init) "
+        },
+        {
+          "status": "PASS",
+          "check": "GMM mean log-likelihood vs sklearn score "
+        },
+        {
+          "status": "PASS",
+          "check": "GMM log-likelihood monotone nondecreasing "
+        },
+        {
+          "status": "PASS",
+          "check": "MeanShift centers vs sklearn 3 vs 3"
+        },
+        {
+          "status": "PASS",
+          "check": "Spectral top eigenvalue 1 with eigenvector \u221d sqrt(degree) "
+        },
+        {
+          "status": "PASS",
+          "check": "Spectral recovers planted clusters (ARI 1) and matches sklearn ARI "
+        },
+        {
+          "status": "PASS",
+          "check": "Spectral precomputed block graph exact partition "
+        },
+        {
+          "status": "PASS",
+          "check": "DIANA first split isolates most-dissimilar point 30 "
+        },
+        {
+          "status": "PASS",
+          "check": "DIANA second split separates {0,1,2} from {10,11} "
+        },
+        {
+          "status": "PASS",
+          "check": "ARI vs sklearn "
+        },
+        {
+          "status": "PASS",
+          "check": "silhouette_samples vs sklearn "
+        }
+      ],
+      "stderr_tail": ""
+    },
+    "oracle_b5": {
+      "script": "scripts/ml_final_audit_oracles/oracle_b5.py",
+      "returncode": 0,
+      "elapsed_seconds": 0.57,
+      "passed": 22,
+      "total": 22,
+      "checks": [
+        {
+          "status": "PASS",
+          "check": "SVD singular values vs numpy "
+        },
+        {
+          "status": "PASS",
+          "check": "SVD reconstruction U S V^T == X "
+        },
+        {
+          "status": "PASS",
+          "check": "SVD orthonormal U and V "
+        },
+        {
+          "status": "PASS",
+          "check": "SVD wide matrix reconstruction "
+        },
+        {
+          "status": "PASS",
+          "check": "SVD rank-deficient: zero singular value, orthonormal completed U "
+        },
+        {
+          "status": "PASS",
+          "check": "PCA explained variance & ratio vs sklearn "
+        },
+        {
+          "status": "PASS",
+          "check": "PCA components equal up to sign & projections equal up to sign "
+        },
+        {
+          "status": "PASS",
+          "check": "PCA inverse_transform of full rank recovers X "
+        },
+        {
+          "status": "PASS",
+          "check": "LDA projection span == scipy generalized eigenvectors span "
+        },
+        {
+          "status": "PASS",
+          "check": "LDA eigenvalues == generalized eigenvalues "
+        },
+        {
+          "status": "PASS",
+          "check": "LDA projection directions proportional to sklearn eigen scalings "
+        },
+        {
+          "status": "PASS",
+          "check": "ICA recovers sources (|corr|>0.99 permutation) [0.99933174 0.99657651 0.99799702]"
+        },
+        {
+          "status": "PASS",
+          "check": "ICA unmixed components are whitened (unit cov) "
+        },
+        {
+          "status": "PASS",
+          "check": "ICA inverse_transform recovers X "
+        },
+        {
+          "status": "PASS",
+          "check": "t-SNE conditional rows have perplexity 4 "
+        },
+        {
+          "status": "PASS",
+          "check": "t-SNE joint P symmetric, sums to 1 "
+        },
+        {
+          "status": "PASS",
+          "check": "t-SNE KL gradient finite difference max 1.9e-10"
+        },
+        {
+          "status": "PASS",
+          "check": "t-SNE KL loss hand formula "
+        },
+        {
+          "status": "PASS",
+          "check": "UMAP sigma calibration: sum exp(-(d-rho)/sigma) = log2(k) "
+        },
+        {
+          "status": "PASS",
+          "check": "UMAP graph symmetric fuzzy union in [0,1] "
+        },
+        {
+          "status": "PASS",
+          "check": "UMAP cross-entropy gradient finite difference max 4.5e-09"
+        },
+        {
+          "status": "PASS",
+          "check": "t-SNE / UMAP Armijo descent histories nonincreasing "
+        }
+      ],
+      "stderr_tail": ""
+    },
+    "oracle_b6": {
+      "script": "scripts/ml_final_audit_oracles/oracle_b6.py",
+      "returncode": 0,
+      "elapsed_seconds": 0.07,
+      "passed": 6,
+      "total": 6,
+      "checks": [
+        {
+          "status": "PASS",
+          "check": "Apriori == brute force on 40 random DBs "
+        },
+        {
+          "status": "PASS",
+          "check": "Eclat == brute force on 40 random DBs "
+        },
+        {
+          "status": "PASS",
+          "check": "FP-Growth == brute force on 40 random DBs "
+        },
+        {
+          "status": "PASS",
+          "check": "Han&Kamber: 13 frequent itemsets, {I1,I2,I3}=2,{I1,I2,I5}=2 "
+        },
+        {
+          "status": "PASS",
+          "check": "Rules: confidence/lift/support exact & complete (16 rules) 16 vs 16"
+        },
+        {
+          "status": "PASS",
+          "check": "Rule {I1,I5}->{I2} conf 1.0 lift 9/7 "
+        }
+      ],
+      "stderr_tail": ""
+    },
+    "oracle_b7": {
+      "script": "scripts/ml_final_audit_oracles/oracle_b7.py",
+      "returncode": 0,
+      "elapsed_seconds": 0.62,
+      "passed": 30,
+      "total": 30,
+      "checks": [
+        {
+          "status": "PASS",
+          "check": "MLP finite-difference gradient max |diff| 1.4e-10"
+        },
+        {
+          "status": "PASS",
+          "check": "CNN stride=1 pad=0 finite-difference gradient max |diff| 3.9e-10"
+        },
+        {
+          "status": "PASS",
+          "check": "CNN stride=2 pad=1 finite-difference gradient max |diff| 1.4e-10"
+        },
+        {
+          "status": "PASS",
+          "check": "CNN cross-correlation == scipy.correlate2d "
+        },
+        {
+          "status": "PASS",
+          "check": "recurrent-neural-networks finite-difference gradient max |diff| 5.7e-10"
+        },
+        {
+          "status": "PASS",
+          "check": "long-short-term-memory finite-difference gradient max |diff| 8.3e-10"
+        },
+        {
+          "status": "PASS",
+          "check": "gated-recurrent-units finite-difference gradient max |diff| 8.4e-10"
+        },
+        {
+          "status": "PASS",
+          "check": "LSTM input adjoint dx finite difference "
+        },
+        {
+          "status": "PASS",
+          "check": "Transformer heads=1 causal=True finite-difference gradient max |diff| 3.6e-09"
+        },
+        {
+          "status": "PASS",
+          "check": "Transformer heads=2 causal=False finite-difference gradient max |diff| 2.9e-09"
+        },
+        {
+          "status": "PASS",
+          "check": "Transformer heads=2 causal=True finite-difference gradient max |diff| 2.9e-09"
+        },
+        {
+          "status": "PASS",
+          "check": "Transformer causal attention: positions 0..2 unaffected by position 3 "
+        },
+        {
+          "status": "PASS",
+          "check": "attention probabilities row-stochastic & masked zeros "
+        },
+        {
+          "status": "PASS",
+          "check": "LayerNorm backward finite difference (x, gamma, beta) "
+        },
+        {
+          "status": "PASS",
+          "check": "ResNet finite-difference gradient max |diff| 2.1e-10"
+        },
+        {
+          "status": "PASS",
+          "check": "Vanilla AE finite-difference gradient "
+        },
+        {
+          "status": "PASS",
+          "check": "Sparse AE finite-difference gradient (L1 term away from kinks) "
+        },
+        {
+          "status": "PASS",
+          "check": "Denoising AE finite-difference gradient (corrupted input, clean target) "
+        },
+        {
+          "status": "PASS",
+          "check": "VAE (fixed reparameterization noise) finite-difference gradient max |diff| 1.5e-09"
+        },
+        {
+          "status": "PASS",
+          "check": "VAE loss == 0.5||R-X||\u00b2/n + analytic Gaussian KL "
+        },
+        {
+          "status": "PASS",
+          "check": "GAN discriminator-parameter gradient FD (generator held fixed by design) "
+        },
+        {
+          "status": "PASS",
+          "check": "GAN discriminator loss == -mean log D(x) - mean log(1-D(G(z))) "
+        },
+        {
+          "status": "PASS",
+          "check": "GAN generator gradient FD (non-saturating loss) "
+        },
+        {
+          "status": "PASS",
+          "check": "DDPM schedule identities "
+        },
+        {
+          "status": "PASS",
+          "check": "DDPM q_sample marginal: mean sqrt(abar)x, std sqrt(1-abar) "
+        },
+        {
+          "status": "PASS",
+          "check": "DDPM epsilon-network finite-difference gradient max |diff| 1.3e-10"
+        },
+        {
+          "status": "PASS",
+          "check": "DDPM reverse mean formula "
+        },
+        {
+          "status": "PASS",
+          "check": "GCN normalized adjacency == D^-1/2 (A+I) D^-1/2 "
+        },
+        {
+          "status": "PASS",
+          "check": "GCN finite-difference gradient max |diff| 2.5e-10"
+        },
+        {
+          "status": "PASS",
+          "check": "MLP seeded training deterministic & global RNG untouched "
+        }
+      ],
+      "stderr_tail": ""
+    },
+    "oracle_b8": {
+      "script": "scripts/ml_final_audit_oracles/oracle_b8.py",
+      "returncode": 0,
+      "elapsed_seconds": 0.18,
+      "passed": 24,
+      "total": 24,
+      "checks": [
+        {
+          "status": "PASS",
+          "check": "Q-learning converges to Bellman-optimal Q* on Chain [[0.81, 0.9], [0.81, 1.0]]"
+        },
+        {
+          "status": "PASS",
+          "check": "Q-learning update hand: q+alpha(r+gamma max q(s')-q) "
+        },
+        {
+          "status": "PASS",
+          "check": "SARSA update uses sampled next action (0.2 not 0.7) "
+        },
+        {
+          "status": "PASS",
+          "check": "SARSA greedy policy on Chain is always right "
+        },
+        {
+          "status": "PASS",
+          "check": "returns(): discounted reward-to-go with bootstrap "
+        },
+        {
+          "status": "PASS",
+          "check": "policy_loss gradient finite difference "
+        },
+        {
+          "status": "PASS",
+          "check": "policy_loss == -mean(w * log pi(a|s)) "
+        },
+        {
+          "status": "PASS",
+          "check": "value_loss gradient finite difference "
+        },
+        {
+          "status": "PASS",
+          "check": "DQN td_targets = r + gamma(1-done)max Q_target "
+        },
+        {
+          "status": "PASS",
+          "check": "DQN loss gradient finite difference "
+        },
+        {
+          "status": "PASS",
+          "check": "REINFORCE gradient finite difference "
+        },
+        {
+          "status": "PASS",
+          "check": "REINFORCE loss == -sum_t gamma^t G_t log pi "
+        },
+        {
+          "status": "PASS",
+          "check": "PPO clipped surrogate gradient finite difference ratios [1.21 1.07 1.33 1.23 1.1  1.09 1.03]"
+        },
+        {
+          "status": "PASS",
+          "check": "PPO: ratio>1+eps with A>0 gives zero gradient and clipped loss "
+        },
+        {
+          "status": "PASS",
+          "check": "DDPG actor gradient (-mean Q(s,mu(s))) finite difference "
+        },
+        {
+          "status": "PASS",
+          "check": "DDPG actions within bounds via tanh scaling "
+        },
+        {
+          "status": "PASS",
+          "check": "DDPG soft update tau*online+(1-tau)*target "
+        },
+        {
+          "status": "PASS",
+          "check": "DDPG td_targets use target actor action "
+        },
+        {
+          "status": "PASS",
+          "check": "MCTS root chooses action 1 (only rewarding path 111) visits [9, 291]"
+        },
+        {
+          "status": "PASS",
+          "check": "UCT formula "
+        },
+        {
+          "status": "PASS",
+          "check": "MCTS visit conservation: root visits == iterations == sum child visits "
+        },
+        {
+          "status": "PASS",
+          "check": "A2C learns the rewarding bandit arm "
+        },
+        {
+          "status": "PASS",
+          "check": "A3C: 3 worker threads, 90 global updates, some stale-snapshot applications (true asynchrony) threads 3 updates 90 stale 3"
+        },
+        {
+          "status": "PASS",
+          "check": "DQN seeded training deterministic & global RNG untouched "
+        }
+      ],
+      "stderr_tail": ""
+    },
+    "oracle_b9": {
+      "script": "scripts/ml_final_audit_oracles/oracle_b9.py",
+      "returncode": 0,
+      "elapsed_seconds": 0.08,
+      "passed": 13,
+      "total": 13,
+      "checks": [
+        {
+          "status": "PASS",
+          "check": "PageRank == exact linear-system stationary vector max diff 2.0e-15"
+        },
+        {
+          "status": "PASS",
+          "check": "Personalized PageRank == linear system with dangling -> v "
+        },
+        {
+          "status": "PASS",
+          "check": "PageRank two-cycle hand = [0.5,0.5] "
+        },
+        {
+          "status": "PASS",
+          "check": "node2vec 2nd-order transition biases (1/p return, 1 common, 1/q outward) [0.14285714 0.         0.57142857 0.28571429] vs [0.14285714 0.         0.57142857 0.28571429]"
+        },
+        {
+          "status": "PASS",
+          "check": "SGNS loss hand formula "
+        },
+        {
+          "status": "PASS",
+          "check": "SGNS gradients finite difference (with repeated negative indices) "
+        },
+        {
+          "status": "PASS",
+          "check": "context_pairs window=1 exact ordered pairs "
+        },
+        {
+          "status": "PASS",
+          "check": "node2vec training loss decreases on fixed sample "
+        },
+        {
+          "status": "PASS",
+          "check": "GCN normalization == D^-1/2(A+I)D^-1/2 (reuses B7) "
+        },
+        {
+          "status": "PASS",
+          "check": "GCN masked cross-entropy + L2 gradient finite difference "
+        },
+        {
+          "status": "PASS",
+          "check": "GCN masked CE loss hand (unknown label -1 excluded) "
+        },
+        {
+          "status": "PASS",
+          "check": "GCN train_mask excludes known-but-unselected labels "
+        },
+        {
+          "status": "PASS",
+          "check": "GCN classifier fits and predicts classes 0..C-1 "
+        }
+      ],
+      "stderr_tail": ""
+    },
+    "oracle_b10": {
+      "script": "scripts/ml_final_audit_oracles/oracle_b10.py",
+      "returncode": 0,
+      "elapsed_seconds": 0.23,
+      "passed": 18,
+      "total": 18,
+      "checks": [
+        {
+          "status": "PASS",
+          "check": "Batch GD trajectory == hand recursion & converges to A^-1 b "
+        },
+        {
+          "status": "PASS",
+          "check": "Momentum two heavy-ball steps hand "
+        },
+        {
+          "status": "PASS",
+          "check": "RMSProp first step hand "
+        },
+        {
+          "status": "PASS",
+          "check": "Adam two bias-corrected steps hand "
+        },
+        {
+          "status": "PASS",
+          "check": "bias_correction(beta,t) == 1-beta^t to 1e-16 relative "
+        },
+        {
+          "status": "PASS",
+          "check": "AdamW == Adam step - lr*wd*mask*x_old "
+        },
+        {
+          "status": "PASS",
+          "check": "SGD trajectory reproduces recorded single-observation batches "
+        },
+        {
+          "status": "PASS",
+          "check": "Mini-batch: disjoint shuffled batches of sizes 4,2 per epoch "
+        },
+        {
+          "status": "PASS",
+          "check": "L-BFGS two-loop == dense recursive inverse-BFGS product "
+        },
+        {
+          "status": "PASS",
+          "check": "L-BFGS Rosenbrock reaches [1,1] like scipy ours [1. 1.] iters 38"
+        },
+        {
+          "status": "PASS",
+          "check": "L-BFGS every accepted step satisfies strong Wolfe "
+        },
+        {
+          "status": "PASS",
+          "check": "Metropolis probability exp(-delta/T), 1 for improvements "
+        },
+        {
+          "status": "PASS",
+          "check": "SA seeded Metropolis chain replay (temperatures, acceptances) exact best 0.0 status iteration-budget"
+        },
+        {
+          "status": "PASS",
+          "check": "GA tournament picks min fitness (ties -> lowest index) "
+        },
+        {
+          "status": "PASS",
+          "check": "GA uniform crossover exact "
+        },
+        {
+          "status": "PASS",
+          "check": "GA bit-flip mutation exact "
+        },
+        {
+          "status": "PASS",
+          "check": "GA elitism: best never worsens; reaches target 0 "
+        },
+        {
+          "status": "PASS",
+          "check": "GA/SA leave global RNG untouched "
+        }
+      ],
+      "stderr_tail": ""
+    },
+    "oracle_b11": {
+      "script": "scripts/ml_final_audit_oracles/oracle_b11.py",
+      "returncode": 0,
+      "elapsed_seconds": 0.15,
+      "passed": 21,
+      "total": 21,
+      "checks": [
+        {
+          "status": "PASS",
+          "check": "SES recursion hand & flat forecast "
+        },
+        {
+          "status": "PASS",
+          "check": "Holt-Winters additive recursion hand "
+        },
+        {
+          "status": "PASS",
+          "check": "Holt-Winters default initial seasonals sum to zero "
+        },
+        {
+          "status": "PASS",
+          "check": "difference [4,1] exact "
+        },
+        {
+          "status": "PASS",
+          "check": "inverse_difference exactly inverts stacked operators "
+        },
+        {
+          "status": "PASS",
+          "check": "ARIMA AR(1) CSS == OLS (intercept, phi) 0.975188,0.607344 vs [0.97518838 0.60734408]"
+        },
+        {
+          "status": "PASS",
+          "check": "ARIMA AR(1) multistep forecast recursion "
+        },
+        {
+          "status": "PASS",
+          "check": "ARIMA MA(1) innovation recursion hand "
+        },
+        {
+          "status": "PASS",
+          "check": "ARIMA(2,0,1) CSS analytic gradient finite difference 5.5e-11"
+        },
+        {
+          "status": "PASS",
+          "check": "SARIMA multiplicative lag polynomials == convolution "
+        },
+        {
+          "status": "PASS",
+          "check": "SARIMA CSS gradient finite difference "
+        },
+        {
+          "status": "PASS",
+          "check": "Prophet coefficients == ridge normal equations (unpenalized intercept/slope) "
+        },
+        {
+          "status": "PASS",
+          "check": "Prophet components sum to total; future design continues time "
+        },
+        {
+          "status": "PASS",
+          "check": "HMM forward log-likelihood == brute-force path sum "
+        },
+        {
+          "status": "PASS",
+          "check": "HMM posterior gamma == brute force "
+        },
+        {
+          "status": "PASS",
+          "check": "HMM xi == brute force "
+        },
+        {
+          "status": "PASS",
+          "check": "HMM Viterbi == argmax path (brute force) "
+        },
+        {
+          "status": "PASS",
+          "check": "Baum-Welch one step == expected counts (pi,A,E) "
+        },
+        {
+          "status": "PASS",
+          "check": "Baum-Welch log-likelihood monotone "
+        },
+        {
+          "status": "PASS",
+          "check": "backtest origins chronological, train_stop==test_start "
+        },
+        {
+          "status": "PASS",
+          "check": "forecast metrics hand (MAE, RMSE, sMAPE, MASE) "
+        }
+      ],
+      "stderr_tail": ""
+    },
+    "oracle_b12": {
+      "script": "scripts/ml_final_audit_oracles/oracle_b12.py",
+      "returncode": 0,
+      "elapsed_seconds": 0.66,
+      "passed": 12,
+      "total": 12,
+      "checks": [
+        {
+          "status": "PASS",
+          "check": "c(n) exact harmonic formula "
+        },
+        {
+          "status": "PASS",
+          "check": "IF scores == 2^(-mean path / c(psi)) via independent traversal "
+        },
+        {
+          "status": "PASS",
+          "check": "IF planted outliers get the 3 highest scores; sklearn agrees on ranking top-3 "
+        },
+        {
+          "status": "PASS",
+          "check": "IF tree leaf counts partition the subsample "
+        },
+        {
+          "status": "PASS",
+          "check": "OCSVM dual objective <= scipy SLSQP + 1e-9 0.0540612302 vs 0.0540612302; status kkt-tolerance"
+        },
+        {
+          "status": "PASS",
+          "check": "OCSVM KKT: free alphas have equal gradient rho; bounds respect sign "
+        },
+        {
+          "status": "PASS",
+          "check": "OCSVM decision == libsvm decision scaled by nu*n; label differences only at |decision|<1e-6 margin points max diff 1.4e-08; boundary mismatches 8"
+        },
+        {
+          "status": "PASS",
+          "check": "LOF scores == -sklearn negative_outlier_factor_ "
+        },
+        {
+          "status": "PASS",
+          "check": "LOF hand formula for one point "
+        },
+        {
+          "status": "PASS",
+          "check": "LOF flags planted outliers (top-3) "
+        },
+        {
+          "status": "PASS",
+          "check": "contamination=3/63 labels exactly the top-3 as -1 "
+        },
+        {
+          "status": "PASS",
+          "check": "roc_auc / average precision vs sklearn (tied scores) "
+        }
+      ],
+      "stderr_tail": ""
+    },
+    "oracle_b13": {
+      "script": "scripts/ml_final_audit_oracles/oracle_b13.py",
+      "returncode": 0,
+      "elapsed_seconds": 0.52,
+      "passed": 26,
+      "total": 26,
+      "checks": [
+        {
+          "status": "PASS",
+          "check": "BoW hand counts (\"the\" twice in doc0) "
+        },
+        {
+          "status": "PASS",
+          "check": "TF-IDF == sklearn TfidfVectorizer (smooth idf, l2) "
+        },
+        {
+          "status": "PASS",
+          "check": "TF-IDF idf hand: log((1+N)/(1+df))+1 "
+        },
+        {
+          "status": "PASS",
+          "check": "bigram P(cat|the) == (1+1)/(C(the)+V) "
+        },
+        {
+          "status": "PASS",
+          "check": "bigram sentence log-probability includes BOS context and EOS "
+        },
+        {
+          "status": "PASS",
+          "check": "Word2Vec SGNS gradient finite difference "
+        },
+        {
+          "status": "PASS",
+          "check": "Word2Vec context pairs window 1 "
+        },
+        {
+          "status": "PASS",
+          "check": "GloVe cooccurrence inverse-distance weights "
+        },
+        {
+          "status": "PASS",
+          "check": "GloVe loss hand formula "
+        },
+        {
+          "status": "PASS",
+          "check": "GloVe gradient finite difference (all four groups) "
+        },
+        {
+          "status": "PASS",
+          "check": "BERT bidirectional: changing token 4 changes representation of token 1 "
+        },
+        {
+          "status": "PASS",
+          "check": "GPT causal: changing token 4 leaves logits at positions 0..3 unchanged "
+        },
+        {
+          "status": "PASS",
+          "check": "GPT attention weights lower-triangular & rows sum 1 "
+        },
+        {
+          "status": "PASS",
+          "check": "BERT head gradient finite difference "
+        },
+        {
+          "status": "PASS",
+          "check": "GPT next-token targets are inputs shifted by one "
+        },
+        {
+          "status": "PASS",
+          "check": "HMM POS transition counts D->N 3, N->V 3 "
+        },
+        {
+          "status": "PASS",
+          "check": "HMM POS Viterbi == brute-force best path "
+        },
+        {
+          "status": "PASS",
+          "check": "CRF log partition == brute force over 3^5 paths "
+        },
+        {
+          "status": "PASS",
+          "check": "CRF log P(y|x) == score - logZ (brute) "
+        },
+        {
+          "status": "PASS",
+          "check": "CRF Viterbi == brute-force argmax "
+        },
+        {
+          "status": "PASS",
+          "check": "CRF NLL gradient finite difference (emission, transition, start, end) "
+        },
+        {
+          "status": "PASS",
+          "check": "CRF token marginals == brute-force posterior "
+        },
+        {
+          "status": "PASS",
+          "check": "NER BIO span extraction hand "
+        },
+        {
+          "status": "PASS",
+          "check": "NER rejects I- without B- "
+        },
+        {
+          "status": "PASS",
+          "check": "CYK recognize == brute-force derivation language (all strings up to length 5) 6 sentences"
+        },
+        {
+          "status": "PASS",
+          "check": "CYK parse tree yields the sentence "
+        }
+      ],
+      "stderr_tail": ""
+    }
+  }
+}

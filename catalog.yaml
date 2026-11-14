@@ -6,9 +6,16 @@ development:
   track: machine-learning
   category: null
   scope: Audit and stabilization of B1–B13 only;no new canonical,scope or public API changes
-  status: in-progress
-  active_batch: 1
-  completed_batches: []
+  status: awaiting-review
+  active_batch: null
+  completed_batches:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
   batch_plan: []
   checkpoint: docs/ml-final-audit-checkpoints.md
   approval: Owner explicitly approved Phase25 and authorized Phase26 final ML audit on2026-11-01 Asia/Dhaka. Final B Track/Phase26 owner approval pending. No C1,nextphase,commit,push,tag,release or publication.
@@ -261,16 +268,27 @@ development:
       - B11
       - B12
       - B13
-      status: in-progress
+      status: awaiting-review
       checkpoint: docs/ml-final-audit-checkpoints.md
       completion_report: docs/reviews/machine-learning/ML-FINAL-COMPREHENSIVE-AUDIT-REPORT.md
       owner_approval: pending
-      completed_workstreams: []
+      completed_workstreams:
+      - Catalog and repository integrity
+      - Mathematical correctness
+      - Tests and independent oracles
+      - Documentation and learning quality
+      - CI,dependencies and infrastructure
+      - Security,performance and reproducibility
+      - Final regression and packaging
+      audit_verdict: CONDITIONAL PASS
+      audit_completed_on: 2026-11-14 Asia/Dhaka
+      evidence: docs/ml-final-audit-evidence/phase26-audit-evidence.json
+      oracle_evidence: docs/ml-final-audit-evidence/oracle-results.json
   current_review:
     id: ml-final-comprehensive-audit-phase26
     phase_number: 26
     track: machine-learning
-    status: in-progress
+    status: awaiting-review
     owner_approval: pending
     completion_report: docs/reviews/machine-learning/ML-FINAL-COMPREHENSIVE-AUDIT-REPORT.md
   completion_report: docs/reviews/machine-learning/ML-FINAL-COMPREHENSIVE-AUDIT-REPORT.md

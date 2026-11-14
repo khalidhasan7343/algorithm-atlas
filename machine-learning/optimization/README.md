@@ -6,6 +6,54 @@ Updating model parameters or candidate solutions under explicit objectives and s
 
 This category preserves **10 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
+
+## Mathematical taxonomy and exact variants
+
+Phase22 covers the current catalog inventory in4 logical batches: foundational gradient methods; momentum/adaptive methods; L-BFGS; binary GA/annealing. No extra optimizer is added to fill a batch. Current owner review remains pending. No Phase23,commit,push,tag,release or publication.
+
+| Canonical method | Family | Implemented convention |
+| --- | --- | --- |
+| [Batch Gradient Descent](batch-gradient-descent/README.md) | Full first order | Full exact callback gradient; fixed rate |
+| [Stochastic Gradient Descent](stochastic-gradient-descent/README.md) | Sampled first order | One observation; random reshuffling |
+| [Mini-Batch Gradient Descent](mini-batch-gradient-descent/README.md) | Sampled first order | Actual selected mean; tail included |
+| [Momentum](momentum/README.md) | First-order velocity | Heavy-ball beta*v+g; no Nesterov |
+| [RMSProp](rmsprop/README.md) | Adaptive first order | Uncentered squared EMA; epsilon outside sqrt |
+| [Adam](adam/README.md) | Adaptive first order | Bias-corrected raw moments |
+| [AdamW](adamw/README.md) | Adaptive plus decay | Canonical Adam plus decoupled masked old-x decay |
+| [L-BFGS](l-bfgs/README.md) | Quasi-Newton | Limited pairs; bounded strong-Wolfe search |
+| [Genetic Algorithms](genetic-algorithms/README.md) | Population derivative-free | Binary tournaments/crossover/mutation/elitism |
+| [Simulated Annealing](simulated-annealing/README.md) | Single-chain derivative-free | Binary one-bit Metropolis/geometric cooling |
+
+## Objectives,convergence and numerical choices
+
+Continuous methods minimize caller-defined smooth vector objectives. SGD and mini-batch callbacks return the selected mean gradient; full gradients govern epoch stopping. Other first-order drivers use full callbacks. L-BFGS is unconstrained,not L-BFGS-B or exact Newton. Binary GA/SA require no derivatives; their representation is not a general constraint solver.
+
+Gradient tolerance certifies approximate stationarity,not a global optimum. Active AdamW decay disables raw-task-gradient convergence claims. Line-search failure,budgets,temperature floors and stagnation remain distinct from convergence. A supplied binary target is an explicit threshold,not an automatic optimality proof.
+
+Rates,beta values,epsilon placement,decay masks and initialization materially change the methods. Validate finite shapes/scales; bound iterations,samples, populations and line searches. Stable bias correction and log acceptance address specific numerical risks without repairing arbitrary NaNs. Callbacks must be trusted,pure and prompt; evaluation counts do not bound their wall time.
+
+## Reproducible examples and computational tradeoffs
+
+Run each canonical python/example.py from repository root with NumPy:
+
+- [Batch Gradient Descent](batch-gradient-descent/python/example.py)
+- [Stochastic Gradient Descent](stochastic-gradient-descent/python/example.py)
+- [Mini-Batch Gradient Descent](mini-batch-gradient-descent/python/example.py)
+- [Momentum](momentum/python/example.py)
+- [RMSProp](rmsprop/python/example.py)
+- [Adam](adam/python/example.py)
+- [AdamW](adamw/python/example.py)
+- [L-BFGS](l-bfgs/python/example.py)
+- [Genetic Algorithms](genetic-algorithms/python/example.py)
+- [Simulated Annealing](simulated-annealing/python/example.py)
+
+The lessons contain actual printed results,including honest non-converged budget statuses. Per-step vector work is linear for first-order state; L-BFGS uses O(history*dimension) internal curvature storage. GA uses bounded populations and SA one current state. Returned histories/trajectories add real memory costs; callback costs and conditioning dominate many problems. No universal winner is claimed.
+
+## Learning roadmap and canonical compatibility
+
+Study objective/gradient checks and batch normalization first,then stateful moments and decoupled decay,then curvature/line search,and finally stochastic binary transitions. GA and SA retain one B10 canonical each serving C3/C4. Other AI topics remain deferred. Previous learner optimizers are not replaced. ML C++ is optional and absent; DSA C++17/C++20 remain mandatory. Read [scope](../../docs/optimization-scope.md), [contracts](../../docs/optimization-conventions.md) and [checkpoints](../../docs/optimization-checkpoints.md).
+
+References and independent mathematical checks are in the canonical25-section lessons. Optional SciPy is a test oracle only; no third-party complete optimizer is used in core.
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
 | Batch Gradient Descent | [batch-gradient-descent](batch-gradient-descent/README.md) | complete |
@@ -26,3 +74,8 @@ Choose prerequisites through the [learning roadmap](../../docs/learning-roadmap.
 Completion is shown by the catalog status and topic artifacts. The current implementation authorization is recorded in the progress tracker; other categories require explicit user approval.
 
 [Project home](../../README.md) · [Complete index](../../docs/algorithm-index.md) · [Progress](../../docs/progress.md)
+
+
+## Current final-audit checkpoint
+
+This category implementation review is owner-approved in the current catalog. Historical handoff reports retain generation-time states. Phase26 audits all B1–B13; final B Track owner approval remains pending. DPO remains blocked;no C1 or publication.

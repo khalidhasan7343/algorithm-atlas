@@ -6,6 +6,36 @@ Learning node importance or representations from graph structure.
 
 This category preserves **3 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
+
+Phase21 covers exactly PageRank,Node2Vec and Graph Convolutional Networks in three internal batches. Phase20 is owner-approved as9 completed algorithms plus one intentionally blocked DPO; its identity/statuses/research remain preserved. New Phase21 owner review pending. No Phase22,commit,push,tag,release or publication.
+
+## Graph representation and tasks
+
+Dense float64 adjacency A uses node IDs0..n-1 and A[i,j] as outgoing weight i→j. Nonnegative finite weights,1..32 nodes and explicit node order are required. Duplicate edges must be aggregated explicitly before matrix construction. PageRank supports direction and self-loops; Node2Vec/GCN require exactly symmetric undirected matrices and zero input diagonal. No direction or weight is discarded.
+
+| Method | Output and objective | Main cost in this implementation |
+| --- | --- | --- |
+| PageRank | Stationary importance; weighted random surfer | O(K n²) iteration |
+| Node2Vec | Biased walks; trained SGNS node vectors | Walks plus O(E M(k+1)d) embedding updates |
+| GCN | Masked node classes; normalized feature/message propagation | Dense graph products per epoch |
+
+PageRank uses row-stochastic P and propagates with P.T. GCN uses symmetric D^(-1/2)(A+I)D^(-1/2),not a row-stochastic substitute. Node2Vec uses previous/current walk nodes and exact p/q bias. GCN features have one row per node and training labels/masks follow the same order; -1 means an unknown label.
+
+## Reproducible examples
+
+Run the canonical python/example.py files from the repository root:
+
+- [pagerank](pagerank/python/example.py)
+- [node2vec](node2vec/python/example.py)
+- [graph-convolutional-networks](graph-convolutional-networks/python/example.py)
+
+The lessons include their actual printed outputs. Local seeded generators avoid global RNG mutation. PageRank is ranking,Node2Vec is unsupervised representation learning,and GCN is supervised graph message passing.
+
+## Numerical and computational tradeoffs
+
+Handle dangling/zero-degree nodes explicitly; use stable softplus and softmax; bound walks,pairs,epochs,dimensions and allocations. PageRank reports residual non-convergence. Both learners expose finite-epoch objective histories without claiming universal convergence or embedding quality. Dense storage is O(n²) even for a sparse graph. C++ is optional and absent.
+
+B9 GCN reuses the approved B7 normalization utility; the B7 scalar regressor and B9 masked classifier keep distinct canonical IDs and unchanged prior source. Independent stationary solves,walk probabilities,loss/forward oracles,finite differences and node-permutation equivariance support verification. Read [scope](../../docs/graph-learning-scope.md), [contracts](../../docs/graph-learning-conventions.md) and [checkpoints](../../docs/graph-learning-checkpoints.md).
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
 | PageRank | [pagerank](pagerank/README.md) | complete |
@@ -19,3 +49,8 @@ Choose prerequisites through the [learning roadmap](../../docs/learning-roadmap.
 Completion is shown by the catalog status and topic artifacts. The current implementation authorization is recorded in the progress tracker; other categories require explicit user approval.
 
 [Project home](../../README.md) · [Complete index](../../docs/algorithm-index.md) · [Progress](../../docs/progress.md)
+
+
+## Current final-audit checkpoint
+
+This category implementation review is owner-approved in the current catalog. Historical handoff reports retain generation-time states. Phase26 audits all B1–B13; final B Track owner approval remains pending. DPO remains blocked;no C1 or publication.

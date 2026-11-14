@@ -67,7 +67,7 @@ Training uses O(np+cp+n) for checked/binarized arrays and class counts. Fitted s
 
 ## 13. Python Implementation
 
-`BernoulliNaiveBayes(alpha=1.0, binarize=0.0, priors=None)` exposes fit, joint-log-score decision_function, predict_proba, predict and accuracy score. Alpha is in [10⁻⁹,10⁶]; threshold is None or finite in [−10¹²,10¹²]. Shared limits are n≤2048, p≤128, m≤10000 and 262144 cells; raw numeric magnitudes≤10¹². Homogeneous int64-compatible integer or nonempty string labels are supported, at most 32 classes; one class is valid. Priors, when supplied, are positive and sum to one in sorted classes_ order. Inspect feature_count_, feature_log_prob_, feature_log_absence_, class_count_, class_prior_, class_log_prior_ and fitted binarize_. Scores/probabilities are(m,c); original-label predictions(m,). No sparse input, sample weights or partial_fit.
+[`python/solution.py`](python/solution.py) is the implementation and [`tests/test_python.py`](tests/test_python.py) holds its tests. `BernoulliNaiveBayes(alpha=1.0, binarize=0.0, priors=None)` exposes fit, joint-log-score decision_function, predict_proba, predict and accuracy score. Alpha is in [10⁻⁹,10⁶]; threshold is None or finite in [−10¹²,10¹²]. Shared limits are n≤2048, p≤128, m≤10000 and 262144 cells; raw numeric magnitudes≤10¹². Homogeneous int64-compatible integer or nonempty string labels are supported, at most 32 classes; one class is valid. Priors, when supplied, are positive and sum to one in sorted classes_ order. Inspect feature_count_, feature_log_prob_, feature_log_absence_, class_count_, class_prior_, class_log_prior_ and fitted binarize_. Scores/probabilities are(m,c); original-label predictions(m,). No sparse input, sample weights or partial_fit.
 
 ## 14. C++ Implementation
 

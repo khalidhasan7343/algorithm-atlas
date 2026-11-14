@@ -1,0 +1,2154 @@
+{
+  "phase": 26,
+  "client_date": "2026-11-14 Asia/Dhaka",
+  "executed_at": "2026-11-14T15:47:35.836070+06:00",
+  "repository_baseline": {
+    "branch": "main",
+    "head": "1adad09d7aa347fcda8134e398d1a4a2b2316324",
+    "head_subject": "ML All Added",
+    "head_date": "2026-11-01 20:16:21 +0600",
+    "working_tree_at_start": "clean (git status --porcelain empty)",
+    "prior_session_evidence": "docs/ml-final-audit-evidence/baseline.json recorded revision 7202b57 with staged Phase25/26 work; that work is now committed at HEAD 1adad09"
+  },
+  "environment": {
+    "python": "3.14.2",
+    "platform": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+    "numpy": "2.5.4",
+    "pytest": "9.1.1",
+    "scipy": "1.18.1",
+    "scikit_learn": "1.8.0",
+    "pyyaml": "6.0.3",
+    "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)",
+    "cpp17": "compiles (-std=c++17 -fsyntax-only probe)",
+    "cpp20": "compiles (-std=c++20 -fsyntax-only probe, <concepts>/<ranges>)",
+    "pip_check": "No broken requirements found",
+    "requirement_pins_satisfied": [
+      "numpy>=2.3.4,<3",
+      "scikit-learn>=1.8,<1.9",
+      "pytest>=8.4,<10",
+      "PyYAML>=6.0.2,<7"
+    ]
+  },
+  "catalog_counts": {
+    "categories": 35,
+    "memberships": 256,
+    "canonicals": 235,
+    "implemented_total": 196,
+    "dsa_implemented": 97,
+    "ml_implemented": 99,
+    "ml_blocked": 1,
+    "ai_planned": 38
+  },
+  "b_track_inventory": {
+    "categories": [
+      {
+        "cat": "B1",
+        "name": "Supervised Learning \u2014 Regression",
+        "path": "machine-learning/supervised-learning/regression",
+        "entries": 7,
+        "owned": 7,
+        "shared_in": [],
+        "implemented": 7,
+        "blocked": [],
+        "other": []
+      },
+      {
+        "cat": "B2",
+        "name": "Supervised Learning \u2014 Classification",
+        "path": "machine-learning/supervised-learning/classification",
+        "entries": 11,
+        "owned": 11,
+        "shared_in": [],
+        "implemented": 11,
+        "blocked": [],
+        "other": []
+      },
+      {
+        "cat": "B3",
+        "name": "Ensemble Methods",
+        "path": "machine-learning/ensemble-methods",
+        "entries": 8,
+        "owned": 8,
+        "shared_in": [],
+        "implemented": 8,
+        "blocked": [],
+        "other": []
+      },
+      {
+        "cat": "B4",
+        "name": "Unsupervised Learning \u2014 Clustering",
+        "path": "machine-learning/unsupervised-learning/clustering",
+        "entries": 8,
+        "owned": 8,
+        "shared_in": [],
+        "implemented": 8,
+        "blocked": [],
+        "other": []
+      },
+      {
+        "cat": "B5",
+        "name": "Dimensionality Reduction",
+        "path": "machine-learning/unsupervised-learning/dimensionality-reduction",
+        "entries": 7,
+        "owned": 6,
+        "shared_in": [
+          "vanilla-autoencoders"
+        ],
+        "implemented": 6,
+        "blocked": [],
+        "other": []
+      },
+      {
+        "cat": "B6",
+        "name": "Association Rule Learning",
+        "path": "machine-learning/unsupervised-learning/association-rule-learning",
+        "entries": 3,
+        "owned": 3,
+        "shared_in": [],
+        "implemented": 3,
+        "blocked": [],
+        "other": []
+      },
+      {
+        "cat": "B7",
+        "name": "Neural Networks and Deep Learning",
+        "path": "machine-learning/deep-learning",
+        "entries": 14,
+        "owned": 14,
+        "shared_in": [],
+        "implemented": 14,
+        "blocked": [],
+        "other": []
+      },
+      {
+        "cat": "B8",
+        "name": "Reinforcement Learning",
+        "path": "machine-learning/reinforcement-learning",
+        "entries": 10,
+        "owned": 10,
+        "shared_in": [],
+        "implemented": 9,
+        "blocked": [
+          "dynamic-policy-optimization"
+        ],
+        "other": []
+      },
+      {
+        "cat": "B9",
+        "name": "Graph-Based Learning",
+        "path": "machine-learning/graph-learning",
+        "entries": 3,
+        "owned": 3,
+        "shared_in": [],
+        "implemented": 3,
+        "blocked": [],
+        "other": []
+      },
+      {
+        "cat": "B10",
+        "name": "Optimization",
+        "path": "machine-learning/optimization",
+        "entries": 10,
+        "owned": 10,
+        "shared_in": [],
+        "implemented": 10,
+        "blocked": [],
+        "other": []
+      },
+      {
+        "cat": "B11",
+        "name": "Time Series",
+        "path": "machine-learning/time-series",
+        "entries": 6,
+        "owned": 6,
+        "shared_in": [],
+        "implemented": 6,
+        "blocked": [],
+        "other": []
+      },
+      {
+        "cat": "B12",
+        "name": "Anomaly Detection",
+        "path": "machine-learning/anomaly-detection",
+        "entries": 3,
+        "owned": 3,
+        "shared_in": [],
+        "implemented": 3,
+        "blocked": [],
+        "other": []
+      },
+      {
+        "cat": "B13",
+        "name": "Natural Language Processing",
+        "path": "machine-learning/natural-language-processing",
+        "entries": 11,
+        "owned": 11,
+        "shared_in": [],
+        "implemented": 11,
+        "blocked": [],
+        "other": []
+      }
+    ],
+    "canonicals": {
+      "linear-regression": {
+        "id": "linear-regression",
+        "name": "Linear Regression",
+        "owner": "B1",
+        "members": [
+          "B1"
+        ],
+        "loc": "machine-learning/supervised-learning/regression/linear-regression",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "ridge-regression": {
+        "id": "ridge-regression",
+        "name": "Ridge Regression",
+        "owner": "B1",
+        "members": [
+          "B1"
+        ],
+        "loc": "machine-learning/supervised-learning/regression/ridge-regression",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "lasso-regression": {
+        "id": "lasso-regression",
+        "name": "Lasso Regression",
+        "owner": "B1",
+        "members": [
+          "B1"
+        ],
+        "loc": "machine-learning/supervised-learning/regression/lasso-regression",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "elastic-net": {
+        "id": "elastic-net",
+        "name": "Elastic Net",
+        "owner": "B1",
+        "members": [
+          "B1"
+        ],
+        "loc": "machine-learning/supervised-learning/regression/elastic-net",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "polynomial-regression": {
+        "id": "polynomial-regression",
+        "name": "Polynomial Regression",
+        "owner": "B1",
+        "members": [
+          "B1"
+        ],
+        "loc": "machine-learning/supervised-learning/regression/polynomial-regression",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "support-vector-regression": {
+        "id": "support-vector-regression",
+        "name": "Support Vector Regression (SVR)",
+        "owner": "B1",
+        "members": [
+          "B1"
+        ],
+        "loc": "machine-learning/supervised-learning/regression/support-vector-regression",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "decision-tree-regression": {
+        "id": "decision-tree-regression",
+        "name": "Decision Tree Regression",
+        "owner": "B1",
+        "members": [
+          "B1"
+        ],
+        "loc": "machine-learning/supervised-learning/regression/decision-tree-regression",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "logistic-regression": {
+        "id": "logistic-regression",
+        "name": "Logistic Regression",
+        "owner": "B2",
+        "members": [
+          "B2"
+        ],
+        "loc": "machine-learning/supervised-learning/classification/logistic-regression",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "k-nearest-neighbors": {
+        "id": "k-nearest-neighbors",
+        "name": "K-Nearest Neighbors (KNN)",
+        "owner": "B2",
+        "members": [
+          "B2"
+        ],
+        "loc": "machine-learning/supervised-learning/classification/k-nearest-neighbors",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "gaussian-naive-bayes": {
+        "id": "gaussian-naive-bayes",
+        "name": "Gaussian Naive Bayes",
+        "owner": "B2",
+        "members": [
+          "B2"
+        ],
+        "loc": "machine-learning/supervised-learning/classification/gaussian-naive-bayes",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "multinomial-naive-bayes": {
+        "id": "multinomial-naive-bayes",
+        "name": "Multinomial Naive Bayes",
+        "owner": "B2",
+        "members": [
+          "B2"
+        ],
+        "loc": "machine-learning/supervised-learning/classification/multinomial-naive-bayes",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "bernoulli-naive-bayes": {
+        "id": "bernoulli-naive-bayes",
+        "name": "Bernoulli Naive Bayes",
+        "owner": "B2",
+        "members": [
+          "B2"
+        ],
+        "loc": "machine-learning/supervised-learning/classification/bernoulli-naive-bayes",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "support-vector-machines": {
+        "id": "support-vector-machines",
+        "name": "Support Vector Machines (SVM)",
+        "owner": "B2",
+        "members": [
+          "B2"
+        ],
+        "loc": "machine-learning/supervised-learning/classification/support-vector-machines",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "cart-decision-trees": {
+        "id": "cart-decision-trees",
+        "name": "CART Decision Trees",
+        "owner": "B2",
+        "members": [
+          "B2"
+        ],
+        "loc": "machine-learning/supervised-learning/classification/cart-decision-trees",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "id3-decision-trees": {
+        "id": "id3-decision-trees",
+        "name": "ID3 Decision Trees",
+        "owner": "B2",
+        "members": [
+          "B2"
+        ],
+        "loc": "machine-learning/supervised-learning/classification/id3-decision-trees",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "c4-5-decision-trees": {
+        "id": "c4-5-decision-trees",
+        "name": "C4.5 Decision Trees",
+        "owner": "B2",
+        "members": [
+          "B2"
+        ],
+        "loc": "machine-learning/supervised-learning/classification/c4-5-decision-trees",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "linear-discriminant-analysis": {
+        "id": "linear-discriminant-analysis",
+        "name": "Linear Discriminant Analysis (LDA)",
+        "owner": "B2",
+        "members": [
+          "B2"
+        ],
+        "loc": "machine-learning/supervised-learning/classification/linear-discriminant-analysis",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "quadratic-discriminant-analysis": {
+        "id": "quadratic-discriminant-analysis",
+        "name": "Quadratic Discriminant Analysis (QDA)",
+        "owner": "B2",
+        "members": [
+          "B2"
+        ],
+        "loc": "machine-learning/supervised-learning/classification/quadratic-discriminant-analysis",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "random-forest": {
+        "id": "random-forest",
+        "name": "Random Forest",
+        "owner": "B3",
+        "members": [
+          "B3"
+        ],
+        "loc": "machine-learning/ensemble-methods/random-forest",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "gradient-boosting-machine": {
+        "id": "gradient-boosting-machine",
+        "name": "Gradient Boosting Machine (GBM)",
+        "owner": "B3",
+        "members": [
+          "B3"
+        ],
+        "loc": "machine-learning/ensemble-methods/gradient-boosting-machine",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "xgboost": {
+        "id": "xgboost",
+        "name": "XGBoost",
+        "owner": "B3",
+        "members": [
+          "B3"
+        ],
+        "loc": "machine-learning/ensemble-methods/xgboost",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "catboost": {
+        "id": "catboost",
+        "name": "CatBoost",
+        "owner": "B3",
+        "members": [
+          "B3"
+        ],
+        "loc": "machine-learning/ensemble-methods/catboost",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "adaboost": {
+        "id": "adaboost",
+        "name": "AdaBoost",
+        "owner": "B3",
+        "members": [
+          "B3"
+        ],
+        "loc": "machine-learning/ensemble-methods/adaboost",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "bagging": {
+        "id": "bagging",
+        "name": "Bagging",
+        "owner": "B3",
+        "members": [
+          "B3"
+        ],
+        "loc": "machine-learning/ensemble-methods/bagging",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "stacking": {
+        "id": "stacking",
+        "name": "Stacking",
+        "owner": "B3",
+        "members": [
+          "B3"
+        ],
+        "loc": "machine-learning/ensemble-methods/stacking",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "voting-classifiers": {
+        "id": "voting-classifiers",
+        "name": "Voting Classifiers",
+        "owner": "B3",
+        "members": [
+          "B3"
+        ],
+        "loc": "machine-learning/ensemble-methods/voting-classifiers",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "k-means": {
+        "id": "k-means",
+        "name": "K-Means",
+        "owner": "B4",
+        "members": [
+          "B4"
+        ],
+        "loc": "machine-learning/unsupervised-learning/clustering/k-means",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "agglomerative-hierarchical-clustering": {
+        "id": "agglomerative-hierarchical-clustering",
+        "name": "Agglomerative Hierarchical Clustering",
+        "owner": "B4",
+        "members": [
+          "B4"
+        ],
+        "loc": "machine-learning/unsupervised-learning/clustering/agglomerative-hierarchical-clustering",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "divisive-hierarchical-clustering": {
+        "id": "divisive-hierarchical-clustering",
+        "name": "Divisive Hierarchical Clustering",
+        "owner": "B4",
+        "members": [
+          "B4"
+        ],
+        "loc": "machine-learning/unsupervised-learning/clustering/divisive-hierarchical-clustering",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "dbscan": {
+        "id": "dbscan",
+        "name": "DBSCAN",
+        "owner": "B4",
+        "members": [
+          "B4"
+        ],
+        "loc": "machine-learning/unsupervised-learning/clustering/dbscan",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "hdbscan": {
+        "id": "hdbscan",
+        "name": "HDBSCAN",
+        "owner": "B4",
+        "members": [
+          "B4"
+        ],
+        "loc": "machine-learning/unsupervised-learning/clustering/hdbscan",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "mean-shift": {
+        "id": "mean-shift",
+        "name": "Mean Shift",
+        "owner": "B4",
+        "members": [
+          "B4"
+        ],
+        "loc": "machine-learning/unsupervised-learning/clustering/mean-shift",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "gaussian-mixture-models": {
+        "id": "gaussian-mixture-models",
+        "name": "Gaussian Mixture Models (GMM)",
+        "owner": "B4",
+        "members": [
+          "B4"
+        ],
+        "loc": "machine-learning/unsupervised-learning/clustering/gaussian-mixture-models",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "spectral-clustering": {
+        "id": "spectral-clustering",
+        "name": "Spectral Clustering",
+        "owner": "B4",
+        "members": [
+          "B4"
+        ],
+        "loc": "machine-learning/unsupervised-learning/clustering/spectral-clustering",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "principal-component-analysis": {
+        "id": "principal-component-analysis",
+        "name": "Principal Component Analysis (PCA)",
+        "owner": "B5",
+        "members": [
+          "B5"
+        ],
+        "loc": "machine-learning/unsupervised-learning/dimensionality-reduction/principal-component-analysis",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "t-sne": {
+        "id": "t-sne",
+        "name": "t-SNE",
+        "owner": "B5",
+        "members": [
+          "B5"
+        ],
+        "loc": "machine-learning/unsupervised-learning/dimensionality-reduction/t-sne",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "umap": {
+        "id": "umap",
+        "name": "UMAP",
+        "owner": "B5",
+        "members": [
+          "B5"
+        ],
+        "loc": "machine-learning/unsupervised-learning/dimensionality-reduction/umap",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "linear-discriminant-analysis-projection": {
+        "id": "linear-discriminant-analysis-projection",
+        "name": "Linear Discriminant Analysis (Supervised Variant)",
+        "owner": "B5",
+        "members": [
+          "B5"
+        ],
+        "loc": "machine-learning/unsupervised-learning/dimensionality-reduction/linear-discriminant-analysis-projection",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "vanilla-autoencoders": {
+        "id": "vanilla-autoencoders",
+        "name": "Vanilla Autoencoders",
+        "owner": "B7",
+        "members": [
+          "B5",
+          "B7"
+        ],
+        "loc": "machine-learning/deep-learning/vanilla-autoencoders",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "independent-component-analysis": {
+        "id": "independent-component-analysis",
+        "name": "Independent Component Analysis (ICA)",
+        "owner": "B5",
+        "members": [
+          "B5"
+        ],
+        "loc": "machine-learning/unsupervised-learning/dimensionality-reduction/independent-component-analysis",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "singular-value-decomposition": {
+        "id": "singular-value-decomposition",
+        "name": "Singular Value Decomposition (SVD)",
+        "owner": "B5",
+        "members": [
+          "B5"
+        ],
+        "loc": "machine-learning/unsupervised-learning/dimensionality-reduction/singular-value-decomposition",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "apriori": {
+        "id": "apriori",
+        "name": "Apriori",
+        "owner": "B6",
+        "members": [
+          "B6"
+        ],
+        "loc": "machine-learning/unsupervised-learning/association-rule-learning/apriori",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "fp-growth": {
+        "id": "fp-growth",
+        "name": "FP-Growth",
+        "owner": "B6",
+        "members": [
+          "B6"
+        ],
+        "loc": "machine-learning/unsupervised-learning/association-rule-learning/fp-growth",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "eclat": {
+        "id": "eclat",
+        "name": "Eclat",
+        "owner": "B6",
+        "members": [
+          "B6"
+        ],
+        "loc": "machine-learning/unsupervised-learning/association-rule-learning/eclat",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "multilayer-perceptron": {
+        "id": "multilayer-perceptron",
+        "name": "Multilayer Perceptron (MLP)",
+        "owner": "B7",
+        "members": [
+          "B7"
+        ],
+        "loc": "machine-learning/deep-learning/multilayer-perceptron",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "convolutional-neural-networks": {
+        "id": "convolutional-neural-networks",
+        "name": "Convolutional Neural Networks (CNN)",
+        "owner": "B7",
+        "members": [
+          "B7",
+          "C10"
+        ],
+        "loc": "machine-learning/deep-learning/convolutional-neural-networks",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "recurrent-neural-networks": {
+        "id": "recurrent-neural-networks",
+        "name": "Recurrent Neural Networks (RNN)",
+        "owner": "B7",
+        "members": [
+          "B7"
+        ],
+        "loc": "machine-learning/deep-learning/recurrent-neural-networks",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "long-short-term-memory": {
+        "id": "long-short-term-memory",
+        "name": "Long Short-Term Memory (LSTM)",
+        "owner": "B7",
+        "members": [
+          "B7"
+        ],
+        "loc": "machine-learning/deep-learning/long-short-term-memory",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "gated-recurrent-units": {
+        "id": "gated-recurrent-units",
+        "name": "Gated Recurrent Units (GRU)",
+        "owner": "B7",
+        "members": [
+          "B7"
+        ],
+        "loc": "machine-learning/deep-learning/gated-recurrent-units",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "transformers": {
+        "id": "transformers",
+        "name": "Transformers",
+        "owner": "B7",
+        "members": [
+          "B7"
+        ],
+        "loc": "machine-learning/deep-learning/transformers",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "generative-adversarial-networks": {
+        "id": "generative-adversarial-networks",
+        "name": "Generative Adversarial Networks (GAN)",
+        "owner": "B7",
+        "members": [
+          "B7"
+        ],
+        "loc": "machine-learning/deep-learning/generative-adversarial-networks",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "variational-autoencoders": {
+        "id": "variational-autoencoders",
+        "name": "Variational Autoencoders (VAE)",
+        "owner": "B7",
+        "members": [
+          "B7"
+        ],
+        "loc": "machine-learning/deep-learning/variational-autoencoders",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "diffusion-models": {
+        "id": "diffusion-models",
+        "name": "Diffusion Models",
+        "owner": "B7",
+        "members": [
+          "B7"
+        ],
+        "loc": "machine-learning/deep-learning/diffusion-models",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "graph-neural-networks": {
+        "id": "graph-neural-networks",
+        "name": "Graph Neural Networks (GNN)",
+        "owner": "B7",
+        "members": [
+          "B7"
+        ],
+        "loc": "machine-learning/deep-learning/graph-neural-networks",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "residual-networks": {
+        "id": "residual-networks",
+        "name": "Residual Networks (ResNet)",
+        "owner": "B7",
+        "members": [
+          "B7"
+        ],
+        "loc": "machine-learning/deep-learning/residual-networks",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "denoising-autoencoders": {
+        "id": "denoising-autoencoders",
+        "name": "Denoising Autoencoders",
+        "owner": "B7",
+        "members": [
+          "B7"
+        ],
+        "loc": "machine-learning/deep-learning/denoising-autoencoders",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "sparse-autoencoders": {
+        "id": "sparse-autoencoders",
+        "name": "Sparse Autoencoders",
+        "owner": "B7",
+        "members": [
+          "B7"
+        ],
+        "loc": "machine-learning/deep-learning/sparse-autoencoders",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "q-learning": {
+        "id": "q-learning",
+        "name": "Q-Learning",
+        "owner": "B8",
+        "members": [
+          "B8"
+        ],
+        "loc": "machine-learning/reinforcement-learning/q-learning",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "deep-q-networks": {
+        "id": "deep-q-networks",
+        "name": "Deep Q-Networks (DQN)",
+        "owner": "B8",
+        "members": [
+          "B8"
+        ],
+        "loc": "machine-learning/reinforcement-learning/deep-q-networks",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "sarsa": {
+        "id": "sarsa",
+        "name": "SARSA",
+        "owner": "B8",
+        "members": [
+          "B8"
+        ],
+        "loc": "machine-learning/reinforcement-learning/sarsa",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "reinforce-policy-gradient": {
+        "id": "reinforce-policy-gradient",
+        "name": "REINFORCE Policy Gradient",
+        "owner": "B8",
+        "members": [
+          "B8"
+        ],
+        "loc": "machine-learning/reinforcement-learning/reinforce-policy-gradient",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "advantage-actor-critic": {
+        "id": "advantage-actor-critic",
+        "name": "Advantage Actor-Critic (A2C)",
+        "owner": "B8",
+        "members": [
+          "B8"
+        ],
+        "loc": "machine-learning/reinforcement-learning/advantage-actor-critic",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "asynchronous-advantage-actor-critic": {
+        "id": "asynchronous-advantage-actor-critic",
+        "name": "Asynchronous Advantage Actor-Critic (A3C)",
+        "owner": "B8",
+        "members": [
+          "B8"
+        ],
+        "loc": "machine-learning/reinforcement-learning/asynchronous-advantage-actor-critic",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "proximal-policy-optimization": {
+        "id": "proximal-policy-optimization",
+        "name": "Proximal Policy Optimization (PPO)",
+        "owner": "B8",
+        "members": [
+          "B8"
+        ],
+        "loc": "machine-learning/reinforcement-learning/proximal-policy-optimization",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "deep-deterministic-policy-gradient": {
+        "id": "deep-deterministic-policy-gradient",
+        "name": "Deep Deterministic Policy Gradient (DDPG)",
+        "owner": "B8",
+        "members": [
+          "B8"
+        ],
+        "loc": "machine-learning/reinforcement-learning/deep-deterministic-policy-gradient",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "monte-carlo-tree-search": {
+        "id": "monte-carlo-tree-search",
+        "name": "Monte Carlo Tree Search (MCTS)",
+        "owner": "B8",
+        "members": [
+          "B8"
+        ],
+        "loc": "machine-learning/reinforcement-learning/monte-carlo-tree-search",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "dynamic-policy-optimization": {
+        "id": "dynamic-policy-optimization",
+        "name": "Dynamic Policy Optimization (DPO; terminology unresolved)",
+        "owner": "B8",
+        "members": [
+          "B8"
+        ],
+        "loc": "machine-learning/reinforcement-learning/dynamic-policy-optimization",
+        "doc": "blocked",
+        "py": "blocked",
+        "cpp": "blocked",
+        "test": "blocked",
+        "py_files": 0,
+        "test_files": 0,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "pagerank": {
+        "id": "pagerank",
+        "name": "PageRank",
+        "owner": "B9",
+        "members": [
+          "B9"
+        ],
+        "loc": "machine-learning/graph-learning/pagerank",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "node2vec": {
+        "id": "node2vec",
+        "name": "Node2Vec",
+        "owner": "B9",
+        "members": [
+          "B9"
+        ],
+        "loc": "machine-learning/graph-learning/node2vec",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "graph-convolutional-networks": {
+        "id": "graph-convolutional-networks",
+        "name": "Graph Convolutional Networks (GCN)",
+        "owner": "B9",
+        "members": [
+          "B9"
+        ],
+        "loc": "machine-learning/graph-learning/graph-convolutional-networks",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "batch-gradient-descent": {
+        "id": "batch-gradient-descent",
+        "name": "Batch Gradient Descent",
+        "owner": "B10",
+        "members": [
+          "B10"
+        ],
+        "loc": "machine-learning/optimization/batch-gradient-descent",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "stochastic-gradient-descent": {
+        "id": "stochastic-gradient-descent",
+        "name": "Stochastic Gradient Descent",
+        "owner": "B10",
+        "members": [
+          "B10"
+        ],
+        "loc": "machine-learning/optimization/stochastic-gradient-descent",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "mini-batch-gradient-descent": {
+        "id": "mini-batch-gradient-descent",
+        "name": "Mini-Batch Gradient Descent",
+        "owner": "B10",
+        "members": [
+          "B10"
+        ],
+        "loc": "machine-learning/optimization/mini-batch-gradient-descent",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "momentum": {
+        "id": "momentum",
+        "name": "Momentum",
+        "owner": "B10",
+        "members": [
+          "B10"
+        ],
+        "loc": "machine-learning/optimization/momentum",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "rmsprop": {
+        "id": "rmsprop",
+        "name": "RMSProp",
+        "owner": "B10",
+        "members": [
+          "B10"
+        ],
+        "loc": "machine-learning/optimization/rmsprop",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "adam": {
+        "id": "adam",
+        "name": "Adam",
+        "owner": "B10",
+        "members": [
+          "B10"
+        ],
+        "loc": "machine-learning/optimization/adam",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "adamw": {
+        "id": "adamw",
+        "name": "AdamW",
+        "owner": "B10",
+        "members": [
+          "B10"
+        ],
+        "loc": "machine-learning/optimization/adamw",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "l-bfgs": {
+        "id": "l-bfgs",
+        "name": "L-BFGS",
+        "owner": "B10",
+        "members": [
+          "B10"
+        ],
+        "loc": "machine-learning/optimization/l-bfgs",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "genetic-algorithms": {
+        "id": "genetic-algorithms",
+        "name": "Genetic Algorithms",
+        "owner": "B10",
+        "members": [
+          "B10",
+          "C3",
+          "C4"
+        ],
+        "loc": "machine-learning/optimization/genetic-algorithms",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "simulated-annealing": {
+        "id": "simulated-annealing",
+        "name": "Simulated Annealing",
+        "owner": "B10",
+        "members": [
+          "B10",
+          "C3",
+          "C4"
+        ],
+        "loc": "machine-learning/optimization/simulated-annealing",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "arima": {
+        "id": "arima",
+        "name": "ARIMA",
+        "owner": "B11",
+        "members": [
+          "B11"
+        ],
+        "loc": "machine-learning/time-series/arima",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "sarima": {
+        "id": "sarima",
+        "name": "SARIMA",
+        "owner": "B11",
+        "members": [
+          "B11"
+        ],
+        "loc": "machine-learning/time-series/sarima",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "exponential-smoothing": {
+        "id": "exponential-smoothing",
+        "name": "Exponential Smoothing",
+        "owner": "B11",
+        "members": [
+          "B11"
+        ],
+        "loc": "machine-learning/time-series/exponential-smoothing",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "holt-winters": {
+        "id": "holt-winters",
+        "name": "Holt-Winters",
+        "owner": "B11",
+        "members": [
+          "B11"
+        ],
+        "loc": "machine-learning/time-series/holt-winters",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "prophet": {
+        "id": "prophet",
+        "name": "Prophet",
+        "owner": "B11",
+        "members": [
+          "B11"
+        ],
+        "loc": "machine-learning/time-series/prophet",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "hidden-markov-models": {
+        "id": "hidden-markov-models",
+        "name": "Hidden Markov Models (HMM)",
+        "owner": "B11",
+        "members": [
+          "B11"
+        ],
+        "loc": "machine-learning/time-series/hidden-markov-models",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "isolation-forest": {
+        "id": "isolation-forest",
+        "name": "Isolation Forest",
+        "owner": "B12",
+        "members": [
+          "B12"
+        ],
+        "loc": "machine-learning/anomaly-detection/isolation-forest",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "one-class-svm": {
+        "id": "one-class-svm",
+        "name": "One-Class SVM",
+        "owner": "B12",
+        "members": [
+          "B12"
+        ],
+        "loc": "machine-learning/anomaly-detection/one-class-svm",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "local-outlier-factor": {
+        "id": "local-outlier-factor",
+        "name": "Local Outlier Factor (LOF)",
+        "owner": "B12",
+        "members": [
+          "B12"
+        ],
+        "loc": "machine-learning/anomaly-detection/local-outlier-factor",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "bag-of-words": {
+        "id": "bag-of-words",
+        "name": "Bag of Words",
+        "owner": "B13",
+        "members": [
+          "B13"
+        ],
+        "loc": "machine-learning/natural-language-processing/bag-of-words",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "tf-idf": {
+        "id": "tf-idf",
+        "name": "TF-IDF",
+        "owner": "B13",
+        "members": [
+          "B13"
+        ],
+        "loc": "machine-learning/natural-language-processing/tf-idf",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "word2vec": {
+        "id": "word2vec",
+        "name": "Word2Vec",
+        "owner": "B13",
+        "members": [
+          "B13"
+        ],
+        "loc": "machine-learning/natural-language-processing/word2vec",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "glove": {
+        "id": "glove",
+        "name": "GloVe",
+        "owner": "B13",
+        "members": [
+          "B13"
+        ],
+        "loc": "machine-learning/natural-language-processing/glove",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "bert": {
+        "id": "bert",
+        "name": "BERT Architecture / Usage",
+        "owner": "B13",
+        "members": [
+          "B13"
+        ],
+        "loc": "machine-learning/natural-language-processing/bert",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "gpt": {
+        "id": "gpt",
+        "name": "GPT Architecture / Usage",
+        "owner": "B13",
+        "members": [
+          "B13"
+        ],
+        "loc": "machine-learning/natural-language-processing/gpt",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "hidden-markov-models-pos-tagging": {
+        "id": "hidden-markov-models-pos-tagging",
+        "name": "Hidden Markov Models for POS Tagging",
+        "owner": "B13",
+        "members": [
+          "B13"
+        ],
+        "loc": "machine-learning/natural-language-processing/hidden-markov-models-pos-tagging",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "named-entity-recognition": {
+        "id": "named-entity-recognition",
+        "name": "Named Entity Recognition",
+        "owner": "B13",
+        "members": [
+          "B13"
+        ],
+        "loc": "machine-learning/natural-language-processing/named-entity-recognition",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "conditional-random-fields": {
+        "id": "conditional-random-fields",
+        "name": "Conditional Random Fields (CRF)",
+        "owner": "B13",
+        "members": [
+          "B13"
+        ],
+        "loc": "machine-learning/natural-language-processing/conditional-random-fields",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "n-gram-language-models": {
+        "id": "n-gram-language-models",
+        "name": "N-Gram Language Models",
+        "owner": "B13",
+        "members": [
+          "B13"
+        ],
+        "loc": "machine-learning/natural-language-processing/n-gram-language-models",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      },
+      "cyk-parsing": {
+        "id": "cyk-parsing",
+        "name": "CYK Parsing Algorithm",
+        "owner": "B13",
+        "members": [
+          "B13"
+        ],
+        "loc": "machine-learning/natural-language-processing/cyk-parsing",
+        "doc": "implemented",
+        "py": "tested",
+        "cpp": "planned",
+        "test": "tested",
+        "py_files": 2,
+        "test_files": 1,
+        "readme": true,
+        "cpp_files": 0,
+        "exists": true
+      }
+    },
+    "memberships": 101,
+    "distinct_canonicals": 100,
+    "implemented": 99,
+    "blocked": [
+      "dynamic-policy-optimization"
+    ],
+    "missing_implementations": [],
+    "shared_memberships": {
+      "vanilla-autoencoders": "owner B7; member of B5 and B7",
+      "convolutional-neural-networks": "owner B7; member of B7 and C10",
+      "genetic-algorithms": "owner B10; member of B10, C3, C4",
+      "simulated-annealing": "owner B10; member of B10, C3, C4"
+    }
+  },
+  "documentation_audit": {
+    "lessons": 99,
+    "all_25_sections_in_order": true,
+    "words_min": 790,
+    "words_median": 1124,
+    "words_max": 1878,
+    "cpp_optional_stated": 99,
+    "author_attribution": 99,
+    "reference_urls": 99,
+    "todo_markers": 0,
+    "python_source_hyperlink_before_fix": 88,
+    "python_source_hyperlink_after_fix": 99,
+    "note": "The eleven B2 lessons described python/solution.py without hyperlinking it; a one-sentence link to the source and tests was added to section 13 of each."
+  },
+  "negative_validation": [
+    {
+      "case": "rename README section 10 heading (k-nearest-neighbors)",
+      "result": "validate_catalog fails: missing section 10. Dry Run"
+    },
+    {
+      "case": "set DPO python_status tested without artifacts",
+      "result": "validate_catalog fails: final ML audit must preserve exact approved DPO blocker"
+    },
+    {
+      "case": "delete adam tests/test_python.py",
+      "result": "validate_catalog fails: broken relative link and artifact check (3 errors)"
+    },
+    {
+      "case": "break a lesson relative link",
+      "result": "validate_catalog fails: broken relative link"
+    },
+    {
+      "case": "delete DSA bubble-sort tests/test_cpp.py",
+      "result": "validate_catalog fails (3 errors)"
+    },
+    {
+      "case": "CXX=/nonexistent/g++ with --require-cpp",
+      "result": "pytest tests/test_cpp_toolchain.py errors on all 4 C++ tests (fail, not skip)"
+    }
+  ],
+  "edge_probes": {
+    "estimators": 35,
+    "probes": 427,
+    "invalid_inputs_rejected_with_ValueError": 346,
+    "degenerate_valid_inputs_handled": 81,
+    "unexpected": 0,
+    "cases": [
+      "NaN",
+      "inf",
+      "empty",
+      "1-D",
+      "magnitude 1e300",
+      "ragged",
+      "string",
+      "bool",
+      "constant features",
+      "constant target",
+      "two rows",
+      "duplicates",
+      "predict before fit",
+      "query width mismatch"
+    ]
+  },
+  "reproducibility": {
+    "command": "pytest machine-learning/deep-learning machine-learning/reinforcement-learning machine-learning/natural-language-processing machine-learning/unsupervised-learning/dimensionality-reduction machine-learning/ensemble-methods",
+    "run_a": {
+      "PYTHONHASHSEED": "12345",
+      "passed": 1223,
+      "failed": 0,
+      "seconds": 8.73
+    },
+    "run_b": {
+      "PYTHONHASHSEED": "98765",
+      "passed": 1223,
+      "failed": 0,
+      "seconds": 8.22
+    },
+    "identical_test_sets": true,
+    "global_rng_untouched_checks": [
+      "B7 MLP",
+      "B8 DQN",
+      "B10 GA/SA"
+    ],
+    "no_global_np_random_in_ml_sources": true
+  },
+  "security_scan": {
+    "unsafe_calls_in_ml_sources": "none (no pickle/marshal/eval/exec/subprocess/socket/urllib/requests/tempfile/__import__)",
+    "subprocess_use": "only B6 CLI tests (sys.executable on own solution) and repository verification scripts (git/pytest)",
+    "secrets": "no high-confidence matches in .py/.yml/.yaml/.json/.md/.txt/.toml",
+    "network_or_downloads": "none; no deep-learning frameworks, dataset loaders or pretrained weights",
+    "sklearn_scipy_outside_tests": "only machine-learning/unsupervised-learning/clustering/experiments/reference_audit.py (experiment, not a solution)",
+    "writes_from_ml_sources": "none",
+    "threading": "A3C only (lock-protected, joined, timeout)",
+    "tracked_caches_or_binaries": "none (historical review ZIPs are intentional preserved artifacts)"
+  },
+  "test_quality": {
+    "ml_test_files": 122,
+    "markers": {
+      "ml": 122,
+      "numerical": 209,
+      "oracle": 211,
+      "reference": 59
+    },
+    "skips": "only conftest C++ compiler skip, converted to failure by --require-cpp",
+    "xfail": 0,
+    "tolerances_at_or_above_0_05": 0,
+    "tolerance_occurrences": 567,
+    "vacuous_assertions": 0,
+    "network_dependencies": 0
+  },
+  "cross_category": {
+    "forward_and_reverse_load_of_99_solutions": "ok",
+    "isolated_import_failures": 0,
+    "shared_module_aliases": {
+      "machine-learning/supervised-learning/classification/support.py": [
+        "atlas_classification_support",
+        "atlas_b5_classification_support"
+      ]
+    },
+    "vanilla_autoencoder_single_file": true,
+    "cli_entry_points": 57,
+    "cli_invalid_json_exit_code": 2,
+    "cli_tracebacks_leaked": 0
+  },
+  "ci": {
+    "workflow": ".github/workflows/ci.yml",
+    "python_matrix": [
+      "3.11",
+      "3.12",
+      "3.13",
+      "3.14"
+    ],
+    "steps": [
+      "pip install -r requirements-ml-test.txt",
+      "validate_catalog.py",
+      "generate_catalog_docs.py --check",
+      "pytest --require-cpp"
+    ],
+    "hosted_execution": "not executed or verified locally; only Python 3.14.2 exercised"
+  }
+}

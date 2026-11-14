@@ -6,6 +6,44 @@ Forecasting temporal observations and modeling latent sequence structure.
 
 This category preserves **6 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
+
+## Forecasting and sequence-modeling overview
+
+B11 has exactly six canonicals. SES models a level; additive Holt-Winters models level/trend/phase; ARIMA models differenced AR/MA innovations; SARIMA multiplies seasonal/nonseasonal lag polynomials. The Prophet educational subset fits continuous trend hinges and Fourier seasonality with declared Gaussian ridge priors. Categorical HMM models hidden states and symbolic emissions, with forward/backward, Viterbi and Baum-Welch rather than an invented forecasting API.
+
+| Method | Structure | Estimation/inference |
+| --- | --- | --- |
+| SES | Level | Fixed-alpha recursion |
+| Holt-Winters | Level, trend, additive seasonal phase | Fixed-coefficient triple smoothing |
+| ARIMA | Ordinary differences, AR observations, MA innovations | Conditional sum of squares |
+| SARIMA | Full multiplicative seasonal/nonseasonal polynomials | Conditional sum of squares |
+| Prophet subset | Explicit trend changepoints and Fourier waves | Gaussian ridge/SVD; not full library parity |
+| HMM | Latent categorical Markov chain | Log inference, Viterbi, ML EM |
+
+## Stationarity and differencing
+
+ARIMA assumes the differenced process has a stable mean and lag-dependent covariance structure. Ordinary differences remove successive level changes; seasonal differences compare observations one known period apart. Transform only the permitted training history and undo operators in reverse order for original-unit forecasts. Admissible AR/MA coefficient boxes ensure model stationarity/invertibility; they do not establish empirical stationarity or a correct differencing order.
+
+## Chronological validation and metrics
+
+Use chronological holdout, expanding prefixes or rolling windows. Fit differencing histories, normalization and parameters on each training set alone. Forecast a whole horizon recursively without observing its targets. MAE/MSE/RMSE have explicit units; MAPE is unavailable when any actual is zero; sMAPE defines zero/zero as zero; MASE uses only training differences and rejects zero scale. Fitted initialization errors are not out-of-sample evidence.
+
+## Numerical choices and learning order
+
+Study SES then additive Holt-Winters, ARIMA then SARIMA, then the explicit Prophet subset and categorical HMM. Bound lengths/orders/periods/columns/iterations/state counts. ARIMA/SARIMA reuse the unchanged approved B10 L-BFGS with analytic innovation sensitivities and honest non-convergence statuses. Prophet uses stable augmented SVD. HMM uses log-space sums and defined impossible-sequence behavior.
+
+## Source, examples and scope
+
+- [ARIMA](arima/python/example.py)
+- [SARIMA](sarima/python/example.py)
+- [Exponential Smoothing](exponential-smoothing/python/example.py)
+- [Holt-Winters](holt-winters/python/example.py)
+- [Prophet](prophet/python/example.py)
+- [Hidden Markov Models (HMM)](hidden-markov-models/python/example.py)
+
+Exact contracts and resource limits: [mathematical contracts](../../docs/time-series-conventions.md). [Locked scope](../../docs/time-series-scope.md); [batch evidence](../../docs/time-series-checkpoints.md).
+
+Phase22 B10 is owner-approved; prior learner/source behavior and DPO remain preserved. Phase23 owner approval is pending. No B12/Phase24, commit, push, tag, release or publication is authorized.
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
 | ARIMA | [arima](arima/README.md) | complete |
@@ -22,3 +60,8 @@ Choose prerequisites through the [learning roadmap](../../docs/learning-roadmap.
 Completion is shown by the catalog status and topic artifacts. The current implementation authorization is recorded in the progress tracker; other categories require explicit user approval.
 
 [Project home](../../README.md) · [Complete index](../../docs/algorithm-index.md) · [Progress](../../docs/progress.md)
+
+
+## Current final-audit checkpoint
+
+This category implementation review is owner-approved in the current catalog. Historical handoff reports retain generation-time states. Phase26 audits all B1–B13; final B Track owner approval remains pending. DPO remains blocked;no C1 or publication.

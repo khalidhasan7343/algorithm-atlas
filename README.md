@@ -6,7 +6,7 @@ From Fundamental Algorithms to Advanced Artificial Intelligence — Learn, Imple
 
 Algorithm Atlas is an educational, open-source project maintained by **MD.Khalid Hasan**. Its goal is to explain algorithms from first principles through clear documentation, Python and modern C++ implementations, meaningful tests, complexity analysis, and practical applications.
 
-**Current scope: Phase24 B12 Anomaly Detection.** Phase23 B11 is explicitly owner-approved on2026-11-01 Asia/Dhaka. Three existing canonicals in three batches;[scope](docs/anomaly-detection-scope.md),[contracts](docs/anomaly-detection-conventions.md),[checkpoints](docs/anomaly-detection-checkpoints.md). Preserve B1-B11/DSA source and blocked DPO. New Phase24 review pending;no Phase25 or publication.
+**Current scope: Phase26 final comprehensive ML audit, B1–B13.** Phase25 B13 is explicitly owner-approved on2026-11-01 Asia/Dhaka. Seven audit/stabilization workstreams;[scope](docs/ml-final-audit-scope.md),[checkpoints](docs/ml-final-audit-checkpoints.md),[report](docs/reviews/machine-learning/ML-FINAL-COMPREHENSIVE-AUDIT-REPORT.md). Preserve B1–B13/DSA source and blocked DPO. Final B Track owner approval pending;no C1,nextphase or publication.
 
 The [DSA final audit](docs/reviews/dsa-final-audit/DSA-FINAL-AUDIT-REPORT.md) retains its conditional recommendation and original evidence. ML authorization does not retroactively approve historical milestones.
 
@@ -167,7 +167,7 @@ Use the [complexity cheat sheet](docs/complexity-cheatsheet.md) for asymptotic n
 
 [Progress tracking](docs/progress.md) records catalog totals, completed and remaining algorithms, blockers, and the next proposed batch. The [Phase 0 review report](docs/phase-0-review.md) and [complete file inventory](docs/phase-0-files.md) document the foundation handoff. Phase 0 supplies the foundation only. The term **Dynamic Policy Optimization (DPO)** is retained from the syllabus and blocked pending clarification; it has not been replaced by Direct Preference Optimization.
 
-Previous B1–B11 and DSA work is owner-approved. B8 is9 completed+1 intentionally blocked; no10/10 claim. New Phase24 B12 owner review pending. DPO decision remains owner-approved: remain blocked.
+Previous B1–B13 and DSA work is owner-approved. B8 is9 completed+1 intentionally blocked; no10/10 claim. Phase26 final ML audit owner review pending. DPO decision remains owner-approved: remain blocked.
 
 ## Contribution Guidelines
 
