@@ -1,0 +1,29 @@
+{
+  "label": "baseline-full-suite",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "--require-cpp",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "--require-cpp",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/uninformed-search-evidence/baseline-full-suite-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-14T23:47:36.454050+06:00",
+  "elapsed_seconds": 441.572,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/uninformed-search-evidence/baseline-full-suite-01.txt"
+}

@@ -6,14 +6,21 @@ Exploring state spaces without a domain-specific goal-distance heuristic.
 
 This category preserves **6 original syllabus entries**. Each link points to the canonical topic; repeated memberships do not create copied implementations. Topic planning pages record future scope; completed topics have their full lessons and tests.
 
+## Shared A5 canonical entries (reused, not duplicated)
+
 | Original syllabus entry | Canonical folder | Status |
 | --- | --- | --- |
 | Breadth-First Search (BFS) | [breadth-first-search](../../dsa/graph-algorithms/breadth-first-search/README.md) | complete |
 | Depth-First Search (DFS) | [depth-first-search](../../dsa/graph-algorithms/depth-first-search/README.md) | complete |
-| Depth-Limited Search | [depth-limited-search](depth-limited-search/README.md) | planned |
-| Iterative Deepening DFS (IDDFS) | [iterative-deepening-dfs](iterative-deepening-dfs/README.md) | planned |
-| Uniform Cost Search (UCS) | [uniform-cost-search](uniform-cost-search/README.md) | planned |
-| Bidirectional Search | [bidirectional-search](bidirectional-search/README.md) | planned |
+
+## New C1 canonical implementations
+
+| Original syllabus entry | Canonical folder | Status |
+| --- | --- | --- |
+| Depth-Limited Search | [depth-limited-search](depth-limited-search/README.md) | complete |
+| Iterative Deepening DFS (IDDFS) | [iterative-deepening-dfs](iterative-deepening-dfs/README.md) | complete |
+| Uniform Cost Search (UCS) | [uniform-cost-search](uniform-cost-search/README.md) | complete |
+| Bidirectional Search | [bidirectional-search](bidirectional-search/README.md) | complete |
 
 ## Learning and contribution scope
 
@@ -21,4 +28,209 @@ Choose prerequisites through the [learning roadmap](../../docs/learning-roadmap.
 
 Completion is shown by the catalog status and topic artifacts. The current implementation authorization is recorded in the progress tracker; other categories require explicit user approval.
 
+## Phase27 authorization and shared ownership
+
+Phase27 implements the four C1-owned canonicals with Python and C++17/C++20, exact 25-section lessons and independent oracles. BFS and DFS remain owned by A5 Graph Algorithms and are reused through their canonical folders. Read [the scope](../../docs/uninformed-search-scope.md), [the state-space contract](../../docs/uninformed-search-conventions.md) and [the checkpoints](../../docs/uninformed-search-checkpoints.md). Phase27 owner approval is pending; no C2 or publication is authorized.
+
 [Project home](../../README.md) · [Complete index](../../docs/algorithm-index.md) · [Progress](../../docs/progress.md)
+
+<!-- algorithm-atlas:authored-category-guide -->
+
+# C1 Uninformed Search Guide
+
+*Hand-written guide. The generator preserves everything below the marker above; edit the catalog for the inventory tables.*
+
+## 1. Introduction to Uninformed Search
+
+An uninformed (blind) search knows only the problem definition — the initial state, how to generate successors, their costs, and how to recognize a goal. It has no estimate of how far a state is from a goal. The algorithms differ only in **which frontier state they expand next**, and that single choice determines completeness, optimality, time and memory. Informed searches (C2) add a heuristic; this category is the baseline they are measured against.
+
+## 2. Exact Six-Entry Syllabus Inventory
+
+| # | Syllabus entry | Canonical ID | Owner | Lesson |
+| - | --- | --- | --- | --- |
+| 1 | Breadth-First Search (BFS) | `breadth-first-search` | A5 (shared) | [A5 lesson](../../dsa/graph-algorithms/breadth-first-search/README.md) |
+| 2 | Depth-First Search (DFS) | `depth-first-search` | A5 (shared) | [A5 lesson](../../dsa/graph-algorithms/depth-first-search/README.md) |
+| 3 | Depth-Limited Search | `depth-limited-search` | C1 (new) | [lesson](depth-limited-search/README.md) |
+| 4 | Iterative Deepening DFS (IDDFS) | `iterative-deepening-dfs` | C1 (new) | [lesson](iterative-deepening-dfs/README.md) |
+| 5 | Uniform Cost Search (UCS) | `uniform-cost-search` | C1 (new) | [lesson](uniform-cost-search/README.md) |
+| 6 | Bidirectional Search | `bidirectional-search` | C1 (new) | [lesson](bidirectional-search/README.md) |
+
+Six syllabus entries, **four new canonical implementations** and **two shared A5 entries**.
+
+## 3. Canonical Ownership Explanation
+
+Algorithm Atlas keeps one canonical folder per algorithm. BFS and DFS were implemented, tested and approved in A5 Graph Algorithms, so C1 links to them and reuses their code; no `breadth-first-search` or `depth-first-search` folder exists under C1, and a test enforces that. The A5 APIs are *graph traversal* APIs: `bfs(n, edges, source, directed)` and `dfs(n, edges, directed)` take an explicit integer graph and return arrays for every vertex. The four C1 canonicals use a *state-space search* API: an initial state, a goal predicate and a successor callable, with lazy generation and early goal termination. The [conventions](../../docs/uninformed-search-conventions.md#mapping-onto-the-a5-bfsdfs-apis) describe how a finite state space is mapped onto the A5 APIs and the limitations of doing so (finite, enumerable states; whole graph built first; no early stop; A5 size caps). Uniform Cost Search is likewise distinct from A5 [Dijkstra](../../dsa/graph-algorithms/dijkstra/README.md): both need nonnegative costs, but Dijkstra settles every vertex of an explicit graph while UCS stops at the first cheapest goal of an implicit space.
+
+## 4. BFS Canonical Link to A5
+
+[Breadth-First Search lesson](../../dsa/graph-algorithms/breadth-first-search/README.md), [Python source](../../dsa/graph-algorithms/breadth-first-search/python/solution.py), [C++ source](../../dsa/graph-algorithms/breadth-first-search/cpp/solution.cpp), [tests](../../dsa/graph-algorithms/breadth-first-search/tests/test_python.py). In uninformed search, BFS expands states in order of depth (a FIFO frontier) and returns a path with the fewest actions. The C1 example [shared_bfs_dfs.py](examples/shared_bfs_dfs.py) numbers the 20 water-jug states and runs the A5 BFS: its shortest solution has 6 actions.
+
+## 5. DFS Canonical Link to A5
+
+[Depth-First Search lesson](../../dsa/graph-algorithms/depth-first-search/README.md), [Python source](../../dsa/graph-algorithms/depth-first-search/python/solution.py), [C++ source](../../dsa/graph-algorithms/depth-first-search/cpp/solution.cpp), [tests](../../dsa/graph-algorithms/depth-first-search/tests/test_python.py). DFS expands the most recently generated state first (a LIFO frontier). The A5 version uses a global visited array, so it is complete on finite explicit graphs, but it makes no shortest-path claim: in the same water-jug example its DFS-tree path to the goal has 9 actions versus BFS's 6.
+
+## 6. Depth-Limited Search
+
+DFS that never extends a path beyond `L` actions, with path-local cycle checks and three outcomes: `FOUND`, `CUTOFF` (a path was truncated at the limit, so a deeper solution may exist) and `FAILURE` (the reachable space was exhausted, so no goal is reachable). Read the [lesson](depth-limited-search/README.md).
+
+## 7. IDDFS
+
+Runs the canonical DLS with limits `0, 1, 2, …` until a goal is found, a definitive failure is reported, or an optional `max_depth` is reached. It returns a solution with the fewest actions while using only `O(bd)` memory. Read the [lesson](iterative-deepening-dfs/README.md).
+
+## 8. Uniform Cost Search
+
+Best-first search on accumulated cost `g(n)` with a heap frontier, strict improvements, stale-entry skipping and deterministic counter tie-breaking. Goals are accepted when popped, never when generated. Requires finite nonnegative costs; zero costs are supported. Read the [lesson](uniform-cost-search/README.md).
+
+## 9. Bidirectional Search
+
+Bidirectional BFS for unit costs: forward search with successors, backward search from one explicit goal with **genuine predecessors** (or `undirected=True` for reversible spaces), whole-layer expansion on the smaller frontier, and acceptance only when `best ≤ d_f + d_b + 1`. Read the [lesson](bidirectional-search/README.md).
+
+## 10. State-Space Search Model
+
+A problem is `(s0, successors, is_goal)` plus optional step costs. `successors(s)` yields `(action, next_state)` records — or `(action, next_state, step_cost)` for UCS — in a deterministic exploration order. States are identified by `state_key(s)` (default the state itself), which must be hashable. A solution is a sequence of states `s0 … g` and the actions between them; its cost is the number of actions, or the sum of step costs for UCS. All four C1 searches return the same immutable `SearchResult` (`status`, `states`, `actions`, `cost`, `depth`, `stats`); see the [conventions](../../docs/uninformed-search-conventions.md).
+
+## 11. Goal Testing
+
+| Algorithm | When the goal test runs | Why |
+| --- | --- | --- |
+| DLS / IDDFS | when a state is placed on the path (depth `0 … L`) | depth-first; depth `L + 1` is never tested |
+| UCS | when a state is **removed** from the frontier with its current best cost | a cheaper route may still be pending when a goal is first generated |
+| Bidirectional BFS | against an explicit goal state, via the meeting condition | both sides must meet |
+| A5 BFS | the API labels all reachable vertices; the caller reads the goal's distance | traversal API, no early stop |
+
+## 12. Successor Generation
+
+Successor functions are called lazily, once per expansion, and every record is validated before use: the result must be an iterable (not a string, mapping or `None`) of records of the right width; UCS costs must be real, finite and nonnegative. Errors raise `TypeError` or `ValueError` immediately rather than being ignored. DLS additionally calls `successors` on some depth-`L` states only to classify `CUTOFF` versus `FAILURE` (`boundary_checks`).
+
+## 13. Path Reconstruction
+
+DLS/IDDFS keep the current path explicitly and return it. UCS stores `(parent, action)` with each strict improvement; when a goal is popped every ancestor is closed, so its parent chain is final and never stale. Bidirectional search joins a forward parent chain, the meeting transition and a backward parent chain; every backward hop is confirmed against `successors`, so returned actions are real forward transitions. Every test checks that each returned action leads from `states[i]` to `states[i+1]`.
+
+## 14. Frontier Management
+
+| Algorithm | Frontier | Order |
+| --- | --- | --- |
+| BFS (A5) | FIFO queue | depth |
+| DFS (A5) | explicit stack of adjacency iterators | most recent first |
+| DLS / IDDFS | explicit stack of successor lists, at most `L` frames | most recent first |
+| UCS | binary heap of `(g, counter, key)` | cost, then insertion order |
+| Bidirectional BFS | two layer lists | smaller layer first; ties: shallower side, then forward |
+
+## 15. Cycle Handling
+
+- DLS/IDDFS use **path-local** cycle detection. A global visited set would be wrong under a depth limit: a state first reached at depth `L` may later be reachable at depth 1 with budget left, and skipping it would turn a solvable problem into a false `CUTOFF` (tested).
+- UCS uses `best` costs and a closed set; with nonnegative costs a closed state can never improve.
+- Bidirectional BFS labels each state once per direction.
+- A5 BFS/DFS use visited arrays over the explicit graph.
+
+## 16. Completeness
+
+"Complete" means: if a solution exists, the algorithm finds one (and terminates). All statements assume a deterministic successor function with finite branching.
+
+- BFS, IDDFS: complete. On a finite space without a solution, BFS terminates; IDDFS terminates because DLS eventually reports `FAILURE`.
+- DLS: complete only for solutions within `L` actions; otherwise reports `CUTOFF`. Always terminates.
+- DFS (A5): complete on finite explicit graphs (global visited set); unbounded DFS on infinite spaces is not.
+- UCS: complete on finite spaces, and on infinite spaces when every step cost is at least some `ε > 0`; zero-cost infinite chains may prevent termination.
+- Bidirectional BFS: complete on finite spaces when the goal is a single explicit state and predecessors are genuine.
+
+## 17. Optimality
+
+- BFS, IDDFS, bidirectional BFS: optimal in the **number of actions** (unit costs). Not cost-optimal for unequal costs.
+- UCS: optimal in **total cost** for finite nonnegative costs, because goals are tested on removal.
+- DFS and DLS: not optimal (DLS returns the first solution in depth-first order).
+
+## 18. Time Complexity
+
+Variables: `b` branching factor, `d` depth of the shallowest solution, `L` depth limit, `m` maximum depth, `V`/`E` reachable states/transitions, `C*` optimal cost, `ε` minimum positive step cost, `P_L` number of simple paths of length `≤ L`.
+
+| Algorithm | Tree model | Explicit graph |
+| --- | --- | --- |
+| BFS (A5) | `O(b^d)` | `O(V + E)` |
+| DFS (A5) | `O(b^m)` | `O(V + E)` |
+| DLS | `O(b^{L+1})` generated | `O(b · P_L)` (paths, not states) |
+| IDDFS | `O(b^d)` (repeated shallow levels are a constant factor for `b ≥ 2`) | sum of DLS costs up to `d` |
+| UCS | `O(b^{1+⌊C*/ε⌋})` | `O((V + E) log E)` |
+| Bidirectional BFS | `O(b^{d/2})` per side **only if** branching is similar in both directions and the frontiers meet near the middle | `O(V + E)` |
+
+## 19. Space Complexity
+
+| Algorithm | Tree model | Explicit graph |
+| --- | --- | --- |
+| BFS (A5) | `O(b^d)` frontier | `O(V)` |
+| DFS (A5) | `O(bm)` stack | `O(V)` visited |
+| DLS | `O(bL)` | `O(bL)` — no visited set |
+| IDDFS | `O(bd)` | `O(bd)` |
+| UCS | `O(b^{1+⌊C*/ε⌋})` | `O(V + E)` (lazy heap entries) |
+| Bidirectional BFS | `O(b^{d/2})` | `O(V)` |
+
+## 20. Algorithm Comparison
+
+| Algorithm | Uses depth limit | Uses costs | Complete under stated assumptions | Optimal under stated assumptions |
+| --- | --- | --- | --- | --- |
+| BFS (A5) | No | Unit cost | Yes, finite branching | Yes, fewest actions |
+| DFS (A5) | No | No | On finite explicit graphs with its visited set; not on infinite-depth spaces | No |
+| DLS | Yes, inclusive `L` | No | Only if a solution has depth `≤ L`, finite branching | No |
+| IDDFS | Repeated limits `0, 1, …` | Unit cost | Yes, finite branching (needs `max_depth` to stop on an infinite unsolvable space) | Yes, fewest actions |
+| UCS | No | Finite nonnegative costs | Finite spaces, or infinite spaces with step costs `≥ ε > 0` | Yes, least cost, because goals are tested when popped |
+| Bidirectional BFS | No | Unit cost | Finite spaces with one explicit goal and genuine predecessors | Yes, fewest actions |
+
+## 21. Worked Examples
+
+[compare_uninformed.py](examples/compare_uninformed.py) runs all six entries on one road map: `S→A (1)`, `A→B (1)`, `B→G (1)`, `S→C (4)`, `C→G (4)`, `S→D (2)`, `D→C (1)`. Actual output:
+
+```text
+A5 BFS  : S-C-G (fewest actions)
+A5 DFS  : S-A-B-G (first DFS-tree path; not shortest in general)
+DLS L=1: CUTOFF
+DLS L=2: FOUND S-C-G
+DLS L=3: FOUND S-A-B-G
+IDDFS   : S-C-G after 3 iterations
+UCS     : S-A-B-G cost 3 (cheapest; S-C-G costs 8)
+Bidir   : S-C-G meeting C->G
+```
+
+The fewest-action route `S-C-G` costs 8, while UCS finds the 3-action route costing 3; DLS with a generous limit returns whatever depth-first order reaches first. Per-algorithm examples: [DLS outcomes](depth-limited-search/python/example.py), [IDDFS limits](iterative-deepening-dfs/python/example.py), [UCS route](uniform-cost-search/python/example.py), [bidirectional frontiers](bidirectional-search/python/example.py), and [A5 BFS/DFS on a state space](examples/shared_bfs_dfs.py).
+
+## 22. Limitations
+
+- Uninformed searches ignore goal direction; on large spaces an informed search (C2) is usually needed.
+- The implementations target education and correctness: costs, records and identities are validated on every expansion, which costs time.
+- UCS does not accept negative costs; floating-point costs are compared exactly without tolerance.
+- Bidirectional search is unit-cost only and needs one explicit goal state plus predecessors.
+- IDDFS/DLS re-explore states reachable by many paths; on dense cyclic graphs prefer BFS with a visited set.
+- The explicit-graph CLIs are bounded (`n ≤ 100000`, `m ≤ 200000`, depth `≤ 100000`, costs `≤ 10^12`).
+
+## 23. Testing and Independent Oracles
+
+| Algorithm | Independent verification |
+| --- | --- |
+| BFS (A5) | existing A5 tests; C1 checks against a separately written queue BFS on 400 random state graphs |
+| DFS (A5) | existing A5 tests; C1 reachability checks and an explicit non-optimality counterexample |
+| DLS | exhaustive enumeration of all simple paths up to the bound (status and first path) on 600 random graphs |
+| IDDFS | independent BFS shortest depth on 700 random graphs, including `max_depth` cutoffs |
+| UCS | Bellman-Ford **and** exhaustive simple-path costs on 700 random graphs; A5 Dijkstra as an extra integration check |
+| Bidirectional BFS | independent BFS (directed and undirected) and exhaustive enumeration on 800 random graphs |
+
+Metamorphic tests check successor permutation, added unreachable components, added expensive or nonnegative edges, larger DLS limits and reversed undirected searches. C++ results are compared field-by-field with Python (including statistics) and checked against the same oracles under C++17 and C++20. Evidence and exact commands: [checkpoints](../../docs/uninformed-search-checkpoints.md).
+
+## 24. Learning Roadmap
+
+1. Review A5 [BFS](../../dsa/graph-algorithms/breadth-first-search/README.md) and [DFS](../../dsa/graph-algorithms/depth-first-search/README.md) as graph traversals.
+2. Read the [state-space conventions](../../docs/uninformed-search-conventions.md).
+3. [Depth-Limited Search](depth-limited-search/README.md), then [IDDFS](iterative-deepening-dfs/README.md).
+4. Compare A5 [Dijkstra](../../dsa/graph-algorithms/dijkstra/README.md) with [Uniform Cost Search](uniform-cost-search/README.md).
+5. [Bidirectional Search](bidirectional-search/README.md).
+6. Continue with C2 Informed Search after its phase is approved; see the [learning roadmap](../../docs/learning-roadmap.md).
+
+## 25. Canonical Source Links
+
+| Topic | Python | C++ | Tests | Example |
+| --- | --- | --- | --- | --- |
+| BFS (A5) | [solution.py](../../dsa/graph-algorithms/breadth-first-search/python/solution.py) | [solution.cpp](../../dsa/graph-algorithms/breadth-first-search/cpp/solution.cpp) | [tests](../../dsa/graph-algorithms/breadth-first-search/tests/test_python.py) | [shared example](examples/shared_bfs_dfs.py) |
+| DFS (A5) | [solution.py](../../dsa/graph-algorithms/depth-first-search/python/solution.py) | [solution.cpp](../../dsa/graph-algorithms/depth-first-search/cpp/solution.cpp) | [tests](../../dsa/graph-algorithms/depth-first-search/tests/test_python.py) | [shared example](examples/shared_bfs_dfs.py) |
+| DLS | [solution.py](depth-limited-search/python/solution.py) | [solution.cpp](depth-limited-search/cpp/solution.cpp) | [Python](depth-limited-search/tests/test_python.py), [C++](depth-limited-search/tests/test_cpp.py) | [example.py](depth-limited-search/python/example.py) |
+| IDDFS | [solution.py](iterative-deepening-dfs/python/solution.py) | [solution.cpp](iterative-deepening-dfs/cpp/solution.cpp) | [Python](iterative-deepening-dfs/tests/test_python.py), [C++](iterative-deepening-dfs/tests/test_cpp.py) | [example.py](iterative-deepening-dfs/python/example.py) |
+| UCS | [solution.py](uniform-cost-search/python/solution.py) | [solution.cpp](uniform-cost-search/cpp/solution.cpp) | [Python](uniform-cost-search/tests/test_python.py), [C++](uniform-cost-search/tests/test_cpp.py) | [example.py](uniform-cost-search/python/example.py) |
+| Bidirectional | [solution.py](bidirectional-search/python/solution.py) | [solution.cpp](bidirectional-search/cpp/solution.cpp) | [Python](bidirectional-search/tests/test_python.py), [C++](bidirectional-search/tests/test_cpp.py) | [example.py](bidirectional-search/python/example.py) |
+
+Shared C1 infrastructure: [support.py](support.py), [common.hpp](common.hpp), [conftest.py](conftest.py), [oracles](tests/oracles.py), [shared-canonical tests](tests/test_shared_canonicals.py). Maintained by [MD.Khalid Hasan](https://github.com/khalidhasan7343); MIT licensed.

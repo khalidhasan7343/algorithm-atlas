@@ -1,0 +1,191 @@
+{
+  "full-suite": {
+    "label": "full-suite",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "--require-cpp",
+      "-q",
+      "-p",
+      "no:cacheprovider"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "--require-cpp",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/uninformed-search-evidence/full-suite-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-15T21:56:31.639146+06:00",
+    "elapsed_seconds": 458.874,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/uninformed-search-evidence/full-suite-01.txt",
+    "summary": "5363 passed in 458.36s (0:07:38)",
+    "record": "docs/uninformed-search-evidence/full-suite-01.json"
+  },
+  "c1-targeted": {
+    "label": "c1-targeted",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "-p",
+      "no:cacheprovider",
+      "--require-cpp",
+      "-q",
+      "artificial-intelligence/uninformed-search",
+      "dsa/graph-algorithms/breadth-first-search",
+      "dsa/graph-algorithms/depth-first-search",
+      "dsa/graph-algorithms/dijkstra"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-p",
+      "no:cacheprovider",
+      "--require-cpp",
+      "-q",
+      "artificial-intelligence/uninformed-search",
+      "dsa/graph-algorithms/breadth-first-search",
+      "dsa/graph-algorithms/depth-first-search",
+      "dsa/graph-algorithms/dijkstra",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/uninformed-search-evidence/c1-targeted-01.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-15T21:55:34.324238+06:00",
+    "elapsed_seconds": 27.543,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/uninformed-search-evidence/c1-targeted-01.txt",
+    "summary": "152 passed in 27.39s",
+    "record": "docs/uninformed-search-evidence/c1-targeted-01.json"
+  },
+  "c1-policy": {
+    "label": "c1-policy",
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "-p",
+      "no:cacheprovider",
+      "-q",
+      "tests/test_c1_language_and_scope_policy.py",
+      "tests/test_track_policy.py",
+      "tests/test_generate_catalog_docs.py",
+      "tests/test_validate_catalog.py"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-p",
+      "no:cacheprovider",
+      "-q",
+      "tests/test_c1_language_and_scope_policy.py",
+      "tests/test_track_policy.py",
+      "tests/test_generate_catalog_docs.py",
+      "tests/test_validate_catalog.py",
+      "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/uninformed-search-evidence/c1-policy-02.xml"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-15T21:56:29.097012+06:00",
+    "elapsed_seconds": 2.429,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/uninformed-search-evidence/c1-policy-02.txt",
+    "summary": "317 passed in 2.32s",
+    "record": "docs/uninformed-search-evidence/c1-policy-02.json"
+  },
+  "catalog": {
+    "label": "catalog",
+    "command": [
+      "python",
+      "scripts/validate_catalog.py"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "scripts/validate_catalog.py"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-15T21:56:28.312922+06:00",
+    "elapsed_seconds": 0.759,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/uninformed-search-evidence/catalog-02.txt",
+    "summary": "Validation passed. Test execution and external URLs are checked separately.",
+    "record": "docs/uninformed-search-evidence/catalog-02.json"
+  },
+  "generated": {
+    "label": "generated",
+    "command": [
+      "python",
+      "scripts/generate_catalog_docs.py",
+      "--check"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "scripts/generate_catalog_docs.py",
+      "--check"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-15T21:56:28.122741+06:00",
+    "elapsed_seconds": 0.166,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/uninformed-search-evidence/generated-02.txt",
+    "summary": "Checked 77 catalog documentation pages; 0 changes.",
+    "record": "docs/uninformed-search-evidence/generated-02.json"
+  },
+  "scope": {
+    "label": "scope",
+    "command": [
+      "python",
+      "scripts/verify_uninformed_search_scope.py"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "scripts/verify_uninformed_search_scope.py"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-15T21:55:33.566920+06:00",
+    "elapsed_seconds": 0.422,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/uninformed-search-evidence/scope-01.txt",
+    "summary": "Phase27 scope passed: 4 new canonicals, 2 shared A5 entries; 3929 protected prior files; 33 allowed changes; tracked and unignored",
+    "record": "docs/uninformed-search-evidence/scope-01.json"
+  },
+  "examples": {
+    "label": "examples",
+    "command": [
+      "python",
+      "scripts/verify_uninformed_search_examples.py"
+    ],
+    "actual_command": [
+      "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+      "scripts/verify_uninformed_search_examples.py"
+    ],
+    "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+    "started_at": "2026-11-15T21:55:34.013233+06:00",
+    "elapsed_seconds": 0.286,
+    "timeout_seconds": 1200,
+    "timed_out": false,
+    "returncode": 0,
+    "output": "docs/uninformed-search-evidence/examples-01.txt",
+    "summary": "Verified 6 deterministic C1 examples; documented outputs match.",
+    "record": "docs/uninformed-search-evidence/examples-01.json"
+  }
+}

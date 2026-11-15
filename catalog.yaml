@@ -1,11 +1,11 @@
 schema_version: 1
 project: Algorithm Atlas
 development:
-  phase: Phase 26 — Machine Learning Final Comprehensive Audit
-  phase_number: 26
-  track: machine-learning
-  category: null
-  scope: Audit and stabilization of B1–B13 only;no new canonical,scope or public API changes
+  phase: Phase 27 — C1 Uninformed Search
+  phase_number: 27
+  track: artificial-intelligence
+  category: C1
+  scope: C1 Uninformed Search only;four new canonicals plus two shared A5 BFS/DFS entries
   status: awaiting-review
   active_batch: null
   completed_batches:
@@ -14,11 +14,29 @@ development:
   - 3
   - 4
   - 5
-  - 6
-  - 7
-  batch_plan: []
-  checkpoint: docs/ml-final-audit-checkpoints.md
-  approval: Owner explicitly approved Phase25 and authorized Phase26 final ML audit on2026-11-01 Asia/Dhaka. Final B Track/Phase26 owner approval pending. No C1,nextphase,commit,push,tag,release or publication.
+  batch_plan:
+  - - breadth-first-search
+    - depth-first-search
+  - - depth-limited-search
+    - iterative-deepening-dfs
+  - - uniform-cost-search
+  - - bidirectional-search
+  - []
+  batch_names:
+  - Shared BFS/DFS integration
+  - Depth-Limited Search and IDDFS
+  - Uniform Cost Search
+  - Bidirectional Search
+  - Integration, regression and packaging
+  category_memberships:
+  - breadth-first-search
+  - depth-first-search
+  - depth-limited-search
+  - iterative-deepening-dfs
+  - uniform-cost-search
+  - bidirectional-search
+  checkpoint: docs/uninformed-search-checkpoints.md
+  approval: Owner explicitly approved previous work (Phase26 final ML audit; CONDITIONAL PASS verdict preserved) and authorized Phase27 C1 Uninformed Search on 2026-11-14 Asia/Dhaka. Phase27 owner approval pending. No C2,commit,push,tag,release or publication.
   phase_records:
     '11':
       phase_number: 11
@@ -254,7 +272,7 @@ development:
       phase_number: 26
       track: machine-learning
       mode: final-ml-audit
-      categories: &id001
+      categories:
       - B1
       - B2
       - B3
@@ -268,10 +286,10 @@ development:
       - B11
       - B12
       - B13
-      status: awaiting-review
+      status: owner-approved
       checkpoint: docs/ml-final-audit-checkpoints.md
       completion_report: docs/reviews/machine-learning/ML-FINAL-COMPREHENSIVE-AUDIT-REPORT.md
-      owner_approval: pending
+      owner_approval: approved
       completed_workstreams:
       - Catalog and repository integrity
       - Mathematical correctness
@@ -284,14 +302,39 @@ development:
       audit_completed_on: 2026-11-14 Asia/Dhaka
       evidence: docs/ml-final-audit-evidence/phase26-audit-evidence.json
       oracle_evidence: docs/ml-final-audit-evidence/oracle-results.json
+      approved_on: 2026-11-14 Asia/Dhaka
+      approval_evidence: 'Explicit owner statement with the Phase27 C1 request after the verified Phase26 handoff: Approved pervious work and review done.now follow this properly. The CONDITIONAL PASS audit verdict is preserved unchanged.'
+      approved_package_sha256: 0646fb1a4737c9f1612f41e6927429c414f8b45c89d225dcc502bf97cf90ebc3
+    '27':
+      phase_number: 27
+      track: artificial-intelligence
+      category: C1
+      status: awaiting-review
+      checkpoint: docs/uninformed-search-checkpoints.md
+      completion_report: docs/reviews/uninformed-search/UNINFORMED-SEARCH-REVIEW-REPORT.md
+      owner_approval: pending
+      completed_batches:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      syllabus_entries: 6
+      new_canonical_implementations: 4
+      shared_canonical_entries:
+      - breadth-first-search
+      - depth-first-search
+      authorized_on: 2026-11-14 Asia/Dhaka
+      authorization_evidence: docs/uninformed-search-evidence/approval-evidence.json
   current_review:
-    id: ml-final-comprehensive-audit-phase26
-    phase_number: 26
-    track: machine-learning
+    id: uninformed-search-phase27
+    phase_number: 27
+    track: artificial-intelligence
+    category: C1
     status: awaiting-review
     owner_approval: pending
-    completion_report: docs/reviews/machine-learning/ML-FINAL-COMPREHENSIVE-AUDIT-REPORT.md
-  completion_report: docs/reviews/machine-learning/ML-FINAL-COMPREHENSIVE-AUDIT-REPORT.md
+    completion_report: docs/reviews/uninformed-search/UNINFORMED-SEARCH-REVIEW-REPORT.md
+  completion_report: docs/reviews/uninformed-search/UNINFORMED-SEARCH-REVIEW-REPORT.md
   blocker_reviews:
     dynamic-policy-optimization: verified-blocked
   dpo_specification_decision:
@@ -304,16 +347,6 @@ development:
     canonical_id: dynamic-policy-optimization
     canonical_path: machine-learning/reinforcement-learning/dynamic-policy-optimization
     substitution_authorized: false
-  mode: final-ml-audit
-  audit_categories: *id001
-  audit_workstreams:
-  - Catalog and repository integrity
-  - Mathematical correctness
-  - Tests and independent oracles
-  - Documentation and learning quality
-  - CI,dependencies and infrastructure
-  - Security,performance and reproducibility
-  - Final regression and packaging
 categories:
   - id: "A1"
     name: "Sorting"
@@ -3656,53 +3689,53 @@ algorithms:
     category: "C1"
     canonical_location: "artificial-intelligence/uninformed-search/depth-limited-search"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
+    cpp_status: "tested"
+    test_status: "tested"
     related_algorithms:
       - "breadth-first-search"
       - "depth-first-search"
-    notes: "Explore a state space subject to a fixed depth bound. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Explore a state space subject to a fixed inclusive depth bound with path-local cycle checks and distinct FOUND/CUTOFF/FAILURE outcomes. Phase27 canonical implementation tested locally in Python, C++17 and C++20 against exhaustive bounded-path oracles; owner review pending."
   - id: "iterative-deepening-dfs"
     name: "Iterative Deepening DFS (IDDFS)"
     category: "C1"
     canonical_location: "artificial-intelligence/uninformed-search/iterative-deepening-dfs"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
+    cpp_status: "tested"
+    test_status: "tested"
     related_algorithms:
       - "breadth-first-search"
       - "depth-first-search"
-    notes: "Repeat depth-limited exploration with increasing bounds. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Repeat the canonical C1 depth-limited search with limits 0,1,2,... to return a shallowest solution. Phase27 canonical implementation tested locally in Python, C++17 and C++20 against an independent BFS oracle; owner review pending."
   - id: "uniform-cost-search"
     name: "Uniform Cost Search (UCS)"
     category: "C1"
     canonical_location: "artificial-intelligence/uninformed-search/uniform-cost-search"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
+    cpp_status: "tested"
+    test_status: "tested"
     related_algorithms:
       - "dijkstra"
       - "a-star-search"
-    notes: "Explore state-space paths in order of accumulated nonnegative cost. State-space best-first formulation with goal termination and nonnegative action costs. Keep its search-state contract explicit and compare with graph shortest-path Dijkstra, whose graph interface is documented separately. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Explore state-space paths in order of accumulated nonnegative cost. State-space best-first formulation with goal termination and nonnegative action costs. Keep its search-state contract explicit and compare with graph shortest-path Dijkstra, whose graph interface is documented separately. Phase27 canonical implementation tested locally in Python, C++17 and C++20 against Bellman-Ford, exhaustive and A5 Dijkstra checks; owner review pending."
   - id: "bidirectional-search"
     name: "Bidirectional Search"
     category: "C1"
     canonical_location: "artificial-intelligence/uninformed-search/bidirectional-search"
     difficulty: "intermediate"
-    documentation_status: "planned"
-    python_status: "planned"
-    cpp_status: "planned"
-    test_status: "planned"
+    documentation_status: "implemented"
+    python_status: "tested"
+    cpp_status: "tested"
+    test_status: "tested"
     related_algorithms:
       - "breadth-first-search"
       - "depth-first-search"
-    notes: "Search from source and goal with explicit frontier-meeting conditions. Phase 0 planning record only; the full algorithm documentation, implementations, usage examples, and tests remain pending."
+    notes: "Bidirectional breadth-first search from source and goal with genuine predecessors and a proven layer-bound meeting condition. Phase27 canonical implementation tested locally in Python, C++17 and C++20 against independent BFS and exhaustive oracles; owner review pending."
   - id: "greedy-best-first-search"
     name: "Greedy Best-First Search"
     category: "C2"

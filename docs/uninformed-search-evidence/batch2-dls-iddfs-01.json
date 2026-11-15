@@ -1,0 +1,33 @@
+{
+  "label": "batch2-dls-iddfs",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "--require-cpp",
+    "-q",
+    "artificial-intelligence/uninformed-search/depth-limited-search",
+    "artificial-intelligence/uninformed-search/iterative-deepening-dfs"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "--require-cpp",
+    "-q",
+    "artificial-intelligence/uninformed-search/depth-limited-search",
+    "artificial-intelligence/uninformed-search/iterative-deepening-dfs",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/uninformed-search-evidence/batch2-dls-iddfs-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-15T01:08:04.023754+06:00",
+  "elapsed_seconds": 9.864,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/uninformed-search-evidence/batch2-dls-iddfs-01.txt"
+}

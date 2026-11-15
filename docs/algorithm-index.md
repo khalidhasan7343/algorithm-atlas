@@ -347,10 +347,10 @@ Foundation checks validate repository structure; they are separate from tests of
 | --- | --- | --- |
 | Breadth-First Search (BFS) | [breadth-first-search](../dsa/graph-algorithms/breadth-first-search/README.md) | complete |
 | Depth-First Search (DFS) | [depth-first-search](../dsa/graph-algorithms/depth-first-search/README.md) | complete |
-| Depth-Limited Search | [depth-limited-search](../artificial-intelligence/uninformed-search/depth-limited-search/README.md) | planned |
-| Iterative Deepening DFS (IDDFS) | [iterative-deepening-dfs](../artificial-intelligence/uninformed-search/iterative-deepening-dfs/README.md) | planned |
-| Uniform Cost Search (UCS) | [uniform-cost-search](../artificial-intelligence/uninformed-search/uniform-cost-search/README.md) | planned |
-| Bidirectional Search | [bidirectional-search](../artificial-intelligence/uninformed-search/bidirectional-search/README.md) | planned |
+| Depth-Limited Search | [depth-limited-search](../artificial-intelligence/uninformed-search/depth-limited-search/README.md) | complete |
+| Iterative Deepening DFS (IDDFS) | [iterative-deepening-dfs](../artificial-intelligence/uninformed-search/iterative-deepening-dfs/README.md) | complete |
+| Uniform Cost Search (UCS) | [uniform-cost-search](../artificial-intelligence/uninformed-search/uniform-cost-search/README.md) | complete |
+| Bidirectional Search | [bidirectional-search](../artificial-intelligence/uninformed-search/bidirectional-search/README.md) | complete |
 
 ## C2. [Informed Search](../artificial-intelligence/informed-search/README.md)
 

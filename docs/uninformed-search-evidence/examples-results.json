@@ -1,0 +1,32 @@
+{
+  "artificial-intelligence/uninformed-search/depth-limited-search/python/example.py": {
+    "stdout": "goal=Station  limit=2 status=FOUND   route=Home -> Market -> Station actions=['high-st', 'station-rd'] expanded=3\ngoal=Airport  limit=2 status=CUTOFF  route=- actions=[] expanded=3\ngoal=Island   limit=10 status=FAILURE route=- actions=[] expanded=8\n",
+    "deterministic": true,
+    "documented_in": "artificial-intelligence/uninformed-search/depth-limited-search/README.md"
+  },
+  "artificial-intelligence/uninformed-search/iterative-deepening-dfs/python/example.py": {
+    "stdout": "limit=0 status=CUTOFF  expanded=0\nlimit=1 status=CUTOFF  expanded=1\nlimit=2 status=CUTOFF  expanded=3\nlimit=3 status=CUTOFF  expanded=7\nlimit=4 status=FOUND   expanded=7 route=+1 *2 +1 *2\nIDDFS: 1 -> 2 -> 4 -> 5 -> 10 actions ['+1', '*2', '+1', '*2'] depth 4 iterations 5 total expanded 18\n",
+    "deterministic": true,
+    "documented_in": "artificial-intelligence/uninformed-search/iterative-deepening-dfs/README.md"
+  },
+  "artificial-intelligence/uninformed-search/uniform-cost-search/python/example.py": {
+    "stdout": "cheapest: A -> B -> C -> E -> D roads ['coast-1', 'coast-2', 'tunnel', 'e-road'] minutes 15\nfewest roads: A -> D via toll-bridge costs 30 minutes with 1 road\nstats: {'expanded': 4, 'generated': 8, 'goal_tests': 5, 'pushed': 9, 'stale_skipped': 1, 'improvements': 4, 'max_frontier': 5}\n",
+    "deterministic": true,
+    "documented_in": "artificial-intelligence/uninformed-search/uniform-cost-search/README.md"
+  },
+  "artificial-intelligence/uninformed-search/bidirectional-search/python/example.py": {
+    "stdout": "expansion order: forward:cold, backward:warm, forward:cord, forward:bold, backward:ward, backward:ware\npath: cold -> cord -> card -> ward -> warm depth 4\nmeeting edge: card -> ward\nstats: {'forward_expanded': 3, 'backward_expanded': 3, 'generated': 9, 'forward_depth': 2, 'backward_depth': 2, 'meeting_index': 2}\n",
+    "deterministic": true,
+    "documented_in": "artificial-intelligence/uninformed-search/bidirectional-search/README.md"
+  },
+  "artificial-intelligence/uninformed-search/examples/compare_uninformed.py": {
+    "stdout": "A5 BFS  : S-C-G (fewest actions)\nA5 DFS  : S-A-B-G (first DFS-tree path; not shortest in general)\nDLS L=1: CUTOFF\nDLS L=2: FOUND S-C-G\nDLS L=3: FOUND S-A-B-G\nIDDFS   : S-C-G after 3 iterations\nUCS     : S-A-B-G cost 3 (cheapest; S-C-G costs 8)\nBidir   : S-C-G meeting C->G\n",
+    "deterministic": true,
+    "documented_in": "artificial-intelligence/uninformed-search/README.md"
+  },
+  "artificial-intelligence/uninformed-search/examples/shared_bfs_dfs.py": {
+    "stdout": "states=20 edges=120 start=(0, 0)\nA5 BFS shortest: [(0, 0), (3, 0), (0, 3), (3, 3), (2, 4), (2, 0), (0, 2)]\n  actions: ['fill A', 'pour A->B', 'fill A', 'pour A->B', 'empty B', 'pour A->B'] depth 6\nA5 DFS reachable from start: 14 states\nA5 DFS tree path to the same goal has 9 actions (DFS is not shortest-path)\nC1 IDDFS depth 6 after 7 iterations\n",
+    "deterministic": true,
+    "documented_in": null
+  }
+}

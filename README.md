@@ -6,7 +6,7 @@ From Fundamental Algorithms to Advanced Artificial Intelligence — Learn, Imple
 
 Algorithm Atlas is an educational, open-source project maintained by **MD.Khalid Hasan**. Its goal is to explain algorithms from first principles through clear documentation, Python and modern C++ implementations, meaningful tests, complexity analysis, and practical applications.
 
-**Current scope: Phase26 final comprehensive ML audit, B1–B13.** Phase25 B13 is explicitly owner-approved on2026-11-01 Asia/Dhaka. Seven audit/stabilization workstreams;[scope](docs/ml-final-audit-scope.md),[checkpoints](docs/ml-final-audit-checkpoints.md),[report](docs/reviews/machine-learning/ML-FINAL-COMPREHENSIVE-AUDIT-REPORT.md). Preserve B1–B13/DSA source and blocked DPO. Final B Track owner approval pending;no C1,nextphase or publication.
+**Current scope: Phase27 C1 Uninformed Search, the first C Track (AI) phase.** The owner approved the Phase26 final ML audit (its `CONDITIONAL PASS` verdict is preserved) and authorized C1 on 2026-11-14 Asia/Dhaka: six syllabus entries, four new canonicals and two shared A5 entries (BFS, DFS). [Scope](docs/uninformed-search-scope.md), [checkpoints](docs/uninformed-search-checkpoints.md), [report](docs/reviews/uninformed-search/UNINFORMED-SEARCH-REVIEW-REPORT.md). Phase27 owner approval pending; no C2, next phase or publication.
 
 The [DSA final audit](docs/reviews/dsa-final-audit/DSA-FINAL-AUDIT-REPORT.md) retains its conditional recommendation and original evidence. ML authorization does not retroactively approve historical milestones.
 
@@ -27,7 +27,7 @@ The foundation provides:
 - Documentation standards, pytest infrastructure, C++ compiler checks, and GitHub Actions configuration.
 - Automated catalog, documentation-link, and implementation-status validation.
 
-Sorting, Searching, Recursion & Backtracking, Divide & Conquer, the eleven Phase 5 Dynamic Programming topics, the four Phase 6 Greedy topics, all fifteen Phase 7 Graph topics, all fourteen Phase 8 Tree topics, all nine Phase 9 String topics, four Phase 10 Bit Manipulation topics, seven Phase 11 Number Theory topics, and three Phase 12 Two Pointers & Sliding Window topics provide detailed explanations, dry runs, Python/C++ implementations, examples, and relevant edge-case tests. Other topics follow in separately approved phases. Classical ML is Python-first with NumPy, mathematical/numerical tests and optional C++; [Regression](machine-learning/supervised-learning/regression/README.md) is the first authorized category.
+Sorting, Searching, Recursion & Backtracking, Divide & Conquer, the eleven Phase 5 Dynamic Programming topics, the four Phase 6 Greedy topics, all fifteen Phase 7 Graph topics, all fourteen Phase 8 Tree topics, all nine Phase 9 String topics, four Phase 10 Bit Manipulation topics, seven Phase 11 Number Theory topics, and three Phase 12 Two Pointers & Sliding Window topics provide detailed explanations, dry runs, Python/C++ implementations, examples, and relevant edge-case tests. Other topics follow in separately approved phases. Classical ML is Python-first with NumPy, mathematical/numerical tests and optional C++; [Regression](machine-learning/supervised-learning/regression/README.md) is the first authorized category. AI topics require Python and C++; [Uninformed Search](artificial-intelligence/uninformed-search/README.md) is the first AI category, with four new canonicals and BFS/DFS shared from A5.
 
 ## Technologies Used
 
@@ -167,7 +167,7 @@ Use the [complexity cheat sheet](docs/complexity-cheatsheet.md) for asymptotic n
 
 [Progress tracking](docs/progress.md) records catalog totals, completed and remaining algorithms, blockers, and the next proposed batch. The [Phase 0 review report](docs/phase-0-review.md) and [complete file inventory](docs/phase-0-files.md) document the foundation handoff. Phase 0 supplies the foundation only. The term **Dynamic Policy Optimization (DPO)** is retained from the syllabus and blocked pending clarification; it has not been replaced by Direct Preference Optimization.
 
-Previous B1–B13 and DSA work is owner-approved. B8 is9 completed+1 intentionally blocked; no10/10 claim. Phase26 final ML audit owner review pending. DPO decision remains owner-approved: remain blocked.
+Previous A (DSA) and B (ML) work, including the Phase26 final ML audit (verdict `CONDITIONAL PASS`, preserved), is owner-approved. B8 is 9 completed + 1 intentionally blocked; no 10/10 claim. DPO decision remains owner-approved: remain blocked. Phase27 C1 Uninformed Search awaits owner review; the rest of the C Track is not started.
 
 ## Contribution Guidelines
 

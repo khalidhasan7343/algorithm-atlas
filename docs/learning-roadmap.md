@@ -2,7 +2,7 @@
 
 Progress from foundational problem solving to specialized AI topics. These levels describe a study order, not repository development phases: learning a later level does not authorize implementation outside the approved development phase.
 
-**Current scope: Phase26 final comprehensive ML audit, B1–B13.** Phase25 explicitly owner-approved;seven audit/stabilization workstreams. [Scope](ml-final-audit-scope.md),[checkpoints](ml-final-audit-checkpoints.md). Final track sign-off pending;no C1,nextphase or publication.
+**Current scope: Phase27 C1 Uninformed Search.** Phase26 final ML audit owner-approved on 2026-11-14 Asia/Dhaka (verdict `CONDITIONAL PASS` preserved). [Scope](uninformed-search-scope.md), [checkpoints](uninformed-search-checkpoints.md). Phase27 owner approval pending; no C2, next phase or publication.
 
 ## Level 1 — DSA Foundations
 
@@ -88,6 +88,8 @@ Develop from feed-forward computation to structured and generative models:
 ## Level 7 — Reinforcement Learning and AI Search
 
 **Prerequisites:** Level 2 graph/search concepts, Level 4 probability and evaluation, Markov decision process basics, returns and discounting, and policy/value terminology. Neural RL also needs Level 6. Learn heuristic admissibility and consistency before relying on informed-search guarantees.
+
+Start AI search with [C1 Uninformed Search](../artificial-intelligence/uninformed-search/README.md): review A5 [BFS](../dsa/graph-algorithms/breadth-first-search/README.md) and [DFS](../dsa/graph-algorithms/depth-first-search/README.md), then [Depth-Limited Search](../artificial-intelligence/uninformed-search/depth-limited-search/README.md), [IDDFS](../artificial-intelligence/uninformed-search/iterative-deepening-dfs/README.md), [Uniform Cost Search](../artificial-intelligence/uninformed-search/uniform-cost-search/README.md) (compare with A5 [Dijkstra](../dsa/graph-algorithms/dijkstra/README.md)) and [Bidirectional Search](../artificial-intelligence/uninformed-search/bidirectional-search/README.md).
 
 Compare explicit planning with learning from interaction:
 

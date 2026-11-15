@@ -1,0 +1,37 @@
+{
+  "label": "c1-targeted",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "--require-cpp",
+    "-q",
+    "artificial-intelligence/uninformed-search",
+    "dsa/graph-algorithms/breadth-first-search",
+    "dsa/graph-algorithms/depth-first-search",
+    "dsa/graph-algorithms/dijkstra"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "--require-cpp",
+    "-q",
+    "artificial-intelligence/uninformed-search",
+    "dsa/graph-algorithms/breadth-first-search",
+    "dsa/graph-algorithms/depth-first-search",
+    "dsa/graph-algorithms/dijkstra",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/uninformed-search-evidence/c1-targeted-01.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-15T21:55:34.324238+06:00",
+  "elapsed_seconds": 27.543,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/uninformed-search-evidence/c1-targeted-01.txt"
+}

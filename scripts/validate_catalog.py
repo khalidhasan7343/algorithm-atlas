@@ -262,6 +262,10 @@ def _validate_development(
             report.errors.append("development final ML audit owner approval must remain pending")
         return
 
+    if state.get("track") == "artificial-intelligence":
+        _validate_ai_development(state, algorithms, valid_completed, completed, status, report)
+        return
+
     if state.get("track") == "machine-learning":
         category = state.get("category")
         # B5 includes the one existing NumPy autoencoder owned by B7.
@@ -513,6 +517,67 @@ def _validate_development(
                     f"development: completed sorting batch {batch} requires {algorithm_id} "
                     "with completed documentation, both implementations, and tested/reviewed tests"
                 )
+
+
+AI_SCOPE_CATEGORIES = {f"C{i}" for i in range(1, 11)}
+
+
+def _validate_ai_development(state: dict, algorithms: dict[str, dict], valid_completed: bool,
+                             completed: Any, status: Any, report: ValidationReport) -> None:
+    """An AI implementation phase covers exactly one C category's syllabus memberships.
+
+    New canonicals owned by the category must meet the two-language completion
+    rule once their batch is complete. Memberships owned by another category are
+    reused, never reimplemented: they must stay outside the C path and complete.
+    The previous phase must be owner-approved and the DPO blocker preserved.
+    """
+    category = state.get("category")
+    memberships = state.get("category_memberships")
+    if category not in AI_SCOPE_CATEGORIES or not isinstance(memberships, list) or not memberships:
+        report.errors.append("development AI phase needs a C1..C10 category and its category_memberships")
+        return
+    owned = {aid for aid, a in algorithms.items() if a.get("category") == category}
+    if not owned <= set(memberships) or any(aid not in algorithms for aid in memberships):
+        report.errors.append("development AI category_memberships must list every category membership")
+    if any(track(algorithms[aid]) != "artificial-intelligence" or not cpp_required(algorithms[aid]) for aid in owned):
+        report.errors.append("development AI canonicals must live under artificial-intelligence and require C++")
+    plan = state.get("batch_plan")
+    if not isinstance(plan, list) or not plan or any(
+            not isinstance(batch, list) or any(not isinstance(aid, str) for aid in batch) for batch in plan):
+        report.errors.append("development AI batch_plan must be a list of algorithm ID lists")
+        return
+    flattened = [aid for batch in plan for aid in batch]
+    if len(flattened) != len(set(flattened)) or set(flattened) != set(memberships):
+        report.errors.append("development AI batch_plan must cover each category membership exactly once")
+    if valid_completed:
+        if len(completed) > len(plan) or (status == "awaiting-review" and len(completed) != len(plan)):
+            report.errors.append("development AI completed batches must match its batch_plan")
+        for batch in plan[:len(completed)]:
+            for aid in batch:
+                if not is_complete(algorithms.get(aid, {})):
+                    report.errors.append(f"development AI completed batch requires complete {aid}")
+    for aid in set(memberships) - owned:
+        record = algorithms.get(aid, {})
+        if record.get("category") == category or str(record.get("canonical_location", "")).startswith("artificial-intelligence/"):
+            report.errors.append(f"development AI shared membership {aid} must keep its non-AI canonical owner")
+        elif not is_complete(record):
+            report.errors.append(f"development AI shared membership {aid} must reuse a complete canonical")
+    previous = state.get("phase_records", {}).get(str(state.get("phase_number", 0) - 1), {})
+    if not isinstance(previous, dict) or previous.get("owner_approval") != "approved":
+        report.errors.append("development AI phase requires the previous phase to be owner-approved")
+    current = state.get("phase_records", {}).get(str(state.get("phase_number")), {})
+    review = state.get("current_review", {})
+    if (current.get("owner_approval") != "pending" or not isinstance(review, dict)
+            or review.get("owner_approval") != "pending"):
+        report.errors.append("development AI phase owner approval must remain pending")
+    dpo = algorithms.get("dynamic-policy-optimization")
+    decision = state.get("dpo_specification_decision", {})
+    if dpo is not None and (
+            dpo.get("canonical_location") != "machine-learning/reinforcement-learning/dynamic-policy-optimization"
+            or not all(dpo.get(k) == "blocked" for k in STATUS_FIELDS)
+            or not isinstance(decision, dict) or decision.get("decision") != "remain-blocked"
+            or decision.get("owner_approval") != "approved" or decision.get("substitution_authorized") is not False):
+        report.errors.append("development AI phase must preserve the exact approved DPO blocker")
 
 
 def _strip_code(text: str) -> str:

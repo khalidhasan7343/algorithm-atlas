@@ -1,6 +1,6 @@
 # Phase review packages
 
-**Current checkpoint:** Phase25 B13 is owner-approved; the Phase26 final B1–B13 ML audit awaits owner approval. B8 remains9 completed+1 intentionally blocked. Older chronological paragraphs retain their handoff-time statuses; current approvals are recorded in catalog.yaml.
+**Current checkpoint:** The Phase26 final B1–B13 ML audit is owner-approved (2026-11-14 Asia/Dhaka; its `CONDITIONAL PASS` verdict is preserved). Phase27 C1 Uninformed Search awaits owner approval. B8 remains 9 completed + 1 intentionally blocked. Older chronological paragraphs retain their handoff-time statuses; current approvals are recorded in catalog.yaml.
 
 Six existing ZIPs and twelve checksum/verification sidecars were relocated without changing their bytes (6,919,849 ZIP bytes total). Five package sets were already tracked. The Graph set was local and untracked; cleanup preserves that status. None was ignored. Availability below describes the working checkout at maintenance time, not a guarantee that local untracked files exist in a fresh clone.
 
@@ -81,3 +81,5 @@ Current Phase24 [Anomaly Detection package](anomaly-detection/README.md);owner r
 Current [Phase25 NLP package](natural-language-processing/README.md); owner review pending. Phase24 B12 is subsequently approved; historical bytes preserved.
 
 Current [Phase26 final ML audit package](machine-learning/README.md);final owner sign-off pending. Phase25 is approved;historical package bytes preserved.
+
+The Phase27 [Uninformed Search package](uninformed-search/README.md) covers C1: four new canonicals and two shared A5 entries. Its owner approval is pending; the Phase26 ML audit package retains its original sidecars.

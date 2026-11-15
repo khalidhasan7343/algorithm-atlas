@@ -1,0 +1,35 @@
+{
+  "label": "c1-policy",
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "-q",
+    "tests/test_c1_language_and_scope_policy.py",
+    "tests/test_track_policy.py",
+    "tests/test_generate_catalog_docs.py",
+    "tests/test_validate_catalog.py"
+  ],
+  "actual_command": [
+    "/Users/khalidhasan/Desktop/algorithm-atlas/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "-q",
+    "tests/test_c1_language_and_scope_policy.py",
+    "tests/test_track_policy.py",
+    "tests/test_generate_catalog_docs.py",
+    "tests/test_validate_catalog.py",
+    "--junitxml=/Users/khalidhasan/Desktop/algorithm-atlas/docs/uninformed-search-evidence/c1-policy-02.xml"
+  ],
+  "cwd": "/Users/khalidhasan/Desktop/algorithm-atlas",
+  "started_at": "2026-11-15T21:56:29.097012+06:00",
+  "elapsed_seconds": 2.429,
+  "timeout_seconds": 1200,
+  "timed_out": false,
+  "returncode": 0,
+  "output": "docs/uninformed-search-evidence/c1-policy-02.txt"
+}

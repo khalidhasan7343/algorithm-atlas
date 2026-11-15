@@ -1,11 +1,12 @@
 # Phase review reports
 
-**Current checkpoint:** Phase25 B13 is owner-approved; the Phase26 final B1–B13 ML audit awaits owner approval. B8 remains9 completed+1 intentionally blocked. Older chronological paragraphs retain their handoff-time statuses; current approvals are recorded in catalog.yaml.
+**Current checkpoint:** The Phase26 final B1–B13 ML audit is owner-approved (2026-11-14 Asia/Dhaka; its `CONDITIONAL PASS` verdict is preserved). Phase27 C1 Uninformed Search awaits owner approval. B8 remains 9 completed + 1 intentionally blocked. Older chronological paragraphs retain their handoff-time statuses; current approvals are recorded in catalog.yaml.
 
 Review and audit reports are organized by canonical phase name. Their filenames and historical findings are preserved; relative links and live artifact paths were adjusted during the [root cleanup](../maintenance/root-cleanup/REPORT.md). The owner officially approved completed Phase 10 on 2026-10-24 (Asia/Dhaka), authorizing combined Phase 11 Number Theory and Phase 12 Two Pointers & Sliding Window in normal roadmap order. Phases 8 and 9 remain approved. The two new owner approvals remain independently pending; see [Number Theory checkpoints](../number-theory-checkpoints.md) and [window checkpoints](../two-pointers-sliding-window-checkpoints.md). Historical reports preserve their handoff-time statements.
 
 | Phase | Report |
 | --- | --- |
+| uninformed-search (Phase27 C1; owner review pending) | [UNINFORMED-SEARCH-REVIEW-REPORT.md](uninformed-search/UNINFORMED-SEARCH-REVIEW-REPORT.md) |
 | neural-networks-and-deep-learning (Phase19 B7; review pending) | [NEURAL-NETWORKS-AND-DEEP-LEARNING-REVIEW-REPORT.md](neural-networks-and-deep-learning/NEURAL-NETWORKS-AND-DEEP-LEARNING-REVIEW-REPORT.md) |
 | association-rule-learning (Phase18 B6; subsequently approved) | [ASSOCIATION-RULE-LEARNING-REVIEW-REPORT.md](association-rule-learning/ASSOCIATION-RULE-LEARNING-REVIEW-REPORT.md) |
 | dimensionality-reduction (Phase 17 B5; subsequently approved) | [DIMENSIONALITY-REDUCTION-REVIEW-REPORT.md](dimensionality-reduction/DIMENSIONALITY-REDUCTION-REVIEW-REPORT.md) |

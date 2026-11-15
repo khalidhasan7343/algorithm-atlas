@@ -1,6 +1,6 @@
 # Getting Started
 
-**Current scope: Phase26 final comprehensive ML audit, B1–B13.** Phase25 explicitly owner-approved;seven audit/stabilization workstreams. [Scope](ml-final-audit-scope.md),[checkpoints](ml-final-audit-checkpoints.md). Final track sign-off pending;no C1,nextphase or publication.
+**Current scope: Phase27 C1 Uninformed Search.** Phase26 final ML audit owner-approved on 2026-11-14 Asia/Dhaka (verdict `CONDITIONAL PASS` preserved). [Scope](uninformed-search-scope.md), [checkpoints](uninformed-search-checkpoints.md). Phase27 owner approval pending; no C2, next phase or publication.
 
 Start with the [learning roadmap](learning-roadmap.md), browse the [complete algorithm index](algorithm-index.md), and consult the [progress tracker](progress.md) before choosing a topic. The [glossary](glossary.md) and [complexity cheat sheet](complexity-cheatsheet.md) explain terminology used throughout the project.
 
